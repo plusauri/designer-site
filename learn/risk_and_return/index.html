@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Risk and return — Learning Center</title>
+    <meta name="description" content="Read the Risk vs. Return scatter: μ, σ, holdings dots, and the portfolio star. Live canvas: holdings teaching sample (SC-04 lineage).">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
+<script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
+    <script src="/designer-site/static/lang.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
+    <link href="/designer-site/static/site.css" rel="stylesheet">
+    <script src="/designer-site/static/lesson-split.js" defer="defer"></script>
+  </head>
+  <body class="lesson-split-body" data-prose-lang="en" data-lang="en">
+    <header class="lesson-split-header" id="lesson-split-header">
+      <nav>
+        <ul>
+          <li><strong><a href="/designer-site/">Plusauri</a></strong></li>
+          <li><a href="/designer-site/learn">Learning Center</a></li>
+          <li><a href="/designer-site/reference">Reference</a></li>
+        </ul>
+        <ul>
+          <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en" selected="selected">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
+          <li><button class="lesson-header-collapse" type="button" aria-expanded="true" aria-controls="lesson-split-header" title="Hide header" aria-label="Hide header">▾</button></li>
+        </ul>
+      </nav>
+    </header>
+<button class="lesson-header-expand" type="button" id="lesson-header-expand" hidden="hidden" title="Show header" aria-label="Show header">▴ Plusauri · Learning Center</button><script type="application/json" id="lesson-canvas-dossiers">{"primary":"holdings_portfolio","alternates":[],"order":["holdings_portfolio"]}</script>
+    <div class="lesson-split">
+      <section class="lesson-pane">
+        <div class="lesson-prose" id="lesson-prose" data-next-key="KeyJ" data-previous-key="KeyK" data-lesson-id="risk_and_return" data-loaded-lang="en"><h1>Risk and return</h1>
+<div class="lesson-intro-card"><img class="lesson-media-ref ui-std-preview-wide" src="/designer-site/static/images/lessons/intro-cards/risk-and-return.webp" alt="Editorial cartoon titled Risk and return. A person runs a broken road labeled Rough path, with signs for Return, Risk, and Volatility, toward a trophy also labeled Return. The narrator says higher expected return usually means a rougher path. One panel quotes Investor.gov, What is Risk: in general, as investment risks rise, investors seek higher returns to compensate themselves for taking such risks. The banner says both belong on the same picture." data-media-id="intro-card-risk-and-return" loading="lazy" decoding="async" /></div>
+<details class="lesson-intro-chrome" data-intro-chrome="1" data-lesson-presentation="Reading"><summary><span class="lesson-intro-chrome-summary-title">How this page works</span></summary><div class="lesson-intro-chrome-body"><blockquote class="lesson-shared lesson-learning-preference" cite="learning-center:learning-preference"><p>New to the Learning Center, or want a map of the panels? Start with a tour: <a href="/designer-site/learn/getting_around"><strong>Reading Lesson (Getting Around)</strong></a> or <a href="/designer-site/learn/getting_around_screencast"><strong>Screencast Lesson (Getting Around)</strong></a> — both walk through Tutilis next to a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live plan</span><span class="lesson-term-tip" role="tooltip">The running Tutilis product next to this lesson — navigation, Bird's Eye, Forecaster, tools, and more — loaded with a teaching sample. A dossier is the plan data; the live plan is the full product surface with a sample dossier already open so you can explore. On the web, teaching samples are not editable the way your own dossier will be in the full app.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> (to the right on a desktop-width screen, or below when stacked on a tablet).</p></blockquote><blockquote class="lesson-shared lesson-orientation" cite="learning-center:orientation"><p>This page — <strong>Risk and return</strong> — includes a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live sample plan</span><span class="lesson-term-tip" role="tooltip">The running Tutilis product next to this lesson — navigation, Bird's Eye, Forecaster, tools, and more — loaded with a teaching sample. A dossier is the plan data; the live plan is the full product surface with a sample dossier already open so you can explore. On the web, teaching samples are not editable the way your own dossier will be in the full app.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to the text. On a wide screen it usually sits <strong>to the right</strong> of the text; on a tablet it usually sits <strong>below</strong>. Use the text for the walk-through, then try the same ideas in the live plan.</p></blockquote><blockquote class="lesson-shared lesson-product-relationship" cite="learning-center:product-relationship"><p>The <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live plan</span><span class="lesson-term-tip" role="tooltip">The running Tutilis product next to this lesson — navigation, Bird's Eye, Forecaster, tools, and more — loaded with a teaching sample. A dossier is the plan data; the live plan is the full product surface with a sample dossier already open so you can explore. On the web, teaching samples are not editable the way your own dossier will be in the full app.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to this page — usually <strong>to the right</strong> on a wide screen, or <strong>below</strong> on a tablet — is <strong>Tutilis</strong> running a teaching sample: the same <strong>financial planning product</strong> available as a desktop application (early preview). A <span class="lesson-term" data-term="dossier" tabindex="0"><span class="lesson-term-pill">dossier</span><span class="lesson-term-tip" role="tooltip">Your full plan in Tutilis: the people in the household, what they own and owe, cash flows in and out, tax setting, and planning assumptions. One dossier is one complete situation as the product models it.<a class="lesson-term-more" href="/designer-site/glossary/dossier">Full entry →</a></span></span> is the plan data; the live plan is the full product (navigation, Bird's Eye, Forecaster, tools) with a sample dossier already open so you can try the panels. <a href="/designer-site/pricing">See planned pricing</a>. On the web, Learning Center samples are <strong>not editable</strong> the way your own dossier will be in the full app. Your own household goes in the Tutilis desktop app — <a href="/designer-site/learn#intro-video-heading">the Learning Center front page has a short clip of that</a>.</p></blockquote></div></details>
+<div class="lesson-accordion" data-sections="6" style="--n:6"><h2 id="overview" class="lesson-section-head" style="--i:0"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="overview--body"><span class="lesson-section-title">Overview</span></button></h2><div class="lesson-section-body" id="overview--body" role="region" aria-labelledby="overview" hidden>
+<!---
+  GENERATED lesson shell — not learner-facing meta. Regenerated chrome is
+  outside α/ω; teaching prose lives only in the protect block.
+  outline-id: foundations.risk_return.tradeoff
+  outline-path: Foundations › Risk and return › Risk and return tradeoff
+  document-id: risk_and_return
+  locale: en
+  lifecycle: Source
+  status: Shipped
+  lesson-status: PortedFromPublic
+  host-hint: Dossier
+  intent: Higher expected return usually means rougher paths.
+  port-source: dossiers/risk_and_return.md
+-->
+<!--- α <lesson_body> -->
+<p>Return without risk is incomplete. Risk without return is noise. This product puts <strong>both</strong> on the
+<strong>same picture</strong> so you can see the trade-off you are assuming before you plan around it.</p>
+<p>The live plan on the right is a <strong>holdings-focused teaching sample</strong> (<code>holdings_portfolio</code>): three
+distinct positions with different expected return (<span class="lesson-term" data-term="mu" tabindex="0"><span class="lesson-term-pill">μ</span><span class="lesson-term-tip" role="tooltip">The Greek letter the product uses for an assumed <strong>average return</strong> — in plain speech, about what something earns in a typical year. It is an <strong>input</strong> to the projection rather than a result of it, and it never travels alone: μ paired with <strong>σ</strong> is the whole growth assumption, because an average return says nothing about how rough the ride is.<a class="lesson-term-more" href="/designer-site/glossary/mu">Full entry →</a></span></span>) and <span class="lesson-term" data-term="volatility" tabindex="0"><span class="lesson-term-pill">volatility</span><span class="lesson-term-tip" role="tooltip">How much an investment's returns <strong>bounce around</strong> from year to year, not whether it goes up or down overall. Written <strong>σ (sigma)</strong> in the product. Two holdings can have the same average return and feel completely different to live through — and high volatility drags the growth you actually compound below that average.<a class="lesson-term-more" href="/designer-site/glossary/volatility">Full entry →</a></span></span> (<span class="lesson-term" data-term="sigma" tabindex="0"><span class="lesson-term-pill">σ</span><span class="lesson-term-tip" role="tooltip">The Greek letter the product uses for <strong>volatility</strong> — how widely returns scatter around their average. A bare σ on a chart axis is measuring risk, not return: two holdings can sit at the same height (same <strong>μ</strong>) and be completely different things to live through. Higher σ also drags the growth you actually compound below the average you were quoted.<a class="lesson-term-more" href="/designer-site/glossary/sigma">Full entry →</a></span></span>) so the scatter is
+readable at a glance, plus <strong>one home and two cash flows</strong> — the fewest items that give each of the
+three chips above the chart something to show. It is still not a full household; everything in it is
+there to make one control legible.</p>
+</div>
+<h2 id="how-to-read-the-scatter" class="lesson-section-head" style="--i:1"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="how-to-read-the-scatter--body"><span class="lesson-section-title">How to read the scatter</span></button></h2><div class="lesson-section-body" id="how-to-read-the-scatter--body" role="region" aria-labelledby="how-to-read-the-scatter" hidden>
+<p>Exact path (the chart is inside a <strong>closed collapsible</strong> on entry):</p>
+<ol>
+<li><span class="lesson-nav-ref lesson-nav-ref--risk lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/risk.png" alt="Risk" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Risk</span><span class="lesson-term-tip" role="tooltip">A <strong>main-rail area</strong>. Analytic risk views — how holdings and categories sit on risk/return. Useful later; not required for first tours.</span></span> (main section)</li>
+<li><strong>Current Risk</strong> — the left of the two Risk views</li>
+<li>Open <strong>Analytic Risk</strong> — expand this collapsible or you will not see the charts</li>
+<li><strong>Risk vs. Return</strong> scatter inside Analytic Risk</li>
+</ol>
+<p><strong>The other view, Sensitivities</strong>, is not a detour you are skipping by accident. Current Risk asks
+<em>how bumpy are the things I hold, right now</em> — one snapshot, no time in it. Sensitivities asks a
+different question: <em>which single input moves the outcome most</em> — it nudges one assumption at a time
+and ranks what the plan felt. Same section, different question; no lesson covers it yet.</p>
+<table>
+<thead>
+<tr><th>Axis / mark</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Horizontal</strong></td><td>Risk — typically <strong>σ</strong> (volatility of the assumption)</td></tr>
+<tr><td><strong>Vertical</strong></td><td>Return — typically <strong>μ</strong> (expected / assumed mean return)</td></tr>
+<tr><td><strong>Each dot</strong></td><td>A holding (or comparable item) at its own (σ, μ)</td></tr>
+<tr><td><strong>Portfolio ★</strong></td><td>The <strong>blend</strong> — where the whole book sits as one point</td></tr>
+</tbody>
+</table>
+<p><strong>The corner everyone wants</strong> is high return and low risk — <strong>up and to the left</strong>. Markets rarely
+hand that out freely. Most real books sit on a trade-off: more assumed return usually comes with
+more assumed bounce.</p>
+<p><strong>Honesty:</strong> μ and σ are <strong>assumptions</strong> (often researched defaults you can override), not promises
+and not a forecast of next year’s path. The chart teaches the <strong>trade-off</strong>, not a prediction.</p>
+<p>On entry both sections are <strong>collapsed</strong> — open <strong>Analytic Risk</strong> or the scatter never appears:</p>
+<div class="lesson-img-stack">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-collapsibles-closed.png" alt="Current Risk as it opens: chips along the top, Analytic Risk and Tabular Risk folded" data-media-id="risk-return-collapsibles-closed" data-where="output__risk" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="real-assets" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption"><strong>Closed on entry</strong> — the chips are along the top, and Analytic Risk and Tabular Risk stay folded until you open them.</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-scatter.png" alt="Risk vs. Return: every item at its own (σ, μ), with the portfolio ★" data-media-id="risk-return-scatter" data-where="output__risk__risk.risk-vs-return" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="real-assets,holdings" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption"><strong>Analytic Risk, first chart</strong> — Risk vs. Return: every shown item at its own (σ, μ), with the portfolio ★ at the blend of the holdings and, with Real Assets on, the home.</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-band.png" alt="Portfolio Range Over Time: median, mean, and the 10–90% cone" data-media-id="risk-return-band" data-where="output__risk__risk.range-over-time" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="real-assets" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption"><strong>Analytic Risk, second chart</strong> — Portfolio Range Over Time: the <span class="lesson-term" data-term="median" tabindex="0"><span class="lesson-term-pill">median</span><span class="lesson-term-tip" role="tooltip">The <strong>middle</strong> outcome — half above, half below — as against the average, which a few enormous results can drag upward. Over long horizons the two come apart badly, and the median is the one that answers &quot;what does a typical path look like?&quot;<a class="lesson-term-more" href="/designer-site/glossary/median">Full entry →</a></span></span> path, a dashed average line sitting above it, and a cone of outcomes that keeps widening the further out you look.</p>
+</div>
+<p>Two things in that second picture are worth a sentence, because both look like mistakes and neither
+is. The dashed average line sits <strong>above</strong> the middle path, and it stays above it — that is not the
+chart double-counting. A few very good outcomes pull an average up in a way they cannot pull a
+middle outcome up, and the more the holdings bounce, the wider that gap gets. The middle path is
+the one to plan against. And the cone keeps widening forever rather than settling down, because
+each year's uncertainty stacks on the last; the plan is not getting riskier, the question is simply
+reaching further ahead.</p>
+<details class="lesson-math">
+<summary class="lesson-math-label">For the math lovers — why the average sits high, and why the cone widens</summary>
+<div class="lesson-math-body">
+<p><strong>The gap has a name.</strong> <span class="lesson-term" data-term="compounding" tabindex="0"><span class="lesson-term-pill">Compounding</span><span class="lesson-term-tip" role="tooltip">Growth <strong>on top of previous growth</strong> — this year's return is earned on last year's gains as well as the original money. It is why a plan curve bends upward instead of climbing in a straight line, and why the early years matter more than their size suggests.<a class="lesson-term-more" href="/designer-site/glossary/compounding">Full entry →</a></span></span> multiplies returns rather than adding them, so what a balance
+actually grows at over many years is the <span class="lesson-term" data-term="geometric-mean" tabindex="0"><span class="lesson-term-pill">geometric mean</span><span class="lesson-term-tip" role="tooltip">The <strong>compound</strong> growth rate that actually takes a starting balance to an ending one — the return you lived through rather than the one you were quoted. It is always at or below the <strong>arithmetic mean</strong>, equal only if every year is identical, and further below as volatility rises. This is the mean the product's north-star path is built on.<a class="lesson-term-more" href="/designer-site/glossary/geometric-mean">Full entry →</a></span></span>, and that is always at or below
+the arithmetic average of the same returns. The shortfall grows with σ: roughly half the variance,
+so a book at σ 16% gives up on the order of 1.3 points a year against its own average. This is
+usually called <span class="lesson-term" data-term="volatility-drag" tabindex="0"><span class="lesson-term-pill">volatility drag</span><span class="lesson-term-tip" role="tooltip">The gap between a portfolio's average yearly return and the return it actually compounds at. Lose 50% and gain 50% and you are down 25%, not even — swings cost growth. The larger the volatility, the further the typical outcome falls below the arithmetic average.<a class="lesson-term-more" href="/designer-site/glossary/volatility-drag">Full entry →</a></span></span>, and it is why the product's north-star path is the
+<span class="lesson-term" data-term="geometric-mean" tabindex="0"><span class="lesson-term-pill">geometric mean</span><span class="lesson-term-tip" role="tooltip">The <strong>compound</strong> growth rate that actually takes a starting balance to an ending one — the return you lived through rather than the one you were quoted. It is always at or below the <strong>arithmetic mean</strong>, equal only if every year is identical, and further below as volatility rises. This is the mean the product's north-star path is built on.<a class="lesson-term-more" href="/designer-site/glossary/geometric-mean">Full entry →</a></span></span> one rather than the <span class="lesson-term" data-term="amf" tabindex="0"><span class="lesson-term-pill">arithmetic mean forecast</span><span class="lesson-term-tip" role="tooltip">Arithmetic Mean Forecast — the same plan projected at the <strong>arithmetic</strong> average return instead of the compound one. It runs higher than the path you would actually live, and it is here as a teaching contrast to GMF ✦ rather than as something to steer by. Turn it on to see what volatility drag is costing this plan; leave it off otherwise.<a class="lesson-term-more" href="/designer-site/glossary/amf">Full entry →</a></span></span>.</p>
+<p><strong>The cone widens as √t.</strong> If each year's return is an independent draw, variances add across
+years while the expected return only accumulates linearly — so the spread grows with the <em>square
+root</em> of the horizon, σ√t, not with the horizon itself. Four times as long is twice as wide, not
+four times. That is the shape you are looking at, and it is why a long horizon widens the cone
+without meaning the holdings changed.</p>
+<p>Both numbers come from the same σ on the horizontal axis of the scatter above — one control, two
+pictures.</p>
+</div>
+</details>
+</div>
+<h2 id="guided-walk-35-minutes" class="lesson-section-head" style="--i:2"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="guided-walk-35-minutes--body"><span class="lesson-section-title">Guided walk (3–5 minutes)</span></button></h2><div class="lesson-section-body" id="guided-walk-35-minutes--body" role="region" aria-labelledby="guided-walk-35-minutes" hidden>
+<ol>
+<li>Follow the path above: <span class="lesson-nav-ref lesson-nav-ref--risk lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/risk.png" alt="Risk" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Risk</span><span class="lesson-term-tip" role="tooltip">A <strong>main-rail area</strong>. Analytic risk views — how holdings and categories sit on risk/return. Useful later; not required for first tours.</span></span> → Current Risk → open Analytic Risk → Risk vs. Return.</li>
+<li><strong>Check the Holdings chip</strong> so each position is a separate dot (default may show accounts only).</li>
+<li><strong>Find the calmest</strong> holding (left, lower σ) and the <strong>jumpier</strong> one (right, higher σ). On this
+sample that is roughly: calmer positions left/lower; higher μ <strong>and</strong> higher σ <strong>up and to the
+right</strong> — more expected return, more risk.</li>
+<li><strong>Find the portfolio star</strong> — a <strong>weight-aware mix</strong>, not simply the wildest name.</li>
+<li>Toggle <strong>Compare to categories</strong> if available — category reference points help answer “is this
+holding aggressive relative to a whole asset class?”</li>
+<li>Toggle <strong>Size by value</strong> if available — larger dots are larger dollar weights; the star is
+pulled by what you actually own, not by every ticker equally.</li>
+<li>Open <strong>Tabular Risk</strong> (the other Current Risk collapsible) for the <strong>Risk &amp; Return by Item</strong>
+table — same data, sortable. Sort by σ, then by μ.</li>
+<li><strong>Walk the three chips</strong> — the next section is about what each one puts on the chart.</li>
+</ol>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="what-the-three-chips-put-on-the-chart">What the three chips put on the chart</h3></summary><div class="lesson-subsection-body">
+<p>Five chips sit above the scatter. Two of them change how dots are <em>drawn</em> — <strong>Compare to
+categories</strong> and <strong>Size by value</strong>, both covered in the walk above. The other three change <em>what is
+on the chart at all</em>: <strong>Real Assets</strong>, <strong>Cash Flows</strong>, <strong>Holdings</strong>. They are not three views of the
+same thing — each adds a different <em>kind</em> of item, drawn in its own color, and only some of them
+count toward the ★.</p>
+<table>
+<thead>
+<tr><th>Chip</th><th>Adds</th><th>Color</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Real Assets</strong></td><td>the home</td><td>brown</td></tr>
+<tr><td><strong>Holdings</strong></td><td>the three positions separately (instead of one account dot)</td><td>blue</td></tr>
+<tr><td><strong>Cash Flows</strong></td><td>salary (in) and living expense (out)</td><td>green / rose</td></tr>
+</tbody>
+</table>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-all-chips.png" alt="Risk vs. Return with all three chips on: real assets, cash flows and holdings together" data-media-id="risk-return-all-chips" data-where="output__risk__risk.risk-vs-return" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="real-assets,cash-flows,holdings" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">All three chips on. Every item type at once: the brown home, the three blue holdings spread from
+bond to concentrated stock, and — far left, where growth assumptions are calm — the green salary and
+rose living expense.</p>
+<p><strong>Real Assets moves the ★.</strong> The star is the blend of your holdings and, when Real Assets is on,
+your real assets as well. The home expects less return than the stock funds and does not rise and
+fall with them, so turning it on pulls the star down and to the left. Turning Holdings on only
+splits the account dot into its positions. The blend is the same money either way, so the star
+stays where it is.</p>
+<p><strong>Cash flows are on the chart but never in the blend.</strong> A flow's μ and σ are its <em>growth</em>
+assumption: how fast the salary rises and how fast the expense inflates. That is a different
+quantity from an equity's expected return, even though both land on these axes. Read the flow dots
+as how uncertain each stream's growth is. They do not say what anything earns. A stream of payments
+is also spent as it arrives, so it is not a balance that can be averaged in with your investments.
+What Cash Flows adds below the chart is one line: how many times your assets and your incomes,
+counted at present value, cover your planned spending. It is the same balance Bird's Eye weighs
+when its view includes cash flows.</p>
+<p><strong>The cone below follows the same chip.</strong> Below the scatter, <strong>Portfolio Range Over Time</strong> projects
+the starred portfolio forward as a widening cone. With Real Assets off, the cone is your holdings
+alone. With it on, the home joins and everything you own is projected. Those are two honest answers
+to two different questions: <em>how risky is what I invest</em>, and <em>how risky is what I own</em>. The chip
+chooses which question both charts answer.</p>
+</div></details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="holdings-on">Holdings on</h3></summary><div class="lesson-subsection-body">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-holdings-on.png" alt="Risk vs. Return with Holdings on — the three positions separated, and the portfolio ★" data-media-id="risk-return-holdings-on" data-where="output__risk__risk.risk-vs-return" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="holdings" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Holdings chip on: each holding is its own dot (this sample: bond-like left, broad equity mid-right, concentrated stock far right). The ★ is the portfolio blend.</p>
+<p><strong>What this chart is not:</strong> it is not a sell list. A dot far to the right is not a mistake to
+correct, and nothing here ranks your holdings as keep-or-drop. Two reasons, and either alone is
+enough. First, the axes are <strong>assumptions</strong> — long-run μ and σ you or a researched default supplied
+— so a dot does <strong>not</strong> move because the market fell last quarter, and a chart that ignores recent
+prices cannot be telling you to act on them. Second, risk is not damage: a high-σ holding is doing
+its job if you are paid for the bounce and you can sit through it. What the picture <em>is</em> good for is
+noticing that you own something whose assumed risk you had not registered — which is a question to
+go ask, not an answer.</p>
+</div></details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="size-by-value">Size by value</h3></summary><div class="lesson-subsection-body">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-size-by-value.png" alt="Risk vs. Return with Size by value on — larger dots for larger holdings" data-media-id="risk-return-size-by-value" data-where="output__risk__risk.risk-vs-return" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="holdings,size-by-value" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Size by value: dollar weight shows up as dot size — the ★ is pulled by what you actually own, not equal weight on every ticker.</p>
+</div></details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="tabular-risk">Tabular Risk</h3></summary><div class="lesson-subsection-body">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-tabular.png" alt="Tabular Risk: Risk &amp; Return by Item with μ, σ, and value" data-media-id="risk-return-tabular" data-where="output__risk__risk.items" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="real-assets,cash-flows,holdings" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Open <strong>Tabular Risk</strong> for two side-by-side cards:</p>
+<ol>
+<li><strong>Risk &amp; Return by Item</strong> — each holding’s <code>N(μ, σ)</code> and value (sortable; chart for seeing,
+table for ranking).</li>
+<li><strong>Modeled Asset Correlations</strong> — the same pair format as Assumptions → Modeled Asset
+Correlations, filtered to <strong>categories this plan actually uses</strong>. When that list is long, the
+card matches the items table height and scrolls with a fade.</li>
+</ol>
+</div></details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="name-dont-deep-dive-included">Name, don’t deep-dive: ρ included</h3></summary><div class="lesson-subsection-body">
+<p>Next to the portfolio ★ readout you will see <strong><span class="lesson-term" data-term="rho" tabindex="0"><span class="lesson-term-pill">ρ</span><span class="lesson-term-tip" role="tooltip">The Greek letter the product uses for <strong>correlation</strong> — how closely two holdings move together, from −1 (opposite) through 0 (unrelated) to +1 (lockstep). Positive ρ between equities is the normal case rather than the exception, which is why assuming zero quietly understates how much of a portfolio can fall at once. The product lets you run the plan with system ρ applied or not.<a class="lesson-term-more" href="/designer-site/glossary/rho">Full entry →</a></span></span> included</strong> (default, switch on) or <strong>ρ not
+included</strong> when toggled off. That is about how holdings move <strong>together</strong>, not one holding’s own σ.
+Full treatment: <a href="/designer-site/learn/diversification_correlation">Diversification and correlation</a>. Here: know it
+exists — and that turning ρ <strong>off</strong> is what many tools do by <strong>ignoring</strong> cross-holding <span class="lesson-term" data-term="correlation" tabindex="0"><span class="lesson-term-pill">correlation</span><span class="lesson-term-tip" role="tooltip">How closely two investments tend to move <strong>together</strong>, from −1 (opposite) through 0 (unrelated) to +1 (lockstep). Written <strong>ρ (rho)</strong>. It is what decides whether holding several things actually spreads risk: assets that all fall at once are less diversified than a count of holdings suggests.<a class="lesson-term-more" href="/designer-site/glossary/correlation">Full entry →</a></span></span>
+entirely.</p>
+<p>For typical <strong>positive</strong> equity ρ, ignoring those cross terms <strong>understates</strong> portfolio risk: σₚ
+falls toward √(Σ wᵢ²σᵢ²) and the ★ often <strong>slides left</strong>. Negative ρ works the other way
+(dropping <span class="lesson-term" data-term="diversification" tabindex="0"><span class="lesson-term-pill">diversification</span><span class="lesson-term-tip" role="tooltip">Spreading money across investments that do <strong>not</strong> all move together, so a bad year for one is not a bad year for everything. Owning many holdings is not the same thing — if they are highly <strong>correlated</strong> they behave like one large position wearing several names.<a class="lesson-term-more" href="/designer-site/glossary/diversification">Full entry →</a></span></span> can push risk up). The correlation card above is the cross terms the
+toggle is including or zeroing.</p>
+<p><strong>Why the ★ sits left of its ingredients.</strong> This is the one piece of arithmetic worth carrying out
+of this lesson. Whenever holdings are less than perfectly correlated — any ρ <strong>below 1</strong> — portfolio
+σ comes in <strong>below the value-weighted average</strong> of the individual σs, while portfolio μ is exactly
+the value-weighted average of the individual μs. Return adds; risk does not. That gap is the entire
+mechanical content of <span class="lesson-term" data-term="diversification" tabindex="0"><span class="lesson-term-pill">diversification</span><span class="lesson-term-tip" role="tooltip">Spreading money across investments that do <strong>not</strong> all move together, so a bad year for one is not a bad year for everything. Owning many holdings is not the same thing — if they are highly <strong>correlated</strong> they behave like one large position wearing several names.<a class="lesson-term-more" href="/designer-site/glossary/diversification">Full entry →</a></span></span>, and you can watch it on the chart: the ★ sits to the
+<strong>left</strong> of where a straight blend of the dots would put it, and the lower the ρs, the further left
+it sits. Set every ρ to 1 and the gap closes — the ★ lands on the weighted average and the free
+lunch is gone.</p>
+<p>This is variance arithmetic, not counsel: it says what the blend <strong>does</strong>, and says nothing about
+which holdings anyone should own.</p>
+</div></details>
+
+</div>
+<h2 id="what-good-and-toxic-look-like" class="lesson-section-head" style="--i:3"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-good-and-toxic-look-like--body"><span class="lesson-section-title">What “good” and “toxic” look like</span></button></h2><div class="lesson-section-body" id="what-good-and-toxic-look-like--body" role="region" aria-labelledby="what-good-and-toxic-look-like" hidden>
+<table>
+<thead>
+<tr><th>Region (rough)</th><th>Read as</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Top-left</strong></td><td>Attractive assumptions — high μ, low σ. Scrutinize whether the assumptions are honest.</td></tr>
+<tr><td><strong>Bottom-right</strong></td><td>Painful assumptions — low μ, high σ. “Why own this at these inputs?”</td></tr>
+<tr><td><strong>Along a frontier</strong></td><td>Normal trade-off space; portfolio ★ should make sense given weights.</td></tr>
+</tbody>
+</table>
+<p>If a single concentrated holding sits far right and is large by value, the star and the plan’s
+<span class="lesson-term" data-term="monte-carlo" tabindex="0"><span class="lesson-term-pill">Monte Carlo</span><span class="lesson-term-tip" role="tooltip">The method behind a multi-path run: draw many randomized return paths, run the plan down each one, and read the spread of what happened. Named after the casino, because the engine is repeated random sampling rather than a formula — which is why two runs of one plan differ a little, and why a success rate is a proportion of sampled futures rather than a promise.<a class="lesson-term-more" href="/designer-site/glossary/monte-carlo">Full entry →</a></span></span> bands will feel that concentration even when the rest of the book looks calm.</p>
+</div>
+<h2 id="what-to-take-away" class="lesson-section-head" style="--i:4"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-to-take-away--body"><span class="lesson-section-title">What to take away</span></button></h2><div class="lesson-section-body" id="what-to-take-away--body" role="region" aria-labelledby="what-to-take-away" hidden>
+<ul>
+<li>Risk and return belong on <strong>one</strong> picture for the book you actually hold.</li>
+<li><strong>Path:</strong> Risk → Current Risk → <strong>open Analytic Risk</strong>; check <strong>Holdings</strong>.</li>
+<li>The <strong>star</strong> is the portfolio; dots are the ingredients — and it sits <strong>left</strong> of their weighted
+average whenever ρ &lt; 1. Blending averages the return and <em>less</em> than averages the risk; that gap
+is what diversification is.</li>
+<li>Assumptions drive the plot — change μ/σ (or growth categories) and the picture moves. It is
+<strong>not</strong> a sell list, and it does not react to last quarter’s prices.</li>
+<li>The ★ is always your <strong>holdings</strong> blend — the chips add dots, they do not move it. The <strong>cone</strong>
+below the scatter is the chart that follows the Real Assets chip.</li>
+<li>Correlation is a <strong>second</strong> axis of honesty; handle it next.</li>
+</ul>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Where it is in the app</span> <a class="lesson-jump-term" href="/designer-site/glossary/sigma">σ (sigma)</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Where it shows in the forecast</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__risk__line.risk.risk" title="Go there" aria-label="Go there: Risk → Risk σ"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__risk__line.risk.risk.png" width="181" height="32" alt="Risk → Risk σ" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+</div>
+<h2 id="where-to-go-next" class="lesson-section-head" style="--i:5"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="where-to-go-next--body"><span class="lesson-section-title">Where to go next</span></button></h2><div class="lesson-section-body" id="where-to-go-next--body" role="region" aria-labelledby="where-to-go-next" hidden>
+<table>
+<thead>
+<tr><th>Topic</th><th>Lesson</th></tr>
+</thead>
+<tbody>
+<tr><td>Correlation / ρ honesty</td><td><a href="/designer-site/learn/diversification_correlation">Diversification and correlation</a></td></tr>
+<tr><td>Compounding without the scatter</td><td><a href="/designer-site/learn/exponential_growth">Exponential growth</a></td></tr>
+<tr><td>Full household tour</td><td><a href="/designer-site/learn/springfield_baseline">Meet the Springfield household</a></td></tr>
+</tbody>
+</table>
+<!--- ω <lesson_body> -->
+<!-- GENERATED host-hint: Dossier — Live plan canvas — Bind a sample dossier on the right. -->
+</div>
+</div>
+<details class="lesson-rebuild-by-hand"><summary><span class="lesson-rebuild-by-hand-summary-title">Rebuild this plan by hand</span></summary><div class="lesson-rebuild-by-hand-body"><p>The cards on the canvas show the accounts and cash flows. These are the settings that live outside any card, read from the plan itself, with the label each control carries in the app. A value marked default is one to leave alone.</p><table class="content-table">
+<thead>
+<tr>
+<th align="left">Setting</th>
+<th align="left">SC-04 Holdings Portfolio</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2" align="center"><strong>Household</strong></td></tr>
+<tr>
+<td align="left">Planning region</td>
+<td align="left">United States (default)</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Investor (Primary)</td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1980</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">65</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">90</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Taxes</strong></td></tr>
+<tr>
+<td align="left">Tax regime</td>
+<td align="left">United States</td>
+</tr>
+<tr>
+<td align="left">Filing status</td>
+<td align="left">Single</td>
+</tr>
+<tr>
+<td align="left">State of residence</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">First-year federal estimate</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">First-year state estimate</td>
+<td align="left">—</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Strategy</strong></td></tr>
+<tr>
+<td align="left">Residual withdrawal strategy</td>
+<td align="left">Pro-rata (default)</td>
+</tr>
+<tr>
+<td align="left">Roth conversions</td>
+<td align="left">Off</td>
+</tr>
+<tr>
+<td align="left">Definition of success</td>
+<td align="left">Liquidity crises allowed (default)</td>
+</tr>
+<tr>
+<td align="left">Glide path target</td>
+<td align="left">None (default)</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Advanced</strong></td></tr>
+<tr>
+<td align="left">Reporting inflation</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Cost of capital</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Growth assumptions</td>
+<td align="left">Growth overrides (default)</td>
+</tr>
+<tr>
+<td align="left">Currencies</td>
+<td align="left">Multiple currencies (default)</td>
+</tr>
+<tr>
+<td align="left">Default currency</td>
+<td align="left">USD (default)</td>
+</tr>
+<tr>
+<td align="left">Display currency</td>
+<td align="left">USD (default)</td>
+</tr>
+</tbody>
+</table>
+</div></details><div class="lesson-catalog-footer"><span class="lesson-region-badge" title="All regions"><span class="lesson-region-marker">🌐</span><span class="lesson-region-label muted">All regions</span></span><span class="lesson-tags"><span class="lesson-tags-label">Tags</span><span class="learn-chip">fundamentals</span><span class="learn-chip">risk</span><span class="learn-chip">return</span></span></div><hr class="lesson-disclaimer-rule" /><blockquote class="lesson-shared lesson-disclaimer" cite="learning-center:disclaimer"><p><strong>Educational content — not advice.</strong> These lessons teach how Tutilis models a plan and how to read what it shows. The households, balances, and outcomes in them are invented for teaching. Nothing here is financial, investment, tax, or legal advice, or a recommendation to buy, sell, or hold anything. A model cannot know your circumstances — check anything you take from a lesson against your own situation, and against a qualified professional where it matters.</p></blockquote><p class="lesson-privacy-link"><small><a href="/designer-site/privacy">Privacy</a></small></p></div>
+      </section>
+      <div class="lesson-split-gutter" role="separator" aria-orientation="vertical" aria-label="Resize lesson and app panes" tabindex="0"></div>
+      <section class="app-pane">
+        <p class="canvas-omitted muted">The interactive plan is not in this copy.</p>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,5736 @@
+/* tutilis-return: kotlin/website/src/main/resources/static/site.css */
+/* First-party overrides on top of the Pico.css classless baseline.
+   Kept intentionally small — Pico handles the heavy lifting (typography, light/dark, responsive).
+
+   Theme contract (aligned with Compose PlusauriLight / PlusauriDark):
+   - Light paper #fcfbfa / ink #1a1a1a; dark paper #141210 / ink #f6f1e8.
+   - Driven by `data-theme="light"|"dark"` on <html> (set by theme.js + FOUC inline script).
+   - System preference applies only when the user has not chosen (no data-theme yet, or
+     :root without explicit light). Explicit light wins over a dark OS. */
+
+:root {
+    --pico-font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --plusauri-gold: #c89b2c;
+    --plusauri-gold-soft: #f4dfad;
+    /* Secondary sky (Compose PlusauriBlueLight) — glossary term pills. */
+    --plusauri-sky: #78A5EB;
+    --plusauri-sky-soft: color-mix(in srgb, #78A5EB 34%, #ffffff);
+    --plusauri-on-sky: #0f2744;
+    --plusauri-ink: #1a1a1a;
+    --plusauri-graphite: #34271e;
+    --plusauri-paper: #fcfbfa;
+    /* Lesson prose pane (cream) + canvas iframe chrome — match app paper / splash. */
+    --plusauri-lesson-pane: #f7f3ec;
+    --plusauri-app-pane: #fef7ff;
+    /* Soft-sky top-level collapsible bars (match Compose PlusauriCollapsibleBar in
+       kotlin/tutil-ui/.../PlusauriTheme.kt — no token export, so keep the two copies in step).
+       `-active` is web-only: the "current one" shade for surface chips and the lesson outline. */
+    --plusauri-collapsible-bar: #b4cae6;
+    --plusauri-on-collapsible-bar: #0f2744;
+    --plusauri-collapsible-bar-active: #9bb8de;
+    /* Soft cream for chips/pills on graphite (quieter than pure paper white) */
+    --plusauri-pill-on-dark: #e9ded2;
+    --pico-primary: var(--plusauri-gold);
+    --pico-primary-background: #7a5a12;
+    --pico-primary-border: #7a5a12;
+    --pico-primary-hover: #5f450d;
+    --pico-primary-hover-background: #5f450d;
+    --pico-primary-hover-border: #5f450d;
+    --pico-primary-focus: rgba(200, 155, 44, 0.25);
+    --pico-background-color: var(--plusauri-paper);
+    --pico-color: var(--plusauri-ink);
+    --pico-h1-color: var(--plusauri-ink);
+    --pico-h2-color: var(--plusauri-ink);
+    --pico-muted-color: #6b6259;
+}
+
+/* System dark when the user has not forced light. */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --plusauri-ink: #f6f1e8;
+        --plusauri-paper: #141210;
+        --plusauri-lesson-pane: #1c1916;
+        --plusauri-app-pane: #141210;
+        --plusauri-sky-soft: color-mix(in srgb, #78A5EB 26%, #141210);
+        --plusauri-on-sky: #d6e4f5;
+        --plusauri-collapsible-bar: #2a4568;
+        --plusauri-on-collapsible-bar: #d6e4f5;
+        --plusauri-collapsible-bar-active: #3a5a82;
+        --pico-primary: #e0b94d;
+        --pico-primary-background: #e0b94d;
+        --pico-primary-border: #e0b94d;
+        --pico-primary-hover: #f0cb62;
+        --pico-primary-hover-background: #f0cb62;
+        --pico-primary-hover-border: #f0cb62;
+        --pico-primary-inverse: #211708;
+        --pico-primary-focus: rgba(224, 185, 77, 0.28);
+        --pico-background-color: var(--plusauri-paper);
+        --pico-color: var(--plusauri-ink);
+        --pico-h1-color: var(--plusauri-ink);
+        --pico-h2-color: var(--plusauri-ink);
+        --pico-muted-color: #b6aa99;
+    }
+}
+
+/* Explicit dark (user toggle or canvas sync) — wins regardless of OS. */
+html[data-theme="dark"] {
+    --plusauri-ink: #f6f1e8;
+    --plusauri-paper: #141210;
+    --plusauri-lesson-pane: #1c1916;
+    --plusauri-app-pane: #141210;
+    --plusauri-sky-soft: color-mix(in srgb, #78A5EB 26%, #141210);
+    --plusauri-on-sky: #d6e4f5;
+    --plusauri-collapsible-bar: #2a4568;
+    --plusauri-on-collapsible-bar: #d6e4f5;
+    --plusauri-collapsible-bar-active: #3a5a82;
+    --pico-primary: #e0b94d;
+    --pico-primary-background: #e0b94d;
+    --pico-primary-border: #e0b94d;
+    --pico-primary-hover: #f0cb62;
+    --pico-primary-hover-background: #f0cb62;
+    --pico-primary-hover-border: #f0cb62;
+    --pico-primary-inverse: #211708;
+    --pico-primary-focus: rgba(224, 185, 77, 0.28);
+    --pico-background-color: var(--plusauri-paper);
+    --pico-color: var(--plusauri-ink);
+    --pico-h1-color: var(--plusauri-ink);
+    --pico-h2-color: var(--plusauri-ink);
+    --pico-muted-color: #b6aa99;
+}
+
+/* Explicit light — restores light tokens even when the OS is dark. */
+html[data-theme="light"] {
+    --plusauri-ink: #1a1a1a;
+    --plusauri-paper: #fcfbfa;
+    --plusauri-lesson-pane: #f7f3ec;
+    --plusauri-app-pane: #fef7ff;
+    --plusauri-sky-soft: color-mix(in srgb, #78A5EB 34%, #ffffff);
+    --plusauri-on-sky: #0f2744;
+    --plusauri-collapsible-bar: #b4cae6;
+    --plusauri-on-collapsible-bar: #0f2744;
+    --plusauri-collapsible-bar-active: #9bb8de;
+    --pico-primary: var(--plusauri-gold);
+    --pico-primary-background: #7a5a12;
+    --pico-primary-border: #7a5a12;
+    --pico-primary-hover: #5f450d;
+    --pico-primary-hover-background: #5f450d;
+    --pico-primary-hover-border: #5f450d;
+    --pico-primary-focus: rgba(200, 155, 44, 0.25);
+    --pico-background-color: var(--plusauri-paper);
+    --pico-color: var(--plusauri-ink);
+    --pico-h1-color: var(--plusauri-ink);
+    --pico-h2-color: var(--plusauri-ink);
+    --pico-muted-color: #6b6259;
+    /* Pico classless form controls are phone-sized. Compact them site-wide. */
+    --pico-form-element-spacing-vertical: 0.2rem;
+    --pico-form-element-spacing-horizontal: 0.5rem;
+}
+
+/*
+ * Compact inputs / selects / submit buttons. Chips, the theme toggle, and the
+ * lesson-header collapse controls keep their own sizing.
+ */
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"], [type="hidden"]),
+select,
+textarea {
+    margin-bottom: 0;
+    min-height: 0;
+    height: auto;
+    font-size: 0.875rem;
+    line-height: 1.25;
+}
+
+button[type="submit"],
+.reference-search button,
+.catalog-search button,
+.reference-variant-form button,
+.learn-gate-form button {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    min-height: 0;
+    height: auto;
+    padding: 0.2rem 0.65rem;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+/* Compact sun/moon control — same glyph language as the canvas toolbar. */
+/* Site-wide language (shared with Learning Center prose + canvas AppLang). Dropdown only. */
+.site-lang-control {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.site-lang-select {
+    margin: 0;
+    max-width: 11rem;
+    padding: 0.25rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    border-radius: 0.35rem;
+    width: auto;
+    min-height: 0;
+}
+
+.lesson-split-header .site-lang-control {
+    margin-inline-end: 0.25rem;
+}
+
+button.theme-toggle,
+button[data-theme-toggle] {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: var(--plusauri-ink);
+    cursor: pointer;
+    font-size: 1.05rem;
+    line-height: 1;
+    margin: 0;
+    padding: 0.2rem 0.4rem;
+    width: auto;
+}
+
+button.theme-toggle:hover,
+button.theme-toggle:focus-visible,
+button[data-theme-toggle]:hover,
+button[data-theme-toggle]:focus-visible {
+    background: transparent;
+    color: var(--pico-primary);
+}
+
+header nav strong a {
+    text-decoration: none;
+}
+
+.brand-logo {
+    align-items: center;
+    color: var(--plusauri-ink);
+    display: inline-flex;
+    font-weight: 700;
+    gap: 0.18em;
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+.brand-logo:hover,
+.brand-logo:focus {
+    text-decoration: none;
+}
+
+.brand-word {
+    display: inline-block;
+}
+
+.brand-separator {
+    display: inline-block;
+    height: 1.2em;
+    width: 1.2em;
+}
+
+.home-brand {
+    align-items: center;
+    color: var(--plusauri-ink);
+    display: flex;
+    font-size: clamp(3rem, 9vw, 5rem);
+    font-weight: 700;
+    gap: 0.18em;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-block: 2rem 1rem;
+}
+
+.home-brand + h1 {
+    margin-top: 0;
+}
+
+/*
+ * Product lockup: the company wordmark plus the product name set in type. Tutilis has no glyph of
+ * its own by decision — see doc/brand/plusauri-tutilis/Company and Product Branding.md,
+ * "Marks and lockups". The separation is carried by size, weight, and a divider rule rather than
+ * color, so it holds in both themes and does not depend on hue. `currentColor` keeps it inheriting
+ * --plusauri-ink through the theme swap without introducing another token.
+ */
+.home-brand-product {
+    border-inline-start: 1px solid currentColor;
+    font-size: 0.42em;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    opacity: 0.72;
+    padding-inline-start: 0.45em;
+}
+
+/*
+ * Primary + secondary CTAs on home/pricing. Pico styles [role=button] as the solid primary;
+ * .secondary is a quieter text/outline path so Learning Center stays the loud door while
+ * Getting around (or pricing) stays one click away without competing as a second solid button.
+ */
+.home-cta-row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.25rem;
+    margin-block: 1.25rem 1.75rem;
+}
+
+.home-cta-row a.secondary {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+/*
+ * Home catalog doors — same soft-sky surface chips as /learn. Anchors (not buttons) so they
+ * deep-link with ?surface=…; keyboard Alt+L/F/C is mirrored by learn-surface-shortcuts.js.
+ */
+.home-surface-row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.65rem;
+    margin-block: -0.5rem 1.75rem;
+}
+
+a.home-surface-link.learn-chip {
+    align-items: center;
+    border: 1px solid rgba(15, 39, 68, 0.12);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 1px 1px rgba(15, 39, 68, 0.08);
+    cursor: pointer;
+    display: inline-flex;
+    gap: 0.35rem;
+    text-decoration: none;
+}
+
+a.home-surface-link.learn-chip:hover {
+    border-color: var(--plusauri-on-collapsible-bar, #0f2744);
+}
+
+.home-surface-hint {
+    font-size: 0.8rem;
+    margin-inline-start: 0.25rem;
+}
+
+/* Nav: Learning Center is the weighted product destination while sales are closed. */
+nav a.nav-learn {
+    font-weight: 600;
+}
+
+/* One measure for the discovery column: the lede and every filter bar wrap at the same width.
+   Full-bleed chip rows against a capped paragraph read as two different pages. Wrapping costs
+   vertical space, which is the accepted trade. */
+:root {
+    --learn-column: 42rem;
+}
+
+.learn-index-lede {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    max-width: var(--learn-column);
+}
+
+.learn-region-chips,
+.learn-surface-chips,
+.learn-tag-chips {
+    max-width: var(--learn-column);
+}
+
+/*
+ * Shared Learning Center “imports” (orientation, product relationship, disclaimer): always
+ * <blockquote class="lesson-shared …"> so they are easy to find in HTML and restyle in one place.
+ */
+blockquote.lesson-shared {
+    border-inline-start: 4px solid color-mix(in srgb, var(--plusauri-gold, #c9a227) 55%, transparent);
+    margin: 0.75rem 0 1.25rem;
+    padding: 0.85rem 1rem;
+    border-radius: 0 6px 6px 0;
+    quotes: none;
+}
+
+blockquote.lesson-shared p {
+    margin: 0 0 0.5rem;
+}
+
+blockquote.lesson-shared p:last-child {
+    margin-bottom: 0;
+}
+
+/*
+ * Case-study frame directly under a lesson h1 (LessonSituation.kt): who the household is and
+ * what they are asking. Deliberately not a lesson-shared blockquote — those are mechanics
+ * imports; this is the lesson's own first sentence, set as a lede.
+ */
+p.lesson-situation {
+    margin: 0.25rem 0 1rem;
+    font-size: 1.08em;
+    line-height: 1.5;
+    color: var(--plusauri-ink, #1a1a1a);
+}
+
+p.lesson-situation .lesson-situation-label {
+    display: inline-block;
+    margin-inline-end: 0.5em;
+    padding: 0.05em 0.5em;
+    border-radius: 999px;
+    font-size: 0.72em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    vertical-align: 0.15em;
+    color: var(--plusauri-ink, #1a1a1a);
+    background: color-mix(in srgb, var(--plusauri-gold, #c9a227) 28%, transparent);
+}
+
+/*
+ * **Lesson callouts** — foldable panels with a solid label bar, sharing one set of rules (fold,
+ * chevron, Pico overrides, focus ring) and differing in accent, costume and default state. The
+ * catalog of every callout kind, with its class, element and default, is `LessonCallout.kt`; the
+ * authoring convention is planning/design-notes/lesson-callouts.md. The two plain ones:
+ *
+ * - `.lesson-desktop-only` — a section describing something the learner cannot do on this page,
+ *   because the live plan on the right is read-only for dossier structure. Deliberately the loudest
+ *   block in a lesson: a learner must never read an instruction, try it on the canvas beside them,
+ *   fail, and conclude the product is broken. Ships `open`, because a callout nobody has read yet
+ *   has to be read first. Convention and limits:
+ *   planning/design-notes/lesson-center-to-desktop-relationship-blurb.md.
+ * - `.lesson-advanced` — the math, formulas, or derivation behind a point the surrounding prose has
+ *   already made in words. Ships **closed**: the lesson reads without it, and a reader who wants the
+ *   algebra opens it. Convention: planning/design-notes/lesson-advanced-topic-block.md.
+ *
+ * `.lesson-reference` and `.lesson-math` join these shared rules and then put on a costume in
+ * **Mood-breaker callouts** below; `.lesson-did-you-know` is not foldable and lives there alone.
+ *
+ * Each block sets `--lesson-callout-accent` and `--lesson-callout-on-accent` (the ink that goes ON
+ * the bar) together, so a theme can never pair one theme's background with the other's text. The
+ * label/body class names stay per-block so authored Markdown reads as what it is.
+ */
+.lesson-desktop-only,
+.lesson-advanced,
+.lesson-reference,
+.lesson-math,
+.lesson-bibliography {
+    border: 2px solid var(--lesson-callout-accent);
+    border-radius: 8px;
+    margin: 1.25rem 0;
+    padding: 0;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--lesson-callout-accent) 6%, transparent);
+}
+
+.lesson-desktop-only {
+    --lesson-callout-accent: #7c4dff;
+    --lesson-callout-on-accent: #fff;
+}
+
+/*
+ * Power user: this lesson teaches a Power feature. An amber workshop bar wearing the app's own
+ * drill (painted from BrandedPowerIcon by :chart-render:regenerateWherePaths, so the lesson's mark
+ * is the app's). Not foldable: it is short, and it is the first thing a typical reader must see.
+ * Typical is the default and has no callout.
+ */
+.lesson-power-user {
+    --lesson-callout-accent: #b26a00;
+    --lesson-callout-on-accent: #fff;
+    border: 2px solid var(--lesson-callout-accent);
+    border-radius: 8px;
+    margin: 1.25rem 0;
+    padding: 0;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--lesson-callout-accent) 7%, transparent);
+}
+
+.lesson-power-user > .lesson-power-user-label {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: var(--lesson-callout-accent);
+    color: var(--lesson-callout-on-accent);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    margin: 0;
+}
+
+.lesson-power-user > .lesson-power-user-label::before {
+    content: "";
+    flex: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url("/static/images/lessons/where/icons/power-user.png") center / contain no-repeat;
+}
+
+.lesson-power-user > .lesson-power-user-body {
+    padding: 0.6rem 0.9rem 0.1rem;
+}
+
+/* Advanced: a deep teal — clearly not the desktop lavender, and quieter on the page. */
+.lesson-advanced {
+    --lesson-callout-accent: #00796b;
+    --lesson-callout-on-accent: #fff;
+}
+
+/* Label bar — reads before the prose does, and survives a copy/paste as literal text. */
+/*
+ * The header bar is the `<summary>` of a `<details>`, so the callout folds shut.
+ *
+ * A reader who is here for the lesson and not for the desktop app should be able to put this away
+ * once they have seen what it is — it is a sidebar about a surface they may never open, and on a
+ * long lesson it interrupts the read every time. It ships `open`, because a callout nobody has read
+ * yet has to be read first.
+ *
+ * Native `<details>` rather than a scripted toggle: it keyboards, it announces its own expanded
+ * state, and it still folds if the page's JavaScript never arrives.
+ */
+.lesson-desktop-only > .lesson-desktop-only-label,
+.lesson-advanced > .lesson-advanced-label,
+.lesson-reference > .lesson-reference-label,
+.lesson-math > .lesson-math-label,
+.lesson-bibliography > .lesson-bibliography-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    background: var(--lesson-callout-accent);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    margin: 0;
+    cursor: pointer;
+    /* Our own chevron below; these drop the two built-in markers (standards + WebKit). */
+    list-style: none;
+}
+
+/*
+ * Pico colors an accordion's `summary` at a specificity a plain class pair cannot reach:
+ * `details[open]>summary:not([role]):not(:focus)` is (0,3,2) against our (0,2,0), and `:not()`
+ * carries its argument's weight. So the moment this callout became a `<details>`, the label
+ * silently inherited Pico's muted accordion ink over our saturated accent bar — dark on dark,
+ * the one pairing this bar must never be.
+ *
+ * `!important` rather than a specificity arms race: matching (0,3,2) would win only on source
+ * order, and the next Pico bump could take it back without anything here changing.
+ */
+.lesson-desktop-only > .lesson-desktop-only-label,
+.lesson-desktop-only[open] > .lesson-desktop-only-label,
+.lesson-advanced > .lesson-advanced-label,
+.lesson-advanced[open] > .lesson-advanced-label,
+.lesson-reference > .lesson-reference-label,
+.lesson-reference[open] > .lesson-reference-label,
+.lesson-math > .lesson-math-label,
+.lesson-bibliography > .lesson-bibliography-label,
+.lesson-math[open] > .lesson-math-label,
+.lesson-bibliography[open] > .lesson-bibliography-label {
+    color: var(--lesson-callout-on-accent) !important;
+}
+
+.lesson-desktop-only > .lesson-desktop-only-label::-webkit-details-marker,
+.lesson-advanced > .lesson-advanced-label::-webkit-details-marker,
+.lesson-reference > .lesson-reference-label::-webkit-details-marker,
+.lesson-math > .lesson-math-label::-webkit-details-marker,
+.lesson-bibliography > .lesson-bibliography-label::-webkit-details-marker {
+    display: none;
+}
+
+/*
+ * The affordance is a rotating chevron, not a color change — the bar is already a solid accent, and
+ * a reader who does not separate these hues still sees the arrow turn.
+ *
+ * The first four declarations undo Pico, which paints its **own** chevron on every `summary::after`
+ * — a fixed-color SVG background on a floated 1rem box. Declaring only `content` left that box
+ * underneath ours, so the bar showed two overlapping markers, one of them an ink never chosen
+ * against this accent. Same root cause as the header color above: `<details>` opts this element
+ * into a whole Pico component, and the parts we do not override stay Pico's.
+ */
+.lesson-desktop-only > .lesson-desktop-only-label::after,
+.lesson-advanced > .lesson-advanced-label::after,
+.lesson-reference > .lesson-reference-label::after,
+.lesson-math > .lesson-math-label::after,
+.lesson-bibliography > .lesson-bibliography-label::after {
+    background-image: none;
+    float: none;
+    width: auto;
+    height: auto;
+    margin-inline-start: 0;
+    content: "\25be";
+    font-size: 1rem;
+    line-height: 1;
+    /* Ours rotates from 0; Pico's base is -90deg, which would start it sideways. */
+    transform: rotate(0deg);
+    transition: transform 120ms ease;
+}
+
+.lesson-desktop-only[open] > .lesson-desktop-only-label::after,
+.lesson-advanced[open] > .lesson-advanced-label::after,
+.lesson-reference[open] > .lesson-reference-label::after,
+.lesson-math[open] > .lesson-math-label::after,
+.lesson-bibliography[open] > .lesson-bibliography-label::after {
+    transform: rotate(180deg);
+}
+
+/*
+ * The intro chrome draws its marker in `::before`, so Pico's `::after` chevron there is a second,
+ * unasked-for arrow on the opposite side of the bar. It has been painting since that callout became
+ * a `<details>`; nothing referenced it, which is exactly why it went unnoticed.
+ */
+details.lesson-intro-chrome > summary::after,
+details.lesson-rebuild-by-hand > summary::after {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lesson-desktop-only > .lesson-desktop-only-label::after,
+    .lesson-advanced > .lesson-advanced-label::after,
+    .lesson-reference > .lesson-reference-label::after,
+    .lesson-math > .lesson-math-label::after,
+    .lesson-bibliography > .lesson-bibliography-label::after {
+        transition: none;
+    }
+}
+
+.lesson-desktop-only > .lesson-desktop-only-label:focus-visible,
+.lesson-advanced > .lesson-advanced-label:focus-visible,
+.lesson-reference > .lesson-reference-label:focus-visible,
+.lesson-math > .lesson-math-label:focus-visible,
+.lesson-bibliography > .lesson-bibliography-label:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -4px;
+}
+
+.lesson-desktop-only > .lesson-desktop-only-body,
+.lesson-advanced > .lesson-advanced-body,
+.lesson-reference > .lesson-reference-body,
+.lesson-math > .lesson-math-body,
+.lesson-bibliography > .lesson-bibliography-body {
+    padding: 0.9rem 1rem 0.2rem;
+    /*
+     * The callout itself is `overflow: hidden` so its rounded border clips the label bar. That also
+     * clipped anything wider than the pane — a rule table in a reference callout was cut off with
+     * no way to reach its right-hand columns. The body scrolls sideways instead, inside the border.
+     */
+    overflow-x: auto;
+}
+
+.lesson-desktop-only > .lesson-desktop-only-body > :first-child,
+.lesson-advanced > .lesson-advanced-body > :first-child,
+.lesson-reference > .lesson-reference-body > :first-child,
+.lesson-math > .lesson-math-body > :first-child,
+.lesson-bibliography > .lesson-bibliography-body > :first-child {
+    margin-top: 0;
+}
+
+/*
+ * Dark: a pale bar with dark ink. Guarded with `:not([data-theme="light"])` and paired with an
+ * explicit `[data-theme="dark"]` block, per the project's three-state theme rule — the media query
+ * alone left the callout in light colors for a reader who had toggled dark on a light-set OS.
+ */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .lesson-desktop-only {
+        --lesson-callout-accent: #b39ddb;
+        --lesson-callout-on-accent: #1a1a1a;
+        background: color-mix(in srgb, var(--lesson-callout-accent) 12%, transparent);
+    }
+    :root:not([data-theme="light"]) .lesson-advanced {
+        --lesson-callout-accent: #80cbc4;
+        --lesson-callout-on-accent: #1a1a1a;
+        background: color-mix(in srgb, var(--lesson-callout-accent) 12%, transparent);
+    }
+}
+
+html[data-theme="dark"] .lesson-desktop-only {
+    --lesson-callout-accent: #b39ddb;
+    --lesson-callout-on-accent: #1a1a1a;
+    background: color-mix(in srgb, var(--lesson-callout-accent) 12%, transparent);
+}
+
+html[data-theme="dark"] .lesson-advanced {
+    --lesson-callout-accent: #80cbc4;
+    --lesson-callout-on-accent: #1a1a1a;
+    background: color-mix(in srgb, var(--lesson-callout-accent) 12%, transparent);
+}
+
+/*
+ * **Mood-breaker callouts** — three blocks whose job is to change the *feel* of a passage, not just
+ * mark it. Lessons are long and dense; these tell a reader, before they read a word, what kind of
+ * passage this is and how hard to lean in. Convention (when to use each, how many, what may go
+ * inside): planning/design-notes/lesson-callouts.md. Kinds and defaults: `LessonCallout.kt`.
+ *
+ * - `.lesson-did-you-know` — a surprising, useful fact told by the Learning Center's sage, on a
+ *   scroll. At most two per lesson; it only charms while it is rare.
+ * - `.lesson-reference` — dry-but-true material to skim, not learn: rule tables, limits, the fine
+ *   print. An old desk and a dusty page. Ships open.
+ * - `.lesson-math` — the algebra for readers who want it, on a chalkboard. Ships closed, like
+ *   `.lesson-advanced`, which it can replace wherever the fold is math.
+ * - `.lesson-plan` — "What you will learn": the lesson's questions on a slate, each linking to the
+ *   section that answers it. One per lesson, first thing in it.
+ * - `.lesson-bibliography` — the publications behind the figures, on a library catalog card.
+ *
+ * The costumes are physical objects (a scroll, a page, a chalkboard), so they keep their own colors
+ * in both themes rather than inverting. Dark theme only dims the paper, so it does not glare.
+ *
+ * Fonts are self-hosted OFL faces (static/fonts/README.md). A browser downloads a face only when an
+ * element on the page uses it, so a lesson without these callouts pays nothing.
+ */
+@font-face {
+    font-family: "Cinzel";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/static/fonts/cinzel-latin-700-normal.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "IM Fell English";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/fonts/im-fell-english-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "IM Fell English";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/fonts/im-fell-english-latin-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Special Elite";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/fonts/special-elite-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Cabin Sketch";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/static/fonts/cabin-sketch-latin-700-normal.woff2") format("woff2");
+}
+
+/* ── Did you know? ─────────────────────────────────────────────────────────────────────────────
+ *
+ * The teacher and her student sit to the left; the fact is on a scroll beside them. Both are drawn
+ * by this stylesheet — the picture is `::before`, the scroll is `::after` behind the label and
+ * body — so an author writes only the words and cannot get the picture wrong. The picture is
+ * decoration, which is also why it is a pseudo-element: a screen reader reads the fact, not a
+ * description of two cartoon figures.
+ *
+ * The picture column is a share of the block's width with a floor and a ceiling, so it shrinks
+ * with the lesson pane when the splitter is dragged, without a media query that would only know
+ * the window.
+ */
+.lesson-did-you-know {
+    --dyk-ink: #3b2614;
+    --dyk-rubric: #8c2f12;
+    --dyk-paper-center: #fbf1d6;
+    --dyk-paper-edge: #e3c68d;
+    --dyk-roller-dark: #6e4a22;
+    --dyk-roller-light: #f0d9a6;
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: clamp(7rem, 30%, 13rem) minmax(0, 1fr);
+    grid-template-areas:
+        "sage label"
+        "sage body";
+    grid-template-rows: auto 1fr;
+    column-gap: 0.75rem;
+    margin: 1.5rem 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+.lesson-did-you-know::before {
+    content: "";
+    grid-area: sage;
+    align-self: center;
+    aspect-ratio: 400 / 304;
+    background: url("/static/images/learn/teacher-student-futuristic.webp") center / contain no-repeat;
+}
+
+/* The scroll: a rolled edge top and bottom, and paper that darkens toward its edges. */
+.lesson-did-you-know::after {
+    content: "";
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    z-index: -1;
+    border-radius: 0.35rem;
+    background:
+        linear-gradient(to bottom, var(--dyk-roller-dark), #c9a063 30%, var(--dyk-roller-light) 50%, #b98d4f 72%, var(--dyk-roller-dark)) top / 100% 0.75rem no-repeat,
+        linear-gradient(to bottom, var(--dyk-roller-dark), #c9a063 30%, var(--dyk-roller-light) 50%, #b98d4f 72%, var(--dyk-roller-dark)) bottom / 100% 0.75rem no-repeat,
+        radial-gradient(ellipse at 50% 45%, var(--dyk-paper-center) 45%, var(--dyk-paper-edge) 100%);
+    box-shadow: 0 2px 8px rgba(60, 40, 10, 0.25);
+}
+
+.lesson-did-you-know > .lesson-did-you-know-label {
+    grid-area: label;
+    margin: 0;
+    padding: 1.2rem 1.4rem 0.15rem;
+    font-family: "Cinzel", "Trajan Pro", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
+    color: var(--dyk-rubric);
+}
+
+.lesson-did-you-know > .lesson-did-you-know-body {
+    grid-area: body;
+    padding: 0.2rem 1.4rem 1.2rem;
+    font-family: "IM Fell English", Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+    line-height: 1.45;
+    color: var(--dyk-ink);
+    --pico-color: var(--dyk-ink);
+}
+
+.lesson-did-you-know > .lesson-did-you-know-body > :first-child {
+    margin-top: 0;
+}
+
+.lesson-did-you-know > .lesson-did-you-know-body > :last-child {
+    margin-bottom: 0;
+}
+
+.lesson-did-you-know > .lesson-did-you-know-body strong {
+    color: var(--dyk-rubric);
+}
+
+.lesson-did-you-know > .lesson-did-you-know-body a {
+    color: var(--dyk-rubric);
+    text-decoration-color: color-mix(in srgb, var(--dyk-rubric) 50%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .lesson-did-you-know {
+        --dyk-paper-center: #e9d9b2;
+        --dyk-paper-edge: #c7a86d;
+    }
+}
+
+html[data-theme="dark"] .lesson-did-you-know {
+    --dyk-paper-center: #e9d9b2;
+    --dyk-paper-edge: #c7a86d;
+}
+
+/* ── Reference ─────────────────────────────────────────────────────────────────────────────────
+ *
+ * An old desk and a dusty page. The label bar is walnut with a grain and typewriter lettering; the
+ * body is aged paper with a little foxing and a darkened edge. It reads as "look this up", which is
+ * what it is for — a reader who skims it and moves on has used it correctly.
+ */
+.lesson-reference {
+    --lesson-callout-accent: #5b3a1e;
+    --lesson-callout-on-accent: #f3e3c3;
+    --ref-ink: #3a2a1a;
+    --ref-rule: #d6c096;
+    --ref-paper-top: #f8f0dd;
+    --ref-paper-bottom: #efe0c0;
+    --ref-fox: rgba(160, 110, 50, 0.1);
+    border-width: 3px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(50, 30, 10, 0.18);
+    background:
+        radial-gradient(circle at 10% 22%, var(--ref-fox) 0 2.5rem, transparent 2.7rem),
+        radial-gradient(circle at 92% 78%, var(--ref-fox) 0 3.5rem, transparent 3.8rem),
+        radial-gradient(circle at 70% 12%, var(--ref-fox) 0 1.2rem, transparent 1.35rem),
+        linear-gradient(var(--ref-paper-top), var(--ref-paper-bottom));
+}
+
+.lesson-reference > .lesson-reference-label {
+    justify-content: flex-start;
+    background:
+        repeating-linear-gradient(93deg, rgba(0, 0, 0, 0.08) 0 2px, transparent 2px 7px, rgba(255, 255, 255, 0.04) 7px 8px, transparent 8px 13px),
+        linear-gradient(180deg, #74502c, #4e3018);
+    font-family: "Special Elite", "Courier New", monospace;
+    font-weight: 400;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    padding: 0.5rem 0.9rem;
+}
+
+.lesson-reference > .lesson-reference-label::before {
+    content: "\1F4DA";
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+.lesson-reference > .lesson-reference-label::after,
+.lesson-math > .lesson-math-label::after {
+    margin-inline-start: auto;
+}
+
+.lesson-reference > .lesson-reference-body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.95em;
+    color: var(--ref-ink);
+    --pico-color: var(--ref-ink);
+    --pico-background-color: transparent;
+    box-shadow: inset 0 0 2.5rem rgba(120, 80, 30, 0.14);
+}
+
+.lesson-pane .lesson-reference table td,
+.lesson-pane .lesson-reference table th {
+    border-color: var(--ref-rule);
+    background: transparent;
+    color: var(--ref-ink);
+}
+
+/*
+ * `details…[open]` is for weight, not meaning — the header is only visible while the fold is open.
+ * The site's dark-theme header rule is (0,3,3); this is (0,3,4), so the costume keeps its header
+ * in both themes. The math board below uses the same selector for the same reason.
+ */
+.lesson-pane details.lesson-reference[open] table thead th {
+    /* Deep walnut in both themes: the dark theme's lighter accent is too pale under cream ink. */
+    background: #5b3a1e;
+    border-color: #5b3a1e;
+    color: var(--lesson-callout-on-accent);
+    font-family: "Special Elite", "Courier New", monospace;
+    font-weight: 400;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .lesson-reference {
+        --lesson-callout-accent: #8a6a45;
+        --ref-ink: #eadfc8;
+        --ref-rule: #5c4a34;
+        --ref-paper-top: #2e251b;
+        --ref-paper-bottom: #241d15;
+        --ref-fox: rgba(230, 190, 130, 0.06);
+    }
+}
+
+html[data-theme="dark"] .lesson-reference {
+    --lesson-callout-accent: #8a6a45;
+    --ref-ink: #eadfc8;
+    --ref-rule: #5c4a34;
+    --ref-paper-top: #2e251b;
+    --ref-paper-bottom: #241d15;
+    --ref-fox: rgba(230, 190, 130, 0.06);
+}
+
+/* ── For the math lovers ───────────────────────────────────────────────────────────────────────
+ *
+ * A chalkboard in a wooden frame. Folded, it is a narrow slate with the label chalked on it, which
+ * is the whole invitation; opened, the algebra is written up in chalk. KaTeX draws in
+ * `currentColor`, so formulas come out in chalk without touching KaTeX's own sheet.
+ *
+ * `border-image` draws the frame and gives up rounded corners, which a chalkboard does not have.
+ */
+.lesson-math {
+    --lesson-callout-accent: #6d4524;
+    --lesson-callout-on-accent: #f4f1e8;
+    --chalk: #f4f1e8;
+    --chalk-yellow: #ffe98a;
+    --chalk-line: rgba(244, 241, 232, 0.35);
+    border: 0.6rem solid var(--lesson-callout-accent);
+    border-image: linear-gradient(135deg, #9a6634, #5e3a1c 45%, #8b5a2b 70%, #5e3a1c) 1;
+    border-radius: 0;
+    box-shadow: 0 3px 10px rgba(20, 20, 10, 0.3);
+    background:
+        radial-gradient(ellipse at 25% 20%, rgba(255, 255, 255, 0.07), transparent 55%),
+        radial-gradient(ellipse at 80% 75%, rgba(255, 255, 255, 0.05), transparent 50%),
+        #274233;
+    color: var(--chalk);
+}
+
+.lesson-math > .lesson-math-label {
+    justify-content: flex-start;
+    background: transparent;
+    font-family: "Cabin Sketch", "Chalkboard SE", "Comic Sans MS", cursive;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.55);
+    padding: 0.45rem 0.9rem;
+}
+
+.lesson-math[open] > .lesson-math-label {
+    border-bottom: 2px dashed var(--chalk-line);
+}
+
+.lesson-math > .lesson-math-label::before {
+    content: "\2211";
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--chalk-yellow);
+}
+
+/*
+ * The working is set in the site's own face, not a chalk hand: it is algebra and full sentences a
+ * reader has to follow step by step, and the Caveat handwriting made it hard to read (owner
+ * feedback, 2026-10-01; the slate's questions moved off it for the same reason). The board, the
+ * wooden frame, the chalk color and the sketched label carry the costume on their own.
+ */
+.lesson-math > .lesson-math-body {
+    font-family: var(--pico-font-family);
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--chalk);
+    --pico-color: var(--chalk);
+    --pico-background-color: transparent;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+/* KaTeX's own size, a touch larger than the body text it sits in, as it is elsewhere. */
+.lesson-math > .lesson-math-body .katex {
+    font-size: 1.1em;
+    text-shadow: none;
+}
+
+/* A worked line wider than a narrow pane scrolls on the board instead of running off it. */
+.lesson-math > .lesson-math-body .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.2rem;
+}
+
+.lesson-math > .lesson-math-body strong {
+    color: var(--chalk-yellow);
+}
+
+.lesson-math > .lesson-math-body a {
+    color: var(--chalk-yellow);
+}
+
+.lesson-pane .lesson-math table td,
+.lesson-pane .lesson-math table th {
+    border-color: var(--chalk-line);
+    background: transparent;
+    color: var(--chalk);
+}
+
+.lesson-pane details.lesson-math[open] table thead th {
+    background: transparent;
+    color: var(--chalk-yellow);
+    border-color: var(--chalk-line);
+    border-bottom: 2px solid var(--chalk);
+}
+
+/* ── What you will learn (the lesson plan) ─────────────────────────────────────────────────────
+ *
+ * The board a teacher writes on before class: a black slate in a wooden frame, the questions the
+ * lesson answers numbered in chalk circles, and a chalk tray along the bottom. It does not fold,
+ * because it is the thing a reader should see first. It sits inside the lesson's own
+ * `## What you will learn` section, so the outline still names it.
+ *
+ * A slate rather than the math callout's green board, so the two never read as the same object.
+ * The questions link to their sections; `lesson-split.js` opens a shut section before it jumps.
+ */
+.lesson-plan {
+    --chalk: #f4f1e8;
+    --chalk-yellow: #ffe98a;
+    --chalk-line: rgba(244, 241, 232, 0.35);
+    --pico-color: var(--chalk);
+    position: relative;
+    margin: 0.5rem 0 1.5rem;
+    padding: 1rem 1.4rem 2.2rem;
+    border: 0.7rem solid #6d4524;
+    border-image: linear-gradient(135deg, #9a6634, #5e3a1c 45%, #8b5a2b 70%, #5e3a1c) 1;
+    background:
+        radial-gradient(ellipse at 20% 15%, rgba(255, 255, 255, 0.08), transparent 55%),
+        radial-gradient(ellipse at 85% 70%, rgba(255, 255, 255, 0.05), transparent 50%),
+        #2b302e;
+    box-shadow: 0 3px 12px rgba(20, 20, 10, 0.3);
+    color: var(--chalk);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+/* The chalk tray: a wooden ledge with a white and a yellow stick and a felt eraser. */
+.lesson-plan::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.85rem;
+    background:
+        linear-gradient(#ffffff, #d9d4c7) 10% 45% / 2.4rem 0.32rem no-repeat,
+        linear-gradient(#fff4b8, #e0c75a) 19% 45% / 1.5rem 0.32rem no-repeat,
+        linear-gradient(#3d3d3d 0 40%, #c9b79c 40%) 84% 0 / 3.4rem 100% no-repeat,
+        linear-gradient(#8b5a2b, #5e3a1c);
+}
+
+.lesson-plan > .lesson-plan-label {
+    display: inline-block;
+    margin: 0 0 0.6rem;
+    padding-bottom: 0.1rem;
+    border-bottom: 2px dashed var(--chalk-line);
+    font-family: "Cabin Sketch", "Chalkboard SE", "Comic Sans MS", cursive;
+    font-weight: 700;
+    font-size: 1.45rem;
+    color: var(--chalk);
+}
+
+/*
+ * The questions are set in the site's own face, not a chalk hand: they are full sentences a reader must
+ * parse before the lesson starts, and a handwriting face made them hard to read (reader feedback,
+ * 2026-09-30). The board, the label, and the chalk circles carry the costume on their own.
+ */
+.lesson-plan > .lesson-plan-body {
+    font-family: var(--pico-font-family);
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.lesson-plan > .lesson-plan-body > :first-child {
+    margin-top: 0;
+}
+
+.lesson-plan > .lesson-plan-body > :last-child {
+    margin-bottom: 0;
+}
+
+.lesson-plan > .lesson-plan-body ol {
+    counter-reset: lesson-plan-step;
+    list-style: none;
+    margin: 0.4rem 0 0;
+    padding: 0;
+}
+
+.lesson-plan > .lesson-plan-body ol > li {
+    counter-increment: lesson-plan-step;
+    position: relative;
+    list-style: none;
+    margin: 0 0 0.55rem;
+    padding-inline-start: 2.5rem;
+}
+
+/* Hand-drawn circles: slightly uneven radii, so no two look stamped. */
+.lesson-plan > .lesson-plan-body ol > li::before {
+    content: counter(lesson-plan-step);
+    position: absolute;
+    left: 0;
+    top: 0.05em;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 2px solid var(--chalk);
+    border-radius: 52% 46% 55% 44%;
+    font-family: "Cabin Sketch", "Chalkboard SE", cursive;
+    font-size: 1.05rem;
+    line-height: 1.6rem;
+    text-align: center;
+    color: var(--chalk-yellow);
+}
+
+.lesson-plan > .lesson-plan-body ol > li:nth-child(even)::before {
+    border-radius: 45% 55% 47% 53%;
+}
+
+.lesson-plan > .lesson-plan-body strong {
+    color: var(--chalk);
+    font-weight: 700;
+}
+
+/*
+ * Pico treats a list inside an `<aside>` as sidebar navigation and makes each link a padded
+ * block, which dropped the full stop after every "See …" link onto a line of its own.
+ */
+.lesson-plan > .lesson-plan-body a {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: var(--chalk-yellow);
+    text-decoration: underline dashed;
+    text-decoration-color: color-mix(in srgb, var(--chalk-yellow) 55%, transparent);
+    text-underline-offset: 0.18em;
+}
+
+.lesson-plan > .lesson-plan-body .katex {
+    font-size: 0.9em;
+    text-shadow: none;
+}
+
+/* ── Bibliography ──────────────────────────────────────────────────────────────────────────────
+ *
+ * A library catalog card: a typed heading over a red rule, faint blue ruled lines, entries set with
+ * a hanging indent, a punched hole at the foot and two more cards peeking out behind. It says
+ * "these are the sources" the way a card drawer does, and it folds like the other callouts.
+ *
+ * The ruled lines are one background gradient whose period matches the body's line height, so
+ * text sits on the lines whatever the pane width.
+ */
+/* The card itself is shared with the jump-to callout (`.lesson-jump`, below): same drawer, same stock. */
+.lesson-bibliography,
+.lesson-jump {
+    --lesson-callout-accent: #c8463d;
+    --lesson-callout-on-accent: #2a2a33;
+    --card: #fbf8ef;
+    --card-edge: #dcd4bf;
+    --card-ink: #2a2a33;
+    --card-rule: rgba(70, 110, 185, 0.2);
+    --card-link: #1f4f9a;
+    --card-line: 1.6rem;
+    position: relative;
+    border: 1px solid var(--card-edge);
+    border-radius: 3px;
+    background: var(--card);
+    box-shadow:
+        3px 3px 0 -1px var(--card),
+        3px 3px 0 0 var(--card-edge),
+        6px 6px 0 -1px var(--card),
+        6px 6px 0 0 var(--card-edge),
+        0 6px 14px rgba(0, 0, 0, 0.12);
+    margin: 1.5rem 6px 1.75rem 0;
+    overflow: visible;
+    --pico-color: var(--card-ink);
+}
+
+.lesson-bibliography > .lesson-bibliography-label {
+    justify-content: flex-start;
+    background: transparent;
+    border-bottom: 2px solid var(--lesson-callout-accent);
+    font-family: "Special Elite", "Courier New", monospace;
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    padding: 0.6rem 1rem 0.45rem;
+}
+
+.lesson-bibliography > .lesson-bibliography-label::before {
+    content: "\1F5C2";
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.lesson-bibliography > .lesson-bibliography-label::after {
+    margin-inline-start: auto;
+}
+
+.lesson-bibliography > .lesson-bibliography-label:focus-visible {
+    outline-color: var(--card-link);
+}
+
+.lesson-bibliography > .lesson-bibliography-body {
+    padding: 0.35rem 1rem 2rem 1rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.92rem;
+    line-height: var(--card-line);
+    color: var(--card-ink);
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent calc(var(--card-line) - 1px),
+        var(--card-rule) calc(var(--card-line) - 1px),
+        var(--card-rule) var(--card-line)
+    ) 0 0.35rem / 100% var(--card-line);
+}
+
+/* The punched hole a catalog rod runs through. */
+.lesson-bibliography[open] > .lesson-bibliography-body::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0.5rem;
+    width: 0.85rem;
+    height: 0.85rem;
+    margin-left: -0.425rem;
+    border-radius: 50%;
+    background: var(--pico-background-color, #fff);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.lesson-bibliography > .lesson-bibliography-body ul,
+.lesson-bibliography > .lesson-bibliography-body ol {
+    margin: 0;
+    padding: 0;
+}
+
+.lesson-bibliography > .lesson-bibliography-body li {
+    list-style: none;
+    margin: 0;
+    padding-inline-start: 1.75rem;
+    text-indent: -1.75rem;
+}
+
+.lesson-bibliography > .lesson-bibliography-body p {
+    margin: 0 0 var(--card-line);
+}
+
+.lesson-bibliography > .lesson-bibliography-body a {
+    color: var(--card-link);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .lesson-bibliography,
+    :root:not([data-theme="light"]) .lesson-jump {
+        --card: #e4dece;
+        --card-edge: #b9b09a;
+    }
+}
+
+html[data-theme="dark"] .lesson-bibliography,
+html[data-theme="dark"] .lesson-jump {
+    --card: #e4dece;
+    --card-edge: #b9b09a;
+}
+
+/* ── Jump to ────────────────────────────────────────────────────────────────────────────────────
+ *
+ * A glossary word's places in the app, on the Works cited catalog card: the word typed as the
+ * heading over the red rule, then each side of the app (where it is entered, tried, read) with its
+ * paths as the app's Glossary draws them (`LessonJumpRefs`). A path is a button: a click takes the
+ * canvas there (`initJumpTo` in lesson-split.js). It does not fold — it is a few lines and the
+ * point is to be seen.
+ */
+.lesson-jump > .lesson-jump-label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.6rem;
+    margin: 0;
+    border-bottom: 2px solid var(--lesson-callout-accent);
+    padding: 0.6rem 1rem 0.45rem;
+    color: var(--card-ink);
+}
+
+.lesson-jump .lesson-jump-kicker {
+    font-family: "Special Elite", "Courier New", monospace;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+}
+
+.lesson-jump .lesson-jump-kicker::before {
+    content: "\1F5C2  ";
+    letter-spacing: 0;
+}
+
+.lesson-jump .lesson-jump-term {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    color: var(--card-ink);
+    text-decoration-color: var(--lesson-callout-accent);
+}
+
+.lesson-jump > .lesson-jump-body {
+    padding: 0 0 1.9rem;
+}
+
+.lesson-jump-body > .lesson-jump-side {
+    margin: 0.7rem 1rem 0.3rem;
+    font-family: "Special Elite", "Courier New", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--card-link);
+}
+
+.lesson-jump-body > .lesson-jump-places {
+    margin: 0 1rem;
+    padding: 0;
+}
+
+.lesson-jump-body > .lesson-jump-places > .lesson-jump-place {
+    list-style: none;
+    margin: 0 0 0.4rem;
+}
+
+.lesson-jump .lesson-jump-go {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--card-link);
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.lesson-jump .lesson-jump-go:hover,
+.lesson-jump .lesson-jump-go:focus-visible {
+    border-color: var(--card-edge);
+    background: rgba(70, 110, 185, 0.08);
+}
+
+.lesson-jump .lesson-jump-go:focus-visible {
+    outline: 2px solid var(--card-link);
+    outline-offset: 1px;
+}
+
+/* At its own size (the manifest's CSS pixels), shrinking only when the column is narrower. */
+.lesson-jump .lesson-jump-path {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.lesson-jump .lesson-jump-arrow {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.lesson-jump .lesson-jump-note {
+    margin: 0.1rem 0 0.2rem 0.4rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    color: var(--card-ink);
+}
+
+/* The punched hole a catalog rod runs through. */
+.lesson-jump::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0.5rem;
+    width: 0.85rem;
+    height: 0.85rem;
+    margin-left: -0.425rem;
+    border-radius: 50%;
+    background: var(--pico-background-color, #fff);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+/* No canvas on this page: the paths are pictures, not ways to go. */
+.lesson-jump-inert .lesson-jump .lesson-jump-go {
+    cursor: default;
+    pointer-events: none;
+}
+
+.lesson-jump-inert .lesson-jump .lesson-jump-arrow {
+    display: none;
+}
+
+/* The same card on a word's Glossary page (`LessonJumpRefs.glossaryPageCard`): pictures, not
+   buttons, so the picture takes the inset the button would have given it. */
+.glossary-where {
+    margin: 1.5rem 0;
+}
+
+.glossary-where .lesson-jump-place > .lesson-jump-path {
+    margin: 0.2rem 0.4rem;
+}
+
+.lesson-jump .lesson-jump-not-modeled {
+    margin: 0.7rem 1rem 0;
+}
+
+/*
+ * **Glossary pills and cards inside a costume.**
+ *
+ * The site's label-column table rule colors a cell with `--plusauri-ink`, which is dark ink and
+ * vanishes on a chalkboard. The override lives on the *tables* inside each costume, not on the
+ * costume itself: a hover card reads the same variable for its text, and when the whole callout
+ * redefined it, the card drew chalk-white text on white paper in light theme.
+ */
+.lesson-did-you-know table { --plusauri-ink: var(--dyk-ink); }
+.lesson-reference table { --plusauri-ink: var(--ref-ink); }
+.lesson-math table,
+.lesson-plan table { --plusauri-ink: var(--chalk); }
+.lesson-bibliography table { --plusauri-ink: var(--card-ink); }
+
+/* A hover card is always set in the site's own type, whatever costume it opens from. */
+.lesson-term-tip {
+    font-family: var(--pico-font-family);
+    font-style: normal;
+    text-shadow: none;
+}
+
+/*
+ * …and its "Full entry" link keeps its own look. Each costume colors the links in its body (chalk
+ * yellow, rubric red), and the slate also makes them inline, which is right for prose and wrong
+ * for the link at the foot of a card. `:is()` lifts this above those body rules.
+ */
+:is(.lesson-plan, .lesson-math, .lesson-did-you-know, .lesson-reference, .lesson-bibliography) .lesson-term-tip .lesson-term-more {
+    display: block;
+    margin: 0.45rem 0 0;
+    padding: 0;
+    color: var(--plusauri-on-sky, #1c3f73);
+    text-decoration: none;
+}
+
+/*
+ * In the chalk-handwriting costumes the pill is set in the site's type, larger than elsewhere:
+ * a small bold sans word inside a large script line is the hardest thing on the board to read,
+ * and these boards are where older readers most need it plain.
+ */
+.lesson-plan .lesson-term-pill,
+.lesson-math .lesson-term-pill {
+    font-family: var(--pico-font-family);
+    font-style: normal;
+    font-size: 0.82em;
+    text-shadow: none;
+    vertical-align: 0.05em;
+}
+
+main {
+    padding-block: 2rem;
+}
+
+/* Early public preview — sales disabled (SALES_ENABLED=false). */
+.preview-banner {
+    background: var(--plusauri-graphite, #34271e);
+    color: var(--plusauri-gold-soft, #f4dfad);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 0.55rem 1rem;
+    text-align: center;
+}
+
+/*
+ * Draft / codegen content watermark (LESSON_DOSSIERS_DIR=dossiers-draft, dual-run --draft).
+ * Thin so it never competes with lesson prose; unmistakable vs public 8090 dogfood.
+ */
+.draft-content-banner {
+    background: #7a3e00;
+    color: #fff8e8;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.2;
+    padding: 0.22rem 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.draft-content-banner-detail {
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    opacity: 0.9;
+}
+
+/* Planning-region filters on /learn (globe vs national flags). */
+.learn-region-chips,
+.learn-region-chips[role="group"] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    margin: 0.75rem 0 0.5rem;
+    width: auto;
+}
+
+/* Pico outlines a [role=group] while a child has focus; on a chip row that reads as a stray box. */
+.learn-region-chips[role="group"]:focus-within,
+.learn-region-chips[role="group"]:has(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.learn-region-chips[hidden] {
+    display: none !important;
+}
+
+.learn-region-chips-label,
+.learn-region-chips[role="group"] > .learn-region-chips-label,
+.learn-region-chips[role="group"] > :first-child {
+    flex: 0 0 auto;
+    width: auto;
+    margin: 0;
+    margin-inline-end: 0.15rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.learn-card-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+}
+
+.learn-card-region {
+    flex: 0 0 auto;
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+/* Work-queue markers on a catalog card (🪗 not yet accordion, 💥 needs an intro card) — see
+   learn-index.js. Sit after the title. */
+.learn-card-outline,
+.learn-card-intro-card {
+    flex: 0 0 auto;
+    font-size: 0.95rem;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.lesson-region-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0 0 0.65rem;
+    font-size: 0.9rem;
+}
+
+/*
+ * Catalog facts at the foot of a lesson (LessonCatalogFooter) — region and tags on ONE line.
+ *
+ * They used to be two stacked blocks at the top of the pane, where a reader who had not used a
+ * tagged system read them as something to understand before the lesson started. Here they are an
+ * end-matter line above the disclaimer: one row, quieter than body text, separated by a rule so it
+ * reads as "about this document" rather than as a final paragraph.
+ *
+ * The children keep their catalog classes so a tag looks identical here, in /learn filters, and in
+ * search results — only their stacking margins are cancelled, because the row owns the layout now.
+ */
+.lesson-catalog-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.75rem;
+    /*
+     * End matter sits close to what it describes. The first draft used 2rem here and left the
+     * disclaimer's top margin to Pico's blockquote default, which put roughly a screen-inch of
+     * nothing on either side of a single quiet line. Both gaps are now stated here rather than
+     * inherited: ~1.5rem from the accordion to this row, and the same from this row to the
+     * disclaimer (set on the disclaimer's own margin-top, since margins do not collapse through
+     * the border).
+     */
+    margin: 0.9rem 0 0;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--pico-muted-border-color, rgba(0, 0, 0, 0.1));
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.lesson-catalog-footer .lesson-region-badge,
+.lesson-catalog-footer .lesson-tags {
+    margin: 0;
+}
+
+/* Wrapped tag chips should not drift away from their label on a narrow pane. */
+.lesson-catalog-footer .lesson-tags {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.lesson-region-marker {
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+footer {
+    margin-top: 3rem;
+    padding-block: 2rem;
+    opacity: 0.75;
+}
+
+/* Location + contact email — own line under the copyright. */
+footer .footer-contact {
+    display: block;
+    margin-top: 0.35rem;
+}
+
+/* Second footer line (LessonDisclaimer.FOOTER_LINE) — own line, quieter than the copyright. */
+footer .footer-disclaimer {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.85em;
+}
+
+/*
+ * Orientation + product-relationship variants on the shared blockquote shell
+ * (LessonOrientation / LessonProductRelationship). Nested inside [LessonIntroChrome]
+ * so the stack can collapse after the learner has read it.
+ *
+ * Surfaces mix ink into paper so light mode stays soft gray and dark mode stays
+ * dark panels with readable cream text (hardcoded #f4f4f5 + dark ink was illegible).
+ */
+blockquote.lesson-orientation,
+blockquote.lesson-product-relationship {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--plusauri-ink, #1a1a1a);
+    background: color-mix(
+        in srgb,
+        var(--plusauri-ink, #1a1a1a) 6%,
+        var(--plusauri-paper, #fcfbfa)
+    );
+    border: 1px solid color-mix(in srgb, var(--plusauri-ink, #1a1a1a) 14%, transparent);
+    border-inline-start: 4px solid color-mix(in srgb, var(--plusauri-gold, #c9a227) 55%, transparent);
+}
+
+/*
+ * Intro chrome collapsible — wraps orientation + product relationship on every lesson.
+ * Native <details>; open by default. sessionStorage preference applied by lesson-split.js.
+ */
+details.lesson-intro-chrome,
+details.lesson-rebuild-by-hand {
+    margin: 0.75rem 0 1.25rem;
+    border: 1px solid color-mix(in srgb, var(--plusauri-ink, #1a1a1a) 14%, transparent);
+    border-radius: 8px;
+    color: var(--plusauri-ink, #1a1a1a);
+    background: color-mix(
+        in srgb,
+        var(--plusauri-ink, #1a1a1a) 8%,
+        var(--plusauri-lesson-pane, var(--plusauri-paper, #fcfbfa))
+    );
+    /* Visible so glossary term tips are not clipped. */
+    overflow: visible;
+}
+
+details.lesson-intro-chrome > summary,
+details.lesson-rebuild-by-hand > summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.75rem;
+    padding: 0.7rem 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    user-select: none;
+    color: var(--plusauri-ink, #1a1a1a);
+    /* Soft gold edge so it reads as LC chrome, not a form control. */
+    border-inline-start: 4px solid color-mix(in srgb, var(--plusauri-gold, #c9a227) 55%, transparent);
+}
+
+/* Same Pico accordion override as the desktop callout above, same reason. */
+details.lesson-intro-chrome > summary,
+details.lesson-intro-chrome[open] > summary,
+details.lesson-rebuild-by-hand > summary,
+details.lesson-rebuild-by-hand[open] > summary {
+    color: var(--plusauri-ink, #1a1a1a) !important;
+}
+
+details.lesson-intro-chrome > summary::-webkit-details-marker,
+details.lesson-rebuild-by-hand > summary::-webkit-details-marker {
+    display: none;
+}
+
+details.lesson-intro-chrome > summary::before,
+details.lesson-rebuild-by-hand > summary::before {
+    content: "▸";
+    display: inline-block;
+    width: 1em;
+    color: var(--plusauri-gold, #c9a227);
+    transition: transform 0.12s ease;
+    flex-shrink: 0;
+}
+
+details.lesson-intro-chrome[open] > summary::before,
+details.lesson-rebuild-by-hand[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+details.lesson-intro-chrome > summary:hover,
+details.lesson-rebuild-by-hand > summary:hover {
+    background: color-mix(in srgb, var(--plusauri-gold, #c89b2c) 18%, transparent);
+}
+
+.lesson-intro-chrome-summary-title,
+.lesson-rebuild-by-hand-summary-title {
+    font-weight: 600;
+    color: var(--plusauri-ink, #1a1a1a);
+}
+
+.lesson-intro-chrome-summary-hint {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--pico-muted-color, #6b6259);
+}
+
+.lesson-intro-chrome-body,
+.lesson-rebuild-by-hand-body {
+    padding: 0 0.75rem 0.85rem 1rem;
+    color: var(--plusauri-ink, #1a1a1a);
+}
+
+/* Nested shared blockquotes: drop outer margin so the stack packs inside the disclosure. */
+/*
+ * "Rebuild this plan by hand" — the generated plan-settings table every canvas lesson carries at
+ * its foot (LessonRebuildByHand.kt). Shares the intro chrome's collapsible framing (the selector
+ * lists above) so the two read as the same kind of thing; only the placement and the table are its
+ * own. Not wired to the intro-chrome storage preference: a reader who keeps the intro closed still
+ * wants to open this one on the lesson where they are rebuilding the plan.
+ */
+details.lesson-rebuild-by-hand {
+    margin: 1.25rem 0 0;
+}
+
+.lesson-rebuild-by-hand-body > p {
+    margin: 0.5rem 0 0.75rem;
+    font-size: 0.9rem;
+}
+
+.lesson-rebuild-by-hand-body table {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+.lesson-rebuild-by-hand-body tr.row-level-1 > td:first-child {
+    padding-inline-start: 1.5rem;
+}
+
+.lesson-rebuild-by-hand-body tr.row-emphasis > td:first-child {
+    font-weight: 600;
+}
+
+details.lesson-intro-chrome blockquote.lesson-shared {
+    margin: 0.55rem 0 0;
+    color: var(--plusauri-ink, #1a1a1a);
+}
+
+details.lesson-intro-chrome blockquote.lesson-shared:first-child {
+    margin-top: 0.15rem;
+}
+
+details.lesson-intro-chrome blockquote.lesson-shared a {
+    /* Gold links stay on-brand; ensure contrast on both themes. */
+    color: var(--pico-primary, var(--plusauri-gold, #c89b2c));
+}
+
+/*
+ * Vlogger study callout (LessonVloggerCredit.html) — formal shared credit for public educators
+ * whose videos we rebuild in-product. Distinct from orientation (product map) and disclaimer
+ * (not-advice). Warm paper + gold edge so it reads as attribution, not a warning.
+ */
+.lesson-vlogger-credit {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0.75rem 0 1.25rem;
+    padding: 0.85rem 1rem 0.95rem;
+    border-radius: 6px;
+    background: color-mix(in srgb, var(--plusauri-gold-soft, #f4dfad) 45%, var(--plusauri-paper, #fcfbfa));
+    border: 1px solid color-mix(in srgb, var(--plusauri-gold, #c9a227) 35%, transparent);
+    border-left: 4px solid var(--plusauri-gold, #c9a227);
+}
+
+.lesson-vlogger-credit-label {
+    margin: 0 0 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--plusauri-graphite, #34271e);
+    opacity: 0.85;
+}
+
+.lesson-vlogger-credit p {
+    margin: 0 0 0.45rem;
+}
+
+.lesson-vlogger-credit p:last-child {
+    margin-bottom: 0;
+}
+
+.lesson-vlogger-credit a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+}
+
+/*
+ * Deprecation notice (LessonDeprecation.html) — on a lesson kept only for side-by-side review
+ * after a rebuild, and on its replacement. Same shape as the vlogger credit (it is attribution
+ * too), on a cool slate edge so it does not read as either a warning or a credit.
+ */
+.lesson-deprecation {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0.75rem 0 1.25rem;
+    padding: 0.85rem 1rem 0.95rem;
+    border-radius: 6px;
+    background: color-mix(in srgb, var(--plusauri-slate-soft, #dfe6ec) 55%, var(--plusauri-paper, #fcfbfa));
+    border: 1px solid color-mix(in srgb, var(--plusauri-slate, #5b7083) 35%, transparent);
+    border-left: 4px solid var(--plusauri-slate, #5b7083);
+}
+
+.lesson-deprecation-label {
+    margin: 0 0 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--plusauri-graphite, #34271e);
+    opacity: 0.85;
+}
+
+.lesson-deprecation p {
+    margin: 0 0 0.45rem;
+}
+
+.lesson-deprecation p:last-child {
+    margin-bottom: 0;
+}
+
+.lesson-deprecation a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+}
+
+/*
+ * Educational-content disclaimer closing every lesson body (LessonDisclaimer.html).
+ * Quiet but legible — muted and small, never hidden behind a disclosure control.
+ * Still a lesson-shared blockquote for consistent “import” findability.
+ */
+.lesson-disclaimer-rule {
+    margin-top: 2.5rem;
+}
+
+/*
+ * End matter, when the catalog footer is there.
+ *
+ * The footer already draws its own top rule, so the disclaimer's `<hr>` is a second line a few
+ * millimetres later; at the rule's default 2.5rem plus the blockquote's inherited top margin, the
+ * region + tags row ended up floating in about four rem of nothing between two rules. Scoped to the
+ * adjacent-sibling case so a lesson with no footer keeps the roomier separation it was designed
+ * with — the tightening is about this row, not about disclaimers generally.
+ */
+.lesson-catalog-footer + .lesson-disclaimer-rule {
+    margin-top: 0.9rem;
+}
+
+.lesson-catalog-footer + .lesson-disclaimer-rule + blockquote.lesson-disclaimer {
+    margin-top: 0.6rem;
+}
+
+blockquote.lesson-disclaimer {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+    background: transparent;
+    border: none;
+    border-inline-start: 4px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+
+/*
+ * Privacy link under the disclaimer (PrivacyLink.html) — lesson pages skip siteLayout's footer,
+ * so this is their copy of it. Pulled up into the disclaimer's bottom margin, same muted weight.
+ */
+blockquote.lesson-disclaimer + .lesson-privacy-link {
+    margin-top: -1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.85;
+}
+
+/* ── Learning Center TEMPORARY preview gate (LearnPreviewGate — delete with gate) ── */
+
+.learn-gate {
+    max-width: 28rem;
+    margin: 2rem auto 3rem;
+}
+
+.learn-gate-form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+.learn-gate-form input[type="password"] {
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+
+.learn-gate-error {
+    color: #9b1c1c;
+    background: #fde8e8;
+    border: 1px solid #f5c2c2;
+    border-radius: 0.35rem;
+    padding: 0.6rem 0.75rem;
+}
+
+/* Team recipe contact sheets. The capture is a tall offscreen scene cropped
+   to the editor; cap the width so a step stays readable beside the prose. */
+.dev-frame {
+    margin: 1.25rem 0 1.75rem;
+}
+
+.dev-frame figcaption {
+    margin-bottom: 0.35rem;
+}
+
+.dev-frame img {
+    display: block;
+    max-width: min(100%, 52rem);
+    height: auto;
+    background: #111;
+    border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+
+/* Partner design notes. A generated table can run to six columns;
+   scroll it sideways rather than squeezing the prose. */
+.dev-note-body {
+    overflow-x: auto;
+}
+
+/*
+ * Multi-dossier plan identity — shared slot colors for chips, prose links, and canvas chrome.
+ * Slot = position in this lesson’s allow-list (not a permanent color for a sample id).
+ * 0 green, 1 blue, 2 amber (max 3 plans per lesson).
+ */
+:root {
+    --plan-slot-0: #1f8a5b;
+    --plan-slot-1: #2f6fed;
+    --plan-slot-2: #c9a227;
+    --plan-slot-0-soft: color-mix(in srgb, var(--plan-slot-0) 35%, transparent);
+    --plan-slot-1-soft: color-mix(in srgb, var(--plan-slot-1) 35%, transparent);
+    --plan-slot-2-soft: color-mix(in srgb, var(--plan-slot-2) 40%, transparent);
+}
+
+/* Multi-dossier plan switcher on split lesson pages (mortgage contrast, etc.). */
+/*
+ * The plan switcher follows the reader down the lesson.
+ *
+ * On a multi-plan lesson the chips are not a header, they are the instrument: the prose says
+ * "switch to the Treasury chip and hover the same row" a screen and a half below where the chips
+ * used to scroll out of sight, and the reader had to go back up, switch, and find their place
+ * again. Pinned, the comparison the lesson is built on costs one click from anywhere in it.
+ *
+ * Two constraints shape this:
+ *
+ * - **It must be a direct child of `.lesson-pane`**, which is the scroll container. A sticky box
+ *   travels only within its own containing block, so nesting it one level deeper would un-stick it
+ *   the moment that wrapper scrolled away.
+ * - **The background must be opaque.** Prose slides underneath, and the old 80%-of-muted let it
+ *   show through.
+ *
+ * The lede that used to live in here now sits above it, outside the sticky box — see `LearnRoutes`.
+ * Everything inside a sticky element is pinned with it, and a two-line sentence read once does not
+ * earn permanent residence on a laptop-height pane.
+ */
+.lesson-plan-switcher {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    /*
+     * Full-bleed to the pane's edges. Width is stated rather than left to auto-fill: a sticky box
+     * is laid out against the scrollport, and an explicit box-sizing + width is the one form that
+     * cannot come up a scrollbar short of it.
+     */
+    box-sizing: border-box;
+    width: calc(100% + 2 * var(--lesson-pane-pad-x, 1.25rem));
+    margin: 0 calc(-1 * var(--lesson-pane-pad-x, 1.25rem)) 0.35rem;
+    padding: 0.45rem var(--lesson-pane-pad-x, 1.25rem) 0.5rem;
+    border-block-end: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+    /*
+     * A shade off the pane rather than the same color: pinned, this band sits over the prose it is
+     * covering, and matching the page exactly made it read as a hole in the text. Warm ink at 6%
+     * darkens it just enough to separate — kept subtle because the border and the shadow are what
+     * actually carry the edge, and neither depends on telling the two tones apart.
+     */
+    background: color-mix(
+        in srgb,
+        var(--plusauri-ink, #1a1a1a) 6%,
+        var(--plusauri-lesson-pane, #f7f3ec)
+    );
+    /*
+     * Elevation, in the same language as the app's "more content below" fades: a tight contact
+     * shadow for the edge, a wider soft one for the lift.
+     */
+    box-shadow:
+        0 1px 1px color-mix(in srgb, currentColor 10%, transparent),
+        0 6px 14px -6px color-mix(in srgb, currentColor 28%, transparent);
+}
+
+/*
+ * The gradient the prose slides under, borrowed from the Kotlin scroll-fade controls: a short wash
+ * below the band's edge that dissolves into the page. A hard rule alone reads as a border drawn on
+ * the text; a rule plus a fade reads as one surface passing beneath another, which is what is
+ * actually happening.
+ *
+ * `position: sticky` is already a positioned box, so this anchors to the band with no extra
+ * `position: relative`. It sits outside the band's own bounds and must never eat a click.
+ */
+.lesson-plan-switcher::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    height: 10px;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--plusauri-ink, #1a1a1a) 11%, transparent),
+        transparent
+    );
+}
+
+.lesson-plan-switcher-lede {
+    margin: 0 0 0.4rem;
+}
+
+.lesson-plan-switcher-lede {
+    font-size: 0.92rem;
+    line-height: 1.4;
+}
+
+.lesson-plan-switcher-chips {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.55rem;
+}
+
+.lesson-plan-switcher-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-right: 0.15rem;
+    opacity: 0.75;
+    text-transform: uppercase;
+}
+
+.lesson-plan-showing {
+    font-size: 0.88rem;
+    margin: 0 0 0.85rem;
+}
+
+.lesson-plan-showing #lesson-plan-showing-label {
+    font-weight: 600;
+}
+
+/*
+ * Plan chips use the *same solid slot colors* as the gutter / pane edge / prose links —
+ * not the gold learn-chip paint. That is the multi-dossier color association learners
+ * should lock in (green / blue / amber).
+ */
+button.lesson-plan-chip {
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    margin: 0;
+    border: 1px solid transparent;
+    box-shadow: none;
+    color: #fff;
+}
+
+button.lesson-plan-chip.plan-slot-0 {
+    --plan-slot-color: var(--plan-slot-0);
+    background: color-mix(in srgb, var(--plan-slot-0) 78%, white);
+    border-color: color-mix(in srgb, var(--plan-slot-0) 55%, transparent);
+    color: color-mix(in srgb, var(--plan-slot-0) 35%, #0a2018);
+}
+button.lesson-plan-chip.plan-slot-1 {
+    --plan-slot-color: var(--plan-slot-1);
+    background: color-mix(in srgb, var(--plan-slot-1) 78%, white);
+    border-color: color-mix(in srgb, var(--plan-slot-1) 55%, transparent);
+    color: color-mix(in srgb, var(--plan-slot-1) 30%, #0a1628);
+}
+button.lesson-plan-chip.plan-slot-2 {
+    --plan-slot-color: var(--plan-slot-2);
+    background: color-mix(in srgb, var(--plan-slot-2) 78%, white);
+    border-color: color-mix(in srgb, var(--plan-slot-2) 55%, transparent);
+    color: color-mix(in srgb, var(--plan-slot-2) 28%, #2a1f08);
+}
+
+button.lesson-plan-chip:hover {
+    filter: brightness(0.97);
+    border-color: var(--plan-slot-color, currentColor);
+}
+
+button.lesson-plan-chip.is-active {
+    background: var(--plan-slot-color, var(--plan-slot-0));
+    border-color: var(--plan-slot-color, var(--plan-slot-0));
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--plan-slot-color, var(--plan-slot-0)) 35%, transparent);
+}
+
+/* Prose #canvas-dossier: links — same slot *ink* as chips (tagged by lesson-split.js). */
+a.canvas-dossier-link {
+    text-decoration: none;
+    border-bottom: 2px solid currentColor;
+    text-underline-offset: 0.15em;
+    font-weight: 600;
+}
+
+a.canvas-dossier-link.plan-slot-0 {
+    color: var(--plan-slot-0);
+}
+a.canvas-dossier-link.plan-slot-1 {
+    color: var(--plan-slot-1);
+}
+a.canvas-dossier-link.plan-slot-2 {
+    color: var(--plan-slot-2);
+}
+
+a.canvas-dossier-link.is-active-plan {
+    border-bottom-width: 3px;
+    font-weight: 700;
+}
+
+/*
+ * Inline product-control chips from LessonNavRefs ([[nav:birds-eye]], etc.).
+ * Full-chip screenshots (Cash Flow / Account / Holding) already include labels.
+ *
+ * IMPORTANT: these must stay out of `.lesson-pane img:not(.nav-icon)` screenshot framing
+ * (that rule’s dual ring + radius is what looked like a “circle” around Bird’s Eye).
+ * Size is standardized relative to surrounding text (em), not absolute px.
+ */
+.lesson-nav-ref {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.28em;
+    vertical-align: -0.2em;
+    margin: 0 0.08em;
+    white-space: nowrap;
+}
+
+.lesson-nav-ref-img {
+    display: inline-block;
+    width: auto;
+    object-fit: contain;
+    vertical-align: middle;
+    /* Kill any accidental screenshot frame if a selector order drifts */
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Bird's Eye glyph — slightly larger than body text (~+10%). */
+.lesson-nav-ref-img--glyph {
+    height: 1.1em;
+    width: 1.1em;
+}
+
+/* Year-axis calendar SVG is graphite-on-transparent; invert in dark so it stays visible. */
+html[data-theme="dark"] .lesson-nav-ref--year-axis .lesson-nav-ref-img--glyph,
+html[data-theme="dark"] .lesson-nav-ref--calendar .lesson-nav-ref-img--glyph,
+:root:not([data-theme="light"]) .lesson-nav-ref--year-axis .lesson-nav-ref-img--glyph,
+:root:not([data-theme="light"]) .lesson-nav-ref--calendar .lesson-nav-ref-img--glyph {
+    filter: invert(1) brightness(1.2);
+}
+
+/* Account / Holding / Cash Flow product chips — cap height so they don't dominate the line. */
+.lesson-nav-ref-img--chip {
+    height: 1.5em;
+    max-height: 1.5em;
+    max-width: min(9rem, 42vw);
+    /* Soft radius only if the PNG is square-edged; no second frame ring */
+    border-radius: 0.25em !important;
+}
+
+.lesson-nav-ref-label {
+    font-weight: 650;
+    font-size: 0.95em;
+    letter-spacing: 0.01em;
+}
+
+/*
+ * Tipped nav chips (test: Bird's Eye). Keep the product glyph + label; do not restyle as a
+ * glossary pill. Dotted underline + help cursor is the “this has a definition” cue.
+ */
+.lesson-nav-ref--tipped {
+    position: relative;
+    cursor: help;
+}
+
+.lesson-nav-ref--tipped .lesson-nav-ref-label {
+    border-bottom: 2px dotted color-mix(in srgb, var(--plusauri-sky, #78A5EB) 85%, transparent);
+}
+
+/* Screenshot chips have no separate label span — underline the chip itself. */
+.lesson-nav-ref--tipped:not(:has(.lesson-nav-ref-label)) {
+    border-bottom: 2px dotted color-mix(in srgb, var(--plusauri-sky, #78A5EB) 85%, transparent);
+}
+
+.lesson-nav-ref--tipped:hover .lesson-nav-ref-label,
+.lesson-nav-ref--tipped:focus .lesson-nav-ref-label,
+.lesson-nav-ref--tipped:focus-within .lesson-nav-ref-label,
+.lesson-nav-ref--tipped:not(:has(.lesson-nav-ref-label)):hover,
+.lesson-nav-ref--tipped:not(:has(.lesson-nav-ref-label)):focus,
+.lesson-nav-ref--tipped:not(:has(.lesson-nav-ref-label)):focus-within {
+    border-bottom-style: solid;
+}
+
+.lesson-nav-ref--tipped:focus {
+    outline: none;
+}
+
+.lesson-nav-ref--tipped:hover > .lesson-term-tip,
+.lesson-nav-ref--tipped:focus > .lesson-term-tip,
+.lesson-nav-ref--tipped:focus-within > .lesson-term-tip,
+.lesson-nav-ref--tipped.is-tip-open > .lesson-term-tip {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Forecast Detail chip glyphs use .lesson-nav-ref-img--glyph + .lesson-nav-ref-label (product art). */
+
+.lesson-nav-path {
+    display: inline;
+    white-space: normal;
+}
+
+.lesson-nav-path-sep {
+    display: inline-block;
+    margin: 0 0.28em;
+    opacity: 0.55;
+    font-weight: 600;
+}
+
+/*
+ * Glossary term pills ([[term:dossier]], [[term:live-plan]], …) — LessonTerms.
+ * Subtle pill + multi-line tip on hover and keyboard focus (tabindex on wrapper).
+ */
+.lesson-term {
+    position: relative;
+    display: inline;
+    white-space: normal;
+}
+
+.lesson-term-pill {
+    display: inline;
+    padding: 0.08em 0.42em;
+    margin: 0 0.04em;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--plusauri-sky, #78A5EB) 55%, transparent);
+    background: var(--plusauri-sky-soft);
+    color: var(--plusauri-on-sky);
+    font-weight: 650;
+    font-size: 0.95em;
+    letter-spacing: 0.01em;
+    cursor: help;
+    white-space: nowrap;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.lesson-term:focus {
+    outline: none;
+}
+
+.lesson-term:focus > .lesson-term-pill,
+.lesson-term:hover > .lesson-term-pill {
+    border-color: var(--plusauri-sky, #78A5EB);
+    background: color-mix(in srgb, var(--plusauri-sky, #78A5EB) 48%, var(--plusauri-paper, #fcfbfa));
+}
+
+.lesson-term-tip {
+    /* Default absolute placement; lesson-split.js repositions with position:fixed so tips stay
+     * inside the lesson pane and do not bleed into the live plan. */
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.35rem);
+    z-index: 60;
+    width: max-content;
+    max-width: min(22rem, 78vw);
+    padding: 0.55rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--plusauri-ink, #1a1a1a) 16%, transparent);
+    background: var(--plusauri-paper, #fcfbfa);
+    color: var(--plusauri-ink, #1a1a1a);
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--plusauri-ink, #1a1a1a) 18%, transparent);
+    font-size: 0.86rem;
+    font-weight: 450;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    white-space: normal;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(0.15rem);
+    transition: opacity 0.12s ease, transform 0.12s ease, visibility 0.12s;
+}
+
+/* Author tips may use **bold** → <strong> via LessonTerms.tipToHtml */
+.lesson-term-tip strong {
+    font-weight: 650;
+    color: inherit;
+}
+
+/* Optional control preview at the top of a nav-chip tip (e.g. year-axis calendar shot). */
+.lesson-term-tip:has(> .lesson-term-tip-img) {
+    max-width: min(22rem, 86vw);
+}
+
+.lesson-term-tip-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 0 0.5rem;
+    border-radius: 6px;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.lesson-term:hover > .lesson-term-tip,
+.lesson-term:focus > .lesson-term-tip,
+.lesson-term:focus-within > .lesson-term-tip,
+.lesson-term.is-tip-open > .lesson-term-tip {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/*
+ * The tip's link through to /glossary/<id>.
+ *
+ * Its own line under the definition rather than inline, so it reads as an exit from the card and
+ * not as part of the sentence. Reachable because an open tip has `pointer-events: auto` and the
+ * pointer never leaves the hovered `.lesson-term` on its way here.
+ */
+.lesson-term-more {
+    display: block;
+    margin-top: 0.45rem;
+    font-size: 0.82em;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--plusauri-on-sky, #1c3f73);
+}
+
+.lesson-term-more:hover,
+.lesson-term-more:focus {
+    text-decoration: underline;
+}
+
+/* Fixed placement class applied by JS while open (avoids right-edge bleed into the live plan). */
+.lesson-term-tip.is-positioned {
+    position: fixed;
+    margin: 0;
+    transform: none;
+}
+
+html[data-theme="dark"] .lesson-term:focus > .lesson-term-pill,
+html[data-theme="dark"] .lesson-term:hover > .lesson-term-pill,
+:root:not([data-theme="light"]) .lesson-term:focus > .lesson-term-pill,
+:root:not([data-theme="light"]) .lesson-term:hover > .lesson-term-pill {
+    background: color-mix(in srgb, var(--plusauri-sky, #78A5EB) 38%, var(--plusauri-paper, #141210));
+}
+
+html[data-theme="dark"] .lesson-term-tip,
+:root:not([data-theme="light"]) .lesson-term-tip {
+    background: var(--plusauri-paper, #141210);
+    border-color: color-mix(in srgb, var(--plusauri-ink, #f6f1e8) 20%, transparent);
+}
+
+/*
+ * Leave-lesson links: navigates away from the current document (other /learn ids, pricing,
+ * external). Departure mark is automatic — do not hand-type icons in markdown.
+ * Design: planning/design-notes/lesson-cross-linking-and-leave-links.md
+ *
+ * Single paint site: 🛫 (departure / leaving this page). Sized larger than the link text so
+ * “leaving” is obvious; door glyph was too static (reads closed/plain on many fonts).
+ */
+.lesson-prose a.lesson-leave-link::before {
+    content: "🛫\2009";
+    font-size: 1.28em;
+    line-height: 1;
+    vertical-align: -0.12em;
+    opacity: 0.95;
+    speak: never;
+}
+
+.lesson-prose a.lesson-leave-link {
+    text-decoration: underline;
+    text-underline-offset: 0.14em;
+}
+
+.lesson-prose a.lesson-leave-link:hover::before {
+    opacity: 1;
+}
+
+/*
+ * Bridge between prose and canvas: the *gutter* is the colored bar (between the two panes).
+ * App-pane also gets a thin matching edge so the color reads on the plan side of the slider.
+ * Slot color = active Live plan (same as chip / link underbars).
+ */
+.lesson-split.has-plan-slots {
+    /* Same 6px track as default split; color (not width) carries plan identity. */
+    grid-template-columns: minmax(12rem, 38%) 6px minmax(16rem, 1fr);
+}
+
+.lesson-split-gutter[data-plan-slot="0"],
+.lesson-split[data-plan-slot="0"] .lesson-split-gutter {
+    background: var(--plan-slot-0) !important;
+}
+.lesson-split-gutter[data-plan-slot="1"],
+.lesson-split[data-plan-slot="1"] .lesson-split-gutter {
+    background: var(--plan-slot-1) !important;
+}
+.lesson-split-gutter[data-plan-slot="2"],
+.lesson-split[data-plan-slot="2"] .lesson-split-gutter {
+    background: var(--plan-slot-2) !important;
+}
+
+/* Hover / drag: keep slot hue, slightly brighter — still the same “plan identity” bar. */
+.lesson-split.has-plan-slots .lesson-split-gutter:hover,
+.lesson-split.has-plan-slots .lesson-split-gutter.is-dragging,
+.lesson-split.has-plan-slots .lesson-split-gutter:focus-visible {
+    filter: brightness(1.08);
+    outline: none;
+}
+
+.lesson-split .app-pane[data-plan-slot="0"] {
+    box-shadow: inset 3px 0 0 0 var(--plan-slot-0);
+}
+.lesson-split .app-pane[data-plan-slot="1"] {
+    box-shadow: inset 3px 0 0 0 var(--plan-slot-1);
+}
+.lesson-split .app-pane[data-plan-slot="2"] {
+    box-shadow: inset 3px 0 0 0 var(--plan-slot-2);
+}
+
+/* Stacked (narrow): color bar along the top of the canvas instead of the side gutter. */
+@media (max-width: 900px) {
+    .lesson-split.has-plan-slots {
+        grid-template-columns: none;
+    }
+    .lesson-split .app-pane[data-plan-slot="0"] {
+        box-shadow: inset 0 4px 0 0 var(--plan-slot-0);
+    }
+    .lesson-split .app-pane[data-plan-slot="1"] {
+        box-shadow: inset 0 4px 0 0 var(--plan-slot-1);
+    }
+    .lesson-split .app-pane[data-plan-slot="2"] {
+        box-shadow: inset 0 4px 0 0 var(--plan-slot-2);
+    }
+}
+
+[data-theme="dark"] {
+    --plan-slot-0: #3ecf8e;
+    --plan-slot-1: #6b9bff;
+    --plan-slot-2: #e0c05a;
+}
+
+/* ── Learning Center index ───────────────────────────────────────────────── */
+
+.lesson-index {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lesson-index li {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--pico-muted-border-color, #e0d8cc);
+}
+
+.muted {
+    color: var(--pico-muted-color, #6b6259);
+    font-size: 0.9em;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.learn-discovery {
+    margin-top: 1.25rem;
+}
+
+/*
+ * The search box is a *destination*, not another row of chrome.
+ *
+ * It used to be a bare input between two chip rows on the page background, and it read as one more
+ * control in a stack of controls — a reader who arrived wanting to search had to hunt for it. It now
+ * sits on its own raised panel: inset padding, a tinted ground, a full border and a rounded corner.
+ *
+ * The cues are deliberately **not** color: the panel is legible in grayscale by its border, its
+ * radius and its background lift, and the always-painted magnifier carries the meaning. Color only
+ * reinforces what shape already says.
+ *
+ * `.learn-search-label` is the *only* element that carries this panel, on every discovery surface.
+ * /glossary and /reference render the same label inside a GET form (`catalogSearchForm`); the form
+ * gets layout, never framing, so the three surfaces converge by construction rather than by
+ * matching values.
+ *
+ * The panel is set off by **equal** space above and below (`--learn-search-gap`). It had 1.15rem
+ * above, inherited from whatever sat there, and 0.3rem below, which tied it to the chip row
+ * underneath — so it read as a heading for the chips rather than as its own thing. A block that is
+ * meant to stand alone needs air on both sides, and the same amount on each.
+ */
+:root {
+    --learn-search-gap: 2.3rem;
+}
+
+.learn-search-label {
+    display: block;
+    /* Collapses against a neighbor's own bottom margin, so this is the floor, not an addition. */
+    margin-top: var(--learn-search-gap);
+    margin-bottom: var(--learn-search-gap);
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--pico-muted-border-color, #d8d2c8);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--plusauri-gold-soft) 18%, var(--pico-background-color, #fff));
+    box-shadow: 0 1px 2px rgba(26, 26, 26, 0.05);
+}
+
+/*
+ * On /learn the panel is exactly as wide as the Start-here row above it — the two tours plus the
+ * intro clip (`renderStartHere`, IntroVideoPoster.kt), so three cards. That grid is
+ * `auto-fill, minmax(18rem, 1fr)` with a 0.75rem gap, so once the column fits a fourth track the
+ * cards stop short and a full-width panel ran on past them into empty space. Track count can't be
+ * computed in CSS, so each breakpoint below is where the grid gains a track
+ * (n × 18rem + (n − 1) × 0.75rem), and the width is three of those n tracks plus their two gaps.
+ * Below four tracks the cards already fill the row, so the panel stays full width.
+ *
+ * The field then fills the panel, so its right inset is the panel's own padding — the same as the
+ * left — instead of stopping at 36rem and leaving a void on the right.
+ */
+.learn-discovery {
+    container-type: inline-size;
+}
+
+.learn-discovery > .learn-search-label .learn-search-field,
+.learn-discovery > .learn-search-label .learn-search-field .learn-search {
+    max-width: none;
+}
+
+@container (min-width: 74.25rem) {
+    .learn-discovery > .learn-search-label {
+        width: calc((100% - 3 * 0.75rem) / 4 * 3 + 2 * 0.75rem);
+    }
+}
+
+@container (min-width: 93rem) {
+    .learn-discovery > .learn-search-label {
+        width: calc((100% - 4 * 0.75rem) / 5 * 3 + 2 * 0.75rem);
+    }
+}
+
+/*
+ * The GET wrapper on /reference and /glossary is a layout box only — it must NOT take the panel
+ * framing above. When it did, the panel was painted twice (form and label), and the label's
+ * `--learn-search-gap` margins, designed to collapse *outside* the panel, were trapped inside the
+ * form's padding and became 4.6rem of interior height. One element owns the framing: the label.
+ *
+ * The submit button is the no-JS fallback (`catalog-index.js` hides it once it filters in place),
+ * so the row stays flex to seat it beside the panel; `flex: 1` on the label makes the field span
+ * the row the way the bare label does on /learn.
+ */
+.catalog-search,
+.reference-search {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.catalog-search .learn-search-label,
+.reference-search .learn-search-label {
+    flex: 1;
+    min-width: 0;
+}
+
+/* One ring on the panel when anything inside it has focus, rather than a ring on the bare input. */
+.learn-search-label:focus-within {
+    border-color: var(--plusauri-gold);
+    box-shadow: 0 0 0 3px var(--pico-primary-focus, rgba(200, 155, 44, 0.25));
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .learn-search-label {
+        border-color: #4a4038;
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: none;
+    }
+}
+
+html[data-theme="dark"] .learn-search-label {
+    border-color: #4a4038;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: none;
+}
+
+/*
+ * Custom search glass is always painted (input is type=text, so there is no
+ * native magnifier). The optional region cue sits to its left; only the glass
+ * and text shift when the cue appears — Any still shows [glass … ×].
+ *
+ * Layout when cue visible (LTR):
+ *   inset | flag | gap | glass | text-gap | text
+ * Layout when Any (no cue):
+ *   inset | glass | text-gap | text
+ */
+.learn-search-field {
+    position: relative;
+    display: block;
+    max-width: 36rem;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    /* Shared metrics for flag / glass / text alignment. */
+    --learn-search-cue-inset: calc(0.3rem - 1px + 3px); /* border → flag */
+    --learn-search-cue-size: 1.05rem; /* 0.875rem × 1.2 */
+    --learn-search-cue-gap: 8px; /* flag → glass */
+    --learn-search-glass-shift: 6px; /* move glass + text only */
+    --learn-search-glass-size: 1.08em; /* 0.9em × 1.2 */
+    --learn-search-text-gap: 5px; /* glass → first letter (2px + 3px) */
+    --learn-search-glass-left: var(--learn-search-cue-inset);
+}
+
+.learn-search-field:has(.learn-search-region-cue:not([hidden])) {
+    --learn-search-glass-left: calc(
+        var(--learn-search-cue-inset) + var(--learn-search-cue-size) +
+            var(--learn-search-cue-gap) + var(--learn-search-glass-shift)
+    );
+}
+
+.learn-search-region-cue {
+    position: absolute;
+    left: var(--learn-search-cue-inset);
+    top: 50%;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    /* Kill Pico button metrics (min-height / form-element height) entirely. */
+    min-width: 0;
+    min-height: 0 !important;
+    width: auto;
+    height: auto !important;
+    border: none;
+    border-radius: 0.15rem;
+    background: transparent;
+    box-shadow: none;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: var(--learn-search-cue-size);
+    line-height: 1;
+    letter-spacing: 0;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /*
+     * Center on the field, then lift ~70% of the glyph height so the flag sits
+     * beside the magnifier with bases roughly aligned; +2.5px drops it a hair.
+     */
+    transform: translateY(-50%);
+}
+
+.learn-search-region-cue:hover,
+.learn-search-region-cue:focus-visible {
+    background: color-mix(in srgb, var(--plusauri-gold, #c89b2c) 20%, transparent);
+    outline: none;
+}
+
+.learn-search-region-cue[hidden] {
+    display: none !important;
+}
+
+/*
+ * Trailing clear (×) — always ours; native cancel is suppressed below.
+ *
+ * Vertical guide = magnifier + typed text mid-line. Pico classless buttons carry
+ * form spacing (margin-bottom etc.) that left a pure top:50% box looking low;
+ * zero that out, pin to the field mid-line, then lift so the mark meets the glass.
+ */
+.learn-search-clear {
+    position: absolute;
+    right: 0.35rem;
+    top: 50%;
+    bottom: auto;
+    z-index: 1;
+    /* Kill Pico button spacing that shifts absolute form controls downward. */
+    margin: 0 !important;
+    margin-block: 0 !important;
+    padding: 0 !important;
+    min-width: 0;
+    min-height: 0 !important;
+    width: 1.62rem;
+    height: 1.62rem !important;
+    max-height: 1.62rem !important;
+    border: none !important;
+    border-radius: 50%;
+    box-shadow: none !important;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    vertical-align: middle;
+    /* Center on the field, then lift to the glass/text mid-line (screenshot guide). */
+    transform: translateY(-50%);
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'><path d='M4 4l8 8M12 4L4 12' stroke='%236b6259' stroke-width='1.75' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.3rem 1.3rem;
+}
+
+.learn-search-clear:hover,
+.learn-search-clear:focus-visible {
+    background-color: color-mix(in srgb, var(--plusauri-gold, #c89b2c) 22%, transparent);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'><path d='M4 4l8 8M12 4L4 12' stroke='%231a1a1a' stroke-width='1.75' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.3rem 1.3rem;
+    outline: none;
+}
+
+.learn-search-clear[hidden] {
+    display: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .learn-search-clear {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'><path d='M4 4l8 8M12 4L4 12' stroke='%23a89f94' stroke-width='1.75' stroke-linecap='round'/></svg>");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1.3rem 1.3rem;
+    }
+    :root:not([data-theme="light"]) .learn-search-clear:hover,
+    :root:not([data-theme="light"]) .learn-search-clear:focus-visible {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'><path d='M4 4l8 8M12 4L4 12' stroke='%23f6f1e8' stroke-width='1.75' stroke-linecap='round'/></svg>");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1.3rem 1.3rem;
+    }
+}
+
+html[data-theme="dark"] .learn-search-clear {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'><path d='M4 4l8 8M12 4L4 12' stroke='%23a89f94' stroke-width='1.75' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.3rem 1.3rem;
+}
+
+html[data-theme="dark"] .learn-search-clear:hover,
+html[data-theme="dark"] .learn-search-clear:focus-visible {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'><path d='M4 4l8 8M12 4L4 12' stroke='%23f6f1e8' stroke-width='1.75' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.3rem 1.3rem;
+}
+
+/* Always suppress native chrome so our × and custom glass stay consistent. */
+.learn-search::-webkit-search-decoration,
+.learn-search::-webkit-search-cancel-button,
+.learn-search::-webkit-search-results-button,
+.learn-search::-webkit-search-results-decoration {
+    display: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/*
+ * Selector is `.learn-search-field .learn-search`, not `.learn-search`, and that is load-bearing.
+ *
+ * Pico styles form fields with
+ *   input:not([type=checkbox],[type=radio],[type=range],[type=file]) { padding: ... }
+ * whose specificity is (0,1,1) — `:not()` takes its most specific argument. A lone `.learn-search`
+ * is (0,1,0), so Pico's `padding` shorthand won on specificity no matter which sheet loaded last,
+ * and wiped the `padding-inline-start` that clears room for the glass. The background-image still
+ * painted (Pico sets none for type=text), so the placeholder sat *under* the magnifier.
+ *
+ * That only started once the field moved from type=search to type=text: as a search input, Pico
+ * supplied both its own icon and the matching padding, so nothing here had to win.
+ *
+ * Descending from the wrapper takes this to (0,2,0) — it outranks Pico outright rather than
+ * depending on stylesheet order, and it says out loud that the custom properties below come from
+ * `.learn-search-field`.
+ */
+.learn-search-field .learn-search {
+    width: 100%;
+    max-width: 36rem;
+    margin: 0;
+    /* Room for the clear control on the right when it is shown. */
+    padding-inline-end: 0.5rem;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(
+        --pico-form-element-background-color,
+        var(--pico-background-color, #fff)
+    );
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'><circle cx='6.5' cy='6.5' r='4.25' stroke='%236b6259' stroke-width='1.5'/><path d='M10 10l3.25 3.25' stroke='%236b6259' stroke-width='1.5' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-size: var(--learn-search-glass-size);
+    background-position: left var(--learn-search-glass-left) center;
+    padding-inline-start: calc(
+        var(--learn-search-glass-left) + var(--learn-search-glass-size) +
+            var(--learn-search-text-gap)
+    );
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .learn-search {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'><circle cx='6.5' cy='6.5' r='4.25' stroke='%23a89f94' stroke-width='1.5'/><path d='M10 10l3.25 3.25' stroke='%23a89f94' stroke-width='1.5' stroke-linecap='round'/></svg>");
+    }
+}
+
+html[data-theme="dark"] .learn-search {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'><circle cx='6.5' cy='6.5' r='4.25' stroke='%23a89f94' stroke-width='1.5'/><path d='M10 10l3.25 3.25' stroke='%23a89f94' stroke-width='1.5' stroke-linecap='round'/></svg>");
+}
+
+.learn-search-field:has(.learn-search-clear:not([hidden])) .learn-search {
+    padding-inline-end: 2.35rem; /* room for larger × hit target */
+}
+
+/* Pinned Start here — two Getting Around cards (book + TV); same learn-card chrome as grid. */
+.learn-start-here {
+    margin: 0 0 1.15rem;
+}
+
+.learn-start-here[hidden] {
+    display: none !important;
+}
+
+.learn-start-here-heading {
+    font-size: 0.8rem;
+    font-weight: 650;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin: 0 0 0.45rem;
+}
+
+.learn-start-here-grid {
+    /* Prefer two side-by-side start cards when the discovery column is wide enough. */
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+    margin-bottom: 0.25rem;
+}
+
+.learn-card-kicker {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--plusauri-gold, #c89b2c) 70%, #0f2744);
+    margin-bottom: 0.1rem;
+}
+
+.learn-card-media {
+    flex: 0 0 auto;
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+/* Subtle gold edge so the pin pair reads as “start” without a different card skin. */
+a.learn-card.learn-card-start-here {
+    border-color: color-mix(in srgb, var(--plusauri-gold, #c89b2c) 55%, rgba(52, 39, 30, 0.14));
+    box-shadow: 0 1px 3px color-mix(in srgb, var(--plusauri-gold, #c89b2c) 22%, transparent);
+}
+
+/* Result cards — desktop-like grid (headline + clamped description + tags). */
+.learn-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16.5rem, 1fr));
+    gap: 0.75rem;
+    margin: 0 0 1.25rem;
+}
+
+a.learn-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(52, 39, 30, 0.14);
+    border-radius: 0.5rem;
+    /* background-COLOR, not the shorthand: LessonStatus paints this channel and the paired-lesson
+       wash paints background-IMAGE over it. A shorthand here resets the image and the wash
+       silently disappears except on hover, where a more specific rule re-applied it. */
+    background-color: #fff;
+    text-decoration: none;
+    color: inherit;
+    min-height: 7.5rem;
+    box-shadow: 0 1px 2px rgba(52, 39, 30, 0.05);
+    transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+/* Paired lesson: the card is the reading link; the watch chip is a sibling anchor laid over its
+   bottom-right corner. Wrapper is the grid item so the card keeps painting the box.
+
+   Marking these cards apart is awkward because the obvious channels are taken: background-COLOR
+   and border-left-color both carry LessonStatus (Ported / First pass / Shell), and most lesson
+   cards are decorated today. So the pair marker uses background-IMAGE — a separate channel that
+   layers over whatever color the status rule set, instead of overwriting it and making two
+   different meanings indistinguishable.
+
+   Deliberately not hue alone: the wash is a scanning aid, and the chip below carries the same
+   signal in weight and shape for anyone who cannot separate the tints. */
+.learn-card-pair {
+    position: relative;
+    display: flex;
+}
+
+.learn-card-pair > a.learn-card {
+    background-image: linear-gradient(
+        135deg,
+        color-mix(in srgb, #6b4fa8 13%, transparent) 0%,
+        color-mix(in srgb, #6b4fa8 5%, transparent) 45%,
+        transparent 75%
+    );
+}
+
+.learn-card-pair > a.learn-card:hover {
+    background-image: linear-gradient(
+        135deg,
+        color-mix(in srgb, #6b4fa8 20%, transparent) 0%,
+        color-mix(in srgb, #6b4fa8 8%, transparent) 45%,
+        transparent 75%
+    );
+}
+
+html[data-theme="dark"] .learn-card-pair > a.learn-card {
+    background-image: linear-gradient(
+        135deg,
+        color-mix(in srgb, #a98be0 18%, transparent) 0%,
+        color-mix(in srgb, #a98be0 7%, transparent) 45%,
+        transparent 75%
+    );
+}
+
+.learn-card-pair > a.learn-card {
+    flex: 1 1 auto;
+    /* Room for the watch chip plus clear air under the tag row — the chips should not read as
+       one cluster with the button. */
+    padding-bottom: 3rem;
+}
+
+a.learn-card-watch {
+    position: absolute;
+    right: 0.7rem;
+    bottom: 0.7rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.22rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+    color: #fff;
+    background: #6b4fa8;
+    border: 1px solid color-mix(in srgb, #6b4fa8 70%, #000);
+    border-radius: 999px;
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(52, 39, 30, 0.18);
+}
+
+a.learn-card-watch:hover,
+a.learn-card-watch:focus-visible {
+    background: color-mix(in srgb, #6b4fa8 80%, #000);
+    border-color: var(--plusauri-gold, #c89b2c);
+}
+
+html[data-theme="dark"] a.learn-card-watch {
+    color: #16121f;
+    background: #b79ae8;
+    border-color: color-mix(in srgb, #b79ae8 70%, #fff);
+}
+
+a.learn-card:hover {
+    border-color: var(--plusauri-gold, #c89b2c);
+    box-shadow: 0 2px 10px rgba(52, 39, 30, 0.1);
+}
+
+/* Keyboard path: Tab from search lands here; make the ring obvious (also :focus —
+ * scripted focus after Tab does not always set :focus-visible in all browsers). */
+a.learn-card:focus {
+    outline: none;
+    border-color: var(--plusauri-gold, #c89b2c);
+    box-shadow: 0 0 0 0.18rem color-mix(in srgb, var(--plusauri-gold, #c89b2c) 50%, transparent);
+}
+
+a.learn-card:focus-visible {
+    border-color: var(--plusauri-gold, #c89b2c);
+    box-shadow: 0 0 0 0.18rem color-mix(in srgb, var(--plusauri-gold, #c89b2c) 50%, transparent);
+}
+
+html[data-theme="dark"] a.learn-card:focus,
+html[data-theme="dark"] a.learn-card:focus-visible {
+    box-shadow: 0 0 0 0.18rem color-mix(in srgb, var(--plusauri-gold, #e0b94d) 55%, transparent);
+}
+
+.learn-card-title {
+    font-weight: 650;
+    font-size: 1.02rem;
+    line-height: 1.25;
+    color: #1a3a5c;
+}
+
+.learn-card-group {
+    font-size: 0.78rem;
+}
+
+.learn-card-desc {
+    font-size: 0.88rem;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+}
+
+.learn-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.25rem;
+}
+
+.learn-card-tag {
+    font-size: 0.72rem !important;
+    padding: 0.1rem 0.4rem !important;
+}
+
+/*
+ * Lesson level (tutil.search.LessonLevel) — a PUBLIC, always-on decoration. (Draft LessonStatus
+ * decorations used to sit above this; they were retired 2026-09-28 and status now lives only in
+ * `doc/generated/lesson-attributes.md`.)
+ *
+ * **All three tiers are tinted, including General.** The first pass tinted only the two badged
+ * tiers and left General plain, which made the grid read as "decorated vs. undecorated" — you
+ * could see that a card was special but had to stop and read the badge to learn which. On a
+ * screen of ~40 cards that is not a sweep, it is a search. Three colors are, and the eye can run
+ * the ramp without reading a word.
+ *
+ * Tinting General is not a badge. It stays silent in *words*, which was the whole point of the
+ * tier; the color says "this one is for you too" rather than singling out the other two as the
+ * only ones worth marking.
+ *
+ * **Color never carries the level on its own.** Intermediate and Advanced say their word on the
+ * card, and General's signal is the absence of one — so the tint is additive for everyone, and a
+ * reader who cannot separate the hues loses nothing. That is what lets these be chosen for
+ * scannability rather than for contrast ratio.
+ *
+ * Hues, and why these:
+ *   General       leaf green    — open, nothing to know first. The calmest of the three.
+ *   Intermediate  muted violet  — a step along the ramp; cool and unalarming.
+ *   Advanced      deep teal     — the same teal as `.lesson-advanced`, so the mark on the card and
+ *                                 the folded block inside the lesson are recognizably one idea.
+ *
+ * Intermediate is violet rather than the obvious blue because blue sits only ~38° of hue from the
+ * teal, which made the two *badged* tiers the confusable pair — exactly the distinction a sweep
+ * most needs. Violet puts every pair at least ~81° apart in both themes. Advanced is also much
+ * darker and fully saturated, so it carries a second cue beyond hue and stays the easiest of the
+ * three to pick out, which is the one people will hunt for deliberately.
+ * Nothing here is red or orange. Advanced must read as an invitation, and a warning palette would
+ * undo the lessons-page line that exists to say so.
+ *
+ * Each tier paints two channels: a 3px top bar (the scannable one — a saturated edge survives
+ * peripheral vision, which a pale wash does not) and a faint background wash (what the card feels
+ * like once you land on it). The wash uses background-COLOR only; see the note on `a.learn-card`
+ * about the image channel.
+ */
+a.learn-card.learn-card-level-General {
+    --learn-level-accent: #6a9a3f;
+}
+
+a.learn-card.learn-card-level-Intermediate {
+    --learn-level-accent: #6b5b95;
+}
+
+a.learn-card.learn-card-level-Advanced {
+    --learn-level-accent: #00796b;
+}
+
+a.learn-card.learn-card-level-General,
+a.learn-card.learn-card-level-Intermediate,
+a.learn-card.learn-card-level-Advanced {
+    border-top: 3px solid var(--learn-level-accent);
+    /* The 1px default top border is replaced by the 3px bar; pull the content back up by the
+       difference so a tinted card is exactly as tall as an untinted one and the grid stays even. */
+    padding-top: calc(0.9rem - 2px);
+    background-color: color-mix(in srgb, var(--learn-level-accent) 7%, #fff);
+}
+
+/*
+ * A deprecated lesson (LessonDeprecation): the earlier version of a rebuilt lesson, kept on the grid
+ * for a reviewer's side-by-side and deleted before public release. Pink on purpose — unlike the
+ * level tiers, this one *should* read as "not the current lesson" — with a heavier wash than the
+ * tiers so it is picked out at a glance. Declared after the tiers so it wins over the lesson's own
+ * level tint.
+ */
+a.learn-card.learn-card-deprecated {
+    --learn-level-accent: #c2185b;
+    border-top: 3px solid var(--learn-level-accent);
+    padding-top: calc(0.9rem - 2px);
+    background-color: color-mix(in srgb, var(--learn-level-accent) 14%, #fff);
+}
+
+a.learn-card.learn-card-deprecated .learn-card-level-badge {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    padding: 0.12rem 0.55rem;
+}
+
+.learn-card-level-badge {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 0.08rem 0.4rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.15rem;
+    border: 1px solid var(--learn-level-accent, #00796b);
+    color: #fff;
+    background: var(--learn-level-accent, #00796b);
+}
+
+.learn-card-badges {
+    align-self: flex-start;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+/* Power user: the amber of the lessons' Power user callout, wearing the same drill. */
+.learn-card-power-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 0.08rem 0.4rem 0.08rem 0.25rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.15rem;
+    border: 1px solid #b26a00;
+    color: #fff;
+    background: #b26a00;
+}
+
+.learn-card-power-mark {
+    flex: none;
+    width: 1rem;
+    height: 1rem;
+    background: url("/static/images/lessons/where/icons/power-user.png") center / contain no-repeat;
+}
+
+/*
+ * Card badge hover cards. A level or Power user badge opens the lessons' own hover card
+ * (.lesson-term-tip, defined with the term and nav-chip tips) rather than the browser's plain
+ * tooltip. Everything specific to the badges is here: change these tokens to restyle them.
+ */
+.learn-card-tipped {
+    --learn-badge-tip-width: 19rem;
+    --learn-badge-tip-size: 0.92rem;
+    --learn-badge-tip-name-color: #b26a00;
+    position: relative;
+    cursor: help;
+}
+
+.learn-card-tipped:focus {
+    outline: none;
+}
+
+.learn-card-tipped > .learn-card-badge-tip {
+    width: var(--learn-badge-tip-width);
+    max-width: min(var(--learn-badge-tip-width), 86vw);
+    font-size: var(--learn-badge-tip-size);
+    /* The badge's own caps, color and weight are not the card's. */
+    text-transform: none;
+}
+
+.learn-card-level-badge > .learn-card-badge-tip {
+    --learn-badge-tip-name-color: var(--learn-level-accent, #00796b);
+}
+
+.learn-card-badge-tip-name {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+    color: var(--learn-badge-tip-name-color);
+}
+
+.learn-card-tipped:hover > .lesson-term-tip,
+.learn-card-tipped:focus > .lesson-term-tip,
+.learn-card-tipped:focus-within > .lesson-term-tip {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.learn-card-level-glyph {
+    font-size: 0.62rem;
+    line-height: 1;
+}
+
+/*
+ * **No dark-theme variant for the card, deliberately.** `a.learn-card` hardcodes a white
+ * background in both themes — the grid is white cards on a dark page — which is why
+ * `.learn-card-title` is a fixed dark navy with no override either.
+ *
+ * The first cut of this tint copied the dark-mode pattern from the (since retired) LessonStatus
+ * rules, which mixed their accent into `#1a1a1a`. On a card that is actually white that turned the
+ * background near-black while the title stayed dark navy, and the titles became unreadable in dark
+ * mode. The tint is a wash over a white card in both themes, so it needs no second set of colors;
+ * adding one is how the bug got in.
+ */
+
+/*
+ * The line under the lede that makes the badges an invitation rather than a warning. It sits with
+ * the lede, not with the filter machinery, because it is about the corpus and not about the
+ * controls.
+ */
+.learn-index-level-note {
+    margin: -0.35rem 0 0.5rem;
+    font-size: 0.9rem;
+    max-width: 60ch;
+}
+
+/*
+ * Key for the three tints. The badges teach Intermediate and Advanced on their own, but nothing
+ * on the page says what a green card is — General is defined by the *absence* of a badge, which
+ * is only legible once you know the ramp exists. One quiet line, beside the note that explains
+ * why the ramp is there at all.
+ */
+.learn-level-legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.9rem;
+    font-size: 0.82rem;
+    margin: 0 0 1rem;
+}
+
+.learn-level-key {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.learn-level-swatch {
+    display: inline-block;
+    width: 1.1rem;
+    height: 0.55rem;
+    border-radius: 0.15rem;
+    background: var(--learn-level-accent, #6a9a3f);
+}
+
+.learn-level-key-General {
+    --learn-level-accent: #6a9a3f;
+}
+
+.learn-level-key-Intermediate {
+    --learn-level-accent: #6b5b95;
+}
+
+.learn-level-key-Advanced {
+    --learn-level-accent: #00796b;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .learn-level-key-General {
+        --learn-level-accent: #8bc34a;
+    }
+    :root:not([data-theme="light"]) .learn-level-key-Intermediate {
+        --learn-level-accent: #b3a5d9;
+    }
+    :root:not([data-theme="light"]) .learn-level-key-Advanced {
+        --learn-level-accent: #80cbc4;
+    }
+}
+
+html[data-theme="dark"] .learn-level-key-General {
+    --learn-level-accent: #8bc34a;
+}
+
+html[data-theme="dark"] .learn-level-key-Intermediate {
+    --learn-level-accent: #b3a5d9;
+}
+
+html[data-theme="dark"] .learn-level-key-Advanced {
+    --learn-level-accent: #80cbc4;
+}
+
+.learn-group-title {
+    margin: 1.1rem 0 0.55rem;
+    font-size: 1.15rem;
+}
+
+/*
+ * Shared catalog / lesson chip look — one place to restyle annotations + selectors.
+ * Bevel: 0.35rem on ALL four corners (same as lesson tag annotations — not full pills).
+ * Use: <span class="learn-chip">…</span> (static), <button class="learn-chip"> (JS filters),
+ * or <a class="learn-chip"> (GET filters, e.g. Reference categories).
+ * `.learn-tag` is a legacy alias for the same paint.
+ *
+ * Important: Pico (and many classless kits) treat consecutive buttons / role=group as a
+ * segmented control and zero middle-chip radii — only the outer ends of Lessons…Community
+ * would look beveled. We reassert every corner on each chip so All / start-here / …
+ * are independent rounded tags.
+ */
+.learn-chip,
+.learn-tag {
+    display: inline-block;
+    margin: 0;
+    padding: 0.15rem 0.55rem;
+    border-radius: 0.35rem;
+    border: 1px solid transparent;
+    background: var(--plusauri-gold-soft, #f4dfad);
+    color: var(--plusauri-graphite, #34271e);
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.35;
+    vertical-align: middle;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Interactive selectors (topic filters + surface chips on /learn, category chips on /reference) */
+button.learn-chip,
+a.learn-chip,
+.learn-surface-chips > button.learn-chip,
+.learn-tag-chips > button.learn-chip,
+[role="group"] > button.learn-chip,
+[role="group"] > a.learn-chip,
+button.learn-chip:first-child,
+button.learn-chip:last-child,
+button.learn-chip:not(:first-child),
+button.learn-chip:not(:last-child),
+button.learn-chip:first-of-type,
+button.learn-chip:last-of-type,
+a.learn-chip:first-child,
+a.learn-chip:last-child,
+a.learn-chip:not(:first-child),
+a.learn-chip:not(:last-child),
+a.learn-chip:first-of-type,
+a.learn-chip:last-of-type {
+    /* Defeat Pico segmented-button grouping on every corner of every chip */
+    border-radius: 0.35rem !important;
+    border-top-left-radius: 0.35rem !important;
+    border-top-right-radius: 0.35rem !important;
+    border-bottom-right-radius: 0.35rem !important;
+    border-bottom-left-radius: 0.35rem !important;
+    margin: 0;
+}
+
+button.learn-chip,
+a.learn-chip {
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: 1px solid rgba(52, 39, 30, 0.12);
+    background: var(--plusauri-gold-soft, #f4dfad);
+    color: var(--plusauri-graphite, #34271e);
+    text-decoration: none;
+    /* Soft raised edge so selectable chips match annotation bevel */
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 1px 1px rgba(52, 39, 30, 0.08);
+}
+
+/* plusauri mark on the Features surface chip (product door, not an engineering subgroup). */
+.learn-chip-brand {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    display: block;
+    object-fit: contain;
+}
+
+button.learn-chip:hover,
+a.learn-chip:hover {
+    border-color: var(--plusauri-gold, #c89b2c);
+}
+
+button.learn-chip.is-active,
+a.learn-chip.is-active {
+    background: var(--plusauri-gold, #c89b2c);
+    border-color: var(--plusauri-gold, #c89b2c);
+    color: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/*
+ * Top-level catalog surface chips (Lessons / Features / Community) — soft-sky family
+ * aligned with Compose top-level collapsible bars. Reuse on any HTML surface selector.
+ */
+.learn-chip-surface,
+button.learn-chip.learn-chip-surface {
+    background: var(--plusauri-collapsible-bar, #b4cae6);
+    color: var(--plusauri-on-collapsible-bar, #0f2744);
+    border-color: rgba(15, 39, 68, 0.12);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 1px 1px rgba(15, 39, 68, 0.08);
+}
+
+button.learn-chip.learn-chip-surface:hover {
+    border-color: var(--plusauri-on-collapsible-bar, #0f2744);
+}
+
+button.learn-chip.learn-chip-surface.is-active {
+    background: var(--plusauri-collapsible-bar-active, #9bb8de);
+    border-color: var(--plusauri-on-collapsible-bar, #0f2744);
+    color: var(--plusauri-on-collapsible-bar, #0f2744);
+    font-weight: 600;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/*
+ * Multi-dossier plan chips (again, after generic .learn-chip gold paint) so slot greens/blues
+ * win over the default gold active chip. Same solid colors as gutter / pane / prose links.
+ */
+button.learn-chip.lesson-plan-chip.plan-slot-0 {
+    --plan-slot-color: var(--plan-slot-0);
+    background: color-mix(in srgb, var(--plan-slot-0) 78%, white) !important;
+    border-color: color-mix(in srgb, var(--plan-slot-0) 55%, transparent) !important;
+    color: color-mix(in srgb, var(--plan-slot-0) 35%, #0a2018) !important;
+    box-shadow: none !important;
+}
+button.learn-chip.lesson-plan-chip.plan-slot-1 {
+    --plan-slot-color: var(--plan-slot-1);
+    background: color-mix(in srgb, var(--plan-slot-1) 78%, white) !important;
+    border-color: color-mix(in srgb, var(--plan-slot-1) 55%, transparent) !important;
+    color: color-mix(in srgb, var(--plan-slot-1) 30%, #0a1628) !important;
+    box-shadow: none !important;
+}
+button.learn-chip.lesson-plan-chip.plan-slot-2 {
+    --plan-slot-color: var(--plan-slot-2);
+    background: color-mix(in srgb, var(--plan-slot-2) 78%, white) !important;
+    border-color: color-mix(in srgb, var(--plan-slot-2) 55%, transparent) !important;
+    color: color-mix(in srgb, var(--plan-slot-2) 28%, #2a1f08) !important;
+    box-shadow: none !important;
+}
+button.learn-chip.lesson-plan-chip.is-active {
+    background: var(--plan-slot-color, var(--plan-slot-0)) !important;
+    border-color: var(--plan-slot-color, var(--plan-slot-0)) !important;
+    color: #fff !important;
+    font-weight: 700;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--plan-slot-color, var(--plan-slot-0)) 35%, transparent) !important;
+}
+
+.learn-surface-chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Topic tags under surface chips — filter lessons by catalog tag. */
+.learn-tag-chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0 0 0.75rem;
+}
+
+/*
+ * Pico (and role=group button-group styles) often set flex-grow on grouped buttons, so a lone
+ * chip on a wrapped line stretches full row width. Keep each Topics chip content-sized.
+ */
+/* A region with nothing published yet: disabled by learn-index.js, titled "Under development". */
+.learn-region-chips > button.learn-chip.is-under-development,
+.learn-region-chips > button.learn-chip[disabled] {
+    opacity: 0.55;
+    border-style: dashed;
+    color: color-mix(in srgb, var(--plusauri-ink, #1a1a1a) 55%, transparent);
+    background: color-mix(in srgb, var(--plusauri-ink, #1a1a1a) 6%, transparent);
+    cursor: not-allowed;
+    filter: grayscale(0.6);
+}
+
+.learn-region-chips > button.learn-chip[disabled]:hover {
+    border-color: color-mix(in srgb, var(--plusauri-ink, #1a1a1a) 25%, transparent);
+    box-shadow: none;
+}
+
+.learn-tag-chips > button.learn-chip,
+.learn-surface-chips > button.learn-chip,
+.learn-region-chips > button.learn-chip,
+.reference-categories > a.learn-chip,
+.catalog-chips > a.learn-chip {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
+.learn-tag-chips[hidden] {
+    display: none;
+}
+
+/* Planning-first: exclude product how-tos (tag tutilis-feature). */
+.learn-hide-tutilis-feature,
+.learn-show-shell-only {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 0.9rem;
+    gap: 0.45rem;
+    margin: 0 0 0.55rem;
+    user-select: none;
+}
+
+.learn-hide-tutilis-feature input,
+.learn-show-shell-only input {
+    margin: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+.learn-hide-tutilis-feature span,
+.learn-show-shell-only span {
+    color: var(--plusauri-graphite, #34271e);
+    opacity: 0.9;
+}
+
+.learn-show-shell-only {
+    margin-bottom: 0.85rem;
+}
+
+.learn-tag-chips-label {
+    font-size: 0.85rem;
+    margin-right: 0.15rem;
+    flex: 0 0 auto;
+}
+
+/* Lesson prose + split page: row of catalog tags as chips */
+.lesson-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0 0 1rem;
+}
+
+.lesson-tags-label {
+    font-size: 0.85rem;
+    margin-right: 0.15rem;
+    color: var(--plusauri-graphite, #34271e);
+    opacity: 0.75;
+}
+
+.learn-result-meta {
+    margin: 0 0 0.75rem;
+    min-height: 1.25em;
+}
+
+.learn-group-title {
+    font-size: 1.1rem;
+    margin: 1.25rem 0 0.5rem;
+}
+
+/*
+ * A /learn section that folds (learn-index.js SECTION_FOLD_DEFAULT_OPEN). The header stays the
+ * same h3 as an unfolded section; only the gold marker — the intro chrome's — says it folds.
+ * Pico styles every <details> as an accordion, so its chevron, border and summary color are
+ * turned off here rather than fought per property.
+ */
+details.learn-section-fold {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+details.learn-section-fold > summary {
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    color: inherit !important;
+}
+
+details.learn-section-fold > summary::-webkit-details-marker,
+details.learn-section-fold > summary::after {
+    display: none;
+}
+
+details.learn-section-fold > summary > .learn-group-title {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+}
+
+details.learn-section-fold > summary > .learn-group-title::before {
+    content: "▸";
+    display: inline-block;
+    width: 1em;
+    color: var(--plusauri-gold, #c9a227);
+    transition: transform 0.12s ease;
+}
+
+details.learn-section-fold[open] > summary > .learn-group-title::before {
+    transform: rotate(90deg);
+}
+
+details.learn-section-fold > summary:hover > .learn-group-title {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--plusauri-gold, #c9a227) 60%, transparent);
+    text-underline-offset: 0.2em;
+}
+
+.learn-section-count {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--pico-muted-color, #6b6259);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    details.learn-section-fold > summary > .learn-group-title::before {
+        transition: none;
+    }
+}
+
+.learn-empty {
+    margin-top: 1rem;
+}
+
+/* ── Lesson split page (HTML LHS + KMP iframe RHS) ───────────────────────── */
+
+.lesson-split-body {
+    margin: 0;
+    /* Pinned, not min-height: the split view *is* the page, so the document itself must never
+       scroll. Under min-height the page could grow past the viewport, and a fast flick that
+       bottomed out a pane would chain into the document and slide the whole split view up,
+       leaving a band of empty paper below it. */
+    height: 100vh;
+    height: 100dvh; /* mobile: exclude the browser's collapsing chrome */
+    overflow: hidden;
+    /* Stop the document rubber-banding when a pane's momentum reaches it (macOS elastic scroll). */
+    overscroll-behavior: none;
+    display: flex;
+    flex-direction: column;
+    background: var(--plusauri-paper, #fcfbfa);
+}
+
+/* Compact lesson chrome — Pico's default nav is tall (large vertical spacing + min-height).
+   Override hard so the split panes get the height; collapse hides the bar entirely. */
+.lesson-split-header {
+    flex: 0 0 auto;
+    padding: 0.1rem 0.65rem;
+    border-bottom: 1px solid var(--pico-muted-border-color, #e0d8cc);
+    background: var(--plusauri-paper, #fcfbfa);
+    line-height: 1.15;
+}
+
+.lesson-split-header nav {
+    margin: 0;
+    min-height: 0;
+    /* Kill Pico's generous nav element spacing on this bar only. */
+    --pico-nav-element-spacing-vertical: 0.1rem;
+    --pico-nav-element-spacing-horizontal: 0.55rem;
+    --pico-nav-link-spacing-vertical: 0.15rem;
+    --pico-nav-link-spacing-horizontal: 0.4rem;
+}
+
+.lesson-split-header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Lesson language: host nav select + canvas toolbar share plusauri.lang (lang.js + lesson-split). */
+/* Legacy strip styles kept for any static docs that still link ?lang= in prose. */
+.lesson-lang-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-right: 0.25rem;
+}
+a.lesson-lang-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  opacity: 0.65;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+}
+a.lesson-lang-link:hover,
+a.lesson-lang-link:focus-visible {
+  opacity: 1;
+  text-decoration: none;
+}
+a.lesson-lang-link.is-active {
+  opacity: 1;
+  background: var(--pico-primary-background, rgba(0, 0, 0, 0.08));
+}
+
+.lesson-split-header nav a,
+.lesson-split-header nav strong {
+    font-size: 0.875rem;
+    line-height: 1.2;
+    padding-block: 0.1rem;
+}
+
+.lesson-split-header.collapsed {
+    display: none;
+}
+
+/* Collapse control inside the header (right cluster). */
+button.lesson-header-collapse {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: var(--pico-muted-color, #6b6259);
+    cursor: pointer;
+    font-size: 0.85rem;
+    line-height: 1;
+    margin: 0;
+    padding: 0.15rem 0.35rem;
+    width: auto;
+}
+
+button.lesson-header-collapse:hover,
+button.lesson-header-collapse:focus-visible {
+    color: var(--plusauri-ink, #1a1a1a);
+    background: transparent;
+}
+
+/* Thin restore strip while the header is collapsed — full width, minimal height. */
+button.lesson-header-expand {
+    appearance: none;
+    background: var(--plusauri-paper, #fcfbfa);
+    border: 0;
+    border-bottom: 1px solid var(--pico-muted-border-color, #e0d8cc);
+    color: var(--pico-muted-color, #6b6259);
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0.15rem 0.65rem;
+    text-align: left;
+    width: 100%;
+}
+
+button.lesson-header-expand:hover,
+button.lesson-header-expand:focus-visible {
+    color: var(--plusauri-ink, #1a1a1a);
+    background: var(--plusauri-gold-soft, #f4dfad);
+}
+
+button.lesson-header-expand[hidden] {
+    display: none !important;
+}
+
+.lesson-split {
+    flex: 1 1 auto;
+    display: grid;
+    /* lesson | gutter | app — fractions applied by lesson-split.js after load */
+    grid-template-columns: minmax(12rem, 38%) 6px minmax(16rem, 1fr);
+    min-height: 0;
+    /* No explicit height. `flex: 1 1 auto` inside the pinned body already claims exactly the space
+       the header leaves. The previous `calc(100vh - 3.25rem)` hardcoded a guess at the header's
+       height and fought the flex sizing: whenever the real header differed — it wraps at narrow
+       widths, which is where this view is used most — the two disagreed and the surplus became
+       document scroll. */
+}
+
+/*
+ * Prose-only lesson: no bound sample (and no other right-hand host yet). Full-width teaching
+ * column — do not leave an empty canvas idle pane. When a sample or future calculator host is
+ * bound, use the default split grid instead.
+ */
+.lesson-split.prose-only {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.lesson-split.prose-only .lesson-split-gutter,
+.lesson-split.prose-only .app-pane {
+    display: none !important;
+}
+
+.lesson-split.prose-only .lesson-pane {
+    max-width: 48rem;
+    margin-inline: auto;
+    width: 100%;
+}
+
+.lesson-pane {
+    overflow: auto;
+    /* Keep a fast flick's momentum inside the pane instead of chaining it to the document. */
+    overscroll-behavior: contain;
+    /*
+     * No top padding — the opening space is a margin on the first child instead. A scroll
+     * container's top padding sits *above* a `top: 0` sticky child, so the pinned plan switcher
+     * came to rest a whole 1rem below the pane's edge with a strip of background showing over it.
+     * Moving the space to the child leaves the resting layout identical and lets the band pin
+     * flush. (`overflow: auto` makes this a BFC, so that child margin cannot collapse out.)
+     */
+    /*
+     * Tokenized because the sticky plan band cancels exactly this value to reach the pane's edges.
+     * Two hand-written `1.25rem`s in different rules is a full-bleed that silently stops
+     * full-bleeding the first time one of them is tuned.
+     */
+    --lesson-pane-pad-x: 1.25rem;
+    /*
+     * Tokenized for the same reason as the inline padding: the accordion's bottom pile cancels
+     * exactly this value to rest on the pane's edge. Two hand-written `2rem`s is a pile that
+     * silently floats above the edge the first time one of them is tuned.
+     */
+    --lesson-pane-pad-b: 2rem;
+    padding: 0 var(--lesson-pane-pad-x) var(--lesson-pane-pad-b);
+    /*
+     * Reserve the scrollbar's track whether or not it is showing. Without it the scrollbar eats
+     * into the content box only once the lesson is long enough to scroll, so the band came up
+     * short on the right by exactly the track width — and only on the pages long enough to notice.
+     */
+    scrollbar-gutter: stable;
+    background: var(--plusauri-lesson-pane, #f7f3ec);
+    color: var(--plusauri-ink);
+    min-width: 0;
+    min-height: 0;
+}
+
+.lesson-pane > :first-child {
+    margin-top: 1rem;
+}
+
+.lesson-split-gutter {
+    position: relative;
+    z-index: 2;
+    background: var(--pico-muted-border-color, #e0d8cc);
+    cursor: col-resize;
+    touch-action: none;
+    user-select: none;
+}
+
+.lesson-split-gutter::after {
+    /* Wider hit target than the 6px visual line */
+    content: "";
+    position: absolute;
+    inset: 0 -5px;
+}
+
+.lesson-split-gutter:hover,
+.lesson-split-gutter.is-dragging,
+.lesson-split-gutter:focus-visible {
+    background: var(--plusauri-gold, #c89b2c);
+    outline: none;
+}
+
+/* While dragging, don't let the iframe steal pointer events */
+body.lesson-split-dragging {
+    cursor: col-resize;
+    user-select: none;
+}
+
+body.lesson-split-dragging .app-pane iframe {
+    pointer-events: none;
+}
+
+.lesson-pane h1 {
+    font-size: 1.6rem;
+    margin-top: 0;
+}
+
+.lesson-pane table {
+    font-size: 0.9rem;
+}
+
+.app-pane {
+    min-width: 0;
+    min-height: 0;
+    /* Same containment as the prose pane: the canvas iframe scrolls its own content, and reaching
+       its end must not push the surrounding page. */
+    overscroll-behavior: contain;
+    background: var(--plusauri-app-pane, #fef7ff);
+    display: flex;
+    flex-direction: column;
+}
+
+.app-pane iframe {
+    display: block;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: 0;
+}
+
+/* Static export: the sentence that stands where the canvas iframe would be. */
+.app-pane .canvas-omitted {
+    margin: 1.25rem 1.5rem;
+    max-width: 36rem;
+}
+
+/* Lesson prose tables — full width of the pane, headers from brand palette */
+.lesson-pane table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.25rem;
+    table-layout: auto;
+}
+
+/*
+ * Compact reference tables that should not claim the full prose width (e.g. 2-column RMD
+ * birth-year / account-yes-no grids). Authors wrap the table in HTML with class
+ * `lesson-table-aside` (flexmark does not float pure Markdown tables). Text flows beside
+ * them on wide panes; stack full-width on narrow split panes.
+ */
+.lesson-pane table.lesson-table-aside {
+    float: right;
+    clear: right;
+    width: auto;
+    max-width: min(100%, 22rem);
+    margin: 0.15rem 0 1rem 1.25rem;
+    font-size: 0.85rem;
+}
+
+.lesson-pane table.lesson-table-aside th,
+.lesson-pane table.lesson-table-aside td {
+    white-space: nowrap;
+}
+
+/* Stop following section headings from sliding up beside a float */
+.lesson-pane h2,
+.lesson-pane h3,
+.lesson-pane hr,
+.lesson-pane .clear-after-float {
+    clear: both;
+}
+
+@media (max-width: 42rem) {
+    .lesson-pane table.lesson-table-aside {
+        float: none;
+        clear: none;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .lesson-pane table.lesson-table-aside th,
+    .lesson-pane table.lesson-table-aside td {
+        white-space: normal;
+    }
+}
+
+.lesson-pane table td,
+.lesson-pane table th {
+    border: 1px solid var(--pico-muted-border-color, #e0d8cc);
+    padding: 0.4rem 0.65rem;
+    text-align: left;
+    vertical-align: top;
+    /*
+     * Wrap long prose at word boundaries. Do NOT use overflow-wrap: anywhere here —
+     * with table-layout: auto that lets the first column shrink to ~one character and
+     * stacks "Surface" / "CF Table" as Surf·ace / C·F· ·T·a·b·l·e (vertical letter pile).
+     * Long data cells still wrap via break-word when needed.
+     */
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+/* Header row: graphite bar + soft gold text so it reads as chrome, not another data row */
+.lesson-pane table thead th {
+    background: var(--plusauri-graphite, #34271e);
+    color: var(--plusauri-gold-soft, #f4dfad);
+    font-weight: 600;
+    border-color: var(--plusauri-graphite, #34271e);
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*
+ * Three-column tables only (e.g. empty corner | Guardrails | plusauri Simulation): give the two
+ * product columns equal share so headers sit as peers rather than a short label vs a wrapping novel.
+ * Do not apply to 4+ column tables — those widths leave the last column ~0px wide and
+ * overflow-wrap: anywhere stacks cell text character-by-character (vertical letter pile).
+ */
+.lesson-pane table:has(> thead > tr > th:nth-child(3):last-child) > thead > tr > th:nth-child(2),
+.lesson-pane table:has(> thead > tr > th:nth-child(3):last-child) > thead > tr > th:nth-child(3) {
+    width: 40%;
+    /*
+     * Wraps at word boundaries. This was `nowrap`, which is harmless for two-word product headers
+     * and fatal for a sentence-long one: the header refused to wrap, the table grew past the pane,
+     * and inside a callout the excess was clipped out of reach.
+     */
+    white-space: normal;
+}
+
+/*
+ * Product column mark in a dark table header — a soft warm pill naming the product in type
+ * ("Tutilis Simulation"). Text-only by decision: the company wordmark used to sit here, but this
+ * cell is contrasting a published study against what the app does, and nothing about it concerns
+ * who built or sells the software. See doc/brand/plusauri-tutilis/Company and Product Branding.md,
+ * "Marks and lockups" and "Naming rules → In lessons".
+ */
+.product-mark {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.35em;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.product-mark-on-dark {
+    /* Warm graphite-container cream — less glare than pure paper on the dark bar */
+    background: var(--plusauri-pill-on-dark, #e9ded2);
+    color: var(--plusauri-graphite, #34271e);
+    padding: 0.12em 0.4em;
+    border-radius: 0.3rem;
+    box-shadow: inset 0 0 0 1px rgba(52, 39, 30, 0.08);
+}
+
+.product-mark-label {
+    font-weight: 600;
+    font-size: 0.92em;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    color: var(--plusauri-graphite, #34271e);
+    align-self: center;
+}
+
+/* Label column: bold, same ink as body text. Do NOT pin graphite — in dark theme graphite is
+   nearly the same as the pane background and the first column becomes illegible (right cells stay
+   readable because they inherit --plusauri-ink / --pico-color). */
+.lesson-pane table tbody tr td:first-child {
+    font-weight: 600;
+    color: var(--plusauri-ink, #1a1a1a);
+}
+
+/*
+ * Two-column tables (Surface | What changes, Pattern | Why it matters, …): size col 1 to content
+ * when labels are short, but never force nowrap on body cells. Long first-column prose
+ * (e.g. “Maggiulli (and often Safety-first) ask for a larger starting nest egg”) used to sit on
+ * one unbreakable line, steal almost all width, and leave col 2 wrapping like tofu / a letter pile.
+ * Header labels stay on one line; body cells wrap at word boundaries under a max width.
+ */
+.lesson-pane table:has(> thead > tr > th:nth-child(2):last-child) > thead > tr > th:first-child {
+    width: 1%;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.lesson-pane table:has(> tbody > tr > td:nth-child(2):last-child) > tbody > tr > td:first-child {
+    width: 1%;
+    /*
+     * A floor as well as a ceiling. `width: 1%` collapses col 1 to its *min-content* — the longest
+     * single word — whenever col 2 has something that will not wrap much (a lesson link, a chip).
+     * A first column of real prose then renders as a one-word-per-line ribbon down the left edge
+     * beside a mostly empty col 2, which is the exact mirror of the failure the max-width above
+     * was added for. Short labels ("Word list") are narrower than this and still hug; only a
+     * column that wants more than a couple of words is held open.
+     */
+    min-width: min(40%, 9rem);
+    max-width: min(55%, 28rem);
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+/*
+ * Ledger tables — a **description | figure** pair, the mirror of the two-column default above:
+ * the first column is the prose ("Together-ness pile, ρ = +0.69") and the second is a short number
+ * (“+55”). Under the default rule col 1 is sized to content with a 9rem floor, so the description
+ * wraps into a four-line ribbon beside a figure sitting in 80% of empty width. Authors opt in by
+ * writing the table as HTML with class `lesson-table-ledger` (flexmark cannot class a Markdown
+ * table); col 1 then takes the width and col 2 hugs its figure on one line. First use: the
+ * worked-numbers table in `diversification_correlation`.
+ */
+/*
+ * The `:has()` clauses are for specificity, not selection: the two-column default above selects
+ * through `:has(> tbody > tr > td:nth-child(2):last-child)`, and `:has()` counts its argument, so a
+ * plain `table.lesson-table-ledger > tbody > tr > td:first-child` (0,3,4) loses to it (0,4,5).
+ * Mirroring the clause puts these at (0,5,5) without `!important`.
+ */
+.lesson-pane table.lesson-table-ledger:has(> thead > tr > th:nth-child(2):last-child) > thead > tr > th:first-child,
+.lesson-pane table.lesson-table-ledger:has(> tbody > tr > td:nth-child(2):last-child) > tbody > tr > td:first-child {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    white-space: normal;
+    font-weight: 400;
+}
+
+.lesson-pane table.lesson-table-ledger:has(> thead > tr > th:nth-child(2):last-child) > thead > tr > th:last-child,
+.lesson-pane table.lesson-table-ledger:has(> tbody > tr > td:nth-child(2):last-child) > tbody > tr > td:last-child {
+    width: 1%;
+    white-space: nowrap;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/*
+ * First-column product chips ([[nav:growth]], area rail, Forecast Detail).
+ * Two-col tables set the header to width:1% ("Tool") and the table is width:100%, so
+ * the label column shrinks to the header and nowrap chips overflow into Role
+ * (Annuity sitting on top of the description). Size this column to the chip.
+ */
+.lesson-pane table:has(> tbody > tr > td:first-child .lesson-nav-ref)
+    > thead
+    > tr
+    > th:first-child,
+.lesson-pane table:has(> tbody > tr > td:nth-child(2):last-child)
+    > tbody
+    > tr:has(> td:first-child .lesson-nav-ref)
+    > td:first-child {
+    width: auto;
+    max-width: none;
+    min-width: max-content;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.lesson-pane table tbody tr:has(> td:first-child .lesson-nav-ref) > td {
+    vertical-align: middle;
+}
+
+/* flexmark may wrap the chip in <p>; that block shrinks with the squeezed cell. */
+.lesson-pane table tbody tr:has(> td:first-child .lesson-nav-ref) > td:first-child > p {
+    margin: 0;
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+}
+
+/* Three-column tables: modest label column + equal peer data columns */
+.lesson-pane table:has(> tbody > tr > td:nth-child(3):last-child) > tbody > tr > td:first-child {
+    width: 20%;
+    max-width: 10.5rem;
+    /* Prefer whole words; only break if a single token exceeds the cap */
+    overflow-wrap: break-word;
+    word-break: normal;
+    white-space: normal;
+}
+
+.lesson-pane table:has(> tbody > tr > td:nth-child(3):last-child) > tbody > tr > td:nth-child(2),
+.lesson-pane table:has(> tbody > tr > td:nth-child(3):last-child) > tbody > tr > td:nth-child(3) {
+    width: 40%;
+}
+
+/* Table header chrome in dark lesson pane — also when data-theme=dark (not only OS). */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .lesson-pane table thead th {
+        background: var(--plusauri-gold, #c89b2c);
+        color: #1a1a1a;
+        border-color: var(--plusauri-gold, #c89b2c);
+    }
+}
+
+html[data-theme="dark"] .lesson-pane table thead th {
+    background: var(--plusauri-gold, #c89b2c);
+    color: #1a1a1a;
+    border-color: var(--plusauri-gold, #c89b2c);
+}
+
+/* Mermaid diagrams (```mermaid fences → client SVG via mermaid-init.js) */
+.lesson-pane .mermaid,
+.lesson-pane pre:has(code.language-mermaid) {
+    margin: 1rem 0 1.25rem;
+    text-align: center;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.lesson-pane .mermaid svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Before JS runs, avoid a full-height raw code wall for large flowcharts */
+.lesson-pane pre:has(code.language-mermaid) {
+    font-size: 0.8rem;
+    line-height: 1.35;
+    max-height: 12rem;
+    overflow: auto;
+}
+
+/*
+ * Lesson app captures — shared frame so screenshots read as *pictures of the app*, not live UI.
+ * Bare <img> cannot host ::before/::after, so the frame is border + dual ring + shadow + no hit
+ * target. Applies to all lesson images except tiny nav/rail icons.
+ */
+.lesson-pane {
+    --plusauri-shot-radius: 10px;
+    --plusauri-shot-border: rgba(52, 39, 30, 0.2);
+    --plusauri-shot-matte: rgba(52, 39, 30, 0.07);
+    --plusauri-shot-shadow:
+        0 0 0 1px var(--plusauri-shot-matte),
+        0 0 0 6px color-mix(in srgb, var(--plusauri-lesson-pane, #f7f3ec) 88%, #34271e 12%),
+        0 0 0 7px rgba(52, 39, 30, 0.1),
+        0 2px 4px rgba(52, 39, 30, 0.05),
+        0 12px 28px -6px rgba(52, 39, 30, 0.18);
+}
+
+/* Dark lesson pane: denser matte so captures lift off graphite cream-inverse */
+html[data-theme="dark"] .lesson-pane {
+    --plusauri-shot-border: rgba(244, 223, 173, 0.22);
+    --plusauri-shot-matte: rgba(0, 0, 0, 0.35);
+    --plusauri-shot-shadow:
+        0 0 0 1px rgba(244, 223, 173, 0.08),
+        0 0 0 6px color-mix(in srgb, var(--plusauri-lesson-pane, #1c1916) 90%, #000 10%),
+        0 0 0 7px rgba(0, 0, 0, 0.45),
+        0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .lesson-pane {
+        --plusauri-shot-border: rgba(244, 223, 173, 0.22);
+        --plusauri-shot-matte: rgba(0, 0, 0, 0.35);
+        --plusauri-shot-shadow:
+            0 0 0 1px rgba(244, 223, 173, 0.08),
+            0 0 0 6px color-mix(in srgb, var(--plusauri-lesson-pane, #1c1916) 90%, #000 10%),
+            0 0 0 7px rgba(0, 0, 0, 0.45),
+            0 4px 12px rgba(0, 0, 0, 0.35);
+    }
+}
+
+/*
+ * The app's own emoji glyphs, swapped in for the OS emoji font by AppEmoji.kt so lesson text matches
+ * the canvas (🔁 is orange in both). Text-sized and unframed on any page; the !important rules keep
+ * the screenshot framing below off them without another :not() in every chain.
+ */
+img.app-emoji {
+    display: inline !important;
+    height: 1.15em !important;
+    width: auto !important;
+    max-width: none !important;
+    vertical-align: -0.2em !important;
+    margin: 0 0.05em !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/*
+ * Inline screenshots in lesson prose.
+ * Exclude:
+ *   - .nav-icon — Getting around rail glyphs
+ *   - .lesson-nav-ref-img — LessonNavRefs product chips (must not get the shot matte/ring)
+ */
+.lesson-pane img:not(.nav-icon):not(.lesson-nav-ref-img) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.85rem 0 1.1rem;
+    border: 1px solid var(--plusauri-shot-border);
+    border-radius: var(--plusauri-shot-radius);
+    background: #fff;
+    box-shadow: var(--plusauri-shot-shadow);
+    /* Not live — do not invite click / drag as if this were the canvas */
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: default;
+}
+
+/*
+ * Generated figures — rebuilt by `:chart-render:regenerateLessonFigures`, not captured by hand.
+ *
+ * Worth telling apart on sight: a screenshot is a moment someone framed, while a generated figure
+ * is whatever the engine says today. When numbers move, these self-correct and screenshots do not.
+ *
+ * The cue is a **mat**: the picture sits inset inside a tinted surround, the way a print is mounted
+ * behind board. That is deliberately a *structural* difference — a visible margin between frame and
+ * image — so it survives being read by someone who does not separate the two hues reliably. The
+ * cool edge only reinforces what the inset already says, and it is sky rather than gold so it never
+ * reads as the brand's primary/action color.
+ *
+ * Rides the existing capture frame by re-pointing its tokens on the element, so the dual ring,
+ * radius and shadow all stay consistent with every other lesson image.
+ */
+.lesson-pane {
+    --plusauri-generated-edge: #5b87c9;
+    --plusauri-generated-mat: color-mix(in srgb, var(--plusauri-sky, #78A5EB) 15%, #ffffff);
+}
+
+html[data-theme="dark"] .lesson-pane {
+    --plusauri-generated-edge: rgba(120, 165, 235, 0.62);
+    --plusauri-generated-mat: color-mix(in srgb, var(--plusauri-sky, #78A5EB) 14%, #14120f);
+}
+
+.lesson-pane img.lesson-media-generated:not(.nav-icon):not(.lesson-nav-ref-img) {
+    --plusauri-shot-border: var(--plusauri-generated-edge);
+    border-width: 2px;
+    /* The mat itself: padding shows the background between border and picture. */
+    padding: 3px;
+    background: var(--plusauri-generated-mat);
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) .lesson-pane {
+        --plusauri-generated-edge: rgba(120, 165, 235, 0.62);
+        --plusauri-generated-mat: color-mix(in srgb, var(--plusauri-sky, #78A5EB) 14%, #14120f);
+    }
+}
+
+/*
+ * A figure a click opens in the canvas (LessonMediaRefs, lesson-split.js initFigureJumps): the
+ * pointer and a stronger mat edge say so on hover, and the keyboard focus ring matches the jump-to
+ * callout's. The class is removed by the script when no canvas can show the figure's plan.
+ */
+/* Lesson images are `pointer-events: none` (the inline-screenshot rule above); a figure that opens
+ * the canvas has to take its own pointer, so the selector repeats that rule's :not()s to outrank it. */
+.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img) {
+    pointer-events: auto;
+    cursor: pointer;
+    transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img):hover,
+.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img):focus-visible {
+    --plusauri-shot-border: var(--card-link);
+    box-shadow: 0 0 0 3px rgba(70, 110, 185, 0.18);
+}
+
+.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img):focus-visible {
+    outline: 2px solid var(--card-link);
+    outline-offset: 2px;
+}
+
+/*
+ * The corner badge on a figure that opens in the canvas (lesson-split.js `badge`), placed by the
+ * script on the image's top-right corner. Its host paragraph is the positioning context. It takes
+ * no pointer, so a click on it is a click on the figure.
+ */
+.lesson-pane .lesson-figure-jump-host {
+    position: relative;
+}
+
+.lesson-pane .lesson-figure-jump-badge {
+    position: absolute;
+    pointer-events: none;
+    font-size: 1.05rem;
+    line-height: 1;
+    padding: 0.2rem 0.3rem;
+    border-radius: 999px;
+    background: var(--plusauri-generated-mat);
+    border: 1px solid var(--plusauri-generated-edge);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+/* A figure of a what-if opens Transforms with it switched on: the badge's edge says which. */
+.lesson-pane .lesson-figure-jump-badge.is-what-if {
+    border-color: var(--card-link);
+    border-width: 2px;
+}
+
+/* Silent / short screencasts in lesson prose */
+.lesson-pane video.lesson-video,
+.lesson-pane video {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.85rem 0 1.1rem;
+    border: 1px solid var(--plusauri-shot-border);
+    border-radius: var(--plusauri-shot-radius);
+    background: #111;
+    box-shadow: var(--plusauri-shot-shadow);
+    /* Keep controls usable; still framed as a capture */
+    cursor: default;
+}
+
+/* YouTube embed — responsive 16:9 box */
+.lesson-youtube {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0.85rem 0 1.15rem;
+    border-radius: var(--plusauri-shot-radius, 0.4rem);
+    overflow: hidden;
+    border: 1px solid var(--plusauri-shot-border, rgba(52, 39, 30, 0.18));
+    box-shadow: var(--plusauri-shot-shadow, 0 1px 4px rgba(0, 0, 0, 0.08));
+    background: #111;
+    aspect-ratio: 16 / 9;
+}
+
+.lesson-youtube iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Full-size (or near full-size) UI standard previews in lesson tables */
+.lesson-pane img.ui-std-preview {
+    max-width: min(100%, 22rem);
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0.25rem 0;
+    /* border / radius / shadow / pointer-events inherit from .lesson-pane img:not(.nav-icon) */
+}
+
+.lesson-pane table td img.ui-std-preview {
+    max-width: min(100%, 18rem);
+}
+
+/* Side-by-side lesson figures, each with its own caption, that wrap to a stack when the pane is
+ * too narrow for both — the page's FlowRow. A cell never shrinks below readable (min 18rem), so
+ * two cells share a row only when both fit. */
+.lesson-pane .lesson-img-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.1rem;
+    align-items: flex-start;
+    margin: 0.85rem 0 1.1rem;
+}
+.lesson-pane .lesson-img-row > .lesson-img-cell {
+    flex: 1 1 18rem;
+    min-width: 0;
+}
+.lesson-pane .lesson-img-row > .lesson-img-cell img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+.lesson-pane .lesson-img-row > .lesson-img-cell p {
+    font-size: 0.85rem;
+    margin: 0.35rem 0 0;
+}
+
+/* Block-level previews outside tables (wide chrome / full dialogs) */
+/* Stacked before/after lesson captures (same width so shifts read clearly). */
+.lesson-pane .lesson-img-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin: 0.85rem 0 1.1rem;
+    max-width: 100%;
+}
+.lesson-pane .lesson-img-stack img {
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    display: block;
+    margin: 0; /* stack owns vertical rhythm */
+}
+.lesson-pane .lesson-img-stack figcaption,
+.lesson-pane .lesson-img-caption {
+    font-size: 0.85rem;
+    color: var(--pico-muted-color, #6b6259);
+    margin: 0.15rem 0 0;
+    max-width: 40rem;
+}
+/* An authored caption paragraph (LessonMediaRefs.markCaptions): pulled up under its picture, past
+   the screenshot's bottom margin, and given room below so the prose that follows reads as prose. */
+.lesson-pane p.lesson-img-caption {
+    margin: -0.7rem 0 1.25rem;
+    line-height: 1.45;
+}
+
+.lesson-pane img.ui-std-preview-wide {
+    max-width: min(100%, 40rem);
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5rem 0 0.95rem;
+}
+
+/*
+ * Tight chrome crops (FID / Year scrubbers, single controls). These assets are short and
+ * wide; `ui-std-preview-wide` (width: 100% / 40rem) blows them up. Natural aspect, capped.
+ * - md ≈ 60% of the wide preview width (Year timeline, similar)
+ * - sm ≈ 50% of the wide preview width (FID quick-jumps, similar)
+ */
+.lesson-pane img.ui-chrome-crop-md {
+    max-width: min(100%, 24rem);
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0.5rem 0 0.85rem;
+}
+.lesson-pane img.ui-chrome-crop-sm {
+    max-width: min(100%, 20rem);
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0.5rem 0 0.85rem;
+}
+
+/* Hover-tip / sparkline cards embedded in prose */
+/* A product control pictured by a generated figure: the width attribute (75% of its in-app size,
+ * set by LessonMediaRefs from the PNG) decides; never wider than the pane. */
+.lesson-pane img.ui-control {
+    max-width: 100%;
+    height: auto;
+}
+
+.lesson-pane img.ui-hover-card {
+    max-width: min(100%, 20rem);
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0.5rem 0 0.85rem;
+    border-radius: 8px; /* slightly tighter for small cards; still framed */
+}
+
+/* Rail icons in lesson tables / headings (Getting around, etc.) — product PNGs or matching SVGs */
+.lesson-pane img.nav-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    object-fit: contain;
+    object-position: center;
+    vertical-align: middle;
+    margin-right: 0.45rem;
+    flex-shrink: 0;
+}
+
+.lesson-pane h2 img.nav-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.4rem;
+    position: relative;
+    top: -0.08em;
+}
+
+/*
+ * Nav map table: icon | Area | description.
+ * Default cells are top-aligned (good for long prose); for icon rows, middle-align every cell so
+ * the glyph lines up with the Area label (and with the first line of a multi-line description).
+ */
+.lesson-pane table tbody tr:has(> td:first-child img.nav-icon) > td {
+    vertical-align: middle;
+}
+
+.lesson-pane table tbody tr:has(> td:first-child img.nav-icon) > td:first-child,
+.lesson-pane table thead tr:has(> th:first-child:empty) > th:first-child {
+    width: 2.75rem;
+    max-width: 2.75rem;
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+    padding: 0.45rem 0.35rem;
+    vertical-align: middle;
+}
+
+/* Block layout removes the inline-image baseline gap that lifts icons above the text */
+.lesson-pane table tbody tr:has(> td:first-child img.nav-icon) > td:first-child img.nav-icon {
+    display: block;
+    margin: 0 auto;
+}
+
+/* flexmark / Pico may wrap cell HTML in <p> — kill paragraph margins so the icon doesn't float high */
+.lesson-pane table tbody tr:has(> td:first-child img.nav-icon) > td:first-child > p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+/* ── Reference hub ────────────────────────────────────────────────────────── */
+
+.reference-hub,
+.catalog-hub {
+    max-width: 52rem;
+}
+
+.reference-lede,
+.catalog-lede {
+    color: var(--pico-muted-color);
+    max-width: 42rem;
+}
+
+.reference-search button,
+.catalog-search button {
+    margin: 0;
+    width: auto;
+    flex: 0 0 auto;
+}
+
+.reference-categories,
+.catalog-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.75rem 0 1rem;
+}
+
+.reference-category-heading,
+.catalog-group-heading {
+    font-size: 1.05rem;
+    margin: 1.6rem 0 0.6rem;
+}
+
+.reference-entry-card,
+.catalog-entry-card {
+    display: block;
+    padding: 0.7rem 0.85rem;
+    margin: 0 0 0.45rem;
+    border: 1px solid var(--pico-muted-border-color, #ddd6cb);
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.reference-entry-card:hover,
+.catalog-entry-card:hover {
+    border-color: var(--plusauri-gold);
+}
+
+/*
+ * Focus ring, same gold as a.learn-card — Tab walks these cards explicitly
+ * (reference-index.js), so the reader has to be able to see where they are.
+ *
+ * `:focus` as well as `:focus-visible`, and deliberately: the card is focused *programmatically*
+ * by the Tab handler, and browsers disagree about whether a scripted focus() counts as
+ * focus-visible. Styling only the visible variant left the keyboard walk silent in some of them.
+ */
+a.reference-entry-card:focus,
+a.reference-entry-card:focus-visible,
+a.catalog-entry-card:focus,
+a.catalog-entry-card:focus-visible {
+    outline: none;
+    border-color: var(--plusauri-gold, #c89b2c);
+    box-shadow: 0 0 0 0.18rem
+        color-mix(in srgb, var(--plusauri-gold, #c89b2c) 50%, transparent);
+}
+
+html[data-theme="dark"] a.reference-entry-card:focus,
+html[data-theme="dark"] a.reference-entry-card:focus-visible,
+html[data-theme="dark"] a.catalog-entry-card:focus,
+html[data-theme="dark"] a.catalog-entry-card:focus-visible {
+    box-shadow: 0 0 0 0.18rem
+        color-mix(in srgb, var(--plusauri-gold, #e0b94d) 55%, transparent);
+}
+
+.reference-entry-title,
+.catalog-entry-title {
+    display: block;
+    font-weight: 600;
+}
+
+.reference-entry-summary,
+.catalog-entry-summary {
+    display: block;
+    color: var(--pico-muted-color);
+    font-size: 0.92rem;
+    margin-top: 0.15rem;
+}
+
+.reference-entry-meta,
+.catalog-entry-meta {
+    display: block;
+    color: var(--pico-muted-color);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.reference-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.75rem 0;
+}
+
+.reference-badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    background: color-mix(in srgb, var(--plusauri-gold) 16%, var(--plusauri-paper));
+    font-size: 0.8rem;
+}
+
+.reference-honesty {
+    margin: 1rem 0;
+    padding: 0.75rem 0.9rem;
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--plusauri-ink) 5%, var(--plusauri-paper));
+}
+
+.reference-honesty h3 {
+    font-size: 0.95rem;
+    margin: 0 0 0.35rem;
+}
+
+.reference-honesty ul {
+    margin: 0;
+}
+
+.reference-variant-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.75rem;
+    align-items: center;
+    margin: 0.6rem 0;
+}
+
+.reference-variant-form label {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.reference-variant-form input,
+.reference-variant-form select {
+    margin: 0;
+    width: auto;
+    min-width: 0;
+}
+
+.reference-variant-form input[name="year"] {
+    width: 5.25rem;
+}
+
+.reference-variant-form select[name="status"] {
+    min-width: 14rem;
+}
+
+.reference-variant-form select[name="state"],
+.reference-variant-form select[name="fpl_region"] {
+    min-width: 11rem;
+}
+
+.reference-variant-form button {
+    margin: 0;
+    width: auto;
+    flex: 0 0 auto;
+}
+
+.reference-table-wrap {
+    overflow-x: auto;
+    margin: 1rem 0 1.5rem;
+}
+
+.reference-table-wrap table.content-table {
+    width: 100%;
+}
+
+/*
+ * Back-to-the-hub crumb on an entry page. `.reference-crumb` was a second class carrying this
+ * same rule; both hubs now render `catalog-crumb` through one helper.
+ *
+ * The arrow is `inline-block` on purpose: that is what stops the link underline from running
+ * under the glyph, since `text-decoration` propagates into inline descendants and cannot be
+ * switched off from the inside. It slides toward the destination on hover — the motion is the
+ * part that says *back* rather than *up a level*.
+ */
+.catalog-crumb {
+    font-size: 0.9rem;
+}
+
+.catalog-crumb-arrow {
+    display: inline-block;
+    margin-inline-end: 0.35rem;
+    text-decoration: none;
+    transition: transform 0.15s ease;
+}
+
+.catalog-crumb a:hover .catalog-crumb-arrow,
+.catalog-crumb a:focus-visible .catalog-crumb-arrow {
+    transform: translateX(-0.2rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .catalog-crumb-arrow {
+        transition: none;
+    }
+
+    .catalog-crumb a:hover .catalog-crumb-arrow,
+    .catalog-crumb a:focus-visible .catalog-crumb-arrow {
+        transform: none;
+    }
+}
+
+.reference-source,
+.reference-source-url {
+    font-size: 0.85rem;
+    color: var(--pico-muted-color);
+    margin: 0.15rem 0;
+}
+
+.reference-caveats {
+    font-size: 0.9rem;
+    color: var(--pico-muted-color);
+}
+
+@media (max-width: 900px) {
+    .lesson-split {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(8rem, 42%) 6px minmax(12rem, 1fr);
+        height: calc(100vh - 3.25rem);
+        min-height: 0;
+    }
+
+    .lesson-split-gutter {
+        cursor: row-resize;
+    }
+
+    body.lesson-split-dragging {
+        cursor: row-resize;
+    }
+
+    .lesson-pane {
+        max-height: none;
+    }
+
+    .app-pane {
+        min-height: 0;
+    }
+}
+
+/*
+ * Glossary entry page — the parts with no reference twin.
+ *
+ * Everything the two hubs share (cards, chips, search field, focus ring) is aliased onto the
+ * .catalog-* family above rather than duplicated here; only the definition body and its cross-link
+ * rows are genuinely new, because a reference entry renders a table where a glossary entry renders
+ * prose.
+ */
+.glossary-definition {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 40rem;
+}
+
+.glossary-division-badge {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    border: 1px solid var(--pico-muted-border-color, #ddd6cb);
+    color: var(--pico-muted-color);
+}
+
+.glossary-see-also {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: baseline;
+    margin: 1rem 0 0.4rem;
+}
+
+.glossary-see-also .glossary-see-also-label {
+    color: var(--pico-muted-color);
+    font-size: 0.85rem;
+}
+
+.glossary-shot {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.1rem 0 0.3rem;
+    border: 1px solid var(--pico-muted-border-color, #ddd6cb);
+    border-radius: 8px;
+}
+
+.glossary-shot-caption {
+    color: var(--pico-muted-color);
+    font-size: 0.85rem;
+    margin: 0 0 1rem;
+}
+
+/*
+ * Glossary cards clamp their definition; reference cards do not.
+ *
+ * A reference summary is one authored line, but a glossary card carries the whole hover-length
+ * definition — sixty-four of those unclamped is a wall to scroll rather than a list to scan. The
+ * full text is one click away, and clamping in CSS keeps it selectable and findable by the
+ * browser's own find-in-page.
+ */
+.glossary-results .catalog-entry-summary {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+ * Lesson sticky accordion (LessonOutline.kt)
+ *
+ * The section headings ARE the outline. One `##` section is open; the rest collapse to one-line
+ * rows that pin — earlier ones stacking at the top of the pane, later ones at the bottom — so the
+ * shape of the lesson is on screen no matter where you have scrolled to.
+ *
+ * Each heading carries its index `--i` inline; the container carries the row count `--n` and the
+ * open row's index `--open` (set by lesson-split.js). `top: (pileTop − open + i) × row` and
+ * `bottom: (pileBottom + open − i) × row`, each floored at the pile it belongs to, are the whole
+ * mechanism: no scroll handler decides which pile a row joins, the two offsets do, and a row lands
+ * in the correct *slot* of its pile because every row is exactly `--lesson-accordion-row` tall.
+ *
+ * Measuring from the open row rather than from the ends of the list is what keeps this usable on a
+ * long lesson: only `--lesson-accordion-pile` rows a side are on screen, and the rest get a
+ * negative offset that parks them just outside the pane, where the scroll container clips them.
+ * They are not gone — scroll toward one and it un-pins into view, which is the only reason a cap
+ * can be this cheap.
+ * ========================================================================== */
+
+.lesson-pane {
+    /*
+     * One row of the pinned stack. Every offset in here is a multiple of it, so the piles only stay
+     * aligned while all rows are exactly this tall — which is why the heading below is a fixed
+     * height with its text truncated rather than left to wrap.
+     */
+    --lesson-accordion-row: 1.7rem;
+    /*
+     * What the top pile has to clear. Zero normally; on a multi-plan lesson the plan switcher
+     * already owns `top: 0`, and lesson-split.js measures it into this so the rows stack *under* the
+     * chips and the two read as one frozen band — which is what the owner asked for rather than two
+     * bands fighting over the same resting place.
+     */
+    --lesson-accordion-top: 0px;
+    /*
+     * Rows pinned on each side of the open one — the outline's neighborhood, not the whole outline.
+     * Pinning all of them is fine at a dozen sections and eats the pane at forty; this holds the
+     * chrome to a constant (2 × pile + 1) rows however long the lesson is. Mirrors
+     * LessonOutline.PILE.
+     */
+    --lesson-accordion-pile: 2;
+    /*
+     * Row colorway — the app's collapsible-bar tokens, not a palette of the strip's own.
+     *
+     * The rows were a saturated `#4261F5` with the open one in `--plusauri-sky`. Reviewer feedback
+     * was that the blue is jarring beside the pane's cream, and pointed at the app's soft-sky
+     * section bars as the calmer thing to match. They are already in this file as
+     * `--plusauri-collapsible-bar*` (top of the sheet, "match Compose PlusauriCollapsibleBar"), so
+     * the strip references those rather than pasting hexes — one edit moves the app bars, the
+     * catalog surface chips and this strip together, and the tokens carry their own dark variants,
+     * so the strip now follows the theme like everything else on the page.
+     *
+     * **Which row is open** was carried by a polarity flip — white on saturated blue when shut,
+     * navy on light sky when open. Both fills are now light pastel, so that flip is gone and
+     * something has to replace it. Three cues do, and none of them is hue alone (the point of the
+     * flip was that it survived peripheral vision and color blindness):
+     *
+     *   1. the deeper `-active` fill on the open row, the same pairing `.learn-chip-surface` /
+     *      `.is-active` already uses for exactly this "same family, this one is current" job;
+     *   2. `font-weight: 600` on the open label, from that same chip convention;
+     *   3. the 3px ink `border-inline-start` the open row already had, which at 9:1 on the fill is
+     *      now the loudest of the three rather than a decoration on top of a louder flip.
+     *
+     * Not the app's *nest peach* (`nestedCollapsibleHeaderBarColor`), which was the other candidate:
+     * peach encodes **nesting depth** in the app, not open/closed state, and in dark mode its
+     * `#5C4030` sits at 1.04:1 against the soft-sky `#2A4568` — the two fills are the same
+     * lightness, so the open row would have been marked by hue alone on the theme half the readers
+     * use. Staying inside one hue family keeps the cue on the axis that always reads.
+     *
+     * One ink serves both fills now (8.99:1 closed, 7.39:1 open in light; 7.57:1 / 5.49:1 in dark),
+     * which is why there is a single `--lesson-row-fg` rather than one per state.
+     */
+    --lesson-row-closed-bg: var(--plusauri-collapsible-bar, #b4cae6);
+    /*
+     * A notch past the shared `-active` shade, mixed toward the strip's own ink rather than toward
+     * black or white: ink is the token that sits opposite the ground in *both* themes, so one
+     * formula deepens the open row on cream and lifts it on near-black, and the fill keeps moving
+     * away from the closed rows either way. 8% is where that stops being free — it buys 1.22:1 →
+     * 1.39:1 (light) and 1.38:1 → 1.63:1 (dark) against the closed fill while the label holds
+     * 6.5:1 / 4.7:1, and 10% would put the dark label under AA.
+     */
+    --lesson-row-open-bg: color-mix(
+        in srgb,
+        var(--plusauri-on-collapsible-bar, #0f2744) 65%,
+        var(--plusauri-collapsible-bar-active, #9bb8de)
+    );
+    --lesson-row-fg: var(--plusauri-on-collapsible-bar, #0f2744);
+    /*
+     * The open row's own ink — the thing that lifted the 8% ceiling.
+     *
+     * That cap was never about the fill; it was about **one ink serving both fills**. Keep the
+     * label navy and the open fill can only darken until the label drops under AA, which is 8%.
+     * Give the open row its own ink and the fill is free: at 65% the separation from the closed
+     * rows goes 1.38:1 -> 4.23:1 in light and 4.23:1 -> 4.60:1 in dark, with the label at 6.4:1 /
+     * 8.2:1 — every number better than before.
+     *
+     * It is the **pane's own ground**, which flips with the theme for free (cream on light,
+     * near-black on dark) and restores the light/dark polarity flip the strip lost when both fills
+     * went pastel. That flip is the cue that survives peripheral vision and color blindness, which
+     * is the property the colorway note above says to protect.
+     */
+    --lesson-row-open-fg: var(--plusauri-lesson-pane, #f7f3ec);
+}
+
+.lesson-accordion {
+    /*
+     * The containing block every row sticks inside. It has to be one tall box holding all the rows
+     * as siblings: a row nested in its own per-section wrapper could not travel past that wrapper,
+     * and a shut section's wrapper is exactly one row tall. See LessonOutline's KDoc.
+     */
+    position: relative;
+    margin-block-start: 1.25rem;
+    /*
+     * How many rows each pile actually holds: the cap, or all there is on that side when the open
+     * section is near an end of the lesson. Taking the smaller matters — a pile that reserves two
+     * slots and fills one pins its rows a row short of the pane edge and leaves a strip of prose
+     * scrolling past in the gap.
+     *
+     * Both are absent-`--open`-safe: with nothing open, 9999 drives every offset far enough
+     * negative that no row pins at all, which is exactly right — the pane is then the plain
+     * outline and there is nothing for a row to pin over.
+     */
+    --pile-top: min(var(--lesson-accordion-pile), var(--open, 9999));
+    --pile-bottom: min(var(--lesson-accordion-pile), var(--n, 0) - 1 - var(--open, 9999));
+}
+
+h2.lesson-section-head {
+    position: sticky;
+    /*
+     * Distance from the open row, floored at the pile that actually exists on that side. Above the
+     * open row the offset falls one row at a time to 0 and then goes negative — off the pane,
+     * clipped, and one scroll away from coming back. Rows on the far side of the open one all take
+     * the pile's own offset, which they only ever reach at the very end of the scroll.
+     */
+    top: calc(
+        var(--lesson-accordion-top, 0px) +
+        (
+            min(var(--pile-top), var(--pile-top) - var(--open, 9999) + var(--i)) +
+            /*
+             * Rows *below* the open one get pushed down by their distance from it, so their top
+             * offset can never resolve to the open row's own.
+             *
+             * Without this term the `min()` above clamps every later row to `--pile-top` — exactly
+             * where the open row sits — so on a short pane, where the top and bottom constraints
+             * conflict and `top` wins, the next section's row rode up and passed *under* the open
+             * one. The open row has `z-index: 3`, so it stayed on top and the effect was a label
+             * sliding into nothing.
+             *
+             * Zero for the open row and everything above it (`--open` defaults to 9999 when the
+             * accordion is fully shut, which makes the difference hugely negative and the max 0),
+             * so the top pile is untouched; the bottom pile still parks these rows at the pane's
+             * foot whenever there is room for it.
+             */
+            max(0, var(--i) - var(--open, 9999))
+        ) *
+        var(--lesson-accordion-row)
+    );
+    /*
+     * Sticky offsets are measured against the scroll container's *padding* box, so a plain
+     * `bottom: 0` comes to rest one `--lesson-pane-pad-b` short of the pane and leaves a strip of
+     * prose showing beneath the pile. Cancelling it puts the last row on the pane's edge.
+     */
+    bottom: calc(
+        min(var(--pile-bottom), var(--pile-bottom) + var(--open, 9999) - var(--i)) *
+        var(--lesson-accordion-row) - var(--lesson-pane-pad-b, 2rem)
+    );
+    z-index: 2;
+    /* A jump to this section has to clear the pile it will be stacked under. */
+    scroll-margin-top: calc(
+        var(--lesson-accordion-top, 0px) + var(--pile-top) * var(--lesson-accordion-row)
+    );
+    box-sizing: border-box;
+    height: var(--lesson-accordion-row);
+    /* Full-bleed to the pane's edges; the button pads the text back in. */
+    width: calc(100% + 2 * var(--lesson-pane-pad-x, 1.25rem));
+    margin: 0 calc(-1 * var(--lesson-pane-pad-x, 1.25rem));
+    padding: 0;
+    overflow: hidden;
+    /* Opaque, or the prose scrolls *through* the pinned row instead of under it. */
+    background: var(--lesson-row-closed-bg, #b4cae6);
+    /* Darker than the fill rather than lighter: a light hairline on a pastel fill disappears. */
+    border-block-end: 1px solid color-mix(in srgb, #000 22%, transparent);
+    /* Reserved on every row so the open row's ink edge does not shunt its label sideways. */
+    border-inline-start: 5px solid transparent;
+    /* Type is a control's, not a display heading's — 12 of these have to fit the strip. */
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1;
+    clear: both;
+}
+
+/*
+ * The open row is the one you are reading: the deeper fill of the same family, plus the edge the
+ * rest lack.
+ *
+ * That edge **was gold**, and gold measures 1.04:1 against soft sky — the "you are here" marker
+ * would have gone silently invisible the moment the rows turned blue. It is the strip's own ink
+ * instead (7.4:1 on the open fill), which also makes the open row read as one ink-on-sky object
+ * rather than a sky row wearing a stripe from another palette. With the light/dark polarity flip
+ * gone this edge is now load-bearing rather than decorative — see the colorway note above.
+ */
+h2.lesson-section-head:has(> .lesson-section-toggle[aria-expanded="true"]) {
+    border-inline-start: 5px solid var(--lesson-row-open-fg, #f7f3ec);
+    background: var(--lesson-row-open-bg, #405a7a);
+    color: var(--lesson-row-open-fg, #f7f3ec);
+    /*
+     * Depth, not more color. Within one hue family the fills can only separate so far before the
+     * label loses AA (see the colorway note), so the rest of "this is the row you are in" is
+     * carried by the row sitting *above* the plane the others share: a highlight along its top
+     * edge and a shadow under its bottom one. That reads at a glance and does not depend on hue,
+     * which is the property the old light/dark polarity flip had and a pastel pair does not.
+     */
+    box-shadow:
+        inset 0 1px 0 color-mix(in srgb, #fff 45%, transparent),
+        0 2px 5px -1px color-mix(in srgb, var(--lesson-row-fg, #0f2744) 45%, transparent);
+    /*
+     * Above its neighbors, not level with them. Every row is `z-index: 2` and they are siblings, so
+     * without this the row pinned directly below paints later and clips the shadow off — exactly
+     * when the pile is stacked and the cue is needed most.
+     */
+    z-index: 3;
+}
+
+button.lesson-section-toggle {
+    /* Explicit box — Pico's default button is a full-width block sized for a form. */
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 var(--lesson-pane-pad-x, 1.25rem);
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--lesson-row-fg, #0f2744);
+    font: inherit;
+    text-align: start;
+    cursor: pointer;
+}
+
+/*
+ * The third of the open row's three cues (fill, weight, edge). Lifted from
+ * `.learn-chip-surface.is-active`, which marks the current chip the same way — same family, deeper
+ * fill, heavier label — so the two surfaces say "this is the one you are in" in one voice.
+ */
+button.lesson-section-toggle[aria-expanded="true"] {
+    font-weight: 700;
+    /* The label flips with the fill — see --lesson-row-open-fg. */
+    color: var(--lesson-row-open-fg, #f7f3ec);
+}
+
+/*
+ * One wash for both states now that both fills are pastel. It was two — a white lift on the shut
+ * row, a darkening on the open one — because no single tint reads on a saturated fill and a light
+ * one at once; a white lift on soft sky is barely a change, so the darkening is the one that
+ * survives. In dark mode the tokens themselves invert to deep navy, where the same darkening still
+ * separates hover from rest.
+ */
+button.lesson-section-toggle:hover {
+    background: color-mix(in srgb, #000 10%, transparent);
+}
+
+button.lesson-section-toggle:focus-visible {
+    /*
+     * On the pastel fills the ring has to be the row's own foreground; gold sits too close to soft
+     * sky to read as a ring at all.
+     */
+    outline: 2px solid currentColor;
+    outline-offset: -3px;
+}
+
+button.lesson-section-toggle::before {
+    content: "▸";
+    flex-shrink: 0;
+    width: 0.85em;
+    font-size: 0.85em;
+    /* Inherits the row's foreground: gold was legible on cream and is not on either sky. */
+    color: color-mix(in srgb, currentColor 78%, transparent);
+    transition: transform 0.12s ease;
+}
+
+button.lesson-section-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+    color: currentColor;
+}
+
+.lesson-section-title {
+    /* One line, always: the stack's arithmetic assumes every row is the same height. */
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button.lesson-section-toggle::before {
+        transition: none;
+    }
+}
+
+/*
+ * The open section is the page you are reading; the rows around it are the map. Giving it its own
+ * ground says which is which. The two move away from the pane in opposite directions — the rows
+ * toward the ink, this toward the paper — so the relationship holds in both themes even though the
+ * absolute lightness swaps, and it is carried by lightness rather than hue so it still reads to
+ * someone who does not see the hue.
+ */
+.lesson-section-body {
+    background: var(--plusauri-paper, #fcfbfa);
+    /* Full-bleed to the pane's edges like the rows, then pad the prose back in. */
+    box-sizing: border-box;
+    width: calc(100% + 2 * var(--lesson-pane-pad-x, 1.25rem));
+    margin-inline: calc(-1 * var(--lesson-pane-pad-x, 1.25rem));
+    padding-inline: var(--lesson-pane-pad-x, 1.25rem);
+    /*
+     * Continues the open row's edge down the length of what it opened, in the strip's ink. It was
+     * the closed-row fill, which worked while that fill was a saturated primary (4.8:1 on light
+     * paper); soft sky is 1.5:1 there, a rule you cannot see on the theme most people read in. The
+     * ink token is the one color in the strip that carries on both grounds, and it makes the edge
+     * one continuous line from the open row down the section rather than two shades of it.
+     */
+    border-inline-start: 5px solid var(--lesson-row-fg, #0f2744);
+    /*
+     * No reservation for the pile below it, though it looks like it needs one. The pile is pinned
+     * to the *viewport*, and it can only stay there while the accordion still extends past the
+     * bottom of the screen; at the end of the scroll it unpins and rides up with the document, and
+     * the section's last line comes out from under it on its own. Reserving the space instead just
+     * opened a screen-tall hole above the pile at the foot of a short section.
+     */
+    padding-block: 0.9rem 1.4rem;
+}
+
+.lesson-section-body[hidden] {
+    display: none;
+}
+
+/* --- `###` subsections: ordinary folds inside the open section, never pinned --------------- */
+
+details.lesson-section {
+    margin: 0;
+    /* Glossary term tips inside a heading must not be clipped. */
+    overflow: visible;
+    /* Clears the pile plus its own section's row, which sits at the foot of that pile. */
+    scroll-margin-top: calc(
+        var(--lesson-accordion-top, 0px) + (var(--pile-top) + 1) * var(--lesson-accordion-row)
+    );
+}
+
+details.lesson-section > summary {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin-top: 1.1rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+details.lesson-section > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Same unasked-for Pico chevron the intro chrome suppresses, same reason: we draw ::before. */
+details.lesson-section > summary::after {
+    display: none;
+}
+
+details.lesson-section > summary::before {
+    content: "▸";
+    display: inline-block;
+    width: 0.85em;
+    flex-shrink: 0;
+    /* Sits on the *first* line — a two-line heading would otherwise park the caret in the gap. */
+    align-self: baseline;
+    /* Sized against the h3, not relative to it — at 0.75em it read as a stray bullet. */
+    font-size: 1rem;
+    color: var(--plusauri-gold, #c9a227);
+    transition: transform 0.12s ease;
+}
+
+details.lesson-section[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+details.lesson-section > summary:hover::before {
+    color: var(--plusauri-gold, #c89b2c);
+}
+
+/* A shut subsection says so — otherwise the next heading reads as the one that follows in the text. */
+details.lesson-section:not([open]) > summary::after {
+    display: inline;
+    width: auto;
+    height: auto;
+    background: none;
+    transform: none;
+    align-self: baseline;
+    content: "…";
+    color: var(--pico-muted-color, #6b6259);
+}
+
+/*
+ * The heading keeps its own type and spacing inside the summary — folding must not move the page.
+ * `display: block` on the flex child stops the heading collapsing to its shrink-to-fit width.
+ */
+details.lesson-section > summary > h3 {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-block: 0;
+}
+
+.lesson-subsection-body {
+    /* No indent: the strip has no width to give away, and the caret already marks the level. */
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+ * Entry-speed intro clip — Start-here card + dialog player (IntroVideoPoster.kt).
+ *
+ * The card reuses a.learn-card (it is an anchor) and needs nothing extra beyond
+ * the play-glyph tint. The dialog is native <dialog>; nothing here loads a
+ * video — intro-video.js builds the <video> on first open.
+ * ------------------------------------------------------------------------- */
+
+/*
+ * The clip card borrows the lesson pages' "Desktop app only" callout (.lesson-desktop-only):
+ * lavender accent, solid uppercase label bar. Same meaning in both places — "this is about the
+ * other surface" — so the pairing is learned once. Overrides the start-here gold edge on purpose.
+ */
+a.learn-card.learn-card-start-here.intro-video-card {
+    --lesson-callout-accent: #7c4dff;
+    --lesson-callout-on-accent: #fff;
+    border-color: var(--lesson-callout-accent);
+    border-width: 2px;
+    box-shadow: 0 1px 3px color-mix(in srgb, var(--lesson-callout-accent) 22%, transparent);
+    background-color: color-mix(in srgb, var(--lesson-callout-accent) 6%, #fff);
+}
+
+a.learn-card.learn-card-start-here.intro-video-card:hover,
+a.learn-card.learn-card-start-here.intro-video-card:focus-visible {
+    border-color: var(--lesson-callout-accent);
+    box-shadow: 0 0 0 0.18rem color-mix(in srgb, var(--lesson-callout-accent) 35%, transparent);
+}
+
+.intro-video-card-bar {
+    display: block;
+    /* Edge to edge inside the card's padding, like the callout's summary bar. */
+    margin: -0.9rem -1rem 0.45rem;
+    padding: 0.35rem 0.9rem;
+    background: var(--lesson-callout-accent);
+    color: var(--lesson-callout-on-accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.intro-video-card .learn-card-media {
+    color: var(--lesson-callout-accent);
+}
+
+/* Pico draws the overlay, backdrop and the <article> panel; we only widen the panel so the 16:9
+   frame gets room, and tint it to match the card row it came from. */
+dialog.intro-video > article.intro-video-panel {
+    width: min(48rem, calc(100vw - 2rem));
+    max-width: none;
+    border: 1px solid color-mix(in srgb, var(--plusauri-sky, #78A5EB) 45%, transparent);
+    background: var(--plusauri-sky-soft, #eef4fd);
+    color: var(--plusauri-ink, #1a1a1a);
+}
+
+dialog.intro-video > article.intro-video-panel > header {
+    background: transparent;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.intro-video-heading {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.3;
+}
+
+.intro-video-blurb {
+    margin: 0 0 0.85rem;
+}
+
+.intro-video-frame {
+    /* aspect-ratio comes inline from IntroVideoPoster.ASPECT_RATIO (the clip's own shape). The
+       height cap keeps a tall clip inside a laptop viewport; width then follows the ratio. */
+    position: relative;
+    width: auto;
+    max-width: 100%;
+    max-height: 62vh;
+    margin-inline: auto;
+    overflow: hidden;
+    border: 1px solid var(--plusauri-shot-border, rgba(52, 39, 30, 0.18));
+    border-radius: var(--plusauri-shot-radius, 0.4rem);
+    box-shadow: var(--plusauri-shot-shadow, 0 1px 4px rgba(0, 0, 0, 0.08));
+    background: #111;
+}
+
+.intro-video-player {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #111;
+}
+
+.intro-video-caption {
+    margin: 0.65rem 0 0;
+    font-size: 0.88rem;
+}
+
+/* Introductory (and later) survey form. Unlisted; not in nav. */
+.survey-page {
+    max-width: 46rem;
+}
+.survey-promise {
+    font-weight: 600;
+}
+.survey-page .survey-item,
+.survey-page .survey-item[role="group"] {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 1px solid color-mix(in srgb, var(--plusauri-graphite) 16%, transparent);
+    border-radius: 0.55rem;
+    background: var(--plusauri-lesson-pane);
+    padding: 1rem 1.15rem 1.1rem;
+    margin: 1.15rem 0 0;
+}
+.survey-page .survey-item-title {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0 0 0.7rem;
+    padding: 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    line-height: 1.35;
+    grid-column: 1 / -1;
+}
+.survey-cue {
+    color: var(--pico-muted-color, #5c5854);
+    font-size: 0.92rem;
+    margin: 0.15rem 0 0.65rem;
+}
+.survey-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    margin: 0.15rem 0 0.85rem;
+}
+.survey-figure img {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+.survey-figure figcaption {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+}
+.survey-required {
+    font-weight: 400;
+    color: var(--pico-muted-color, #5c5854);
+}
+.survey-banner {
+    padding: 0.75rem 1rem;
+    border-radius: 0.4rem;
+    margin: 1rem 0;
+}
+.survey-banner-error {
+    border: 1px solid #b42318;
+    background: rgba(180, 35, 24, 0.08);
+}
+.survey-field-error {
+    color: #b42318;
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0.5rem;
+}
+.survey-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 0.35rem 0 0;
+    width: 100%;
+}
+.survey-choice {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0.45rem 0.6rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    background: var(--plusauri-paper);
+    cursor: pointer;
+}
+.survey-choice > span {
+    flex: 1 1 auto;
+    line-height: 1.4;
+    padding-top: 0.12rem;
+}
+.survey-choice input[type="radio"],
+.survey-choice input[type="checkbox"],
+.survey-choice input[type="number"] {
+    width: auto;
+    min-width: 1.1rem;
+    margin: 0.2rem 0 0;
+    flex: 0 0 auto;
+    align-self: flex-start;
+}
+.survey-rank-row input[type="number"] {
+    width: 4.2rem;
+    margin-top: 0;
+}
+.survey-choice-other {
+    flex-wrap: wrap;
+    align-items: center;
+}
+.survey-choice-other > span {
+    flex: 0 0 auto;
+    padding-top: 0;
+}
+.survey-choice-other input[type="text"] {
+    flex: 1 1 12rem;
+    min-width: 10rem;
+    margin: 0;
+    width: auto;
+}
+.survey-priority-prompt {
+    margin: 0.9rem 0 0.35rem;
+}
+.survey-claims {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-top: 0.35rem;
+}
+.survey-claim {
+    background: var(--plusauri-paper);
+    border-radius: 0.4rem;
+    padding: 0.75rem 0.85rem 0.85rem;
+}
+.survey-claim-prompt {
+    margin: 0 0 0.65rem;
+    line-height: 1.4;
+}
+.survey-scale,
+.survey-scale[role="radiogroup"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+.survey-scale-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    margin: 0;
+    padding: 0.45rem 0.65rem 0.4rem;
+    min-width: 3.1rem;
+    border-radius: 0.35rem;
+    border: 1px solid color-mix(in srgb, var(--plusauri-graphite) 14%, transparent);
+    cursor: pointer;
+}
+.survey-scale-point span {
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1;
+}
+.survey-scale-point input[type="radio"] {
+    width: auto;
+    min-width: 1.1rem;
+    margin: 0;
+    accent-color: var(--plusauri-gold);
+}
+.survey-open {
+    width: 100%;
+}
+/* A dollar amount: the symbol sits outside the box so the respondent types only the number. */
+.survey-money {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.survey-money-input {
+    width: 9rem;
+    font-variant-numeric: tabular-nums;
+}
+
+/* An illustrated intro card under the situation (LessonIntroCard, a trial). Open and first, so it
+ * gets a little air before the closed "How to use…" chrome below it. */
+.lesson-pane .lesson-intro-card {
+    margin: 0.5rem 0 1rem;
+}
+/* Drawn smaller than the 560px file and centered, so the lesson's outline shows on the first
+ * screen: 72% of the pane, at most 403px (2026-09-29: 40% under the file, then +20%). The fine
+ * lettering is lost at this size; a click enlarges the card (wireIntroCardZoom in
+ * lesson-split.js). The :not() chain matches `.lesson-pane img:not(.nav-icon):not(.lesson-nav-ref-img)`
+ * so these rules win. Without the script the bare img carries the size; with it, the frame does. */
+.lesson-pane .lesson-intro-card img:not(.nav-icon):not(.lesson-nav-ref-img),
+.lesson-pane .lesson-intro-card .lesson-card-zoom-frame {
+    width: min(72%, 403px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.lesson-pane .lesson-intro-card .lesson-card-zoom-frame {
+    display: block;
+    position: relative;
+}
+.lesson-pane .lesson-intro-card .lesson-card-zoom-frame img:not(.nav-icon):not(.lesson-nav-ref-img) {
+    width: 100%;
+    margin: 0;
+    /* Lesson images are `pointer-events: none`; the zoomable card has to take its own click. */
+    pointer-events: auto;
+    cursor: zoom-in;
+}
+/* The hint that the card enlarges: a magnifier-plus in the lower-right corner. It ignores the
+ * pointer, so a click on it is a click on the card; it firms up while the card is hovered. */
+.lesson-card-zoom-badge {
+    position: absolute;
+    right: 0.6rem;
+    bottom: 0.6rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.88);
+    color: #1f2937;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+    opacity: 0.85;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.lesson-card-zoom-badge svg {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.lesson-card-zoom-frame:hover .lesson-card-zoom-badge,
+.lesson-card-zoom-frame:focus-within .lesson-card-zoom-badge {
+    opacity: 1;
+    transform: scale(1.08);
+}
+/* The enlarged card: the file's own size, capped to the viewport. Any click closes it. */
+dialog.lesson-card-zoom {
+    padding: 0;
+    border: none;
+    background: transparent;
+    max-width: 96vw;
+    max-height: 96vh;
+    overflow: hidden;
+    cursor: zoom-out;
+}
+dialog.lesson-card-zoom::backdrop {
+    background: rgba(0, 0, 0, 0.72);
+}
+dialog.lesson-card-zoom img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 94vw;
+    max-height: 94vh;
+    border-radius: var(--plusauri-shot-radius);
+}
