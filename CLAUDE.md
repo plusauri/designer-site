@@ -4,9 +4,11 @@ This folder is a snapshot of the public Plusauri pages for visual work. The inte
 
 ## Your job
 
-Change the look by editing `static/site.css` only. That is the file the browser loads.
+The person pasted a prompt so she would not type git commands. You run them. Clone this repository if the folder is not already a checkout, check out the branch `design`, and start `python3 preview.py`. Tell her the address it prints. On this copy that address is http://127.0.0.1:4173/designer-site/.
 
-The person previews with `python3 preview.py` and opens the address it prints. On this copy that address is http://127.0.0.1:4173/designer-site/. After you edit the stylesheet, ask them to refresh.
+Change the look by editing `static/site.css` only. That is the file the browser loads. After you edit the stylesheet, ask her to refresh.
+
+Do not hand her git commands to type. When she says save, commit only `static/site.css` on `design` and push that branch. If git or `python3` is missing, start the install and tell her the one prompt she has to click. Then continue.
 
 ## Leave these alone
 
