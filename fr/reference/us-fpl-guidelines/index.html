@@ -7,14 +7,14 @@
     <meta name="description" content="HHS annual guideline ladders for the 48 contiguous states, Alaska, and Hawaii — the denominator behind %FPL.">
     <meta name="robots" content="noindex, nofollow">
     <link href="https://www.plusauri.com/reference/us-fpl-guidelines" rel="canonical">
-    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
     <meta content="website" property="og:type">
     <meta content="Plusauri" property="og:site_name">
     <meta content="Federal poverty guidelines (%FPL) — Reference — Tutilis" property="og:title">
     <meta content="HHS annual guideline ladders for the 48 contiguous states, Alaska, and Hawaii — the denominator behind %FPL." property="og:description">
     <meta content="https://www.plusauri.com/reference/us-fpl-guidelines" property="og:url">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
 <script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
     <script src="/designer-site/static/lang.js" defer="defer"></script>
     <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
@@ -50,12 +50,12 @@
     <h3>Where we use this · Shown, not applied</h3>
     <ul>
       <li>A %FPL ratio is computed for each forecast year from the plan's own household size and shown beside MAGI on the Cliff radar.</li>
-      <li>No subsidy, benefit, or eligibility amount is derived from it. The ratio is displayed and enters no forecast math.</li>
+      <li>The ACA premium tax credit reads the same ladder, against the prior year's guidelines, for a healthcare phase marked as a marketplace plan. No other benefit or eligibility amount is derived from it.</li>
     </ul>
   </div>
   <div class="reference-honesty">
     <h3>Not modeled</h3>
-    <p>The cash response. There is no applicable-percentage table, no benchmark plan premium, and no subsidy or Medicaid dollar amount anywhere in this engine — %FPL is a displayed ratio and enters no forecast math.</p>
+    <p>The cash response for most programs. There is no Medicaid, CHIP or Extra Help dollar amount in this engine. The one exception is the ACA premium tax credit, computed for a healthcare phase marked as a marketplace plan (see ACA marketplace interaction).</p>
   </div>
   <form action="/designer-site/reference/us-fpl-guidelines" method="get" class="reference-variant-form"><label>Year<input type="number" name="year" value="2026" min="1990" max="2100"></label><label>HHS region<select name="fpl_region" aria-label="HHS region"><option value="contiguous" selected="selected">Contiguous 48 + DC</option><option value="ak">Alaska</option><option value="hi">Hawaii</option></select></label><button type="submit">Show</button></form>
   <p class="muted">HHS guideline year 2026 · Contiguous 48 + DC</p>

@@ -756,7 +756,8 @@ html[data-theme="dark"] .lesson-advanced {
     grid-area: sage;
     align-self: center;
     aspect-ratio: 400 / 304;
-    background: url("/designer-site/static/images/learn/teacher-student-futuristic.webp") center / contain no-repeat;
+    /* The lesson's cast, set on the aside by LessonSayingRefs; the futuristic pair if unset. */
+    background: var(--cast-art, url("/designer-site/static/images/learn/cast/futuristic/did-you-know.webp")) center / contain no-repeat;
 }
 
 /* The scroll: a rolled edge top and bottom, and paper that darkens toward its edges. */
@@ -821,6 +822,111 @@ html[data-theme="dark"] .lesson-advanced {
 html[data-theme="dark"] .lesson-did-you-know {
     --dyk-paper-center: #e9d9b2;
     --dyk-paper-edge: #c7a86d;
+}
+
+/* ── Saying ────────────────────────────────────────────────────────────────────────────────────
+ *
+ * A comic panel: ink border and a hard offset shadow, stacked as a strip reads: the saying set in
+ * type with its handle on a mustard tag, then the cast's scene at full width, then the tie-in. The picture carries no words, so the saying
+ * is translated text and one picture serves every locale. Markup is written by LessonSayingRefs.
+ */
+.lesson-saying {
+    --saying-ink: #1d232b;
+    --saying-panel: #fffdf5;
+    --saying-accent: #e8b723;
+    --saying-shadow: var(--saying-ink);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "label"
+        "art"
+        "body";
+    margin: 1.75rem 0;
+    padding: 0.9rem 1.1rem;
+    border: 3px solid var(--saying-ink);
+    border-radius: 4px;
+    background: var(--saying-panel);
+    box-shadow: 5px 5px 0 var(--saying-shadow);
+    color: var(--saying-ink);
+}
+
+.lesson-saying > .lesson-saying-art {
+    grid-area: art;
+    justify-self: center;
+    width: 100%;
+    max-width: 34rem;
+    height: auto;
+    margin: 0 0 0.6rem;
+    border: 2px solid var(--saying-ink);
+    border-radius: 3px;
+}
+
+.lesson-saying > .lesson-saying-label {
+    grid-area: label;
+    margin: 0 0 0.6rem;
+    font-weight: 800;
+    font-size: 1.15rem;
+    line-height: 1.25;
+    color: var(--saying-ink);
+}
+
+.lesson-saying-handle {
+    display: inline-block;
+    margin-left: 0.3rem;
+    padding: 0.05em 0.55em;
+    border: 2px solid var(--saying-ink);
+    border-radius: 999px;
+    background: var(--saying-accent);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    vertical-align: 0.15em;
+    white-space: nowrap;
+}
+
+.lesson-saying > .lesson-saying-body {
+    grid-area: body;
+    color: var(--saying-ink);
+    --pico-color: var(--saying-ink);
+}
+
+.lesson-saying > .lesson-saying-body > :first-child {
+    margin-top: 0;
+}
+
+.lesson-saying > .lesson-saying-body > :last-child {
+    margin-bottom: 0;
+}
+
+.lesson-saying-exception {
+    font-style: italic;
+}
+
+/* On a dark page the ink shadow would vanish; the accent keeps the panel's edge. */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .lesson-saying {
+        --saying-panel: #f3efe2;
+        --saying-shadow: var(--saying-accent);
+    }
+}
+
+html[data-theme="dark"] .lesson-saying {
+    --saying-panel: #f3efe2;
+    --saying-shadow: var(--saying-accent);
+}
+
+/* The chip: a glossary pill (same hover card, wired by lesson-split.js) in the saying's mustard. */
+.lesson-saying-chip > .lesson-term-pill {
+    border-color: color-mix(in srgb, #e8b723 70%, transparent);
+    background: color-mix(in srgb, #e8b723 22%, var(--plusauri-paper, #fcfbfa));
+    color: #1d232b;
+    letter-spacing: 0.04em;
+}
+
+.lesson-saying-chip-icon {
+    height: 1.15em;
+    width: auto;
+    margin-right: 0.25em;
+    vertical-align: -0.22em;
 }
 
 /* ── Reference ─────────────────────────────────────────────────────────────────────────────────
@@ -5732,4 +5838,91 @@ dialog.lesson-card-zoom img {
     max-width: 94vw;
     max-height: 94vh;
     border-radius: var(--plusauri-shot-radius);
+}
+
+/*
+ * Free-trial banner (TrialCallout.kt): artwork, not type, so the CSS only sizes it, lets it pop in
+ * once per visit (trial-callout.js adds .is-settled on later pages) and lifts it on hover. On a
+ * lesson it floats at the top right of the prose pane beside the title and scrolls away with the
+ * text; on /learn it ends the title row.
+ */
+a.trial-callout {
+    display: block;
+    line-height: 0;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: scale 0.15s ease, rotate 0.15s ease, filter 0.15s ease;
+    animation: trial-callout-pop 0.5s cubic-bezier(0.2, 1.6, 0.4, 1) 0.6s backwards;
+}
+
+a.trial-callout img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+a.trial-callout.is-settled {
+    animation: none;
+}
+
+a.trial-callout:hover,
+a.trial-callout:focus-visible {
+    scale: 1.04;
+    rotate: -1deg;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+@keyframes trial-callout-pop {
+    0% {
+        scale: 0.3;
+        rotate: -6deg;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+        rotate: 0deg;
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a.trial-callout {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* Lesson: beside the title at the top of the prose pane. */
+.lesson-pane > a.trial-callout {
+    float: right;
+    width: min(15rem, 42%);
+    margin: 0.35rem 0 0.75rem 1rem;
+}
+
+/* Learning Center index: ends the title row, a little larger. */
+.learn-index-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+}
+
+.learn-index-head h1 {
+    margin-bottom: 0;
+}
+
+.learn-index-head > a.trial-callout {
+    width: min(18rem, 100%);
+}
+
+.learn-index-head + .learn-index-lede {
+    margin-top: var(--pico-typography-spacing-vertical, 1rem);
+}
+
+/* "Join us" line (CommunityInvite.kt): quiet, at the foot of lessons and the catalog. */
+p.community-invite {
+    margin-block: 1.25rem 0.5rem;
+    color: var(--pico-muted-color, #6b6259);
 }

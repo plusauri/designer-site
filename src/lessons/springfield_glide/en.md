@@ -121,7 +121,7 @@ Until you switch, the plan's issue list carries a warning that the glide path is
 1. Confirm that **Ballast Bond** is much larger than **Growth Equity** at the start, in [[nav:birds-eye]] or [[nav:bs-table]].
 2. Note that the strategy is **Pro-rata**, and note the plan's net worth in its last year on the GMF path.
 3. Open [[nav:assumptions]] and read the **Glide path target** grid under the **Money movement strategy**. Then switch the strategy to **Glide rebalance** and **Re-simulate**.
-4. Scrub [[nav:bs-chart]] or [[nav:bs-table]] through the years. Under pro-rata, stocks stay around a fifth of the portfolio for the whole plan. Under glide rebalance, each year's leftover cash and each year's shortfall are steered toward the target, so the stock share climbs to about a third by 2035 and close to half by 2040. It meets the target in the mid-2040s and then follows it down toward 50/50.
+4. Scrub [[nav:bs-chart]] or [[nav:bs-table]] through the years. Under pro-rata, stocks stay around a fifth of the portfolio for the whole plan. Under glide rebalance, each year's leftover cash and each year's shortfall are steered toward the target, so the stock share climbs to more than a quarter by 2035 and about two fifths by 2040. It meets the target in the late 2040s and then follows it down toward 50/50.
 5. Compare the endings. The plan stays [[term:solvent]] to the end under both strategies, and under glide rebalance it ends with about a third more net worth, because more of the money spent those years growing at stock returns.
 6. Edit the target and re-simulate. Try a later second column, or a 60/40 end point, and watch how much the ending moves. The point of the grid is that you can say what mix you want without touching a single fund.
 

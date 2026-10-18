@@ -217,6 +217,12 @@ planning lever, not a full crisis engine. It does not auto-spike in a panic, so 
 looks tight with today's ρ is tighter than it reads in one. That is an honesty limit of the current
 model, stated rather than hidden.
 
+<aside class="lesson-saying" data-saying="free-lunch">
+
+Diversification is the closest thing to a free lunch, and it shrinks when it is wanted most. In a crash correlations rise toward 1, and the risk the blend was saving comes back.
+
+</aside>
+
 ---
 
 ## Where to look

@@ -296,7 +296,7 @@ if needed) on a conversion year and on a later Medicare-age year:
 |---------------------|-----------------------------|
 | Note that **Roth conversion** is active in a conversion year (MAGI moves **now**) | An invented IRMAA **surcharge** when cash flow has none |
 | On later years with an IRMAA radar row whose lookback year was a conversion year: a **lookback conversion** note (*t* → *t*+2) | Optimum conversion markers or cliff “scores” |
-| **Not modeled · ACA subsidy** honesty row on US plans | Silent omission of known gaps |
+| **Not modeled · ACA subsidy** honesty row, because this plan's marketplace phase is not marked as a marketplace plan | Silent omission of known gaps |
 
 Full strip vocabulary (in play / nearby / honest empty):
 **[Cliff radar in the Forecaster](/learn/cliff_radar_forecaster)**.
@@ -309,6 +309,12 @@ Taxes — and the same year’s cliff radar should agree when surcharge > 0.
 Conversion is not free tax arbitrage, because MAGI cliffs can bite in the conversion years. This
 sample teaches the **cause chain** (conversion → ordinary income → MAGI) and the trade it creates.
 Cliff radar keeps the **scan** on your path; MAGI cliffs teaches the **cash line** and statement audit.
+
+<aside class="lesson-saying" data-saying="free-lunch">
+
+A conversion moves tax into years you choose, but the converted dollars are income in those years. They raise MAGI, and a cliff the plan crosses can charge more than the tax the conversion was meant to save.
+
+</aside>
 
 ---
 
@@ -350,7 +356,7 @@ sale as “living expenses” or “the residual strategy alone.”
 - Full **Roth 5-year** seasoning / ordering rules for every distribution type
 - Paying conversion tax **from** the converted dollars vs from taxable cash as separate strategies
   (tax still lands on the ordinary bill; funding is via the usual tax/cash path)
-- Full **[[term:aca]]** subsidy response when MAGI moves in a marketplace year (warning only today)
+- The **[[term:aca]]** subsidy response when MAGI moves in a marketplace year. Tutilis prices the [[term:premium-tax-credit]] for a phase marked as a marketplace plan, but this plan's phase is deliberately left unmarked, so its conversion years show the warning only.
 - That fill-to-bracket is a closed-form fixed point with every cliff re-solved
 
 Those are honesty boundaries, not missing polish for this lesson.

@@ -172,7 +172,7 @@ Leaving work early changes the order of the milestones. In the On schedule plan,
 - **The 401(k)** is locked behind the 10% penalty until Homer turns 59 in 2035.
 - **Social Security** cannot start before 62, and the plan keeps the same claim ages, so no benefit arrives until 2045.
 
-With no paychecks, the forecast pays for everything from savings, starting with the brokerage account. That account is the bridge to 59½, and it is not long enough. It lasts four years and is empty in 2034, so the forecast turns to the 401(k) a year before Homer turns 59:
+With no paychecks, the forecast pays for everything from savings, starting with the brokerage account. That account is the bridge to 59½, and it is not long enough. It lasts five years and runs out in 2035, the year Homer turns 59, so the forecast turns to the 401(k) before he can draw on it without the penalty:
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">
@@ -187,13 +187,15 @@ With no paychecks, the forecast pays for everything from savings, starting with 
 </div>
 </div>
 
-The first 401(k) withdrawal in 2034 is small. In 2035 nearly all of the year's spending comes out of the 401(k), and the tax statement carries the penalty line:
+In 2035 the last of the brokerage account is spent and nearly all of the rest of the year's spending comes out of the 401(k), and the tax statement carries the penalty line:
 
 [[img:milestone-years-tax-2035-early-exit]]
 
-The penalty that year is about $24,000. This is also where the birth month matters. Homer turns 59 in 2035, and the Year events card says penalty-free withdrawals begin mid-year. The plan does not know his birth month, so it charges the penalty on all of 2035. If Homer was born in the first half of the year, entering his birth month removes the 2035 penalty entirely. The plan cannot know that unless you tell it.
+The penalty that year is about $4,500. This is also where the birth month matters. Homer turns 59 in 2035, and the Year events card says penalty-free withdrawals begin mid-year. The plan does not know his birth month, so it charges the penalty on all of 2035. If Homer was born in the first half of the year, entering his birth month removes the 2035 penalty entirely. The plan cannot know that unless you tell it.
 
-The penalty is not the main problem, though. The larger costs are thirteen years of private insurance and fifteen years with no income except what the portfolio provides, and in this plan the family's savings run out in the early 2050s. The same plan also keeps both Social Security amounts as stated, even though twelve fewer working years would lower them in real life. The timing lesson is still clear: retiring early means building a bridge to each milestone, and each piece has to be sized and funded before the paycheck stops. That work starts five to ten years ahead.
+Health insurance follows the same turn. While the brokerage account pays the bills, the family shows little income, about 180% to 250% of the poverty line, and the marketplace premium credit pays most of the premium, about $21,000 to $27,000 a year from 2030 to 2034. In 2035 the 401(k) withdrawals push their income to about 4.6 times the poverty line. Above 400% there is no credit at all, so the family repays the whole of 2035's advance credit, about $28,000, with the next year's tax, and pays the full premium every year after that until Medicare. The bridge account was doing two jobs: paying the bills, and keeping income low enough to earn the credit.
+
+The penalty is not the main problem, though. The larger costs are thirteen years of private insurance, eight of them at the full premium, and fifteen years with no income except what the portfolio provides, and in this plan the family's savings run out in the mid-2050s. The same plan also keeps both Social Security amounts as stated, even though twelve fewer working years would lower them in real life. The timing lesson is still clear: retiring early means building a bridge to each milestone, and each piece has to be sized and funded before the paycheck stops. That work starts five to ten years ahead.
 
 ## How long to plan for
 

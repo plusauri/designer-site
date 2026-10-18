@@ -151,7 +151,7 @@ In 2041 Homer retires at 65 and starts Medicare, the retirement living costs rep
 
 ## The tax cards
 
-The [[nav:taxes]] card shows how each of the year's taxes was worked out. In the app its title reads like **Taxes — 2030 (Paid 2031)**, because a year's income tax is settled the following year. That is why the card's total does not match the Taxes line on the same year's cash flow, which shows what was actually paid in that year.
+The [[nav:taxes]] card shows how each of the year's taxes was worked out. In the app its title reads like **Taxes — 2030 (balance paid 2031)**. The tax on a year's wages is withheld during that year, and the rest of the year's tax, such as the tax on gains and withdrawals, is settled the following year. That is why the card's total does not match the Taxes line on the same year's cash flow, which shows what was actually paid in that year: its own withholding plus the previous year's balance.
 
 [[img:charts-tables-tax-statements-2030]]
 

@@ -222,6 +222,12 @@ mechanical content of [[term:diversification]], and you can watch it on the char
 it sits. Set every ρ to 1 and the gap closes — the ★ lands on the weighted average and the free
 lunch is gone.
 
+<aside class="lesson-saying" data-saying="free-lunch" data-saying-exception>
+
+The ★ sits left of its ingredients because return adds and risk does not. The blend keeps the average return and pays less than the average risk for it.
+
+</aside>
+
 This is variance arithmetic, not counsel: it says what the blend **does**, and says nothing about
 which holdings anyone should own.
 

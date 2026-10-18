@@ -22,7 +22,7 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 [[term:magi]] cliffs are easy to **understand in principle** and easy to **lose on a busy year**: [[term:irmaa]] lives
 on cash flow as a healthcare [[term:surcharge]], [[term:niit]] and Additional Medicare sit on the federal tax
-statement, [[term:aca]] subsidy response is only a warning, and a [[term:roth-conversion]] can move MAGI **now** while
+statement, the [[term:aca]] subsidy is priced only for a plan marked as bought on the marketplace, and a [[term:roth-conversion]] can move MAGI **now** while
 IRMAA may bite **two years later**.
 
 The **[[term:cliff]] radar** is the Forecaster strip that keeps those facts **scannable for the year you
@@ -34,7 +34,8 @@ selected** — without a scavenger hunt through Taxes, cash-flow segments, and M
 | **Cliff radar** | Year-reactive list of cliffs **in play**, **nearby**, or **not modeled** | Card under the FID / Year controls |
 | **In play** | This year already crossed the line (tax or surcharge applies) | Row status on the card |
 | **Nearby** | Still under the next line, within a fixed **$25,000** band | Row status — not a score |
-| **Not modeled** | We name the cliff but do not price the response | Always includes **ACA subsidy** |
+| **Not modeled** | We name the cliff but do not price the response | Includes **ACA subsidy** unless a healthcare phase is a marked marketplace plan |
+| **Below** | A priced cliff the household is comfortably under | The ACA row of a plan whose marketplace credit is modeled |
 | **Lookback MAGI** | IRMAA uses MAGI from **two years earlier** | IRMAA row detail |
 | **Conversion note** | Policy/trades this year (or in the lookback year) move MAGI | Card footer / IRMAA detail |
 
@@ -63,8 +64,8 @@ section that answers it.
    [The three statuses](#the-three-statuses).
 3. **Which year's MAGI sets the IRMAA surcharge, and where does the radar show it?** See
    [IRMAA on this sample](#irmaa-on-this-sample).
-4. **Which other cliffs can the radar show, and why is the ACA subsidy always listed as not
-   modeled?** See [Siblings on the strip](#siblings-on-the-strip).
+4. **Which other cliffs can the radar show, and when is the ACA subsidy priced rather than
+   listed as not modeled?** See [Siblings on the strip](#siblings-on-the-strip).
 5. **What does the radar say when no cliff is in play or nearby?** See
    [Honest empty](#honest-empty).
 6. **How does the radar flag a Roth conversion that raises MAGI now and IRMAA two years later?** See
@@ -105,13 +106,14 @@ hide.*
 
 ## The three statuses
 
-Each modeled cliff uses one of three statuses:
+Each cliff uses one of these statuses:
 
 | Status | Means |
 |--------|--------|
 | **In play** | Threshold already crossed for this year — modeled tax or IRMAA surcharge applies |
 | **Nearby** | Still **under** the next line, within **$25,000** — explainable proximity, not a score |
 | **Not modeled** | Known cliff we name honestly; we do **not** invent cash response |
+| **Below** | The ACA row when its credit is priced and the household is more than **$25,000** under the 400% line; it shows the credit received |
 
 There are **no** optimum markers, cliff scores, or “best conversion” badges. The strip reports
 **where you stand relative to lines the engine already knows**, not which path is best.
@@ -157,20 +159,23 @@ Besides IRMAA, the radar can show these cliffs when data supports them for the s
 |-------|--------|--------------|
 | **NIIT (3.8%)** | Same-year MAGI vs NIIT threshold | Federal tax line when basis > 0 |
 | **Additional Medicare (0.9%)** | High **earned** income vs threshold | Federal tax line when applicable |
-| **ACA subsidy** | Marketplace MAGI interaction | **Always not modeled** — honesty row |
+| **ACA subsidy** | ACA household income vs **400%** of the poverty line | The premium tax credit, when a healthcare phase is marked as a marketplace plan; otherwise a **Not modeled** honesty row |
 
 This sample’s income is mostly **retirement** distributions, so Additional Medicare may stay quiet
 while NIIT and IRMAA still appear — that contrast is intentional on the Banks cliff path.
 
-**ACA** is always listed as **not modeled** on a US plan. Marketplace premium tax credits can move
-with MAGI; we do **not** invent subsidy dollars. If the engine emitted an honesty note for the year,
-the row still means the same thing: named gap, not a priced response.
+**ACA** is always listed on a US plan. When a healthcare phase is marked as a marketplace plan, the
+engine prices the premium tax credit, and the row shows where the household sits against the 400% line
+and what the credit is: **Below** or **Nearby** with the credit received, or **In play** over the line
+with the credit that crossing it cost. The [five-year runway](/learn/camp_five_year_retirement_runway)
+lesson shows both sides. This sample is on Medicare, and a plan with no marked marketplace phase gets
+the **Not modeled** row: named gap, not a priced response.
 
 ## Honest empty
 
 When **no** modeled cliff is in play or nearby, the card says so calmly — for example, that nothing
-modeled is near this year — and **still** lists the ACA **not modeled** row so the gap is never
-silently omitted. Quiet is a feature; fake urgency is not.
+modeled is near this year — and **still** lists the ACA row, priced or not modeled, so the
+marketplace question is never silently omitted. Quiet is a feature; fake urgency is not.
 
 ## Roth conversion and lookback
 
@@ -200,8 +205,8 @@ Use this checklist to audit the radar for a selected year.
 | Year | Changing the selected year changes the radar rows (year-reactive) |
 | IRMAA (this sample) | When CF shows IRMAA surcharge > 0 → radar **In play · IRMAA** with same surcharge and lookback year |
 | Nearby band | **Nearby** only when still under the next line within **$25,000** |
-| ACA | Always a **Not modeled · ACA subsidy** honesty row on US tax plans |
-| Honest empty | Calm copy when nothing in play/nearby; ACA still listed |
+| ACA | Always an **ACA subsidy** row on US tax plans: priced for a marked marketplace plan, **Not modeled** otherwise (this sample) |
+| Honest empty | Calm copy when nothing in play/nearby; the ACA row still listed |
 | No scores | No rankings, optimum markers, or “best path” badges |
 | Conversion (Roth sample) | Conversion years scannable; no invented IRMAA cash; lookback flag when applicable |
 
@@ -212,7 +217,7 @@ Use this checklist to audit the radar for a selected year.
 This lesson deliberately makes no claim about the following:
 
 - A multi-cliff **optimizer** or recommended conversion amount
-- Full **ACA** [[term:premium-tax-credit]] dollars
+- **ACA** [[term:premium-tax-credit]] dollars for a plan whose healthcare phase is not marked as a marketplace plan, or Medicaid
 - Estate, state, or non-MAGI cliffs on this strip
 - That **Nearby** is a personalized risk score (it is a fixed dollar band under the next line)
 - That every sample year will show IRMAA cash (depends on lookback MAGI, Medicare age, and path)

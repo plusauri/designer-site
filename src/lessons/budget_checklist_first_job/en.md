@@ -265,13 +265,13 @@ And where it goes:
 | [[term:roth\|Roth]] IRA | $0 | $100 a month | [[term:after-tax\|After-tax]] money that grows and comes out untaxed |
 | **Saved** | **$163 plus $81 match** | **$725 plus $163 match** | |
 
-The savings add to $562 a month against $620 freed, and the extra 3% of deferral comes out before tax, so the take-home falls by less than the deferral rises. The rest is slack, and slack is fine. Here is the same cash flow statement for 2027 in the trimmed plan:
+The savings add to $562 a month against $620 freed, and the extra 3% of deferral comes out before tax. From the second year that lowers the income tax, so the take-home falls by less than the deferral rises. The rest is slack, and slack is fine. Here is the same cash flow statement for 2027 in the trimmed plan:
 
 [[img:budget-checklist-cash-flow-2027-trimmed]]
 
 *Cash flow for 2027 in [Trimmed to the ranges](#canvas-dossier:budget_checklist_trimmed), on [[nav:cf-table]].*
 
-Housing is about $5,000 lower, Personal and lifestyle about $2,300 lower, the match has doubled, tax is the same, and Investments has gone from about $3,400 to about $12,300. The Money Movements table shows the routing, which is the part a budget on paper cannot do:
+Housing is about $5,000 lower, Personal and lifestyle about $2,300 lower, the match has doubled, tax is the same this first year because both plans pay the stated estimate, and Investments has gone from about $3,400 to about $12,300. From 2028 the larger [[term:pre-tax]] deferral trims the tax by a few hundred dollars a year. The Money Movements table shows the routing, which is the part a budget on paper cannot do:
 
 [[img:budget-checklist-sales-inv-2027-trimmed]]
 
@@ -310,6 +310,12 @@ The [[term:simulation]] says the same thing in the language of odds. Here is the
 *Net worth distribution in [Trimmed to the ranges](#canvas-dossier:budget_checklist_trimmed): more than nine in ten succeed.*
 
 As it is, Riley's plan succeeds about half the time. That is not a plan that fails; it is a plan that depends on which forty years the market happens to deliver, and on Social Security doing most of the work after 67. Trimmed, the [[term:success-rate|success rate]] is above ninety percent. The budget is the same size. The difference is that $620 a month has a name.
+
+<aside class="lesson-saying" data-saying="small-leak">
+
+The trims are $620 a month, small beside Riley's budget. Kept for forty years, they move the plan from succeeding about half the time to succeeding more than nine times in ten.
+
+</aside>
 
 ## What to take away
 

@@ -126,13 +126,13 @@ The balance-sheet comparison shows what that does over time. The two sides are i
 
 [[img:ss-solvency-balance-sheet]]
 
-On the [[term:gmf|GMF]] path, the forecast that takes each year's expected return, net worth in 2045 is $2.74 million as authored and $2.55 million with the cut. By the end of the forecast in 2062 the gap is about $860,000, $3.33 million against $2.47 million.
+On the [[term:gmf|GMF]] path, the forecast that takes each year's expected return, net worth in 2045 is $2.71 million as authored and $2.51 million with the cut. By the end of the forecast in 2062 the gap is about $870,000, $3.25 million against $2.38 million.
 
 The expected path is only one of many. The [[term:monte-carlo]] simulation runs the plan through 1,000 possible market histories and counts how many end with the money lasting. Here is that count, the [[term:success-rate]], for the plan as authored and with the cut:
 
 [[img:ss-solvency-odds-trustees]]
 
-The chance of success falls from about 92% to about 82%. That is a real loss, and it is also a long way from disaster.
+The chance of success falls from about 91% to about 81%. That is a real loss, and it is also a long way from disaster.
 
 ## Try other numbers
 
@@ -140,12 +140,12 @@ The Trustees' figure is one projection among several. The editor takes any share
 
 | Social Security pays | As scheduled ($102,000) | Ready for a shortfall ($96,000) |
 |---|---:|---:|
-| Everything scheduled | 92% | 98% |
-| 83% from 2034 (Trustees, combined funds) | 82% | 92% |
+| Everything scheduled | 91% | 98% |
+| 83% from 2034 (Trustees, combined funds) | 81% | 91% |
 | 78% from 2033 (Trustees, retirement fund alone) | 78% | 89% |
-| 77% from 2034 (CBO, combined funds) | 78% | 89% |
-| 65% from 2034 (Trustees, share payable in 2100) | 68% | 81% |
-| Nothing at all | 29% | 38% |
+| 77% from 2034 (CBO, combined funds) | 77% | 88% |
+| 65% from 2034 (Trustees, share payable in 2100) | 67% | 80% |
+| Nothing at all | 28% | 37% |
 
 The editor holds one share for every year after the cut starts. The official projections instead have the payable share sliding slowly downward over the century. A share of 65% from 2034 is a harsher test than any single year of the Trustees' path until about 2100, so it works as a floor for the later decades.
 
@@ -155,7 +155,7 @@ Now try the friend's advice. Set **Share of benefit paid** to 0% and start it in
 
 [[img:ss-solvency-odds-nothing]]
 
-The chance of success falls to about 29%. On the expected path, Maya and Theo run out of money in 2055, when Maya is 87.
+The chance of success falls to about 28%. On the expected path, Maya and Theo run out of money in 2054, when Maya is 86.
 
 To make a plan with no Social Security as safe as their plan with it, Maya and Theo would have to cut their spending from $102,000 a year to about $65,000. That is about $37,000 a year, or more than a third of everything they spend, for the rest of their lives, to insure against a check that stops completely.
 
@@ -167,7 +167,7 @@ Now switch to [Ready for a shortfall](#canvas-dossier:ss_solvency_ready). This p
 
 [[img:ss-solvency-odds-ready]]
 
-With the cut, this plan succeeds about 92% of the time. That matches Maya and Theo's original plan with Social Security paid in full. A 6% trim in spending buys back everything the Trustees' cut takes away. If Congress fixes the program and the full benefit arrives, the trimmed plan simply succeeds about 98% of the time and leaves more behind.
+With the cut, this plan succeeds about 91% of the time. That matches Maya and Theo's original plan with Social Security paid in full. A 6% trim in spending buys back everything the Trustees' cut takes away. If Congress fixes the program and the full benefit arrives, the trimmed plan simply succeeds about 98% of the time and leaves more behind.
 
 Spending less is not the only lever. Working another year or two, or delaying the claim past 67, moves the plan in the same direction. [Claim early vs live long](/learn/springfield_claim_longevity) shows what claim timing does to a household, and a shortfall is a good reason to run those what-ifs together. The approach does not change: pick the cut you want to be ready for, lay it over the plan, and adjust until the Modified side is a plan you would accept.
 

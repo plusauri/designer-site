@@ -76,13 +76,13 @@ Forecast Detail and the Simulation Summary sit one above the other, and the one 
 
 When you have made a change in Forecast Detail and want to see what it does to the [[term:monte-carlo]] summary, click the **down arrow** on Forecast Detail. It moves below the Simulation Summary, which rises to the top and opens. When you are done with the summary, push it back down the same way and Forecast Detail returns to the top.
 
-The keyboard does the same thing. **[[key:ForecastDetail]]** opens Forecast Detail and moves it above the Simulation Summary, and **[[key:SimulationSummary]]** (M for Monte Carlo) does the reverse. In the Forecaster they act on the Forecaster's pair, in Transforms they act on Transforms' pair, and in Region they act on Region's. Pressing [[key:SimulationSummary]] and [[key:ForecastDetail]] in turn is the quickest way to see a change as a picture and then as a probability. Press the same key once more while its section is already on top and open, and the section closes.
+The keyboard does the same thing. **[[key:SimulationSummary]]** (M for Monte Carlo) opens the Simulation Summary and moves it above Forecast Detail. Press it again and the summary moves back down, with Forecast Detail open above it. In the Forecaster it acts on the Forecaster's pair, in Transforms on Transforms' pair, and in Region on Region's. Pressing [[key:SimulationSummary]] over and over is the quickest way to see a change as a picture and then as a probability.
 
 Apart from the Glossary, Reference and Search keys and [[key:RunSimulation]], the shortcuts give way to a text field that has the focus. On a Mac, Ctrl with B, F, P and several other letters moves the caret inside a text field, and a keystroke should never pull you away from something you have half typed. Click outside the field, or press Tab until the focus leaves it, and the shortcuts work again.
 
 ## Run it from the keyboard
 
-After a change in Transforms, the modified side waits for you to run the simulation again. **[[key:RunSimulation]]** runs it. It presses **Re-simulate** in the panel you are looking at, so it obeys every rule the button does and does nothing when there is nothing new to run.
+After a change in Transforms, the modified side waits for you to run the simulation again. **[[key:RunSimulation]]** runs it. It presses **Re-simulate** in the panel you are looking at, so it obeys every rule the button does and does nothing when there is nothing new to run. It also opens the Simulation Summary above Forecast Detail, where the result appears, and [[key:SimulationSummary]] puts Forecast Detail back on top when you are done reading it.
 
 [[key:RunSimulation]] works even with the caret in a field. It first saves what the field holds, exactly as leaving the field would, and then runs. That makes the natural rhythm type, [[key:RunSimulation]], read. The caret leaves the field when the run starts, which is the price of making sure the run uses the number you just typed.
 
@@ -94,13 +94,13 @@ A laptop screen is never tall enough for a forecast, so Tutilis lets you put awa
 
 The desktop app has three bars around its content: the navigation rail on the left, the header at the top and the tools bar at the bottom. **Ctrl-Shift** with an arrow key hides or shows each one, and the arrow points at the bar it moves. [[key:NavRail]] is the rail, [[key:Header]] is the header and [[key:ToolsBar]] is the tools bar. **[[key:Zoom]]** is zoom, which hides all three at once and brings them all back on the second press. The plain Ctrl-arrow keys are left alone because macOS uses them to switch desktops.
 
-Inside the Forecaster the same idea works row by row. Every row of Forecast Detail, and the row of forecast ID, Year and detail selectors above it, ends in a seam with a small pill at its center. Click the seam and the row folds to a single line that still carries its name, and click it again to bring the row back. Folding a row does not switch off the charts in it, so it returns exactly as it was.
+Inside the Forecaster the same idea works row by row. Every row of Forecast Detail, and the row of forecast ID, Year and detail selectors above it, ends in a seam with a small pill at its center. Click the seam and the row folds to a single line that still carries its name, and click it again to bring the row back. Folding a row does not switch off the charts in it, so it returns exactly as it was. The chips choose which cards are on at all. Alt-click a chip to show only its card, and Alt-click it again to bring every other card back.
 
-The panels' own keys fold sections as well. Pressed inside Transforms, **[[key:Transforms]]** opens or closes Modifications, and pressed inside Region, **[[key:Region]]** does the same for Region Selection. Coming from another panel, each key only takes you there.
+**[[key:FoldRows]]** folds every row of the section you are in to its name, and pressing it again brings them back. **[[key:Transforms]]** and **[[key:Region]]** go to their panel's button on the navigation rail, and [[key:Enter]] there opens its section headers.
 
-### Power features
+### Power user
 
-A few of these controls are more than most people want, so they sit behind a switch. Turn on **Power features** on the Application side of Advanced, and three more things work.
+A few of these controls are more than most people want, so they sit behind a switch. Turn on **Power user** on the Application side of Advanced, and three more things work.
 
 - Drag a Forecast Detail seam to give that row a fixed height. The row scrolls inside the room you gave it, and a restore button on the seam puts it back.
 - Alt-click a seam to fold every other row and keep only that one. Alt-click it again and the others come back.
@@ -145,19 +145,19 @@ You can try all of this without a plan of your own. Open [[nav:annuity]] from th
 | [[key:Peek]] | Peek, then a letter for charts, tables or pairs |
 | [[key:BirdsEye]] | Bird's Eye |
 | [[key:Fx]] | Exchange rates |
-| [[key:Dossier]] | Dossier |
+| [[key:Dossier]] | Dossier, on the navigation rail |
 | [[key:Assumptions]] | Assumptions |
 | [[key:Risk]] | Risk |
-| [[key:ForecastDetail]] | Forecast Detail, moved to the top |
-| [[key:SimulationSummary]] | Simulation Summary, moved to the top |
-| [[key:Transforms]] | Transforms |
-| [[key:Region]] | Region |
+| [[key:ForecastDetail]] | Forecaster, on the navigation rail |
+| [[key:SimulationSummary]] | Simulation Summary, moved to the top; again, back below Forecast Detail |
+| [[key:Transforms]] | Transforms, on the navigation rail |
+| [[key:Region]] | Region, on the navigation rail |
 | [[key:NavRail]] | Show or hide the navigation rail |
 | [[key:Header]] | Show or hide the header |
 | [[key:ToolsBar]] | Show or hide the tools bar |
 | [[key:Zoom]] | Zoom: hide all three bars, or bring them back |
 | [[key:Shortcuts]] | The list of shortcuts |
-| [[key:RunSimulation]] | Run the simulation |
+| [[key:RunSimulation]] | Run the simulation, with the Simulation Summary on top |
 | [[key:NextMissing]] | In an open entry, go to the next field it still needs |
 | [[key:FoldRows]] | Fold every Forecast Detail and Simulation Summary row to its name; again, restore them |
 

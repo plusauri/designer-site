@@ -478,7 +478,7 @@
       levelClass +
       extraClass +
       '" href="/designer-site/learn/' +
-      encodeURIComponent(row.id) +
+      encodeURIComponent(row.slug || row.id) +
       '" data-id="' +
       escapeHtml(row.id) +
       '" data-planning-region="' +
@@ -541,7 +541,7 @@
       '<span class="learn-card-pair">' +
       anchor +
       '<a class="learn-card-watch" href="/designer-site/learn/' +
-      encodeURIComponent(row.screencastId) +
+      encodeURIComponent(row.screencastSlug || row.screencastId) +
       '" title="Watch the screencast version">' +
       escapeHtml(START_HERE_ICONS.Screencast) +
       " Watch" +
@@ -1048,10 +1048,10 @@
 
     function openFirstMatch() {
       if (!lastFiltered.length) return;
-      var id = lastFiltered[0].id;
-      if (!id) return;
+      var segment = lastFiltered[0].slug || lastFiltered[0].id;
+      if (!segment) return;
       persistFiltersBeforeLeave();
-      window.location.href = "/designer-site/learn/" + encodeURIComponent(id);
+      window.location.href = "/designer-site/learn/" + encodeURIComponent(segment);
     }
 
     /** Result cards in visual/filter order (section grids as rendered), skipping folded sections. */

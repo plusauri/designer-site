@@ -54,7 +54,7 @@ Transforms now draws the plan twice. Look at the balance-sheet comparison, with 
 
 *Stays 80/20 with the Global Financial Crisis from 2027. The crash years are marked on the Modified side's year axis.*
 
-In 2027 Morgan is still earning a salary, and the crisis's small first-year loss barely shows. Its deep second year lands on 2028, the first year Morgan lives on the portfolio, and net worth falls from about $1.58 million to about $1.01 million. It does not climb back to its 2027 level until 2035, and it never catches up with the plan that had no crash.
+In 2027 Morgan is still earning a salary, and the crisis's small first-year loss barely shows. Its deep second year lands on 2028, the first year Morgan lives on the portfolio, and net worth falls from about $1.58 million to about $1.04 million. It does not climb back to its 2027 level until 2032, and it never catches up with the plan that had no crash.
 
 For perspective, switch the episode to 1929 and leave the start in 2027:
 
@@ -62,7 +62,7 @@ For perspective, switch the episode to 1929 and leave the start in 2027:
 
 *Stays 80/20 with the Great Crash of 1929 from 2027.*
 
-The Global Financial Crisis recovers within the six years it replays. The Great Crash replays sixteen, and it takes the 80/20 plan from $1.5 million at the start to about $430,000 at the end of 2029. The portfolio never recovers, and the plan runs out of money in 2045. The section [Something safe to sell](#something-safe-to-sell) comes back to this episode and tests the safer plans against it. Switch back to 2007 before reading on.
+The Global Financial Crisis recovers within the six years it replays. The Great Crash replays sixteen, and it takes the 80/20 plan from $1.5 million at the start to about $460,000 at the end of 2029. The portfolio never recovers, and the plan runs out of money in 2046. The section [Something safe to sell](#something-safe-to-sell) comes back to this episode and tests the safer plans against it. Switch back to 2007 before reading on.
 
 Now keep the crash on and move its start year. Open [[nav:bs-table]] on 2055, the last year of the forecast, and watch the net-worth line on the Modified side as the slider moves. The crash stays in force when you switch plans with the chips above the canvas, so you can read each plan's column without setting it up again. Here is the ending net worth for the start years worth a look:
 
@@ -107,7 +107,13 @@ So the annuity plan lowers risk in a different way from the Moves down plan. It 
 
 ## Moving down the chart
 
-Moving down the chart has a cost, and the cost is expected wealth. With no crash on the GMF path, the Moves down plan ends at $1.47 million against $1.88 million for 80/20. Money in Treasuries compounds more slowly than money in stocks, and the gap adds up over three decades.
+Moving down the chart has a cost, and the cost is expected wealth. With no crash on the [[term:gmf|GMF]] path, the Moves down plan ends at $1.47 million against $1.88 million for 80/20. Money in Treasuries compounds more slowly than money in stocks, and the gap adds up over three decades.
+
+<aside class="lesson-saying" data-saying="free-lunch">
+
+On the GMF path, the Moves down plan pays about $410,000 of ending wealth for its safer bad outcomes. The rest of this section shows what that money buys.
+
+</aside>
 
 What the move buys shows up across many possible futures. The [[term:monte-carlo|Monte Carlo]] simulation runs a thousand paths with returns drawn at random. Here are the ending net worths of the two plans, drawn on one axis:
 
@@ -150,7 +156,7 @@ Look at the balance-sheet comparison first. It is the quickest way to get your b
 
 *Moves down, the same comparison.*
 
-On the GMF path, the 80/20 plan's net worth falls from about $1.69 million at the end of 2027 to about $440,000 at the end of 2030, a drop of nearly three quarters. The Moves down plan falls from about $1.68 million to about $750,000, a little more than half. Neither plan climbs back to its Original line. The 80/20 plan runs out of money in 2045, when Morgan is 82, and the Moves down plan runs out in 2050, five years later.
+On the GMF path, the 80/20 plan's net worth falls from about $1.69 million at the end of 2027 to about $450,000 at the end of 2030, a drop of nearly three quarters. The Moves down plan falls from about $1.68 million to about $780,000, a little more than half. Neither plan climbs back to its Original line. The 80/20 plan runs out of money in 2046, when Morgan is 83, and the Moves down plan runs out in 2051, five years later.
 
 To see where the difference comes from, open [[nav:si-table]] on 2031. By then a dollar of stock from the start of 2028 is worth about 52 cents, even after a 140% rebound year.
 

@@ -72,19 +72,19 @@ Look at the reconciliation — the panel that proves the year's money adds up. S
 | Side | Segment | Amount |
 | --- | --- | ---: |
 | source | Incomes | $138,978 |
-| source | **Reinvested Distributions** | **$7,326** |
-| source | Sales | $8,729 |
+| source | **Reinvested Distributions** | **$7,030** |
+| source | Sales | $9,674 |
 | use | Expenses | $115,899 |
-| use | Taxes | $31,807 |
-| use | **Investments** | **$7,326** |
+| use | Taxes | $32,753 |
+| use | **Investments** | **$7,030** |
 
-The dividend and the shares it bought are the same $7,326, entered on both sides. It is a source
+The dividend and the shares it bought are the same $7,030, entered on both sides. It is a source
 because something had to pay for those shares. It is not *income* — it never reached the household,
 so the cash flow statement is right not to list it. The reconciliation is where the two facts are
 allowed to coexist.
 
 And notice the third line. Alex's spending did not change, but the salary alone no longer covers it,
-so the plan sells $8,729 of the fund to make up the difference — after buying $7,326 of the same
+so the plan sells $9,674 of the fund to make up the difference — after buying $7,030 of the same
 fund with the dividend. Reinvesting a distribution you were going to need anyway is a round trip
 with a tax bill attached.
 
@@ -94,7 +94,7 @@ Open the tax statements on the **Dividend reinvested** plan and stay on 2030:
 
 | | Basis | Assessed |
 | --- | ---: | ---: |
-| Qualified dividends | $7,326 | $1,099 |
+| Qualified dividends | $7,030 | $1,054 |
 
 The dividend Alex never saw is taxed exactly like the dividend Alex did see. Reinvestment is a
 decision about *where the money goes*, not about whether it counts. In a [[term:brokerage|taxable account]], the [[term:drip]]
@@ -102,6 +102,12 @@ checkbox creates a bill that has to be paid out of something else.
 
 This is the single most useful thing to know about reinvestment, and it is invisible on a
 brokerage statement that only shows the share count going up.
+
+<aside class="lesson-saying" data-saying="small-leak">
+
+The reinvested dividend still costs Alex about $1,054 of tax in 2030, paid from somewhere else. A bill like that comes back every year the holding pays a dividend, and every dollar of it stops compounding.
+
+</aside>
 
 ## A bond is a different animal
 

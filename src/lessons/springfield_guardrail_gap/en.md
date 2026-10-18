@@ -176,7 +176,7 @@ needed** is how far today’s investable nest egg sits below that figure). That 
 stake in the ground for “enough nest egg to fund lifestyle under these knobs.”
 
 Without that capital, the residual plan has a **real chance of running short**. On this sample,
-Monte Carlo under Silver often lands near the **mid-40s percent** range — uncomfortable; you would
+Monte Carlo under Silver often lands near the **low-to-mid 40s percent** range — uncomfortable; you would
 not want to retire on this nest egg as-is. Do **not** expect that percentage to equal a Guardrails
 rate: the study diagnoses short funding under published-style spend; Monte Carlo answers residual
 plan survival under taxes and markets.
@@ -244,7 +244,7 @@ The short path runs the whole walkthrough in six steps.
 3. Optional: [[nav:birds-eye]] → Liquid net worth on.
 4. [[nav:transforms]]: grow **Traditional 401(k) → Target Date Equity** toward that min (~\$400k class
    bump is a good trial).
-5. **Simulation Summary**: compare Original vs Modified success (often ~mid-40s → ~low-70s under
+5. **Simulation Summary**: compare Original vs Modified success (often ~low-40s → ~80s under
    Silver).
 6. One sentence: what Guardrails diagnosed vs what Monte Carlo showed after the grow.
 

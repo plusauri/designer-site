@@ -62,7 +62,7 @@ Illinois has a second problem. The jobs are concentrated around Chicago, and so 
 
 Marcus is 45 and Elena is 43. Together they earn $290,000, and both plan to retire at 65. They bought an $850,000 house in a Chicago suburb and still owe $560,000 on the mortgage. They save into a [[term:401k|401(k)]] and a [[term:roth|Roth]] IRA and hold about $250,000 in a [[term:brokerage|brokerage]] account and cash. Their living costs are $105,000 a year while they work and $85,000 a year once they retire. Both will claim Social Security.
 
-In their first year the house is taxed at about $18,000. Their Illinois income tax, at a flat 4.95%, is about $15,000. The house costs them more in tax than their two salaries do.
+In their first year the house is taxed at about $18,000. Their Illinois income tax, at a flat 4.95%, is about $13,900. The house costs them more in tax than their two salaries do.
 
 [[img:property-tax-statements-illinois-2027]]
 
@@ -74,9 +74,9 @@ Look at the same statements in 2050, after both have retired. Illinois taxes alm
 
 A fair test needs a state that taxes income about the same way, so that the property tax is the main thing that changes. Colorado fits. Its income tax is a flat 4.4%, a little below Illinois's 4.95%, and its living costs outside housing are within a few percent of Illinois's. Its property tax rate is 0.50%, about a quarter of the Illinois rate.
 
-The lesson carries a second plan, **Colorado**, that is the same household with the same house, the same wages and the same spending, taxed as a Colorado resident. In the first year its property tax is about $4,400 and its state income tax is about $12,000. Both are lower, but the property tax difference is more than four times the income tax difference.
+The lesson carries a second plan, **Colorado**, that is the same household with the same house, the same wages and the same spending, taxed as a Colorado resident. In the first year its property tax is about $4,400 and its state income tax is about $11,000. Both are lower, but the property tax difference is more than four times the income tax difference.
 
-Over the whole plan the difference is dramatic. On the expected path, the Illinois plan ends in 2075 with about $7.6 million and the Colorado plan with about $13.5 million. Both figures are in 2075 dollars. The [[term:monte-carlo|Monte Carlo]] view says the same thing. Across a thousand paths, the Colorado plan succeeds more often, and every point on its Key Forecasts sits well above the Illinois one.
+Over the whole plan the difference is dramatic. On the expected path, the Illinois plan ends in 2074 with about $7.9 million and the Colorado plan with about $13.7 million. Both figures are in 2074 dollars. The [[term:monte-carlo|Monte Carlo]] view says the same thing. Across a thousand paths, the Colorado plan succeeds more often, and every point on its Key Forecasts sits well above the Illinois one.
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">
@@ -96,6 +96,12 @@ Over the whole plan the difference is dramatic. On the expected path, the Illino
 </div>
 
 The two pictures share one money axis, so their heights can be compared directly.
+
+<aside class="lesson-saying" data-saying="small-leak">
+
+In the first year the Colorado house's property tax is about $4,400, at a quarter of the Illinois rate. Charged every year on a house that keeps gaining value, the difference grows into about $5.8 million more for Colorado at the end of the plan.
+
+</aside>
 
 ## Reading the Region table
 

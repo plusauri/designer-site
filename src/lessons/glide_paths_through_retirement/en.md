@@ -158,7 +158,7 @@ The Dot-com bust replays seven years of stock returns, with the market down abou
 </div>
 </div>
 
-The two plans have the same path written in the same grid. The bond tent enters the crash at 40% stock and falls to about $1.34 million in 2030. The steering-only plan enters it at 76% stock and falls to about $1.08 million. The tent ends the plan with about $910,000 and the steering-only plan with almost nothing, about $80,000. The constant 60/40 plan sits between them and ends with about $690,000.
+The two plans have the same path written in the same grid. The bond tent enters the crash at 40% stock and falls to about $1.37 million in 2030. The steering-only plan enters it at 76% stock and falls to about $1.10 million. The tent ends the plan with about $1.05 million and the steering-only plan with about $210,000, a fifth as much. The constant 60/40 plan sits between them and ends with about $840,000.
 
 The tent also keeps trading through the crash. When stocks fall, the stock share drops below the target, and the IRA swap buys stock back up to it at low prices. In 2030, the crash's lowest year, the plan sells no stock at all. It sells Treasuries inside the IRA, pays the year's spending from them, and uses about $141,000 of the proceeds to buy the S&P 500 fund:
 
@@ -170,11 +170,11 @@ One crash on one path is a single story. Here are the same plans over 1,000 mark
 
 | Crash from 2028 | Constant 60/40 | Bond tent | Steering only |
 |---|---:|---:|---:|
-| None | 86% | 87% | 82% |
-| Dot-com bust (2000) | 78% | 83% | 58% |
-| Oil-shock bear market (1973) | 80% | 82% | 65% |
-| Global Financial Crisis (2007) | 91% | 92% | 74% |
-| Great Crash (1929) | 26% | 60% | 1% |
+| None | 88% | 89% | 83% |
+| Dot-com bust (2000) | 81% | 85% | 63% |
+| Oil-shock bear market (1973) | 83% | 85% | 70% |
+| Global Financial Crisis (2007) | 92% | 94% | 78% |
+| Great Crash (1929) | 32% | 65% | 1% |
 
 The bond tent beats the constant plan in every crash, and by the most in the deepest one. The Global Financial Crisis row is higher than the row with no crash because that replay ends with a strong recovery, which lifts every plan. The steering-only column is the lowest in every row.
 
@@ -197,9 +197,9 @@ The bond tent beats the constant plan in every crash, and by the most in the dee
 
 ## What the tent costs
 
-When markets are kind, more stock ends richer. On the expected path with no crash, which Tutilis draws as the GMF, the steering-only plan ends with about $1.55 million, the constant 60/40 plan with about $1.42 million, and the bond tent with about $1.34 million. Holding 40% stock for the first years of retirement gives up some growth, and the tent ends about 5% below the constant plan.
+When markets are kind, more stock ends richer. On the expected path with no crash, which Tutilis draws as the GMF, the steering-only plan ends with about $1.70 million, the constant 60/40 plan with about $1.55 million, and the bond tent with about $1.49 million. Holding 40% stock for the first years of retirement gives up some growth, and the tent ends about 4% below the constant plan.
 
-The trade is the same one as in [Getting safer as retirement approaches](/learn/safer_approaching_retirement). The tent gives up a little in the average future to do much better in the bad ones. Over 1,000 paths with no crash it still succeeds slightly more often than the constant plan, about 87% against 86%, because the bad paths count against success and the good ones do not.
+The trade is the same one as in [Getting safer as retirement approaches](/learn/safer_approaching_retirement). The tent gives up a little in the average future to do much better in the bad ones. Over 1,000 paths with no crash it still succeeds slightly more often than the constant plan, about 89% against 88%, because the bad paths count against success and the good ones do not.
 
 ## Only if you trade
 

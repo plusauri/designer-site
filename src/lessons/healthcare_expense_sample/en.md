@@ -278,7 +278,7 @@ worth reading. Scrub the [[nav:forecaster]] year and watch the HSA **rise, turn,
 
 The years those happen in depend on which forecast path you are viewing — scrub to find them rather
 than taking a date from this page. On the default **GMF** path the account is spent in the
-**mid-2040s**, so it carries the first handful of Medicare years and no more.
+**early 2040s**, so it carries about one Medicare year and no more.
 
 That is the useful planning answer, and it is not a tax number: **how many years of a known, dated,
 lifelong expense does this account absorb before the rest of the plan has to?**
@@ -366,7 +366,7 @@ present for the ages you model, not premium math.
 | Not this lesson | Where that lives |
 |-----------------|------------------|
 | IRMAA Part B/D steps from lookback MAGI | [MAGI cliffs](/learn/magi_cliffs_irmaa_niit) |
-| ACA premium tax credit **dollars** | Not modeled — honesty warning only when marketplace-shaped HC is active |
+| ACA premium tax credit **dollars** | Modeled only for a phase marked as a marketplace plan. This plan's phases are not marked, so a marketplace-shaped phase gets the honesty warning instead |
 | LTC custodial care | Long-term care on the family plan / LTC generators |
 | The HSA's tax-free **withdrawal** for qualified medical | Not modeled — the engine treats an HSA as tax-deferred, so the plan **understates** a real HSA |
 | SS benefit taxation | [Social Security treatment](/learn/social_security_treatment) |

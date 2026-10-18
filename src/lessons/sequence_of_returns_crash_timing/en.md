@@ -56,7 +56,7 @@ Nothing in the plan changes. Transforms shows the plan as authored on one side a
 
 [[img:sor-crash-balance-sheet-7030]]
 
-On the Modified side, net worth falls by nearly a third in 2032, Jordan's second year of retirement, and does not climb back to its 2031 level until 2036. The two sides never meet again. By 2057 the plan with the crash ends about $680,000 below the plan without it.
+On the Modified side, net worth falls by nearly a third in 2032, Jordan's second year of retirement, and does not climb back to its 2031 level until 2036. The two sides never meet again. By 2057 the plan with the crash ends about $670,000 below the plan without it.
 
 ## Check the crash's returns
 
@@ -115,14 +115,14 @@ These are the end-of-forecast net worths on the [[term:gmf|GMF]] path, the forec
 
 | Crash starts | 70/30 | Cash reserve | 60/40 rebalanced |
 |---|---:|---:|---:|
-| No crash | $3.11M | $2.56M | $2.67M |
-| 2027 | $2.64M | $2.17M | $2.62M |
-| 2029 | $2.54M | $2.10M | $2.52M |
-| **2030** | **$2.37M** | **$2.00M** | **$2.49M** |
-| 2031 | $2.43M | $2.04M | $2.50M |
-| 2033 | $2.53M | $2.11M | $2.52M |
-| 2038 | $2.60M | $2.16M | $2.55M |
-| 2045 | $2.66M | $2.21M | $2.52M |
+| No crash | $3.10M | $2.56M | $2.65M |
+| 2027 | $2.63M | $2.17M | $2.60M |
+| 2029 | $2.54M | $2.11M | $2.52M |
+| **2030** | **$2.41M** | **$2.03M** | **$2.48M** |
+| 2031 | $2.43M | $2.04M | $2.48M |
+| 2033 | $2.52M | $2.11M | $2.50M |
+| 2038 | $2.59M | $2.16M | $2.54M |
+| 2045 | $2.65M | $2.21M | $2.51M |
 
 In every plan the worst year to start the crash is 2030, not 2031. The editor opens on the retirement year, but this episode's deep loss is its *second* year. Starting it in 2030 puts that loss on 2031, the first year Jordan lives on the portfolio. A crash that hits in 2027 still costs money, but Jordan is earning a salary through the fall and the rebound, and sells nothing at the bottom. A crash in 2045 lands on a portfolio that has already had years to grow and that Social Security is helping to support.
 
@@ -132,13 +132,13 @@ It pays to slide the crash for each episode you test rather than trusting the de
 
 The [Cash reserve](#canvas-dossier:sor_cash_reserve) plan is the most intuitive defense, and in this analysis it is the weakest of the three.
 
-The first reason shows up with no crash at all. Money market earns less than stocks or bonds, and $200,000 of it compounds more slowly for 26 years. With no crash the plan ends at $2.56 million against $3.11 million for 70/30. The reserve is insurance, and that gap is its premium, paid every year whether or not a crash comes.
+The first reason shows up with no crash at all. Money market earns less than stocks or bonds, and $200,000 of it compounds more slowly for 26 years. With no crash the plan ends at $2.56 million against $3.10 million for 70/30. The reserve is insurance, and that gap is its premium, paid every year whether or not a crash comes.
 
 The second reason is that the reserve does not work the way it is meant to. Here is what the plan sells with the crash at its worst placement, starting in 2030, so that the bottom falls in 2031:
 
 [[img:sor-crash-sales-2031-cash]]
 
-The reserve supplies about $29,000 of the year's $120,000 of sales, and about $48,000 of S&P 500 fund is still sold at the bottom. The plan's withdrawals are pro-rata, so it sells a slice of everything. Nothing tells it that the cash is for bad years. For comparison, the [70/30](#canvas-dossier:sor_seventy_thirty) plan sells about $60,000 of stock in the same year:
+The reserve supplies about $21,000 of the year's $91,000 of sales, and about $37,000 of S&P 500 fund is still sold at the bottom. The plan's withdrawals are pro-rata, so it sells a slice of everything. Nothing tells it that the cash is for bad years. For comparison, the [70/30](#canvas-dossier:sor_seventy_thirty) plan sells about $46,000 of stock in the same year:
 
 [[img:sor-crash-sales-2031-7030]]
 
@@ -154,7 +154,7 @@ In a crash the stock share falls below its target and the bond share rises above
 
 No S&P 500 fund is sold in 2031. The whole year comes from the Treasury funds, each line marked *Glide rebalance*. That is what the cash reserve was supposed to do, and here it happens automatically.
 
-The table in the previous section shows what this is worth. The worst-placed crash costs the 70/30 plan about $730,000 of its final net worth and the reserve plan about $570,000. It costs the 60/40 rebalanced plan about $180,000. The rebalanced plan's column barely moves wherever the crash is placed. When the crash's deep year lands on retirement, with the crash starting in 2030 or 2031, it finishes ahead of both other plans. With the crash starting in 2029 it finishes just behind the 70/30 plan.
+The table in the previous section shows what this is worth. The worst-placed crash costs the 70/30 plan about $690,000 of its final net worth and the reserve plan about $540,000. It costs the 60/40 rebalanced plan about $180,000. The rebalanced plan's column barely moves wherever the crash is placed. When the crash's deep year lands on retirement, with the crash starting in 2030 or 2031, it finishes ahead of both other plans. With the crash starting in 2029 it finishes just behind the 70/30 plan.
 
 ## Which part does the work
 
@@ -164,7 +164,7 @@ The 60/40 plan changed two things at once: less stock, and the rule. You can sep
 
 *Transforms → Modifiables on the 60/40 plan, with Money movements selected. That row is the withdrawal strategy. Setting it to Pro-rata turns the rebalance rule off and leaves the lower stock share in place.*
 
-With the crash starting in 2030 and pro-rata withdrawals, the 60/40 plan ends at about $2.31 million. That is below the 70/30 plan's $2.37 million. On this path the lower stock share alone bought nothing. The rule did the work, because it stopped the plan from selling stock at the bottom.
+With the crash starting in 2030 and pro-rata withdrawals, the 60/40 plan ends at about $2.33 million. That is below the 70/30 plan's $2.41 million. On this path the lower stock share alone bought nothing. The rule did the work, because it stopped the plan from selling stock at the bottom.
 
 <details class="lesson-advanced">
 <summary class="lesson-advanced-label">Advanced topic — reproduce the table from the command line</summary>
@@ -195,7 +195,7 @@ Without a crash, the three plans succeed on 96%, 98% and 98% of paths. The 60/40
 
 The Global Financial Crisis barely moves those success rates, and it can even raise them slightly. The overlay replays the rebound as well as the fall, and six years with a known, fully recovered path replace six years that could have gone anywhere. A crash that recovers inside the overlay does not show up as failure.
 
-The episode that separates the plans is the Great Crash of 1929. It replays sixteen years, with a fall of nearly 80% and a long, uneven recovery. Placed at Jordan's retirement in 2031, success falls to about 52% for 70/30 and about 64% for the cash reserve. The 60/40 rebalanced plan still succeeds on about 75% of paths. The same 60/40 split with pro-rata withdrawals succeeds on about 63%. In a crash that deep and long, the smaller stock share and the rule both earn their keep.
+The episode that separates the plans is the Great Crash of 1929. It replays sixteen years, with a fall of nearly 80% and a long, uneven recovery. Placed at Jordan's retirement in 2031, success falls to about 52% for 70/30 and about 63% for the cash reserve. The 60/40 rebalanced plan still succeeds on about 75% of paths. The same 60/40 split with pro-rata withdrawals succeeds on about 63%. In a crash that deep and long, the smaller stock share and the rule both earn their keep.
 
 ## What the research says
 

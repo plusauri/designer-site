@@ -280,7 +280,7 @@ That separation is the point of the personalization half of the screen.
 On **Springfield Baseline** under defaults the coverage buffer is usually **green / solvent** and
 **Extra needed** is **\$0** for every rule — a comfortable nest egg clears the study-bound funding
 story. Forecaster **Monte Carlo** on the same household often still reports something like
-**~80% success** at the default **Silver** threshold (not 100%). Those results can both be true —
+**two in three** paths succeeding at the default **Silver** threshold (not 100%). Those results can both be true —
 they answer different questions. A green buffer is not “MC is wrong,” and a high Silver % is not
 “every published rule always funds this lifestyle.”
 

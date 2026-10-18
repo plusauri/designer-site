@@ -91,9 +91,11 @@ Move one more year, to **2035**.
 
 [[img:business-sale-cf-table-2035]]
 
-The tax on the sale arrives here. The forecast pays every tax bill the year after it is incurred, and
-the gain on the practice, the price less the costs and the purchase amount, is a long-term capital
-gain on the 2034 return. There is still no income, so the bill is paid the way any retiree pays a
+The tax on the sale arrives here. The forecast pays the tax on earnings during the year they are
+earned, the way withholding and quarterly estimates do, which is why 2034 has almost no tax line:
+the practice's last year was paid for in 2033. Tax on income that nobody withholds from, such as a
+sale, is settled with the next year's tax payment, and the gain on the practice, the price less the
+costs and the purchase amount, is a long-term capital gain on the 2034 return. There is still no income, so the bill is paid the way any retiree pays a
 bill with no paycheck: holdings are sold. The **Sales** section in 2035 lists the funds that were
 sold to cover it, and most of them were bought with the practice's own proceeds the year before.
 

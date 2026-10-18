@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sequence of Returns Risk: Cash Reserve vs Rebalancing — Tutilis</title>
+    <meta name="description" content="Put a historical crash into a plan, slide it back and forth across the retirement date, and watch which year does the most damage. Then compare two common defenses on the same household: a large cash reserve, or a little less stock with a rule that decides what to sell.">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://www.plusauri.com/learn/sequence-of-returns-risk" rel="canonical">
+    <meta content="website" property="og:type">
+    <meta content="Plusauri" property="og:site_name">
+    <meta content="Sequence of Returns Risk: Cash Reserve vs Rebalancing — Tutilis" property="og:title">
+    <meta content="Put a historical crash into a plan, slide it back and forth across the retirement date, and watch which year does the most damage. Then compare two common defenses on the same household: a large cash reserve, or a little less stock with a rule that decides what to sell." property="og:description">
+    <meta content="https://www.plusauri.com/learn/sequence-of-returns-risk" property="og:url">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
+<script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
+    <script src="/designer-site/static/lang.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
+    <link href="/designer-site/static/site.css" rel="stylesheet">
+    <script src="/designer-site/static/lesson-split.js" defer="defer"></script>
+    <script src="/designer-site/static/trial-callout.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/katex/katex.min.css" rel="stylesheet">
+    <script src="/designer-site/static/vendor/katex/katex.min.js" defer="defer"></script>
+    <script src="/designer-site/static/vendor/katex/contrib/auto-render.min.js" defer="defer" onload="renderMathInElement(document.body,{delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true},{left:'$$',right:'$$',display:true}],throwOnError:false});"></script>
+  </head>
+  <body class="lesson-split-body" data-prose-lang="en" data-lang="en">
+    <header class="lesson-split-header" id="lesson-split-header">
+      <nav>
+        <ul>
+          <li><strong><a href="/designer-site/">Plusauri</a></strong></li>
+          <li><a href="/designer-site/learn">Learning Center</a></li>
+          <li><a href="/designer-site/reference">Reference</a></li>
+        </ul>
+        <ul>
+          <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en" selected="selected">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
+          <li><button class="lesson-header-collapse" type="button" aria-expanded="true" aria-controls="lesson-split-header" title="Hide header" aria-label="Hide header">▾</button></li>
+        </ul>
+      </nav>
+    </header>
+<button class="lesson-header-expand" type="button" id="lesson-header-expand" hidden="hidden" title="Show header" aria-label="Show header">▴ Plusauri · Learning Center</button><script type="application/json" id="lesson-canvas-dossiers">{"primary":"sor_seventy_thirty","alternates":["sor_cash_reserve","sor_sixty_forty_rebalanced"],"order":["sor_seventy_thirty","sor_cash_reserve","sor_sixty_forty_rebalanced"]}</script>
+    <div class="lesson-split has-plan-slots" data-plan-slot="0">
+      <section class="lesson-pane">
+        <p class="lesson-plan-switcher-lede">This lesson uses <strong>3 sample plans</strong> — switch anytime; color matches the bar between the columns.</p>
+        <div class="lesson-plan-switcher" role="group" aria-label="Plans this lesson can open">
+          <div class="lesson-plan-switcher-chips"><span class="lesson-plan-switcher-label">Plans</span><button class="learn-chip lesson-plan-chip plan-slot-0 is-active" type="button" data-canvas-dossier="sor_seventy_thirty" data-plan-slot="0" aria-pressed="true">70/30</button><button class="learn-chip lesson-plan-chip plan-slot-1" type="button" data-canvas-dossier="sor_cash_reserve" data-plan-slot="1" aria-pressed="false">Cash reserve</button><button class="learn-chip lesson-plan-chip plan-slot-2" type="button" data-canvas-dossier="sor_sixty_forty_rebalanced" data-plan-slot="2" aria-pressed="false">60/40 rebalanced</button></div>
+        </div>
+        <p class="lesson-plan-showing muted" id="lesson-plan-showing" aria-live="polite">On the right now: <span id="lesson-plan-showing-label">70/30</span></p>
+<a class="trial-callout trial-callout-comic" href="/designer-site/try" data-trial-callout data-variant="comic"><img src="/designer-site/static/images/trial/trial-comic.png" alt="14-Day Free Trial: Your Dossier on Your Desktop" width="458" height="187" decoding="async"></a>        <div class="lesson-prose" id="lesson-prose" data-next-key="KeyJ" data-previous-key="KeyK" data-lesson-id="sequence_of_returns_crash_timing" data-lesson-slug="sequence-of-returns-risk" data-loaded-lang="en"><h1>Timing a crash: cash reserve or rebalancing?</h1>
+<p class="lesson-situation"><span class="lesson-situation-label">The situation</span> Jordan is 60, plans to retire in 2031 with $1.34 million invested about 70/30, and has read that a crash in the first years of retirement is the one to fear. The two ideas on the table are to move $200,000 into a money-market reserve, or to hold a 60/40 split and let rebalancing decide what gets sold.</p>
+<div class="lesson-intro-card"><img class="lesson-media-ref ui-std-preview-wide" src="/designer-site/static/images/lessons/intro-cards/sequence-of-returns-crash-timing.webp" alt="Comic-book poster titled Sequence-of-return risk: a clock-eyed monster labeled Bad years first smashes the ground, an armored piggy bank labeled Cash reserve holds a shield that says it only works if you know when to spend and refill it, and a caped hero points at a balance labeled The Rebalancer that sells high stocks and buys low ones. Panels quote Mark Twain on October being a dangerous month to speculate, along with every other month, and John Templeton on buying at maximum pessimism. The banner reads: Order beats average, don't sell the nest when the monster swings." data-media-id="intro-card-sequence-of-returns" loading="lazy" decoding="async" /></div>
+<details class="lesson-intro-chrome" data-intro-chrome="1" data-lesson-presentation="Reading"><summary><span class="lesson-intro-chrome-summary-title">How to use this case study</span></summary><div class="lesson-intro-chrome-body"><blockquote class="lesson-shared lesson-learning-preference" cite="learning-center:learning-preference"><p>New to the Learning Center, or want a map of the panels? Start with a tour: <a href="/designer-site/learn/getting-started-planning-software-tour"><strong>Reading Lesson (Getting Around)</strong></a> or <a href="/designer-site/learn/getting-started-video-tutorial"><strong>Screencast Lesson (Getting Around)</strong></a> — both walk through Tutilis next to a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live plan</span><span class="lesson-term-tip" role="tooltip">The running Tutilis product next to this lesson — navigation, Bird's Eye, Forecaster, tools, and more — loaded with a teaching sample. A dossier is the plan data; the live plan is the full product surface with a sample dossier already open so you can explore. On the web, teaching samples are not editable the way your own dossier will be in the full app.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> (to the right on a desktop-width screen, or below when stacked on a tablet).</p></blockquote><blockquote class="lesson-shared lesson-orientation" cite="learning-center:orientation"><p>This page — <strong>Timing a crash: cash reserve or rebalancing?</strong> — can open <strong>more than one</strong> <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live sample plan</span><span class="lesson-term-tip" role="tooltip">The running Tutilis product next to this lesson — navigation, Bird's Eye, Forecaster, tools, and more — loaded with a teaching sample. A dossier is the plan data; the live plan is the full product surface with a sample dossier already open so you can explore. On the web, teaching samples are not editable the way your own dossier will be in the full app.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to the text (to the right on a wide screen, or below on a tablet). Use the <strong>Live plans</strong> chips (and matching colored links in the prose) to switch without leaving this page; the colored bar near the plans shows which one is loaded. The walk-through stays in the text.</p></blockquote><blockquote class="lesson-shared lesson-product-relationship" cite="learning-center:product-relationship"><p>The <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live plan</span><span class="lesson-term-tip" role="tooltip">The running Tutilis product next to this lesson — navigation, Bird's Eye, Forecaster, tools, and more — loaded with a teaching sample. A dossier is the plan data; the live plan is the full product surface with a sample dossier already open so you can explore. On the web, teaching samples are not editable the way your own dossier will be in the full app.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to this page — usually <strong>to the right</strong> on a wide screen, or <strong>below</strong> on a tablet — is <strong>Tutilis</strong> running a teaching sample: the same <strong>financial planning product</strong> available as a desktop application (early preview). A <span class="lesson-term" data-term="dossier" tabindex="0"><span class="lesson-term-pill">dossier</span><span class="lesson-term-tip" role="tooltip">Your full plan in Tutilis: the people in the household, what they own and owe, cash flows in and out, tax setting, and planning assumptions. One dossier is one complete situation as the product models it.<a class="lesson-term-more" href="/designer-site/glossary/dossier">Full entry →</a></span></span> is the plan data; the live plan is the full product (navigation, Bird's Eye, Forecaster, tools) with a sample dossier already open so you can try the panels. <a href="/designer-site/pricing">See planned pricing</a>. On the web, Learning Center samples are <strong>not editable</strong> the way your own dossier will be in the full app. Your own household goes in the Tutilis desktop app — <a href="/designer-site/learn#intro-video-heading">the Learning Center front page has a short clip of that</a>.</p></blockquote></div></details>
+<div class="lesson-accordion" data-sections="12" style="--n:12"><h2 id="overview" class="lesson-section-head" style="--i:0"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="overview--body"><span class="lesson-section-title">Overview</span></button></h2><div class="lesson-section-body" id="overview--body" role="region" aria-labelledby="overview" hidden>
+<p>Jordan is 60 and plans to retire in 2031, at 65. There is $1.34 million saved: $900,000 in a <span class="lesson-term" data-term="401k" tabindex="0"><span class="lesson-term-pill">401(k)</span><span class="lesson-term-tip" role="tooltip">An employer-sponsored retirement account, named after the section of tax law that created it — so the name says nothing about what it does. Contributions are usually payroll-deducted, often matched by the employer, and come in <strong>traditional</strong> (pre-tax) and <strong>Roth</strong> flavors. A <strong>403(b)</strong> is the same idea for schools and nonprofits, a <strong>457</strong> for government workers.<a class="lesson-term-more" href="/designer-site/glossary/401k">Full entry →</a></span></span>, $400,000 in a <span class="lesson-term" data-term="brokerage" tabindex="0"><span class="lesson-term-pill">brokerage</span><span class="lesson-term-tip" role="tooltip">An ordinary <strong>taxable</strong> investment account — no special retirement wrapper, no contribution limit, and no withdrawal age rules. The trade-off is that dividends and realized gains are taxed as they happen rather than deferred. Often called the <strong>taxable</strong> bucket next to traditional and Roth.<a class="lesson-term-more" href="/designer-site/glossary/brokerage">Full entry →</a></span></span> account, and $40,000 in a money-market account. The invested money is split about 70/30 between an S&amp;P 500 index fund and an intermediate Treasury fund, in both accounts. Spending is $72,000 a year in today's dollars, and Social Security starts at 67.</p>
+<p>Jordan has read that the crash to fear is the one that arrives just as the paychecks stop. Before retirement, a fall in the market is something to wait out. After it, every year's spending has to be sold from whatever the portfolio is worth that year, and shares sold at the bottom never take part in the recovery. This is <span class="lesson-term" data-term="sequence-of-returns" tabindex="0"><span class="lesson-term-pill">sequence-of-returns risk</span><span class="lesson-term-tip" role="tooltip">The <strong>order</strong> the good and bad years arrive in. Two plans with identical average returns can end in very different places if one takes its losses early while money is being withdrawn — selling into a fall removes shares that are then not there for the recovery. It is why retirement risk is not summarized by an average, and why the years either side of the day you stop working carry more weight than their count suggests.<a class="lesson-term-more" href="/designer-site/glossary/sequence-of-returns">Full entry →</a></span></span>: the same returns in a different order leave a retiree with a different amount of money.</p>
+<p>Two defenses come up in every conversation about it. The first is to hold a large cash reserve, a few years of spending in money market, and live on it through a crash instead of selling stocks. The second is to hold a little less stock and adopt a rule about what gets sold each year. This lesson tests both on the same household, with a real crash placed at every year from 2027 to 2046.</p>
+<p>It opens three plans that start with the same $1.34 million:</p>
+<ul>
+<li><a href="#canvas-dossier:sor_seventy_thirty">70/30</a> is Jordan's plan as it stands. Withdrawals come from every holding in proportion to its size.</li>
+<li><a href="#canvas-dossier:sor_cash_reserve">Cash reserve</a> moves $200,000 of the brokerage into money market, so the reserve holds $240,000, about three years of spending at retirement. Everything else is unchanged.</li>
+<li><a href="#canvas-dossier:sor_sixty_forty_rebalanced">60/40 rebalanced</a> splits the invested money 60/40 and sets the <strong>Glide rebalance</strong> withdrawal strategy against a constant target.</li>
+</ul>
+<p>The two defenses hold almost the same amount of stock. The reserve plan holds $770,000 in the S&amp;P 500 fund and the 60/40 plan holds $780,000, so the comparison is between parking the safe money in cash with no rule and holding it in bonds with one.</p>
+</div>
+<h2 id="what-you-will-learn" class="lesson-section-head" style="--i:1"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-you-will-learn--body"><span class="lesson-section-title">What you will learn</span></button></h2><div class="lesson-section-body" id="what-you-will-learn--body" role="region" aria-labelledby="what-you-will-learn" hidden>
+<aside class="lesson-plan">
+<p class="lesson-plan-label">Today's lesson</p>
+<div class="lesson-plan-body">
+<p>By the end of this lesson you should be able to answer these questions. Each one links to the section that answers it.</p>
+<ol>
+<li><strong>How do I put a historical crash into my plan?</strong> See <a href="#put-a-crash-in-the-plan">Put a crash in the plan</a>.</li>
+<li><strong>Why does a big gain after a big loss leave me behind?</strong> See <a href="#check-the-crashs-returns">Check the crash's returns</a>.</li>
+<li><strong>Which year is the worst year for a crash to start?</strong> See <a href="#slide-the-crash">Slide the crash</a>.</li>
+<li><strong>Does a few years of spending held in cash protect me in a crash?</strong> See <a href="#a-cash-reserve">A cash reserve</a>.</li>
+<li><strong>How does a rebalancing rule keep a plan from selling stock at the bottom?</strong> See <a href="#less-stock-and-a-rule">Less stock, and a rule</a>.</li>
+<li><strong>Is it the lower stock share or the rule that does the work?</strong> See <a href="#which-part-does-the-work">Which part does the work</a>.</li>
+<li><strong>How do the three plans fare across a thousand market paths?</strong> See <a href="#a-thousand-paths">A thousand paths</a>.</li>
+<li><strong>What does published research say about bucket strategies and sequence risk?</strong> See <a href="#what-the-research-says">What the research says</a>.</li>
+</ol>
+</div>
+</aside>
+</div>
+<h2 id="put-a-crash-in-the-plan" class="lesson-section-head" style="--i:2"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="put-a-crash-in-the-plan--body"><span class="lesson-section-title">Put a crash in the plan</span></button></h2><div class="lesson-section-body" id="put-a-crash-in-the-plan--body" role="region" aria-labelledby="put-a-crash-in-the-plan" hidden>
+<p>The plan itself never contains a crash. Its returns come from the growth assumptions, which describe an average year and how far a year can stray from it. To ask what a specific crash would do, you lay one over the plan in <span class="lesson-nav-ref lesson-nav-ref--transforms lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/transforms.png" alt="Transforms" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Transforms</span><span class="lesson-term-tip" role="tooltip">A <strong>main-rail area</strong>. The name is <strong>Transforms</strong> because you <strong>transform a copy</strong> of the plan — a what-if — without rewriting the original dossier. Compare original vs modified side by side.</span></span>.</p>
+<p>Open Transforms and unfold <strong>Modifications</strong>. Its Modifiables card opens on the <strong>Global</strong> tab, which lists the what-ifs that apply to the whole plan rather than to one item. <strong>Sequence-of-returns risk</strong> is the last row. Select it:</p>
+<p><img class="lesson-media-ref ui-control lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-modifiables.png" alt="Transforms' Modifiables card on the Global tab, listing the nine scenario-wide what-ifs from Retirement &amp; forecast end to Sequence-of-returns risk; the last row is selected and reads Global Financial Crisis (2007) from 2031" data-media-id="sor-crash-modifiables" width="419" data-where="modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sor-risk" data-canvas-dossier="sor_seventy_thirty" data-pick="2027,0" data-what-if="crash:global-financial-crisis-2007,2031" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p>The Modification editor beside the card holds the crash itself. Switch it on, pick an episode by the year its market peaked, and set the year the crash starts. The slider opens on the first retirement year, and its anchors mark the plan's start, each retirement and the end of the forecast.</p>
+<p><img class="lesson-media-ref ui-control lesson-media-generated" src="/designer-site/static/images/lessons/generated/sor-crash-editor.png" alt="Transforms' Sequence-of-returns risk editor as it opens once switched on: the 2007 episode selected, the Global Financial Crisis described as a deepest point of -43.7% over six replayed years, and the crash starting in 2031, Jordan's retirement year" data-media-id="sor-crash-editor" width="387" loading="lazy" decoding="async" /></p>
+<p>Each episode replays measured history. The S&amp;P 500 fund takes the index's actual total return year by year, from the fall through the recovery, and the Treasury fund takes the 10-year Treasury's. Every other holding follows through its <span class="lesson-term" data-term="correlation" tabindex="0"><span class="lesson-term-pill">correlation</span><span class="lesson-term-tip" role="tooltip">How closely two investments tend to move <strong>together</strong>, from −1 (opposite) through 0 (unrelated) to +1 (lockstep). Written <strong>ρ (rho)</strong>. It is what decides whether holding several things actually spreads risk: assets that all fall at once are less diversified than a count of holdings suggests.<a class="lesson-term-more" href="/designer-site/glossary/correlation">Full entry →</a></span></span> with those two. The Global Financial Crisis replays six years: a small loss, then a fall of about 41%, then a rebound of about 56%, and three more good years.</p>
+<p>Nothing in the plan changes. Transforms shows the plan as authored on one side and the plan with the crash on the other. On the balance-sheet chart the crash years are shaded red along the year axis, so you can always see where the crash sits. Here is Transforms' balance-sheet comparison for the 70/30 plan, with the crash where the editor first puts it, starting in 2031. The plan as authored is on the left under <em>Original</em>, the plan with the crash is on the right under <em>Modified</em>, and both sides share one scale, as they do in the app:</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-balance-sheet-7030.png" alt="Transforms' balance-sheet comparison for the 70/30 plan, as authored on the left under Original and with the Global Financial Crisis starting in 2031 on the right under Modified, on one shared scale: the Modified side dips sharply in 2032, Jordan's second year of retirement, the crash years 2031 to 2036 are shaded red on its year axis, and it ends visibly lower in 2057" data-media-id="sor-crash-balance-sheet-7030" data-where="output__transforms__forecaster.forecast-detail__bs-chart" data-canvas-dossier="sor_seventy_thirty" data-pick="2032,0" data-what-if="crash:global-financial-crisis-2007,2031" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p>On the Modified side, net worth falls by nearly a third in 2032, Jordan's second year of retirement, and does not climb back to its 2031 level until 2036. The two sides never meet again. By 2057 the plan with the crash ends about $670,000 below the plan without it.</p>
+</div>
+<h2 id="check-the-crashs-returns" class="lesson-section-head" style="--i:3"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="check-the-crashs-returns--body"><span class="lesson-section-title">Check the crash's returns</span></button></h2><div class="lesson-section-body" id="check-the-crashs-returns--body" role="region" aria-labelledby="check-the-crashs-returns" hidden>
+<p>A crash is easier to fear than to measure, and the yearly returns it replays can mislead the eye. Tutilis shows them item by item in the <strong>Realized returns</strong> check, which opens from this button on the balance-sheet chart's toolbar:</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-bs-toolbar.png" alt="The header of the balance-sheet chart on Transforms' Modified side, with the Realized returns button ringed in orange among the toolbar buttons at the right, between Close-up and copy" data-media-id="sor-crash-bs-toolbar" data-where="output__transforms__forecaster.forecast-detail__bs-chart" data-canvas-dossier="sor_seventy_thirty" data-pick="2030,0" data-what-if="crash:global-financial-crisis-2007,2030" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p>The button is on the chart in the Forecaster and on both sides of Transforms. Press it on the Modified side to see the returns with the crash in them.</p>
+<p>The check lists every holding, and every cash flow that grows, with what it earned in each year of the forecast. Select a row and its returns are charted year by year below the list, with the crash years shaded on the axis. Under that, the <strong>Growth of 1</strong> strip starts one unit of money at the selected year and compounds it through the returns that follow. Its buttons set how many years to follow, and <strong>Crash</strong> follows exactly the years the overlay replays. The seams between the three parts fold one away with a click, or move the boundary when dragged, when you want more room for the others.</p>
+<p>Here is the S&amp;P 500 fund in Jordan's brokerage, with the Global Financial Crisis starting in 2030:</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-returns-gfc.png" alt="The return check for the 70/30 plan with the Global Financial Crisis starting in 2030. The items table on top lists every holding and cash flow with its realized returns. The S&amp;P 500 fund in the brokerage is selected, and in the middle its yearly return chart drops to about -41% in 2031 and jumps to about +56% in 2032, and the Growth of 1 strip at the bottom falls from 1.0 to 0.56 in 2031, is still at 0.88 after the rebound year, and only passes 1.0 in 2033" data-media-id="sor-crash-returns-gfc" data-where="output__transforms__forecaster.forecast-detail__bs-chart__bs-chart.return-check" data-canvas-dossier="sor_seventy_thirty" data-pick="2030,0" data-what-if="crash:global-financial-crisis-2007,2030" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p>The returns chart makes the crash look like a fair trade. The fund loses about 41% in 2031 and gains about 56% in 2032, so the gain looks bigger than the loss. The Growth of 1 strip says otherwise. A dollar at the start of 2030 is worth 56 cents after the fall, and the 56% gain lifts it only to about 88 cents. A gain is a percentage of what is left, and after a 41% loss there is much less left for it to work on. It takes until 2033, the fourth year of the crash, for the dollar to be whole again.</p>
+<p>The Great Crash of 1929 makes the same point more forcefully. Here it is starting in 2031, Jordan's retirement year:</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-returns-1929.png" alt="The return check for the 70/30 plan with the Great Crash of 1929 starting in 2031. The S&amp;P 500 fund's yearly returns swing from -61% in 2033 to +140% in 2034 and keep swinging, with several gains of 50% or more. The Growth of 1 strip over the sixteen crash years falls to 0.21 in 2033, recovers only to 0.52 after the +140% year, and does not pass 1.0 again until 2045, ending at 1.28" data-media-id="sor-crash-returns-1929" data-where="output__transforms__forecaster.forecast-detail__bs-chart__bs-chart.return-check" data-canvas-dossier="sor_seventy_thirty" data-pick="2031,0" data-what-if="crash:great-crash-1929,2031" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p>The yearly returns look almost cheerful after the first three years. There is a gain of 140% in 2034 and two more gains of more than 50% later on. Averaged year by year, the sixteen replayed years return about 9% a year, which is better than the fund's ordinary expectation. The Growth of 1 strip tells the real story. The first three years take a dollar down to about 21 cents, the 140% year brings it back only to about 52 cents, and the dollar does not pass 1.0 again until 2045, the fifteenth year of the crash. Sixteen years that average 9% a year leave the dollar at about 1.28, where the fund's ordinary returns would have grown it to about 2.6.</p>
+<p>This is the trap in reading a chart of yearly returns. Large swings up and down seem to cancel, and the big recovery years seem to more than pay for the losses. They do not, because losses and gains multiply rather than add. A retiree is also selling through those years, so the money sold near the bottom is not there for the recovery at all. That is why the rest of this lesson measures crashes by what they do to net worth, and why the strip is worth a look whenever you test one.</p>
+<details class="lesson-math">
+<summary class="lesson-math-label">For the math lovers — why a 56% gain does not undo a 41% loss</summary>
+<div class="lesson-math-body">
+<p>Growth multiplies, so a run of yearly returns <span class="math">\(r_t\)</span> turns a dollar into</p>
+<p><span class="math">\[
+G = \prod_t (1 + r_t)
+\]</span></p>
+<p>In the Global Financial Crisis replay the dollar is at about 0.56 after the fall, and <span class="math">\(0.56 \times 1.56 \approx 0.88\)</span>.</p>
+<p>After a loss <span class="math">\(L\)</span>, the gain <span class="math">\(g\)</span> that gets back to even solves <span class="math">\((1-L)(1+g) = 1\)</span>:</p>
+<p><span class="math">\[
+g = \frac{L}{1-L}
+\]</span></p>
+<p>That is 69% after a 41% loss, 100% after a 50% loss and 400% after an 80% loss.</p>
+<p>The average that describes growth is the geometric one, <span class="math">\(G^{1/n} - 1\)</span>. The sixteen 1929 years average about 9% a year added up year by year, but <span class="math">\(1.28^{1/16} - 1 \approx 1.6\%\)</span> a year compounded. The fund's ordinary returns compound at <span class="math">\(2.6^{1/16} - 1 \approx 6.2\%\)</span>. The lesson <a href="/designer-site/learn/risk-vs-return-portfolio-chart">Risk and return</a> has the rule of thumb for that gap: the <span class="lesson-term" data-term="geometric-mean" tabindex="0"><span class="lesson-term-pill">geometric mean</span><span class="lesson-term-tip" role="tooltip">The <strong>compound</strong> growth rate that actually takes a starting balance to an ending one — the return you lived through rather than the one you were quoted. It is always at or below the <strong>arithmetic mean</strong>, equal only if every year is identical, and further below as volatility rises. This is the mean the product's north-star path is built on.<a class="lesson-term-more" href="/designer-site/glossary/geometric-mean">Full entry →</a></span></span> sits about half the variance below the arithmetic one.</p>
+</div>
+</details>
+</div>
+<h2 id="slide-the-crash" class="lesson-section-head" style="--i:4"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="slide-the-crash--body"><span class="lesson-section-title">Slide the crash</span></button></h2><div class="lesson-section-body" id="slide-the-crash--body" role="region" aria-labelledby="slide-the-crash" hidden>
+<p>The start year is the control that makes this analysis worth doing. Open <span class="lesson-nav-ref lesson-nav-ref--bs-table lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/bs-table.png" alt="BS Table" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">BS Table</span><span class="lesson-term-tip" role="tooltip">A <strong>Forecast Detail</strong> chip. <strong>BS</strong> = balance sheet for the <strong>selected year</strong> — real assets, accounts, liabilities, net worth. Copyable companion to BS Chart.</span></span> on the last year of the forecast, 2057, and leave it there. Then move the crash start one year at a time and watch the net-worth line at the top of the table.</p>
+<p>These are the end-of-forecast net worths on the <span class="lesson-term" data-term="gmf" tabindex="0"><span class="lesson-term-pill">GMF</span><span class="lesson-term-tip" role="tooltip">GMF ✦ (also FID 0 / GMF) is the product <strong>north star</strong> — the deterministic geometric mean forecast path you steer by, not a random Monte Carlo draw and not “most likely.” Prefer it for a stable year-by-year read of the plan. Switch away when you want to explore other <strong>randomized</strong> scenarios or paths in the multi-path cloud. The ✦ mark matches the live FID control (compass / north star, not a rating star).<a class="lesson-term-more" href="/designer-site/glossary/gmf">Full entry →</a></span></span> path, the forecast that takes each year's expected return, with the Global Financial Crisis starting in each year:</p>
+<table>
+<thead>
+<tr><th>Crash starts</th><th align="right">70/30</th><th align="right">Cash reserve</th><th align="right">60/40 rebalanced</th></tr>
+</thead>
+<tbody>
+<tr><td>No crash</td><td align="right">$3.10M</td><td align="right">$2.56M</td><td align="right">$2.65M</td></tr>
+<tr><td>2027</td><td align="right">$2.63M</td><td align="right">$2.17M</td><td align="right">$2.60M</td></tr>
+<tr><td>2029</td><td align="right">$2.54M</td><td align="right">$2.11M</td><td align="right">$2.52M</td></tr>
+<tr><td><strong>2030</strong></td><td align="right"><strong>$2.41M</strong></td><td align="right"><strong>$2.03M</strong></td><td align="right"><strong>$2.48M</strong></td></tr>
+<tr><td>2031</td><td align="right">$2.43M</td><td align="right">$2.04M</td><td align="right">$2.48M</td></tr>
+<tr><td>2033</td><td align="right">$2.52M</td><td align="right">$2.11M</td><td align="right">$2.50M</td></tr>
+<tr><td>2038</td><td align="right">$2.59M</td><td align="right">$2.16M</td><td align="right">$2.54M</td></tr>
+<tr><td>2045</td><td align="right">$2.65M</td><td align="right">$2.21M</td><td align="right">$2.51M</td></tr>
+</tbody>
+</table>
+<p>In every plan the worst year to start the crash is 2030, not 2031. The editor opens on the retirement year, but this episode's deep loss is its <em>second</em> year. Starting it in 2030 puts that loss on 2031, the first year Jordan lives on the portfolio. A crash that hits in 2027 still costs money, but Jordan is earning a salary through the fall and the rebound, and sells nothing at the bottom. A crash in 2045 lands on a portfolio that has already had years to grow and that Social Security is helping to support.</p>
+<p>It pays to slide the crash for each episode you test rather than trusting the default. The worst start year is the one that lines up the episode's worst year with the first year of withdrawals, and that depends on the episode's shape.</p>
+</div>
+<h2 id="a-cash-reserve" class="lesson-section-head" style="--i:5"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="a-cash-reserve--body"><span class="lesson-section-title">A cash reserve</span></button></h2><div class="lesson-section-body" id="a-cash-reserve--body" role="region" aria-labelledby="a-cash-reserve" hidden>
+<p>The <a href="#canvas-dossier:sor_cash_reserve">Cash reserve</a> plan is the most intuitive defense, and in this analysis it is the weakest of the three.</p>
+<p>The first reason shows up with no crash at all. Money market earns less than stocks or bonds, and $200,000 of it compounds more slowly for 26 years. With no crash the plan ends at $2.56 million against $3.10 million for 70/30. The reserve is insurance, and that gap is its premium, paid every year whether or not a crash comes.</p>
+<p>The second reason is that the reserve does not work the way it is meant to. Here is what the plan sells with the crash at its worst placement, starting in 2030, so that the bottom falls in 2031:</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-sales-2031-cash.png" alt="Sales and investments in 2031 for the cash-reserve plan during the crash: the reserve supplies only about $21,000 of the year's sales, and about $37,000 of S&amp;P 500 fund is still sold" data-media-id="sor-crash-sales-2031-cash" data-where="output__transforms__forecaster.forecast-detail__si-table" data-canvas-dossier="sor_cash_reserve" data-pick="2031,0" data-what-if="crash:global-financial-crisis-2007,2030" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p>The reserve supplies about $21,000 of the year's $91,000 of sales, and about $37,000 of S&amp;P 500 fund is still sold at the bottom. The plan's withdrawals are pro-rata, so it sells a slice of everything. Nothing tells it that the cash is for bad years. For comparison, the <a href="#canvas-dossier:sor_seventy_thirty">70/30</a> plan sells about $46,000 of stock in the same year:</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-sales-2031-7030.png" alt="Sales and investments in 2031 for the 70/30 plan during the crash: every holding is sold pro-rata, including about $46,000 of S&amp;P 500 fund across the two accounts" data-media-id="sor-crash-sales-2031-7030" data-where="output__transforms__forecaster.forecast-detail__si-table" data-canvas-dossier="sor_seventy_thirty" data-pick="2031,0" data-what-if="crash:global-financial-crisis-2007,2030" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p>This is not a quirk of the software. A reserve only helps if someone decides, in the middle of a crash, that this is the year to use it, and keeps deciding each year until the market recovers. Somebody also has to decide when to refill it. Tutilis has no rule of that kind, and the retiree needs one written down too. Without it, a reserve is simply a low-return holding.</p>
+</div>
+<h2 id="less-stock-and-a-rule" class="lesson-section-head" style="--i:6"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="less-stock-and-a-rule--body"><span class="lesson-section-title">Less stock, and a rule</span></button></h2><div class="lesson-section-body" id="less-stock-and-a-rule--body" role="region" aria-labelledby="less-stock-and-a-rule" hidden>
+<p>The <a href="#canvas-dossier:sor_sixty_forty_rebalanced">60/40 rebalanced</a> plan holds a little less stock and carries a rule. Its withdrawal strategy is <strong>Glide rebalance</strong>, set against a constant 60/40 target. Each year the plan compares its stock, bond and cash shares with the target. When it needs money it sells from whatever sits <em>above</em> target, and when it has money left over it buys whatever sits below.</p>
+<p>In a crash the stock share falls below its target and the bond share rises above it. The rule then pays for the year from bonds, without anyone deciding anything:</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-sales-2031-6040.png" alt="Sales and investments in 2031 for the 60/40 rebalanced plan during the crash: no S&amp;P 500 fund is sold, and the Treasury funds in both accounts are sold with the reason Glide rebalance" data-media-id="sor-crash-sales-2031-6040" data-where="output__transforms__forecaster.forecast-detail__si-table" data-canvas-dossier="sor_sixty_forty_rebalanced" data-pick="2031,0" data-what-if="crash:global-financial-crisis-2007,2030" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p>No S&amp;P 500 fund is sold in 2031. The whole year comes from the Treasury funds, each line marked <em>Glide rebalance</em>. That is what the cash reserve was supposed to do, and here it happens automatically.</p>
+<p>The table in the previous section shows what this is worth. The worst-placed crash costs the 70/30 plan about $690,000 of its final net worth and the reserve plan about $540,000. It costs the 60/40 rebalanced plan about $180,000. The rebalanced plan's column barely moves wherever the crash is placed. When the crash's deep year lands on retirement, with the crash starting in 2030 or 2031, it finishes ahead of both other plans. With the crash starting in 2029 it finishes just behind the 70/30 plan.</p>
+</div>
+<h2 id="which-part-does-the-work" class="lesson-section-head" style="--i:7"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="which-part-does-the-work--body"><span class="lesson-section-title">Which part does the work</span></button></h2><div class="lesson-section-body" id="which-part-does-the-work--body" role="region" aria-labelledby="which-part-does-the-work" hidden>
+<p>The 60/40 plan changed two things at once: less stock, and the rule. You can separate them in Transforms. Turn on the crash for the <a href="#canvas-dossier:sor_sixty_forty_rebalanced">60/40 rebalanced</a> plan, then select <strong>Money movements</strong> and set it back to <strong>Pro-rata</strong>. Read 2057 again.</p>
+<p><img class="lesson-media-ref ui-control lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-modifiables-sell-invest.png" alt="Transforms' Modifiables card on the Global tab with Money movements selected, which is the residual withdrawal strategy" data-media-id="sor-crash-modifiables-sell-invest" width="419" data-where="modifiable__transforms__transforms.modifications__transforms.modifiables" data-canvas-dossier="sor_sixty_forty_rebalanced" data-pick="2027,0" data-mod-row="Money movements" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Transforms → Modifiables on the 60/40 plan, with Money movements selected. That row is the withdrawal strategy. Setting it to Pro-rata turns the rebalance rule off and leaves the lower stock share in place.</p>
+<p>With the crash starting in 2030 and pro-rata withdrawals, the 60/40 plan ends at about $2.33 million. That is below the 70/30 plan's $2.41 million. On this path the lower stock share alone bought nothing. The rule did the work, because it stopped the plan from selling stock at the bottom.</p>
+<details class="lesson-advanced">
+<summary class="lesson-advanced-label">Advanced topic — reproduce the table from the command line</summary>
+<div class="lesson-advanced-body">
+<p>Every number in this lesson comes from <code>engine-cli</code>, which takes the same crash as a pair of flags. This is the 70/30 plan's worst cell in the table:</p>
+<pre><code>kotlin/gradlew -p kotlin :engine-cli:run --args=&quot;artifacts get forecast.balance-sheet --sample sor_seventy_thirty --this-year 2026 --year 2057 --overlay global-financial-crisis-2007 --overlay-start 2030 --format md&quot;
+</code></pre>
+<p>Change <code>--overlay-start</code> to walk the crash through the years. Add <code>--residual pro-rata</code> to the 60/40 plan's command to turn off the rule, which is what the Residual strategy modification does in the app.</p>
+<p>The Realized returns check has a table of its own. This prints every item's returns for the 1929 replay, with a growth column over the sixteen crash years that matches the Growth of 1 strip:</p>
+<pre><code>kotlin/gradlew -p kotlin :engine-cli:run --args=&quot;artifacts get forecast.item-returns --sample sor_seventy_thirty --this-year 2026 --overlay great-crash-1929 --overlay-start 2031 --year 2031 --window 16 --format md&quot;
+</code></pre>
+</div>
+</details>
+</div>
+<h2 id="a-thousand-paths" class="lesson-section-head" style="--i:8"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="a-thousand-paths--body"><span class="lesson-section-title">A thousand paths</span></button></h2><div class="lesson-section-body" id="a-thousand-paths--body" role="region" aria-labelledby="a-thousand-paths" hidden>
+<p>Everything so far used a single path: expected returns in every year except the crash. The <span class="lesson-term" data-term="monte-carlo" tabindex="0"><span class="lesson-term-pill">Monte Carlo</span><span class="lesson-term-tip" role="tooltip">The method behind a multi-path run: draw many randomized return paths, run the plan down each one, and read the spread of what happened. Named after the casino, because the engine is repeated random sampling rather than a formula — which is why two runs of one plan differ a little, and why a success rate is a proportion of sampled futures rather than a promise.<a class="lesson-term-more" href="/designer-site/glossary/monte-carlo">Full entry →</a></span></span> simulation runs a thousand paths with returns drawn at random, and the crash overlay applies to every one of them. The crash years are the same everywhere, and every other year varies.</p>
+<p>Without a crash, the three plans succeed on 96%, 98% and 98% of paths. The 60/40 rebalanced plan's median ending net worth is within about $100,000 of the 70/30 plan's, and its bad-tenth outcome is better by about $220,000. Across many paths, a rebalanced 60/40 costs much less than the single path suggested.</p>
+<p>The Global Financial Crisis barely moves those success rates, and it can even raise them slightly. The overlay replays the rebound as well as the fall, and six years with a known, fully recovered path replace six years that could have gone anywhere. A crash that recovers inside the overlay does not show up as failure.</p>
+<p>The episode that separates the plans is the Great Crash of 1929. It replays sixteen years, with a fall of nearly 80% and a long, uneven recovery. Placed at Jordan's retirement in 2031, success falls to about 52% for 70/30 and about 63% for the cash reserve. The 60/40 rebalanced plan still succeeds on about 75% of paths. The same 60/40 split with pro-rata withdrawals succeeds on about 63%. In a crash that deep and long, the smaller stock share and the rule both earn their keep.</p>
+</div>
+<h2 id="what-the-research-says" class="lesson-section-head" style="--i:9"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-the-research-says--body"><span class="lesson-section-title">What the research says</span></button></h2><div class="lesson-section-body" id="what-the-research-says--body" role="region" aria-labelledby="what-the-research-says" hidden>
+<p>These results agree with the published work on the question.</p>
+<p>Javier Estrada, in <em>The Bucket Approach for Retirement: A Suboptimal Behavioral Trick?</em> (2018), tested bucket strategies on 115 years of data from 21 countries. They did worse than simple static allocations that are rebalanced after each withdrawal, and their failure rates looked like those of a portfolio of about 90% stock. A bucket strategy moves money from stocks to bonds to cash but never back, so it never buys stock when stock is cheap. Rebalancing does.</p>
+<p>Wade Pfau and Michael Kitces, in <em>Reducing Retirement Risk with a Rising Equity Glide Path</em> (Journal of Financial Planning, 2014), showed that sequence risk is concentrated in the years around the retirement date. A portfolio that holds less stock at retirement and adds stock afterward survived more often than one that held a constant, higher share. That is the same finding as the slider's: the years around the retirement date are the ones to protect.</p>
+<p>A bucket still has a defense in its favor. It gives a nervous retiree a story that makes it easier not to sell stock in a crash, and behavior is a large part of how retirees actually fare. A written rebalancing rule makes the same promise with less money parked in cash, and it removes the decision that the bucket leaves open.</p>
+</div>
+<h2 id="what-this-cannot-tell-you" class="lesson-section-head" style="--i:10"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-this-cannot-tell-you--body"><span class="lesson-section-title">What this cannot tell you</span></button></h2><div class="lesson-section-body" id="what-this-cannot-tell-you--body" role="region" aria-labelledby="what-this-cannot-tell-you" hidden>
+<p>This analysis has limits, and they matter for how far to trust it.</p>
+<ul>
+<li><strong>Glide rebalance trades only the year's money.</strong> It sells overweight holdings when the plan needs money and buys underweight ones when it has money left over. It does not sell bonds to buy stock in a year with no net withdrawal, and it buys only in taxable accounts. A full annual rebalance, as in Estrada's study, would also buy stock inside the 401(k) after a crash.</li>
+<li><strong>There is no rule for &quot;use the cash in a down year.&quot;</strong> Tutilis cannot yet model a reserve that is spent only when the market has fallen and refilled when it recovers. A household that would follow such a rule faithfully may do better than the reserve plan here.</li>
+<li><strong>The crashes are replays.</strong> Each episode repeats one historical path exactly. The next crash will not look like any of them, and <span class="lesson-term" data-term="inflation" tabindex="0"><span class="lesson-term-pill">inflation</span><span class="lesson-term-tip" role="tooltip">A rise in the price level. The same basket of goods costs more dollars than it did. A household plan carries a growth rate on each bill, because one published inflation number is one basket. The reporting rate that restates future dollars into today's dollars is a separate assumption.<a class="lesson-term-more" href="/designer-site/glossary/inflation">Full entry →</a></span></span> is not replayed, which understates the 1973 episode in particular.</li>
+<li><strong>One household.</strong> A plan that leans more heavily on its portfolio, or that has a pension covering most of its spending, will feel the timing more or less than Jordan's does.</li>
+</ul>
+</div>
+<h2 id="what-to-take-away" class="lesson-section-head" style="--i:11"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-to-take-away--body"><span class="lesson-section-title">What to take away</span></button></h2><div class="lesson-section-body" id="what-to-take-away--body" role="region" aria-labelledby="what-to-take-away" hidden>
+<ul>
+<li>Yearly returns hide what a crash costs. A big gain after a big loss does not undo it, because a gain grows only what is left. Read the Growth of 1 strip in the Realized returns check to see what the crash actually did to each dollar.</li>
+<li>Sequence risk is about timing. A crash does the most damage when its worst year lands on the first years of withdrawals. Slide the crash in Transforms, keep the balance sheet on the last year, and find the start year that hurts most for each episode.</li>
+<li>A cash reserve with no rule for when to spend it is a low-return holding. It costs money every year and does little in the crash it was bought for.</li>
+<li>A standing rule to sell whatever is overweight does the job a reserve is meant to do, automatically, and it keeps buying stock back as the market recovers.</li>
+<li>Taking some risk off helps most in deep, long crashes. Paired with a rule, it gave Jordan the best result in almost every crash test here, at a modest cost in an ordinary market.</li>
+</ul>
+</div>
+</div>
+<details class="lesson-rebuild-by-hand"><summary><span class="lesson-rebuild-by-hand-summary-title">Rebuild this plan by hand</span></summary><div class="lesson-rebuild-by-hand-body"><p>The cards on the canvas show the accounts and cash flows. These are the settings that live outside any card, read from each plan this lesson opens, with the label each control carries in the app. A value marked default is one to leave alone.</p><table class="content-table">
+<thead>
+<tr>
+<th align="left">Setting</th>
+<th align="left">70/30</th>
+<th align="left">Cash reserve</th>
+<th align="left">60/40 rebalanced</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="4" align="center"><strong>Household</strong></td></tr>
+<tr>
+<td align="left">Planning region</td>
+<td align="left">United States (default)</td>
+<td align="left">United States (default)</td>
+<td align="left">United States (default)</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Jordan (Primary)</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1966</td>
+<td align="left">1966</td>
+<td align="left">1966</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">65</td>
+<td align="left">65</td>
+<td align="left">65</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">92</td>
+<td align="left">92</td>
+<td align="left">92</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Taxes</strong></td></tr>
+<tr>
+<td align="left">Tax regime</td>
+<td align="left">United States</td>
+<td align="left">United States</td>
+<td align="left">United States</td>
+</tr>
+<tr>
+<td align="left">Filing status</td>
+<td align="left">Single</td>
+<td align="left">Single</td>
+<td align="left">Single</td>
+</tr>
+<tr>
+<td align="left">State of residence</td>
+<td align="left">None</td>
+<td align="left">None</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">First-year federal estimate</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">First-year state estimate</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Strategy</strong></td></tr>
+<tr>
+<td align="left">Residual withdrawal strategy</td>
+<td align="left">Pro-rata (default)</td>
+<td align="left">Pro-rata (default)</td>
+<td align="left">Glide rebalance</td>
+</tr>
+<tr>
+<td align="left">Roth conversions</td>
+<td align="left">Off</td>
+<td align="left">Off</td>
+<td align="left">Off</td>
+</tr>
+<tr>
+<td align="left">Definition of success</td>
+<td align="left">Liquidity crises allowed (default)</td>
+<td align="left">Liquidity crises allowed (default)</td>
+<td align="left">Liquidity crises allowed (default)</td>
+</tr>
+<tr>
+<td align="left">Glide path target</td>
+<td align="left">None (default)</td>
+<td align="left">None (default)</td>
+<td align="left">Set (1 target allocation)</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">Target for 2026</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">Domestic stocks 58.2% · Bonds 38.8% · Cash 3%</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Advanced</strong></td></tr>
+<tr>
+<td align="left">Reporting inflation</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Cost of capital</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Growth assumptions</td>
+<td align="left">Growth overrides (default)</td>
+<td align="left">Growth overrides (default)</td>
+<td align="left">Growth overrides (default)</td>
+</tr>
+<tr>
+<td align="left">Currencies</td>
+<td align="left">Multiple currencies (default)</td>
+<td align="left">Multiple currencies (default)</td>
+<td align="left">Multiple currencies (default)</td>
+</tr>
+<tr>
+<td align="left">Default currency</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+</tr>
+<tr>
+<td align="left">Display currency</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+</tr>
+</tbody>
+</table>
+</div></details><div class="lesson-catalog-footer"><span class="lesson-region-badge" title="All regions"><span class="lesson-region-marker">🌐</span><span class="lesson-region-label muted">All regions</span></span><span class="lesson-tags"><span class="lesson-tags-label">Tags</span><span class="learn-chip">sequence-of-returns</span><span class="learn-chip">sor-risk</span><span class="learn-chip">crash</span><span class="learn-chip">cash-reserve</span><span class="learn-chip">bucket-strategy</span><span class="learn-chip">rebalancing</span><span class="learn-chip">glide-rebalance</span><span class="learn-chip">transforms</span><span class="learn-chip">tool-lesson</span><span class="learn-chip">return-check</span><span class="learn-chip">growth-of-1</span><span class="learn-chip">pfau</span><span class="learn-chip">kitces</span></span></div><p class="community-invite"><small>Questions, or want to hear what comes next? <a href="https://community.plusauri.com" target="_blank" rel="noopener noreferrer">Join us in the community</a></small></p><hr class="lesson-disclaimer-rule" /><blockquote class="lesson-shared lesson-disclaimer" cite="learning-center:disclaimer"><p><strong>Educational content — not advice.</strong> These lessons teach how Tutilis models a plan and how to read what it shows. The households, balances, and outcomes in them are invented for teaching. Nothing here is financial, investment, tax, or legal advice, or a recommendation to buy, sell, or hold anything. A model cannot know your circumstances — check anything you take from a lesson against your own situation, and against a qualified professional where it matters.</p></blockquote><p class="lesson-privacy-link"><small><a href="/designer-site/privacy">Privacy</a></small></p></div>
+      </section>
+      <div class="lesson-split-gutter" role="separator" aria-orientation="vertical" aria-label="Resize lesson and app panes" tabindex="0" data-plan-slot="0"></div>
+      <section class="app-pane" data-plan-slot="0" data-canvas-dossier="sor_seventy_thirty">
+        <p class="canvas-omitted muted">The interactive plan is not in this copy.</p>
+      </section>
+    </div>
+  </body>
+</html>

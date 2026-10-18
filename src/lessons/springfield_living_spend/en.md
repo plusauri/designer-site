@@ -168,7 +168,7 @@ Open [[nav:transforms]] → Modifications.
 
 Work on the right-hand Springfield plan.
 
-1. Open [[nav:forecaster]] → Simulation Summary. Note success under **Silver** — about **69%** on
+1. Open [[nav:forecaster]] → Simulation Summary. Note success under **Silver** — about **65%** on
    this plan, a near-miss, which is exactly what makes the lever visible — and a rough sense of
    [[term:terminal-wealth]] (**direction and order of magnitude only**).
 

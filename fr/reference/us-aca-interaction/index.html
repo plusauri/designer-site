@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ACA marketplace interaction — Reference — Tutilis</title>
-    <meta name="description" content="What MAGI does to marketplace premium tax credits — and the honest limit of what this engine models about it.">
+    <meta name="description" content="What MAGI does to marketplace premium tax credits, and how this engine prices the credit for a plan bought on the marketplace.">
     <meta name="robots" content="noindex, nofollow">
     <link href="https://www.plusauri.com/reference/us-aca-interaction" rel="canonical">
-    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
     <meta content="website" property="og:type">
     <meta content="Plusauri" property="og:site_name">
     <meta content="ACA marketplace interaction — Reference — Tutilis" property="og:title">
-    <meta content="What MAGI does to marketplace premium tax credits — and the honest limit of what this engine models about it." property="og:description">
+    <meta content="What MAGI does to marketplace premium tax credits, and how this engine prices the credit for a plan bought on the marketplace." property="og:description">
     <meta content="https://www.plusauri.com/reference/us-aca-interaction" property="og:url">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
 <script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
     <script src="/designer-site/static/lang.js" defer="defer"></script>
     <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
@@ -42,20 +42,21 @@
     <main class="container"><div class="reference-hub">
   <p class="catalog-crumb"><a href="/designer-site/reference"><span class="catalog-crumb-arrow" aria-hidden="true">←</span>All reference</a></p>
   <h1>ACA marketplace interaction</h1>
-  <p class="reference-lede">What MAGI does to marketplace premium tax credits — and the honest limit of what this engine models about it.</p>
+  <p class="reference-lede">What MAGI does to marketplace premium tax credits, and how this engine prices the credit for a plan bought on the marketplace.</p>
   <div class="reference-badges"><span class="reference-badge">Not year-keyed</span></div>
   <p class="reference-source">Source: HHS Poverty Guidelines — U.S. Department of Health and Human Services / ASPE</p>
   <p class="reference-source-url"><a href="https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines">https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines</a></p>
   <div class="reference-honesty reference-usage">
     <h3>Where we use this · Shown, not applied</h3>
     <ul>
-      <li>A warning is surfaced for any year with positive MAGI while a marketplace-shaped healthcare phase is active.</li>
-      <li>No premium tax credit is computed, and no healthcare cost changes as a result.</li>
+      <li>For a healthcare phase marked as a marketplace plan, the credit is the benchmark premium less the applicable percentage of ACA household income (AGI with all Social Security and tax-exempt interest added back), never more than the premium. From 2026 no credit is paid above 400% of the poverty line.</li>
+      <li>The credit is paid in advance on the income the year's flows project and reconciled on the year's return; excess advance is repaid in full with the next year's tax.</li>
+      <li>An unmarked phase that looks like marketplace coverage gets a warning for any year with positive MAGI, and no credit.</li>
     </ul>
   </div>
   <div class="reference-honesty">
     <h3>Not modeled</h3>
-    <p>The subsidy dollars themselves, and the ACA's own MAGI definition (which adds back tax-exempt interest, excluded foreign earned income, and untaxed Social Security in ways federal MAGI does not).</p>
+    <p>Medicaid (below 138% of the poverty line in expansion states), an employer offer that rules the credit out, cost-sharing reductions, state subsidies, excluded foreign earned income in ACA household income, and any phase not marked as a marketplace plan, which gets a warning instead of a credit.</p>
   </div>
   <div class="reference-table-wrap"><table class="content-table">
 <thead>
@@ -69,7 +70,7 @@
 <tr>
 <td align="left">ACA marketplace subsidy</td>
 <td align="left">Marketplace MAGI</td>
-<td align="left">MAGI can change ACA marketplace premium tax credits; subsidy response is not modeled.</td>
+<td align="left">MAGI can change ACA marketplace premium tax credits. This healthcare phase is not marked as a marketplace plan, so no credit is modeled for it.</td>
 </tr>
 </tbody>
 </table>

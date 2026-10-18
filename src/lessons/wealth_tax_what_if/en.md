@@ -172,7 +172,7 @@ The editor has five settings:
 | **Frequency** | Every year, every 5, 10 or 20 years, or once |
 | **Exclusions** | Leave residential real estate, retirement accounts or both out of the base |
 
-Each assessment year, the tax is measured on the household's year-end net worth, which is every account and property less every debt, after the exclusions and the exemption. It is paid the following year, the way the plan pays its other taxes, and it shows on the cash-flow chart as its own line. Nothing in the plan itself changes. Transforms shows the plan as authored under *Original* and the plan with the tax under *Modified*.
+Each assessment year, the tax is measured on the household's year-end net worth, which is every account and property less every debt, after the exclusions and the exemption. It is paid the following year, the way the plan pays tax on sales, distributions and investment income, and it shows on the cash-flow chart as its own line. Nothing in the plan itself changes. Transforms shows the plan as authored under *Original* and the plan with the tax under *Modified*.
 
 The editor charges one rate above one exemption. Warren's bill adds a second bracket, 3% above $1 billion, which the editor does not model. Nadia and Graham are well below $1 billion for most of their plan, so for them the single bracket is Warren's bill.
 

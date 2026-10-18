@@ -32,7 +32,7 @@ A Trump Account is a retirement account that belongs to the child. Under the sta
 - Anyone may contribute, but the total is capped at **$5,000 a year** across every contributor, of which an employer may put in up to $2,500. The cap is indexed for [[term:inflation]] from 2028. Contributions can begin in July 2026 and stop once the child turns 18.
 - A child born from 2025 through 2028 receives a one-time **$1,000 deposit** from the Treasury when the account is opened.
 - **Nothing can be withdrawn** before the year the child turns 18. There is no hardship exception and no penalty to pay instead. The money is simply not available.
-- From that year on it is an ordinary traditional IRA in the child's name. Withdrawals are taxed as ordinary income on the earnings, the parents' contributions come back as basis, and the usual pre-59½ rules apply.
+- From that year on it is an ordinary traditional IRA in the child's name. Withdrawals are taxed as [[term:ordinary-income|ordinary income]] on the earnings, the parents' contributions come back as basis, and the usual pre-59½ rules apply.
 
 Tutilis models each of those. The editor flags a contribution over the ceiling, offers the $1,000 deposit when the child's birth year qualifies, refuses to sell from the account before the child is 18, and taxes the earnings as ordinary income after.
 
@@ -75,7 +75,7 @@ Here is what it sells in each plan:
 
 With the Trump Account, the shortfall comes out of checking and the parents' brokerage account, and *For Ada* does not appear in the Sold column at all. It is not that the plan chose to spare it. The account was not on the list of things that could be sold, because in 2036 Ada is ten.
 
-With the brokerage instead, *For Ada* is one more taxable account, and the forecast's residual strategy sells from the taxable accounts in proportion to their size. More than a fifth of the shortfall, about $8,600, comes out of the account her parents meant for her. Nobody decided that. It is what happens to money that is reachable in a year when money is needed.
+With the brokerage instead, *For Ada* is one more taxable account, and the forecast's residual strategy sells from the taxable accounts in proportion to their size. Almost a third of the shortfall, about $12,400, comes out of the account her parents meant for her. Nobody decided that. It is what happens to money that is reachable in a year when money is needed.
 
 ## Ada at eighteen
 
@@ -85,7 +85,7 @@ By 2044 Ada is 18 and the contributions have stopped. Compare the two balance sh
 
 [[img:trump-account-balance-2044-brokerage]]
 
-The Trump Account is about $14,000 ahead. Every dollar of that gap traces back to the 2036 sale: the $8,600 that left the brokerage account would have compounded for another eight years, and it did not. Five years later, at 2049, the gap has grown to almost $19,000, and it keeps growing for as long as the money stays invested.
+The Trump Account is about $20,000 ahead. Every dollar of that gap traces back to the 2036 sale: the $12,400 that left the brokerage account would have compounded for another eight years, and it did not. Five years later, at 2049, the gap has grown to about $27,000, and it keeps growing for as long as the money stays invested.
 
 The household is not poorer for it. Total net worth is almost the same in both plans, because the 2036 shortfall was paid either way. What differs is *whose* money paid it. In one plan it came partly out of Ada's future; in the other, it could not.
 

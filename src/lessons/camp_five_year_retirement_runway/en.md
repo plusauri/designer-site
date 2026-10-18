@@ -72,7 +72,7 @@ The balance sheet shows the same cushion in dollars. Open [[nav:bs-table]] on th
 
 [[jump:balance-sheet|output]]
 
-On the plan's North Star path the couple hold about $2.44 million when the paychecks stop, roughly $440,000 more than the goal. The table rounds to $2.4MM; hover the pill beside Net Worth to see the exact figure. Their salaries pay the bills until then, so the portfolio only grows and receives their savings. The extra comes from expected returns well above the 3% they need. The brokerage account has also grown from $60,000 to about $140,000, because the plans invest the little each paycheck leaves over after spending and the 401(k) savings.
+On the plan's North Star path the couple hold about $2.48 million when the paychecks stop, roughly $480,000 more than the goal. The table rounds to $2.5MM; hover the pill beside Net Worth to see the exact figure. Their salaries pay the bills until then, so the portfolio only grows and receives their savings. The extra comes from expected returns well above the 3% they need. The brokerage account has also grown from $60,000 to about $180,000, because the plans invest the little each paycheck leaves over after spending and the 401(k) savings.
 
 <details class="lesson-math">
 <summary class="lesson-math-label">For the math lovers — where 2.95% comes from</summary>
@@ -144,9 +144,9 @@ The cash-flow chart of the [Glide path](#canvas-dossier:runway_glide) plan is th
 
 *Glide path: the salaries end in 2031, and Social Security arrives in 2040.*
 
-From 2032 through 2039 there is no income above the line at all. Every year of spending and health insurance is drawn from savings, and nearly all of the savings are in traditional 401(k)s, so every withdrawal is [[term:taxable-income|taxable income]]. Open [[nav:taxes]] and step through those years to see it. The withdrawals put the couple's [[term:magi|MAGI]] at about $183,000 in 2032 and about $160,000 in each of the next two years.
+From 2032 through 2039 there is no income above the line at all. Every year of spending and health insurance is drawn from savings, and nearly all of the savings are in traditional 401(k)s, so every withdrawal is [[term:taxable-income|taxable income]]. Open [[nav:taxes]] and step through those years to see it. The withdrawals put the couple's [[term:magi|MAGI]] at about $108,000 in 2032 and about $150,000 in each of the next two years.
 
-She sees the years from 62 to 70 as an opportunity, because with no salary the couple can choose how much taxable income to show. She points to 62 to 65 as the bigger problem. Until Medicare, the couple buy health insurance on the marketplace, and the help they get with the [[term:premium]] depends on their household income. Under the rules in force for 2026, a household with income above 400% of the federal poverty line gets no premium credit at all. Dan and Sarah's withdrawals put them at about six to seven times the poverty line in each of those three years, far over that line.
+She sees the years from 62 to 70 as an opportunity, because with no salary the couple can choose how much taxable income to show. She points to 62 to 65 as the bigger problem. Until Medicare, the couple buy health insurance on the marketplace, and the help they get with the [[term:premium]] depends on their household income. Under the rules in force for 2026, a household with income above 400% of the federal poverty line gets no premium credit at all. Dan and Sarah's withdrawals put them over that line in all three years, at about 4.4 times the poverty line in 2032 and about six times in 2033 and 2034, so the plan gets no premium credit in any of them.
 
 She does not suggest working out the tax bill to the dollar four years ahead, because too much will change. A rough map is enough to show where the gaps and the opportunities are, and four more years of salary leave time to act on them. The lesson [The years that change the rules](/learn/milestone_years) walks through each of these birthdays in more detail.
 
@@ -160,16 +160,16 @@ The [Full runway](#canvas-dossier:runway_full) plan makes that change from 2029,
 
 | MAGI | 2032, age 62 | 2033, age 63 | 2034, age 64 |
 |---|---:|---:|---:|
-| Glide path | about $183,000 | about $161,000 | about $160,000 |
-| Full runway | about $38,000 | about $26,000 | about $78,000 |
+| Glide path | about $108,000 | about $147,000 | about $156,000 |
+| Full runway | about $29,000 | about $20,000 | about $31,000 |
 
 [[jump:magi]]
 
-The redirect and the savings sweep keep MAGI under 400% of the poverty line in all three years before Medicare. The [Full runway](#canvas-dossier:runway_full) plan uses the **Tax-account order** withdrawal rule, which spends the taxable accounts, Savings and the brokerage account, before it touches a 401(k). A withdrawal from those accounts adds only its gain and interest to MAGI, so the couple show little income until 2034, when the taxable money runs out partway through the year and the 401(k)s pay the rest. The plan still follows its 50/50 glide path. Its **Rebalance inside tax-sheltered accounts** setting trades stock for bonds inside the 401(k)s each year, and a trade inside a 401(k) is not taxed.
+The redirect and the savings sweep keep MAGI under 400% of the poverty line in all three years before Medicare, and the premium credit then pays almost the whole premium, about $31,000 to $33,000 a year. The [Full runway](#canvas-dossier:runway_full) plan uses the **Tax-account order** withdrawal rule, which spends the taxable accounts, Savings and the brokerage account, before it touches a 401(k). A withdrawal from those accounts adds only its gain and interest to MAGI, so the couple show little income in all three years. The plan still follows its 50/50 glide path. Its **Rebalance inside tax-sheltered accounts** setting trades stock for bonds inside the 401(k)s each year, and a trade inside a 401(k) is not taxed.
 
 [[jump:withdrawal-order]]
 
-Income this low has a rule of its own. In 2033 the couple sit just above the poverty line, and in states that expanded Medicaid, adults below 138% of the poverty line qualify for Medicaid instead of a premium credit. A planner would usually draw some of the 401(k) in such a year, to stay above that line and to use the lowest tax brackets, and would save the brokerage account for later years. Tutilis does not yet have a withdrawal rule that fills income up to a chosen level, so the plan shows the simpler order.
+Income this low has a rule of its own. Texas did not expand Medicaid, so between 100% and 138% of the poverty line the couple still get the marketplace credit, as they do in 2032 and 2034. Below 100% there is normally no help at all, the gap between Medicaid and the credit, and in 2033 the couple fall below the line. They keep that year's credit only because it was paid in advance on the income they expected, and a household is not made to repay an advance because its income came in lower. A household that planned to show this little income would not get the advance in the first place. A planner would usually draw some of the 401(k) in such years, to stay above the poverty line and to use the lowest tax brackets, and would save the brokerage account for later years. Tutilis does not yet have a withdrawal rule that fills income up to a chosen level, so the plan shows the simpler order.
 
 ## Two years out: rehearse
 
@@ -185,7 +185,7 @@ The [Full runway](#canvas-dossier:runway_full) plan carries out the rehearsal fr
 
 [[jump:balance-sheet|output]]
 
-By the end of 2031 Savings holds about $208,000, almost two years of the couple's $108,000 retirement spending. Most of it is the rehearsal sweep. The rest is leftover pay, which this plan invests across the brokerage account and Savings in proportion to their balances. The rehearsal pays for the next checkpoint's cash reserve.
+By the end of 2031 Savings holds about $212,000, almost two years of the couple's $108,000 retirement spending. Most of it is the rehearsal sweep. The rest is leftover pay, which this plan invests across the brokerage account and Savings in proportion to their balances. The rehearsal pays for the next checkpoint's cash reserve.
 
 ## One year out: the system
 
@@ -199,17 +199,15 @@ Tutilis can show the first of these. The cash reserve is the Savings balance fro
 
 *Full runway: the money moved in 2032. Savings and the brokerage account pay for the year, while Dan's 401(k) trades stock for bonds inside the account.*
 
-Savings falls from about $208,000 at the end of 2031 to about $109,000 a year later and is empty by the end of 2034. The brokerage account falls alongside it, from about $210,000 to about $112,000, because the withdrawal rule draws the taxable accounts in proportion to their balances. The two rows below them are the glide path at work. Dan's 401(k) sells about $121,000 of its stock fund and buys the same amount of its Treasury fund, which keeps the household at 50/50 and is not taxed. The cash is the year of spending she asks the couple to set aside, and with the brokerage account it keeps their income low through all three years before Medicare. The rest of the list is paperwork, and no forecast can do it for the couple.
+Savings falls from about $212,000 at the end of 2031 to about $151,000 a year later and about $51,000 by the end of 2034. The brokerage account falls alongside it, from about $226,000 to about $165,000 and then about $59,000, because the withdrawal rule draws the taxable accounts in proportion to their balances. The two rows below them are the glide path at work. Dan's 401(k) sells about $121,000 of its stock fund and buys the same amount of its Treasury fund, which keeps the household at 50/50 and is not taxed. The cash is the year of spending she asks the couple to set aside, and with the brokerage account it keeps their income low through all three years before Medicare. The rest of the list is paperwork, and no forecast can do it for the couple.
 
 [[jump:glide-path|output__forecaster__forecaster.forecast-detail__si-table__line.reason.sheltered-rebalance]]
 
 ## Where the tools differ
 
-Her video does not name the planning software she used, and the plans here supply numbers she did not give, so some differences are expected. Four are worth knowing about.
+Her video does not name the planning software she used, and the plans here supply numbers she did not give, so some differences are expected. Two are worth knowing about.
 
-- **Health insurance subsidies.** Tutilis does not calculate the marketplace premium credit. The plans carry an unsubsidized premium for the years from 62 to 65, and Tutilis flags those years with a note that the premium depends on income. The MAGI in the table above is what decides the credit, and comparing it with the 400% line is as far as the forecast goes.
-- **401(k) deferrals.** Tutilis does not yet subtract an employee's [[term:pre-tax]] 401(k) deferrals from taxable wages. The working-year tax in these plans is therefore too high by roughly the deferral times the couple's tax rate, and so is the first retirement year, which pays the last working year's tax. The later retirement years are not affected.
-- **When tax is paid.** Tutilis pays each year's tax in the following year, so the first retirement year also pays the tax on the last year's salary. A real household pays most of that tax through withholding.
+- **Medicaid.** Tutilis calculates the marketplace premium credit, but it does not model Medicaid. The couple live in Texas, which did not expand Medicaid, so the plans are right to show the credit for incomes between 100% and 138% of the poverty line. In a state that did expand it, those same years would bring Medicaid instead of the credit. The credit also assumes the plan's own premium is the benchmark silver plan, so the dollars are an estimate of the credit and not a quote.
 - **Expected returns.** The plans use Tutilis's own growth assumptions, which expect more than the 3% the couple need, so the middle path ends above $2 million. Her point is the 3% the plan needs, and these plans agree with it.
 
 ## What to take away
@@ -217,7 +215,7 @@ Her video does not name the planning software she used, and the plans here suppl
 Her checklist works because each check comes early enough to change the outcome. The forecast confirms the three that can be measured:
 
 - The couple need only about a 3% return, so a glide path costs little and narrows the range of outcomes at the retirement date.
-- With the money almost all in traditional 401(k)s, every withdrawal from 62 to 70 is taxable income, and the three years before Medicare put their income far over the health-subsidy line.
-- Sweeping the difference into savings during a budget rehearsal leaves more than a year of cash on the day the paychecks stop. Spending that cash and the brokerage account before the 401(k)s keeps income under that line in all three of those years, and trades inside the 401(k)s keep the glide path while they do.
+- With the money almost all in traditional 401(k)s, every withdrawal from 62 to 70 is taxable income, and the three years before Medicare put their income over the health-subsidy line, so they pay the full premium.
+- Sweeping the difference into savings during a budget rehearsal leaves more than a year of cash on the day the paychecks stop. Spending that cash and the brokerage account before the 401(k)s keeps income under that line in all three of those years, which earns a premium credit of nearly the whole premium, and trades inside the 401(k)s keep the glide path while they do.
 
 The other two checks, living on the budget before it is real and setting up the monthly transfer, are habits rather than numbers, and they are the ones she finds people skip.

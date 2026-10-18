@@ -224,26 +224,21 @@ On the 2026 tables, the extra Social Security tax each year is 6.2% × ($300,000
 
 ### Cash flows under the what-if (Transforms → Cash Flow table)
 
-The app **charges** tax for one year and **pays** it the following year. So the higher Social Security tax on the Modified side does not reach cash flow right away.
+Social Security tax is withheld from every paycheck, so the app pays it in the year it is charged, along with the rest of the tax on wages. The higher Social Security tax on the Modified side reaches cash flow right away.
 
-Stay on Transforms with the cap eliminated. Turn **off** every Forecast Detail chip except the **Cash Flow table**, and stay on **2027**. The two tables are **identical**:
+Stay on Transforms with the cap eliminated. Turn **off** every Forecast Detail chip except the **Cash Flow table**, and move to **2028**, a full working year. Alex's tax is higher on the Modified side. The extra Social Security tax is part of the **Income tax** line, not a separate row:
 
-[[img:sswb-transforms-cf-2027-identical]]
+[[img:sswb-transforms-cf-2028-withheld]]
 
-This is expected. Nothing has changed in cash yet. The Modified side owes more tax for 2027, but that bill is paid in 2028, where it shows up as an **Income tax** outflow.
-
-Move to **2028**. Now Alex's tax bill is higher on the Modified side. The extra Social Security tax is part of the **Income tax** line, not a separate row:
-
-[[img:sswb-transforms-cf-2028-tax-lag]]
-
-> **Notice the color.** When the Modified side differs from the Original, its card gets a soft colored wash. Compare it to the 2027 picture above, where the tables are identical and the Modified card stays plain. The wash tells you at a glance whether a number moved. For a **table**, the app compares only the **selected year**, which is why the 2027 pair has no wash and the 2028 pair does.
+> **Notice the color.** When the Modified side differs from the Original, its card gets a soft colored wash. The wash tells you at a glance whether a number moved. For a **table**, the app compares only the **selected year**, so step through the years and watch for the wash.
 
 | Year | Original Income tax | Modified Income tax |
 |------|---------------------|---------------------|
-| 2027 | e.g. ~$100k | **Same**, because the bill has not been paid yet |
-| 2028 | e.g. ~$98.9k | **Higher**, e.g. ~$105.8k |
+| 2028 | e.g. ~$98.3k | **Higher**, e.g. ~$104.8k |
 
-From **2028** until Alex retires around **2050**, **Income tax** stays higher on the Modified side, because the extra Social Security tax comes due every working year. If both sides still match, the what-if did not apply. Check the box again and wait for the Modified side to recompute.
+The first forecast year, 2027, is different. It pays the plan's own estimate of the year's tax, $100,000, unless the tax withheld from that year's paychecks is more. On the Modified side it is more, so 2027 is higher there too, but by less than the extra Social Security tax.
+
+From **2027** until Alex retires around **2050**, **Income tax** stays higher on the Modified side, because the extra Social Security tax comes due every working year. If both sides still match, the what-if did not apply. Check the box again and wait for the Modified side to recompute.
 
 ### Same story in Monte Carlo (Simulation Summary)
 
@@ -388,22 +383,15 @@ The statement has no single "SE tax" line. The **self-employment tax total** is 
 
 With no cap, the **12.4%** Social Security rate keeps going above the wage base. That costs more each year than the employee's **$7,161**, because the self-employed person pays both halves. Ordinary income tax falls a little, because half of the extra tax is deductible.
 
-### Cash flows: first year vs next year (tax lag)
+### Cash flows: paid the same year
 
-The lag is the same as for W-2 income. Tax is charged for one year and paid the next. On Transforms with the cap eliminated, turn on only the **CF table**:
+Self-employment tax works the same way as the W-2 withholding. It is paid during the year in quarterly estimates, so it reaches cash in the year it is charged. On Transforms with the cap eliminated, turn on only the **CF table** and move to **2028**:
 
-- **2027**: The Original and Modified tables are **identical**, because the bill has not been paid yet.
-- **2028**: The Modified **Income tax** outflow is **higher**.
+[[img:sswb-se-transforms-cf-year2-withheld]]
 
-[[img:sswb-se-transforms-cf-year1-identical]]
+*2028: The wash appears, and **Income tax** is the line that changed. The extra self-employment tax never gets its own row. It arrives inside the year's tax payment.*
 
-*2027: The two sides match to the dollar, and the Modified card has **no** colored wash. Nothing has moved in cash yet.*
-
-[[img:sswb-se-transforms-cf-year2-tax-lag]]
-
-*2028: The wash appears, and **Income tax** is the line that changed. The extra self-employment tax never gets its own row. It arrives inside the tax bill, one year late.*
-
-In the working years after 2028, the Modified tax outflow stays higher until the self-employment income stops.
+In every working year, the Modified tax outflow stays higher until the self-employment income stops.
 
 ### Monte Carlo (Simulation Summary)
 
@@ -458,7 +446,7 @@ Switch between **[W-2](#canvas-dossier:ss_wage_cap_w2_sample)** and **[Self-empl
 | GMF and first year | Gold star under FID, red flag under Year, **2027** |
 | Forecaster Taxes | Social Security tax ~**$11.4–11.7k** (capped), Medicare on the **full** $300k |
 | Transforms and Tax, on **2027** | Modified Social Security tax ~**$18.6k**, ordinary income tax unchanged |
-| Transforms CF lag | 2027 identical, 2028 Modified **Income tax** higher |
+| Transforms CF table | 2028 Modified **Income tax** higher, the same year |
 | Transforms Monte Carlo | Modified success rate lower than Original under Silver |
 
 ### Self-employed plan
@@ -469,7 +457,7 @@ Switch between **[W-2](#canvas-dossier:ss_wage_cap_w2_sample)** and **[Self-empl
 | Forecaster Taxes | AGI **below** $300k (~$284k), Social Security and Medicare basis **$277,050**, ordinary income tax ~**$62k** |
 | Transforms and Tax, on **2027** | Modified Social Security tax up, ordinary income tax a little **lower**, total tax **higher** |
 | Inspect schedules | Cap rung on Original, **6.2%** all the way up on Modified |
-| CF lag | 2027 identical, 2028 Modified taxes higher |
+| CF table | 2028 Modified taxes higher, the same year |
 | Monte Carlo | Modified success rate lower than Original under Silver |
 
 ---

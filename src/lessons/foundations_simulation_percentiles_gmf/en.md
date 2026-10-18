@@ -221,13 +221,13 @@ The **Simulation Summary** reduces the thousand futures to a few numbers about w
 
 *Key Forecasts for [Jordan, 70/30](#canvas-dossier:monte_carlo_jordan): the worst future, the quartiles, the North Star path (✦), the mean, and the best future.*
 
-A [[term:percentile]] is a position along that sorted line. The 10th percentile, P10, is the ending that only one future in ten falls below. The 50th percentile is the [[term:median]], the middle future. The 90th percentile is the ending that only one in ten beats. For Jordan, the median ending is about **$3.09 million**, P10 is about **$517,000** and P90 is about **$12.7 million**.
+A [[term:percentile]] is a position along that sorted line. The 10th percentile, P10, is the ending that only one future in ten falls below. The 50th percentile is the [[term:median]], the middle future. The 90th percentile is the ending that only one in ten beats. For Jordan, the median ending is about **$3.21 million**, P10 is about **$580,000** and P90 is about **$13.0 million**.
 
-The North Star path, marked ✦, ends at about **$2.98 million**, the 492nd of the thousand. It sits just below the median, as the math in the earlier section predicts. The **mean** is about **$5.03 million**, far above the median, and the next section explains why.
+The North Star path, marked ✦, ends at about **$3.10 million**, the 492nd of the thousand. It sits just below the median, as the math in the earlier section predicts. The **mean** is about **$5.18 million**, far above the median, and the next section explains why.
 
 The **Outcome** reports Downside (P10) and Upside (P90) beside the median, and the forecast uses that pair everywhere for a reason. Risk lives in the tail. A one-in-ten bad outcome is what a careful plan should be ready for, and a narrower pair such as P30 and P70 would describe the comfortable middle while saying nothing about the futures that hurt. P10 can come out below zero on a plan that spends hard, because in those futures the plan keeps spending after the money is gone and borrows to cover the shortfall. That negative number is real information. It is the size of the hole in a bad one-in-ten future.
 
-The [[term:success-rate]] counts the futures that end with net worth above zero. Jordan's plan succeeds in **95.6%** of them. It is a count of simulated futures, and the last section says what it does and does not mean for one real life.
+The [[term:success-rate]] counts the futures that end with net worth above zero. Jordan's plan succeeds in **96.4%** of them. It is a count of simulated futures, and the last section says what it does and does not mean for one real life.
 
 Every point in Key Forecasts is a whole future you can open. Click a row and every view focuses on that forecast: the balance-sheet and cash-flow charts redraw for that future, bad years and all. The forecast entry in the strip at the top of the forecaster takes any Forecast ID the same way, and setting it back to 0 returns to the North Star path.
 
@@ -237,7 +237,7 @@ Every point in Key Forecasts is a whole future you can open. Click a row and eve
 
 ## Why the outcome leans right
 
-Jordan's thousand endings are lopsided. Half of them end between about $1.3 million and $6.6 million, a few stretch out to tens of millions, and the left side stops much sooner. The mean sits far to the right of the median because those few huge outcomes pull it there. That shape is not a quirk of this plan. It is what compounding does to randomness, and the [One stock fund](#canvas-dossier:monte_carlo_one_fund) plan shows it with nothing else in the way.
+Jordan's thousand endings are lopsided. Half of them end between about $1.42 million and $6.73 million, a few stretch out to tens of millions, and the left side stops much sooner. The mean sits far to the right of the median because those few huge outcomes pull it there. That shape is not a quirk of this plan. It is what compounding does to randomness, and the [One stock fund](#canvas-dossier:monte_carlo_one_fund) plan shows it with nothing else in the way.
 
 Start with one year. The fund's return for the year is drawn from a bell curve, so its value after one year is a bell curve too. The thousand outcomes spread almost evenly either side of about $107,000. The median is $107,500, the mean is $107,400, and the middle half runs from $96,500 to $118,100, about $11,000 either side. **After one year, the distribution is normal**, because the return itself is drawn from a normal distribution and nothing has compounded yet.
 
@@ -299,7 +299,7 @@ As the count climbs, the entry shades from its usual color toward red. The shadi
 
 The first reason is time. Ten thousand futures take about ten times as long as a thousand, every time the plan is re-simulated.
 
-The second reason matters more. A bigger run is not a better answer. The middle of the distribution barely moves, while the extremes keep growing. Run Jordan's plan with ten thousand futures and the median moves from $3.09 million to $3.08 million, and the success rate from 95.6% to 95.5%. The best future, though, goes from about $40 million to about $93 million. Ten times as many futures means ten times as many chances to draw one astonishing run of years, and the most extreme of them lands somewhere further out.
+The second reason matters more. A bigger run is not a better answer. The middle of the distribution barely moves, while the extremes keep growing. Run Jordan's plan with ten thousand futures and the median moves from $3.21 million to $3.20 million, and the success rate from 96.4% to 96.2%. The best future, though, goes from about $40 million to about $93 million. Ten times as many futures means ten times as many chances to draw one astonishing run of years, and the most extreme of them lands somewhere further out.
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">
@@ -324,7 +324,7 @@ The math behind those extreme futures is sound. A future in which stocks return 
 <summary class="lesson-math-label">For the math lovers — what more futures buy</summary>
 <div class="lesson-math-body">
 
-A success rate measured from \(N\) futures has a standard error of \(\sqrt{p(1-p)/N}\). For \(p = 0.956\) and \(N = 1{,}000\) that is about 0.65 points, so the true rate under the model's assumptions is within about ±1.3 points of the reported one 95% of the time. Ten thousand futures shrink that to about ±0.4 points. Precision improves only with \(\sqrt{N}\), so each extra digit of precision costs a hundred times the runs.
+A success rate measured from \(N\) futures has a standard error of \(\sqrt{p(1-p)/N}\). For \(p = 0.964\) and \(N = 1{,}000\) that is about 0.59 points, so the true rate under the model's assumptions is within about ±1.2 points of the reported one 95% of the time. Ten thousand futures shrink that to about ±0.4 points. Precision improves only with \(\sqrt{N}\), so each extra digit of precision costs a hundred times the runs.
 
 The extremes behave differently. For a normal distribution, the largest of \(N\) draws sits about \(\sqrt{2 \ln N}\) standard deviations above the mean, so it keeps creeping outward as \(N\) grows, with no limit. On a lognormal distribution that creep happens in the logarithm, so each step outward multiplies the maximum by a large factor. On the one-fund plan over forty years, the log of wealth has a standard deviation of about 0.97. Moving from the largest of a thousand to the largest of ten thousand adds about 0.57 standard deviations in the log, which on average multiplies the maximum by about 1.7. Any one run varies widely around that, because a maximum is a single draw. The median does not move at all, because it was never in the tail.
 
@@ -345,7 +345,7 @@ A Monte Carlo forecast is a careful way to reason about chance. It is still a mo
 
 **The plan follows its script.** In every future the household spends what the plan says and withdraws the way the plan says. Real people adjust, cutting back after a bad year and spending more after a good run, and that flexibility is one of the strongest protections a retiree has.
 
-**A success rate is not a promise.** Jordan will live one future, not a thousand. A 95.6% success rate says that 956 of the thousand simulated futures ended above zero under these assumptions. It does not say that the real future has a 95.6% chance, and it says nothing about how bad the other 44 futures were. Read the success rate beside the downside, which shows how deep the failures go.
+**A success rate is not a promise.** Jordan will live one future, not a thousand. A 96.4% success rate says that 964 of the thousand simulated futures ended above zero under these assumptions. It does not say that the real future has a 96.4% chance, and it says nothing about how bad the other 36 futures were. Read the success rate beside the downside, which shows how deep the failures go.
 
 None of this makes the forecast less useful. It makes it a tool with a known shape. Use the North Star path to understand the plan, the thousand futures to see its spread, and Transforms to push on the risks that the dice treat as rare.
 

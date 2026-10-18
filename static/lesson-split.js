@@ -1278,6 +1278,8 @@
     const prose = document.getElementById("lesson-prose");
     if (!prose) return;
     const lessonId = prose.getAttribute("data-lesson-id") || "";
+    // Links arrive as /learn/<slug>; the id still matches for drafts, which serve at their id.
+    const lessonSlug = prose.getAttribute("data-lesson-slug") || lessonId;
     prose.querySelectorAll("a[href]").forEach(function (a) {
       const href = (a.getAttribute("href") || "").trim();
       a.classList.remove("lesson-leave-link");
@@ -1289,7 +1291,7 @@
         const path = href.replace(/^https?:\/\/[^/]+/, "");
         const m = path.match(/^\/?learn\/([^/?#]+)/);
         const targetId = m ? m[1] : "";
-        if (targetId && targetId === lessonId) return;
+        if (targetId && (targetId === lessonSlug || targetId === lessonId)) return;
         a.classList.add("lesson-leave-link");
         return;
       }
@@ -1318,7 +1320,7 @@
    * KEEP `SHORTCUT_LETTERS` equal to `AppShortcut.entries`' letters (tutil-ui `AppShortcuts.kt`);
    * `AppShortcutsTest` (tutil-ui) holds the two together.
    */
-  const SHORTCUT_LETTERS = "GRHPBEDIKFMTLU";
+  const SHORTCUT_LETTERS = "GRHBEDIKFMTLU";
 
   function isMacBrowser() {
     const platform = (navigator.platform || "");

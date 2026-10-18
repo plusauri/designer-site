@@ -30,7 +30,7 @@ each appears, and walks a live sample where income is high enough for the cliffs
 | **IRMAA** | Medicare Part B/D **premium steps** from MAGI **two years prior** | Cash flow — **healthcare surcharge** (not a tax line) |
 | **Additional Medicare (0.9%)** | Extra tax on high **earned** income | Federal tax statement, next to base Medicare |
 | **NIIT (3.8%)** | Surtax on net investment income above a MAGI threshold | Federal tax statement — explicit line |
-| **ACA marketplace** | Premium tax credits move with MAGI | **Warning only** — subsidy **not** modeled |
+| **ACA marketplace** | Premium tax credits move with MAGI | Priced for a healthcare phase marked as a marketplace plan; otherwise a **warning** only |
 | **AMT** | Sparse Form 6251–shaped floor (AMTI ≈ AGI) | Explicit AMT line when owed (often $0) |
 
 The live plan on the right is **Banks MAGI Cliffs** (`magi_cliffs_sample`): **Philip and Vivian**
@@ -74,7 +74,7 @@ When retirement income is large, can I open the **federal tax statement** and **
 1. **AGI** and **MAGI** as audit rows (MAGI equals AGI when there is no tax-exempt interest)?
 2. **NIIT** and **Additional Medicare** as **explicit** assessed lines — not folded into ordinary tax?
 3. **IRMAA** as a **healthcare** outflow driven by **two-year-lookback** MAGI — not as “more income tax”?
-4. An honest note that **[[term:aca]] subsidies** are **not** modeled when marketplace-shaped healthcare is active?
+4. An honest note that **[[term:aca]] subsidies** are **not** modeled when marketplace-shaped healthcare is active but not marked as a marketplace plan?
 
 ---
 
@@ -210,11 +210,14 @@ This sample is Medicare-age, so the early-penalty line should stay dark.
 Sparse AMT ([[term:amti]] ≈ AGI, no preference add-backs) may appear when tentative minimum exceeds regular
 income tax. On many realistic samples it is **$0**. It is **not** the star of this lesson.
 
-### ACA (warning only)
+### ACA
 
-When MAGI is positive and a marketplace / private pre-Medicare healthcare phase is active, the
-engine may record an honesty note: MAGI can change premium tax credits, and **we do not model the
-subsidy response**. Full ACA math is a separate commitment.
+When a healthcare phase is marked as a marketplace plan, the engine prices the premium tax credit
+from the household's income, the poverty line and the benchmark premium, and the year's Cash Flow
+shows it as its own income line. The [five-year runway](/learn/camp_five_year_retirement_runway)
+lesson walks through one. When a marketplace-looking phase is not marked, the engine records an
+honesty note instead: MAGI can change premium tax credits, and this phase gets none. This sample is
+on Medicare, so neither applies to it.
 
 ---
 
@@ -230,7 +233,7 @@ Use this checklist to audit a high-income year on the sample.
 | Additional Medicare | Own line only when earned income exceeds threshold |
 | IRMAA | Cash-flow healthcare surcharge in years with lookback + enrollees + high prior MAGI |
 | Early penalty | Label admits exemptions not modeled; $0 when not early |
-| ACA | Warning / note only — no invented subsidy dollars |
+| ACA | No credit on this Medicare sample; priced only for a marked marketplace plan, a note for an unmarked one |
 
 ---
 
@@ -240,7 +243,7 @@ This lesson deliberately makes no claim about the following:
 
 - Full Form 8960 / 8959 / 6251 fidelity
 - IRMAA life-changing-event appeals
-- ACA [[term:premium-tax-credit]] dollars
+- ACA [[term:premium-tax-credit]] dollars for a healthcare phase not marked as a marketplace plan, or Medicaid
 - Early-withdrawal exemption matrix
 
 Those omissions are product honesty, not missing polish.

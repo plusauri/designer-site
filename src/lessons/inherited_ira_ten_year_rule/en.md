@@ -112,7 +112,7 @@ Taking only the minimum feels like the careful choice, because each year's distr
 
 [[img:inherited-brackets-minimum]]
 
-Jordan's top rate that year is **35%**, against 22% in every year before it. The federal bill for 2035 is paid the following spring, so the forecast shows **$245,893** of taxes paid in 2036, more than ten times a normal year. Most of the inheritance that came out in 2035 was taxed in the two highest [[term:bracket|brackets]] Jordan will ever see.
+Jordan's top rate that year is **35%**, against 22% in every year before it. The tax on that distribution is paid the following spring, so the forecast shows **$245,619** of taxes paid in 2036, more than ten times a normal year. Most of the inheritance that came out in 2035 was taxed in the two highest [[term:bracket|brackets]] Jordan will ever see.
 
 ## Spreading it out
 
@@ -120,7 +120,7 @@ The rules set a floor and a deadline, but nothing stops Jordan from taking more 
 
 [[img:inherited-brackets-even]]
 
-Each year now carries a slice of the inheritance instead of one year carrying all of it. Jordan's top rate is **24% in every year** from 2027 through 2035 and never reaches the 32% or 35% brackets. Spreading the withdrawals costs more tax in the early years, because Jordan pays 24% on money that would otherwise have waited. But it saves far more at the end. Over the ten years of tax bills from 2028 through 2036, Jordan pays about **$92,000 less** on [Even over ten years](#canvas-dossier:inherited_ira_even) than on [Minimum required](#canvas-dossier:inherited_ira_minimum).
+Each year now carries a slice of the inheritance instead of one year carrying all of it. Jordan's top rate is **24% in every year** from 2027 through 2035 and never reaches the 32% or 35% brackets. Spreading the withdrawals costs more tax in the early years, because Jordan pays 24% on money that would otherwise have waited. But it saves far more at the end. The tax on each year's withdrawal is paid the following year, so those bills fall from 2028 through 2036. Over those years, Jordan pays about **$92,000 less** on [Even over ten years](#canvas-dossier:inherited_ira_even) than on [Minimum required](#canvas-dossier:inherited_ira_minimum).
 
 This is the same idea as filling the cheap brackets, which the lesson [Filling the cheap buckets](/learn/filling_the_cheap_buckets) covers in depth. The inheritance has to be taxed at some point within ten years, so the question is only which brackets it is taxed in. An even pace is a simple rule rather than an optimized one. A year with unusually low income, such as a sabbatical or the first year of retirement, is a good year to take more.
 
@@ -137,7 +137,7 @@ On [Even over ten years](#canvas-dossier:inherited_ira_even), the blue required-
 
 The third plan changes only the account type. [Inherited Roth](#canvas-dossier:inherited_roth_minimum) starts with the same $500,000, but as an [[term:inherited-roth-ira|inherited Roth IRA]]. Because a Roth owner always counts as having died before the required beginning date, Jordan owes no distribution from 2027 through 2034. The whole balance comes due in 2035.
 
-That changes the best strategy completely. Distributions from an inherited Roth are generally tax-free, so there is no bracket to manage and no reason to spread them out. Leaving the account alone lets it grow tax-free for the full ten years. By 2035 it has grown to **$887,415**, and Jordan moves all of it into the brokerage account without adding a dollar to [[term:taxable-income|taxable income]]. His top rate stays at 22% throughout.
+That changes the best strategy completely. Distributions from an inherited Roth are generally tax-free, so there is no bracket to manage and no reason to spread them out. Leaving the account alone lets it grow tax-free for the full ten years. By 2035 it has grown to **$888,664**, and Jordan moves all of it into the brokerage account without adding a dollar to [[term:taxable-income|taxable income]]. His top rate stays at 22% throughout.
 
 The tax-free treatment depends on the Roth having been open for five years, counted from the original owner's first contribution rather than from the death. Nearly every inherited Roth clears that bar. If it does not, only the earnings are taxable until the five years are up, and contributions still come out tax-free first.
 

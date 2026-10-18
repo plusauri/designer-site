@@ -252,7 +252,7 @@ tax lens: [[nav:path:taxes|cliffs|brackets]]
 | [[nav:cf-table]] | Incomes, expenses, taxes and net disposition for the selected year. |
 | [[nav:si-chart]] | What was sold, invested, or borrowed across the years. |
 | [[nav:si-table]] | Holding-level trades for the selected year, with a **Why** for each. |
-| [[nav:taxes]] | What the year actually owed, federal and state. A year's assessment is often **paid the next year**, so it need not match that year's cash-flow Taxes line. |
+| [[nav:taxes]] | What the year actually owed, federal and state. The tax on a year's earnings is paid that year, but the rest of its assessment is **paid the next year**, so it need not match that year's cash-flow Taxes line. |
 | [[nav:rec]] | The proof the year adds up: sources of cash equal uses. Open this when a cash-flow year looks wrong. |
 | [[nav:brackets]] | One year's income stacked into the ordinary brackets, and the **room left** under a ceiling you pick. |
 | [[nav:cliffs]] | How close the year runs to each modeled threshold — the [[term:niit]] floor, the IRMAA line — across the whole horizon. |
