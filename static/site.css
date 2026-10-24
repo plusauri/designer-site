@@ -5926,3 +5926,832 @@ p.community-invite {
     margin-block: 1.25rem 0.5rem;
     color: var(--pico-muted-color, #6b6259);
 }
+
+/* Design pass: homepage hero banner (matches the mockup layout) */
+main:has(.home-brand)::before {
+    content: "";
+    display: block;
+    aspect-ratio: 2048 / 768;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    background:
+        linear-gradient(90deg, rgba(255, 252, 246, 0.85), rgba(255, 252, 246, 0.7) 30%, rgba(255, 252, 246, 0) 58%),
+        url("/designer-site/static/images/banner-home.png") right center / cover no-repeat;
+}
+
+/* Wide screens: headline, paragraphs and buttons sit on the left of the banner. */
+@media (min-width: 900px) {
+    main:has(.home-brand) {
+        container-type: inline-size;
+        display: grid;
+        grid-template-columns: minmax(0, 46%) minmax(0, 1fr);
+        grid-template-rows: auto minmax(2rem, 1fr) auto auto auto auto minmax(2rem, 1fr);
+        row-gap: 0;
+    }
+
+    main:has(.home-brand)::before {
+        grid-column: 1 / -1;
+        grid-row: 2 / 8;
+        aspect-ratio: auto;
+        min-height: max(20rem, min(37.5cqw, calc(100svh - 15rem)));
+        margin: 0;
+    }
+
+    main:has(.home-brand) > :nth-child(1) {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    main:has(.home-brand) > :nth-child(n + 2):nth-child(-n + 5) {
+        grid-column: 1;
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        padding-inline: clamp(1.25rem, 3cqw, 2.75rem) 1rem;
+        color: #1c1b19;
+        --plusauri-ink: #1c1b19;
+        --pico-color: #1c1b19;
+        --pico-h1-color: #1c1b19;
+    }
+
+    main:has(.home-brand) > :nth-child(2) {
+        grid-row: 3;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 600;
+        font-size: clamp(1.7rem, 3.6cqw, 3.2rem);
+        line-height: 1.08;
+        letter-spacing: -0.01em;
+    }
+
+    main:has(.home-brand) > :nth-child(2)::after {
+        content: "";
+        display: block;
+        width: 5rem;
+        height: 4px;
+        margin-top: 0.6em;
+        border-radius: 4px;
+        background: #d9a826;
+    }
+
+    main:has(.home-brand) > :nth-child(3) {
+        grid-row: 4;
+        margin-top: clamp(0.6rem, 1.2cqw, 1.1rem);
+        font-size: clamp(0.9rem, 1.35cqw, 1.1rem);
+        line-height: 1.4;
+    }
+
+    main:has(.home-brand) > :nth-child(4) {
+        grid-row: 5;
+        margin-top: 0.5rem;
+        font-size: clamp(0.85rem, 1.2cqw, 1rem);
+        line-height: 1.45;
+    }
+
+    main:has(.home-brand) > :nth-child(5) {
+        grid-row: 6;
+        margin-top: clamp(0.8rem, 1.6cqw, 1.5rem);
+        gap: 0.75rem 1rem;
+    }
+
+    main:has(.home-brand) > :nth-child(5) a {
+        margin: 0;
+        padding: 0.65em 1.4em;
+        font-size: clamp(0.9rem, 1.2cqw, 1.05rem);
+        font-weight: 600;
+        border-radius: 0.4rem;
+        text-decoration: none;
+    }
+
+    main:has(.home-brand) > :nth-child(5) a[role="button"] {
+        background: #e0b94d;
+        border-color: #e0b94d;
+        color: #1c1b19;
+    }
+
+    main:has(.home-brand) > :nth-child(5) a[role="button"]:hover {
+        background: #ecc866;
+        border-color: #ecc866;
+        color: #1c1b19;
+    }
+
+    main:has(.home-brand) > :nth-child(5) a.secondary {
+        background: rgba(255, 255, 255, 0.55);
+        border: 1.5px solid #1c1b19;
+        color: #1c1b19;
+    }
+
+    main:has(.home-brand) > :nth-child(n + 6) {
+        grid-column: 1 / -1;
+    }
+
+    main:has(.home-brand) > :nth-child(6) {
+        margin-top: 2.5rem;
+    }
+}
+
+/* Design pass: tighter hero text, more room between the two paragraphs */
+@media (min-width: 900px) {
+    main:has(.home-brand) > :nth-child(2) {
+        font-size: clamp(1.5rem, 3.1cqw, 2.8rem);
+    }
+
+    main:has(.home-brand) > :nth-child(3) {
+        font-size: clamp(0.8rem, 1.15cqw, 0.95rem);
+        line-height: 1.35;
+    }
+
+    main:has(.home-brand) > :nth-child(4) {
+        margin-top: clamp(0.9rem, 1.6cqw, 1.4rem);
+        font-size: clamp(0.75rem, 1.05cqw, 0.88rem);
+        line-height: 1.4;
+    }
+
+    main:has(.home-brand) > :nth-child(5) {
+        margin-top: clamp(0.7rem, 1.3cqw, 1.2rem);
+    }
+
+    main:has(.home-brand) > :nth-child(5) a {
+        font-size: clamp(0.8rem, 1.05cqw, 0.92rem);
+        padding: 0.55em 1.2em;
+    }
+}
+
+/* Design pass: banner runs edge to edge; real spacing between hero paragraphs */
+body:has(.home-brand) {
+    overflow-x: clip;
+}
+
+main:has(.home-brand)::before {
+    margin-inline: calc(50% - 50vw);
+    border-radius: 0;
+}
+
+@media (min-width: 900px) {
+    main:has(.home-brand)::before {
+        min-height: max(20rem, min(37.5vw, calc(100svh - 15rem)));
+    }
+
+    main.container:has(.home-brand) > :nth-child(3) {
+        margin-top: clamp(0.7rem, 1.3cqw, 1.2rem);
+    }
+
+    main.container:has(.home-brand) > :nth-child(4) {
+        margin-top: clamp(1.4rem, 2.6cqw, 2.3rem);
+    }
+
+    main.container:has(.home-brand) > :nth-child(5) {
+        margin-top: clamp(1rem, 1.8cqw, 1.6rem);
+    }
+}
+
+/* Design pass: hero text moved into the banner's left white space; less gap under the nav */
+main.container:has(.home-brand) {
+    padding-top: 0.5rem;
+}
+
+main:has(.home-brand) > .home-brand {
+    margin-top: 0.25rem;
+}
+
+@media (min-width: 900px) {
+    main.container:has(.home-brand) > :nth-child(n + 2):nth-child(-n + 5) {
+        justify-self: start;
+        width: 40vw;
+        margin-left: calc(50cqw - 50vw);
+        padding-inline: clamp(1.5rem, 4vw, 4.5rem) 1rem;
+    }
+}
+
+/* Design pass: hero text moved into the banner's left white space; less gap under the nav */
+main.container:has(.home-brand) {
+    padding-top: 0.5rem;
+}
+
+main:has(.home-brand) > .home-brand {
+    margin-top: 0.25rem;
+}
+
+@media (min-width: 900px) {
+    main.container:has(.home-brand) > :nth-child(n + 2):nth-child(-n + 5) {
+        justify-self: start;
+        width: 40vw;
+        margin-left: calc(50cqw - 50vw);
+        padding-inline: clamp(1.5rem, 4vw, 4.5rem) 1rem;
+    }
+}
+
+/* Design pass: hero text moved into the banner's left white space; less gap under the nav */
+main.container:has(.home-brand) {
+    padding-top: 0.5rem;
+}
+
+main:has(.home-brand) > .home-brand {
+    margin-top: 0.25rem;
+}
+
+@media (min-width: 900px) {
+    main.container:has(.home-brand) > :nth-child(n + 2):nth-child(-n + 5) {
+        justify-self: start;
+        width: 40vw;
+        margin-left: calc(50cqw - 50vw);
+        padding-inline: clamp(1.5rem, 4vw, 4.5rem) 1rem;
+    }
+}
+
+/* Design pass: tighter text column, less gap under the nav, logo 30% smaller */
+body:has(.home-brand) > header.container {
+    padding-bottom: 0;
+}
+
+main.container:has(.home-brand) {
+    padding-top: 0;
+}
+
+main:has(.home-brand) > .home-brand {
+    margin-top: 0;
+    font-size: clamp(2.1rem, 6.3vw, 3.5rem);
+}
+
+@media (min-width: 900px) {
+    main.container:has(.home-brand) > :nth-child(n + 2):nth-child(-n + 5) {
+        width: 34vw;
+        padding-inline: clamp(1rem, 3vw, 3.5rem) 0.5rem;
+    }
+
+    main.container:has(.home-brand) > :nth-child(2) {
+        font-size: clamp(1.35rem, 2.7cqw, 2.4rem);
+    }
+
+    main.container:has(.home-brand) > :nth-child(3) {
+        font-size: clamp(0.78rem, 1.05cqw, 0.9rem);
+    }
+
+    main.container:has(.home-brand) > :nth-child(4) {
+        font-size: clamp(0.72rem, 0.98cqw, 0.84rem);
+    }
+
+    main.container:has(.home-brand) > :nth-child(5) a {
+        font-size: clamp(0.78rem, 1cqw, 0.88rem);
+        padding: 0.5em 1.1em;
+    }
+}
+
+
+
+/* Design pass: dark band for Find your situation, then the cards banner */
+@media (min-width: 900px) {
+    /* The thin dark band, edge to edge, behind the heading and paragraph */
+    main:has(.home-brand)::after {
+        content: "";
+        grid-column: 1 / -1;
+        grid-row: 8 / 10;
+        margin-inline: calc(50% - 50vw);
+        background: #261910;
+    }
+
+    main.container:has(.home-brand) > :nth-child(6) {
+        grid-column: 1 / -1;
+        grid-row: 8;
+        justify-self: center;
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        padding: 1.5rem 1rem 0;
+        text-align: center;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 500;
+        font-size: clamp(1.35rem, 2cqw, 1.9rem);
+        line-height: 1.15;
+        color: #f6f1e8;
+        --pico-h2-color: #f6f1e8;
+    }
+
+    /* Short gold bar under the heading */
+    main.container:has(.home-brand) > :nth-child(6)::after {
+        content: "";
+        display: block;
+        width: 3.5rem;
+        height: 3px;
+        margin: 0.5em auto 0;
+        border-radius: 3px;
+        background: #e0b94d;
+    }
+
+    /* Wide enough to hold the paragraph on two lines */
+    main.container:has(.home-brand) > :nth-child(7) {
+        grid-column: 1 / -1;
+        grid-row: 9;
+        justify-self: center;
+        position: relative;
+        z-index: 1;
+        max-width: min(52em, 94%);
+        margin: 0;
+        padding: 0.7rem 1rem 1.5rem;
+        text-align: center;
+        text-wrap: balance;
+        font-size: clamp(0.9rem, 1.1cqw, 1.05rem);
+        line-height: 1.45;
+        color: #e9ded2;
+        --pico-color: #e9ded2;
+    }
+
+    main.container:has(.home-brand) > :nth-child(7) strong {
+        color: #f6f1e8;
+    }
+
+    /* "Three good places to start:" on the cards banner, above the first card */
+    main.container:has(.home-brand) > :nth-child(8) {
+        grid-column: 1 / -1;
+        grid-row: 10;
+        align-self: start;
+        justify-self: center;
+        position: relative;
+        z-index: 2;
+        margin: 3.2vw 0 0;
+        text-align: center;
+        font-weight: 600;
+        font-size: clamp(0.8rem, 0.95vw, 1.05rem);
+        line-height: 1.3;
+        color: #1c1b19;
+        --pico-color: #1c1b19;
+    }
+
+    /* The three links: this list is the cards banner itself, shown whole at full width */
+    main.container:has(.home-brand) > :nth-child(9) {
+        grid-column: 1 / -1;
+        grid-row: 10;
+        align-self: start;
+        position: relative;
+        height: 37.5vw;
+        margin: 0 calc(50% - 50vw);
+        padding: 0;
+        list-style: none;
+        background: url("/designer-site/static/images/banner-cards.png") center / cover no-repeat;
+    }
+
+    /* One link per card; positions are in vw so they stay lined up at any window width */
+    main.container:has(.home-brand) > :nth-child(9) > li {
+        position: absolute;
+        left: 15.04vw;
+        right: 15.04vw;
+        height: 6.3vw;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 1.7vw 5.4vw 0 6.9vw;
+        overflow: hidden;
+        list-style: none;
+        font-size: clamp(0.7rem, 1.1vw, 1.05rem);
+        line-height: 1.35;
+        color: #4a4338;
+        --pico-color: #4a4338;
+    }
+
+    main.container:has(.home-brand) > :nth-child(9) > li:nth-child(1) { top: 9.28vw; }
+    main.container:has(.home-brand) > :nth-child(9) > li:nth-child(2) { top: 16.35vw; }
+    main.container:has(.home-brand) > :nth-child(9) > li:nth-child(3) { top: 23.3vw; }
+
+    main.container:has(.home-brand) > :nth-child(9) a {
+        color: #1c1b19;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    main.container:has(.home-brand) > :nth-child(9) a:hover {
+        text-decoration: underline;
+    }
+
+    /* The whole card is clickable */
+    main.container:has(.home-brand) > :nth-child(9) a::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+    }
+
+    /* "New to the tool?" centered at the bottom, below the third card */
+    main.container:has(.home-brand) > :nth-child(10) {
+        grid-column: 1 / -1;
+        grid-row: 10;
+        align-self: end;
+        justify-self: center;
+        position: relative;
+        z-index: 2;
+        margin: 0 0 2.6vw;
+        text-align: center;
+        font-size: clamp(0.75rem, 1.1vw, 1.05rem);
+        color: #1c1b19;
+        --pico-color: #1c1b19;
+    }
+
+    main.container:has(.home-brand) > :nth-child(10) a {
+        color: #7a5a12;
+        font-weight: 600;
+    }
+
+    /* Space before the rest of the page continues */
+    main.container:has(.home-brand) > :nth-child(11) {
+        margin-top: 3rem;
+    }
+}
+
+/* Design pass: "Three good places to start" matches the Find your situation heading */
+@media (min-width: 900px) {
+    main.container:has(.home-brand) > :nth-child(8) {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 500;
+        font-size: clamp(1.35rem, 2cqw, 1.9rem);
+        line-height: 1.15;
+        margin-top: 3.4vw;
+    }
+}
+
+
+/* Design pass: third banner (What it models / Who it is for / Own it) */
+@media (min-width: 1280px) {
+    main.container:has(.home-brand) {
+        --b3: 1.5rem;
+    }
+
+    /* The picture: the rule near the end of the page becomes the banner background */
+    main.container:has(.home-brand) > hr {
+        grid-column: 1 / -1;
+        grid-row: 11;
+        align-self: start;
+        justify-self: start;
+        width: 100vw;
+        height: 66.67vw;
+        margin: var(--b3) 0 0 calc(50% - 50vw);
+        border: 0;
+        background: url("/designer-site/static/images/banner-info.png") center / cover no-repeat;
+    }
+
+    /* Everything that sits on the banner shares its grid cell */
+    main.container:has(.home-brand) > :nth-child(n + 11):nth-child(-n + 18) {
+        grid-column: 1 / -1;
+        grid-row: 11;
+        align-self: start;
+        justify-self: start;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Headings */
+    main.container:has(.home-brand) > :nth-child(11),
+    main.container:has(.home-brand) > :nth-child(13),
+    main.container:has(.home-brand) > :nth-child(16) {
+        padding: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        font-size: 2.5vw;
+        line-height: 1.05;
+        color: #14233a;
+        --pico-h2-color: #14233a;
+    }
+
+    main.container:has(.home-brand) > :nth-child(11) { margin: calc(var(--b3) + 4.95vw) 0 0 calc(50% - 50vw + 10.4vw); }
+    main.container:has(.home-brand) > :nth-child(13) { margin: calc(var(--b3) + 26.3vw) 0 0 calc(50% - 50vw + 10.4vw); }
+    main.container:has(.home-brand) > :nth-child(16) { margin: calc(var(--b3) + 46.1vw) 0 0 calc(50% - 50vw + 10.4vw); }
+
+    /* The two lists sit on the banner's left edge, so their items can be placed in vw */
+    main.container:has(.home-brand) > :nth-child(12),
+    main.container:has(.home-brand) > :nth-child(17) {
+        width: 100vw;
+        height: 0;
+        margin: var(--b3) 0 0 calc(50% - 50vw);
+        padding: 0;
+        list-style: none;
+    }
+
+    /* What it models: five columns under the icons */
+    main.container:has(.home-brand) > :nth-child(12) > li {
+        position: absolute;
+        top: 14.5vw;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        font-size: 0.78vw;
+        line-height: 1.28;
+        color: #3d4650;
+        --pico-color: #3d4650;
+    }
+
+    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(1) { left: 8.92vw;  width: 16.34vw; }
+    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(2) { left: 27.08vw; width: 14.26vw; }
+    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(3) { left: 43.16vw; width: 13.8vw; }
+    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(4) { left: 58.79vw; width: 14.26vw; }
+    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(5) { left: 74.87vw; width: 16.15vw; }
+
+    main.container:has(.home-brand) > :nth-child(12) > li > strong {
+        display: block;
+        min-height: 2.3em;
+        margin-bottom: 0.15vw;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        font-size: 0.95vw;
+        line-height: 1.15;
+        color: #14233a;
+    }
+
+    /* "Withdrawal strategies, including..." reads as one sentence */
+    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(5) > strong {
+        display: inline;
+        min-height: 0;
+        font: inherit;
+        font-weight: 700;
+    }
+
+    /* Who it is for: two paragraphs, kept left of the owl */
+    main.container:has(.home-brand) > :nth-child(14),
+    main.container:has(.home-brand) > :nth-child(15) {
+        width: 54.7vw;
+        padding: 0;
+        font-size: 1.08vw;
+        line-height: 1.45;
+        color: #1f2a37;
+        --pico-color: #1f2a37;
+    }
+
+    main.container:has(.home-brand) > :nth-child(14) { margin: calc(var(--b3) + 30vw) 0 0 calc(50% - 50vw + 10.4vw); }
+    main.container:has(.home-brand) > :nth-child(15) { margin: calc(var(--b3) + 38.8vw) 0 0 calc(50% - 50vw + 10.4vw); }
+
+    /* Own it: four items, text centered under each icon */
+    main.container:has(.home-brand) > :nth-child(17) > li {
+        position: absolute;
+        top: 55.4vw;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        font-size: 0.76vw;
+        line-height: 1.28;
+        color: #3d4650;
+        --pico-color: #3d4650;
+    }
+
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(1) { left: 8.92vw;  width: 11.07vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) { left: 25.07vw; width: 14.97vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(3) { left: 41.93vw; width: 14.97vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(4) { left: 58.4vw;  width: 15.3vw; }
+
+    main.container:has(.home-brand) > :nth-child(17) > li > strong {
+        display: block;
+        margin-bottom: 0.15vw;
+        font-weight: 700;
+        font-size: 0.85vw;
+        line-height: 1.25;
+        color: #14233a;
+    }
+
+    /* "Free for 14 days, with no card to enter." reads as one sentence */
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) > strong {
+        display: inline;
+        font-size: inherit;
+    }
+
+    /* "See pricing" on the gold pill. The picture already has the arrow, so the link's
+       own text is hidden and the label is drawn instead. The whole pill is clickable. */
+    main.container:has(.home-brand) > :nth-child(18) {
+        z-index: 2;
+        margin: calc(var(--b3) + 52.47vw) 0 0 calc(50% - 50vw + 78.97vw);
+        padding: 0;
+    }
+
+    main.container:has(.home-brand) > :nth-child(18) a {
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        width: 10.03vw;
+        height: 3.58vw;
+        padding-left: 1vw;
+        font-size: 0;
+        text-decoration: none;
+        color: #3b2a08;
+    }
+
+    main.container:has(.home-brand) > :nth-child(18) a::before {
+        content: "See pricing";
+        font-size: 0.8vw;
+        font-weight: 700;
+    }
+
+    /* The closing note goes below the banner */
+    main.container:has(.home-brand) > :nth-child(20) {
+        margin-top: 2rem;
+    }
+}
+
+/* Design pass: light navigation band, dark brown band behind the big logo */
+body > header.container {
+    background: #e1e7ef;
+    box-shadow: 0 0 0 100vmax #e1e7ef;
+    clip-path: inset(0 -100vmax);
+    --plusauri-ink: #14233a;
+    --pico-color: #14233a;
+    --pico-primary: #14233a;
+    --pico-primary-hover: #7a5a12;
+    --pico-primary-underline: rgba(20, 35, 58, 0.35);
+    --pico-form-element-background-color: #ffffff;
+    --pico-form-element-color: #14233a;
+    --pico-form-element-border-color: #b9c4d3;
+}
+
+body:has(.home-brand) > header.container {
+    padding-block: 0.4rem;
+}
+
+body > header.container .brand-logo {
+    color: #14233a;
+}
+
+main.container:has(.home-brand) > .home-brand {
+    margin: 0;
+    padding-block: 0.9rem;
+    background: #261910;
+    box-shadow: 0 0 0 100vmax #261910;
+    clip-path: inset(0 -100vmax);
+    color: #f6f1e8;
+}
+
+/* Design pass: bigger corner logo; brown band logo matches the Tutilis size */
+body > header.container .brand-logo {
+    font-size: 1.9rem;
+}
+
+main.container:has(.home-brand) > .home-brand {
+    font-size: calc(clamp(2.1rem, 6.3vw, 3.5rem) * 0.42);
+}
+
+main.container:has(.home-brand) > .home-brand .home-brand-product {
+    font-size: 1em;
+}
+
+/* Design pass: brown strip between the cards banner and the info banner */
+@media (min-width: 1280px) {
+    main.container:has(.home-brand) > hr {
+        box-shadow: 0 calc(var(--b3, 1.5rem) * -1 - 1px) 0 #261910;
+    }
+}
+
+/* Design pass: all five "What it models" titles the same size, text always on a new line */
+@media (min-width: 1280px) {
+    main.container:has(.home-brand) > :nth-child(12) > li > strong,
+    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(5) > strong {
+        display: block;
+        min-height: 2.3em;
+        margin-bottom: 0.15vw;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        font-size: 0.95vw;
+        line-height: 1.15;
+        color: #14233a;
+    }
+}
+
+/* Design pass: "Own it" titles match "What it models", text always on a new line */
+@media (min-width: 1280px) {
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(n) > strong {
+        display: block;
+        min-height: 2.3em;
+        margin-bottom: 0.15vw;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        font-size: 0.95vw;
+        line-height: 1.15;
+        color: #14233a;
+    }
+
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(1) { left: 7.65vw;  width: 13.2vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) { left: 25vw;    width: 15vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(3) { left: 42.3vw;  width: 15.2vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(4) { left: 58.95vw; width: 15.8vw; }
+}
+
+/* Design pass: "Own it" columns centered under their icons, equal widths, tidy wrapping */
+@media (min-width: 1280px) {
+    main.container:has(.home-brand) > :nth-child(17) > li {
+        top: 55.1vw;
+        box-sizing: border-box;
+        padding: 0;
+        text-align: center;
+        text-wrap: balance;
+        font-size: 0.76vw;
+        line-height: 1.3;
+        color: #3d4650;
+        --pico-color: #3d4650;
+    }
+
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(1) { left: 8.49vw;  width: 11.8vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) { left: 26.26vw; width: 11.8vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(3) { left: 43.06vw; width: 11.8vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(4) { left: 59.59vw; width: 11.8vw; }
+
+    main.container:has(.home-brand) > :nth-child(17) > li > strong {
+        display: block;
+        min-height: 2.3em;
+        margin-bottom: 0.2vw;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        font-size: 0.95vw;
+        line-height: 1.15;
+        color: #14233a;
+        text-wrap: balance;
+    }
+}
+
+/* Design pass: "Own it" title spacing matches "What it models"; wider text columns */
+@media (min-width: 1280px) {
+    main.container:has(.home-brand) > :nth-child(17) > li {
+        top: 55.38vw;
+        text-wrap: pretty;
+        font-size: 0.76vw;
+        line-height: 1.3;
+    }
+
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(1) { left: 8.7vw;  width: 13vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) { left: 24.9vw; width: 15vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(3) { left: 42vw;   width: 14.4vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(4) { left: 58.1vw; width: 15.4vw; }
+
+    main.container:has(.home-brand) > :nth-child(17) > li > strong {
+        margin-bottom: 0.15vw;
+        text-wrap: balance;
+    }
+}
+
+/* Design pass: "Own it" text higher, centered under each icon, Free for 14 days reworded */
+@media (min-width: 1280px) {
+    main.container:has(.home-brand) > :nth-child(17) > li {
+        top: 54.85vw;
+    }
+
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(1) { left: 8.39vw;  width: 12vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) { left: 24.66vw; width: 15vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(3) { left: 41.82vw; width: 14.4vw; }
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(4) { left: 57.73vw; width: 15.4vw; }
+
+    /* Hide the page's own ", with no card to enter." and draw the reworded sentence instead */
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) {
+        font-size: 0;
+    }
+
+    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2)::after {
+        content: "With no card to enter.";
+        display: block;
+        font-size: 0.76vw;
+        line-height: 1.3;
+        color: #3d4650;
+    }
+}
+
+/* Design pass: "Who it is for" text matches the other sections' description text */
+@media (min-width: 1280px) {
+    main.container:has(.home-brand) > :nth-child(14),
+    main.container:has(.home-brand) > :nth-child(15) {
+        width: 42vw;
+        font-size: 0.78vw;
+        line-height: 1.3;
+        color: #3d4650;
+        --pico-color: #3d4650;
+    }
+
+    main.container:has(.home-brand) > :nth-child(14) { margin-top: calc(var(--b3) + 30.2vw); }
+    main.container:has(.home-brand) > :nth-child(15) { margin-top: calc(var(--b3) + 35.4vw); }
+}
+
+/* Design pass: brown closing area (early-preview note + footer) */
+@media (min-width: 1280px) {
+    :root:has(.home-brand),
+    body:has(.home-brand) {
+        background: #261910;
+    }
+
+    main.container:has(.home-brand) > :last-child {
+        color: #e9ded2;
+        --pico-color: #e9ded2;
+    }
+
+    body:has(.home-brand) > footer {
+        opacity: 0.9;
+        color: #e9ded2;
+        --pico-color: #e9ded2;
+        --pico-muted-color: #c9bba8;
+        --pico-primary: #e0b94d;
+        --pico-primary-hover: #f0cb62;
+        --pico-primary-underline: rgba(224, 185, 77, 0.4);
+    }
+}
+
+/* Design pass: "Who it is for" back to its original text size */
+@media (min-width: 1280px) {
+    main.container:has(.home-brand) > :nth-child(14),
+    main.container:has(.home-brand) > :nth-child(15) {
+        width: 54.7vw;
+        font-size: 1.08vw;
+        line-height: 1.45;
+        color: #1f2a37;
+        --pico-color: #1f2a37;
+    }
+
+    main.container:has(.home-brand) > :nth-child(14) { margin-top: calc(var(--b3) + 30vw); }
+    main.container:has(.home-brand) > :nth-child(15) { margin-top: calc(var(--b3) + 38.8vw); }
+}
