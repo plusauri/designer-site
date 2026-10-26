@@ -106,6 +106,8 @@ A plan's Social Security benefit is the amount the statement shows, grown each y
 
 [[img:ss-solvency-modifiables|control]]
 
+[[jump:ss|modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.ss-shortfall]]
+
 The editor beside the card holds the cut. Switch it on and it opens on the Trustees' combined projection: 83% of each benefit paid from 2034. Move **Share of benefit paid** to try a deeper or a shallower cut, and move **Cut starts** to try an earlier or a later year. The year slider carries the same anchors as the Forecaster's year slider, so each retirement is one click away.
 
 [[img:ss-solvency-editor|control]]

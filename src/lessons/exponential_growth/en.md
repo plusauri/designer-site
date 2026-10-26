@@ -97,6 +97,8 @@ and choose [[nav:growth]]. That opens the [[nav:growth-calculator]]: pick an amo
 a year range, and read the **projected total** on the on-trend path. In **Grow to total** the amount
 is a figure *each year*, so the total is the whole stream compounded — not one deposit left alone.
 
+[[jump:compounding|output__growth-calculator]]
+
 The numbers here are assumptions you type rather than Springfield’s live holdings, and that is the
 point: the [[nav:growth-calculator]] is a sandbox, so it isolates **rate × time** with no taxes, no spend and no
 rebalancing in the way, and the only thing that can move the answer is the rate.
@@ -198,6 +200,8 @@ the full path over time). Red/orange mass near zero vs green further right is th
 outcomes under spend, markets, and assumptions. Compounding also produces the lone path far to the
 right: past the break the axis is log-scaled — the chart’s own caption says from where — so that path
 stays in the picture without flattening everyone else into the left edge.*
+
+[[jump:terminal-wealth|output__forecaster__forecaster.simulation-summary__simulation-summary.distribution__line.distribution.final-net-worth]]
 
 Note what has been added at each step. The [[nav:growth-calculator]] had a rate and a horizon. The
 sparkline added a **σ**, so one line became a cone. This chart adds the rest of the plan — spending, taxes, the

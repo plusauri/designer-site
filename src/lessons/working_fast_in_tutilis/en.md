@@ -48,6 +48,8 @@ The [[nav:forecaster]] is designed so that every mark on it can explain itself. 
 
 Sometimes the question is about one item rather than one year. When you are looking at a chart and want to know about a particular account or holding, press **[[key:BirdsEye]]** to open [[nav:birds-eye]] over whatever you were doing. Bird's Eye lists the whole household as [[term:present-value|present values]] on one beam, assets on one side and obligations on the other.
 
+[[jump:birds-eye]]
+
 [[img:working-fast-birds-eye-account]]
 
 Hover any item in Bird's Eye and its card appears. The card is the plan's own description of that item. For an account it names the owner and lists each fund or stock the account holds, with its category, value and cost. Press **[[key:BirdsEye]]** again and you are back on the chart you left.
@@ -62,11 +64,15 @@ The **Peek** menu does for the whole forecast what Bird's Eye does for one item.
 
 Most planning starts in the Forecaster. You read the charts and look for the years that seem wrong. On the Springfield household the [[nav:cf-chart]] makes one stretch stand out. The **Health** segment grows steadily for decades and then roughly quintuples for the three years from 2064 to 2066, when the plan's long-term care costs arrive.
 
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-chart]]
+
 [[img:working-fast-cash-flow-chart]]
 
 ## Test it in Transforms
 
 A concern like the long-term care years is a question about risk, and [[nav:transforms]] is where you test it. Transforms lets you change the plan without touching the plan itself. You might raise the cost of care, retire two years later or scale back the lifestyle spending. The results appear in the same two sections you already know from the Forecaster, **Forecast Detail** and the **Simulation Summary**, so nothing about reading them is new.
+
+[[jump:transforms]]
 
 ## Swap the two sections
 
@@ -127,6 +133,8 @@ The scale keys act the moment you press them, so `2` followed by `[[key:Millions
 [[key:Shift+Up]] and [[key:Shift+Down]] are the ones worth practicing. With the caret just after the 2 in 250000, one [[key:Shift+Up]] gives 350000 and one [[key:Shift+Down]] gives 150000. That is how to walk a value through a range when you want to see where a result changes.
 
 You can try all of this without a plan of your own. Open [[nav:annuity]] from the bar at the bottom of the canvas, click into the purchase amount and type `300[[key:Thousands]]`.
+
+[[jump:annuity|output__annuity]]
 
 ## Every key in one place
 

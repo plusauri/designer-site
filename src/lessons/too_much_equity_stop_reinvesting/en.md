@@ -14,6 +14,8 @@ Open [[nav:birds-eye]] with the **Holding** chip selected and the two funds are 
 
 [[img:too-much-equity-birds-eye-holdings]]
 
+[[jump:birds-eye]]
+
 [[term:hover|Hover]] a holding and its card says what happens to its distributions. Here is the Brokerage fund's card in each plan; the IRA's fund carries the same setting as its neighbor in both.
 
 In [Reinvesting](#canvas-dossier:too_much_equity_drip), the plan the lesson opens on, it reads **Reinvested ([[term:drip|DRIP]])**:
@@ -49,6 +51,8 @@ The reconciliation makes the round trip visible. In 2031 it shows about $34,000 
 
 [[img:too-much-equity-reconciliation-2031-drip]]
 
+[[jump:drip]]
+
 The lesson *The dividend you never see* walks through why those two lines have to be equal, and why a reinvested dividend in a brokerage account is taxed anyway.
 
 The consequence for Morgan is simple. The stock funds are the largest positions, they pay the largest distributions, and the distributions go straight back into the stock funds. The tilt toward stock keeps [[term:compounding]].
@@ -61,6 +65,8 @@ In the brokerage account the effect is what you would expect. The dividend arriv
 
 [[img:too-much-equity-cash-flow-2031-cash]]
 
+[[jump:yield]]
+
 Morgan spends more than Social Security brings in, so the dividend covers part of the gap that would otherwise have been met by selling something. The plan sells about $62,000 that year instead of the $73,000 the reinvesting plan sells, and nothing it sells was bought with a dividend. Notice what the statement does *not* list: the IRA's fund pays a dividend of about the same size, and none of it appears here.
 
 ## Inside the IRA
@@ -72,6 +78,8 @@ A dividend paid out of a brokerage account is accessible money. A dividend paid 
 So inside a sheltered account, "pay it out" means something narrower. The dividend leaves the fund and lands in a **cash sleeve inside the account**, a money-market position that appears on the balance sheet under the IRA the first year it is needed. The money is still Morgan's, still [[term:tax-deferred]], and still in the IRA. It leaves the IRA only the way any other dollar in the IRA does, through a withdrawal that the tax return sees.
 
 Open [[nav:bs-table]] for 2031 with the **Holdings** chip on and look under the IRA in each plan. The table rounds the index fund to $1.1MM in both, so hover its row: the line above the card is the end balance to the dollar.
+
+[[jump:balance-sheet|output__forecaster__forecaster.forecast-detail__bs-table]]
 
 In [Reinvesting](#canvas-dossier:too_much_equity_drip), the IRA's index fund ends 2031 at about $1,107,000:
 
@@ -121,6 +129,8 @@ Net worth is almost identical in the two plans. That is the point. Morgan did no
 From 2032 Morgan is 73 and the IRA must pay a required minimum distribution each year. Here is what [Distributions to cash](#canvas-dossier:too_much_equity_cash) sells in 2035, on [[nav:si-table]]:
 
 [[img:too-much-equity-sales-2035-cash]]
+
+[[jump:rmd|output__forecaster__forecaster.forecast-detail__si-table__line.reason.rmd]]
 
 Two things are worth seeing. The IRA's dividend, about $16,000 that year, is invested into the cash sleeve, which is the sweep described above. And the required distribution is drawn from every holding in the IRA in proportion to its size, the sleeve included, so the sleeve is drawn down a little each year as it fills. A custodian would usually take a required distribution from cash first, and a plan that prefers to hold the sleeve for exactly that purpose is a strategy setting rather than a distribution setting; Tutilis does not do it yet.
 

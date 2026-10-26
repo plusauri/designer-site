@@ -134,6 +134,8 @@ place. Annual contribution ceilings change with [[term:inflation]] and legislati
 💎 so the bucket is readable at a glance. Same vocabulary as the
 [Financial plan glossary](/learn/financial_plan_glossary) / [Tutilis glossary](/learn/tutilis_glossary).
 
+[[jump:tax-bucket-glyphs]]
+
 ---
 
 ## Regulations that matter
@@ -281,9 +283,13 @@ projected views second.
 4. **Bel-Air Tech** on Brokerage is a **concentration** story for other Banks lessons — ignore it
    for tax-bucket mechanics.
 
+[[jump:birds-eye]]
+
 ### Projected
 
 Select [[nav:bs-chart]], [[nav:bs-table]], and optionally [[nav:taxes]] / [[nav:si-table]]. Prefer **[[term:fid-gmf|FID 0 / GMF]]**.
+
+[[jump:balance-sheet]]
 
 | Preview | View | Role here |
 |---------|------|-----------|

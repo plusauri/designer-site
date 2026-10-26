@@ -113,6 +113,8 @@ selected on [[nav:birds-eye]] so those flows appear on the **Liabilities** side 
 (Retire)** and **Lifestyle (Work)** sit at the top of **Liabilities** — the long stream of outflows
 this household is planning for, and the two largest things on the sheet.*
 
+[[jump:cash-flow|output__birds-eye__birds-eye.mode.cash-flows__birds-eye.assets-liabilities]]
+
 Then hover either one. Both rows come from one living-expense item with two phases, so both raise the same card:
 
 [[img:springfield-living-spend-lifestyle-work-hover]]
@@ -126,6 +128,10 @@ In the path chart at the bottom, the Work phase is drawn for the years **before*
 In **Forecast Detail**, chips control which cards appear (toolbar order: [[nav:bs-chart]] →
 [[nav:bs-table]] → [[nav:cf-chart]] → [[nav:cf-table]]). **For this lesson, select those four** and
 leave Taxes / Sales-Inv / Rec off unless you dig further.
+
+[[jump:balance-sheet|output]]
+
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-table,output__forecaster__forecaster.forecast-detail__cf-chart]]
 
 | Preview | Place | What to notice for living spend |
 |---------|-------|----------------------------------|
@@ -158,6 +164,8 @@ Open [[nav:transforms]] → Modifications.
 3. Changing a phase amount adds the edit to the **Change Set** automatically.
 4. Charts and tables should **update live** as you move a control.
 5. **Re-simulate** when you want original vs modified [[term:monte-carlo|Monte Carlo]] side by side.
+
+[[jump:transforms]]
 
 **Honest frame:** these sliders show what a higher or lower lifestyle does to *this* plan under
 *this* success definition. They are not advice on what you “should” spend.

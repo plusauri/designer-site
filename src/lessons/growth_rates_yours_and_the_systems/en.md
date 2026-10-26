@@ -76,6 +76,8 @@ The [General](#canvas-dossier:growth_rates_general) plan accepts the system's gr
 
 You can see every one of these rates without opening an editor. On **Bird's Eye**, select **Cash Flow** at the top. Each income and expense then joins the balance sheet as the present value of its future amounts, and each value sits in a chip. Hover the chip beside **Salary**, **Condo rent**, **Living expenses** or **Child support** to open that item's card, which shows the growth rate it runs at.
 
+[[jump:cash-flow|output__birds-eye__birds-eye.mode.cash-flows__birds-eye.assets-liabilities]]
+
 [[img:growth-rates-birds-eye-cash-flow-general]]
 
 *Bird's Eye in [General](#canvas-dossier:growth_rates_general) with **Cash Flow** selected. Each value is a chip that opens the item's card.*
@@ -137,6 +139,8 @@ With Growth overrides, the growth field on pay, spending, rent and support gains
 Priya's three changes on the Advanced plan were a wider swing on her bonus-heavy salary, a support payment fixed at exactly $14,400, and a slower 2% view of her condo's appreciation. The first two mostly reshape the range of outcomes: the salary widens it, and the fixed support narrows it a little. The third moves the plan itself. On the balance sheet for 2046 the condo is worth about $648,000 on the General plan and about $438,000 on the Advanced plan.
 
 **Key forecasts** show what that does to Priya's final net worth. The Advanced plan is lower at every point the table reports, from the worst future to the best.
+
+[[jump:key-forecasts]]
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">

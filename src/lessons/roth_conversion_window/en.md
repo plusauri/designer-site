@@ -161,6 +161,8 @@ the Roth within five years of converting them.
 4. The plan must already include a **Roth** account. If you remove it, conversion amount is
    **zero** and Assumptions shows a warning — the app does **not** invent accounts.
 
+[[jump:roth-conversion|input__assumptions__assumptions-sell-invest__control.roth-conversions]]
+
 [[img:roth-window-policy|control]]
 
 *Assumptions → **Movements**. The residual withdrawal strategy stays separate; this plan draws
@@ -211,6 +213,8 @@ taxable account, so the only traditional dollars sold are the conversion's. You 
 | [[nav:cf-table]] → Investments | Matching dollars into Roth (when the transfer invests the other side of the conversion) |
 | [[nav:si-table]] | Traditional **Sold** and Roth **Invested**; hover **Why** for **Roth conversion · …** next to any residual / early-withdrawal segments |
 | [[nav:si-chart]] | Disposition over years — conversion years still show the same story as the tables |
+
+[[jump:roth-conversion|output__forecaster__forecaster.forecast-detail__si-table__line.reason.roth-conversion]]
 
 [[img:roth-window-si-policy-on]]
 
@@ -291,6 +295,8 @@ twenty.
 
 Still open [[nav:forecaster]] → cliff radar ([[nav:cliffs]] view **on** by default; toggle under **Custom**
 if needed) on a conversion year and on a later Medicare-age year:
+
+[[jump:cliff-radar]]
 
 | What you should see | What you should **not** see |
 |---------------------|-----------------------------|

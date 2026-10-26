@@ -31,15 +31,22 @@
         <ul>
           <li><a href="/designer-site/">Inicio</a></li>
           <li><a href="/designer-site/learn" class="nav-learn">Learning Center</a></li>
-          <li><a href="/designer-site/reference">Reference</a></li>
-          <li><a href="/designer-site/glossary">Glossary</a></li>
+          <li>
+            <details class="dropdown nav-resources"><summary>Resources</summary>
+              <ul>
+                <li><a href="/designer-site/start-here">Start Here</a></li>
+                <li><a href="/designer-site/reference">Reference</a></li>
+                <li><a href="/designer-site/glossary">Glossary</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="/designer-site/pricing">Precios</a></li>
           <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es" selected="selected">🇪🇸 Español</option></select></label></li>
           <li><button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Light theme — click for dark" title="Light theme — click for dark">☀</button></li>
         </ul>
       </nav>
     </header>
-    <main class="container"><div class="reference-hub">
+    <main class="container"><div class="reference-hub" data-tint="indigo">
   <p class="catalog-crumb"><a href="/designer-site/reference"><span class="catalog-crumb-arrow" aria-hidden="true">←</span>All reference</a></p>
   <h1>Taxation of Social Security benefits</h1>
   <p class="reference-lede">The IRC §86 provisional-income test that decides whether 0%, up to 50%, or up to 85% of benefits is taxable.</p>
@@ -47,17 +54,23 @@
   <p class="reference-source">Source: Publication 915 — Social Security and Equivalent Railroad Retirement Benefits — Internal Revenue Service</p>
   <p class="reference-source-url"><a href="https://www.irs.gov/publications/p915">https://www.irs.gov/publications/p915</a></p>
   <div class="reference-honesty reference-usage">
-    <h3>Where we use this · Used in your forecast</h3>
+    <h3><span class="reference-honesty-kicker">Where we use this</span><span class="reference-use-pill reference-use-pill--in-forecast">Used in your forecast</span></h3>
     <ul>
       <li>Decides how much of each year's Social Security benefit is added to ordinary income on the federal tax statement — none, up to half, or up to 85%.</li>
       <li>Because the thresholds are held nominal, a benefit that grows with inflation pulls progressively more of itself into tax over a long retirement.</li>
     </ul>
   </div>
-  <div class="reference-honesty">
+  <div class="reference-honesty reference-limits">
     <h3>Not modeled</h3>
     <p>Tax-exempt interest is not modeled as a separate bucket, so provisional income uses zero for it. Thresholds are held nominal — Congress never indexed them.</p>
   </div>
-  <div class="reference-table-wrap"><table class="content-table">
+  <section class="reference-sheet reference-sheet--tax">
+    <header class="reference-sheet-head">
+      <div class="reference-sheet-titles">
+        <div class="reference-sheet-kicker"><span>Tax schedule</span><span class="reference-sheet-category">Social Security</span></div>
+      </div>
+<span class="reference-sheet-seal" aria-hidden="true"><span class="reference-sheet-seal-glyph">%</span><span class="reference-sheet-seal-word">Tax</span></span></header>
+    <div class="reference-table-wrap"><table class="content-table">
 <caption>Thresholds are statutory dollars Congress never indexed. Holding them nominal is the honest long-run result — a growing benefit pulls progressively more of itself into tax (the &quot;tax torpedo&quot;).</caption>
 <thead>
 <tr>
@@ -122,8 +135,9 @@
 </tbody>
 </table>
 </div>
+  </section>
 </div>
 </main>
-    <footer class="container"><small>© Plusauri, LLC — sea dueño de su plan financiero.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenido educativo — no es asesoramiento financiero, de inversión, fiscal ni legal.</small></footer>
+    <footer class="container"><small>© Plusauri, LLC — sea dueño de su plan financiero.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenido educativo — no es asesoramiento financiero, de inversión, fiscal ni legal.</small><small class="footer-trademarks">Tutilis™ and Plusauri™ are trademarks of Plusauri, LLC.</small></footer>
   </body>
 </html>

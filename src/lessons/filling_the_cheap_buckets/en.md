@@ -68,6 +68,8 @@ draws:
 | **Fill to the top of** | `12%` | Which edge the conversion stops at — and the rate the **Room to** control starts on. The ladder offers every bracket but the top one, which has no top to fill to |
 | **Active from / until year (exclusive)** | 2026 → 2056 | The window in the status line. Half-open, so the last converting year is **2055** |
 
+[[jump:roth-conversion|input__assumptions__assumptions-sell-invest__control.roth-conversions]]
+
 Note the range is **half-open**: "until 2056 (exclusive)" means the policy's last active year is
 2055, which is why the card's status line reads *active 2026–2055*. Leave both years `0` for every
 forecast year.

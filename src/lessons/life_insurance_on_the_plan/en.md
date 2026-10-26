@@ -15,6 +15,8 @@ the row raises the policy's card. The whole-life policy's row is its cash value,
 the term policy's row carries no value at all, because a term policy is not worth anything until it
 pays. In the desktop app the same cards sit under **Insurance** on the balance sheet.
 
+[[jump:birds-eye]]
+
 ## What you will learn
 
 <aside class="lesson-plan">
@@ -62,6 +64,8 @@ well as the benefit and the premium.
 Open the [[nav:cf-table]] on any year before 2046 and both premiums are there among the expenses,
 each under the policy's own name.
 
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-table]]
+
 [[img:life-insurance-cf-table-2045]]
 
 The year after, only the whole-life premium remains. A term policy's premium stops with its
@@ -72,6 +76,8 @@ years** say the policy is paid up.
 
 Open the [[nav:bs-table]]. The whole-life policy's cash value is listed among the real assets, under
 the policy's name, and it counts toward net worth from the first year.
+
+[[jump:balance-sheet|output__forecaster__forecaster.forecast-detail__bs-table]]
 
 [[img:life-insurance-bs-table-2027]]
 

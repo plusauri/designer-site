@@ -63,6 +63,8 @@ The plan also carries a glide path that it does not use yet. The target is 75% s
 
 The target lives under the **Money movement strategy** in [[nav:assumptions]]. Select **Glide rebalance** and the **Glide path target** grid appears beneath it. A plan that already has a target shows the grid under any strategy, with a note when the strategy will not read it.
 
+[[jump:glide-path|input__assumptions__assumptions-sell-invest__control.residual-capital-strategy__control.glide-rebalance]]
+
 [[img:sfglide-glide-target|control]]
 
 *Springfield Glide's target under the Money movement strategy. The plan is on Pro-rata, so the target is stored but not read, and the note beside it says so.*
@@ -99,6 +101,8 @@ Select [[nav:bs-chart]], [[nav:bs-table]], [[nav:cf-chart]], [[nav:cf-table]] an
 | [[img:sfglide-nw-distribution|preview]] | **NW Distribution** | The spread of ending net worth after a strategy switch. |
 | [[img:sfglide-key-forecasts|preview]] | **Key Forecasts** | Ending net worth on the GMF path and across paths. |
 
+[[jump:glide-path|output__forecaster__forecaster.forecast-detail__si-table__line.reason.glide-rebalance]]
+
 Read the **[[term:fid-gmf|FID 0 / GMF]]** path first. The chart controls are explained in [Close up, zoom and Reveal](/learn/getting_around#chart-chrome).
 
 ---
@@ -109,6 +113,8 @@ Read the **[[term:fid-gmf|FID 0 / GMF]]** path first. The chart controls are exp
 |-------|-----|
 | The **Money movement strategy** in [[nav:assumptions]] | Changes the plan's strategy for good. |
 | [[nav:transforms]] → Money movements modifiable | Tries the other strategy as a what-if, then **Re-simulate**. |
+
+[[jump:withdrawal-order|modifiable]]
 
 Switch **Pro-rata** to **Glide rebalance** and leave the accounts and the spending alone for the first experiment. The target is already in place, so the switch is the only change.
 

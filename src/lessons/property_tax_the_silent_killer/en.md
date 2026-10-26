@@ -107,6 +107,8 @@ In the first year the Colorado house's property tax is about $4,400, at a quarte
 
 You do not need a second plan to ask this question. **Region** runs your own plan as if you lived somewhere else. Open Region on the [Illinois](#canvas-dossier:property_tax_illinois) plan, open **Region Selection**, and tap Colorado, Indiana, Texas and Tennessee on the map. Each state becomes a row in the comparison table below the map, beside Illinois, which is marked as home.
 
+[[jump:property-tax|output__region__region.comparison__line.region.property-tax]]
+
 Each row shows the cost-of-living and wage multipliers for that state, its property tax rate, its first-year state income tax, the plan's final net worth if you lived there, and the difference from home. Region builds each row the same way. It switches the plan's state of residence, replaces the property tax rate on every house with the new state's average, and scales living costs by the **COLO ×** multiplier. The house's value does not change.
 
 [[img:property-tax-region-defaults]]

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Glide Rebalance vs Pro-Rata Withdrawals in Retirement — Tutilis</title>
+    <meta name="description" content="Springfield glide demo: bond-heavy taxable with equity-tilted glide — glide rebalance should beat pro-rata on terminal NW">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://www.plusauri.com/learn/glide-rebalance-vs-pro-rata-withdrawals" rel="canonical">
+    <meta content="website" property="og:type">
+    <meta content="Plusauri" property="og:site_name">
+    <meta content="Glide Rebalance vs Pro-Rata Withdrawals in Retirement — Tutilis" property="og:title">
+    <meta content="Springfield glide demo: bond-heavy taxable with equity-tilted glide — glide rebalance should beat pro-rata on terminal NW" property="og:description">
+    <meta content="https://www.plusauri.com/learn/glide-rebalance-vs-pro-rata-withdrawals" property="og:url">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
+<script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
+    <script src="/designer-site/static/lang.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
+    <link href="/designer-site/static/site.css" rel="stylesheet">
+    <script src="/designer-site/static/lesson-split.js" defer="defer"></script>
+    <script src="/designer-site/static/trial-callout.js" defer="defer"></script>
+    <script src="/designer-site/static/community-join.js" defer="defer"></script>
+  </head>
+  <body class="lesson-split-body" data-prose-lang="es" data-lang="es">
+    <header class="lesson-split-header" id="lesson-split-header">
+      <nav>
+        <ul>
+          <li><strong><a href="/designer-site/">Plusauri</a></strong></li>
+          <li><a href="/designer-site/learn">Learning Center</a></li>
+          <li><a href="/designer-site/reference">Reference</a></li>
+        </ul>
+        <ul>
+          <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es" selected="selected">🇪🇸 Español</option></select></label></li>
+          <li><button class="lesson-header-collapse" type="button" aria-expanded="true" aria-controls="lesson-split-header" title="Hide header" aria-label="Hide header">▾</button></li>
+        </ul>
+      </nav>
+    </header>
+<button class="lesson-header-expand" type="button" id="lesson-header-expand" hidden="hidden" title="Show header" aria-label="Show header">▴ Plusauri · Learning Center</button><script type="application/json" id="lesson-canvas-dossiers">{"primary":"springfield_glide","alternates":[],"order":["springfield_glide"]}</script>
+    <div class="lesson-split">
+      <section class="lesson-pane"><a class="trial-callout trial-callout-tech" href="/designer-site/try" data-trial-callout data-variant="tech"><img src="/designer-site/static/images/trial/trial-tech.png" alt="14-Day Free Trial: Your Dossier on Your Desktop" width="459" height="145" decoding="async"></a>
+        <div class="lesson-prose" id="lesson-prose" data-next-key="KeyJ" data-previous-key="KeyK" data-lesson-id="springfield_glide" data-lesson-slug="glide-rebalance-vs-pro-rata-withdrawals" data-loaded-lang="es"><h1>Glide o a prorrata</h1>
+<div class="lesson-intro-card"><img class="lesson-media-ref ui-std-preview-wide" src="/designer-site/static/images/lessons/intro-cards/springfield-glide.webp" alt="Cartoon poster titled Glide rebalance, targeting wealth. A young pilot steers a cockpit whose lever is labeled Steer cash, sending a pipe of surplus cash up a glide path toward a floating island labeled Equity target, terminal wealth, while a thought bubble shows the pro-rata path drifting between bond-heavy islands and a crew member cheers. A sign reads: steer residual cash toward the glide path's targets, equity-tilted here. Quotes attributed to Benjamin Graham, on describing a strategy in fifty words and two charts, and to John Bogle, on buying right and holding on. The banner reads: Swap pro-rata for glide and steer your residual cash toward the equity tilt you need." data-media-id="intro-card-glide-rebalance" loading="lazy" decoding="async" /></div>
+<details class="lesson-intro-chrome" data-intro-chrome="1" data-lesson-presentation="Reading"><summary><span class="lesson-intro-chrome-summary-title">How to use this case study</span></summary><div class="lesson-intro-chrome-body"><blockquote class="lesson-shared lesson-learning-preference" cite="learning-center:learning-preference"><p>New to the Learning Center, or want a map of the panels? Start with a tour: <a href="/designer-site/learn/getting-started-planning-software-tour"><strong>Reading Lesson (Getting Around)</strong></a> or <a href="/designer-site/learn/getting-started-video-tutorial"><strong>Screencast Lesson (Getting Around)</strong></a> — both walk through Tutilis next to a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">plan activo</span><span class="lesson-term-tip" role="tooltip">El producto Tutilis en funcionamiento junto a esta lección —navegación, Vista general, Previsor, herramientas y más— cargado con un ejemplo didáctico. Un dossier son los datos del plan; el plan en vivo es toda la superficie del producto con un dossier de ejemplo ya abierto para que pueda explorar. En la web, los ejemplos didácticos no se pueden editar como podrá editar su propio dossier en la aplicación completa.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> (to the right on a desktop-width screen, or below when stacked on a tablet).</p></blockquote><blockquote class="lesson-shared lesson-orientation" cite="learning-center:orientation"><p>This page — <strong>Glide rebalance vs pro-rata</strong> — includes a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live sample plan</span><span class="lesson-term-tip" role="tooltip">El producto Tutilis en funcionamiento junto a esta lección —navegación, Vista general, Previsor, herramientas y más— cargado con un ejemplo didáctico. Un dossier son los datos del plan; el plan en vivo es toda la superficie del producto con un dossier de ejemplo ya abierto para que pueda explorar. En la web, los ejemplos didácticos no se pueden editar como podrá editar su propio dossier en la aplicación completa.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to the text. On a wide screen it usually sits <strong>to the right</strong> of the text; on a tablet it usually sits <strong>below</strong>. Use the text for the walk-through, then try the same ideas in the live plan.</p></blockquote><blockquote class="lesson-shared lesson-product-relationship" cite="learning-center:product-relationship"><p>The <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">plan activo</span><span class="lesson-term-tip" role="tooltip">El producto Tutilis en funcionamiento junto a esta lección —navegación, Vista general, Previsor, herramientas y más— cargado con un ejemplo didáctico. Un dossier son los datos del plan; el plan en vivo es toda la superficie del producto con un dossier de ejemplo ya abierto para que pueda explorar. En la web, los ejemplos didácticos no se pueden editar como podrá editar su propio dossier en la aplicación completa.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to this page — usually <strong>to the right</strong> on a wide screen, or <strong>below</strong> on a tablet — is <strong>Tutilis</strong> running a teaching sample: the same <strong>financial planning product</strong> available as a desktop application (early preview). A <span class="lesson-term" data-term="dossier" tabindex="0"><span class="lesson-term-pill">dossier</span><span class="lesson-term-tip" role="tooltip">Su plan completo en Tutilis: las personas del hogar, lo que poseen y deben, los flujos de efectivo de entrada y salida, la configuración fiscal y los supuestos de planificación. Un dossier es una situación completa tal como la modela el producto.<a class="lesson-term-more" href="/designer-site/glossary/dossier">Full entry →</a></span></span> is the plan data; the live plan is the full product (navigation, Bird's Eye, Forecaster, tools) with a sample dossier already open so you can try the panels. <a href="/designer-site/pricing">See planned pricing</a>. On the web, Learning Center samples are <strong>not editable</strong> the way your own dossier will be in the full app. Your own household goes in the Tutilis desktop app — <a href="/designer-site/learn#intro-video-heading">the Learning Center front page has a short clip of that</a>.</p></blockquote></div></details>
+<div class="lesson-accordion" data-sections="9" style="--n:9"><h2 id="overview" class="lesson-section-head" style="--i:0"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="overview--body"><span class="lesson-section-title">Resumen</span></button></h2><div class="lesson-section-body" id="overview--body" role="region" aria-labelledby="overview" hidden>
+<!---
+  GENERATED lesson shell — not learner-facing meta. Regenerated chrome is
+  outside α/ω; teaching prose lives only in the protect block.
+  outline-id: household.withdrawal.glide
+  outline-path: Household planning › Withdrawal and longevity › Glide rebalance vs pro-rata
+  document-id: springfield_glide
+  locale: es
+  lifecycle: TranslationComplete
+  status: Shipped
+  lesson-status: FirstPass
+  host-hint: Dossier
+  intent: Full Spanish of the current English lesson. Same image ids and anchors.
+  port-source: dossiers/springfield_glide.md
+-->
+<!--- α <lesson_body> -->
+<p>Una <span class="lesson-term" data-term="glide-path" tabindex="0"><span class="lesson-term-pill">senda de inversión</span><span class="lesson-term-tip" role="tooltip">Un cambio <strong>planificado</strong> de la asignación a lo largo del tiempo, clásicamente hacia bonos a medida que se acerca la jubilación, para que el riesgo baje a la vez que bajan los años disponibles para recuperarse de una pérdida. La palabra clave es *planificado*: una cartera que se desvía hacia lo que ha ido ganando no sigue una senda de transición, simplemente no está reequilibrada.<a class="lesson-term-more" href="/designer-site/glossary/glide-path">Full entry →</a></span></span> es una combinación objetivo de acciones, bonos y efectivo que cambia con los años. La escribe una vez, y cuando la estrategia de retiro es <strong>Rebalanceo de senda</strong> (<span class="lesson-term" data-term="rebalance" tabindex="0"><span class="lesson-term-pill">reequilibrar</span><span class="lesson-term-tip" role="tooltip">Vender parte de lo que ha crecido y comprar lo que se ha quedado atrás, para devolver la combinación al objetivo elegido. Sin ello, una cartera se desplaza discretamente hacia lo que ha ido ganando y se vuelve más arriesgada de lo previsto justo cuando parece más segura.<a class="lesson-term-more" href="/designer-site/glossary/rebalance">Full entry →</a></span></span>), el efectivo que sobra cada año y el faltante de cada año se orientan hacia ella. Bajo la estrategia por defecto, <strong>A prorrata</strong>, el plan vende e invierte en proporción a lo que ya tiene, así que la combinación con la que empieza tiende a quedarse.</p>
+<p>El plan de esta lección empieza con muchos más bonos que acciones y lleva un objetivo que se inclina al otro lado. Esa brecha es de lo que trata la lección. Encontrará dónde se fija el objetivo, lo leerá y luego cambiará la estrategia para ver qué le hace a la previsión seguirlo.</p>
+<p>Es la hermana de <a href="/designer-site/learn/retirement-withdrawal-order">Orden por cuenta fiscal frente a prorrata</a>. Las dos lecciones cambian el mismo control, la estrategia de retiro, y cada muestra está construida para que un solo cambio sea fácil de leer.</p>
+<p>El plan en vivo de la derecha es <strong>Springfield Glide</strong> (<code>springfield_glide</code>). El éxito se juzga como <strong>Plata</strong>, salvo que usted lo cambie, como explica <a href="/designer-site/learn/successful-retirement-plan-definition">¿Qué significa el éxito?</a>.</p>
+</div>
+<h2 id="what-you-will-learn" class="lesson-section-head" style="--i:1"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-you-will-learn--body"><span class="lesson-section-title">Qué va a aprender</span></button></h2><div class="lesson-section-body" id="what-you-will-learn--body" role="region" aria-labelledby="what-you-will-learn" hidden>
+<aside class="lesson-plan">
+<p class="lesson-plan-label">La lección de hoy</p>
+<div class="lesson-plan-body">
+<p>Al final de esta lección debería poder responder estas preguntas. Cada una enlaza con la sección que la responde.</p>
+<ol>
+<li><strong>¿Qué hay en esta muestra, y por qué el prorrateo la mantiene cargada de bonos?</strong> Vea <a href="#what-is-in-the-sample">Qué hay en la muestra</a>.</li>
+<li><strong>¿Dónde fijo la combinación objetivo de la senda, y cómo la leo?</strong> Vea <a href="#set-the-target">Fijar el objetivo</a>.</li>
+<li><strong>¿Qué vistas muestran si la parte de acciones crece con el tiempo?</strong> Vea <a href="#where-to-look">Dónde mirar</a>.</li>
+<li><strong>¿Dónde cambio la estrategia de a prorrata a rebalanceo de senda?</strong> Vea <a href="#the-lever">La palanca</a>.</li>
+<li><strong>Con el mismo hogar y el mismo gasto, ¿qué cambia seguir el objetivo?</strong> Vea <a href="#try-this">Pruebe esto</a>.</li>
+</ol>
+</div>
+</aside>
+</div>
+<h2 id="what-is-in-the-sample" class="lesson-section-head" style="--i:2"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-is-in-the-sample--body"><span class="lesson-section-title">Qué hay en la muestra</span></button></h2><div class="lesson-section-body" id="what-is-in-the-sample--body" role="region" aria-labelledby="what-is-in-the-sample" hidden>
+<p>Homer nació en 1965. Trabaja hasta que se jubila a los 65 en 2030, solicita el Seguro Social a su edad plena de jubilación de 67, y el plan llega hasta que tiene 90. Su ahorro está en una sola <span class="lesson-term" data-term="brokerage" tabindex="0"><span class="lesson-term-pill">cuenta de corretaje</span><span class="lesson-term-tip" role="tooltip">Una cuenta de inversión <strong>sujeta a impuestos</strong> corriente — sin envoltorio especial de jubilación, sin límite de aportación y sin reglas de edad para los retiros. La contrapartida es que los dividendos y las ganancias realizadas tributan a medida que se producen, en lugar de diferirse. Suele llamarse el compartimento <strong>sujeto a impuestos</strong>, junto al tradicional y al Roth.<a class="lesson-term-more" href="/designer-site/glossary/brokerage">Full entry →</a></span></span> imponible que tiene dos fondos: <strong>Growth Equity</strong>, que crece como el mercado de acciones de EE. UU., y <strong>Ballast Bond</strong>, que crece como los Treasuries intermedios. El fondo de bonos es más de cinco veces el tamaño del fondo de acciones. Sus gastos de vida continúan hasta el final del plan.</p>
+<p>La estrategia de retiro del plan es <strong>A prorrata</strong>. Cada año vende, o invierte, en los dos fondos en proporción a su tamaño, así que la cartera se queda sobre todo en bonos mientras el plan corre.</p>
+<p>El plan también lleva una senda de inversión que todavía no usa. El objetivo es 75 % de acciones y 25 % de bonos hasta la jubilación, y luego se mueve en línea recta hasta 50/50 en el año en que Homer cumple 90. La tabla al pie de esta lección lista cada ajuste, objetivo incluido.</p>
+</div>
+<h2 id="set-the-target" class="lesson-section-head" style="--i:3"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="set-the-target--body"><span class="lesson-section-title">Fijar el objetivo</span></button></h2><div class="lesson-section-body" id="set-the-target--body" role="region" aria-labelledby="set-the-target" hidden>
+<p>El objetivo vive bajo la <strong>Estrategia de movimientos de dinero</strong> en <span class="lesson-nav-ref lesson-nav-ref--assumptions lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/assumptions.png" alt="Assumptions" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Supuestos</span><span class="lesson-term-tip" role="tooltip">Un <strong>área del riel principal</strong>. Las <strong>reglas</strong> bajo las que corre el pronóstico — crecimiento, impuestos, movimientos, definición de éxito, localidad, moneda. Lectura y escritura.</span></span>. Seleccione <strong>Rebalanceo de senda</strong> y aparece debajo la cuadrícula <strong>Objetivo de la senda</strong>. Un plan que ya tiene un objetivo muestra la cuadrícula bajo cualquier estrategia, con una nota cuando la estrategia no lo va a leer.</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Dónde está en la aplicación</span> <a class="lesson-jump-term" href="/designer-site/glossary/glide-path">senda de inversión</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--input">Dónde se ingresa</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="input__assumptions__assumptions-sell-invest__control.residual-capital-strategy__control.glide-rebalance" title="Ir allí" aria-label="Ir allí: Supuestos → Movimientos → Estrategia de movimientos de dinero → Rebalanceo de senda"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/input__assumptions__assumptions-sell-invest__control.residual-capital-strategy__control.glide-rebalance.png" width="609" height="32" alt="Supuestos → Movimientos → Estrategia de movimientos de dinero → Rebalanceo de senda" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+<p><img class="lesson-media-ref ui-control lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sfglide-glide-target.es.png" alt="The Money movement strategy on Pro-rata, with the plan's glide path target beneath it: 75/25 in 2030 to 50/50 in 2055" data-media-id="sfglide-glide-target" width="555" data-where="input__assumptions__assumptions-sell-invest" data-canvas-dossier="springfield_glide" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">El objetivo de Springfield Glide bajo la Estrategia de movimientos de dinero. El plan está en A prorrata, así que el objetivo está guardado pero no se lee, y la nota de al lado lo dice.</p>
+<p>La cuadrícula tiene una columna por año y una fila por clase de inversión: acciones nacionales, acciones internacionales, bonos y efectivo. Cada columna dice cómo debería repartirse la cartera ese año, y debería sumar 100 %. El total bajo cada columna se pone rojo cuando no lo hace, y <strong>Normalizar a 100%</strong> devuelve cada columna en ese caso al 100 %.</p>
+<ul>
+<li><strong>Definir una combinación objetivo</strong> enciende el objetivo. Un objetivo nuevo empieza con una columna para este año, rellena con lo que el plan tiene hoy. Desmarcarlo borra el objetivo, cada columna y la casilla bajo la cuadrícula, así que pregunta primero.</li>
+<li><strong>Agregar año</strong> añade una columna diez años después de la última, con la misma combinación, que usted luego edita.</li>
+<li>La papelera bajo una columna la quita.</li>
+</ul>
+<p>Entre dos columnas el objetivo se mueve en línea recta. Antes de la primera columna se aplica la combinación de la primera, y después de la última, la de la última. Springfield Glide tiene dos columnas, 2030 y 2055, así que su objetivo es 75/25 cada año hasta 2030 y llega a 50/50 en 2055.</p>
+<p>El objetivo se enuncia por clase de inversión, y Tutilis decide de qué clase es cada fondo a partir de la categoría de crecimiento a la que está fijado para crecer. Cuando una clase tiene varios fondos, su parte se reparte entre ellos en proporción a su valor. Un fondo cuya categoría no es ninguna de las cuatro, como el oro, el inmobiliario o un fondo solo con su propio supuesto de crecimiento, aparece bajo la cuadrícula como <strong>Fuera de la senda</strong>. La regla nunca lo compra ni lo vende para alcanzar el objetivo.</p>
+</div>
+<h2 id="where-to-look" class="lesson-section-head" style="--i:4"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="where-to-look--body"><span class="lesson-section-title">Dónde mirar</span></button></h2><div class="lesson-section-body" id="where-to-look--body" role="region" aria-labelledby="where-to-look" hidden>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="definitional">Definitorio</h3></summary><div class="lesson-subsection-body">
+<ol>
+<li><span class="lesson-nav-ref lesson-nav-ref--birds-eye lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/birds-eye.png" alt="Bird's Eye" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Vista general</span><span class="lesson-term-tip" role="tooltip">Cuando <strong>no</strong> está en Dossier, este control está en la <strong>barra superior</strong>. Abre un resumen del hogar como <strong>modal</strong> — personas, activos y pasivos, flujos de efectivo — sin salir del área actual. Oculto en Dossier, porque ese mismo resumen ya está arriba de esa área.</span></span> → Activos muestra <strong>Growth Equity</strong> y <strong>Ballast Bond</strong> lado a lado en la cuenta de corretaje.</li>
+<li>La <strong>Estrategia de movimientos de dinero</strong> bajo <span class="lesson-nav-ref lesson-nav-ref--assumptions lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/assumptions.png" alt="Assumptions" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Supuestos</span><span class="lesson-term-tip" role="tooltip">Un <strong>área del riel principal</strong>. Las <strong>reglas</strong> bajo las que corre el pronóstico — crecimiento, impuestos, movimientos, definición de éxito, localidad, moneda. Lectura y escritura.</span></span> empieza en <strong>A prorrata</strong>, y la cuadrícula <strong>Objetivo de la senda</strong> descrita arriba está debajo.</li>
+</ol>
+</div></details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="projected-navforecaster-already-populated">Proyectado — <span class="lesson-nav-ref lesson-nav-ref--forecaster lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/forecaster.png" alt="Forecaster" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Previsor</span><span class="lesson-term-tip" role="tooltip">Un <strong>área del riel principal</strong> con dos trabajos: (1) ejecutar el plan año por año e inspeccionar Forecast Detail, y (2) <strong>Simulation Summary</strong> — muchas trayectorias resumidas en algo como una probabilidad de éxito.</span></span> (ya poblado)</h3></summary><div class="lesson-subsection-body">
+<p>Seleccione <span class="lesson-nav-ref lesson-nav-ref--bs-chart lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/bs-chart.png" alt="BS Chart" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Gráfico BS</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>BS</strong> = balance. Activos por encima de la línea, pasivos debajo, a lo largo de los años. La <strong>línea neta</strong>, dibujada en negro grueso, es el <strong>patrimonio neto</strong> — a menudo lo que usted busca. Pulse un año para cargar las tablas.</span></span>, <span class="lesson-nav-ref lesson-nav-ref--bs-table lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/bs-table.png" alt="BS Table" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Tabla BS</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>BS</strong> = balance del <strong>año seleccionado</strong> — activos reales, cuentas, pasivos, patrimonio neto. Compañero copiable del gráfico BS.</span></span>, <span class="lesson-nav-ref lesson-nav-ref--cf-chart lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/cf-chart.png" alt="CF Chart" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Gráfico CF</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>CF</strong> = flujos de efectivo. Dinero <strong>entra</strong> arriba, <strong>sale</strong> abajo, por categoría a lo largo de los años. La <strong>línea neta</strong>, dibujada en negro grueso, es el <strong>flujo neto</strong> — a menudo lo que usted busca.</span></span>, <span class="lesson-nav-ref lesson-nav-ref--cf-table lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/cf-table.png" alt="CF Table" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Tabla CF</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>CF</strong> = flujos del <strong>año seleccionado</strong> — ingresos, gastos, impuestos y totales invertir / vender / pedir.</span></span> y <span class="lesson-nav-ref lesson-nav-ref--si-table lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/si-table.png" alt="Moves Table" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Moves Table</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>Mov</strong> = Movements. Operaciones por holding del año seleccionado — vendido o invertido, después, %, y <strong>Why</strong>.</span></span>. El Resumen de simulación ya está en <strong>Plata</strong>.</p>
+<table>
+<thead>
+<tr><th>Vista previa</th><th>Vista</th><th>Qué muestra aquí</th></tr>
+</thead>
+<tbody>
+<tr><td><img class="lesson-media-ref ui-std-preview lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sfglide-bs-chart.es.png" alt="Balance sheet chart: assets above the line, liabilities below" data-media-id="sfglide-bs-chart" data-where="output__forecaster__forecaster.forecast-detail__bs-chart" data-canvas-dossier="springfield_glide" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></td><td><span class="lesson-nav-ref lesson-nav-ref--bs-chart lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/bs-chart.png" alt="BS Chart" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Gráfico BS</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>BS</strong> = balance. Activos por encima de la línea, pasivos debajo, a lo largo de los años. La <strong>línea neta</strong>, dibujada en negro grueso, es el <strong>patrimonio neto</strong> — a menudo lo que usted busca. Pulse un año para cargar las tablas.</span></span></td><td>Si la parte de acciones crece con el tiempo.</td></tr>
+<tr><td><img class="lesson-media-ref ui-std-preview lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sfglide-bs-table.es.png" alt="Balance sheet for one year: assets, liabilities and net worth" data-media-id="sfglide-bs-table" data-where="output__forecaster__forecaster.forecast-detail__bs-table" data-canvas-dossier="springfield_glide" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></td><td><span class="lesson-nav-ref lesson-nav-ref--bs-table lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/bs-table.png" alt="BS Table" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Tabla BS</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>BS</strong> = balance del <strong>año seleccionado</strong> — activos reales, cuentas, pasivos, patrimonio neto. Compañero copiable del gráfico BS.</span></span></td><td>Los dos fondos en un año seleccionado.</td></tr>
+<tr><td><img class="lesson-media-ref ui-std-preview lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sfglide-cf-chart.es.png" alt="Cash flow chart: money in above the line, money out below" data-media-id="sfglide-cf-chart" data-where="output__forecaster__forecaster.forecast-detail__cf-chart" data-canvas-dossier="springfield_glide" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></td><td><span class="lesson-nav-ref lesson-nav-ref--cf-chart lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/cf-chart.png" alt="CF Chart" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Gráfico CF</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>CF</strong> = flujos de efectivo. Dinero <strong>entra</strong> arriba, <strong>sale</strong> abajo, por categoría a lo largo de los años. La <strong>línea neta</strong>, dibujada en negro grueso, es el <strong>flujo neto</strong> — a menudo lo que usted busca.</span></span></td><td>El ingreso mientras Homer trabaja, los gastos de vida y los años en que el plan invierte o vende.</td></tr>
+<tr><td><img class="lesson-media-ref ui-std-preview lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sfglide-si-table.es.png" alt="Movements in a drawdown year: what is sold and why" data-media-id="sfglide-si-table" data-where="output__forecaster__forecaster.forecast-detail__si-table" data-canvas-dossier="springfield_glide" data-pick="2045,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></td><td><span class="lesson-nav-ref lesson-nav-ref--si-table lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/si-table.png" alt="Moves Table" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Moves Table</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>Mov</strong> = Movements. Operaciones por holding del año seleccionado — vendido o invertido, después, %, y <strong>Why</strong>.</span></span></td><td>Por qué ocurrió cada operación. Las operaciones a prorrata lo dicen, y las de senda dicen <em>Rebalanceo de senda</em>.</td></tr>
+<tr><td><img class="lesson-media-ref ui-std-preview lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sfglide-nw-distribution.es.png" alt="Net worth distribution: every simulated path's ending net worth" data-media-id="sfglide-nw-distribution" data-where="output__forecaster__forecaster.simulation-summary__simulation-summary.distribution" data-canvas-dossier="springfield_glide" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></td><td><strong>Distribución del patrimonio neto</strong></td><td>La dispersión del patrimonio neto final tras un cambio de estrategia.</td></tr>
+<tr><td><img class="lesson-media-ref ui-std-preview lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sfglide-key-forecasts.es.png" alt="Key Forecasts: Min, quartiles, GMF and Max" data-media-id="sfglide-key-forecasts" data-where="output__forecaster__forecaster.simulation-summary" data-canvas-dossier="springfield_glide" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></td><td><strong>Previsiones clave</strong></td><td>El patrimonio neto final en la trayectoria GMF y a través de las trayectorias.</td></tr>
+</tbody>
+</table>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Dónde está en la aplicación</span> <a class="lesson-jump-term" href="/designer-site/glossary/glide-path">senda de inversión</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Dónde aparece en el pronóstico</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__forecaster__forecaster.forecast-detail__si-table__line.reason.glide-rebalance" title="Ir allí" aria-label="Ir allí: Previsor → Detalle de previsión → ▦Mov → Rebalanceo de senda"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__forecaster__forecaster.forecast-detail__si-table__line.reason.glide-rebalance.png" width="497" height="32" alt="Previsor → Detalle de previsión → ▦Mov → Rebalanceo de senda" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+<p>Lea primero la trayectoria <strong><span class="lesson-term" data-term="fid-gmf" tabindex="0"><span class="lesson-term-pill">FID 0 / GMF</span><span class="lesson-term-tip" role="tooltip">Cómo se etiqueta la estrella polar en el control FID: <strong>FID 0</strong> es la trayectoria determinista GMF ✦, y cualquier otro FID es un sorteo aleatorio de la simulación. Elíjala cuando quiera que la lectura año por año se mantenga fija mientras cambia otra cosa del plan.<a class="lesson-term-more" href="/designer-site/glossary/fid-gmf">Full entry →</a></span></span></strong>. Los controles de los gráficos se explican en <a href="/designer-site/learn/getting-started-planning-software-tour#chart-chrome">Controles de los gráficos: Ampliar, zoom y Revelar</a>.</p>
+</div></details>
+
+</div>
+<h2 id="the-lever" class="lesson-section-head" style="--i:5"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="the-lever--body"><span class="lesson-section-title">La palanca</span></button></h2><div class="lesson-section-body" id="the-lever--body" role="region" aria-labelledby="the-lever" hidden>
+<table>
+<thead>
+<tr><th>Lugar</th><th>Uso</th></tr>
+</thead>
+<tbody>
+<tr><td>La <strong>Estrategia de movimientos de dinero</strong> en <span class="lesson-nav-ref lesson-nav-ref--assumptions lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/assumptions.png" alt="Assumptions" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Supuestos</span><span class="lesson-term-tip" role="tooltip">Un <strong>área del riel principal</strong>. Las <strong>reglas</strong> bajo las que corre el pronóstico — crecimiento, impuestos, movimientos, definición de éxito, localidad, moneda. Lectura y escritura.</span></span></td><td>Cambia la estrategia del plan para siempre.</td></tr>
+<tr><td><span class="lesson-nav-ref lesson-nav-ref--transforms lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/transforms.png" alt="Transforms" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Transformaciones</span><span class="lesson-term-tip" role="tooltip">Un <strong>área del riel principal</strong>. El nombre <strong>Transformaciones</strong> significa: usted <strong>transforma una copia</strong> del plan — un qué-pasaría-si — sin reescribir el dossier original. Compare original y modificado lado a lado.</span></span> → Movimientos de dinero, en los modificables</td><td>Prueba la otra estrategia como un qué pasaría si, y luego <strong>Re-simular</strong>.</td></tr>
+</tbody>
+</table>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Dónde está en la aplicación</span> <a class="lesson-jump-term" href="/designer-site/glossary/withdrawal-order">orden de retiro</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--modifiable">Dónde probarlo como escenario hipotético</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sell-invest" title="Ir allí" aria-label="Ir allí: Transformaciones → Modificaciones → Modificables → Global → Movimientos de dinero"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sell-invest.png" width="591" height="32" alt="Transformaciones → Modificaciones → Modificables → Global → Movimientos de dinero" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+<p>Cambie <strong>A prorrata</strong> a <strong>Rebalanceo de senda</strong> y deje las cuentas y el gasto quietos para el primer experimento. El objetivo ya está puesto, así que el cambio es la única diferencia.</p>
+<p>Hasta que cambie, la lista de problemas del plan lleva un aviso de que la senda de inversión no la usa la estrategia de retiro. Ese es el punto de esta lección: bajo el prorrateo el objetivo está escrito, pero nada lo lee. El aviso desaparece cuando la estrategia es rebalanceo de senda.</p>
+</div>
+<h2 id="try-this" class="lesson-section-head" style="--i:6"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="try-this--body"><span class="lesson-section-title">Pruebe esto</span></button></h2><div class="lesson-section-body" id="try-this--body" role="region" aria-labelledby="try-this" hidden>
+<ol>
+<li>Confirme que <strong>Ballast Bond</strong> es mucho mayor que <strong>Growth Equity</strong> al principio, en <span class="lesson-nav-ref lesson-nav-ref--birds-eye lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/birds-eye.png" alt="Bird's Eye" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Vista general</span><span class="lesson-term-tip" role="tooltip">Cuando <strong>no</strong> está en Dossier, este control está en la <strong>barra superior</strong>. Abre un resumen del hogar como <strong>modal</strong> — personas, activos y pasivos, flujos de efectivo — sin salir del área actual. Oculto en Dossier, porque ese mismo resumen ya está arriba de esa área.</span></span> o <span class="lesson-nav-ref lesson-nav-ref--bs-table lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/bs-table.png" alt="BS Table" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Tabla BS</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>BS</strong> = balance del <strong>año seleccionado</strong> — activos reales, cuentas, pasivos, patrimonio neto. Compañero copiable del gráfico BS.</span></span>.</li>
+<li>Note que la estrategia es <strong>A prorrata</strong>, y note el patrimonio neto del plan en su último año en la trayectoria GMF.</li>
+<li>Abra <span class="lesson-nav-ref lesson-nav-ref--assumptions lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/assumptions.png" alt="Assumptions" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Supuestos</span><span class="lesson-term-tip" role="tooltip">Un <strong>área del riel principal</strong>. Las <strong>reglas</strong> bajo las que corre el pronóstico — crecimiento, impuestos, movimientos, definición de éxito, localidad, moneda. Lectura y escritura.</span></span> y lea la cuadrícula <strong>Objetivo de la senda</strong> bajo la <strong>Estrategia de movimientos de dinero</strong>. Luego cambie la estrategia a <strong>Rebalanceo de senda</strong> y <strong>Re-simule</strong>.</li>
+<li>Desplace <span class="lesson-nav-ref lesson-nav-ref--bs-chart lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/bs-chart.png" alt="BS Chart" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Gráfico BS</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>BS</strong> = balance. Activos por encima de la línea, pasivos debajo, a lo largo de los años. La <strong>línea neta</strong>, dibujada en negro grueso, es el <strong>patrimonio neto</strong> — a menudo lo que usted busca. Pulse un año para cargar las tablas.</span></span> o <span class="lesson-nav-ref lesson-nav-ref--bs-table lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/bs-table.png" alt="BS Table" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Tabla BS</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>BS</strong> = balance del <strong>año seleccionado</strong> — activos reales, cuentas, pasivos, patrimonio neto. Compañero copiable del gráfico BS.</span></span> a través de los años. Bajo el prorrateo, las acciones se quedan cerca de un quinto de la cartera durante todo el plan. Bajo el rebalanceo de senda, el efectivo que sobra cada año y el faltante de cada año se orientan hacia el objetivo, así que la parte de acciones sube a más de un cuarto en 2035 y a unos dos quintos en 2040. Alcanza el objetivo a finales de la década de 2040 y luego lo sigue hacia abajo, hacia 50/50.</li>
+<li>Compare los finales. El plan se mantiene <span class="lesson-term" data-term="solvent" tabindex="0"><span class="lesson-term-pill">solvente</span><span class="lesson-term-tip" role="tooltip">Capaz de cumplir sus obligaciones — en un plan, que el dinero no se agotó antes del horizonte. Es un listón más bajo de lo que parece: una trayectoria puede seguir siendo solvente gastando mucho menos de lo previsto, por eso solvencia y éxito no son la misma prueba.<a class="lesson-term-more" href="/designer-site/glossary/solvent">Full entry →</a></span></span> hasta el final bajo las dos estrategias, y bajo el rebalanceo de senda termina con cerca de un tercio más de patrimonio neto, porque una parte mayor del dinero pasó esos años creciendo a rendimientos de acciones.</li>
+<li>Edite el objetivo y vuelva a simular. Pruebe una segunda columna más tardía, o un punto final 60/40, y observe cuánto se mueve el final. El sentido de la cuadrícula es que puede decir qué combinación quiere sin tocar un solo fondo.</li>
+</ol>
+<p>Lea la dirección, no los dólares. En una cartera cargada de bonos, con un objetivo que pide más acciones, orientar el efectivo sobrante hacia el objetivo ayuda.</p>
+</div>
+<h2 id="sibling-lessons" class="lesson-section-head" style="--i:7"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="sibling-lessons--body"><span class="lesson-section-title">Lecciones hermanas</span></button></h2><div class="lesson-section-body" id="sibling-lessons--body" role="region" aria-labelledby="sibling-lessons" hidden>
+<table>
+<thead>
+<tr><th>Lección</th><th>Qué cambia la estrategia</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="/designer-site/learn/retirement-withdrawal-order">Orden por cuenta fiscal frente a prorrata</a></td><td>Qué cesta fiscal paga primero (efectivo imponible y un Roth de crecimiento rápido).</td></tr>
+<tr><td><strong>Esta página</strong></td><td>La combinación de las inversiones, a través de una senda (una cuenta cargada de bonos y un objetivo inclinado a las acciones).</td></tr>
+<tr><td><a href="/designer-site/learn/retirement-glide-path-bond-tent">Sendas de inversión a lo largo de la jubilación</a></td><td>Una senda que cambia con los años: la tienda de bonos, el rebalanceo dentro de la IRA y un desplome en la jubilación.</td></tr>
+</tbody>
+</table>
+<p>Las tres estrategias responden preguntas distintas, y cada muestra está afinada para que un solo cambio sea fácil de leer.</p>
+</div>
+<h2 id="where-to-go-next" class="lesson-section-head" style="--i:8"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="where-to-go-next--body"><span class="lesson-section-title">Adónde ir después</span></button></h2><div class="lesson-section-body" id="where-to-go-next--body" role="region" aria-labelledby="where-to-go-next" hidden>
+<table>
+<thead>
+<tr><th>Tema</th><th>Lección</th></tr>
+</thead>
+<tbody>
+<tr><td>Una trayectoria que cambia a lo largo de la jubilación</td><td><a href="/designer-site/learn/retirement-glide-path-bond-tent">Sendas de inversión a lo largo de la jubilación</a></td></tr>
+<tr><td>Orden de cuentas fiscales</td><td><a href="/designer-site/learn/retirement-withdrawal-order">Orden por cuenta fiscal frente a prorrata</a></td></tr>
+<tr><td>El hogar completo de dos ingresos</td><td><a href="/designer-site/learn/sample-family-financial-plan">El hogar Springfield</a></td></tr>
+<tr><td>Edad de solicitud y longevidad</td><td><a href="/designer-site/learn/when-to-claim-social-security">Solicitar pronto o vivir mucho</a></td></tr>
+<tr><td>Un RMD tradicional forzado</td><td><a href="/designer-site/learn/required-minimum-distributions-large-ira">RMD tradicional forzada frente al orden fiscal del residual</a></td></tr>
+<tr><td>Un mapa de la aplicación</td><td><a href="/designer-site/learn/getting-started-planning-software-tour">Orientarse en la aplicación</a></td></tr>
+</tbody>
+</table>
+<hr />
+<p><em>Las cantidades son ilustrativas. Lo que enseña la lección es que, en una cartera cargada de bonos con un objetivo que pide más acciones, el rebalanceo de senda mueve la combinación hacia el objetivo y deja el plan mejor que el prorrateo. La dirección es la lección, y los dólares son solo una ilustración.</em></p>
+<!--- ω <lesson_body> -->
+<!-- GENERATED host-hint: Dossier — Live plan canvas — Bind a sample dossier on the right. -->
+</div>
+</div>
+<details class="lesson-rebuild-by-hand"><summary><span class="lesson-rebuild-by-hand-summary-title">Reconstruir este plan a mano</span></summary><div class="lesson-rebuild-by-hand-body"><p>Las tarjetas del lienzo muestran las cuentas y los flujos. Estos son los ajustes que viven fuera de cualquier tarjeta, leídos del propio plan, con la etiqueta que lleva cada control en la aplicación. Un valor marcado default se deja como está.</p><table class="content-table">
+<thead>
+<tr>
+<th align="left">Setting</th>
+<th align="left">Springfield Glide</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2" align="center"><strong>Household</strong></td></tr>
+<tr>
+<td align="left">Planning region</td>
+<td align="left">United States (default)</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Homer (Primary)</td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1965</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">65</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">90</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Taxes</strong></td></tr>
+<tr>
+<td align="left">Tax regime</td>
+<td align="left">United States</td>
+</tr>
+<tr>
+<td align="left">Filing status</td>
+<td align="left">Single</td>
+</tr>
+<tr>
+<td align="left">State of residence</td>
+<td align="left">Ohio</td>
+</tr>
+<tr>
+<td align="left">First-year federal estimate</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">First-year state estimate</td>
+<td align="left">—</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Strategy</strong></td></tr>
+<tr>
+<td align="left">Residual withdrawal strategy</td>
+<td align="left">Pro-rata (default)</td>
+</tr>
+<tr>
+<td align="left">Roth conversions</td>
+<td align="left">Off</td>
+</tr>
+<tr>
+<td align="left">Definition of success</td>
+<td align="left">Liquidity crises allowed (default)</td>
+</tr>
+<tr>
+<td align="left">Glide path target</td>
+<td align="left">Set (2 target allocations)</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">Target for 2030</td>
+<td align="left">Domestic stocks 75% · Bonds 25%</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">Target for 2055</td>
+<td align="left">Domestic stocks 50% · Bonds 50%</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Advanced</strong></td></tr>
+<tr>
+<td align="left">Reporting inflation</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Cost of capital</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Growth assumptions</td>
+<td align="left">Growth overrides (default)</td>
+</tr>
+<tr>
+<td align="left">Currencies</td>
+<td align="left">Multiple currencies (default)</td>
+</tr>
+<tr>
+<td align="left">Default currency</td>
+<td align="left">USD (default)</td>
+</tr>
+<tr>
+<td align="left">Display currency</td>
+<td align="left">USD (default)</td>
+</tr>
+</tbody>
+</table>
+</div></details><div class="lesson-catalog-footer"><span class="lesson-region-badge" title="All regions"><span class="lesson-region-marker">🌐</span><span class="lesson-region-label muted">All regions</span></span><span class="lesson-tags"><span class="lesson-tags-label">Etiquetas</span><span class="learn-chip">family-springfield</span><span class="learn-chip">withdrawal-strategy</span></span></div><div class="community-invite"><a class="community-callout" href="https://community.plusauri.com" target="_blank" rel="noopener noreferrer" data-community-join="community-join" aria-haspopup="dialog"><img src="/designer-site/static/images/community/join-callout.jpg" alt="Join Our Community" width="392" height="229" decoding="async" loading="lazy"></a><dialog id="community-join" class="community-join" aria-labelledby="community-join-title"><article class="community-join-panel"><button type="button" class="community-join-close" data-community-join-close aria-label="Close" title="Close">×</button><h2 id="community-join-title">Join the Plusauri community</h2><form class="community-join-form" action="/designer-site/api/community/join" method="post" novalidate data-msg-invalid="That email address does not look right." data-msg-failed="Something went wrong. You can still join directly at community.plusauri.com." data-msg-sending="Sending…"><p class="community-join-lead">A forum of people planning their own retirement, asking questions and helping each other. Anyone can read it. Members can post, and get a note when someone answers.</p><fieldset class="community-join-modes"><legend>How would you like to take part?</legend><label class="community-join-mode community-join-mode-participant"><input type="radio" name="mode" value="Participant" checked><span class="community-join-mode-art" aria-hidden="true"></span><strong>Participant</strong><small>Ask questions, share what you have learned, join the conversation.</small></label><label class="community-join-mode community-join-mode-lurker"><input type="radio" name="mode" value="Lurker"><span class="community-join-mode-art" aria-hidden="true"></span><strong>Lurker</strong><small>No account needed. Get the highlights by email and read the forum whenever you like.</small></label></fieldset><div class="community-join-who"><label class="community-join-name">First name (optional)<input type="text" name="firstName" autocomplete="given-name" maxlength="80"></label><label class="community-join-email">Your email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com" maxlength="254"></label></div><fieldset class="community-join-stage"><legend>Which describes you best? (optional)</legend><label><input type="radio" name="stage" value="Building"> Building and saving</label><label><input type="radio" name="stage" value="NearingRetirement"> Getting close to retirement</label><label><input type="radio" name="stage" value="Retired"> Retired</label></fieldset><input type="text" name="website" class="community-join-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="community-join-note community-join-for-participant">We will email you an invitation to community.plusauri.com. Accept it to finish joining.</p><p class="community-join-note community-join-for-lurker">We will add you to the Plusauri mailing list. The forum at community.plusauri.com is open to read anytime, no account needed. Unsubscribe whenever you like.</p><label class="community-join-news"><input type="checkbox" name="news"> Also send me occasional Plusauri news by email. Optional, and you can unsubscribe anytime.</label><p class="community-join-error" role="alert" hidden></p><footer class="community-join-actions"><button type="button" class="secondary outline" data-community-join-close>Not now</button><button type="submit"><span class="community-join-for-participant">Send my invitation</span><span class="community-join-for-lurker">Add me to the list</span></button></footer></form><div class="community-join-sent" hidden aria-live="polite"><h3>Check your inbox</h3><p data-status="invited" hidden>Your invitation is on its way. Accept it to choose a username and finish joining.</p><p data-status="queued" hidden>Thanks. We will send your invitation shortly.</p><p data-status="member" hidden>That address already belongs to a member. Sign in at community.plusauri.com.</p><p data-status="listed" hidden>Thanks, you are on the list. The forum is at community.plusauri.com whenever you want a look.</p><footer class="community-join-actions"><button type="button" data-community-join-close>Done</button></footer></div></article></dialog></div><hr class="lesson-disclaimer-rule" /><blockquote class="lesson-shared lesson-disclaimer" cite="learning-center:disclaimer"><p><strong>Contenido educativo — no es asesoramiento.</strong> Estas lecciones enseñan cómo Tutilis modela un plan y cómo leer lo que muestra. Los hogares, saldos y resultados que aparecen se inventaron para enseñar. Nada de esto es asesoramiento financiero, de inversión, fiscal o legal, ni una recomendación de comprar, vender o mantener nada. Un modelo no puede conocer sus circunstancias: contraste lo que tome de una lección con su propia situación y, cuando importe, con un profesional cualificado.</p></blockquote><p class="lesson-privacy-link"><small><a href="/designer-site/privacy">Privacy</a></small></p></div>
+      </section>
+      <div class="lesson-split-gutter">
+        <div class="lesson-split-handle" role="separator" aria-orientation="vertical" aria-label="Resize lesson and app panes" tabindex="0"></div>
+        <div class="lesson-split-pill"><button class="lesson-split-widen" type="button" data-widen="app" data-label-widen="Show the app full width" data-label-restore="Show the lesson and the app side by side" title="Show the app full width" aria-label="Show the app full width"><span class="lesson-split-caret"></span></button><button class="lesson-split-widen" type="button" data-widen="lesson" data-label-widen="Show the lesson full width" data-label-restore="Show the lesson and the app side by side" title="Show the lesson full width" aria-label="Show the lesson full width"><span class="lesson-split-caret"></span></button></div>
+      </div>
+      <section class="app-pane">
+        <p class="canvas-omitted muted">The interactive plan is not in this copy.</p>
+      </section>
+    </div>
+  </body>
+</html>

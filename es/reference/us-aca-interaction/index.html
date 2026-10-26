@@ -31,15 +31,22 @@
         <ul>
           <li><a href="/designer-site/">Inicio</a></li>
           <li><a href="/designer-site/learn" class="nav-learn">Learning Center</a></li>
-          <li><a href="/designer-site/reference">Reference</a></li>
-          <li><a href="/designer-site/glossary">Glossary</a></li>
+          <li>
+            <details class="dropdown nav-resources"><summary>Resources</summary>
+              <ul>
+                <li><a href="/designer-site/start-here">Start Here</a></li>
+                <li><a href="/designer-site/reference">Reference</a></li>
+                <li><a href="/designer-site/glossary">Glossary</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="/designer-site/pricing">Precios</a></li>
           <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es" selected="selected">🇪🇸 Español</option></select></label></li>
           <li><button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Light theme — click for dark" title="Light theme — click for dark">☀</button></li>
         </ul>
       </nav>
     </header>
-    <main class="container"><div class="reference-hub">
+    <main class="container"><div class="reference-hub" data-tint="sage">
   <p class="catalog-crumb"><a href="/designer-site/reference"><span class="catalog-crumb-arrow" aria-hidden="true">←</span>All reference</a></p>
   <h1>ACA marketplace interaction</h1>
   <p class="reference-lede">What MAGI does to marketplace premium tax credits, and how this engine prices the credit for a plan bought on the marketplace.</p>
@@ -47,18 +54,24 @@
   <p class="reference-source">Source: HHS Poverty Guidelines — U.S. Department of Health and Human Services / ASPE</p>
   <p class="reference-source-url"><a href="https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines">https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines</a></p>
   <div class="reference-honesty reference-usage">
-    <h3>Where we use this · Shown, not applied</h3>
+    <h3><span class="reference-honesty-kicker">Where we use this</span><span class="reference-use-pill reference-use-pill--display-only">Shown, not applied</span></h3>
     <ul>
       <li>For a healthcare phase marked as a marketplace plan, the credit is the benchmark premium less the applicable percentage of ACA household income (AGI with all Social Security and tax-exempt interest added back), never more than the premium. From 2026 no credit is paid above 400% of the poverty line.</li>
       <li>The credit is paid in advance on the income the year's flows project and reconciled on the year's return; excess advance is repaid in full with the next year's tax.</li>
       <li>An unmarked phase that looks like marketplace coverage gets a warning for any year with positive MAGI, and no credit.</li>
     </ul>
   </div>
-  <div class="reference-honesty">
+  <div class="reference-honesty reference-limits">
     <h3>Not modeled</h3>
     <p>Medicaid (below 138% of the poverty line in expansion states), an employer offer that rules the credit out, cost-sharing reductions, state subsidies, excluded foreign earned income in ACA household income, and any phase not marked as a marketplace plan, which gets a warning instead of a credit.</p>
   </div>
-  <div class="reference-table-wrap"><table class="content-table">
+  <section class="reference-sheet">
+    <header class="reference-sheet-head">
+      <div class="reference-sheet-titles">
+        <div class="reference-sheet-kicker"><span>Reference table</span><span class="reference-sheet-category">Poverty &amp; ACA</span></div>
+      </div>
+    </header>
+    <div class="reference-table-wrap"><table class="content-table">
 <thead>
 <tr>
 <th align="left">Cliff</th>
@@ -75,8 +88,9 @@
 </tbody>
 </table>
 </div>
+  </section>
 </div>
 </main>
-    <footer class="container"><small>© Plusauri, LLC — sea dueño de su plan financiero.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenido educativo — no es asesoramiento financiero, de inversión, fiscal ni legal.</small></footer>
+    <footer class="container"><small>© Plusauri, LLC — sea dueño de su plan financiero.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenido educativo — no es asesoramiento financiero, de inversión, fiscal ni legal.</small><small class="footer-trademarks">Tutilis™ and Plusauri™ are trademarks of Plusauri, LLC.</small></footer>
   </body>
 </html>

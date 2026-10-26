@@ -40,6 +40,8 @@ The dates appear in three places.
 - **The Year events card.** In the [[nav:forecaster]], turn on the **Year events** chip under Forecast Detail. It lists everything that happens in the selected year: life events, cash flows that start or stop, and each person's catch-up contribution limit. Drag the year slider and the card follows it.
 - **The chart axes.** Rest the pointer on any year along the bottom of a chart and the same events appear in a tip. The calendar icon at the lower left of a chart ([[nav:year-axis]]) relabels the axis with a person's age, which is often the easier way to read a life plan.
 
+[[jump:horizon|output__birds-eye__birds-eye.people-events]]
+
 <details class="lesson-desktop-only" open>
 <summary class="lesson-desktop-only-label">Desktop app only</summary>
 <div class="lesson-desktop-only-body">
@@ -68,6 +70,8 @@ One later date belongs here too. A child can stay on a parent's health plan unti
 ## 50: the catch-up years
 
 At 50, the limit on what you can put into a 401(k) or a similar workplace plan goes up. This extra room is called a [[term:catch-up|catch-up contribution]]. Homer turns 50 in 2026 and Marge in 2028, and from those years the Year events card lists a **Catch-up (50+)** row for each of them with the extra amount: $8,000 in 2026 dollars.
+
+[[jump:catch-up|output__forecaster__forecaster.forecast-detail__year__year.contribution-limits__line.year.catch-up-standard]]
 
 A second, larger tier covers only four birthdays. In the years you turn 60, 61, 62 and 63, the catch-up rises to $11,250. At 64 it drops back to the ordinary amount. Homer's enhanced window is 2036 to 2039 and Marge's is 2038 to 2041. The card marks the first year of each tier with **begins**, so the window is easy to find:
 
@@ -147,6 +151,8 @@ The government lets money grow [[term:tax-deferred]] in a traditional account, b
 
 Homer's 401(k) is large, and his first required distribution in 2051 is about $138,000. It shows up at once in the Brackets lens, where the RMD band appears in 2051 and fills a larger share of the brackets every year after:
 
+[[jump:taxable-income|output__forecaster__forecaster.forecast-detail__brackets]]
+
 [[img:milestone-years-brackets-2051]]
 
 RMDs push up [[term:taxable-income|taxable income]], and higher taxable income can bring back IRMAA. In this plan the surcharge returns in 2049, two years after the 401(k) withdrawals begin, and it steps up again in the late 2050s as the distributions grow.
@@ -188,6 +194,8 @@ With no paychecks, the forecast pays for everything from savings, starting with 
 </div>
 
 In 2035 the last of the brokerage account is spent and nearly all of the rest of the year's spending comes out of the 401(k), and the tax statement carries the penalty line:
+
+[[jump:early-withdrawal-penalty]]
 
 [[img:milestone-years-tax-2035-early-exit]]
 

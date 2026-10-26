@@ -111,6 +111,8 @@ work** (including Success / Failure / Liquidity Failure labels). Under each dist
 opens the mass of endings if outliers squash the plot; with two distributions side by side, **Link
 reveal** (on by default) keeps both scales comparable.
 
+[[jump:reveal]]
+
 Core chrome map (also BS/CF vertical zoom and joined compare merge):
 [Chart controls — Close up, zoom, and Reveal](/learn/getting_around#chart-chrome).
 
@@ -119,6 +121,8 @@ Core chrome map (also BS/CF vertical zoom and joined compare merge):
 Selecting a **Key Forecasts** row (**Min**, **Max**, **[[term:gmf]]**, quartiles, …) makes that path **active
 everywhere** — Forecast Detail follows it, and the matching mark on the **Net Worth Distribution**
 is **highlighted**.
+
+[[jump:key-forecasts]]
 
 1. Select **Min**. The minimum is always the **leftmost** dot in the distribution (**Max** is always
    the **rightmost**). Hover Min — the tip typically labels the path a **Failure** (on this lean
@@ -153,6 +157,8 @@ choices.
 Durable **definition of success** on the dossier. Pick **Strict**, **Liquidity crises allowed**, or
 **Temporary negative net worth allowed**. **Cost of capital** sits on the same panel — the annual
 rate charged when the plan must borrow to cover a shortfall.
+
+[[jump:cost-of-capital|input__assumptions__assumptions-success__control.cost-of-capital]]
 
 ### Transforms → Modifiables → Success Criteria
 

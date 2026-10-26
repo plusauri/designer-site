@@ -200,6 +200,8 @@ go ask, not an answer.
    Correlations, filtered to **categories this plan actually uses**. When that list is long, the
    card matches the items table height and scrolls with a fade.
 
+[[jump:correlation|output__risk__risk.correlations]]
+
 ### Name, don’t deep-dive: ρ included
 
 Next to the portfolio ★ readout you will see **[[term:rho|ρ]] included** (default, switch on) or **ρ not

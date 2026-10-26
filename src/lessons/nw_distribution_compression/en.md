@@ -104,6 +104,8 @@ on HNW + high-vol books.
 4. Optional: **Close up** the distribution so scrubbing dots is easier
    ([chart controls](/learn/getting_around#chart-chrome)).
 
+[[jump:reveal]]
+
 | Preview | View | Role here |
 |---------|------|-----------|
 | [[img:banks-nw-distribution|preview]] | **NW Distribution** | Linear cloud; Reveal lives under the chart. |

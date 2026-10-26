@@ -54,6 +54,8 @@ Both charts share two habits that are worth learning once. The 📅 button at th
 
 The [[nav:bs-chart]] answers the question "what is the household worth?" for every year of the plan. Its subject is [[term:net-worth]], everything owned minus everything owed.
 
+[[jump:balance-sheet|output__forecaster__forecaster.forecast-detail__bs-chart]]
+
 [[img:charts-tables-bs-chart]]
 
 Above the axis, each year's assets are stacked by kind. For Springfield the [[term:brokerage]] account is green, the [[term:traditional]] [[term:401k|401(k)]] is blue, the remaining accounts are gray, and the house sits on top in amber. Below the axis the mortgage hangs in red. It is short, because the loan is small next to the assets, and it shrinks every year until it disappears after 2047. A thin black bar stands beside each year's stack for as long as there is a liability to subtract, and the black net-worth line connects the tops.
@@ -69,6 +71,8 @@ The dollar figures on the chart are [[term:nominal]], so part of the climb is [[
 ## Cash flow: in and out
 
 The [[nav:cf-chart]] answers a different question: "how did the household live this year?" Inflows grow up from the axis and outflows grow down, and the net is income minus expenses minus taxes.
+
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-chart]]
 
 [[img:charts-tables-cf-chart]]
 
@@ -127,6 +131,8 @@ The tables show one year in full. They are where you read an exact amount, and w
 
 The [[nav:bs-table]] starts with net worth, then splits the assets into real assets and accounts, and ends with the liabilities. The **Holdings** chip in its toolbar opens each account into the funds it holds.
 
+[[jump:balance-sheet|output__forecaster__forecaster.forecast-detail__bs-table]]
+
 [[img:charts-tables-bs-table-2030]]
 
 Many amounts sit on a small pill marked **i**. Rest the pointer on the pill and the item's card opens beside it. On the balance sheet the card shows the end balance to the dollar, which the table rounds, above the item as the plan describes it. For an account that means its owner and each fund it holds, with its category, value and cost.
@@ -134,6 +140,8 @@ Many amounts sit on a small pill marked **i**. Rest the pointer on the pill and 
 [[img:charts-tables-bs-row-card]]
 
 The [[nav:cf-table]] does the same for the cash flow. It starts with the net, lists every income and every expense under its category, and lists the taxes by kind. Below the outflows it lists the sales that covered the year's shortfall, which are the same sales Money Movements explains.
+
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-table]]
 
 [[img:charts-tables-cf-table-2030]]
 
@@ -163,6 +171,8 @@ The card holds up to three statements, side by side when the card is wide enough
 
 Under the statements, **Inspect US tax tables** opens the year's federal and state schedules, so you can check a [[term:bracket]] or a limit against the number it produced.
 
+[[jump:bracket|output__forecaster__forecaster.forecast-detail__taxes__taxes.inspect-schedules]]
+
 Two more lenses sit beside the Taxes chip, and each has a lesson of its own. [[nav:brackets]] stacks the year's income against the federal brackets and shows how much room is left before the next rate, which is the tool for planning conversions and withdrawals. [Filling the cheap buckets](/learn/filling_the_cheap_buckets) teaches it. [[nav:cliffs]] measures how close the year's income runs to each threshold where a cost jumps all at once, which Tutilis calls a [[term:cliff]]. A Medicare surcharge tier is one. [Cliff radar](/learn/cliff_radar_forecaster) teaches that one.
 
 ## Find a card by its word
@@ -176,6 +186,8 @@ The Where card lists the paths to every place the word appears. Some words have 
 [[img:charts-tables-glossary-property-tax]]
 
 Property tax shows all three. It is entered on a real asset in the plan, tried as a what-if in Transforms, and shown in two places in the forecast, on the property statement of the Taxes card and on the Property tax line of the cash flow table. That makes the Glossary the quickest way into an unfamiliar card. Look up the word you know, and let the Where card take you to the place that shows it.
+
+[[jump:property-tax]]
 
 <details class="lesson-desktop-only" open>
 <summary class="lesson-desktop-only-label">Desktop app only</summary>

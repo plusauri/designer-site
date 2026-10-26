@@ -31,15 +31,22 @@
         <ul>
           <li><a href="/designer-site/">Inicio</a></li>
           <li><a href="/designer-site/learn" class="nav-learn">Learning Center</a></li>
-          <li><a href="/designer-site/reference">Reference</a></li>
-          <li><a href="/designer-site/glossary">Glossary</a></li>
+          <li>
+            <details class="dropdown nav-resources"><summary>Resources</summary>
+              <ul>
+                <li><a href="/designer-site/start-here">Start Here</a></li>
+                <li><a href="/designer-site/reference">Reference</a></li>
+                <li><a href="/designer-site/glossary">Glossary</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="/designer-site/pricing">Precios</a></li>
           <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es" selected="selected">🇪🇸 Español</option></select></label></li>
           <li><button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Light theme — click for dark" title="Light theme — click for dark">☀</button></li>
         </ul>
       </nav>
     </header>
-    <main class="container"><div class="reference-hub">
+    <main class="container"><div class="reference-hub" data-tint="gold">
   <p class="catalog-crumb"><a href="/designer-site/reference"><span class="catalog-crumb-arrow" aria-hidden="true">←</span>All reference</a></p>
   <h1>US federal income tax schedules</h1>
   <p class="reference-lede">Ordinary, long-term capital gain, and qualified-dividend brackets plus the standard deduction, for every filing status.</p>
@@ -47,7 +54,7 @@
   <p class="reference-source">Source: Rev. Proc. 2025-32 — inflation-adjusted items for tax year 2026 — Internal Revenue Service</p>
   <p class="reference-source-url"><a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf">https://www.irs.gov/pub/irs-drop/rp-25-32.pdf</a></p>
   <div class="reference-honesty reference-usage">
-    <h3>Where we use this · Used in your forecast</h3>
+    <h3><span class="reference-honesty-kicker">Where we use this</span><span class="reference-use-pill reference-use-pill--in-forecast">Used in your forecast</span></h3>
     <ul>
       <li>Assessed every forecast year to produce the household's annual federal tax statement. Ordinary income, long-term gains, and qualified dividends each walk their own ladder.</li>
       <li>The standard deduction is subtracted before the ordinary ladder is walked.</li>
@@ -55,13 +62,19 @@
       <li>Between published years, thresholds are indexed forward at the plan's bracket-inflation rate.</li>
     </ul>
   </div>
-  <div class="reference-honesty">
+  <div class="reference-honesty reference-limits">
     <h3>Not modeled</h3>
     <p>Itemized deductions, credits, above-the-line adjustments beyond those the engine models, and any bracket year between publications (those are indexed forward from the nearest published table rather than looked up).</p>
   </div>
   <form action="/designer-site/reference/us-federal-income-schedules" method="get" class="reference-variant-form"><label>Year<input type="number" name="year" value="2026" min="1990" max="2100"></label><label>Filing status<select name="status" aria-label="Filing status"><option value="joint" selected="selected">💍 Married, filing jointly</option><option value="separate">👤| Married, filing separately</option><option value="single">👤 Single</option><option value="hoh">🏠 Head of household</option></select></label><button type="submit">Show</button></form>
-  <p class="muted">US federal schedule (2026) · 💍 Married, filing jointly</p>
-  <div class="reference-table-wrap"><table class="content-table">
+  <section class="reference-sheet reference-sheet--tax">
+    <header class="reference-sheet-head">
+      <div class="reference-sheet-titles">
+        <div class="reference-sheet-kicker"><span>Tax schedule</span><span class="reference-sheet-category">Federal income tax</span></div>
+        <p class="muted">US federal schedule (2026) · 💍 Married, filing jointly</p>
+      </div>
+<span class="reference-sheet-year"><span class="reference-sheet-year-label">Tax year</span>2026</span><span class="reference-sheet-seal" aria-hidden="true"><span class="reference-sheet-seal-glyph">%</span><span class="reference-sheet-seal-word">Tax</span></span></header>
+    <div class="reference-table-wrap"><table class="content-table">
 <thead>
 <tr>
 <th align="left">Income over</th>
@@ -146,8 +159,9 @@
 </tbody>
 </table>
 </div>
+  </section>
 </div>
 </main>
-    <footer class="container"><small>© Plusauri, LLC — sea dueño de su plan financiero.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenido educativo — no es asesoramiento financiero, de inversión, fiscal ni legal.</small></footer>
+    <footer class="container"><small>© Plusauri, LLC — sea dueño de su plan financiero.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenido educativo — no es asesoramiento financiero, de inversión, fiscal ni legal.</small><small class="footer-trademarks">Tutilis™ and Plusauri™ are trademarks of Plusauri, LLC.</small></footer>
   </body>
 </html>

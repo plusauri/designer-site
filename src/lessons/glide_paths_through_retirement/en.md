@@ -46,6 +46,8 @@ That risk is largest in the first years of retirement and fades after them. By t
 
 Morgan's path is set in the **Money movement strategy** under [[nav:assumptions]]. The withdrawal strategy is **Glide rebalance**, the only strategy whose sales and purchases steer toward a glide path. The **Rebalance inside tax-sheltered accounts** box under the grid also reads the path, and it does so under any strategy. Under Glide rebalance, the grid has one column per year, and each column gives the share of domestic stocks, international stocks, bonds and cash. Between two columns the target moves in a straight line, so the bond tent needs only three: 2026 at Morgan's current mix, 2028 at 40% stocks, and 2043 at 70% stocks.
 
+[[jump:glide-path|input__assumptions__assumptions-sell-invest__control.residual-capital-strategy__control.glide-rebalance]]
+
 [[img:glide-paths-editor-tent|control]]
 
 *The bond tent under the Money movement strategy. Three columns describe the whole path, and the box under the grid is ticked.*
@@ -82,17 +84,19 @@ To set a path on your own plan, open [[nav:assumptions]], set the **Money moveme
 
 Without the box, a glide path steers only money that moves anyway. Each year's leftover cash buys whatever is below its target, and each year's shortfall is sold from whatever is above it. That is enough to follow a path that adds stock. Stocks usually grow faster than bonds, and while stock sits below its target each year's spending is sold from bonds, so both push the mix the way the path is going. It is not enough to follow a path that takes stock away.
 
-Open [[nav:si-chart]] and switch its header from **Moves** to **Allocations**. Each asset class gets a strip with one bar per year, and a thin black bar beside each year marks the path's target. Here is the steering-only plan:
+Open [[nav:si-chart]] and switch its header from **Moves** to **Glide Path**. Each asset class gets a strip with one bar per year, and a dark tick across each year's bar marks the path's target. The line above the strips says how the plan reads the path. Here is the steering-only plan:
+
+[[jump:glide-path|output__forecaster__forecaster.forecast-detail__si-chart__si-chart.allocations]]
 
 [[img:glide-paths-alloc-steering]]
 
-*Steering only. The stock bars stay near 76% at retirement in 2028, while the black target bars dip to 40%.*
+*Steering only. The stock bars stay near 76% at retirement in 2028, while the target ticks dip to 40%.*
 
 The target falls 37 points in two years, and the portfolio barely moves. Morgan's salary still covers spending in 2027, so nothing needs to be sold, and the leftover cash is small next to $1.5 million. After retirement the yearly sales come from stock first, because stock is the class furthest above its target, and the stock share falls only about a point a year. It reaches the target in the early 2040s only because the target has risen to meet it. Here is the same path with the box ticked:
 
 [[img:glide-paths-alloc-tent]]
 
-*Bond tent, box ticked. Each year's stock bar sits on its black target bar, down to 40% in 2028 and back up to 70% by 2043.*
+*Bond tent, box ticked. Each year's stock bar reaches its target tick, down to 40% in 2028 and back up to 70% by 2043.*
 
 The difference is a trade inside the IRA. [[nav:si-table]] for 2027 shows it. The plan sells about $322,000 of the S&P 500 fund inside the IRA and buys the same amount of the Treasury fund there, and both lines give **Rebalance · Traditional IRA** as their reason:
 
@@ -113,9 +117,11 @@ The difference is a trade inside the IRA. [[nav:si-table]] for 2027 shows it. Th
 </div>
 </div>
 
+[[jump:rebalance|output__forecaster__forecaster.forecast-detail__si-table__line.reason.sheltered-rebalance]]
+
 A trade inside an IRA is not a withdrawal. No money leaves the account, so there is no tax to pay and no early-withdrawal penalty, and the cash-flow statement leaves the swap out. That is why Tutilis rebalances only inside tax-sheltered accounts: traditional and [[term:roth|Roth]] IRAs and 401(k)s, 529 plans and HSAs. Selling in the brokerage account to rebalance would realize capital gains, so the plan never does it. An account can only swap between funds it already holds, so the path is reached as far as the sheltered balances allow. Morgan's IRA holds two-thirds of the money, which is plenty.
 
-The **Allocations** switch also works on the Movements table, which then lists each class's value, share, target and gap for the selected year.
+The **Glide Path** switch also works on the Movements table, which then lists each class's value, share, target and gap for the selected year.
 
 ## The tent year by year
 
@@ -138,6 +144,8 @@ The constant plan does the same thing around a fixed point. It rebalances to 60/
 A glide path is meant to pay off when a crash lands near the retirement date. Transforms can lay a historical crash over the plan. Open [[nav:transforms]], select **Sequence-of-returns risk**, choose the Dot-com bust of 2000, and start it in 2028, Morgan's first year without a salary:
 
 [[img:glide-paths-sor-editor|control]]
+
+[[jump:sequence-of-returns|modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sor-risk]]
 
 The Dot-com bust replays seven years of stock returns, with the market down about 39% at its lowest. Transforms then draws each plan twice on one scale, as authored under *Original* and with the crash under *Modified*:
 
@@ -209,7 +217,7 @@ If the trades are not made, the real portfolio is the *Steering only* plan. The 
 
 A few things make the trades more likely to happen:
 
-- **Put a date on them.** Rebalance once a year on a fixed date, and use the Allocations table for that year as the list of trades.
+- **Put a date on them.** Rebalance once a year on a fixed date, and use the Glide Path view of the Movements table for that year as the list of trades.
 - **Trade inside the IRA.** The trades cost no tax there, which is why the plan makes them there. Selling in a brokerage account to rebalance can realize capital gains that the forecast does not assume.
 - **Let a fund do it.** A target-date or balanced fund rebalances on its own. A target-date fund's path usually keeps falling after the target date, so it is not a bond tent.
 - **Check that the box matches your behavior.** If you know you will not rebalance, untick the box, and the forecast will show you the steering-only result instead of a result you will not get.

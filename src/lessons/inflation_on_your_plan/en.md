@@ -8,6 +8,8 @@ tutilis-locale: en source
 
 Open the plan and [[term:hover|hover]] **Sam's college** on [[nav:cf-table]]. The card names that bill's **Cost growth**. Living expenses, Maya's wages, and the mortgage each carry a rate of their own, and the next section lists them beside the college card. A news story that quotes one inflation number is quoting one basket. This plan is Maya's own list.
 
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-table]]
+
 <aside class="lesson-plan">
 <p class="lesson-plan-label">Today's lesson</p>
 <div class="lesson-plan-body">
@@ -56,6 +58,8 @@ The **Display** menu in the top bar has two ways to read a dollar, under **Purch
 
 Stay on Nominal and open [[nav:cf-chart]]. Hover a year. The tip lists **Home mortgage** as one payment, about $17,000, with the principal and the interest on the lines under it. That total is the same in 2027 and in a later year such as 2035. The **Payment** row on the mortgage card is the same number, written once for the whole loan.
 
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-chart]]
+
 Switch to Today's $. Hover a later year. The same payment is drawn as fewer of today's dollars. This plan restates future dollars at 3.5 percent a year, the reporting rate in its assumptions. A dollar promised twenty years from now is drawn as less than a dollar today, so a payment that is flat in the checkbook looks lighter in today's groceries.
 
 That is the seed of the next lesson. The loan's dollar amount held still. Maya's paycheck rose. The payment's weight fell. Prices can help the person who owes a fixed stack of dollars.
@@ -67,6 +71,8 @@ The pictures in this lesson are the Nominal chart. Pick Today's $ in the Display
 College is the bill you can push on its own, and the rest of the plan stays on the rates it already had.
 
 Maya can worry about Sam's four years without deciding that groceries, wages, and the mortgage should all speed up together. [[nav:transforms]] is the place to try that. Unfold **Modifications**. On the Modifiables card, select **Sam's college**.
+
+[[jump:inflation|modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.cash-flows]]
 
 [[img:prices-college-modifiable|control]]
 

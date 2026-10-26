@@ -57,6 +57,8 @@ The forecast offers two views of the same plan, and a planner needs both of them
 
 The first is a single path with no luck in it. Every holding grows at its expected compound rate, every cash flow at its expected rate, and every year is an average year. Tutilis calls this the **North Star** forecast, the [[term:gmf]], and it is the path the balance-sheet and cash-flow charts draw when the forecast opens. It is **Forecast ID 0**, [[term:fid-gmf]], and the forecast entry in the strip at the top of the forecaster reads **North Star ✦** while it is selected.
 
+[[jump:fid|output__forecaster__forecaster.forecast-detail__forecast-detail.fid]]
+
 [[img:mc-balance-sheet-jordan]]
 
 *Jordan's balance sheet on the North Star path in [Jordan, 70/30](#canvas-dossier:monte_carlo_jordan). Net worth climbs to retirement in 2031, levels off for a year while the paycheck stops and withdrawals begin, then climbs again to about $3 million by 2057. There is no bad year anywhere on it.*
@@ -97,6 +99,8 @@ The table rounds its amounts to keep the columns narrow. Hover the ⓘ chip besi
 
 The forecast can draw that second path too. The [[term:amf]], the *arithmetic mean forecast*, grows every item at its plain average μ. It is an opt-in row in **Simulation Summary**, under its **Advanced** settings, and it is there as a foil. Set beside the North Star path, the gap between the two is the volatility drag of the whole plan.
 
+[[jump:amf|output__forecaster__forecaster.simulation-summary__simulation-summary.advanced__advanced.include-amf]]
+
 <details class="lesson-math">
 <summary class="lesson-math-label">For the math lovers — why μ − σ²/2</summary>
 <div class="lesson-math-body">
@@ -135,6 +139,8 @@ It is not only the investments that are drawn. Cash flows carry the same pair of
 *The card for Jordan's living expenses in [Jordan, 70/30](#canvas-dossier:monte_carlo_jordan). Spending growth reads N(2.8%, 1.5%), the same pair every investment carries. The μg beside them is the compound rate the North Star path uses, which with a volatility this small rounds to the same 2.8%.*
 
 **Risk vs. Return** in the **Risk** panel puts every item in the plan on one chart, at its volatility across and its average rate up. With the cash-flow chip lit, the salary, Social Security and living expenses appear beside the funds. The stock fund sits high and far to the right. The Treasury fund sits in the middle, and the money-market fund and the three cash flows cluster in the lower-left corner, steady and slow. The star is the portfolio as a whole.
+
+[[jump:volatility|output__risk__line.risk.risk]]
 
 [[img:mc-risk-scatter-jordan]]
 
@@ -216,6 +222,8 @@ A view of the market that you want every plan to share belongs in an **assumptio
 ## Reading the thousand futures
 
 The **Simulation Summary** reduces the thousand futures to a few numbers about where they end. **Key Forecasts** names the points along the line of all thousand ending net worths, sorted from worst to best, and gives the Forecast ID of the future at each point.
+
+[[jump:key-forecasts]]
 
 [[img:mc-key-forecasts-jordan]]
 
@@ -338,6 +346,8 @@ A Monte Carlo forecast is a careful way to reason about chance. It is still a mo
 **It is only as good as its assumptions.** Every future is drawn from the μ, σ and correlations the plan runs on. If the expected return on stocks over the next forty years is lower than the long-run figure, every one of the thousand futures is too optimistic, and running more of them does not help. The system's figures come from published sources, but they remain estimates of a future nobody has seen.
 
 **The years have no memory.** Because the draws are independent, the forecast has no momentum, no mean reversion and no regimes. In real markets, long stretches of high valuations have tended to be followed by weaker returns, and calm and turbulent periods tend to come in clusters. In the forecast, a crash in the first years of retirement happens only when chance puts one there. The **Sequence-of-returns risk** modifiable in **Transforms** exists for exactly that reason. It places a historical crash in the years you choose, so you can stress the plan deliberately rather than waiting for the dice. The lesson *Timing a crash: cash reserve or rebalancing?* uses it on the same household.
+
+[[jump:sequence-of-returns|modifiable]]
 
 **The tails are thinner than history's.** A bell curve makes very large one-year losses rarer than markets have actually produced them. A model with normal draws treats a 1931 or a 2008 as nearly impossible events, when history says they are merely uncommon.
 

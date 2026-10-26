@@ -12,6 +12,8 @@ Deflation is a fall in the price level. It is the directional opposite of inflat
 
 [The Reyes household](#canvas-dossier:reyes_who) is the same plan as [Prices on your plan](/learn/inflation_on_your_plan). Maya's mortgage, her wages, her pension, and her Social Security are already on it. Open [[nav:cf-chart]] on **[[term:nominal|Nominal]]** and you can follow each one.
 
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-chart]]
+
 <aside class="lesson-plan">
 <p class="lesson-plan-label">Today's lesson</p>
 <div class="lesson-plan-body">
@@ -47,6 +49,8 @@ Deflation is those same mechanisms pointed the other way. Spending falls short o
 
 Stay on Nominal. Open [[nav:transforms]], unfold **Modifications**, and select **Living expenses**. Slide **Spending growth** up. The grocery line on the cash-flow chart climbs. That is this plan's picture of a faster rise, whichever of the three stories you have in mind. Slide it below zero. The control runs to about three times the 2.8 percent catalog rate on either side, so the grocery bill can sit near 8 percent below zero, close to the 1931 annual drop and short of 1932. The grocery line falls. That is this plan's picture of deflation. Hover a year on [[nav:cf-chart]]. The tip's **Home mortgage** line stays about $17,000, because the loan's schedule does not follow the grocery slider. The sections below ask who that payment helps, and who a fall hurts.
 
+[[jump:inflation|modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.cash-flows]]
+
 ## A fixed payment gets lighter
 
 A mortgage payment that stays the same number of dollars becomes a smaller share of a paycheck that keeps rising.
@@ -65,6 +69,8 @@ Some people benefit from inflation. Those people are debtors. A debtor owes cash
 That benefit belongs to someone who already owes a fixed stack of dollars. It is a thin reason to take on a new loan. Anyone whose paycheck lags the grocery bill still buys less each year, and the lighter debt sits beside that harm. The payment is cash, due on a schedule, in years when prices may rise, stall, or fall. A lender who expects prices to rise usually charges for that expectation in the interest rate, so part of the lighter future dollar is charged up front. If the paycheck fails to rise, or if prices and pay both fall, that same payment takes a larger share of income. [Prices fall, the loan stays](#prices-fall-the-loan-stays) is that turn on this plan. What the money bought matters as well. Maya's loan pays for a house she lives in. A loan taken out to spend, against a paycheck that may not keep up, is a different arrangement.
 
 Leave the mortgage on its schedule. The payment follows the amortization schedule. [[term:hover|Hover]] **Home mortgage** on [[nav:cf-table]] and read the **Payment** row: about $17,000 every year the loan runs. The [[term:principal]] and interest rows under it trade places. In 2027 that payment is about 13 percent of Maya's wages. Her wages rise about 3.5 percent a year, so by 2047, her last full year of pay, the paycheck is about twice what it was in 2027. The payment is still about $17,000. That is about 7 percent of the paycheck, close to half the share it was at the start.
+
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-table]]
 
 On [[nav:cf-chart]], hover a year. The tip lists **Home mortgage** as that same total, with the two legs under it. Switch the chart to **Today's $** and hover a later year. The payment is drawn as fewer of today's dollars. This plan restates future dollars at 3.5 percent a year, so a flat checkbook payment looks lighter in today's groceries on top of becoming a smaller share of pay. The balance she owes is still a stack of dollars. What fell is the weight of the payment against her paycheck, and against the grocery basket.
 
@@ -120,6 +126,8 @@ Select **Maya's Social Security**.
 
 [[img:who-ss-modifiable|control]]
 
+[[jump:cola|modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.cash-flows__cash-flows.social-security]]
+
 The **COLA** slider opens at 2.5 percent and runs from 0 to 4.5 percent. Set it to zero, and set **Spending growth** on living expenses below zero, the way the previous section did. The check holds. The grocery bill falls. She was helped by the rise, and she is helped again by the fall, because the check stayed put while the basket got cheaper.
 
 <aside class="lesson-did-you-know">
@@ -140,6 +148,8 @@ The TIPS fund keeps the catalog return on its own row while you move the grocery
 Select **Brokerage: TIPS fund** on the Modifiables card.<!-- term-skip: brokerage — the Transforms row name --> The card opens on the tab that holds that row.
 
 [[img:who-tips-modifiable|control]]
+
+[[jump:return|modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.holdings__balance-sheet.holding]]
 
 The row opens near 5.5 percent a year, with its own ups and downs. Slide living expenses wherever you like. The fund's rate stays the one on its row. People buy [[term:tips|TIPS]] because a Treasury Inflation-Protected Security adjusts its principal with the consumer price index, up when prices rise and down when they fall, and pays back at least the original principal at maturity. The forecast grows this holding at the catalog return on its row. Moving the grocery bill leaves that return where it was, which is the comparison the plan can show you.
 

@@ -128,6 +128,8 @@ pay.
 work/retire/death pattern; Bart and Lisa each get a short **college** range on the life-events
 timeline (purple bars in the mid-2030s).
 
+[[jump:horizon|output__birds-eye__birds-eye.people-events]]
+
 [[img:springfield-college-529-people-events-timeline]]
 
 *[[nav:birds-eye]] → **People & events**. People list on the left (Homer, Marge, Bart, Lisa). Life events
@@ -275,6 +277,8 @@ when the bill arrives.
 Follow **Bart College 529** through his four college years (**2032–2035**). On [[nav:forecaster]],
 open [[nav:bs-table]] and move the selected year from **2031** to **2035**. The account is listed by
 name, and its balance falls each year as tuition is paid out of it.
+
+[[jump:balance-sheet|output__forecaster__forecaster.forecast-detail__bs-table]]
 
 With \$500 a month behind it, Bart's account still has money in it at the end of his second year
 and **runs dry during his third** (2034). The rest of his college is paid from ordinary household

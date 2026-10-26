@@ -111,9 +111,15 @@ Forecaster and the Simulation Summary.
 2. **Assets** — **Bel-Air Residence**, multi-bucket accounts, **Bel-Air Tech**.
 3. **Cash Flow** mode — living phases, [[term:ss]], healthcare, [[term:ltc]].
 
+[[jump:birds-eye]]
+
 ### Projected
 
 Select [[nav:bs-chart]], [[nav:bs-table]], [[nav:cf-chart]], [[nav:cf-table]]. Open **Simulation Summary**.
+
+[[jump:balance-sheet|output]]
+
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-table,output__forecaster__forecaster.forecast-detail__cf-chart]]
 
 | Preview | View | Role here |
 |---------|------|-----------|

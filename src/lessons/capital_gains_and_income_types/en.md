@@ -80,7 +80,11 @@ Interest and dividends arrive whether the household needs them or not. A bond fu
 
 Open the tax statement on [Taxable account first](#canvas-dossier:income_types_tax_order) for 2027. The line **Portfolio ordinary** is $10,447. That is the interest from the bond fund in the brokerage and from the money market fund in savings. Ruth and Victor did nothing to cause it. It would have arrived in a year of high income just the same, stacked on top of whatever else they had.
 
+[[jump:gross-income]]
+
 A sale is different. The couple decides whether to sell, when, and how much. In the same year they sold $79,438 from the brokerage, and the statement shows exactly how much of that became taxable gain. They could have sold more in a year with room to spare and less in a year that was already full.
+
+[[jump:ltcg|output__forecaster__forecaster.forecast-detail__taxes__taxes.federal-statement__line.tax.ltcg]]
 
 The IRA sits between the two. Withdrawals are voluntary until required minimum distributions, or [[term:rmd|RMDs]], begin. For Ruth that is 2036, and after that the law decides a minimum every year. On this plan Ruth's RMD is $49,134 in its first year and $107,501 by 2053, and the household has to take it whether they need it or not.
 
@@ -160,6 +164,8 @@ The order is the **Money movement strategy** under [[nav:assumptions]]. Change i
 The conventional order does exactly what it promises in the early years. On Taxable account first, Ruth and Victor owe no federal tax at all from 2027 through 2035. Every one of those years, they live on interest, dividends, Social Security and brokerage sales, and the sales land in the 0% band. In 2036 Ruth's first RMD arrives and the bill is $6,303.
 
 The cost shows up later. Because the IRA is never touched, it keeps growing, and when RMDs begin they are larger. By 2045 the RMD on Taxable account first is $77,891, against $51,947 on Every account at once, and by 2053 it is $107,501 against $63,143. The Brackets view shows the shape.
+
+[[jump:bracket|output__forecaster__forecaster.forecast-detail__brackets]]
 
 [[img:cg-brackets-tax-order]]
 

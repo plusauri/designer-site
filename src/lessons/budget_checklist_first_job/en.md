@@ -171,6 +171,8 @@ A plan does not want forty line items. It wants each section as one number a yea
 
 Open [[nav:birds-eye]] with the **Cash Flow** chip selected and the checklist is the liability side of the beam. Each bar is the [[term:present-value|present value]] of a lifetime of that section, which is why Housing dwarfs everything else:
 
+[[jump:cash-flow|output__birds-eye__birds-eye.mode.cash-flows__birds-eye.assets-liabilities]]
+
 [[img:budget-checklist-birds-eye-cash-flow-as-is]]
 
 *Bird's Eye in [As it is](#canvas-dossier:budget_checklist_as_is): the sections as lifetime present values.*
@@ -186,6 +188,8 @@ The forecast's first year is 2027, and the tool grows every line from the 2026 a
 [[img:budget-checklist-cash-flow-2027-as-is]]
 
 *Cash flow for 2027 in [As it is](#canvas-dossier:budget_checklist_as_is), on [[nav:cf-table]].*
+
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-table]]
 
 Two lines on that statement are not on the checklist, and they are the reason to put a budget on a plan rather than on the back of an envelope. **Income tax** is about $11,600, which is about a sixth of Riley's pay and larger than any section except Housing. Riley never wrote it down because it never arrives as a bill; it leaves the paycheck before the paycheck arrives. And **Investments**, about $3,400, is the 401(k) deferral, the employer match and whatever was left over, which is the answer to the question the lesson opened with.
 
@@ -288,6 +292,8 @@ Expenses and tax now take about 83 cents of every dollar rather than 95, and the
 ## Now and forty years on
 
 The trims are worth about $620 a month now. What they are worth later is the reason to make them. Here is the [[term:balance-sheet|balance sheet]] over the whole plan, first as it is and then trimmed, on [[nav:bs-chart]]:
+
+[[jump:balance-sheet|output__forecaster__forecaster.forecast-detail__bs-chart]]
 
 [[img:budget-checklist-balance-sheet-chart-as-is]]
 

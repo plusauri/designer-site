@@ -31,15 +31,22 @@
         <ul>
           <li><a href="/designer-site/">Accueil</a></li>
           <li><a href="/designer-site/learn" class="nav-learn">Learning Center</a></li>
-          <li><a href="/designer-site/reference">Reference</a></li>
-          <li><a href="/designer-site/glossary">Glossary</a></li>
+          <li>
+            <details class="dropdown nav-resources"><summary>Resources</summary>
+              <ul>
+                <li><a href="/designer-site/start-here">Start Here</a></li>
+                <li><a href="/designer-site/reference">Reference</a></li>
+                <li><a href="/designer-site/glossary">Glossary</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="/designer-site/pricing">Tarifs</a></li>
           <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr" selected="selected">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
           <li><button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Light theme — click for dark" title="Light theme — click for dark">☀</button></li>
         </ul>
       </nav>
     </header>
-    <main class="container"><div class="reference-hub">
+    <main class="container"><div class="reference-hub" data-tint="gold">
   <p class="catalog-crumb"><a href="/designer-site/reference"><span class="catalog-crumb-arrow" aria-hidden="true">←</span>All reference</a></p>
   <h1>Social Security wage base &amp; payroll rates</h1>
   <p class="reference-lede">OASDI taxable maximum by year, the 6.2% / 1.45% employee rates, and the self-employment equivalents.</p>
@@ -47,14 +54,20 @@
   <p class="reference-source">Source: Social Security Contribution and Benefit Base — Social Security Administration</p>
   <p class="reference-source-url"><a href="https://www.ssa.gov/oact/cola/cbb.html">https://www.ssa.gov/oact/cola/cbb.html</a></p>
   <div class="reference-honesty reference-usage">
-    <h3>Where we use this · Used in your forecast</h3>
+    <h3><span class="reference-honesty-kicker">Where we use this</span><span class="reference-use-pill reference-use-pill--in-forecast">Used in your forecast</span></h3>
     <ul>
       <li>The 6.2% OASDI and 1.45% Medicare rates are assessed on earned income in every forecast year.</li>
       <li>The wage base caps OASDI: earnings above it pay no Social Security tax. Transforms can raise, replace, or eliminate that cap as a what-if.</li>
       <li>Self-employment income is assessed at the combined employer + employee rates on 92.35% of net earnings, and half of the result is deducted.</li>
     </ul>
   </div>
-  <div class="reference-table-wrap"><table class="content-table">
+  <section class="reference-sheet reference-sheet--tax">
+    <header class="reference-sheet-head">
+      <div class="reference-sheet-titles">
+        <div class="reference-sheet-kicker"><span>Tax schedule</span><span class="reference-sheet-category">Payroll &amp; surtaxes</span></div>
+      </div>
+<span class="reference-sheet-seal" aria-hidden="true"><span class="reference-sheet-seal-glyph">%</span><span class="reference-sheet-seal-word">Tax</span></span></header>
+    <div class="reference-table-wrap"><table class="content-table">
 <thead>
 <tr>
 <th align="left">Item</th>
@@ -112,8 +125,9 @@
 </tbody>
 </table>
 </div>
+  </section>
 </div>
 </main>
-    <footer class="container"><small>© Plusauri, LLC — possédez votre plan financier.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenu éducatif — pas un conseil financier, d'investissement, fiscal ou juridique.</small></footer>
+    <footer class="container"><small>© Plusauri, LLC — possédez votre plan financier.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenu éducatif — pas un conseil financier, d'investissement, fiscal ou juridique.</small><small class="footer-trademarks">Tutilis™ and Plusauri™ are trademarks of Plusauri, LLC.</small></footer>
   </body>
 </html>

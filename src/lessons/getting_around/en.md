@@ -142,6 +142,8 @@ you left them.
 
 **Try it:** click [[nav:forecaster]] on the rail and watch [[nav:birds-eye]] appear in the top bar.
 
+[[jump:birds-eye]]
+
 ### What is in it {#birds-eye-what-you-will-see}
 
 **People** — who is in the household, birth years, retirement and longevity, and roles. [[term:hover|Hover]] a
@@ -168,6 +170,8 @@ fast answer to "when does work stop, and does income line up with that?"
 default on teaching samples — weaves recurring money movement **into** that picture: inflows read
 with **Assets**, outflows with **Liabilities**, and the **Σ** badge rolls a multi-year series into a
 single present-value figure on the matching side.
+
+[[jump:cash-flow|output__birds-eye__birds-eye.mode.cash-flows__birds-eye.assets-liabilities]]
 
 That is deliberately not CPA bookkeeping. A balance sheet does not treat future paychecks as assets.
 The goal here is planning intuition: put "what funds the life" next to "what we own," and "what we
@@ -232,6 +236,8 @@ Under the **FID** label<!-- term-skip: fid — this paragraph explains the contr
 ordered **worst to best**, with the gold **✦** (the GMF) sitting in that order rather than off to the
 side. They are *not* placed at their forecast numbers: an ID is a name, not a measurement.
 
+[[jump:fid]]
+
 [[img:ga-fid-quick-jumps]]
 
 Use them as a habit: start on the **✦**, step left toward Min and right toward Max with the same
@@ -289,6 +295,10 @@ Both are pinned to **2038**, a year with something to say: the brackets card sho
 income still fits under the ceiling you pick, and the radar names the thresholds actually **in
 play** that year, how far over the line the year lands, and what crossing costs.
 
+[[jump:bracket|output__forecaster__forecaster.forecast-detail__brackets]]
+
+[[jump:cliff-radar]]
+
 ### Simulation Summary {#simulation-summary}
 
 [[img:sfb-nw-distribution]]
@@ -299,6 +309,8 @@ The other half of the split answers different questions: the shape of **terminal
 **success rate** under your success definition, and the **Key Forecasts** (Min, quartiles, mean,
 Max, GMF). Click a key row and Forecast Detail focuses that path, so you can go read *why* it was
 extreme.
+
+[[jump:key-forecasts]]
 
 Read the **spread**, not any single row — and care about the **direction** a change moves the
 success rate more than the percentage itself.
@@ -315,6 +327,8 @@ success rate more than the percentage itself.
    Set**; there is no separate "add" step.
 4. Charts and tables update **live**, so you see the plan react before any re-simulation.
 5. **Re-simulate** when you want the full original-versus-modified comparison.
+
+[[jump:transforms]]
 
 Transforms is for exploration, and it is the right tool for "what if" even in the desktop app, where
 Dossier holds your real data.

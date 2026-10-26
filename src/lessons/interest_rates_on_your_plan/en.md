@@ -68,6 +68,8 @@ The rate histories are on FRED, the St. Louis Fed's data site: the [federal fund
 
 A rate shock is a what-if you lay over the plan in [[nav:transforms]], the same way you would lay a historical crash over it. Open Transforms, unfold **Modifications**, and on the Modifiables card's **Global** tab select **Interest-rate shock**:
 
+[[jump:interest-rate]]
+
 [[img:rates-modifiables|control]]
 
 The editor beside the card holds the shock. Switch it on and set four things:

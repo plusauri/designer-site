@@ -40,6 +40,8 @@ Equal holdings → **$1M** in total. In the product's own correlation table, US 
 sits at **ρ ≈ +0.69** — strongly **positive**. So **ρ not included** understates this plan's risk: on
 the risk chart, the portfolio ★ typically slides **left**, toward “calmer”.
 
+[[jump:correlation|output__risk__risk.correlations]]
+
 **Living Expense** is **$40k/yr** (mild [[term:cola]]) — the classic **~4%** initial [[term:withdrawal-rate|withdrawal rate]] on
 $1M. It does not change where the holdings sit on the risk chart; it creates [[term:drawdown]], so
 [[term:monte-carlo|Monte Carlo]] success at Silver is usually **below 100%** with ρ included — and then **ρ not
@@ -270,6 +272,8 @@ moves. On this sample today the star goes from about **12.0%** σ to about **9.4
    as if the holdings were independent (**ρ not included**), then **re-simulate**.
 3. Compare the **Simulation Summary** success at [[term:medals|Silver]]: **Original** (switch on) vs
    **Modified** (switch off).
+
+[[jump:correlation|modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.correlations]]
 
 On this $1M / $40k sample the last point or two moves with the draw. Read the success share each half prints:
 

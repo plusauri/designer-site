@@ -67,6 +67,8 @@ Open the [[nav:cf-table]] on **2033**. The practice earnings are the only income
 looks like every year before it: the earnings come in, living expenses and taxes go out, and what is
 left is invested.
 
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-table]]
+
 ## The year of the sale
 
 Now move to **2034**, the retirement year.
@@ -111,6 +113,8 @@ On the [[nav:cf-chart]] the shape of the whole plan is visible at once: the prac
 only inflow until 2033, nothing at all for four years, the inheritance as a lone bar in 2038, and a
 tall tax bar in 2035 that is the sale's bill arriving.
 
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-chart]]
+
 ## Try this
 
 <details class="lesson-desktop-only" open>
@@ -127,6 +131,8 @@ Then open the practice on the balance sheet and set **Share sold** to fifty perc
 
 </div>
 </details>
+
+[[jump:horizon|modifiable]]
 
 ## What this plan is not showing
 

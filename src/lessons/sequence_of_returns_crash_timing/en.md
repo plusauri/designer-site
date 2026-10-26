@@ -50,6 +50,8 @@ The Modification editor beside the card holds the crash itself. Switch it on, pi
 
 [[img:sor-crash-editor|control]]
 
+[[jump:sequence-of-returns|modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sor-risk]]
+
 Each episode replays measured history. The S&P 500 fund takes the index's actual total return year by year, from the fall through the recovery, and the Treasury fund takes the 10-year Treasury's. Every other holding follows through its [[term:correlation]] with those two. The Global Financial Crisis replays six years: a small loss, then a fall of about 41%, then a rebound of about 56%, and three more good years.
 
 Nothing in the plan changes. Transforms shows the plan as authored on one side and the plan with the crash on the other. On the balance-sheet chart the crash years are shaded red along the year axis, so you can always see where the crash sits. Here is Transforms' balance-sheet comparison for the 70/30 plan, with the crash where the editor first puts it, starting in 2031. The plan as authored is on the left under *Original*, the plan with the crash is on the right under *Modified*, and both sides share one scale, as they do in the app:
@@ -65,6 +67,8 @@ A crash is easier to fear than to measure, and the yearly returns it replays can
 [[img:sor-crash-bs-toolbar]]
 
 The button is on the chart in the Forecaster and on both sides of Transforms. Press it on the Modified side to see the returns with the crash in them.
+
+[[jump:return|output__forecaster__forecaster.forecast-detail__bs-chart__bs-chart.return-check]]
 
 The check lists every holding, and every cash flow that grows, with what it earned in each year of the forecast. Select a row and its returns are charted year by year below the list, with the crash years shaded on the axis. Under that, the **Growth of 1** strip starts one unit of money at the selected year and compounds it through the returns that follow. Its buttons set how many years to follow, and **Crash** follows exactly the years the overlay replays. The seams between the three parts fold one away with a click, or move the boundary when dragged, when you want more room for the others.
 
@@ -110,6 +114,8 @@ The average that describes growth is the geometric one, \(G^{1/n} - 1\). The six
 ## Slide the crash
 
 The start year is the control that makes this analysis worth doing. Open [[nav:bs-table]] on the last year of the forecast, 2057, and leave it there. Then move the crash start one year at a time and watch the net-worth line at the top of the table.
+
+[[jump:net-worth|output__forecaster__forecaster.forecast-detail__bs-table__line.bs.net-worth]]
 
 These are the end-of-forecast net worths on the [[term:gmf|GMF]] path, the forecast that takes each year's expected return, with the Global Financial Crisis starting in each year:
 
@@ -163,6 +169,8 @@ The 60/40 plan changed two things at once: less stock, and the rule. You can sep
 [[img:sor-crash-modifiables-sell-invest|control]]
 
 *Transforms → Modifiables on the 60/40 plan, with Money movements selected. That row is the withdrawal strategy. Setting it to Pro-rata turns the rebalance rule off and leaves the lower stock share in place.*
+
+[[jump:withdrawal-order|modifiable]]
 
 With the crash starting in 2030 and pro-rata withdrawals, the 60/40 plan ends at about $2.33 million. That is below the 70/30 plan's $2.41 million. On this path the lower stock share alone bought nothing. The rule did the work, because it stopped the plan from selling stock at the bottom.
 

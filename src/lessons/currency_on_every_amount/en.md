@@ -115,6 +115,8 @@ sheet is totaled. Set the forecaster to **2027** and read the cash-flow statemen
 arrives as about **$12,500** net of the property's expenses, beside a salary of about $160,000.
 That $12,500 is a yen figure that crossed the boundary once, at the plan's rate.
 
+[[jump:passive-income|output__forecaster__forecaster.forecast-detail__cf-table__line.cf.rental-business]]
+
 Taxes cross the same boundary. Noor files in the US, so the yen rent is taxed as US passive
 income, in dollars, on the same statement as the salary. The tax calculator picks its unit of
 account from the jurisdiction, not from the item — which is why the item has to say what it is

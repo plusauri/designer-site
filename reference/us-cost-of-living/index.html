@@ -31,15 +31,22 @@
         <ul>
           <li><a href="/designer-site/">Home</a></li>
           <li><a href="/designer-site/learn" class="nav-learn">Learning Center</a></li>
-          <li><a href="/designer-site/reference">Reference</a></li>
-          <li><a href="/designer-site/glossary">Glossary</a></li>
+          <li>
+            <details class="dropdown nav-resources"><summary>Resources</summary>
+              <ul>
+                <li><a href="/designer-site/start-here">Start Here</a></li>
+                <li><a href="/designer-site/reference">Reference</a></li>
+                <li><a href="/designer-site/glossary">Glossary</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="/designer-site/pricing">Pricing</a></li>
           <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en" selected="selected">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
           <li><button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Light theme — click for dark" title="Light theme — click for dark">☀</button></li>
         </ul>
       </nav>
     </header>
-    <main class="container"><div class="reference-hub">
+    <main class="container"><div class="reference-hub" data-tint="gold">
   <p class="catalog-crumb"><a href="/designer-site/reference"><span class="catalog-crumb-arrow" aria-hidden="true">←</span>All reference</a></p>
   <h1>Cost of living &amp; wage indices</h1>
   <p class="reference-lede">All-items and ex-housing price levels, local wage level, and median household income by locality — all normalized to the national average = 1.00.</p>
@@ -47,18 +54,24 @@
   <p class="reference-source">Source: Regional Price Parities by State and Metro Area — U.S. Bureau of Economic Analysis</p>
   <p class="reference-source-url"><a href="https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area">https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area</a></p>
   <div class="reference-honesty reference-usage">
-    <h3>Where we use this · Used in comparisons</h3>
+    <h3><span class="reference-honesty-kicker">Where we use this</span><span class="reference-use-pill reference-use-pill--in-comparison">Used in comparisons</span></h3>
     <ul>
       <li>Drives the US States relocation comparison: moving A→B scales living expenses by the ratio of the two localities' indices and labor income by the wage-index ratio.</li>
       <li>The baseline forecast does not apply a cost-of-living multiplier — this only enters when you run a relocation what-if.</li>
       <li>The ex-housing index is what a relocation uses, because the plan already carries the home as an asset and its property tax separately.</li>
     </ul>
   </div>
-  <div class="reference-honesty">
+  <div class="reference-honesty reference-limits">
     <h3>Not modeled</h3>
     <p>The **ex-housing** index is the one a relocation should use: the plan already carries the home as an asset and its property tax as a separate effective rate, so an all-items multiplier would count housing twice. Both are shown so that choice is visible rather than buried.</p>
   </div>
-  <div class="reference-table-wrap"><table class="content-table">
+  <section class="reference-sheet">
+    <header class="reference-sheet-head">
+      <div class="reference-sheet-titles">
+        <div class="reference-sheet-kicker"><span>Reference table</span><span class="reference-sheet-category">State &amp; local</span></div>
+      </div>
+    </header>
+    <div class="reference-table-wrap"><table class="content-table">
 <thead>
 <tr>
 <th align="left">State</th>
@@ -2745,8 +2758,9 @@
 </tbody>
 </table>
 </div>
+  </section>
 </div>
 </main>
-    <footer class="container"><small>© Plusauri, LLC — own your financial plan.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Educational content — not financial, investment, tax, or legal advice.</small></footer>
+    <footer class="container"><small>© Plusauri, LLC — own your financial plan.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Educational content — not financial, investment, tax, or legal advice.</small><small class="footer-trademarks">Tutilis™ and Plusauri™ are trademarks of Plusauri, LLC.</small></footer>
   </body>
 </html>

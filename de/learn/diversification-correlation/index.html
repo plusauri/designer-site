@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diversification and Correlation: How Correlated Assets Hide Risk — Tutilis</title>
+    <meta name="description" content="Positive ρ is the usual case: US equity + US high yield (system ρ ~+0.7), why ρ not included can hide risk, and crisis co-movement toward 1. Canvas: SC-05 lineage.">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://www.plusauri.com/learn/diversification-correlation" rel="canonical">
+    <meta content="website" property="og:type">
+    <meta content="Plusauri" property="og:site_name">
+    <meta content="Diversification and Correlation: How Correlated Assets Hide Risk — Tutilis" property="og:title">
+    <meta content="Positive ρ is the usual case: US equity + US high yield (system ρ ~+0.7), why ρ not included can hide risk, and crisis co-movement toward 1. Canvas: SC-05 lineage." property="og:description">
+    <meta content="https://www.plusauri.com/learn/diversification-correlation" property="og:url">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
+<script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
+    <script src="/designer-site/static/lang.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
+    <link href="/designer-site/static/site.css" rel="stylesheet">
+    <script src="/designer-site/static/lesson-split.js" defer="defer"></script>
+    <script src="/designer-site/static/trial-callout.js" defer="defer"></script>
+    <script src="/designer-site/static/community-join.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/katex/katex.min.css" rel="stylesheet">
+    <script src="/designer-site/static/vendor/katex/katex.min.js" defer="defer"></script>
+    <script src="/designer-site/static/vendor/katex/contrib/auto-render.min.js" defer="defer" onload="renderMathInElement(document.body,{delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true},{left:'$$',right:'$$',display:true}],throwOnError:false});"></script>
+  </head>
+  <body class="lesson-split-body" data-prose-lang="de" data-lang="de">
+    <header class="lesson-split-header" id="lesson-split-header">
+      <nav>
+        <ul>
+          <li><strong><a href="/designer-site/">Plusauri</a></strong></li>
+          <li><a href="/designer-site/learn">Learning Center</a></li>
+          <li><a href="/designer-site/reference">Reference</a></li>
+        </ul>
+        <ul>
+          <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de" selected="selected">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
+          <li><button class="lesson-header-collapse" type="button" aria-expanded="true" aria-controls="lesson-split-header" title="Hide header" aria-label="Hide header">▾</button></li>
+        </ul>
+      </nav>
+    </header>
+<button class="lesson-header-expand" type="button" id="lesson-header-expand" hidden="hidden" title="Show header" aria-label="Show header">▴ Plusauri · Learning Center</button><script type="application/json" id="lesson-canvas-dossiers">{"primary":"two_correlated_assets","alternates":[],"order":["two_correlated_assets"]}</script>
+    <div class="lesson-split">
+      <section class="lesson-pane"><a class="trial-callout trial-callout-comic" href="/designer-site/try" data-trial-callout data-variant="comic"><img src="/designer-site/static/images/trial/trial-comic.png" alt="14-Day Free Trial: Your Dossier on Your Desktop" width="458" height="187" decoding="async"></a>
+        <div class="lesson-prose" id="lesson-prose" data-next-key="KeyJ" data-previous-key="KeyK" data-lesson-id="diversification_correlation" data-lesson-slug="diversification-correlation" data-loaded-lang="de"><h1>Korrelation und Diversifikation</h1>
+<div class="lesson-intro-card"><img class="lesson-media-ref ui-std-preview-wide" src="/designer-site/static/images/lessons/intro-cards/diversification-correlation.webp" alt="Comic-book poster titled Correlation, together-ness: holdings that fall as one still share the fall. A bull labeled U.S. equity, sigma 16%, falls off a cliff in a sell-off and yanks an ogre labeled U.S. high yield, sigma 10%, after it by a rope marked rho about +0.69, while a villain cuts the rope with scissors marked rho not included and a dotted ghost of the ogre says it looks calmer. A narrator says diversification is uncorrelated risk, positive rho hides in the mix, and turning rho off makes the forecast pretend they never yank. Panels quote Harry Markowitz on uncorrelated risks and the free lunch line attributed to him after Portfolio Selection, 1952. The banner reads: Rho included counts the yank, rho off hides it." data-media-id="intro-card-correlation" loading="lazy" decoding="async" /></div>
+<details class="lesson-intro-chrome" data-intro-chrome="1" data-lesson-presentation="Reading"><summary><span class="lesson-intro-chrome-summary-title">So funktioniert diese Seite</span></summary><div class="lesson-intro-chrome-body"><blockquote class="lesson-shared lesson-learning-preference" cite="learning-center:learning-preference"><p>New to the Learning Center, or want a map of the panels? Start with a tour: <a href="/designer-site/learn/getting-started-planning-software-tour"><strong>Reading Lesson (Getting Around)</strong></a> or <a href="/designer-site/learn/getting-started-video-tutorial"><strong>Screencast Lesson (Getting Around)</strong></a> — both walk through Tutilis next to a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">Live-Plan</span><span class="lesson-term-tip" role="tooltip">Das laufende Tutilis-Produkt neben dieser Lektion – Navigation, Vogelperspektive, Prognosemodul, Werkzeuge und mehr –, geladen mit einem Lehrbeispiel. Ein Dossier sind die Plandaten; der Live-Plan ist die gesamte Produktoberfläche mit einem bereits geöffneten Beispieldossier, damit Sie sich umsehen können. Im Web lassen sich Lehrbeispiele nicht so bearbeiten wie Ihr eigenes Dossier in der vollständigen App.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> (to the right on a desktop-width screen, or below when stacked on a tablet).</p></blockquote><blockquote class="lesson-shared lesson-orientation" cite="learning-center:orientation"><p>This page — <strong>Diversification and correlation</strong> — includes a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live sample plan</span><span class="lesson-term-tip" role="tooltip">Das laufende Tutilis-Produkt neben dieser Lektion – Navigation, Vogelperspektive, Prognosemodul, Werkzeuge und mehr –, geladen mit einem Lehrbeispiel. Ein Dossier sind die Plandaten; der Live-Plan ist die gesamte Produktoberfläche mit einem bereits geöffneten Beispieldossier, damit Sie sich umsehen können. Im Web lassen sich Lehrbeispiele nicht so bearbeiten wie Ihr eigenes Dossier in der vollständigen App.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to the text. On a wide screen it usually sits <strong>to the right</strong> of the text; on a tablet it usually sits <strong>below</strong>. Use the text for the walk-through, then try the same ideas in the live plan.</p></blockquote><blockquote class="lesson-shared lesson-product-relationship" cite="learning-center:product-relationship"><p>The <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">Live-Plan</span><span class="lesson-term-tip" role="tooltip">Das laufende Tutilis-Produkt neben dieser Lektion – Navigation, Vogelperspektive, Prognosemodul, Werkzeuge und mehr –, geladen mit einem Lehrbeispiel. Ein Dossier sind die Plandaten; der Live-Plan ist die gesamte Produktoberfläche mit einem bereits geöffneten Beispieldossier, damit Sie sich umsehen können. Im Web lassen sich Lehrbeispiele nicht so bearbeiten wie Ihr eigenes Dossier in der vollständigen App.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to this page — usually <strong>to the right</strong> on a wide screen, or <strong>below</strong> on a tablet — is <strong>Tutilis</strong> running a teaching sample: the same <strong>financial planning product</strong> available as a desktop application (early preview). A <span class="lesson-term" data-term="dossier" tabindex="0"><span class="lesson-term-pill">Dossier</span><span class="lesson-term-tip" role="tooltip">Ihr vollständiger Plan in Tutilis: die Personen im Haushalt, was sie besitzen und schulden, ein- und ausgehende Cashflows, steuerliche Einstellungen und Planungsannahmen. Ein Dossier ist eine vollständige Situation, wie das Produkt sie modelliert.<a class="lesson-term-more" href="/designer-site/glossary/dossier">Full entry →</a></span></span> is the plan data; the live plan is the full product (navigation, Bird's Eye, Forecaster, tools) with a sample dossier already open so you can try the panels. <a href="/designer-site/pricing">See planned pricing</a>. On the web, Learning Center samples are <strong>not editable</strong> the way your own dossier will be in the full app. Your own household goes in the Tutilis desktop app — <a href="/designer-site/learn#intro-video-heading">the Learning Center front page has a short clip of that</a>.</p></blockquote></div></details>
+<div class="lesson-accordion" data-sections="9" style="--n:9"><h2 id="overview" class="lesson-section-head" style="--i:0"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="overview--body"><span class="lesson-section-title">Überblick</span></button></h2><div class="lesson-section-body" id="overview--body" role="region" aria-labelledby="overview" hidden>
+<!---
+  GENERATED lesson shell — not learner-facing meta. Regenerated chrome is
+  outside α/ω; teaching prose lives only in the protect block.
+  outline-id: foundations.diversification.correlation
+  outline-path: Foundations › Diversification › Correlation and diversification
+  document-id: diversification_correlation
+  locale: de
+  lifecycle: TranslationComplete
+  status: Shipped
+  lesson-status: PortedFromPublic
+  host-hint: Dossier
+  intent: Full German of the current English lesson. Same image ids and anchors.
+  port-source: dossiers/diversification_correlation.md
+-->
+<!--- α <lesson_body> -->
+<p><strong>Die meiste Zeit bewegen sich die großen Anlageklassen miteinander — nicht gegeneinander.</strong> Die <span class="lesson-term" data-term="correlation" tabindex="0"><span class="lesson-term-pill">Korrelation</span><span class="lesson-term-tip" role="tooltip">Wie eng sich zwei Anlagen <strong>gemeinsam</strong> bewegen, von −1 (gegenläufig) über 0 (unabhängig) bis +1 (im Gleichschritt). Geschrieben als <strong>ρ (Rho)</strong>. Sie entscheidet, ob das Halten mehrerer Anlagen das Risiko tatsächlich streut: Anlagen, die alle gleichzeitig fallen, sind weniger diversifiziert, als ihre Anzahl vermuten lässt.<a class="lesson-term-more" href="/designer-site/glossary/correlation">Full entry →</a></span></span> (<span class="lesson-term" data-term="rho" tabindex="0"><span class="lesson-term-pill">ρ</span><span class="lesson-term-tip" role="tooltip">Der griechische Buchstabe, den das Produkt für <strong>Korrelation</strong> verwendet — wie eng sich zwei Positionen gemeinsam bewegen, von −1 (gegenläufig) über 0 (unabhängig) bis +1 (im Gleichschritt). Ein positives ρ zwischen Aktien ist der Normalfall und nicht die Ausnahme, weshalb die Annahme von null stillschweigend unterschätzt, wie viel eines Portfolios auf einmal fallen kann. Das Produkt lässt Sie den Plan mit oder ohne System-ρ rechnen.<a class="lesson-term-more" href="/designer-site/glossary/rho">Full entry →</a></span></span>)
+ist dieses Miteinander. <span class="lesson-term" data-term="diversification" tabindex="0"><span class="lesson-term-pill">Diversifikation</span><span class="lesson-term-tip" role="tooltip">Geld auf Anlagen verteilen, die sich <strong>nicht</strong> alle gleich bewegen, sodass ein schlechtes Jahr für eine nicht für alle ein schlechtes Jahr ist. Viele Positionen zu halten ist nicht dasselbe — sind sie stark <strong>korreliert</strong>, verhalten sie sich wie eine einzige große Position unter mehreren Namen.<a class="lesson-term-more" href="/designer-site/glossary/diversification">Full entry →</a></span></span> heißt nicht „mehr Ticker besitzen“; sie heißt <strong>Risiken besitzen, die sich nicht
+immer als eines bewegen</strong>. Wenn ρ positiv ist (der übliche Fall), hat eine Mischung in der
+Rechnung immer noch <strong>gemeinsames</strong> Risiko. So zu tun, als wären die Positionen unabhängig, <strong>versteckt</strong> dieses Risiko.</p>
+<p>Das Produkt hat genau dafür einen Schalter. <strong>ρ enthalten</strong> (die Voreinstellung) zählt die gemeinsame Bewegung;
+<strong>ρ nicht enthalten</strong> lässt sie weg und behandelt die Positionen als unabhängig. Diese Lektion handelt davon, was dieser
+Schalter mit einem Plan macht, dessen Positionen sich wirklich gemeinsam bewegen.</p>
+<p>Der Plan rechts ist eine <strong>minimale Stichprobe mit zwei Positionen</strong> (<code>two_correlated_assets</code>):</p>
+<table>
+<thead>
+<tr><th>Position</th><th>Was es ist</th><th>Wert / <span class="lesson-term" data-term="basis" tabindex="0"><span class="lesson-term-pill">Kostenbasis</span><span class="lesson-term-tip" role="tooltip">Was Sie für eine Anlage <strong>bezahlt</strong> haben — der Ausgangspunkt, an dem die Steuer Ihren Gewinn misst. Verkaufen Sie über den Anschaffungskosten, ist die Differenz ein steuerpflichtiger Gewinn; das ursprünglich eingezahlte Geld wird nicht erneut besteuert. Deshalb können zwei Konten mit identischem Saldo sehr unterschiedlich viel kosten, wenn man daraus ausgibt.<a class="lesson-term-more" href="/designer-site/glossary/basis">Full entry →</a></span></span></th><th>Angenommene Rendite (<span class="lesson-term" data-term="mu" tabindex="0"><span class="lesson-term-pill">μ</span><span class="lesson-term-tip" role="tooltip">Der griechische Buchstabe, den das Produkt für eine angenommene <strong>Durchschnittsrendite</strong> verwendet — einfach gesagt: ungefähr das, was etwas in einem typischen Jahr erwirtschaftet. Er ist eine <strong>Eingabe</strong> für die Projektion und kein Ergebnis davon, und er steht nie allein: μ zusammen mit <strong>σ</strong> ist die gesamte Wachstumsannahme, denn eine Durchschnittsrendite sagt nichts darüber, wie holprig die Fahrt wird.<a class="lesson-term-more" href="/designer-site/glossary/mu">Full entry →</a></span></span>)</th><th>Angenommene Volatilität (<span class="lesson-term" data-term="sigma" tabindex="0"><span class="lesson-term-pill">σ</span><span class="lesson-term-tip" role="tooltip">Der griechische Buchstabe, den das Produkt für <strong>Volatilität</strong> verwendet — wie weit Renditen um ihren Durchschnitt streuen. Ein bloßes σ an einer Diagrammachse misst Risiko, nicht Rendite: Zwei Positionen können auf derselben Höhe liegen (gleiches <strong>μ</strong>) und sich völlig unterschiedlich anfühlen. Ein höheres σ drückt außerdem das tatsächlich erzielte Zinseszinswachstum unter den genannten Durchschnitt.<a class="lesson-term-more" href="/designer-site/glossary/sigma">Full entry →</a></span></span>)</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>US Equity</strong></td><td>Ein breiter Korb US-amerikanischer Aktien (<span class="lesson-term" data-term="equity" tabindex="0"><span class="lesson-term-pill">Aktien</span><span class="lesson-term-tip" role="tooltip">Beim Investieren: <strong>Aktien</strong> — ein Eigentumsanteil an einem Unternehmen oder ein Fonds, der viele davon hält. „US-Aktien“ bedeutet Aktien aus den USA. Das englische Wort *equity* bezeichnet auch das <strong>Eigenkapital an einer Immobilie</strong> (home equity): gleiches Wort, ganz andere Idee. Aktien haben unter den gängigen Anlageklassen die höchste erwartete Rendite und die größten Schwankungen, und verschiedene Aktienpositionen fallen tendenziell <strong>gemeinsam</strong>.<a class="lesson-term-more" href="/designer-site/glossary/equity">Full entry →</a></span></span>)</td><td>$500k / $300k</td><td>~7%</td><td>~16%</td></tr>
+<tr><td><strong>US High Yield</strong></td><td><span class="lesson-term" data-term="high-yield" tabindex="0"><span class="lesson-term-pill">Hochzins</span><span class="lesson-term-tip" role="tooltip">Eine Anleihe — meist eine Unternehmensanleihe — mit einem Rating unterhalb von Investment Grade, die einen höheren Zins zahlt, weil der Schuldner eher ausfällt. Der Name klingt nach einer guten Nachricht; die Falle ist, dass Hochzinsanleihen bei einem Ausverkauf tendenziell <strong>zusammen mit Aktien</strong> fallen, sodass das Etikett „Anleihe“ sie nicht zu einem Diversifikator macht. Auch <strong>Junk Bonds</strong> oder <strong>Kredit</strong> genannt.<a class="lesson-term-more" href="/designer-site/glossary/high-yield">Full entry →</a></span></span>-Anleihen — schlechter bewertete Unternehmensschulden, die tendenziell zusammen mit Aktien fallen</td><td>$500k / $300k</td><td>~6%</td><td>~10%</td></tr>
+</tbody>
+</table>
+<p>Gleiche Positionen → <strong>$1M</strong> insgesamt. In der eigenen Korrelationstabelle des Produkts liegt US Equity × US High <span class="lesson-term" data-term="yield" tabindex="0"><span class="lesson-term-pill">laufende Rendite</span><span class="lesson-term-tip" role="tooltip">Die <strong>Erträge</strong>, die eine Anlage ausschüttet — Zinsen oder Dividenden — in Prozent ihres Preises. Das ist nicht die Gesamtrendite: Eine Position kann 4 % abwerfen und im Jahresverlauf trotzdem an Wert verlieren. Wer nur der laufenden Rendite nachjagt, lädt dem Portfolio stillschweigend Risiken auf, für die es nicht entlohnt wird.<a class="lesson-term-more" href="/designer-site/glossary/yield">Full entry →</a></span></span>
+bei <strong>ρ ≈ +0.69</strong> — stark <strong>positiv</strong>. <strong>ρ nicht enthalten</strong> unterschätzt also das Risiko dieses Plans: auf
+dem Risikodiagramm rutscht der Portfolio-★ typischerweise nach <strong>links</strong>, in Richtung „ruhiger“.</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Wo es in der App ist</span> <a class="lesson-jump-term" href="/designer-site/glossary/correlation">Korrelation</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Wo es in der Prognose erscheint</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__risk__risk.correlations" title="Hingehen" aria-label="Hingehen: Risiko → Modellierte Vermögenskorrelationen"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__risk__risk.correlations.png" width="318" height="32" alt="Risiko → Modellierte Vermögenskorrelationen" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+<p><strong>Living Expense</strong> beträgt <strong>$40k/yr</strong> (mildes <span class="lesson-term" data-term="cola" tabindex="0"><span class="lesson-term-pill">COLA</span><span class="lesson-term-tip" role="tooltip">Cost-Of-Living Adjustment (Inflationsanpassung) — die jährliche Erhöhung einer Leistung, damit sie mit den Preisen Schritt hält. Die Social Security hat eine; viele Betriebsrenten nicht, und genau dieser Unterschied entscheidet, ob eine feste Zahlung in zwanzig Jahren noch etwas wert ist.<a class="lesson-term-more" href="/designer-site/glossary/cola">Full entry →</a></span></span>) — die klassische anfängliche <span class="lesson-term" data-term="withdrawal-rate" tabindex="0"><span class="lesson-term-pill">Entnahmerate</span><span class="lesson-term-tip" role="tooltip">Jährliche Ausgaben aus dem Portfolio als Anteil an seinem Wert. Eine <strong>sichere Entnahmerate</strong> ist die höchste Rate, bei der das Geld über einen gewählten Zeitraum historisch nie ausging — der Ursprung der „4-%-Regel“. Variable Ansätze (<strong>VPW</strong>, Guardrails) berechnen die Rate jedes Jahr neu, statt sie zu Beginn festzulegen.<a class="lesson-term-more" href="/designer-site/glossary/withdrawal-rate">Full entry →</a></span></span> von <strong>~4%</strong> auf
+$1M. Sie ändert nicht, wo die Positionen auf dem Risikodiagramm sitzen; sie erzeugt einen <span class="lesson-term" data-term="drawdown" tabindex="0"><span class="lesson-term-pill">Entnahmephase</span><span class="lesson-term-tip" role="tooltip">Die <strong>Entsparphase</strong> — vom Portfolio leben, statt es aufzustocken. Achtung: In Marktkommentaren bezeichnet dasselbe Wort (Drawdown) einen <strong>Rückgang</strong> vom Hoch zum Tief. In den Planungstexten hier ist es die Entnahmephase des Lebens, das Gegenstück zu den Ansparjahren.<a class="lesson-term-more" href="/designer-site/glossary/drawdown">Full entry →</a></span></span>, sodass
+der <span class="lesson-term" data-term="monte-carlo" tabindex="0"><span class="lesson-term-pill">Monte Carlo</span><span class="lesson-term-tip" role="tooltip">Die Methode hinter einem Mehrpfad-Lauf: viele zufällige Renditepfade ziehen, den Plan entlang jedes Pfades durchrechnen und die Streuung der Ergebnisse ablesen. Benannt nach dem Casino, weil der Motor auf wiederholter Zufallsstichprobe statt auf einer Formel beruht – deshalb unterscheiden sich zwei Läufe desselben Plans leicht, und deshalb ist eine Erfolgsquote ein Anteil gezogener Zukünfte und kein Versprechen.<a class="lesson-term-more" href="/designer-site/glossary/monte-carlo">Full entry →</a></span></span>-Erfolg bei Silber mit enthaltenem ρ gewöhnlich <strong>unter 100%</strong> liegt — und <strong>ρ nicht
+enthalten</strong> den Erfolg dann oft <strong>in Richtung 100% anhebt</strong>. Dieser Anstieg ist es, was „Risiko verstecken“ in der Sprache
+der Prognose bedeutet.</p>
+<aside class="lesson-did-you-know" data-cast="owl" style="--cast-art: url('/designer-site/static/images/learn/cast/owl/saying-free-lunch.webp')">
+<p class="lesson-did-you-know-label">Wussten Sie das?</p>
+<div class="lesson-did-you-know-body">
+<p>Das Wort „Anleihe“ an einer Position sagt nicht, ob sie ein Aktienportfolio diversifiziert. In der
+Korrelationstabelle des Produkts bewegen sich US-Hochzinsanleihen mit US-Aktien bei etwa <strong>+0.69</strong>, sie fallen also tendenziell,
+wenn Aktien fallen. <span class="lesson-term" data-term="treasury-security" tabindex="0"><span class="lesson-term-pill">US-Staatsanleihen</span><span class="lesson-term-tip" role="tooltip">Schuldtitel der US-Bundesregierung. Das Spiegelbild einer Kommunalanleihe: Die Zinsen <strong>sind</strong> auf Bundesebene steuerpflichtig, und die Bundesstaaten dürfen sie nicht besteuern — daher werden sie in einer bundesstaatlichen Steuererklärung abgezogen statt hinzugerechnet.<a class="lesson-term-more" href="/designer-site/glossary/treasury-security">Full entry →</a></span></span> liegen bei etwa <strong>−0.31</strong> und sind oft <em>gestiegen</em>, wenn
+Aktien fielen. Diese Lektion paart Aktien mit Hochzins, weil das der gewöhnliche Fall ist, in dem zwei
+Positionen tendenziell zusammen fallen.</p>
+</div>
+</aside>
+</div>
+<h2 id="what-you-will-learn" class="lesson-section-head" style="--i:1"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-you-will-learn--body"><span class="lesson-section-title">Was Sie lernen werden</span></button></h2><div class="lesson-section-body" id="what-you-will-learn--body" role="region" aria-labelledby="what-you-will-learn" hidden>
+<aside class="lesson-plan">
+<p class="lesson-plan-label">Heutige Lektion</p>
+<div class="lesson-plan-body">
+<p>Am Ende dieser Lektion sollten Sie diese Fragen beantworten können. Jede verweist auf den
+Abschnitt, der sie beantwortet.</p>
+<ol>
+<li><strong>Diversifiziert eine Position mit dem Etikett „Anleihe“ ein Aktienportfolio automatisch?</strong> Siehe
+<a href="#what-the-data-looks-like">Wie die Daten aussehen</a>.</li>
+<li><strong>Wie verändert die Stärke der Korrelation, wie sprunghaft eine Mischung ist?</strong> Siehe
+<a href="#the-puzzle-positive-correlation">Das Rätsel</a>.</li>
+<li><strong>Wie werden die Volatilitäten zweier Positionen zu einer Portfoliorisikozahl?</strong> Siehe
+<a href="#how-two-volatilities-combine">Wie zwei Volatilitäten sich verbinden</a>.</li>
+<li><strong>Was geschieht mit der Risikozahl, wenn der ρ-Schalter des Produkts aus ist?</strong> Siehe
+<a href="#how-two-volatilities-combine">Wie zwei Volatilitäten sich verbinden</a>.</li>
+<li><strong>Berücksichtigt die Prognose, dass Korrelationen in einem Crash steigen?</strong> Siehe
+<a href="#crisis-honesty">Ehrlichkeit in der Krise</a>.</li>
+</ol>
+</div>
+</aside>
+</div>
+<h2 id="what-the-data-looks-like" class="lesson-section-head" style="--i:2"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-the-data-looks-like--body"><span class="lesson-section-title">Wie die Daten aussehen</span></button></h2><div class="lesson-section-body" id="what-the-data-looks-like--body" role="region" aria-labelledby="what-the-data-looks-like" hidden>
+<table>
+<thead>
+<tr><th>Paartyp</th><th>Typisches ρ (grob)</th><th>Was für die Planung zählt</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Aktien gegen Aktien</strong> (Regionen, Stile, Sektoren)</td><td>Oft <strong>stark positiv</strong></td><td>Gleichlauf <strong>addiert</strong> zum Risiko des Portfolios</td></tr>
+<tr><td><strong>Aktien gegen Hochzins</strong></td><td>Oft <strong>stark positiv</strong> (~0.6–0.8 in vielen Tabellen)</td><td>Das Etikett „Anleihe“ heißt nicht Diversifikator</td></tr>
+<tr><td><strong>Aktien gegen hochwertige Staatsanleihen</strong></td><td>Je nach Epoche gemischt — kann niedrig oder leicht <strong>negativ</strong> sein</td><td>Nützlicher Diversifikator, <em>wenn</em> ρ niedrig ist</td></tr>
+<tr><td><span class="lesson-term" data-term="market-crash" tabindex="0"><span class="lesson-term-pill">Stress- oder Crashphasen</span><span class="lesson-term-tip" role="tooltip">Ein seltener, scharfer Einbruch über alle Märkte hinweg — 2008 und März 2020 sind die jüngsten Beispiele —, der Monate bis ein paar Jahre dauert und etwa einmal pro Jahrzehnt auftritt. Kein Alltagsfall und keine Vorhersage: Für die Planung zählt er, weil in genau diesen Momenten <strong>die Korrelationen gegen +1 steigen</strong>, sodass sonst unterschiedliche Positionen gemeinsam fallen und Diversifikation genau dann am wenigsten hilft, wenn sie am meisten gebraucht wird.<a class="lesson-term-more" href="/designer-site/glossary/market-crash">Full entry →</a></span></span></td><td>Viele Paare <strong>steigen gegen +1</strong></td><td>Der Gleichlauf wird stärker, genau wenn er am meisten schmerzt</td></tr>
+</tbody>
+</table>
+<p><strong>Zu dieser letzten Zeile.</strong> Eine Stress- oder Crashphase ist ein seltener, scharfer Fall über die Märkte hinweg — 2008 und
+März 2020 sind die jüngeren — sie dauert Monate bis ein paar Jahre und kommt vielleicht einmal in einem
+Jahrzehnt. Sie ist nicht der Alltag, und die Zeile ist keine Vorhersage. Sie steht dort, weil das die
+Momente sind, <em>für</em> die Diversifikation da ist, und zugleich die Momente, in denen sie am wenigsten leistet: Positionen, die
+sich gewöhnlich unterscheiden, fallen dann zusammen. Für sie zu planen ist eine Frage der Größe, nicht der Sorge — <strong>Ehrlichkeit
+in der Krise</strong> weiter unten sagt, was das Produkt dazu tut und was nicht.</p>
+<p>Lesen Sie die Tabelle in einer Richtung: das <strong>Etikett</strong> einer Position sagt nicht, ob sie diversifiziert. Nur ρ
+tut das, und nur gegenüber dem, was Sie schon besitzen.</p>
+<p><strong>Woher ρ kommt.</strong> Das Produkt ermittelt ρ aus seiner eingebauten Tabelle von <em>Kategorie</em>-Paaren (US-Aktien × US-Hochzins und so weiter), plus etwaigen Überschreibungen des Laufs. Ein Dossier kann auch eine eigene
+<code>dossier_correlation_matrix</code> speichern, aber der echte Risiko- / Prognosepfad liest dieses Feld noch nicht. Diese
+Stichprobe ist so verdrahtet, dass die <strong>Kategorien selbst</strong> ein positives ρ tragen.</p>
+</div>
+<h2 id="the-puzzle-positive-correlation" class="lesson-section-head" style="--i:3"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="the-puzzle-positive-correlation--body"><span class="lesson-section-title">Das Rätsel: positives ρ (Korrelation)</span></button></h2><div class="lesson-section-body" id="the-puzzle-positive-correlation--body" role="region" aria-labelledby="the-puzzle-positive-correlation" hidden>
+<p>ρ ist die Korrelation aus der Übersicht — wie stark sich zwei Positionen gemeinsam bewegen, von −1 (entgegengesetzt)
+über 0 (ohne Zusammenhang) bis +1 (im Gleichschritt). Drei Bereiche zählen:</p>
+<ul>
+<li>ρ nahe <strong>+1</strong>: die Mischung ist fast so sprunghaft wie ihre Bestandteile.</li>
+<li>ρ <strong>positiv, aber &lt; 1</strong> (diese Stichprobe und die meisten echten Portfolios): etwas Diversifikation gegenüber
++1, aber die beiden teilen noch Risiko — lassen Sie diesen gemeinsamen Teil weg, und das Portfolio wirkt <strong>zu
+sicher</strong>.</li>
+<li>ρ nahe <strong>0</strong> oder <strong>negativ</strong>: eine große kostenlose Beruhigung — Sonderfälle (zum Beispiel manche Aktien- / Treasury-Epochen),
+nicht die alltägliche Voreinstellung.</li>
+</ul>
+</div>
+<h2 id="how-two-volatilities-combine" class="lesson-section-head" style="--i:4"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="how-two-volatilities-combine--body"><span class="lesson-section-title">Wie zwei Volatilitäten sich verbinden</span></button></h2><div class="lesson-section-body" id="how-two-volatilities-combine--body" role="region" aria-labelledby="how-two-volatilities-combine" hidden>
+<p>Für die Idee braucht es keine Formel. Denken Sie das Portfoliorisiko als <strong>zwei Haufen</strong>:</p>
+<ol>
+<li><strong>Das eigene Risiko jeder Position</strong>, herunterskaliert danach, wie viel vom Portfolio sie ausmacht. Die Hälfte Ihres Geldes in einer
+Position mit 16% Volatilität bringt nicht 16 Risikopunkte in die Mischung — sie bringt viel weniger, weil
+die andere Hälfte etwas anderes tut.</li>
+<li><strong>Ein Gleichlauf-Haufen</strong>: zusätzliches Risiko, das es nur gibt, weil die beiden Positionen an denselben
+Tagen fallen. Das ist der <strong>einzige Ort, an dem ρ vorkommt</strong>. Positives ρ macht den Haufen größer; ein ρ von null
+lässt ihn verschwinden; negatives ρ macht daraus eine <em>Subtraktion</em>.</li>
+</ol>
+<table>
+<thead>
+<tr><th>ρ zwischen den beiden</th><th>Gleichlauf-Haufen</th><th>Portfoliorisiko</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>+1</strong></td><td>So groß, wie er wird</td><td>Der gewichtete <strong>Durchschnitt</strong> der beiden Volatilitäten — keine Diversifikation</td></tr>
+<tr><td><strong>Positiv, &lt; 1</strong> (<strong>typisch</strong>)</td><td><strong>Addiert</strong> noch Risiko</td><td>Diese Stichprobe; die meisten Aktien- / Hochzins-Paare</td></tr>
+<tr><td><strong>0</strong></td><td>Nichts</td><td>Die Positionen sind unabhängig</td></tr>
+<tr><td><strong>Negativ</strong></td><td><strong>Subtrahiert</strong></td><td>Ein Diversifikationsbonus, wenn er hält</td></tr>
+</tbody>
+</table>
+<p><strong>Diese Stichprobe, in Zahlen.</strong> Zur Hälfte US Equity (σ 16%), zur Hälfte US High Yield (σ 10%), ρ = +0.69.
+Die Haufen sind in Einheiten von „<span class="lesson-term" data-term="volatility" tabindex="0"><span class="lesson-term-pill">Volatilität</span><span class="lesson-term-tip" role="tooltip">Wie stark die Renditen einer Anlage von Jahr zu Jahr <strong>schwanken</strong>, nicht ob sie insgesamt steigt oder fällt. Im Produkt als <strong>σ (Sigma)</strong> geschrieben. Zwei Anlagen können dieselbe durchschnittliche Rendite haben und sich im Erleben völlig unterschiedlich anfühlen — und hohe Volatilität drückt das tatsächlich erzielte Zinseszinswachstum unter diesen Durchschnitt.<a class="lesson-term-more" href="/designer-site/glossary/volatility">Full entry →</a></span></span> zum Quadrat“, deshalb zieht der letzte Schritt eine Quadratwurzel:</p>
+<table class="lesson-table-ledger">
+<thead>
+<tr><th>Stück</th><th>Betrag</th></tr>
+</thead>
+<tbody>
+<tr><td>Eigene Risiko-Haufen, beide Positionen</td><td>89</td></tr>
+<tr><td>Gleichlauf-Haufen, ρ = +0.69</td><td><strong>+55</strong></td></tr>
+<tr><td>Summe → Portfolio-σ</td><td>144 → √144 ≈ <strong>12.0%</strong></td></tr>
+<tr><td>Dieselben Positionen, <strong>ρ nicht enthalten</strong></td><td>89 → √89 ≈ <strong>9.4%</strong></td></tr>
+</tbody>
+</table>
+<p>Diese beiden Zahlen sind der Ort, an dem der ★ in den beiden Bildern unter <strong>Wohin schauen</strong> sitzt (bis auf die
+Rundung von σ 16 und σ 10 — die Positionen folgen den eigenen Kategorieannahmen des Produkts, die ein
+paar Dezimalen mehr tragen). An den Positionen hat sich nichts geändert; ein Haufen wurde einfach weggelassen.</p>
+<details class="lesson-math">
+<summary class="lesson-math-label">Für die Mathematikfreunde — die Formel</summary>
+<div class="lesson-math-body">
+<p>Die beiden Haufen sind die <strong>Portfolio-Varianz</strong> zweier Anlagen, mit Gewichten <span class="math">\(w\)</span>, Volatilitäten <span class="math">\(\sigma\)</span> und
+Korrelation <span class="math">\(\rho\)</span>:</p>
+<p><span class="math">\[
+\sigma_p^2 = w_1^2\,\sigma_1^2 + w_2^2\,\sigma_2^2 + 2\,w_1 w_2\,\sigma_1\sigma_2\,\rho_{12}
+\]</span></p>
+<table>
+<thead>
+<tr><th>Term</th><th>Rolle</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="math">\(w_1^2\sigma_1^2\)</span>, <span class="math">\(w_2^2\sigma_2^2\)</span></td><td>Die eigenen Risiko-Haufen — die Varianz jeder Position, skaliert mit dem Quadrat ihres Gewichts</td></tr>
+<tr><td><span class="math">\(2 w_1 w_2 \sigma_1 \sigma_2 \rho_{12}\)</span></td><td>Der Gleichlauf-Haufen — der einzige Ort, an dem ρ vorkommt</td></tr>
+</tbody>
+</table>
+<p>Mit <span class="math">\(w_1 = w_2 = 0.5\)</span>, <span class="math">\(\sigma_1 = 16\)</span>, <span class="math">\(\sigma_2 = 10\)</span>, <span class="math">\(\rho_{12} = 0.69\)</span>:</p>
+<p><span class="math">\[
+\sigma_p^2 = 64 + 25 + 2 \cdot 0.25 \cdot 16 \cdot 10 \cdot 0.69 \approx 89 + 55 = 144
+\qquad\Rightarrow\qquad \sigma_p \approx 12.0\%
+\]</span></p>
+<p><span class="math">\(\rho_{12} = 0\)</span> setzen (<strong>ρ nicht enthalten</strong>) lässt den letzten Term weg: <span class="math">\(\sigma_p = \sqrt{89} \approx 9.4\%\)</span>. Bei
+<span class="math">\(\rho_{12} = 1\)</span> ist der Ausdruck ein perfektes Quadrat, <span class="math">\((w_1\sigma_1 + w_2\sigma_2)^2\)</span>, also ist das Portfolio-σ der
+gewichtete Durchschnitt, 13% — überhaupt keine Diversifikation.</p>
+</div>
+</details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="included-vs-not-included">ρ enthalten gegen ρ nicht enthalten</h3></summary><div class="lesson-subsection-body">
+<p>Der Schalter des Produkts heißt <strong>ρ enthalten</strong> und startet <strong>an</strong> (grün): der Gleichlauf-Haufen wird
+gezählt. Schalten Sie ihn <strong>aus</strong>, und die Beschriftung lautet <strong>ρ nicht enthalten</strong>: die Prognose behandelt die Positionen
+als unabhängig, und der Haufen fällt weg.</p>
+<table>
+<thead>
+<tr><th>Wahres ρ</th><th>Wirkung von <strong>ρ nicht enthalten</strong></th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Positiv</strong> (diese Stichprobe)</td><td>Entfernt einen risikoerhöhenden Haufen → <strong>zu ruhig</strong>; der ★ rutscht oft nach <strong>links</strong></td></tr>
+<tr><td><strong>Negativ</strong></td><td>Entfernt einen Vorteil → wirkt riskanter; der ★ rutscht nach <strong>rechts</strong></td></tr>
+</tbody>
+</table>
+<p><strong>Planungsregel:</strong> ein Portfolio, dessen Positionen sich gemeinsam bewegen, muss <strong>ρ enthalten</strong> behalten, damit die Risikozahl
+ehrlich ist.</p>
+</div></details>
+
+</div>
+<h2 id="crisis-honesty" class="lesson-section-head" style="--i:5"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="crisis-honesty--body"><span class="lesson-section-title">Ehrlichkeit in der Krise</span></button></h2><div class="lesson-section-body" id="crisis-honesty--body" role="region" aria-labelledby="crisis-honesty" hidden>
+<p>Reales ρ ist <strong>zeitveränderlich</strong>, und Crashes schieben viele Paare <strong>gegen +1</strong> — der Gleichlauf wird stärker,
+genau wenn er am meisten schmerzt. Das Produkt verwendet standardmäßig eine <strong>statische</strong> Kategorietabelle: ein klarer
+Planungshebel, keine volle Krisenmaschine. Es schnellt in einer Panik nicht von selbst hoch, also ist ein Plan, der mit dem ρ von heute schon
+eng aussieht, in einem solchen Moment enger, als er sich liest. Das ist eine Ehrlichkeitsschranke des aktuellen
+Modells, ausgesprochen statt versteckt.</p>
+<aside class="lesson-saying" data-saying="free-lunch" data-cast="owl">
+<img class="lesson-saying-art" src="/designer-site/static/images/learn/cast/owl/saying-free-lunch.webp" alt="The learner reaches for a heaped platter that looks free, while the mentor lifts one corner to show a receipt that unrolls all the way to the floor." loading="lazy" decoding="async">
+<p class="lesson-saying-label"><span class="lesson-saying-wording">There's no free lunch.</span> <span class="lesson-saying-handle">TNFL</span></p>
+<div class="lesson-saying-body">
+<p>Diversifikation ist das, was einem Gratisessen am nächsten kommt, und sie schrumpft gerade dann, wenn man sie am meisten will. In einem Crash steigen die Korrelationen gegen 1, und das Risiko, das die Mischung erspart hatte, kommt zurück.</p>
+</div>
+</aside>
+</div>
+<h2 id="where-to-look" class="lesson-section-head" style="--i:6"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="where-to-look--body"><span class="lesson-section-title">Wohin schauen</span></button></h2><div class="lesson-section-body" id="where-to-look--body" role="region" aria-labelledby="where-to-look" hidden>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="1-scatter-path">1. Weg zum Streudiagramm</h3></summary><div class="lesson-subsection-body">
+<ol>
+<li><span class="lesson-nav-ref lesson-nav-ref--risk lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/risk.png" alt="Risk" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Risiko</span><span class="lesson-term-tip" role="tooltip">Ein <strong>Hauptbereich der linken Leiste</strong>. Analytische Risikosichten — wie Holdings und Kategorien auf Risiko/Rendite sitzen. Später nützlich; für erste Touren nicht nötig.</span></span> → <strong>Aktuelles Risiko</strong></li>
+<li>Öffnen Sie <strong>Analytisches Risiko</strong> (beim Einstieg geschlossen)</li>
+<li><strong>Risiko vs. Rendite</strong></li>
+<li>Schalten Sie <strong>Positionen</strong> <strong>an</strong>, damit beide Positionen eigene Punkte sind (nicht nur die Kontosumme)</li>
+</ol>
+<table>
+<thead>
+<tr><th>Position</th><th>Wo</th><th>Warum</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>US Equity</strong></td><td>Oben und rechts</td><td>Höheres μ und σ</td></tr>
+<tr><td><strong>US High Yield</strong></td><td>Mitte-links der Aktien</td><td>Niedrigeres μ / σ, bewegt sich aber noch mit Aktien</td></tr>
+<tr><td><strong>★ Portfolio</strong></td><td>Dazwischen</td><td>50/50-Mischung mit <strong>ρ ≈ +0.69</strong>, wenn ρ enthalten ist</td></tr>
+</tbody>
+</table>
+</div></details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="2-toggle-watch-the">2. ρ umschalten (den ★ beobachten)</h3></summary><div class="lesson-subsection-body">
+<ul>
+<li><strong>ρ enthalten</strong> (an, grün): der Gleichlauf-Haufen wird gezählt — das ehrliche Portfolio-σ ist <strong>höher</strong>.</li>
+<li><strong>ρ nicht enthalten</strong> (aus): der Haufen fällt weg — ★ / σ wandern typischerweise nach <strong>links</strong> (rosiger).</li>
+</ul>
+<p>Beide Figuren unten sind das eigene Diagramm der App, aus dieser Stichprobe in <strong>derselben Breite</strong> neu gezeichnet, also ist der
+einzige Unterschied der Schalter — und die waagerechte Bewegung des ★ ist das Einzige, was sich
+bewegt. In dieser Stichprobe geht der Stern heute von etwa <strong>12.0%</strong> σ auf etwa <strong>9.4%</strong>, bei <em>derselben</em>
+Rendite von 6.0%: nach links, nicht nach unten.</p>
+<div class="lesson-img-stack">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/diversification-risk-rho-included.de.png" alt="Risk vs. Return with ρ included — portfolio ★ at full covariance σ" data-media-id="diversification-risk-rho-included" data-where="output__risk__risk.risk-vs-return" data-canvas-dossier="two_correlated_assets" data-pick="2027,0" data-risk-chips="holdings" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption"><strong>ρ enthalten</strong> (grün): ehrlicher Gleichlauf — der ★ sitzt beim σ der <strong>vollen Kovarianz</strong> — der ehrlichen Mischung der beiden Positionen.</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated" src="/designer-site/static/images/lessons/generated/diversification-risk-rho-not-included.de.png" alt="Risk vs. Return with ρ not included — portfolio ★ at the lower, rosier σ" data-media-id="diversification-risk-rho-not-included" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption"><strong>ρ nicht enthalten</strong> (aus): nur unabhängige Volatilitäten — der ★ rutscht nach <strong>links</strong>. Dieselben Positionen, dieselbe Rendite, niedriger ausgewiesenes Portfoliorisiko.</p>
+</div>
+</div></details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="3-transforms-correlations-success">3. Transformationen → Korrelationen (ρ) + Erfolgsquote</h3></summary><div class="lesson-subsection-body">
+<ol>
+<li>Öffnen Sie <span class="lesson-nav-ref lesson-nav-ref--transforms lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/transforms.png" alt="Transforms" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Transformationen</span><span class="lesson-term-tip" role="tooltip">Ein <strong>Hauptbereich der linken Leiste</strong>. Der Name <strong>Transformationen</strong> meint: Sie <strong>transformieren eine Kopie</strong> des Plans — ein Was-wäre-wenn — ohne das Original-Dossier umzuschreiben. Vergleichen Sie Original und geändert nebeneinander.</span></span>.</li>
+<li>Finden Sie den Schalter <strong>Korrelationen (ρ)</strong>. Er startet <strong>an</strong>, das heißt, der Lauf <em>zählt</em>
+den Gleichlauf — derselbe Zustand <strong>ρ enthalten</strong> wie im Risikodiagramm. Schalten Sie ihn <strong>aus</strong>, um den Plan
+so laufen zu lassen, als wären die Positionen unabhängig (<strong>ρ nicht enthalten</strong>), und <strong>simulieren Sie neu</strong>.</li>
+<li>Vergleichen Sie den Erfolg der <strong>Simulationszusammenfassung</strong> bei <span class="lesson-term" data-term="medals" tabindex="0"><span class="lesson-term-pill">Silber</span><span class="lesson-term-tip" role="tooltip">Die drei Erfolgsstufen des Produkts, die strengste zuerst: Gold, Silber, Bronze. Mit ihnen lesen Sie den Zustand eines Plans ab, ohne über eine einzelne Erfolgsquote zu streiten — ein Plan, der Bronze schafft, aber nicht Silber, zeigt Ihnen genau, welche Reserve knapp ist. Die Stufen prüfen die von Ihnen gewählte <strong>Erfolgsdefinition</strong>; ändern Sie diese, ändert sich die Medaille.<a class="lesson-term-more" href="/designer-site/glossary/medals">Full entry →</a></span></span>: <strong>Original</strong> (Schalter an) gegen
+<strong>Geändert</strong> (Schalter aus).</li>
+</ol>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Wo es in der App ist</span> <a class="lesson-jump-term" href="/designer-site/glossary/correlation">Korrelation</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--modifiable">Wo Sie es als Was-wäre-wenn ausprobieren</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.correlations" title="Hingehen" aria-label="Hingehen: Transformationen → Änderungen → Änderbare → Global → Korrelationen (ρ)"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.correlations.png" width="574" height="32" alt="Transformationen → Änderungen → Änderbare → Global → Korrelationen (ρ)" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button><p class="lesson-jump-note">Schaltet die Korrelationen ab, damit Sie sehen, welchen Anteil am Risiko des Plans sie tragen.</p></li></ul></div></aside>
+<p>In dieser Stichprobe mit $1M / $40k bewegt sich der letzte Punkt oder die letzten zwei mit der Ziehung. Lesen Sie den Erfolgsanteil, den jede Hälfte ausgibt:</p>
+<table>
+<thead>
+<tr><th>Zustand</th><th>Was sich ändert</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>ρ enthalten</strong> (Original)</td><td>Ehrlicher Gleichlauf + Ausgabe</td></tr>
+<tr><td><strong>ρ nicht enthalten</strong> (Geändert)</td><td>Höherer Erfolg — die Prognose hat das Risiko unterschätzt</td></tr>
+</tbody>
+</table>
+<p>Original und Geändert stehen nebeneinander, damit sich die Wolken und die Erfolgsanteile sauber vergleichen lassen:</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated" src="/designer-site/static/images/lessons/generated/diversification-transforms-rho-on-vs-off.de.png" alt="Net worth distribution with ρ included beside the same plan with ρ not included" data-media-id="diversification-transforms-rho-on-vs-off" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Die Pointe: positives ρ wegzulassen lässt den Plan sicherer aussehen (Erfolg nach oben, linker Schwanz weniger hart), ohne einen Dollar der Ausgabe zu ändern.</p>
+<p>Zwischen diesen beiden Läufen hat sich am Plan nichts geändert — nicht die Positionen, nicht die Ausgabe, nicht der
+Horizont. Nur, ob das Modell zugeben durfte, dass die beiden Positionen zusammen fallen. Deshalb ist das
+das letzte Wort der Lektion und keine Fußnote: <strong>das Risiko, das Sie verstecken, geht nicht weg; es wird nur nicht mehr
+gezählt.</strong></p>
+</div></details>
+
+</div>
+<h2 id="what-to-take-away" class="lesson-section-head" style="--i:7"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-to-take-away--body"><span class="lesson-section-title">Was Sie mitnehmen</span></button></h2><div class="lesson-section-body" id="what-to-take-away--body" role="region" aria-labelledby="what-to-take-away" hidden>
+<ul>
+<li>Fangen Sie mit <strong>positivem ρ</strong> an — der Alltag für ein Portfolio mit mehr als einer Art von Risiko.</li>
+<li><strong>US-Aktien × Hochzins</strong> ist ein echtes positives Paar; Staatsanleihen sind eine andere Geschichte.</li>
+<li><strong>ρ nicht enthalten</strong> bei wahrem ρ &gt; 0 <strong>unterschätzt</strong> das Risiko.</li>
+<li>Krisen können ρ <strong>gegen +1</strong> schieben.</li>
+<li>Pfad: Risiko → Aktuelles Risiko → <strong>Analytisches Risiko</strong>; <strong>Positionen</strong>; schalten Sie <strong>ρ enthalten</strong> um (Beschriftung links vom Schalter).</li>
+</ul>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="words-used-in-this-lesson">Wörter in dieser Lektion</h3></summary><div class="lesson-subsection-body">
+<table>
+<thead>
+<tr><th>Wort</th><th>In einer Zeile</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Korrelation (ρ)</strong></td><td>Wie stark sich zwei Positionen gemeinsam bewegen, von −1 bis +1. Positiv ist der Alltag. <a href="/designer-site/glossary/correlation">Mehr</a></td></tr>
+<tr><td><strong>Diversifikation</strong></td><td>Risiken besitzen, die sich nicht alle als eines bewegen — nicht einfach mehr Dinge besitzen. <a href="/designer-site/glossary/diversification">Mehr</a></td></tr>
+<tr><td><strong>Volatilität (σ)</strong></td><td>Wie stark die Renditen einer Position von Jahr zu Jahr schwanken. <a href="/designer-site/glossary/volatility">Mehr</a></td></tr>
+<tr><td><strong>US-Aktien</strong></td><td>Aktien aus den USA — Eigentumsanteile an Unternehmen, nicht das „Eigenkapital“ in Ihrem Haus. <a href="/designer-site/glossary/equity">Mehr</a></td></tr>
+<tr><td><strong>Hochzins</strong></td><td>Schlechter bewertete Unternehmensanleihen: mehr Zins, und aktienähnliche Fälle in einem Ausverkauf. <a href="/designer-site/glossary/high-yield">Mehr</a></td></tr>
+<tr><td><strong>Treasury</strong></td><td>Schulden der US-Regierung — die klassische Position, die oft gestiegen ist, wenn Aktien fielen. <a href="/designer-site/glossary/treasury-security">Mehr</a></td></tr>
+<tr><td><strong>Stress- / Crashphase</strong></td><td>Ein seltener, scharfer Fall über die Märkte hinweg, wenn die Korrelationen gegen +1 steigen. <a href="/designer-site/glossary/market-crash">Mehr</a></td></tr>
+<tr><td><strong>ρ enthalten / ρ nicht enthalten</strong></td><td>Der Schalter des Produkts: den Gleichlauf zählen oder so tun, als wären die Positionen unabhängig.</td></tr>
+</tbody>
+</table>
+</div></details>
+
+</div>
+<h2 id="where-to-go-next" class="lesson-section-head" style="--i:8"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="where-to-go-next--body"><span class="lesson-section-title">Wohin als Nächstes</span></button></h2><div class="lesson-section-body" id="where-to-go-next--body" role="region" aria-labelledby="where-to-go-next" hidden>
+<table>
+<thead>
+<tr><th>Thema</th><th>Lektion</th></tr>
+</thead>
+<tbody>
+<tr><td>Zuerst das Risiko-/Rendite-Streudiagramm</td><td><a href="/designer-site/learn/risk-vs-return-portfolio-chart">Risiko und Rendite</a></td></tr>
+<tr><td>Wortliste</td><td><a href="/designer-site/glossary?division=financial">Glossar des Finanzplans</a> · <a href="/designer-site/glossary?division=tutilis">Tutilis-Glossar</a></td></tr>
+<tr><td>Rundgang durch den ganzen Haushalt</td><td><a href="/designer-site/learn/sample-family-financial-plan">Lernen Sie den Haushalt Springfield kennen</a></td></tr>
+</tbody>
+</table>
+<!--- ω <lesson_body> -->
+<!-- GENERATED host-hint: Dossier — Live plan canvas — Bind a sample dossier on the right. -->
+</div>
+</div>
+<details class="lesson-rebuild-by-hand"><summary><span class="lesson-rebuild-by-hand-summary-title">Diesen Plan von Hand nachbauen</span></summary><div class="lesson-rebuild-by-hand-body"><p>Die Karten auf der Leinwand zeigen die Konten und Zahlungsströme. Dies sind die Einstellungen außerhalb jeder Karte, aus dem Plan selbst gelesen, mit der Beschriftung des jeweiligen Steuerelements in der App. Ein als default markierter Wert bleibt unverändert.</p><table class="content-table">
+<thead>
+<tr>
+<th align="left">Setting</th>
+<th align="left">SC-05 Two Correlated Assets</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2" align="center"><strong>Household</strong></td></tr>
+<tr>
+<td align="left">Planning region</td>
+<td align="left">United States (default)</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Investor (Primary)</td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1980</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">65</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">90</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Taxes</strong></td></tr>
+<tr>
+<td align="left">Tax regime</td>
+<td align="left">United States</td>
+</tr>
+<tr>
+<td align="left">Filing status</td>
+<td align="left">Married, filing jointly</td>
+</tr>
+<tr>
+<td align="left">State of residence</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">First-year federal estimate</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">First-year state estimate</td>
+<td align="left">—</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Strategy</strong></td></tr>
+<tr>
+<td align="left">Residual withdrawal strategy</td>
+<td align="left">Pro-rata (default)</td>
+</tr>
+<tr>
+<td align="left">Roth conversions</td>
+<td align="left">Off</td>
+</tr>
+<tr>
+<td align="left">Definition of success</td>
+<td align="left">Liquidity crises allowed (default)</td>
+</tr>
+<tr>
+<td align="left">Glide path target</td>
+<td align="left">None (default)</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Advanced</strong></td></tr>
+<tr>
+<td align="left">Reporting inflation</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Cost of capital</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Growth assumptions</td>
+<td align="left">Growth overrides (default)</td>
+</tr>
+<tr>
+<td align="left">Currencies</td>
+<td align="left">Multiple currencies (default)</td>
+</tr>
+<tr>
+<td align="left">Default currency</td>
+<td align="left">USD (default)</td>
+</tr>
+<tr>
+<td align="left">Display currency</td>
+<td align="left">USD (default)</td>
+</tr>
+</tbody>
+</table>
+</div></details><div class="lesson-catalog-footer"><span class="lesson-region-badge" title="All regions"><span class="lesson-region-marker">🌐</span><span class="lesson-region-label muted">All regions</span></span><span class="lesson-tags"><span class="lesson-tags-label">Schlagwörter</span><span class="learn-chip">fundamentals</span><span class="learn-chip">correlation</span><span class="learn-chip">diversification</span></span></div><div class="community-invite"><a class="community-callout" href="https://community.plusauri.com" target="_blank" rel="noopener noreferrer" data-community-join="community-join" aria-haspopup="dialog"><img src="/designer-site/static/images/community/join-callout.jpg" alt="Join Our Community" width="392" height="229" decoding="async" loading="lazy"></a><dialog id="community-join" class="community-join" aria-labelledby="community-join-title"><article class="community-join-panel"><button type="button" class="community-join-close" data-community-join-close aria-label="Close" title="Close">×</button><h2 id="community-join-title">Join the Plusauri community</h2><form class="community-join-form" action="/designer-site/api/community/join" method="post" novalidate data-msg-invalid="That email address does not look right." data-msg-failed="Something went wrong. You can still join directly at community.plusauri.com." data-msg-sending="Sending…"><p class="community-join-lead">A forum of people planning their own retirement, asking questions and helping each other. Anyone can read it. Members can post, and get a note when someone answers.</p><fieldset class="community-join-modes"><legend>How would you like to take part?</legend><label class="community-join-mode community-join-mode-participant"><input type="radio" name="mode" value="Participant" checked><span class="community-join-mode-art" aria-hidden="true"></span><strong>Participant</strong><small>Ask questions, share what you have learned, join the conversation.</small></label><label class="community-join-mode community-join-mode-lurker"><input type="radio" name="mode" value="Lurker"><span class="community-join-mode-art" aria-hidden="true"></span><strong>Lurker</strong><small>No account needed. Get the highlights by email and read the forum whenever you like.</small></label></fieldset><div class="community-join-who"><label class="community-join-name">First name (optional)<input type="text" name="firstName" autocomplete="given-name" maxlength="80"></label><label class="community-join-email">Your email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com" maxlength="254"></label></div><fieldset class="community-join-stage"><legend>Which describes you best? (optional)</legend><label><input type="radio" name="stage" value="Building"> Building and saving</label><label><input type="radio" name="stage" value="NearingRetirement"> Getting close to retirement</label><label><input type="radio" name="stage" value="Retired"> Retired</label></fieldset><input type="text" name="website" class="community-join-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="community-join-note community-join-for-participant">We will email you an invitation to community.plusauri.com. Accept it to finish joining.</p><p class="community-join-note community-join-for-lurker">We will add you to the Plusauri mailing list. The forum at community.plusauri.com is open to read anytime, no account needed. Unsubscribe whenever you like.</p><label class="community-join-news"><input type="checkbox" name="news"> Also send me occasional Plusauri news by email. Optional, and you can unsubscribe anytime.</label><p class="community-join-error" role="alert" hidden></p><footer class="community-join-actions"><button type="button" class="secondary outline" data-community-join-close>Not now</button><button type="submit"><span class="community-join-for-participant">Send my invitation</span><span class="community-join-for-lurker">Add me to the list</span></button></footer></form><div class="community-join-sent" hidden aria-live="polite"><h3>Check your inbox</h3><p data-status="invited" hidden>Your invitation is on its way. Accept it to choose a username and finish joining.</p><p data-status="queued" hidden>Thanks. We will send your invitation shortly.</p><p data-status="member" hidden>That address already belongs to a member. Sign in at community.plusauri.com.</p><p data-status="listed" hidden>Thanks, you are on the list. The forum is at community.plusauri.com whenever you want a look.</p><footer class="community-join-actions"><button type="button" data-community-join-close>Done</button></footer></div></article></dialog></div><hr class="lesson-disclaimer-rule" /><blockquote class="lesson-shared lesson-disclaimer" cite="learning-center:disclaimer"><p><strong>Bildungsinhalt — keine Beratung.</strong> Diese Lektionen vermitteln, wie Tutilis einen Plan modelliert und wie Sie das Ergebnis lesen. Die Haushalte, Salden und Outcomes darin sind für den Unterricht erfunden. Nichts hiervon ist Finanz-, Anlage-, Steuer- oder Rechtsberatung und keine Empfehlung, etwas zu kaufen, zu verkaufen oder zu halten. Ein Modell kann Ihre Umstände nicht kennen — prüfen Sie alles, was Sie aus einer Lektion mitnehmen, an Ihrer eigenen Situation und, wo es darauf ankommt, mit einer qualifizierten Fachperson.</p></blockquote><p class="lesson-privacy-link"><small><a href="/designer-site/privacy">Privacy</a></small></p></div>
+      </section>
+      <div class="lesson-split-gutter">
+        <div class="lesson-split-handle" role="separator" aria-orientation="vertical" aria-label="Resize lesson and app panes" tabindex="0"></div>
+        <div class="lesson-split-pill"><button class="lesson-split-widen" type="button" data-widen="app" data-label-widen="Show the app full width" data-label-restore="Show the lesson and the app side by side" title="Show the app full width" aria-label="Show the app full width"><span class="lesson-split-caret"></span></button><button class="lesson-split-widen" type="button" data-widen="lesson" data-label-widen="Show the lesson full width" data-label-restore="Show the lesson and the app side by side" title="Show the lesson full width" aria-label="Show the lesson full width"><span class="lesson-split-caret"></span></button></div>
+      </div>
+      <section class="app-pane">
+        <p class="canvas-omitted muted">The interactive plan is not in this copy.</p>
+      </section>
+    </div>
+  </body>
+</html>

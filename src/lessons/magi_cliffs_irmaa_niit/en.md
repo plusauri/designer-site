@@ -109,6 +109,8 @@ MAGI feeds:
 vary by year and [[term:fid]]; match the **row labels and the AGI = MAGI story**, not the exact figures. The
 state statement below is context only for this lesson.*
 
+[[jump:magi|output__forecaster__forecaster.forecast-detail__taxes__taxes.federal-statement__line.tax.magi]]
+
 ---
 
 ## IRMAA, a premium cliff
@@ -162,6 +164,8 @@ confirm the two **Medicare** lines and **IRMAA (Medicare surcharge)** appear on 
 table, while **Income tax** stays a separate red tax line. Figures are illustrative — match the
 **labels and placement**, not the exact dollars.*
 
+[[jump:surcharge|output__forecaster__forecaster.forecast-detail__cf-table__line.cf.irmaa-surcharge]]
+
 ---
 
 ## NIIT and Additional Medicare
@@ -176,6 +180,8 @@ tax, are explicit lines on the federal statement, and the others get a short not
   Social Security provisional-income thresholds).
 - Base Medicare **1.45%** remains its own line; the 0.9% is **additional** and explicit.
 
+[[jump:additional-medicare|output__forecaster__forecaster.forecast-detail__taxes__taxes.federal-statement__line.tax.additional-medicare]]
+
 This sample’s income is mostly **retirement** distributions, so Additional Medicare may be **$0**
 while NIIT and IRMAA still matter — that contrast is intentional.
 
@@ -186,6 +192,8 @@ while NIIT and IRMAA still matter — that contrast is intentional.
 - Sparse NII: LTCG, dividends, interest, [[term:passive-income]] — not wages, not traditional [[term:ira]]
   distributions, not Social Security.
 - Explicit **Net investment income tax (3.8%)** line on the federal statement.
+
+[[jump:niit|output__forecaster__forecaster.forecast-detail__taxes__taxes.federal-statement__line.tax.niit]]
 
 <aside class="lesson-did-you-know">
 <p class="lesson-did-you-know-label">Did you know?</p>

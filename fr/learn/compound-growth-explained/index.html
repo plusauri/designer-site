@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compound Growth Explained: The 3% to 6% Return Bend — Tutilis</title>
+    <meta name="description" content="Compound growth and the 3%→6% bend: Growth Calculator and multi-year paths. Canvas uses Springfield Baseline as scenery.">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://www.plusauri.com/learn/compound-growth-explained" rel="canonical">
+    <meta content="website" property="og:type">
+    <meta content="Plusauri" property="og:site_name">
+    <meta content="Compound Growth Explained: The 3% to 6% Return Bend — Tutilis" property="og:title">
+    <meta content="Compound growth and the 3%→6% bend: Growth Calculator and multi-year paths. Canvas uses Springfield Baseline as scenery." property="og:description">
+    <meta content="https://www.plusauri.com/learn/compound-growth-explained" property="og:url">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
+<script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
+    <script src="/designer-site/static/lang.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
+    <link href="/designer-site/static/site.css" rel="stylesheet">
+    <script src="/designer-site/static/lesson-split.js" defer="defer"></script>
+    <script src="/designer-site/static/trial-callout.js" defer="defer"></script>
+    <script src="/designer-site/static/community-join.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/katex/katex.min.css" rel="stylesheet">
+    <script src="/designer-site/static/vendor/katex/katex.min.js" defer="defer"></script>
+    <script src="/designer-site/static/vendor/katex/contrib/auto-render.min.js" defer="defer" onload="renderMathInElement(document.body,{delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true},{left:'$$',right:'$$',display:true}],throwOnError:false});"></script>
+  </head>
+  <body class="lesson-split-body" data-prose-lang="fr" data-lang="fr">
+    <header class="lesson-split-header" id="lesson-split-header">
+      <nav>
+        <ul>
+          <li><strong><a href="/designer-site/">Plusauri</a></strong></li>
+          <li><a href="/designer-site/learn">Learning Center</a></li>
+          <li><a href="/designer-site/reference">Reference</a></li>
+        </ul>
+        <ul>
+          <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr" selected="selected">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
+          <li><button class="lesson-header-collapse" type="button" aria-expanded="true" aria-controls="lesson-split-header" title="Hide header" aria-label="Hide header">▾</button></li>
+        </ul>
+      </nav>
+    </header>
+<button class="lesson-header-expand" type="button" id="lesson-header-expand" hidden="hidden" title="Show header" aria-label="Show header">▴ Plusauri · Learning Center</button><script type="application/json" id="lesson-canvas-dossiers">{"primary":"springfield_baseline","alternates":[],"order":["springfield_baseline"]}</script>
+    <div class="lesson-split">
+      <section class="lesson-pane"><a class="trial-callout trial-callout-tech" href="/designer-site/try" data-trial-callout data-variant="tech"><img src="/designer-site/static/images/trial/trial-tech.png" alt="14-Day Free Trial: Your Dossier on Your Desktop" width="459" height="145" decoding="async"></a>
+        <div class="lesson-prose" id="lesson-prose" data-next-key="KeyJ" data-previous-key="KeyK" data-lesson-id="exponential_growth" data-lesson-slug="compound-growth-explained" data-loaded-lang="fr"><h1>Croissance composée</h1>
+<div class="lesson-intro-card"><img class="lesson-media-ref ui-std-preview-wide" src="/designer-site/static/images/lessons/intro-cards/exponential-growth.webp" alt="Art deco poster titled Exponential growth. A curve is labeled Slow bend where it is gentle and Steep curve where it rises. The narrator says the slow bend becomes a steep one. One panel quotes Federal Reserve Education, Growing Money: compound interest, or compounding, means that interest is earned on the amount you initially deposit, what we call the principal, and on the interest you earn. The banner says small rate gaps over long horizons." data-media-id="intro-card-exponential-growth" loading="lazy" decoding="async" /></div>
+<details class="lesson-intro-chrome" data-intro-chrome="1" data-lesson-presentation="Reading"><summary><span class="lesson-intro-chrome-summary-title">Comment fonctionne cette page</span></summary><div class="lesson-intro-chrome-body"><blockquote class="lesson-shared lesson-learning-preference" cite="learning-center:learning-preference"><p>New to the Learning Center, or want a map of the panels? Start with a tour: <a href="/designer-site/learn/getting-started-planning-software-tour"><strong>Reading Lesson (Getting Around)</strong></a> or <a href="/designer-site/learn/getting-started-video-tutorial"><strong>Screencast Lesson (Getting Around)</strong></a> — both walk through Tutilis next to a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">plan actif</span><span class="lesson-term-tip" role="tooltip">Le produit Tutilis en fonctionnement à côté de cette leçon — navigation, Vue d'ensemble, Prévisionniste, outils et plus encore — chargé avec un exemple pédagogique. Un dossier contient les données du plan ; le plan en direct est l'ensemble du produit avec un dossier d'exemple déjà ouvert pour que vous puissiez explorer. Sur le web, les exemples pédagogiques ne sont pas modifiables comme le sera votre propre dossier dans l'application complète.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> (to the right on a desktop-width screen, or below when stacked on a tablet).</p></blockquote><blockquote class="lesson-shared lesson-orientation" cite="learning-center:orientation"><p>This page — <strong>Exponential growth</strong> — includes a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live sample plan</span><span class="lesson-term-tip" role="tooltip">Le produit Tutilis en fonctionnement à côté de cette leçon — navigation, Vue d'ensemble, Prévisionniste, outils et plus encore — chargé avec un exemple pédagogique. Un dossier contient les données du plan ; le plan en direct est l'ensemble du produit avec un dossier d'exemple déjà ouvert pour que vous puissiez explorer. Sur le web, les exemples pédagogiques ne sont pas modifiables comme le sera votre propre dossier dans l'application complète.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to the text. On a wide screen it usually sits <strong>to the right</strong> of the text; on a tablet it usually sits <strong>below</strong>. Use the text for the walk-through, then try the same ideas in the live plan.</p></blockquote><blockquote class="lesson-shared lesson-product-relationship" cite="learning-center:product-relationship"><p>The <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">plan actif</span><span class="lesson-term-tip" role="tooltip">Le produit Tutilis en fonctionnement à côté de cette leçon — navigation, Vue d'ensemble, Prévisionniste, outils et plus encore — chargé avec un exemple pédagogique. Un dossier contient les données du plan ; le plan en direct est l'ensemble du produit avec un dossier d'exemple déjà ouvert pour que vous puissiez explorer. Sur le web, les exemples pédagogiques ne sont pas modifiables comme le sera votre propre dossier dans l'application complète.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to this page — usually <strong>to the right</strong> on a wide screen, or <strong>below</strong> on a tablet — is <strong>Tutilis</strong> running a teaching sample: the same <strong>financial planning product</strong> available as a desktop application (early preview). A <span class="lesson-term" data-term="dossier" tabindex="0"><span class="lesson-term-pill">dossier</span><span class="lesson-term-tip" role="tooltip">Votre plan complet dans Tutilis : les personnes du ménage, ce qu'elles possèdent et doivent, les flux de trésorerie entrants et sortants, le cadre fiscal et les hypothèses de planification. Un dossier correspond à une situation complète telle que le produit la modélise.<a class="lesson-term-more" href="/designer-site/glossary/dossier">Full entry →</a></span></span> is the plan data; the live plan is the full product (navigation, Bird's Eye, Forecaster, tools) with a sample dossier already open so you can try the panels. <a href="/designer-site/pricing">See planned pricing</a>. On the web, Learning Center samples are <strong>not editable</strong> the way your own dossier will be in the full app. Your own household goes in the Tutilis desktop app — <a href="/designer-site/learn#intro-video-heading">the Learning Center front page has a short clip of that</a>.</p></blockquote></div></details>
+<div class="lesson-accordion" data-sections="8" style="--n:8"><h2 id="overview" class="lesson-section-head" style="--i:0"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="overview--body"><span class="lesson-section-title">Vue d’ensemble</span></button></h2><div class="lesson-section-body" id="overview--body" role="region" aria-labelledby="overview" hidden>
+<!---
+  GENERATED lesson shell — not learner-facing meta. Regenerated chrome is
+  outside α/ω; teaching prose lives only in the protect block.
+  outline-id: foundations.time_value.compound_growth
+  outline-path: Foundations › Time value of money › Compound / exponential growth
+  document-id: exponential_growth
+  locale: fr
+  lifecycle: TranslationComplete
+  status: Shipped
+  lesson-status: PortedFromPublic
+  host-hint: ProsePrimary
+  intent: Full French of the current English lesson. Same image ids and anchors.
+  port-source: dossiers/exponential_growth.md
+-->
+<!--- α <lesson_body> -->
+<p>La croissance composée est la courbe lente qui devient raide. Quelques points de pourcentage de
+<strong>rendement moyen</strong>, tenus pendant des décennies, changent la forme d'un plan plus que presque
+n'importe quelle surprise d'une seule année.</p>
+<p>Cette leçon utilise le foyer <strong>Springfield</strong> comme décor, pour que le plan actif ait de vrais
+comptes et de vraies années. Vous n'avez pas encore besoin de toute leur histoire. Si la carte de
+l'application est encore nouvelle, prenez d'abord
+<a href="/designer-site/learn/getting-started-planning-software-tour">S'orienter dans l'application</a> et revenez.</p>
+<p>Le plan actif à droite est <strong>Springfield Baseline</strong> (<code>springfield_baseline</code>).</p>
+</div>
+<h2 id="what-you-will-learn" class="lesson-section-head" style="--i:1"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-you-will-learn--body"><span class="lesson-section-title">Ce que vous allez apprendre</span></button></h2><div class="lesson-section-body" id="what-you-will-learn--body" role="region" aria-labelledby="what-you-will-learn" hidden>
+<aside class="lesson-plan">
+<p class="lesson-plan-label">Leçon du jour</p>
+<div class="lesson-plan-body">
+<p>À la fin de cette leçon, vous devriez pouvoir répondre à ces questions. Chacune renvoie à la
+section qui y répond.</p>
+<ol>
+<li><strong>Qu'est-ce que la croissance composée, et pourquoi une petite différence de taux compte-t-elle
+autant sur des décennies ?</strong> Voir <a href="#the-idea-in-one-picture">L'idée en une image</a>.</li>
+<li><strong>De combien le total final grossit-il lorsque j'augmente le taux de croissance ?</strong> Voir
+<a href="#the-growth-tool-rate-time">L'outil de croissance</a>.</li>
+<li><strong>Pourquoi deux graphiques de croissance peuvent-ils se ressembler alors que leurs totaux sont
+très différents ?</strong> Voir <a href="#the-growth-tool-rate-time">L'outil de croissance</a>.</li>
+<li><strong>Comment la même croissance apparaît-elle sur une position réelle du plan ?</strong> Voir
+<a href="#sparklines-on-real-holdings">Courbes miniatures sur de vraies positions</a>.</li>
+<li><strong>Comment lire des milliers de trajectoires de marché sans me noyer dans les lignes ?</strong> Voir
+<a href="#endings-not-path-spaghetti">Les fins, pas le spaghetti de trajectoires</a>.</li>
+</ol>
+</div>
+</aside>
+</div>
+<h2 id="the-idea-in-one-picture" class="lesson-section-head" style="--i:2"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="the-idea-in-one-picture--body"><span class="lesson-section-title">L'idée en une image</span></button></h2><div class="lesson-section-body" id="the-idea-in-one-picture--body" role="region" aria-labelledby="the-idea-in-one-picture" hidden>
+<p>Supposez que vous investissiez une somme d'argent et que vous la laissiez tranquille. Chaque année,
+le <strong>solde</strong> (pas seulement le <span class="lesson-term" data-term="principal" tabindex="0"><span class="lesson-term-pill">principal</span><span class="lesson-term-tip" role="tooltip">Le <strong>montant lui-même</strong> — l'argent prêté, emprunté ou investi, par opposition aux intérêts ou à la croissance qui s'y ajoutent. Dans une mensualité de prêt immobilier, c'est la part qui réduit réellement la dette ; au début, l'essentiel de la mensualité n'est pas du capital. (En anglais *principal*, à ne pas confondre avec *principle* — ni avec une personne.)<a class="lesson-term-more" href="/designer-site/glossary/principal">Full entry →</a></span></span> d'origine) croît à peu près du même <em>taux</em>. C'est
+la <strong><span class="lesson-term" data-term="compounding" tabindex="0"><span class="lesson-term-pill">capitalisation composée</span><span class="lesson-term-tip" role="tooltip">Une croissance <strong>qui s'ajoute à la croissance passée</strong> — le rendement de cette année porte sur les gains de l'an dernier en plus du capital initial. C'est pourquoi la courbe d'un plan s'incurve vers le haut au lieu de monter en ligne droite, et pourquoi les premières années comptent plus que leur taille ne le laisse penser.<a class="lesson-term-more" href="/designer-site/glossary/compounding">Full entry →</a></span></span></strong> : la croissance de l'an dernier devient une partie de la base de cette
+année.</p>
+<p>Sur un graphique des dollars en fonction des années, une croissance faible a l'air presque linéaire
+pendant longtemps, puis s'incurve discrètement. Augmentez le taux, et la courbe ne devient pas
+seulement « un peu plus haute au début ». Sur un long horizon, <strong>l'écart entre les trajectoires
+explose</strong>. C'est pourquoi, dans la rhétorique financière, on appelle la capitalisation la
+« huitième merveille » : de petites différences de taux, un long temps, une grande différence en
+dollars.</p>
+<aside class="lesson-did-you-know" data-cast="futuristic" style="--cast-art: url('/designer-site/static/images/learn/cast/futuristic/did-you-know.webp')">
+<p class="lesson-did-you-know-label">Le saviez-vous ?</p>
+<div class="lesson-did-you-know-body">
+<p>Sur quarante ans, un dollar qui croît de 3 % par an devient environ <strong>$3.26</strong>. À 7 %, le même
+dollar devient environ <strong>$15</strong>. Le taux est un peu plus du double, et l'argent à la fin est plus
+de quatre fois plus élevé.</p>
+</div>
+</aside>
+<p><strong>Honnêteté :</strong> les marchés oscillent. La courbe lisse est la trajectoire <strong>sur la tendance /
+typique</strong> (ce que le calcul de croissance du produit montre souvent comme une ligne de moyenne
+géométrique). Les trajectoires réelles zigzag autour d'elle. La leçon ici est la <strong>forme de la
+capitalisation</strong>, pas la promesse d'un parcours lisse.</p>
+<p>Les trois sections qui suivent sont la même courbe à trois endroits du produit, du plus propre au
+plus encombré : le <span class="lesson-nav-ref lesson-nav-ref--growth-calculator lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/growth-calculator.png" alt="Growth calculator" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Calculateur de croissance</span><span class="lesson-term-tip" role="tooltip">La boîte de dialogue qu'ouvre l'outil <strong>Croissance</strong> de la barre du bas. Un brouillon : saisissez un montant, une moyenne et une volatilité, et une plage d'années, puis lisez le total projeté. Il ne lit rien du plan et n'y écrit rien.</span></span> en bac à sable, où vous tapez le taux ; une <strong>vraie
+position</strong>, où le produit le fournit ; et le <strong>plan entier</strong>, où les dépenses et la chance des
+marchés sont aussi dans l'image.</p>
+</div>
+<h2 id="the-growth-tool-rate-time" class="lesson-section-head" style="--i:3"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="the-growth-tool-rate-time--body"><span class="lesson-section-title">L'outil de croissance : taux × temps</span></button></h2><div class="lesson-section-body" id="the-growth-tool-rate-time--body" role="region" aria-labelledby="the-growth-tool-rate-time" hidden>
+<p>Sur le plan actif, ouvrez la <strong>barre d'outils du bas</strong>
+(<span class="lesson-nav-ref lesson-nav-ref--fx lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/fx.png" alt="FX" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">FX</span><span class="lesson-term-tip" role="tooltip">Un <strong>outil de la barre du bas</strong>. Dans quelle devise l'écran s'affiche, et les taux derrière toute conversion. Lecture seule ; les taux s'éditent sous Hypothèses → Devise.</span></span> · <span class="lesson-nav-ref lesson-nav-ref--growth lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/growth-calculator.png" alt="Growth" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Croissance</span><span class="lesson-term-tip" role="tooltip">Un <strong>outil de la barre du bas</strong>. Calculateur de croissance brouillon — projeter un montant sous votre propre moyenne et volatilité. Local seulement ; n'écrit pas le plan.</span></span> · <span class="lesson-nav-ref lesson-nav-ref--annuity lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/annuity.png" alt="Annuity" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Rente</span><span class="lesson-term-tip" role="tooltip">Un <strong>outil de la barre du bas</strong>. Explorateur de rente (style SPIA). Éducatif seulement — pas une cotation d'assureur.</span></span> · <span class="lesson-nav-ref lesson-nav-ref--peek lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/peek.png" alt="Peek" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Aperçu</span><span class="lesson-term-tip" role="tooltip">Un <strong>outil de la barre du bas</strong>. Un menu de trois vues de Forecast Detail — <strong>Charts</strong>, <strong>Tables</strong> et <strong>Pairs</strong> — chacune ouverte dans une modale sans changer les chips du panneau principal.</span></span>)
+et choisissez <span class="lesson-nav-ref lesson-nav-ref--growth lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/growth-calculator.png" alt="Growth" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Croissance</span><span class="lesson-term-tip" role="tooltip">Un <strong>outil de la barre du bas</strong>. Calculateur de croissance brouillon — projeter un montant sous votre propre moyenne et volatilité. Local seulement ; n'écrit pas le plan.</span></span>. Cela ouvre le <span class="lesson-nav-ref lesson-nav-ref--growth-calculator lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/growth-calculator.png" alt="Growth calculator" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Calculateur de croissance</span><span class="lesson-term-tip" role="tooltip">La boîte de dialogue qu'ouvre l'outil <strong>Croissance</strong> de la barre du bas. Un brouillon : saisissez un montant, une moyenne et une volatilité, et une plage d'années, puis lisez le total projeté. Il ne lit rien du plan et n'y écrit rien.</span></span> : choisissez un montant, un
+taux de croissance et une plage d'années, et lisez le <strong>total projeté</strong> sur la trajectoire sur la
+tendance. Dans <strong>Croître jusqu'au total</strong>, le montant est un chiffre <em>chaque année</em>, de sorte que
+le total est tout le flux capitalisé — et non un seul dépôt laissé tranquille.</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Où le trouver dans l'application</span> <a class="lesson-jump-term" href="/designer-site/glossary/compounding">capitalisation composée</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Où il apparaît dans la prévision</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__growth-calculator" title="Y aller" aria-label="Y aller: Croissance"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__growth-calculator.png" width="90" height="32" alt="Croissance" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button><p class="lesson-jump-note">Fait croître un montant annuel sur une plage d'années, pour voir les intérêts composés à l'œuvre.</p></li></ul></div></aside>
+<p>Les nombres ici sont des hypothèses que vous tapez, plutôt que les positions actives de
+Springfield, et c'est le point : le <span class="lesson-nav-ref lesson-nav-ref--growth-calculator lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/growth-calculator.png" alt="Growth calculator" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Calculateur de croissance</span><span class="lesson-term-tip" role="tooltip">La boîte de dialogue qu'ouvre l'outil <strong>Croissance</strong> de la barre du bas. Un brouillon : saisissez un montant, une moyenne et une volatilité, et une plage d'années, puis lisez le total projeté. Il ne lit rien du plan et n'y écrit rien.</span></span> est un bac à sable, donc il isole
+<strong>taux × temps</strong> sans impôts, sans dépenses et sans rééquilibrage sur le chemin, et la seule chose
+qui peut faire bouger la réponse est le taux.</p>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="try-this-the-whole-point-of-the-lesson">À essayer — tout l'enjeu de la leçon</h3></summary><div class="lesson-subsection-body">
+<ol>
+<li>Réglez un montant annuel simple (par exemple $1,000) et une plage d'années de plusieurs
+décennies.</li>
+<li>Lancez à environ <strong>3 %</strong> de croissance moyenne. Notez le chiffre de fin.</li>
+<li>Ne changez que le taux, vers environ <strong>6 à 7 %</strong>. Regardez à quel point la fin est plus grande.
+Lisez le <strong>nombre</strong>, pas la courbe. Ce n'est pas une histoire linéaire du genre « doublez le
+taux, doublez les dollars » sur de longs horizons ; la capitalisation n'est pas linéaire.</li>
+<li>Essayez facultativement <strong>0 %</strong> (valeur faciale plate) face à un taux positif modéré, pour que
+la forme de la courbe soit évidente.</li>
+</ol>
+<p>⚠️ <strong>Lisez l'axe des y avant de lire la forme.</strong> Les deux images ci-dessous sont la même commande
+à deux taux, et les flèches finissent à peu près à la même hauteur sur la page. Chaque graphique
+met son <strong>axe des y à l'échelle de ses propres nombres</strong>. Lisez les libellés de l'axe et le total
+projeté sur chaque image. Ce sont eux la comparaison. La silhouette cache la capitalisation.</p>
+<div class="lesson-img-stack">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated" src="/designer-site/static/images/lessons/generated/exponential-growth-calc-3pct.fr.png" alt="Growth calculator at 3% mean growth: $1,000 a year over 2027-2070" data-media-id="exponential-growth-calc-3pct" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption"><strong>Moyenne de 3 %</strong> — $1,000 par an. Lisez le total projeté et le sommet de l'axe des y.</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated" src="/designer-site/static/images/lessons/generated/exponential-growth-calc-7pct.fr.png" alt="Growth calculator at 7% mean growth: the same $1,000 a year over the same years" data-media-id="exponential-growth-calc-7pct" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption"><strong>Moyenne de 7 %</strong> — les mêmes $1,000 par an sur les mêmes années. L'axe et le total sont tous les deux plus grands. Lisez-les sur l'image.</p>
+</div>
+<details class="lesson-math">
+<summary class="lesson-math-label">Pour les amateurs de maths — la formule de capitalisation et la règle de 72</summary>
+<div class="lesson-math-body">
+<p>Un capital <span class="math">\(P\)</span> qui croît au taux <span class="math">\(r\)</span> pendant <span class="math">\(n\)</span> années devient</p>
+<p><span class="math">\[
+FV = P\,(1+r)^n
+\]</span></p>
+<p>L'exposant est la raison pour laquelle l'écart explose. À <span class="math">\(n = 40\)</span>, <span class="math">\(1.03^{40} \approx 3.26\)</span> tandis que
+<span class="math">\(1.07^{40} \approx 14.97\)</span>.</p>
+<p><strong>La règle de 72.</strong> L'argent double lorsque <span class="math">\((1+r)^n = 2\)</span>, donc <span class="math">\(n = \ln 2 / \ln(1+r)\)</span>. Pour les petits taux,
+<span class="math">\(\ln(1+r) \approx r\)</span>, ce qui donne un temps de doublement d'environ <span class="math">\(72 / (\text{taux en \%})\)</span> années.
+C'est environ 24 ans à 3 % et environ 10 ans à 7 %, de sorte que sur quarante ans le dollar à 3 % double moins de
+deux fois et le dollar à 7 % double presque quatre fois.</p>
+</div>
+</details>
+</div></details>
+
+</div>
+<h2 id="sparklines-on-real-holdings" class="lesson-section-head" style="--i:4"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="sparklines-on-real-holdings--body"><span class="lesson-section-title">Courbes miniatures sur de vraies positions</span></button></h2><div class="lesson-section-body" id="sparklines-on-real-holdings--body" role="region" aria-labelledby="sparklines-on-real-holdings" hidden>
+<p>Dans <span class="lesson-nav-ref lesson-nav-ref--birds-eye lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/birds-eye.png" alt="Bird's Eye" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Vue d'ensemble</span><span class="lesson-term-tip" role="tooltip">Quand vous n'êtes <strong>pas</strong> sur Dossier, cette commande est dans la <strong>barre d'outils du haut</strong>. Elle ouvre une vue du foyer en <strong>modale</strong> — personnes, actifs et passifs, flux de trésorerie — sans quitter la zone en cours. Masquée sur Dossier, car la même vue est déjà en haut de cette zone.</span></span>, avec <strong>Holding</strong> sélectionné (ou <span class="lesson-nav-ref lesson-nav-ref--dossier lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/dossier.png" alt="Dossier" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Dossier</span><span class="lesson-term-tip" role="tooltip">Une <strong>zone du rail principal</strong>. Là où le plan du foyer est <strong>défini</strong> — personnes, actifs et passifs, flux de trésorerie. Dans ces leçons vous consultez surtout ; sur le bureau vous saisissez et tenez votre propre plan.</span></span> → Actifs), les positions
+peuvent montrer une <strong>courbe miniature de croissance</strong> : une trajectoire <span class="lesson-term" data-term="median" tabindex="0"><span class="lesson-term-pill">médiane</span><span class="lesson-term-tip" role="tooltip">Le résultat <strong>du milieu</strong> — moitié au-dessus, moitié en dessous — par opposition à la moyenne, que quelques résultats énormes peuvent tirer vers le haut. Sur de longs horizons, les deux divergent fortement, et c'est la médiane qui répond à la question « à quoi ressemble une trajectoire typique ? »<a class="lesson-term-more" href="/designer-site/glossary/median">Full entry →</a></span></span> avec un
+<strong>cône de risque</strong>. La <strong>ligne</strong> est l'idée de capitalisation appliquée au <span class="lesson-term" data-term="mu" tabindex="0"><span class="lesson-term-pill">μ</span><span class="lesson-term-tip" role="tooltip">La lettre grecque que le produit utilise pour un <strong>rendement moyen</strong> supposé — en clair, à peu près ce qu'un placement rapporte une année typique. C'est une <strong>donnée d'entrée</strong> de la projection plutôt qu'un résultat, et elle ne va jamais seule : μ associé à <strong>σ</strong> constitue toute l'hypothèse de croissance, car un rendement moyen ne dit rien de l'ampleur des secousses.<a class="lesson-term-more" href="/designer-site/glossary/mu">Full entry →</a></span></span> supposé de
+cet élément ; la <strong>bande</strong> montre l'étalement issu de <span class="lesson-term" data-term="sigma" tabindex="0"><span class="lesson-term-pill">σ</span><span class="lesson-term-tip" role="tooltip">La lettre grecque que le produit utilise pour la <strong>volatilité</strong> — l'ampleur de la dispersion des rendements autour de leur moyenne. Un σ seul sur l'axe d'un graphique mesure le risque, pas le rendement : deux positions peuvent se situer à la même hauteur (même <strong>μ</strong>) et se vivre de façon complètement différente. Un σ plus élevé fait aussi passer la croissance réellement capitalisée sous la moyenne annoncée.<a class="lesson-term-more" href="/designer-site/glossary/sigma">Full entry →</a></span></span>. <span class="lesson-term" data-term="hover" tabindex="0"><span class="lesson-term-pill">Survolez</span><span class="lesson-term-tip" role="tooltip">Sur un ordinateur de bureau ou portable, placez le pointeur sur une ligne, une pastille ou une commande pour ouvrir une fiche détaillée — attributs, montants et souvent un petit graphique de trajectoire. Nous mettons délibérément beaucoup de détails pédagogiques dans ces fiches. Le survol nécessite un pointeur, il ne fonctionne donc pas sur tablette ou téléphone (un appui peut afficher une vue simplifiée, ou rien). <strong>Maintenez Alt si les infobulles deviennent gênantes</strong> — de nombreux survols du produit restent fermés tant que Alt est enfoncée, pour que vous puissiez déplacer le pointeur librement.<a class="lesson-term-more" href="/designer-site/glossary/hover">Full entry →</a></span></span> une
+position — par exemple une position <strong>Actions US</strong> telle que Target Date Equity — pour les
+hypothèses et le détail du cône.</p>
+<p>Vous ne « prouvez » pas ici les rendements de Springfield. Vous voyez que <strong>chaque ligne
+pluriannuelle du plan est bâtie dans le même langage de croissance</strong> que le
+<span class="lesson-nav-ref lesson-nav-ref--growth-calculator lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/growth-calculator.png" alt="Growth calculator" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Calculateur de croissance</span><span class="lesson-term-tip" role="tooltip">La boîte de dialogue qu'ouvre l'outil <strong>Croissance</strong> de la barre du bas. Un brouillon : saisissez un montant, une moyenne et une volatilité, et une plage d'années, puis lisez le total projeté. Il ne lit rien du plan et n'y écrit rien.</span></span> utilise au grand jour. La différence est de savoir qui fournit le taux :
+dans le calculateur, vous l'avez tapé ; ici, le produit l'a résolu.</p>
+<p><img class="lesson-media-ref ui-hover-card lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/exponential-growth-sparkline-cone.fr.png" alt="Bird's Eye Holding mode: US Equity (Target Date Equity) hover with growth path and 25–75% cone" data-media-id="exponential-growth-sparkline-cone" data-where="output__birds-eye__birds-eye.mode.holdings__birds-eye.assets-liabilities" data-canvas-dossier="springfield_baseline" data-pick="2027,0" data-hover-tip="Target Date Equity" data-jump-tip="Y aller" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption"><span class="lesson-nav-path"><span class="lesson-nav-ref lesson-nav-ref--birds-eye lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/birds-eye.png" alt="Bird's Eye" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Vue d'ensemble</span><span class="lesson-term-tip" role="tooltip">Quand vous n'êtes <strong>pas</strong> sur Dossier, cette commande est dans la <strong>barre d'outils du haut</strong>. Elle ouvre une vue du foyer en <strong>modale</strong> — personnes, actifs et passifs, flux de trésorerie — sans quitter la zone en cours. Masquée sur Dossier, car la même vue est déjà en haut de cette zone.</span></span><span class="lesson-nav-path-sep" aria-hidden="true">→</span><span class="lesson-nav-ref lesson-nav-ref--holding lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--chip" src="/designer-site/static/images/lessons/nav-refs/holding.png" alt="Holding" loading="lazy" decoding="async" /><span class="lesson-term-tip" role="tooltip">Un <strong>mode Vue d'ensemble / Actifs &amp; passifs</strong>. Déplie les comptes en <strong>holdings</strong>. Passez en Account pour les seuls totaux, ou Cash Flow pour inclure les flux récurrents.</span></span></span>, survol d'une position Actions US : trajectoire médiane plus un cône de risque jusqu'à l'horizon du plan — capitalisation avec incertitude, et non une seule ligne.</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Où le trouver dans l'application</span> <a class="lesson-jump-term" href="/designer-site/glossary/compounding">capitalisation composée</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Où il apparaît dans la prévision</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__birds-eye__birds-eye.mode.holdings__birds-eye.assets-liabilities__line.birds-eye.holding-sparkline" title="Y aller" aria-label="Y aller: Vue d'ensemble → Titre → Actifs et passifs → La mini-courbe de croissance d'une position"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__birds-eye__birds-eye.mode.holdings__birds-eye.assets-liabilities__line.birds-eye.holding-sparkline.png" width="583" height="32" alt="Vue d'ensemble → Titre → Actifs et passifs → La mini-courbe de croissance d'une position" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+</div>
+<h2 id="endings-not-path-spaghetti" class="lesson-section-head" style="--i:5"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="endings-not-path-spaghetti--body"><span class="lesson-section-title">Les fins, pas le spaghetti de trajectoires</span></button></h2><div class="lesson-section-body" id="endings-not-path-spaghetti--body" role="region" aria-labelledby="endings-not-path-spaghetti" hidden>
+<p>D'autres outils de planification montrent souvent <strong>toutes les trajectoires de scénario</strong> comme des
+lignes depuis l'<strong>année de départ</strong> jusqu'à l'<strong>année finale</strong> — un éventail complet de voyages
+dans le temps. C'est une vue standard typique : chaque année de chaque trajectoire, tracée de bout
+en bout. C'est honnête sur la <span class="lesson-term" data-term="sequence-of-returns" tabindex="0"><span class="lesson-term-pill">séquence des rendements</span><span class="lesson-term-tip" role="tooltip">L'<strong>ordre</strong> dans lequel arrivent les bonnes et les mauvaises années. Deux plans aux rendements moyens identiques peuvent aboutir à des résultats très différents si l'un subit ses pertes tôt, pendant que l'argent est retiré — vendre dans une baisse supprime des parts qui ne seront plus là pour la reprise. C'est pourquoi le risque de retraite ne se résume pas à une moyenne, et pourquoi les années qui entourent le jour où vous cessez de travailler pèsent plus que leur nombre ne le laisse penser.<a class="lesson-term-more" href="/designer-site/glossary/sequence-of-returns">Full entry →</a></span></span>, mais facile de s'y noyer dans l'encre.</p>
+<p><strong>C'est la même idée, mais en ne montrant que là où le patrimoine net aboutit cette dernière
+année.</strong> Le produit l'appelle une <strong>distribution du patrimoine net</strong> — un <strong>diagramme de
+distribution</strong> (ou un <strong>histogramme</strong>) :</p>
+<ul>
+<li>Au lieu de tracer chaque année de chaque trajectoire, il ne garde <strong>que la valeur finale</strong> de
+chaque trajectoire la <strong>dernière année</strong>.</li>
+<li>Ces fins forment un nuage / un histogramme : combien de trajectoires atterrissent pauvres,
+typiques ou riches à l'horizon.</li>
+<li>Les quartiles, <span class="lesson-term" data-term="gmf" tabindex="0"><span class="lesson-term-pill">GMF ✦</span><span class="lesson-term-tip" role="tooltip">GMF ✦ (aussi FID 0 / GMF) est l'<strong>étoile polaire</strong> du produit — la trajectoire de prévision déterministe à moyenne géométrique qui vous sert de cap, et non un tirage Monte Carlo aléatoire ni le scénario « le plus probable ». Privilégiez-la pour une lecture stable, année par année, du plan. Changez-en lorsque vous voulez explorer d'autres scénarios ou trajectoires <strong>aléatoires</strong> dans le nuage multi-trajectoires. Le symbole ✦ correspond à la commande FID en direct (boussole / étoile polaire, pas une étoile de notation).<a class="lesson-term-more" href="/designer-site/glossary/gmf">Full entry →</a></span></span>, le min/max et le pourcentage de réussite siègent à côté de ce
+nuage, pour que vous lisiez l'étalement sans suivre des milliers de lignes.</li>
+</ul>
+<p>Donc : les autres outils montrent souvent <strong>le voyage</strong> ; ce graphique de résumé montre <strong>où les
+voyages finissent</strong>. Les deux sont de la capitalisation <strong>avec</strong> de la <span class="lesson-term" data-term="volatility" tabindex="0"><span class="lesson-term-pill">volatilité</span><span class="lesson-term-tip" role="tooltip">L'ampleur avec laquelle les rendements d'un placement <strong>fluctuent</strong> d'une année à l'autre, et non le fait qu'il monte ou baisse globalement. Notée <strong>σ (sigma)</strong> dans le produit. Deux placements peuvent avoir le même rendement moyen et se vivre de façon complètement différente — et une forte volatilité ramène la croissance réellement capitalisée en dessous de cette moyenne.<a class="lesson-term-more" href="/designer-site/glossary/volatility">Full entry →</a></span></span> et les
+flux de trésorerie du plan — la distribution n'est que la coupe en fin d'horizon.</p>
+<p>Ouvrez <span class="lesson-nav-ref lesson-nav-ref--forecaster lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/forecaster.png" alt="Forecaster" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Prévisionniste</span><span class="lesson-term-tip" role="tooltip">Une <strong>zone du rail principal</strong> avec deux rôles : (1) faire tourner le plan année par année et inspecter Forecast Detail, et (2) <strong>Simulation Summary</strong> — de nombreux chemins résumés en quelque chose comme une probabilité de succès.</span></span> → Résumé de simulation (après une simulation) pour le voir :</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/exponential-growth-nw-distribution.fr.png" alt="Simulation Summary: Net Worth Distribution histogram of ending outcomes" data-media-id="exponential-growth-nw-distribution" data-where="output__forecaster__forecaster.simulation-summary__simulation-summary.distribution" data-canvas-dossier="springfield_baseline" data-pick="2027,0" data-jump-tip="Y aller" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Distribution du patrimoine net — chaque marque est à peu près le patrimoine net <strong>final</strong> d'une trajectoire la dernière année (pas la trajectoire entière dans le temps). La masse rouge/orange près de zéro face au vert plus à droite est l'étalement des issues capitalisées sous les dépenses, les marchés et les hypothèses. La capitalisation produit aussi la trajectoire isolée loin à droite : au-delà de la rupture, l'axe est en échelle logarithmique — la légende du graphique dit elle-même à partir d'où — pour que cette trajectoire reste dans l'image sans aplatir tous les autres contre le bord gauche.</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Où le trouver dans l'application</span> <a class="lesson-jump-term" href="/designer-site/glossary/terminal-wealth">patrimoine final</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Où il apparaît dans la prévision</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__forecaster__forecaster.simulation-summary__simulation-summary.distribution__line.distribution.final-net-worth" title="Y aller" aria-label="Y aller: Prévisionniste → Résumé de simulation → Distribution → Patrimoine net final"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__forecaster__forecaster.simulation-summary__simulation-summary.distribution__line.distribution.final-net-worth.png" width="578" height="32" alt="Prévisionniste → Résumé de simulation → Distribution → Patrimoine net final" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+<p>Notez ce qui a été ajouté à chaque étape. Le <span class="lesson-nav-ref lesson-nav-ref--growth-calculator lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/growth-calculator.png" alt="Growth calculator" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Calculateur de croissance</span><span class="lesson-term-tip" role="tooltip">La boîte de dialogue qu'ouvre l'outil <strong>Croissance</strong> de la barre du bas. Un brouillon : saisissez un montant, une moyenne et une volatilité, et une plage d'années, puis lisez le total projeté. Il ne lit rien du plan et n'y écrit rien.</span></span> avait un taux et un
+horizon. La courbe miniature a ajouté un <strong>σ</strong>, de sorte qu'une ligne est devenue un cône. Ce
+graphique ajoute le reste du plan — dépenses, impôts, la séquence que les marchés se trouvent
+distribuer — de sorte que le cône devient un nuage de fins. C'est la même capitalisation sous les
+trois.</p>
+</div>
+<h2 id="what-to-take-away" class="lesson-section-head" style="--i:6"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-to-take-away--body"><span class="lesson-section-title">Ce qu'il faut retenir</span></button></h2><div class="lesson-section-body" id="what-to-take-away--body" role="region" aria-labelledby="what-to-take-away" hidden>
+<table>
+<thead>
+<tr><th>Idée</th><th>Sens simple</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Croissance composée</strong></td><td>La croissance s'applique à une base qui grandit, et pas seulement au dépôt d'origine.</td></tr>
+<tr><td><strong>Taux × temps</strong></td><td>De petits écarts de taux sur de longs horizons dominent la plupart des surprises d'une seule année.</td></tr>
+<tr><td><strong>Une ligne ou plusieurs</strong></td><td>Une seule ligne lisse est la façon la plus simple de voir la courbe. Ce n'est pas une prévision : les marchés réels vous donnent une fourchette, et le plan vous montre cette fourchette.</td></tr>
+<tr><td><strong>Trajectoires ou distribution</strong></td><td>Les éventails de trajectoires complets montrent chaque année de chaque scénario. Nous préférons vous montrer où ces scénarios <strong>aboutissent</strong>, sous forme de distribution : c'est la même information, sans l'encre.</td></tr>
+<tr><td><span class="lesson-nav-ref lesson-nav-ref--assumptions lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/assumptions.png" alt="Assumptions" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Hypothèses</span><span class="lesson-term-tip" role="tooltip">Une <strong>zone du rail principal</strong>. Les <strong>règles</strong> sous lesquelles tourne la prévision — croissance, impôts, mouvements, définition du succès, localité, devise. Lecture et écriture.</span></span></td><td>μ (et σ) sont des entrées du modèle — recherchées ou tapées — et non des garanties.</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="where-to-go-next" class="lesson-section-head" style="--i:7"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="where-to-go-next--body"><span class="lesson-section-title">Où aller ensuite</span></button></h2><div class="lesson-section-body" id="where-to-go-next--body" role="region" aria-labelledby="where-to-go-next" hidden>
+<table>
+<thead>
+<tr><th>Sujet</th><th>Leçon</th></tr>
+</thead>
+<tbody>
+<tr><td>Le nuage de points et les bandes</td><td><a href="/designer-site/learn/risk-vs-return-portfolio-chart">Risque et rendement</a></td></tr>
+<tr><td>Deux actifs nerveux, un parcours plus lisse</td><td><a href="/designer-site/learn/diversification-correlation">Diversification et corrélation</a></td></tr>
+<tr><td>La carte de l'application</td><td><a href="/designer-site/learn/getting-started-planning-software-tour">S'orienter dans l'application</a></td></tr>
+</tbody>
+</table>
+<p>Prenez ensuite <strong>Risque et rendement</strong> si le nuage de la dernière section est encore la partie
+peu familière : c'est le même étalement, dessiné comme un arbitrage plutôt que comme une fin.</p>
+<!--- ω <lesson_body> -->
+<!-- GENERATED host-hint: ProsePrimary — Prose primary — teaching left; canvas scenery or omitted. -->
+</div>
+</div>
+<details class="lesson-rebuild-by-hand"><summary><span class="lesson-rebuild-by-hand-summary-title">Reconstruire ce plan à la main</span></summary><div class="lesson-rebuild-by-hand-body"><p>Les cartes du canevas montrent les comptes et les flux. Voici les réglages qui vivent hors de toute carte, lus dans le plan lui-même, avec le libellé que porte chaque contrôle dans l'application. Une valeur marquée default est à laisser telle quelle.</p><table class="content-table">
+<thead>
+<tr>
+<th align="left">Setting</th>
+<th align="left">Springfield Baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2" align="center"><strong>Household</strong></td></tr>
+<tr>
+<td align="left">Planning region</td>
+<td align="left">United States (default)</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Homer (Primary)</td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1976</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">65</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">90</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Marge (Secondary)</td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1978</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">67</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">92</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Taxes</strong></td></tr>
+<tr>
+<td align="left">Tax regime</td>
+<td align="left">United States</td>
+</tr>
+<tr>
+<td align="left">Filing status</td>
+<td align="left">Married, filing jointly</td>
+</tr>
+<tr>
+<td align="left">State of residence</td>
+<td align="left">Ohio</td>
+</tr>
+<tr>
+<td align="left">First-year federal estimate</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">First-year state estimate</td>
+<td align="left">—</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Strategy</strong></td></tr>
+<tr>
+<td align="left">Residual withdrawal strategy</td>
+<td align="left">Pro-rata (default)</td>
+</tr>
+<tr>
+<td align="left">Roth conversions</td>
+<td align="left">Off</td>
+</tr>
+<tr>
+<td align="left">Definition of success</td>
+<td align="left">Liquidity crises allowed (default)</td>
+</tr>
+<tr>
+<td align="left">Glide path target</td>
+<td align="left">None (default)</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Advanced</strong></td></tr>
+<tr>
+<td align="left">Reporting inflation</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Cost of capital</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Growth assumptions</td>
+<td align="left">Growth overrides (default)</td>
+</tr>
+<tr>
+<td align="left">Currencies</td>
+<td align="left">Multiple currencies (default)</td>
+</tr>
+<tr>
+<td align="left">Default currency</td>
+<td align="left">USD (default)</td>
+</tr>
+<tr>
+<td align="left">Display currency</td>
+<td align="left">USD (default)</td>
+</tr>
+</tbody>
+</table>
+</div></details><div class="lesson-catalog-footer"><span class="lesson-region-badge" title="All regions"><span class="lesson-region-marker">🌐</span><span class="lesson-region-label muted">All regions</span></span><span class="lesson-tags"><span class="lesson-tags-label">Étiquettes</span><span class="learn-chip">baseline</span><span class="learn-chip">family-springfield</span><span class="learn-chip">tool-lesson</span><span class="learn-chip">fundamentals</span><span class="learn-chip">growth</span><span class="learn-chip">compounding</span></span></div><div class="community-invite"><a class="community-callout" href="https://community.plusauri.com" target="_blank" rel="noopener noreferrer" data-community-join="community-join" aria-haspopup="dialog"><img src="/designer-site/static/images/community/join-callout.jpg" alt="Join Our Community" width="392" height="229" decoding="async" loading="lazy"></a><dialog id="community-join" class="community-join" aria-labelledby="community-join-title"><article class="community-join-panel"><button type="button" class="community-join-close" data-community-join-close aria-label="Close" title="Close">×</button><h2 id="community-join-title">Join the Plusauri community</h2><form class="community-join-form" action="/designer-site/api/community/join" method="post" novalidate data-msg-invalid="That email address does not look right." data-msg-failed="Something went wrong. You can still join directly at community.plusauri.com." data-msg-sending="Sending…"><p class="community-join-lead">A forum of people planning their own retirement, asking questions and helping each other. Anyone can read it. Members can post, and get a note when someone answers.</p><fieldset class="community-join-modes"><legend>How would you like to take part?</legend><label class="community-join-mode community-join-mode-participant"><input type="radio" name="mode" value="Participant" checked><span class="community-join-mode-art" aria-hidden="true"></span><strong>Participant</strong><small>Ask questions, share what you have learned, join the conversation.</small></label><label class="community-join-mode community-join-mode-lurker"><input type="radio" name="mode" value="Lurker"><span class="community-join-mode-art" aria-hidden="true"></span><strong>Lurker</strong><small>No account needed. Get the highlights by email and read the forum whenever you like.</small></label></fieldset><div class="community-join-who"><label class="community-join-name">First name (optional)<input type="text" name="firstName" autocomplete="given-name" maxlength="80"></label><label class="community-join-email">Your email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com" maxlength="254"></label></div><fieldset class="community-join-stage"><legend>Which describes you best? (optional)</legend><label><input type="radio" name="stage" value="Building"> Building and saving</label><label><input type="radio" name="stage" value="NearingRetirement"> Getting close to retirement</label><label><input type="radio" name="stage" value="Retired"> Retired</label></fieldset><input type="text" name="website" class="community-join-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="community-join-note community-join-for-participant">We will email you an invitation to community.plusauri.com. Accept it to finish joining.</p><p class="community-join-note community-join-for-lurker">We will add you to the Plusauri mailing list. The forum at community.plusauri.com is open to read anytime, no account needed. Unsubscribe whenever you like.</p><label class="community-join-news"><input type="checkbox" name="news"> Also send me occasional Plusauri news by email. Optional, and you can unsubscribe anytime.</label><p class="community-join-error" role="alert" hidden></p><footer class="community-join-actions"><button type="button" class="secondary outline" data-community-join-close>Not now</button><button type="submit"><span class="community-join-for-participant">Send my invitation</span><span class="community-join-for-lurker">Add me to the list</span></button></footer></form><div class="community-join-sent" hidden aria-live="polite"><h3>Check your inbox</h3><p data-status="invited" hidden>Your invitation is on its way. Accept it to choose a username and finish joining.</p><p data-status="queued" hidden>Thanks. We will send your invitation shortly.</p><p data-status="member" hidden>That address already belongs to a member. Sign in at community.plusauri.com.</p><p data-status="listed" hidden>Thanks, you are on the list. The forum is at community.plusauri.com whenever you want a look.</p><footer class="community-join-actions"><button type="button" data-community-join-close>Done</button></footer></div></article></dialog></div><hr class="lesson-disclaimer-rule" /><blockquote class="lesson-shared lesson-disclaimer" cite="learning-center:disclaimer"><p><strong>Contenu éducatif — pas un conseil.</strong> Ces leçons enseignent comment Tutilis modélise un plan et comment lire ce qu'il montre. Les foyers, soldes et résultats qui y figurent sont inventés pour l'enseignement. Rien ici n'est un conseil financier, d'investissement, fiscal ou juridique, ni une recommandation d'acheter, de vendre ou de détenir quoi que ce soit. Un modèle ne peut pas connaître votre situation — vérifiez tout ce que vous tirez d'une leçon au regard de votre propre cas, et auprès d'un professionnel qualifié le cas échéant.</p></blockquote><p class="lesson-privacy-link"><small><a href="/designer-site/privacy">Privacy</a></small></p></div>
+      </section>
+      <div class="lesson-split-gutter">
+        <div class="lesson-split-handle" role="separator" aria-orientation="vertical" aria-label="Resize lesson and app panes" tabindex="0"></div>
+        <div class="lesson-split-pill"><button class="lesson-split-widen" type="button" data-widen="app" data-label-widen="Show the app full width" data-label-restore="Show the lesson and the app side by side" title="Show the app full width" aria-label="Show the app full width"><span class="lesson-split-caret"></span></button><button class="lesson-split-widen" type="button" data-widen="lesson" data-label-widen="Show the lesson full width" data-label-restore="Show the lesson and the app side by side" title="Show the lesson full width" aria-label="Show the lesson full width"><span class="lesson-split-caret"></span></button></div>
+      </div>
+      <section class="app-pane">
+        <p class="canvas-omitted muted">The interactive plan is not in this copy.</p>
+      </section>
+    </div>
+  </body>
+</html>

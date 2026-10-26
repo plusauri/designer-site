@@ -15,6 +15,8 @@ Open the [[nav:dossier]]. On the Bird's Eye, each grant has a row under **Assets
 beside it, and hovering the row raises the grant's card. In the desktop app the same cards sit under
 **Equity compensation** on the balance sheet.
 
+[[jump:birds-eye]]
+
 ## What you will learn
 
 <aside class="lesson-plan">
@@ -57,6 +59,8 @@ as they vest, and they expire in 2036.
 ## A vest is wages
 
 Open the [[nav:cf-table]] on **2027**, the first year after the cliff.
+
+[[jump:cash-flow|output__forecaster__forecaster.forecast-detail__cf-table]]
 
 [[img:equity-comp-cf-table-2027]]
 

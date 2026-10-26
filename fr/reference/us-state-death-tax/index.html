@@ -31,31 +31,44 @@
         <ul>
           <li><a href="/designer-site/">Accueil</a></li>
           <li><a href="/designer-site/learn" class="nav-learn">Learning Center</a></li>
-          <li><a href="/designer-site/reference">Reference</a></li>
-          <li><a href="/designer-site/glossary">Glossary</a></li>
+          <li>
+            <details class="dropdown nav-resources"><summary>Resources</summary>
+              <ul>
+                <li><a href="/designer-site/start-here">Start Here</a></li>
+                <li><a href="/designer-site/reference">Reference</a></li>
+                <li><a href="/designer-site/glossary">Glossary</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="/designer-site/pricing">Tarifs</a></li>
           <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr" selected="selected">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
           <li><button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Light theme — click for dark" title="Light theme — click for dark">☀</button></li>
         </ul>
       </nav>
     </header>
-    <main class="container"><div class="reference-hub">
+    <main class="container"><div class="reference-hub" data-tint="gold">
   <p class="catalog-crumb"><a href="/designer-site/reference"><span class="catalog-crumb-arrow" aria-hidden="true">←</span>All reference</a></p>
   <h1>State estate &amp; inheritance tax</h1>
   <p class="reference-lede">The dozen-odd states that levy a death tax, with their exemptions and top rates — separate from the federal estate tax.</p>
   <div class="reference-badges"><span class="reference-badge">Published 2025</span><span class="reference-badge" title="Uses the most recent published table at or before the year asked about, and holds it forward.">Held</span></div>
   <div class="reference-honesty reference-usage">
-    <h3>Where we use this · Used in your forecast</h3>
+    <h3><span class="reference-honesty-kicker">Where we use this</span><span class="reference-use-pill reference-use-pill--in-forecast">Used in your forecast</span></h3>
     <ul>
       <li>Assessed alongside the federal estate tax at the end of the projection, for the state of residence.</li>
       <li>Where a precise graduated ladder is bundled it is used directly; where only a top rate is known, the estate card labels the result as an approximation.</li>
     </ul>
   </div>
-  <div class="reference-honesty">
+  <div class="reference-honesty reference-limits">
     <h3>Not modeled</h3>
     <p>Beneficiary-class detail beyond the modeled ladders, portability between spouses at the state level, trust structures, and the interaction between a state's estate tax and its inheritance tax where a state levies both.</p>
   </div>
-  <div class="reference-table-wrap"><table class="content-table">
+  <section class="reference-sheet reference-sheet--tax">
+    <header class="reference-sheet-head">
+      <div class="reference-sheet-titles">
+        <div class="reference-sheet-kicker"><span>Tax schedule</span><span class="reference-sheet-category">Estate &amp; wealth</span></div>
+      </div>
+<span class="reference-sheet-seal" aria-hidden="true"><span class="reference-sheet-seal-glyph">%</span><span class="reference-sheet-seal-word">Tax</span></span></header>
+    <div class="reference-table-wrap"><table class="content-table">
 <thead>
 <tr>
 <th align="left">State</th>
@@ -182,8 +195,9 @@
 </tbody>
 </table>
 </div>
+  </section>
 </div>
 </main>
-    <footer class="container"><small>© Plusauri, LLC — possédez votre plan financier.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenu éducatif — pas un conseil financier, d'investissement, fiscal ou juridique.</small></footer>
+    <footer class="container"><small>© Plusauri, LLC — possédez votre plan financier.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenu éducatif — pas un conseil financier, d'investissement, fiscal ou juridique.</small><small class="footer-trademarks">Tutilis™ and Plusauri™ are trademarks of Plusauri, LLC.</small></footer>
   </body>
 </html>

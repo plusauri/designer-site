@@ -42,6 +42,8 @@ The years around the retirement date are when a fall in the market does the most
 
 You can watch this happen in Morgan's plan by putting a historical crash into it. The plan itself never contains a crash, because its returns come from growth assumptions that describe an average year. A specific crash is laid over the plan in [[nav:transforms]]. Open Transforms, unfold **Modifications**, and select **Sequence-of-returns risk**, the last row on the **Global** tab:
 
+[[jump:sequence-of-returns|modifiable]]
+
 [[img:safer-sor-modifiables|control]]
 
 Switch it on in the editor beside the card, choose the 2007 episode, the Global Financial Crisis, and move the start year to 2027. The slider opens on Morgan's retirement year, 2028, and this section is about the year before it:
@@ -82,6 +84,8 @@ Advisors cannot see the next crash coming, so they reduce the damage it can do i
 ## Read the risk chart
 
 Tutilis draws the portfolio's risk on one chart. Open [[nav:risk]] and look at **Risk vs. Return**. Each dot is one item placed by its expected yearly return, [[term:mu|μ]], on the vertical axis and its [[term:volatility|volatility]], [[term:sigma|σ]], on the horizontal axis. The star is the whole portfolio. Turn on the **Holdings** chip to see each fund on its own.
+
+[[jump:volatility|output__risk__line.risk.risk]]
 
 Here is the [Stays 80/20](#canvas-dossier:safer_stays_eighty_twenty) plan:
 

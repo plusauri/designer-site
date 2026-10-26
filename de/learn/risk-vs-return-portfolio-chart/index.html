@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Risk vs Return Explained: Reading the Portfolio Scatter Chart — Tutilis</title>
+    <meta name="description" content="Read the Risk vs. Return scatter: μ, σ, holdings dots, and the portfolio star. Live canvas: holdings teaching sample (SC-04 lineage).">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://www.plusauri.com/learn/risk-vs-return-portfolio-chart" rel="canonical">
+    <meta content="website" property="og:type">
+    <meta content="Plusauri" property="og:site_name">
+    <meta content="Risk vs Return Explained: Reading the Portfolio Scatter Chart — Tutilis" property="og:title">
+    <meta content="Read the Risk vs. Return scatter: μ, σ, holdings dots, and the portfolio star. Live canvas: holdings teaching sample (SC-04 lineage)." property="og:description">
+    <meta content="https://www.plusauri.com/learn/risk-vs-return-portfolio-chart" property="og:url">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
+<script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
+    <script src="/designer-site/static/lang.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
+    <link href="/designer-site/static/site.css" rel="stylesheet">
+    <script src="/designer-site/static/lesson-split.js" defer="defer"></script>
+    <script src="/designer-site/static/trial-callout.js" defer="defer"></script>
+    <script src="/designer-site/static/community-join.js" defer="defer"></script>
+  </head>
+  <body class="lesson-split-body" data-prose-lang="de" data-lang="de">
+    <header class="lesson-split-header" id="lesson-split-header">
+      <nav>
+        <ul>
+          <li><strong><a href="/designer-site/">Plusauri</a></strong></li>
+          <li><a href="/designer-site/learn">Learning Center</a></li>
+          <li><a href="/designer-site/reference">Reference</a></li>
+        </ul>
+        <ul>
+          <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de" selected="selected">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
+          <li><button class="lesson-header-collapse" type="button" aria-expanded="true" aria-controls="lesson-split-header" title="Hide header" aria-label="Hide header">▾</button></li>
+        </ul>
+      </nav>
+    </header>
+<button class="lesson-header-expand" type="button" id="lesson-header-expand" hidden="hidden" title="Show header" aria-label="Show header">▴ Plusauri · Learning Center</button><script type="application/json" id="lesson-canvas-dossiers">{"primary":"holdings_portfolio","alternates":[],"order":["holdings_portfolio"]}</script>
+    <div class="lesson-split">
+      <section class="lesson-pane"><a class="trial-callout trial-callout-comic" href="/designer-site/try" data-trial-callout data-variant="comic"><img src="/designer-site/static/images/trial/trial-comic.png" alt="14-Day Free Trial: Your Dossier on Your Desktop" width="458" height="187" decoding="async"></a>
+        <div class="lesson-prose" id="lesson-prose" data-next-key="KeyJ" data-previous-key="KeyK" data-lesson-id="risk_and_return" data-lesson-slug="risk-vs-return-portfolio-chart" data-loaded-lang="de"><h1>Risiko und Rendite</h1>
+<div class="lesson-intro-card"><img class="lesson-media-ref ui-std-preview-wide" src="/designer-site/static/images/lessons/intro-cards/risk-and-return.webp" alt="Editorial cartoon titled Risk and return. A person runs a broken road labeled Rough path, with signs for Return, Risk, and Volatility, toward a trophy also labeled Return. The narrator says higher expected return usually means a rougher path. One panel quotes Investor.gov, What is Risk: in general, as investment risks rise, investors seek higher returns to compensate themselves for taking such risks. The banner says both belong on the same picture." data-media-id="intro-card-risk-and-return" loading="lazy" decoding="async" /></div>
+<details class="lesson-intro-chrome" data-intro-chrome="1" data-lesson-presentation="Reading"><summary><span class="lesson-intro-chrome-summary-title">So funktioniert diese Seite</span></summary><div class="lesson-intro-chrome-body"><blockquote class="lesson-shared lesson-learning-preference" cite="learning-center:learning-preference"><p>New to the Learning Center, or want a map of the panels? Start with a tour: <a href="/designer-site/learn/getting-started-planning-software-tour"><strong>Reading Lesson (Getting Around)</strong></a> or <a href="/designer-site/learn/getting-started-video-tutorial"><strong>Screencast Lesson (Getting Around)</strong></a> — both walk through Tutilis next to a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">Live-Plan</span><span class="lesson-term-tip" role="tooltip">Das laufende Tutilis-Produkt neben dieser Lektion – Navigation, Vogelperspektive, Prognosemodul, Werkzeuge und mehr –, geladen mit einem Lehrbeispiel. Ein Dossier sind die Plandaten; der Live-Plan ist die gesamte Produktoberfläche mit einem bereits geöffneten Beispieldossier, damit Sie sich umsehen können. Im Web lassen sich Lehrbeispiele nicht so bearbeiten wie Ihr eigenes Dossier in der vollständigen App.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> (to the right on a desktop-width screen, or below when stacked on a tablet).</p></blockquote><blockquote class="lesson-shared lesson-orientation" cite="learning-center:orientation"><p>This page — <strong>Risk and return</strong> — includes a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live sample plan</span><span class="lesson-term-tip" role="tooltip">Das laufende Tutilis-Produkt neben dieser Lektion – Navigation, Vogelperspektive, Prognosemodul, Werkzeuge und mehr –, geladen mit einem Lehrbeispiel. Ein Dossier sind die Plandaten; der Live-Plan ist die gesamte Produktoberfläche mit einem bereits geöffneten Beispieldossier, damit Sie sich umsehen können. Im Web lassen sich Lehrbeispiele nicht so bearbeiten wie Ihr eigenes Dossier in der vollständigen App.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to the text. On a wide screen it usually sits <strong>to the right</strong> of the text; on a tablet it usually sits <strong>below</strong>. Use the text for the walk-through, then try the same ideas in the live plan.</p></blockquote><blockquote class="lesson-shared lesson-product-relationship" cite="learning-center:product-relationship"><p>The <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">Live-Plan</span><span class="lesson-term-tip" role="tooltip">Das laufende Tutilis-Produkt neben dieser Lektion – Navigation, Vogelperspektive, Prognosemodul, Werkzeuge und mehr –, geladen mit einem Lehrbeispiel. Ein Dossier sind die Plandaten; der Live-Plan ist die gesamte Produktoberfläche mit einem bereits geöffneten Beispieldossier, damit Sie sich umsehen können. Im Web lassen sich Lehrbeispiele nicht so bearbeiten wie Ihr eigenes Dossier in der vollständigen App.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to this page — usually <strong>to the right</strong> on a wide screen, or <strong>below</strong> on a tablet — is <strong>Tutilis</strong> running a teaching sample: the same <strong>financial planning product</strong> available as a desktop application (early preview). A <span class="lesson-term" data-term="dossier" tabindex="0"><span class="lesson-term-pill">Dossier</span><span class="lesson-term-tip" role="tooltip">Ihr vollständiger Plan in Tutilis: die Personen im Haushalt, was sie besitzen und schulden, ein- und ausgehende Cashflows, steuerliche Einstellungen und Planungsannahmen. Ein Dossier ist eine vollständige Situation, wie das Produkt sie modelliert.<a class="lesson-term-more" href="/designer-site/glossary/dossier">Full entry →</a></span></span> is the plan data; the live plan is the full product (navigation, Bird's Eye, Forecaster, tools) with a sample dossier already open so you can try the panels. <a href="/designer-site/pricing">See planned pricing</a>. On the web, Learning Center samples are <strong>not editable</strong> the way your own dossier will be in the full app. Your own household goes in the Tutilis desktop app — <a href="/designer-site/learn#intro-video-heading">the Learning Center front page has a short clip of that</a>.</p></blockquote></div></details>
+<div class="lesson-accordion" data-sections="6" style="--n:6"><h2 id="overview" class="lesson-section-head" style="--i:0"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="overview--body"><span class="lesson-section-title">Überblick</span></button></h2><div class="lesson-section-body" id="overview--body" role="region" aria-labelledby="overview" hidden>
+<!---
+  GENERATED lesson shell — not learner-facing meta. Regenerated chrome is
+  outside α/ω; teaching prose lives only in the protect block.
+  outline-id: foundations.risk_return.tradeoff
+  outline-path: Foundations › Risk and return › Risk and return tradeoff
+  document-id: risk_and_return
+  locale: de
+  lifecycle: TranslationComplete
+  status: Shipped
+  lesson-status: PortedFromPublic
+  host-hint: Dossier
+  intent: Full German of the current English lesson. Same image ids and anchors.
+  port-source: dossiers/risk_and_return.md
+-->
+<!--- α <lesson_body> -->
+<p>Rendite ohne Risiko ist unvollständig. Risiko ohne Rendite ist Rauschen. Dieses Produkt setzt <strong>beides</strong> auf
+<strong>dasselbe Bild</strong>, damit Sie den Ausgleich sehen, den Sie annehmen, bevor Sie darum herum planen.</p>
+<p>Der Plan rechts ist eine <strong>Lehrstichprobe, die auf Positionen schaut</strong> (<code>holdings_portfolio</code>): drei
+verschiedene Positionen mit unterschiedlicher erwarteter Rendite (<span class="lesson-term" data-term="mu" tabindex="0"><span class="lesson-term-pill">μ</span><span class="lesson-term-tip" role="tooltip">Der griechische Buchstabe, den das Produkt für eine angenommene <strong>Durchschnittsrendite</strong> verwendet — einfach gesagt: ungefähr das, was etwas in einem typischen Jahr erwirtschaftet. Er ist eine <strong>Eingabe</strong> für die Projektion und kein Ergebnis davon, und er steht nie allein: μ zusammen mit <strong>σ</strong> ist die gesamte Wachstumsannahme, denn eine Durchschnittsrendite sagt nichts darüber, wie holprig die Fahrt wird.<a class="lesson-term-more" href="/designer-site/glossary/mu">Full entry →</a></span></span>) und <span class="lesson-term" data-term="volatility" tabindex="0"><span class="lesson-term-pill">Volatilität</span><span class="lesson-term-tip" role="tooltip">Wie stark die Renditen einer Anlage von Jahr zu Jahr <strong>schwanken</strong>, nicht ob sie insgesamt steigt oder fällt. Im Produkt als <strong>σ (Sigma)</strong> geschrieben. Zwei Anlagen können dieselbe durchschnittliche Rendite haben und sich im Erleben völlig unterschiedlich anfühlen — und hohe Volatilität drückt das tatsächlich erzielte Zinseszinswachstum unter diesen Durchschnitt.<a class="lesson-term-more" href="/designer-site/glossary/volatility">Full entry →</a></span></span> (<span class="lesson-term" data-term="sigma" tabindex="0"><span class="lesson-term-pill">σ</span><span class="lesson-term-tip" role="tooltip">Der griechische Buchstabe, den das Produkt für <strong>Volatilität</strong> verwendet — wie weit Renditen um ihren Durchschnitt streuen. Ein bloßes σ an einer Diagrammachse misst Risiko, nicht Rendite: Zwei Positionen können auf derselben Höhe liegen (gleiches <strong>μ</strong>) und sich völlig unterschiedlich anfühlen. Ein höheres σ drückt außerdem das tatsächlich erzielte Zinseszinswachstum unter den genannten Durchschnitt.<a class="lesson-term-more" href="/designer-site/glossary/sigma">Full entry →</a></span></span>), damit die Punktwolke
+auf einen Blick lesbar ist, plus <strong>ein Zuhause und zwei Cashflows</strong> — die wenigsten Posten, die jedem der
+drei Chips über dem Diagramm etwas zu zeigen geben. Es ist immer noch kein voller Haushalt; alles darin ist
+da, damit eine Steuerung lesbar wird.</p>
+</div>
+<h2 id="how-to-read-the-scatter" class="lesson-section-head" style="--i:1"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="how-to-read-the-scatter--body"><span class="lesson-section-title">So lesen Sie das Streudiagramm</span></button></h2><div class="lesson-section-body" id="how-to-read-the-scatter--body" role="region" aria-labelledby="how-to-read-the-scatter" hidden>
+<p>Genauer Pfad (das Diagramm liegt beim Einstieg in einem <strong>geschlossenen Einklappbereich</strong>):</p>
+<ol>
+<li><span class="lesson-nav-ref lesson-nav-ref--risk lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/risk.png" alt="Risk" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Risiko</span><span class="lesson-term-tip" role="tooltip">Ein <strong>Hauptbereich der linken Leiste</strong>. Analytische Risikosichten — wie Holdings und Kategorien auf Risiko/Rendite sitzen. Später nützlich; für erste Touren nicht nötig.</span></span> (Hauptabschnitt)</li>
+<li><strong>Aktuelles Risiko</strong> — die linke der beiden Risiko-Ansichten</li>
+<li>Öffnen Sie <strong>Analytisches Risiko</strong> — klappen Sie diesen Bereich auf, sonst sehen Sie die Diagramme nicht</li>
+<li>Streudiagramm <strong>Risiko vs. Rendite</strong> innerhalb von Analytischem Risiko</li>
+</ol>
+<p><strong>Die andere Ansicht, Sensitivitäten</strong>, ist kein Umweg, den Sie aus Versehen überspringen. Aktuelles Risiko fragt,
+<em>wie holprig das ist, was ich gerade halte</em> — ein Schnappschuss, ohne Zeit darin. Sensitivitäten stellt eine
+andere Frage: <em>welche einzelne Eingabe bewegt das Ergebnis am meisten</em> — sie stößt eine Annahme nach der anderen an
+und ordnet, was der Plan gespürt hat. Derselbe Abschnitt, andere Frage; noch keine Lektion behandelt sie.</p>
+<table>
+<thead>
+<tr><th>Achse / Marke</th><th>Bedeutung</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Waagerecht</strong></td><td>Risiko — typischerweise <strong>σ</strong> (Volatilität der Annahme)</td></tr>
+<tr><td><strong>Senkrecht</strong></td><td>Rendite — typischerweise <strong>μ</strong> (erwartete / angenommene mittlere Rendite)</td></tr>
+<tr><td><strong>Jeder Punkt</strong></td><td>Eine Position (oder ein vergleichbarer Posten) bei ihrem eigenen (σ, μ)</td></tr>
+<tr><td><strong>Portfolio ★</strong></td><td>Die <strong>Mischung</strong> — wo das ganze Buch als ein Punkt sitzt</td></tr>
+</tbody>
+</table>
+<p><strong>Die Ecke, die alle wollen</strong>, ist hohe Rendite und niedriges Risiko — <strong>oben und links</strong>. Märkte geben das
+selten frei heraus. Die meisten echten Bücher sitzen auf einem Ausgleich: mehr angenommene Rendite kommt gewöhnlich mit
+mehr angenommenem Schwanken.</p>
+<p><strong>Ehrlichkeit:</strong> μ und σ sind <strong>Annahmen</strong> (oft recherchierte Vorgaben, die Sie überschreiben können), keine Versprechen
+und keine Prognose des Pfads im nächsten Jahr. Das Diagramm lehrt den <strong>Ausgleich</strong>, nicht eine Vorhersage.</p>
+<p>Beim Einstieg sind beide Abschnitte <strong>eingeklappt</strong> — öffnen Sie <strong>Analytisches Risiko</strong>, sonst erscheint die Punktwolke nie:</p>
+<div class="lesson-img-stack">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-collapsibles-closed.de.png" alt="Current Risk as it opens: chips along the top, Analytic Risk and Tabular Risk folded" data-media-id="risk-return-collapsibles-closed" data-where="output__risk" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="real-assets" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption"><strong>Beim Einstieg geschlossen</strong> — die Chips liegen oben entlang, und Analytisches Risiko und Tabellarisches Risiko bleiben zugeklappt, bis Sie sie öffnen.</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-scatter.de.png" alt="Risk vs. Return: every item at its own (σ, μ), with the portfolio ★" data-media-id="risk-return-scatter" data-where="output__risk__risk.risk-vs-return" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="real-assets,holdings" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption"><strong>Analytisches Risiko, erstes Diagramm</strong> — Risiko vs. Rendite: jeder gezeigte Posten bei seinem eigenen (σ, μ), mit dem Portfolio-★ bei der Mischung der Positionen und, wenn Realvermögen an ist, des Zuhauses.</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-band.de.png" alt="Portfolio Range Over Time: median, mean, and the 10–90% cone" data-media-id="risk-return-band" data-where="output__risk__risk.range-over-time" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="real-assets" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption"><strong>Analytisches Risiko, zweites Diagramm</strong> — Portfolio-Bandbreite über die Zeit: der <span class="lesson-term" data-term="median" tabindex="0"><span class="lesson-term-pill">Median</span><span class="lesson-term-tip" role="tooltip">Das <strong>mittlere</strong> Ergebnis — die Hälfte darüber, die Hälfte darunter — im Gegensatz zum Durchschnitt, den wenige riesige Ergebnisse nach oben ziehen können. Über lange Zeiträume driften beide stark auseinander, und der Median beantwortet die Frage „Wie sieht ein typischer Verlauf aus?“<a class="lesson-term-more" href="/designer-site/glossary/median">Full entry →</a></span></span>-Pfad, eine gestrichelte Durchschnittslinie darüber, und ein Kegel von Ergebnissen, der sich weiter öffnet, je weiter Sie hinausschauen.</p>
+</div>
+<p>Zwei Dinge in diesem zweiten Bild verdienen einen Satz, weil beide wie Fehler aussehen und keines
+einer ist. Die gestrichelte Durchschnittslinie sitzt <strong>über</strong> dem mittleren Pfad, und sie bleibt darüber — das ist nicht das
+Diagramm, das doppelt zählt. Ein paar sehr gute Ergebnisse ziehen einen Durchschnitt so nach oben, wie sie ein
+mittleres Ergebnis nicht nach oben ziehen können, und je mehr die Positionen schwanken, desto breiter wird diese Lücke. Der mittlere Pfad ist
+der, gegen den Sie planen. Und der Kegel öffnet sich immer weiter, statt sich zu beruhigen, weil
+die Unsicherheit jedes Jahres sich auf die vorige stapelt; der Plan wird nicht riskanter, die Frage reicht
+einfach weiter nach vorn.</p>
+<details class="lesson-math">
+<summary class="lesson-math-label">Für die Mathematikfreunde — warum der Durchschnitt hoch sitzt und warum der Kegel sich öffnet</summary>
+<div class="lesson-math-body">
+<p><strong>Die Lücke hat einen Namen.</strong> Der <span class="lesson-term" data-term="compounding" tabindex="0"><span class="lesson-term-pill">Zinseszinseffekt</span><span class="lesson-term-tip" role="tooltip">Wachstum <strong>auf früheres Wachstum</strong> — die Rendite dieses Jahres wird auf die Gewinne des Vorjahres ebenso erzielt wie auf das ursprüngliche Geld. Deshalb krümmt sich eine Plankurve nach oben, statt geradlinig zu steigen, und deshalb zählen die frühen Jahre mehr, als ihr Umfang vermuten lässt.<a class="lesson-term-more" href="/designer-site/glossary/compounding">Full entry →</a></span></span> multipliziert Renditen, statt sie zu addieren, also wächst ein Saldo
+über viele Jahre tatsächlich mit dem <span class="lesson-term" data-term="geometric-mean" tabindex="0"><span class="lesson-term-pill">geometrisches Mittel</span><span class="lesson-term-tip" role="tooltip">Die <strong>Zinseszins</strong>-Wachstumsrate, die einen Anfangssaldo tatsächlich zu einem Endsaldo führt — die Rendite, die Sie erlebt haben, statt der, die Ihnen genannt wurde. Sie liegt immer auf oder unter dem <strong>arithmetischen Mittel</strong>, nur gleich, wenn jedes Jahr identisch ist, und umso weiter darunter, je höher die Volatilität. Auf diesem Mittel ist der Leitpfad des Produkts aufgebaut.<a class="lesson-term-more" href="/designer-site/glossary/geometric-mean">Full entry →</a></span></span>, und das liegt immer auf oder unter
+dem arithmetischen Durchschnitt derselben Renditen. Der Fehlbetrag wächst mit σ: ungefähr die halbe Varianz,
+sodass ein Buch bei σ 16% in der Größenordnung von 1.3 Punkten im Jahr gegen seinen eigenen Durchschnitt abgibt. Das heißt
+gewöhnlich <span class="lesson-term" data-term="volatility-drag" tabindex="0"><span class="lesson-term-pill">Volatilitätsverlust</span><span class="lesson-term-tip" role="tooltip">Die Lücke zwischen der durchschnittlichen Jahresrendite eines Portfolios und der Rendite, mit der es tatsächlich wächst. Erst 50 % Verlust, dann 50 % Gewinn, und Sie liegen 25 % im Minus, nicht bei null — Schwankungen kosten Wachstum. Je größer die Volatilität, desto weiter fällt das typische Ergebnis unter den arithmetischen Durchschnitt.<a class="lesson-term-more" href="/designer-site/glossary/volatility-drag">Full entry →</a></span></span>, und deshalb ist der Leitpfad des Produkts der
+<span class="lesson-term" data-term="geometric-mean" tabindex="0"><span class="lesson-term-pill">geometrisches Mittel</span><span class="lesson-term-tip" role="tooltip">Die <strong>Zinseszins</strong>-Wachstumsrate, die einen Anfangssaldo tatsächlich zu einem Endsaldo führt — die Rendite, die Sie erlebt haben, statt der, die Ihnen genannt wurde. Sie liegt immer auf oder unter dem <strong>arithmetischen Mittel</strong>, nur gleich, wenn jedes Jahr identisch ist, und umso weiter darunter, je höher die Volatilität. Auf diesem Mittel ist der Leitpfad des Produkts aufgebaut.<a class="lesson-term-more" href="/designer-site/glossary/geometric-mean">Full entry →</a></span></span> und nicht die <span class="lesson-term" data-term="amf" tabindex="0"><span class="lesson-term-pill">Prognose zum arithmetischen Mittel</span><span class="lesson-term-tip" role="tooltip">Arithmetic Mean Forecast (Prognose mit arithmetischem Mittel) — derselbe Plan, projiziert mit der <strong>arithmetischen</strong> Durchschnittsrendite statt der Zinseszinsrendite. Sie liegt höher als der Pfad, den Sie tatsächlich erleben würden, und dient als Lehrkontrast zu GMF ✦, nicht als Orientierung zum Steuern. Schalten Sie sie ein, um zu sehen, was der Volatilitätsverlust diesen Plan kostet; ansonsten lassen Sie sie aus.<a class="lesson-term-more" href="/designer-site/glossary/amf">Full entry →</a></span></span>.</p>
+<p><strong>Der Kegel öffnet sich mit √t.</strong> Wenn die Rendite jedes Jahres eine unabhängige Ziehung ist, addieren sich die Varianzen über die
+Jahre, während die erwartete Rendite nur linear aufläuft — also wächst die Streuung mit der <em>Quadratwurzel</em> des Horizonts, σ√t, nicht mit dem Horizont selbst. Viermal so lang ist doppelt so breit, nicht
+viermal. Das ist die Form, die Sie ansehen, und deshalb öffnet ein langer Horizont den Kegel,
+ohne dass die Positionen sich geändert hätten.</p>
+<p>Beide Zahlen kommen aus demselben σ auf der waagerechten Achse der Punktwolke oben — eine Steuerung, zwei
+Bilder.</p>
+</div>
+</details>
+</div>
+<h2 id="guided-walk-35-minutes" class="lesson-section-head" style="--i:2"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="guided-walk-35-minutes--body"><span class="lesson-section-title">Geführter Gang (3–5 Minuten)</span></button></h2><div class="lesson-section-body" id="guided-walk-35-minutes--body" role="region" aria-labelledby="guided-walk-35-minutes" hidden>
+<ol>
+<li>Folgen Sie dem Pfad oben: <span class="lesson-nav-ref lesson-nav-ref--risk lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/risk.png" alt="Risk" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Risiko</span><span class="lesson-term-tip" role="tooltip">Ein <strong>Hauptbereich der linken Leiste</strong>. Analytische Risikosichten — wie Holdings und Kategorien auf Risiko/Rendite sitzen. Später nützlich; für erste Touren nicht nötig.</span></span> → Aktuelles Risiko → öffnen Sie Analytisches Risiko → Risiko vs. Rendite.</li>
+<li><strong>Setzen Sie den Haken beim Chip Positionen</strong>, damit jede Position ein eigener Punkt ist (die Vorgabe kann nur Konten zeigen).</li>
+<li><strong>Finden Sie die ruhigste</strong> Position (links, niedrigeres σ) und die <strong>sprunghaftere</strong> (rechts, höheres σ). In dieser
+Stichprobe ist das ungefähr: ruhigere Positionen links/unten; höheres μ <strong>und</strong> höheres σ <strong>oben und
+rechts</strong> — mehr erwartete Rendite, mehr Risiko.</li>
+<li><strong>Finden Sie den Portfolio-Stern</strong> — eine <strong>gewichtsbewusste Mischung</strong>, nicht einfach der wildeste Name.</li>
+<li>Schalten Sie <strong>Mit Kategorien vergleichen</strong> um, falls vorhanden — Referenzpunkte der Kategorien helfen bei der Frage „ist diese
+Position aggressiv gegenüber einer ganzen Anlageklasse?“</li>
+<li>Schalten Sie <strong>Größe nach Wert</strong> um, falls vorhanden — größere Punkte sind größere Dollar-Gewichte; der Stern wird
+von dem gezogen, was Sie wirklich besitzen, nicht von jedem Ticker gleich.</li>
+<li>Öffnen Sie <strong>Tabellarisches Risiko</strong> (der andere Einklappbereich von Aktuellem Risiko) für die Tabelle <strong>Risiko &amp; Rendite nach Posten</strong>
+— dieselben Daten, sortierbar. Sortieren Sie nach σ, dann nach μ.</li>
+<li><strong>Gehen Sie die drei Chips durch</strong> — der nächste Abschnitt sagt, was jeder auf das Diagramm setzt.</li>
+</ol>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="what-the-three-chips-put-on-the-chart">Was die drei Chips auf das Diagramm setzen</h3></summary><div class="lesson-subsection-body">
+<p>Fünf Chips sitzen über der Punktwolke. Zwei davon ändern, <em>wie</em> Punkte gezeichnet werden — <strong>Mit Kategorien
+vergleichen</strong> und <strong>Größe nach Wert</strong>, beide im Gang oben. Die anderen drei ändern, <em>was überhaupt
+auf dem Diagramm ist</em>: <strong>Realvermögen</strong>, <strong>Cashflows</strong>, <strong>Positionen</strong>. Das sind nicht drei Ansichten desselben
+Dings — jeder fügt eine andere <em>Art</em> von Posten hinzu, in eigener Farbe gezeichnet, und nur manche
+zählen zum ★.</p>
+<table>
+<thead>
+<tr><th>Chip</th><th>Fügt hinzu</th><th>Farbe</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Realvermögen</strong></td><td>das Zuhause</td><td>braun</td></tr>
+<tr><td><strong>Positionen</strong></td><td>die drei Positionen getrennt (statt eines Kontopunkts)</td><td>blau</td></tr>
+<tr><td><strong>Cashflows</strong></td><td>Gehalt (herein) und Lebenshaltung (hinaus)</td><td>grün / rosa</td></tr>
+</tbody>
+</table>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-all-chips.de.png" alt="Risk vs. Return with all three chips on: real assets, cash flows and holdings together" data-media-id="risk-return-all-chips" data-where="output__risk__risk.risk-vs-return" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="real-assets,cash-flows,holdings" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Alle drei Chips an. Jede Postenart auf einmal: das braune Zuhause, die drei blauen Positionen von
+Anleihe bis zur konzentrierten Aktie gestreut, und — ganz links, wo die Wachstumsannahmen ruhig sind — das grüne Gehalt und
+die rosa Lebenshaltung.</p>
+<p><strong>Realvermögen bewegt den ★.</strong> Der Stern ist die Mischung Ihrer Positionen und, wenn Realvermögen an ist,
+auch Ihres Realvermögens. Das Zuhause erwartet weniger Rendite als die Aktienfonds und steigt und
+fällt nicht mit ihnen, also zieht es den Stern nach unten und nach links, wenn Sie es einschalten. Positionen einzuschalten
+spaltet nur den Kontopunkt in seine Positionen. Die Mischung ist so oder so dasselbe Geld, also bleibt der Stern,
+wo er ist.</p>
+<p><strong>Cashflows stehen auf dem Diagramm, aber nie in der Mischung.</strong> μ und σ eines Stroms sind seine <em>Wachstumsannahme</em>: wie schnell das Gehalt steigt und wie schnell die Ausgabe inflationiert. Das ist eine andere
+Größe als die erwartete Rendite einer Aktie, auch wenn beide auf diesen Achsen landen. Lesen Sie die Strom-Punkte
+als das, wie unsicher das Wachstum jedes Stroms ist. Sie sagen nicht, was irgendetwas verdient. Ein Strom von Zahlungen
+wird auch ausgegeben, während er ankommt, also ist er kein Saldo, den man mit Ihren Anlagen mitteln kann.
+Was Cashflows unter dem Diagramm hinzufügt, ist eine Zeile: wie oft Ihre Vermögen und Ihre Einkommen,
+zum Barwert gezählt, Ihre geplante Ausgabe decken. Es ist dieselbe Balance, die Bird's Eye wiegt,
+wenn seine Ansicht Cashflows einschließt.</p>
+<p><strong>Der Kegel darunter folgt demselben Chip.</strong> Unter der Punktwolke projiziert <strong>Portfolio-Bandbreite über die Zeit</strong>
+das mit dem Stern markierte Portfolio als sich öffnenden Kegel nach vorn. Mit Realvermögen aus ist der Kegel nur Ihre Positionen.
+Mit ihm an kommt das Zuhause dazu, und alles, was Sie besitzen, wird projiziert. Das sind zwei ehrliche Antworten
+auf zwei verschiedene Fragen: <em>wie riskant ist, was ich anlege</em>, und <em>wie riskant ist, was ich besitze</em>. Der Chip
+wählt, welche Frage beide Diagramme beantworten.</p>
+</div></details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="holdings-on">Positionen an</h3></summary><div class="lesson-subsection-body">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-holdings-on.de.png" alt="Risk vs. Return with Holdings on — the three positions separated, and the portfolio ★" data-media-id="risk-return-holdings-on" data-where="output__risk__risk.risk-vs-return" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="holdings" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Chip Positionen an: jede Position ist ihr eigener Punkt (diese Stichprobe: anleiheähnlich links, breite Aktien mitte-rechts, konzentrierte Aktie ganz rechts). Der ★ ist die Portfolio-Mischung.</p>
+<p><strong>Was dieses Diagramm nicht ist:</strong> es ist keine Verkaufsliste. Ein Punkt weit rechts ist kein Fehler zum
+Korrigieren, und nichts hier ordnet Ihre Positionen als behalten oder abstoßen. Zwei Gründe, und jeder allein
+reicht. Erstens sind die Achsen <strong>Annahmen</strong> — langfristiges μ und σ, das Sie oder eine recherchierte Vorgabe geliefert haben
+—, also bewegt sich ein Punkt <strong>nicht</strong>, weil der Markt im letzten Quartal fiel, und ein Diagramm, das jüngere
+Preise ignoriert, kann Ihnen nicht sagen, darauf zu handeln. Zweitens ist Risiko kein Schaden: eine Position mit hohem σ tut
+ihre Arbeit, wenn Sie für das Schwanken bezahlt werden und es aussitzen können. Wozu das Bild <em>taugt</em>, ist
+zu bemerken, dass Sie etwas besitzen, dessen angenommenes Risiko Sie nicht registriert hatten — das ist eine Frage zum
+Nachfragen, keine Antwort.</p>
+</div></details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="size-by-value">Größe nach Wert</h3></summary><div class="lesson-subsection-body">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-size-by-value.de.png" alt="Risk vs. Return with Size by value on — larger dots for larger holdings" data-media-id="risk-return-size-by-value" data-where="output__risk__risk.risk-vs-return" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="holdings,size-by-value" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Größe nach Wert: das Dollar-Gewicht zeigt sich als Punktgröße — der ★ wird von dem gezogen, was Sie wirklich besitzen, nicht von gleichem Gewicht auf jedem Ticker.</p>
+</div></details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="tabular-risk">Tabellarisches Risiko</h3></summary><div class="lesson-subsection-body">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/risk-return-tabular.de.png" alt="Tabular Risk: Risk &amp; Return by Item with μ, σ, and value" data-media-id="risk-return-tabular" data-where="output__risk__risk.items" data-canvas-dossier="holdings_portfolio" data-pick="2027,0" data-risk-chips="real-assets,cash-flows,holdings" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Öffnen Sie <strong>Tabellarisches Risiko</strong> für zwei Karten nebeneinander:</p>
+<ol>
+<li><strong>Risiko &amp; Rendite nach Posten</strong> — <code>N(μ, σ)</code> und Wert jeder Position (sortierbar; Diagramm zum Sehen,
+Tabelle zum Ordnen).</li>
+<li><strong>Modellierte Vermögenskorrelationen</strong> — dasselbe Paarformat wie Annahmen → Modellierte Vermögenskorrelationen, gefiltert auf <strong>Kategorien, die dieser Plan wirklich nutzt</strong>. Wenn die Liste lang ist, nimmt die
+Karte die Höhe der Postentabelle an und rollt mit einem Ausblenden.</li>
+</ol>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Wo es in der App ist</span> <a class="lesson-jump-term" href="/designer-site/glossary/correlation">Korrelation</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Wo es in der Prognose erscheint</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__risk__risk.correlations" title="Hingehen" aria-label="Hingehen: Risiko → Modellierte Vermögenskorrelationen"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__risk__risk.correlations.png" width="318" height="32" alt="Risiko → Modellierte Vermögenskorrelationen" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+</div></details>
+<details class="lesson-section lesson-section--h3" open><summary class="lesson-section-summary"><h3 id="name-dont-deep-dive-included">Nur benennen, nicht vertiefen: ρ enthalten</h3></summary><div class="lesson-subsection-body">
+<p>Neben der Anzeige des Portfolio-★ sehen Sie <strong><span class="lesson-term" data-term="rho" tabindex="0"><span class="lesson-term-pill">ρ</span><span class="lesson-term-tip" role="tooltip">Der griechische Buchstabe, den das Produkt für <strong>Korrelation</strong> verwendet — wie eng sich zwei Positionen gemeinsam bewegen, von −1 (gegenläufig) über 0 (unabhängig) bis +1 (im Gleichschritt). Ein positives ρ zwischen Aktien ist der Normalfall und nicht die Ausnahme, weshalb die Annahme von null stillschweigend unterschätzt, wie viel eines Portfolios auf einmal fallen kann. Das Produkt lässt Sie den Plan mit oder ohne System-ρ rechnen.<a class="lesson-term-more" href="/designer-site/glossary/rho">Full entry →</a></span></span> enthalten</strong> (Vorgabe, Schalter an) oder <strong>ρ nicht
+enthalten</strong>, wenn er aus ist. Das handelt davon, wie Positionen sich <strong>gemeinsam</strong> bewegen, nicht vom eigenen σ einer Position.
+Volle Behandlung: <a href="/designer-site/learn/diversification-correlation">Korrelation und Diversifikation</a>. Hier: wissen Sie, dass es
+das gibt — und dass ρ <strong>auszuschalten</strong> das ist, was viele Werkzeuge tun, indem sie die <span class="lesson-term" data-term="correlation" tabindex="0"><span class="lesson-term-pill">Korrelation</span><span class="lesson-term-tip" role="tooltip">Wie eng sich zwei Anlagen <strong>gemeinsam</strong> bewegen, von −1 (gegenläufig) über 0 (unabhängig) bis +1 (im Gleichschritt). Geschrieben als <strong>ρ (Rho)</strong>. Sie entscheidet, ob das Halten mehrerer Anlagen das Risiko tatsächlich streut: Anlagen, die alle gleichzeitig fallen, sind weniger diversifiziert, als ihre Anzahl vermuten lässt.<a class="lesson-term-more" href="/designer-site/glossary/correlation">Full entry →</a></span></span> zwischen Positionen
+ganz <strong>ignorieren</strong>.</p>
+<p>Bei typischem <strong>positivem</strong> Aktien-ρ unterschätzt das Ignorieren dieser Kreuzterme das Portfoliorisiko: σₚ
+fällt gegen √(Σ wᵢ²σᵢ²), und der ★ <strong>rutscht</strong> oft <strong>nach links</strong>. Negatives ρ arbeitet andersherum
+(die <span class="lesson-term" data-term="diversification" tabindex="0"><span class="lesson-term-pill">Diversifikation</span><span class="lesson-term-tip" role="tooltip">Geld auf Anlagen verteilen, die sich <strong>nicht</strong> alle gleich bewegen, sodass ein schlechtes Jahr für eine nicht für alle ein schlechtes Jahr ist. Viele Positionen zu halten ist nicht dasselbe — sind sie stark <strong>korreliert</strong>, verhalten sie sich wie eine einzige große Position unter mehreren Namen.<a class="lesson-term-more" href="/designer-site/glossary/diversification">Full entry →</a></span></span> wegzulassen kann das Risiko nach oben schieben). Die Korrelationskarte oben zeigt die Kreuzterme, die
+der Schalter einschließt oder auf null setzt.</p>
+<p><strong>Warum der ★ links von seinen Bestandteilen sitzt.</strong> Das ist das eine Stück Arithmetik, das sich lohnt, aus
+dieser Lektion mitzunehmen. Immer wenn Positionen weniger als vollkommen korreliert sind — jedes ρ <strong>unter 1</strong> — kommt das Portfolio-σ <strong>unter den wertgewichteten Durchschnitt</strong> der einzelnen σ, während das Portfolio-μ genau
+der wertgewichtete Durchschnitt der einzelnen μ ist. Rendite addiert sich; Risiko nicht. Diese Lücke ist der ganze
+mechanische Inhalt der <span class="lesson-term" data-term="diversification" tabindex="0"><span class="lesson-term-pill">Diversifikation</span><span class="lesson-term-tip" role="tooltip">Geld auf Anlagen verteilen, die sich <strong>nicht</strong> alle gleich bewegen, sodass ein schlechtes Jahr für eine nicht für alle ein schlechtes Jahr ist. Viele Positionen zu halten ist nicht dasselbe — sind sie stark <strong>korreliert</strong>, verhalten sie sich wie eine einzige große Position unter mehreren Namen.<a class="lesson-term-more" href="/designer-site/glossary/diversification">Full entry →</a></span></span>, und Sie können sie auf dem Diagramm sehen: der ★ sitzt
+<strong>links</strong> von der Stelle, an die eine gerade Mischung der Punkte ihn setzen würde, und je niedriger die ρ, desto weiter links
+sitzt er. Setzen Sie jedes ρ auf 1, und die Lücke schließt sich — der ★ landet auf dem gewichteten Durchschnitt, und das Gratisessen ist weg.</p>
+<aside class="lesson-saying" data-saying="free-lunch" data-cast="futuristic">
+<img class="lesson-saying-art" src="/designer-site/static/images/learn/cast/futuristic/saying-free-lunch.webp" alt="The learner reaches for a heaped platter that looks free, while the mentor lifts one corner to show a receipt that unrolls all the way to the floor." loading="lazy" decoding="async">
+<p class="lesson-saying-label"><span class="lesson-saying-wording">There's no free lunch.</span> <span class="lesson-saying-handle">TNFL</span></p>
+<div class="lesson-saying-body">
+<p>Der ★ sitzt links von seinen Bestandteilen, weil die Rendite sich addiert und das Risiko nicht. Die Mischung behält die durchschnittliche Rendite und zahlt dafür weniger als das durchschnittliche Risiko.</p>
+<p class="lesson-saying-exception"><strong>The exception:</strong> Diversification comes closest. Spreading money across holdings that do not move together lowers the risk without lowering the expected return.</p>
+</div>
+</aside>
+<p>Das ist Varianzarithmetik, kein Rat: es sagt, was die Mischung <strong>tut</strong>, und sagt nichts darüber,
+welche Positionen jemand besitzen sollte.</p>
+</div></details>
+
+</div>
+<h2 id="what-good-and-toxic-look-like" class="lesson-section-head" style="--i:3"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-good-and-toxic-look-like--body"><span class="lesson-section-title">Wie „gut“ und „toxisch“ aussehen</span></button></h2><div class="lesson-section-body" id="what-good-and-toxic-look-like--body" role="region" aria-labelledby="what-good-and-toxic-look-like" hidden>
+<table>
+<thead>
+<tr><th>Gegend (grob)</th><th>Lesen als</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Oben links</strong></td><td>Attraktive Annahmen — hohes μ, niedriges σ. Prüfen Sie, ob die Annahmen ehrlich sind.</td></tr>
+<tr><td><strong>Unten rechts</strong></td><td>Schmerzhafte Annahmen — niedriges μ, hohes σ. „Warum dies bei diesen Eingaben besitzen?“</td></tr>
+<tr><td><strong>Entlang einer Grenze</strong></td><td>Normaler Ausgleichsraum; der Portfolio-★ sollte angesichts der Gewichte Sinn ergeben.</td></tr>
+</tbody>
+</table>
+<p>Wenn eine einzelne konzentrierte Position weit rechts sitzt und nach Wert groß ist, werden der Stern und die
+<span class="lesson-term" data-term="monte-carlo" tabindex="0"><span class="lesson-term-pill">Monte Carlo</span><span class="lesson-term-tip" role="tooltip">Die Methode hinter einem Mehrpfad-Lauf: viele zufällige Renditepfade ziehen, den Plan entlang jedes Pfades durchrechnen und die Streuung der Ergebnisse ablesen. Benannt nach dem Casino, weil der Motor auf wiederholter Zufallsstichprobe statt auf einer Formel beruht – deshalb unterscheiden sich zwei Läufe desselben Plans leicht, und deshalb ist eine Erfolgsquote ein Anteil gezogener Zukünfte und kein Versprechen.<a class="lesson-term-more" href="/designer-site/glossary/monte-carlo">Full entry →</a></span></span>-Bänder des Plans diese Konzentration spüren, auch wenn der Rest des Buches ruhig aussieht.</p>
+</div>
+<h2 id="what-to-take-away" class="lesson-section-head" style="--i:4"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-to-take-away--body"><span class="lesson-section-title">Was Sie mitnehmen</span></button></h2><div class="lesson-section-body" id="what-to-take-away--body" role="region" aria-labelledby="what-to-take-away" hidden>
+<ul>
+<li>Risiko und Rendite gehören auf <strong>ein</strong> Bild für das Buch, das Sie wirklich halten.</li>
+<li><strong>Pfad:</strong> Risiko → Aktuelles Risiko → <strong>öffnen Sie Analytisches Risiko</strong>; setzen Sie den Haken bei <strong>Positionen</strong>.</li>
+<li>Der <strong>Stern</strong> ist das Portfolio; die Punkte sind die Bestandteile — und er sitzt <strong>links</strong> von ihrem gewichteten
+Durchschnitt, wann immer ρ &lt; 1. Mischen mittelt die Rendite und <em>weniger</em> als es das Risiko mittelt; diese Lücke
+ist, was Diversifikation ist.</li>
+<li>Annahmen treiben die Zeichnung — ändern Sie μ/σ (oder die Wachstumskategorien), und das Bild bewegt sich. Es ist
+<strong>keine</strong> Verkaufsliste, und es reagiert nicht auf die Preise des letzten Quartals.</li>
+<li>Der ★ ist immer die Mischung Ihrer <strong>Positionen</strong> — die Chips fügen Punkte hinzu, sie bewegen ihn nicht. Der <strong>Kegel</strong>
+unter der Punktwolke ist das Diagramm, das dem Chip Realvermögen folgt.</li>
+<li>Korrelation ist eine <strong>zweite</strong> Achse der Ehrlichkeit; behandeln Sie sie als Nächstes.</li>
+</ul>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Wo es in der App ist</span> <a class="lesson-jump-term" href="/designer-site/glossary/sigma">σ (sigma)</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Wo es in der Prognose erscheint</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__risk__line.risk.risk" title="Hingehen" aria-label="Hingehen: Risiko → Risiko σ"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__risk__line.risk.risk.png" width="181" height="32" alt="Risiko → Risiko σ" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+</div>
+<h2 id="where-to-go-next" class="lesson-section-head" style="--i:5"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="where-to-go-next--body"><span class="lesson-section-title">Wohin als Nächstes</span></button></h2><div class="lesson-section-body" id="where-to-go-next--body" role="region" aria-labelledby="where-to-go-next" hidden>
+<table>
+<thead>
+<tr><th>Thema</th><th>Lektion</th></tr>
+</thead>
+<tbody>
+<tr><td>Ehrlichkeit von Korrelation / ρ</td><td><a href="/designer-site/learn/diversification-correlation">Korrelation und Diversifikation</a></td></tr>
+<tr><td>Zinseszins ohne die Punktwolke</td><td><a href="/designer-site/learn/compound-growth-explained">Exponentielles Wachstum</a></td></tr>
+<tr><td>Rundgang durch den ganzen Haushalt</td><td><a href="/designer-site/learn/sample-family-financial-plan">Lernen Sie den Haushalt Springfield kennen</a></td></tr>
+</tbody>
+</table>
+<!--- ω <lesson_body> -->
+<!-- GENERATED host-hint: Dossier — Live plan canvas — Bind a sample dossier on the right. -->
+</div>
+</div>
+<details class="lesson-rebuild-by-hand"><summary><span class="lesson-rebuild-by-hand-summary-title">Diesen Plan von Hand nachbauen</span></summary><div class="lesson-rebuild-by-hand-body"><p>Die Karten auf der Leinwand zeigen die Konten und Zahlungsströme. Dies sind die Einstellungen außerhalb jeder Karte, aus dem Plan selbst gelesen, mit der Beschriftung des jeweiligen Steuerelements in der App. Ein als default markierter Wert bleibt unverändert.</p><table class="content-table">
+<thead>
+<tr>
+<th align="left">Setting</th>
+<th align="left">SC-04 Holdings Portfolio</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2" align="center"><strong>Household</strong></td></tr>
+<tr>
+<td align="left">Planning region</td>
+<td align="left">United States (default)</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Investor (Primary)</td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1980</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">65</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">90</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Taxes</strong></td></tr>
+<tr>
+<td align="left">Tax regime</td>
+<td align="left">United States</td>
+</tr>
+<tr>
+<td align="left">Filing status</td>
+<td align="left">Single</td>
+</tr>
+<tr>
+<td align="left">State of residence</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">First-year federal estimate</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">First-year state estimate</td>
+<td align="left">—</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Strategy</strong></td></tr>
+<tr>
+<td align="left">Residual withdrawal strategy</td>
+<td align="left">Pro-rata (default)</td>
+</tr>
+<tr>
+<td align="left">Roth conversions</td>
+<td align="left">Off</td>
+</tr>
+<tr>
+<td align="left">Definition of success</td>
+<td align="left">Liquidity crises allowed (default)</td>
+</tr>
+<tr>
+<td align="left">Glide path target</td>
+<td align="left">None (default)</td>
+</tr>
+<tr><td colspan="2" align="center"><strong>Advanced</strong></td></tr>
+<tr>
+<td align="left">Reporting inflation</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Cost of capital</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Growth assumptions</td>
+<td align="left">Growth overrides (default)</td>
+</tr>
+<tr>
+<td align="left">Currencies</td>
+<td align="left">Multiple currencies (default)</td>
+</tr>
+<tr>
+<td align="left">Default currency</td>
+<td align="left">USD (default)</td>
+</tr>
+<tr>
+<td align="left">Display currency</td>
+<td align="left">USD (default)</td>
+</tr>
+</tbody>
+</table>
+</div></details><div class="lesson-catalog-footer"><span class="lesson-region-badge" title="All regions"><span class="lesson-region-marker">🌐</span><span class="lesson-region-label muted">All regions</span></span><span class="lesson-tags"><span class="lesson-tags-label">Schlagwörter</span><span class="learn-chip">fundamentals</span><span class="learn-chip">risk</span><span class="learn-chip">return</span></span></div><div class="community-invite"><a class="community-callout" href="https://community.plusauri.com" target="_blank" rel="noopener noreferrer" data-community-join="community-join" aria-haspopup="dialog"><img src="/designer-site/static/images/community/join-callout.jpg" alt="Join Our Community" width="392" height="229" decoding="async" loading="lazy"></a><dialog id="community-join" class="community-join" aria-labelledby="community-join-title"><article class="community-join-panel"><button type="button" class="community-join-close" data-community-join-close aria-label="Close" title="Close">×</button><h2 id="community-join-title">Join the Plusauri community</h2><form class="community-join-form" action="/designer-site/api/community/join" method="post" novalidate data-msg-invalid="That email address does not look right." data-msg-failed="Something went wrong. You can still join directly at community.plusauri.com." data-msg-sending="Sending…"><p class="community-join-lead">A forum of people planning their own retirement, asking questions and helping each other. Anyone can read it. Members can post, and get a note when someone answers.</p><fieldset class="community-join-modes"><legend>How would you like to take part?</legend><label class="community-join-mode community-join-mode-participant"><input type="radio" name="mode" value="Participant" checked><span class="community-join-mode-art" aria-hidden="true"></span><strong>Participant</strong><small>Ask questions, share what you have learned, join the conversation.</small></label><label class="community-join-mode community-join-mode-lurker"><input type="radio" name="mode" value="Lurker"><span class="community-join-mode-art" aria-hidden="true"></span><strong>Lurker</strong><small>No account needed. Get the highlights by email and read the forum whenever you like.</small></label></fieldset><div class="community-join-who"><label class="community-join-name">First name (optional)<input type="text" name="firstName" autocomplete="given-name" maxlength="80"></label><label class="community-join-email">Your email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com" maxlength="254"></label></div><fieldset class="community-join-stage"><legend>Which describes you best? (optional)</legend><label><input type="radio" name="stage" value="Building"> Building and saving</label><label><input type="radio" name="stage" value="NearingRetirement"> Getting close to retirement</label><label><input type="radio" name="stage" value="Retired"> Retired</label></fieldset><input type="text" name="website" class="community-join-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="community-join-note community-join-for-participant">We will email you an invitation to community.plusauri.com. Accept it to finish joining.</p><p class="community-join-note community-join-for-lurker">We will add you to the Plusauri mailing list. The forum at community.plusauri.com is open to read anytime, no account needed. Unsubscribe whenever you like.</p><label class="community-join-news"><input type="checkbox" name="news"> Also send me occasional Plusauri news by email. Optional, and you can unsubscribe anytime.</label><p class="community-join-error" role="alert" hidden></p><footer class="community-join-actions"><button type="button" class="secondary outline" data-community-join-close>Not now</button><button type="submit"><span class="community-join-for-participant">Send my invitation</span><span class="community-join-for-lurker">Add me to the list</span></button></footer></form><div class="community-join-sent" hidden aria-live="polite"><h3>Check your inbox</h3><p data-status="invited" hidden>Your invitation is on its way. Accept it to choose a username and finish joining.</p><p data-status="queued" hidden>Thanks. We will send your invitation shortly.</p><p data-status="member" hidden>That address already belongs to a member. Sign in at community.plusauri.com.</p><p data-status="listed" hidden>Thanks, you are on the list. The forum is at community.plusauri.com whenever you want a look.</p><footer class="community-join-actions"><button type="button" data-community-join-close>Done</button></footer></div></article></dialog></div><hr class="lesson-disclaimer-rule" /><blockquote class="lesson-shared lesson-disclaimer" cite="learning-center:disclaimer"><p><strong>Bildungsinhalt — keine Beratung.</strong> Diese Lektionen vermitteln, wie Tutilis einen Plan modelliert und wie Sie das Ergebnis lesen. Die Haushalte, Salden und Outcomes darin sind für den Unterricht erfunden. Nichts hiervon ist Finanz-, Anlage-, Steuer- oder Rechtsberatung und keine Empfehlung, etwas zu kaufen, zu verkaufen oder zu halten. Ein Modell kann Ihre Umstände nicht kennen — prüfen Sie alles, was Sie aus einer Lektion mitnehmen, an Ihrer eigenen Situation und, wo es darauf ankommt, mit einer qualifizierten Fachperson.</p></blockquote><p class="lesson-privacy-link"><small><a href="/designer-site/privacy">Privacy</a></small></p></div>
+      </section>
+      <div class="lesson-split-gutter">
+        <div class="lesson-split-handle" role="separator" aria-orientation="vertical" aria-label="Resize lesson and app panes" tabindex="0"></div>
+        <div class="lesson-split-pill"><button class="lesson-split-widen" type="button" data-widen="app" data-label-widen="Show the app full width" data-label-restore="Show the lesson and the app side by side" title="Show the app full width" aria-label="Show the app full width"><span class="lesson-split-caret"></span></button><button class="lesson-split-widen" type="button" data-widen="lesson" data-label-widen="Show the lesson full width" data-label-restore="Show the lesson and the app side by side" title="Show the lesson full width" aria-label="Show the lesson full width"><span class="lesson-split-caret"></span></button></div>
+      </div>
+      <section class="app-pane">
+        <p class="canvas-omitted muted">The interactive plan is not in this copy.</p>
+      </section>
+    </div>
+  </body>
+</html>

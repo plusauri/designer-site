@@ -133,6 +133,8 @@ Start on the [[term:canvas]] beside this lesson — no install, and it is the sa
 the fund inside it is not drawn at all — and the fund is the thing this lesson is about. **Holding**
 opens accounts into the individual securities they contain.
 
+[[jump:birds-eye]]
+
 [[img:taxes-muni-beam-holding]]
 
 *Bird's Eye with **Holding** picked. Under **Assets**, the Brokerage account has opened into the
@@ -228,6 +230,8 @@ On the **federal** statement, **Modified AGI (MAGI)** sits above **Adjusted gros
 muni interest (~$6k). AGI itself does not include it. That is the MAGI add-back the IRMAA and
 NIIT lessons assume is usually zero.
 
+[[jump:magi|output__forecaster__forecaster.forecast-detail__taxes__taxes.federal-statement__line.tax.magi]]
+
 On the **California** statement, **Municipal bond interest added back** is a positive adjustment.
 
 [[img:taxes-muni-statement-muni]]
@@ -242,6 +246,8 @@ interest back. Match the **row labels**, not the exact dollars.*
 Federal AGI **includes** the interest — Treasuries are not a federal exclusion. MAGI equals AGI.
 California shows **US Treasury interest subtracted**. The federal bill is higher than on the muni
 plan; the state bill is not.
+
+[[jump:treasury-security]]
 
 [[img:taxes-muni-statement-treasury]]
 

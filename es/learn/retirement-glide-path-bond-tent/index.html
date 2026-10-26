@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Retirement Glide Paths: Bond Tent vs Rising Equity — Tutilis</title>
+    <meta name="description" content="How a glide path moves a portfolio toward safety before retirement and back toward stocks after it, the bond tent that Pfau and Kitces studied, and how to make a path in Tutilis actually trade inside your IRA. A path shows its benefit only when you make the same trades in your real accounts.">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://www.plusauri.com/learn/retirement-glide-path-bond-tent" rel="canonical">
+    <meta content="website" property="og:type">
+    <meta content="Plusauri" property="og:site_name">
+    <meta content="Retirement Glide Paths: Bond Tent vs Rising Equity — Tutilis" property="og:title">
+    <meta content="How a glide path moves a portfolio toward safety before retirement and back toward stocks after it, the bond tent that Pfau and Kitces studied, and how to make a path in Tutilis actually trade inside your IRA. A path shows its benefit only when you make the same trades in your real accounts." property="og:description">
+    <meta content="https://www.plusauri.com/learn/retirement-glide-path-bond-tent" property="og:url">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
+<script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
+    <script src="/designer-site/static/lang.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
+    <link href="/designer-site/static/site.css" rel="stylesheet">
+    <script src="/designer-site/static/lesson-split.js" defer="defer"></script>
+    <script src="/designer-site/static/trial-callout.js" defer="defer"></script>
+    <script src="/designer-site/static/community-join.js" defer="defer"></script>
+  </head>
+  <body class="lesson-split-body" data-prose-lang="es" data-lang="es">
+    <header class="lesson-split-header" id="lesson-split-header">
+      <nav>
+        <ul>
+          <li><strong><a href="/designer-site/">Plusauri</a></strong></li>
+          <li><a href="/designer-site/learn">Learning Center</a></li>
+          <li><a href="/designer-site/reference">Reference</a></li>
+        </ul>
+        <ul>
+          <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es" selected="selected">🇪🇸 Español</option></select></label></li>
+          <li><button class="lesson-header-collapse" type="button" aria-expanded="true" aria-controls="lesson-split-header" title="Hide header" aria-label="Hide header">▾</button></li>
+        </ul>
+      </nav>
+    </header>
+<button class="lesson-header-expand" type="button" id="lesson-header-expand" hidden="hidden" title="Show header" aria-label="Show header">▴ Plusauri · Learning Center</button><script type="application/json" id="lesson-canvas-dossiers">{"primary":"glide_bond_tent","alternates":["glide_constant_sixty_forty","glide_tent_steering_only"],"order":["glide_bond_tent","glide_constant_sixty_forty","glide_tent_steering_only"]}</script>
+    <div class="lesson-split has-plan-slots" data-plan-slot="0">
+      <section class="lesson-pane">
+        <p class="lesson-plan-switcher-lede">This lesson uses <strong>3 sample plans</strong> — switch anytime; color matches the bar between the columns.</p>
+        <div class="lesson-plan-switcher" role="group" aria-label="Plans this lesson can open">
+          <div class="lesson-plan-switcher-chips"><span class="lesson-plan-switcher-label">Plans</span><button class="learn-chip lesson-plan-chip plan-slot-0 is-active" type="button" data-canvas-dossier="glide_bond_tent" data-plan-slot="0" aria-pressed="true">Bond tent</button><button class="learn-chip lesson-plan-chip plan-slot-1" type="button" data-canvas-dossier="glide_constant_sixty_forty" data-plan-slot="1" aria-pressed="false">Constant 60/40</button><button class="learn-chip lesson-plan-chip plan-slot-2" type="button" data-canvas-dossier="glide_tent_steering_only" data-plan-slot="2" aria-pressed="false">Steering only</button></div>
+        </div>
+        <p class="lesson-plan-showing muted" id="lesson-plan-showing" aria-live="polite">On the right now: <span id="lesson-plan-showing-label">Bond tent</span></p>
+<a class="trial-callout trial-callout-comic" href="/designer-site/try" data-trial-callout data-variant="comic"><img src="/designer-site/static/images/trial/trial-comic.png" alt="14-Day Free Trial: Your Dossier on Your Desktop" width="458" height="187" decoding="async"></a>        <div class="lesson-prose" id="lesson-prose" data-next-key="KeyJ" data-previous-key="KeyK" data-lesson-id="glide_paths_through_retirement" data-lesson-slug="retirement-glide-path-bond-tent" data-loaded-lang="es"><h1>Rutas de glide en la jubilación</h1>
+<p class="lesson-situation"><span class="lesson-situation-label">La situación</span> Morgan tiene 63 años, se jubila en 2028 y tiene $1.5 million invertidos, cerca de un 77 % en acciones, la mayor parte en una IRA tradicional. Morgan quiere la menor cantidad de acciones en la fecha de jubilación, cuando una caída dolería más, y más acciones otra vez más adelante en una jubilación larga.</p>
+<div class="lesson-intro-card"><img class="lesson-media-ref ui-std-preview-wide" src="/designer-site/static/images/lessons/intro-cards/glide-paths-through-retirement.webp" alt="Manga-style poster titled Glide Paths Through Retirement. On a stormy ridge, a gray-haired retiree hauls hard on a guy rope with motion lines and a burst reading Rebalance!, pitching a yellow tent marked Bond. The tent's pole flies a red flag reading Retirement 2028, and inside it a backpack labeled Savings stays dry. A black storm cloud throws a lightning bolt with a burst reading CRASH!. Beside the tent a second hiker sits soaked and dismayed on a rolled-up tent that was never pitched, holding a paper labeled Plan. The retiree's speech bubble says: least stock at retirement, more after, but only if you trade. A panel labeled The lesson reads: A glide path is a plan for trades you have to make yourself. The banner reads: A path pays only if you trade." data-media-id="intro-card-glide-paths" loading="lazy" decoding="async" /></div>
+<details class="lesson-intro-chrome" data-intro-chrome="1" data-lesson-presentation="Reading"><summary><span class="lesson-intro-chrome-summary-title">How to use this case study</span></summary><div class="lesson-intro-chrome-body"><blockquote class="lesson-shared lesson-learning-preference" cite="learning-center:learning-preference"><p>New to the Learning Center, or want a map of the panels? Start with a tour: <a href="/designer-site/learn/getting-started-planning-software-tour"><strong>Reading Lesson (Getting Around)</strong></a> or <a href="/designer-site/learn/getting-started-video-tutorial"><strong>Screencast Lesson (Getting Around)</strong></a> — both walk through Tutilis next to a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">plan activo</span><span class="lesson-term-tip" role="tooltip">El producto Tutilis en funcionamiento junto a esta lección —navegación, Vista general, Previsor, herramientas y más— cargado con un ejemplo didáctico. Un dossier son los datos del plan; el plan en vivo es toda la superficie del producto con un dossier de ejemplo ya abierto para que pueda explorar. En la web, los ejemplos didácticos no se pueden editar como podrá editar su propio dossier en la aplicación completa.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> (to the right on a desktop-width screen, or below when stacked on a tablet).</p></blockquote><blockquote class="lesson-shared lesson-orientation" cite="learning-center:orientation"><p>This page — <strong>Glide paths through retirement</strong> — can open <strong>more than one</strong> <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live sample plan</span><span class="lesson-term-tip" role="tooltip">El producto Tutilis en funcionamiento junto a esta lección —navegación, Vista general, Previsor, herramientas y más— cargado con un ejemplo didáctico. Un dossier son los datos del plan; el plan en vivo es toda la superficie del producto con un dossier de ejemplo ya abierto para que pueda explorar. En la web, los ejemplos didácticos no se pueden editar como podrá editar su propio dossier en la aplicación completa.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to the text (to the right on a wide screen, or below on a tablet). Use the <strong>Live plans</strong> chips (and matching colored links in the prose) to switch without leaving this page; the colored bar near the plans shows which one is loaded. The walk-through stays in the text.</p></blockquote><blockquote class="lesson-shared lesson-product-relationship" cite="learning-center:product-relationship"><p>The <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">plan activo</span><span class="lesson-term-tip" role="tooltip">El producto Tutilis en funcionamiento junto a esta lección —navegación, Vista general, Previsor, herramientas y más— cargado con un ejemplo didáctico. Un dossier son los datos del plan; el plan en vivo es toda la superficie del producto con un dossier de ejemplo ya abierto para que pueda explorar. En la web, los ejemplos didácticos no se pueden editar como podrá editar su propio dossier en la aplicación completa.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to this page — usually <strong>to the right</strong> on a wide screen, or <strong>below</strong> on a tablet — is <strong>Tutilis</strong> running a teaching sample: the same <strong>financial planning product</strong> available as a desktop application (early preview). A <span class="lesson-term" data-term="dossier" tabindex="0"><span class="lesson-term-pill">dossier</span><span class="lesson-term-tip" role="tooltip">Su plan completo en Tutilis: las personas del hogar, lo que poseen y deben, los flujos de efectivo de entrada y salida, la configuración fiscal y los supuestos de planificación. Un dossier es una situación completa tal como la modela el producto.<a class="lesson-term-more" href="/designer-site/glossary/dossier">Full entry →</a></span></span> is the plan data; the live plan is the full product (navigation, Bird's Eye, Forecaster, tools) with a sample dossier already open so you can try the panels. <a href="/designer-site/pricing">See planned pricing</a>. On the web, Learning Center samples are <strong>not editable</strong> the way your own dossier will be in the full app. Your own household goes in the Tutilis desktop app — <a href="/designer-site/learn#intro-video-heading">the Learning Center front page has a short clip of that</a>.</p></blockquote></div></details>
+<div class="lesson-accordion" data-sections="10" style="--n:10"><h2 id="overview" class="lesson-section-head" style="--i:0"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="overview--body"><span class="lesson-section-title">Resumen</span></button></h2><div class="lesson-section-body" id="overview--body" role="region" aria-labelledby="overview" hidden>
+<p>Morgan tiene 63 años y se jubila en 2028, a los 65. Hay $1.5 million ahorrados: $1 million en una <span class="lesson-term" data-term="ira" tabindex="0"><span class="lesson-term-pill">IRA</span><span class="lesson-term-tip" role="tooltip">Individual Retirement Account — un envoltorio de jubilación que usted abre por su cuenta y no a través de un empleador. Existe en versión <strong>tradicional</strong> (antes de impuestos al entrar) y <strong>Roth</strong> (tributa al entrar), así que indicar la versión importa más que el acrónimo.<a class="lesson-term-more" href="/designer-site/glossary/ira">Full entry →</a></span></span> <span class="lesson-term" data-term="traditional" tabindex="0"><span class="lesson-term-pill">tradicional</span><span class="lesson-term-tip" role="tooltip">Una <strong>cuenta de jubilación</strong> en la que el impuesto se paga a la salida — no la descripción de una cuenta anticuada. El dinero entró <strong>antes</strong> del impuesto sobre la renta, creció sin tributar y tributa como renta ordinaria al retirarlo — así funcionan los 401(k) y las IRA tradicionales. El contraste son la <strong>Roth</strong> (tributa al entrar, libre de impuestos al salir) y la <strong>sujeta a impuestos</strong> (cuenta de corretaje, tributa sobre la marcha).<a class="lesson-term-more" href="/designer-site/glossary/traditional">Full entry →</a></span></span>, $450,000 en una <span class="lesson-term" data-term="brokerage" tabindex="0"><span class="lesson-term-pill">cuenta de corretaje</span><span class="lesson-term-tip" role="tooltip">Una cuenta de inversión <strong>sujeta a impuestos</strong> corriente — sin envoltorio especial de jubilación, sin límite de aportación y sin reglas de edad para los retiros. La contrapartida es que los dividendos y las ganancias realizadas tributan a medida que se producen, en lugar de diferirse. Suele llamarse el compartimento <strong>sujeto a impuestos</strong>, junto al tradicional y al Roth.<a class="lesson-term-more" href="/designer-site/glossary/brokerage">Full entry →</a></span></span> y $50,000 en una cuenta del mercado monetario. Alrededor del 77 por ciento está en un fondo indexado al S&amp;P 500, y el resto en un fondo del Tesoro a plazo intermedio y en efectivo. Es el mismo hogar que en la lección <a href="/designer-site/learn/de-risk-portfolio-before-retirement">Más seguridad al acercarse la jubilación</a>, que compara combinaciones constantes. Esta lección deja que la combinación cambie con los años.</p>
+<p>Una <span class="lesson-term" data-term="glide-path" tabindex="0"><span class="lesson-term-pill">senda de inversión</span><span class="lesson-term-tip" role="tooltip">Un cambio <strong>planificado</strong> de la asignación a lo largo del tiempo, clásicamente hacia bonos a medida que se acerca la jubilación, para que el riesgo baje a la vez que bajan los años disponibles para recuperarse de una pérdida. La palabra clave es *planificado*: una cartera que se desvía hacia lo que ha ido ganando no sigue una senda de transición, simplemente no está reequilibrada.<a class="lesson-term-more" href="/designer-site/glossary/glide-path">Full entry →</a></span></span> es una combinación objetivo que cambia con el tiempo. La que estudia esta lección es la <strong>tienda de bonos</strong>. Tiene la menor cantidad de acciones en la fecha de jubilación, cuando una caída hace el mayor daño, y vuelve a añadir acciones a medida que avanza la jubilación. La lección abre tres planes para Morgan:</p>
+<ul>
+<li><a href="#canvas-dossier:glide_bond_tent">Tienda de bonos</a> apunta a un 40 por ciento de acciones en la jubilación de 2028, y luego sube al 70 por ciento en 2043. La casilla <strong>Rebalancear dentro de las cuentas con ventajas fiscales</strong> está marcada, así que la IRA opera para seguir la ruta.</li>
+<li><a href="#canvas-dossier:glide_constant_sixty_forty">60/40 constante</a> mantiene una sola combinación durante todo el plan, también rebalanceada dentro de la IRA.</li>
+<li><a href="#canvas-dossier:glide_tent_steering_only">Solo orientación</a> tiene la misma tienda de bonos con la casilla sin marcar. La ruta está escrita, pero la IRA nunca opera para seguirla.</li>
+</ul>
+<p><strong>Una ruta de glide es un plan de operaciones que usted tiene que hacer.</strong> Cuando la tienda de bonos muestra un resultado mejor en esta lección, ese resultado supone que cada año Morgan entra en la IRA y vende o compra fondos para igualar el objetivo. Tutilis no puede hacer esas operaciones. Si no se hacen, la cartera real se comporta como el plan <em>Solo orientación</em>, y ese plan sale peor que cada uno de los otros dos en cada caída que esta lección prueba. La sección <a href="#only-if-you-trade">Solo si hace las operaciones</a> vuelve sobre esto.</p>
+</div>
+<h2 id="what-you-will-learn" class="lesson-section-head" style="--i:1"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-you-will-learn--body"><span class="lesson-section-title">Qué aprenderá</span></button></h2><div class="lesson-section-body" id="what-you-will-learn--body" role="region" aria-labelledby="what-you-will-learn" hidden>
+<aside class="lesson-plan">
+<p class="lesson-plan-label">La lección de hoy</p>
+<div class="lesson-plan-body">
+<p>Al final de esta lección debería poder responder estas preguntas. Cada una enlaza con la sección que la responde.</p>
+<ol>
+<li><strong>¿Qué es una ruta de glide, y por qué una subiría después de la jubilación?</strong> Véase <a href="#what-a-glide-path-is">Qué es una ruta de glide</a>.</li>
+<li><strong>¿Cómo defino una ruta de glide en Tutilis?</strong> Véase <a href="#set-a-path">Definir una ruta</a>.</li>
+<li><strong>¿Por qué una ruta necesita operaciones dentro de la IRA?</strong> Véase <a href="#steering-alone-lags">La orientación sola se queda atrás</a>.</li>
+<li><strong>¿Qué hace la tienda de bonos año por año?</strong> Véase <a href="#the-tent-year-by-year">La tienda año por año</a>.</li>
+<li><strong>¿Ayuda la tienda cuando una caída llega en la jubilación?</strong> Véase <a href="#when-a-crash-comes">Cuando llega una caída</a>.</li>
+<li><strong>¿Qué cuesta la tienda cuando los mercados son favorables?</strong> Véase <a href="#what-the-tent-costs">Lo que cuesta la tienda</a>.</li>
+<li><strong>¿Qué tiene que ocurrir en la vida real para que algo de esto sea cierto?</strong> Véase <a href="#only-if-you-trade">Solo si hace las operaciones</a>.</li>
+<li><strong>¿Qué encontraron Pfau y Kitces?</strong> Véase <a href="#what-the-research-says">Lo que dice la investigación</a>.</li>
+</ol>
+</div>
+</aside>
+</div>
+<h2 id="what-a-glide-path-is" class="lesson-section-head" style="--i:2"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-a-glide-path-is--body"><span class="lesson-section-title">Qué es una ruta de glide</span></button></h2><div class="lesson-section-body" id="what-a-glide-path-is--body" role="region" aria-labelledby="what-a-glide-path-is" hidden>
+<p>Una ruta de glide es un calendario de combinaciones objetivo, una para cada año del plan. Los fondos con fecha objetivo usan una. Un fondo 2030 tiene sobre todo acciones cuando sus partícipes son jóvenes y se mueve hacia los bonos a medida que se acerca 2030, y los gestores del fondo hacen las operaciones. La mayoría de las rutas de glide solo se mueven en una dirección, hacia los bonos, y siguen después de la fecha objetivo.</p>
+<p>Los años alrededor de la fecha de jubilación son aquellos en los que una caída del mercado hace el mayor daño. Antes de la jubilación un sueldo cubre el gasto, así que una caída es algo que se puede esperar. Después, el gasto de cada año se vende desde la cartera, y las participaciones vendidas cerca del suelo de una caída se quedan fuera de la recuperación. Es el <span class="lesson-term" data-term="sequence-of-returns" tabindex="0"><span class="lesson-term-pill">riesgo de secuencia de rendimientos</span><span class="lesson-term-tip" role="tooltip">El <strong>orden</strong> en que llegan los años buenos y malos. Dos planes con rendimientos medios idénticos pueden terminar en lugares muy distintos si uno sufre sus pérdidas pronto, mientras se retira dinero: vender en plena caída elimina participaciones que luego no estarán para la recuperación. Por eso el riesgo de la jubilación no se resume con un promedio, y por eso los años a ambos lados del día en que deja de trabajar pesan más de lo que su número sugiere.<a class="lesson-term-more" href="/designer-site/glossary/sequence-of-returns">Full entry →</a></span></span>, y la lección <a href="/designer-site/learn/sequence-of-returns-risk">El momento de una caída</a> lo mide.</p>
+<p>Ese riesgo es mayor en los primeros años de jubilación y se desvanece después. Cuando Morgan tiene 80 años, una caída todavía duele, pero quedan menos años que financiar, y el Seguro Social cubre una parte mayor de cada uno. Wade Pfau y Michael Kitces preguntaron qué se sigue de eso. Si el peligro alcanza su máximo en la fecha de jubilación, ahí es donde debe tenerse la menor cantidad de acciones, y las acciones pueden volver a subir después. La forma que resulta, que baja hacia la jubilación y sube después, es lo que Kitces llama una tienda de bonos: la participación de los bonos sube hasta un pico en la jubilación y baja a ambos lados.</p>
+</div>
+<h2 id="set-a-path" class="lesson-section-head" style="--i:3"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="set-a-path--body"><span class="lesson-section-title">Definir una ruta</span></button></h2><div class="lesson-section-body" id="set-a-path--body" role="region" aria-labelledby="set-a-path" hidden>
+<p>La ruta de Morgan se define en la <strong>Estrategia de movimientos de dinero</strong>, bajo <span class="lesson-nav-ref lesson-nav-ref--assumptions lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/assumptions.png" alt="Assumptions" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Supuestos</span><span class="lesson-term-tip" role="tooltip">Un <strong>área del riel principal</strong>. Las <strong>reglas</strong> bajo las que corre el pronóstico — crecimiento, impuestos, movimientos, definición de éxito, localidad, moneda. Lectura y escritura.</span></span>. La estrategia de retiro es <strong>Rebalanceo de senda</strong>, la única estrategia cuyas ventas y compras se orientan hacia una ruta de glide. La casilla <strong>Rebalancear dentro de las cuentas con ventajas fiscales</strong>, bajo la cuadrícula, también lee la ruta, y lo hace bajo cualquier estrategia. Bajo Rebalanceo de senda, la cuadrícula tiene una columna por año, y cada columna da la proporción de acciones nacionales, acciones internacionales, bonos y efectivo. Entre dos columnas el objetivo se mueve en línea recta, así que la tienda de bonos solo necesita tres: 2026 en la combinación actual de Morgan, 2028 en un 40 por ciento de acciones y 2043 en un 70 por ciento de acciones.</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Dónde está en la aplicación</span> <a class="lesson-jump-term" href="/designer-site/glossary/glide-path">senda de inversión</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--input">Dónde se ingresa</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="input__assumptions__assumptions-sell-invest__control.residual-capital-strategy__control.glide-rebalance" title="Ir allí" aria-label="Ir allí: Supuestos → Movimientos → Estrategia de movimientos de dinero → Rebalanceo de senda"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/input__assumptions__assumptions-sell-invest__control.residual-capital-strategy__control.glide-rebalance.png" width="609" height="32" alt="Supuestos → Movimientos → Estrategia de movimientos de dinero → Rebalanceo de senda" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+<p><img class="lesson-media-ref ui-control lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-editor-tent.es.png" alt="Assumptions, Movements, with Glide rebalance selected. Under it the glide path grid has three columns: 2026 at 77% stocks, 20% bonds and 3% cash, 2028 at 40%, 57% and 3%, and 2043 at 70%, 27% and 3%. Below the grid the Rebalance inside tax-sheltered accounts box is ticked." data-media-id="glide-paths-editor-tent" width="555" data-where="input__assumptions__assumptions-sell-invest" data-canvas-dossier="glide_bond_tent" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">La tienda de bonos bajo la Estrategia de movimientos de dinero. Tres columnas describen toda la ruta, y la casilla bajo la cuadrícula está marcada.</p>
+<p>La casilla bajo la cuadrícula, <strong>Rebalancear dentro de las cuentas con ventajas fiscales</strong>, decide si la ruta opera por su cuenta. La sección siguiente muestra qué ocurre sin ella. El plan constante usa los mismos controles con una sola columna, que mantiene esa combinación cada año:</p>
+<div class="lesson-img-row">
+<div class="lesson-img-cell">
+<p><img class="lesson-media-ref ui-control lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-editor-constant.es.png" alt="The same Movements controls for the constant plan: Glide rebalance selected, a glide path with a single 2026 column at 60% stocks, 37% bonds and 3% cash, and the Rebalance inside tax-sheltered accounts box ticked." data-media-id="glide-paths-editor-constant" width="555" data-where="input__assumptions__assumptions-sell-invest" data-canvas-dossier="glide_constant_sixty_forty" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">El 60/40 constante tiene una columna, y la casilla está marcada.</p>
+</div>
+<div class="lesson-img-cell">
+<p><img class="lesson-media-ref ui-control lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-editor-steering.es.png" alt="The Movements controls for the steering-only plan: the same three-column bond tent as the ticked plan, with the Rebalance inside tax-sheltered accounts box left unticked." data-media-id="glide-paths-editor-steering" width="555" data-where="input__assumptions__assumptions-sell-invest" data-canvas-dossier="glide_tent_steering_only" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Solo orientación tiene la misma tienda que el primer plan, y la casilla está sin marcar.</p>
+</div>
+</div>
+<details class="lesson-desktop-only" open>
+<summary class="lesson-desktop-only-label">Solo en la aplicación de escritorio</summary>
+<div class="lesson-desktop-only-body">
+<p>Para definir una ruta en su propio plan, abra <span class="lesson-nav-ref lesson-nav-ref--assumptions lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/assumptions.png" alt="Assumptions" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Supuestos</span><span class="lesson-term-tip" role="tooltip">Un <strong>área del riel principal</strong>. Las <strong>reglas</strong> bajo las que corre el pronóstico — crecimiento, impuestos, movimientos, definición de éxito, localidad, moneda. Lectura y escritura.</span></span>, ponga la <strong>Estrategia de movimientos de dinero</strong> en <strong>Rebalanceo de senda</strong> y marque <strong>Definir una combinación objetivo</strong>. La primera columna empieza en la combinación actual de su plan. Use <strong>Agregar año</strong> para cada punto de la ruta, escriba el año y las cuatro proporciones, y marque <strong>Rebalancear dentro de las cuentas con ventajas fiscales</strong> si su ruta baja las acciones con el tiempo.</p>
+</div>
+</details>
+</div>
+<h2 id="steering-alone-lags" class="lesson-section-head" style="--i:4"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="steering-alone-lags--body"><span class="lesson-section-title">La orientación sola se queda atrás</span></button></h2><div class="lesson-section-body" id="steering-alone-lags--body" role="region" aria-labelledby="steering-alone-lags" hidden>
+<p>Sin la casilla, una ruta de glide solo orienta el dinero que se mueve de todos modos. El efectivo sobrante de cada año compra lo que está por debajo de su objetivo, y el faltante de cada año se vende de lo que está por encima. Eso basta para seguir una ruta que añade acciones. Las acciones suelen crecer más rápido que los bonos, y mientras las acciones están por debajo de su objetivo el gasto de cada año se vende desde los bonos, así que ambos empujan la combinación en la dirección de la ruta. No basta para seguir una ruta que quita acciones.</p>
+<p>Abra <span class="lesson-nav-ref lesson-nav-ref--si-chart lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/si-chart.png" alt="Moves Chart" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Moves Chart</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>Mov</strong> = Movements. Gráfico de ventas, inversión y préstamo a lo largo de los años — cómo se cierra el neto operativo.</span></span> y cambie su encabezado de <strong>Movimientos</strong> a <strong>Asignaciones</strong>. Cada clase de activo tiene una franja con una barra por año, y una barra negra fina junto a cada año marca el objetivo de la ruta. Este es el plan de solo orientación:</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Dónde está en la aplicación</span> <a class="lesson-jump-term" href="/designer-site/glossary/glide-path">senda de inversión</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Dónde aparece en el pronóstico</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__forecaster__forecaster.forecast-detail__si-chart__si-chart.allocations" title="Ir allí" aria-label="Ir allí: Previsor → Detalle de previsión → 📈Mov → Glide Path"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__forecaster__forecaster.forecast-detail__si-chart__si-chart.allocations.png" width="464" height="32" alt="Previsor → Detalle de previsión → 📈Mov → Glide Path" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-alloc-steering.es.png" alt="The Glide Path view for the same tent with the box unticked: the domestic stock bars stay near 76% through 2028 and drift down slowly to about 69% by the late 2030s, well above the target ticks, which dip to 40% at retirement." data-media-id="glide-paths-alloc-steering" data-where="output__forecaster__forecaster.forecast-detail__si-chart__si-chart.allocations" data-canvas-dossier="glide_tent_steering_only" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">En solo orientación, las barras de acciones se quedan cerca del 76 por ciento en la jubilación de 2028, mientras las barras negras de objetivo bajan al 40 por ciento.</p>
+<p>El objetivo cae 37 puntos en dos años, y la cartera apenas se mueve. El sueldo de Morgan todavía cubre el gasto en 2027, así que no hay que vender nada, y el efectivo sobrante es pequeño al lado de $1.5 million. Después de la jubilación las ventas anuales salen primero de las acciones, porque las acciones son la clase más por encima de su objetivo, y la participación de las acciones baja solo alrededor de un punto al año. Alcanza el objetivo a principios de la década de 2040 solo porque el objetivo ha subido a su encuentro. Esta es la misma ruta con la casilla marcada:</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-alloc-tent.es.png" alt="Movements, Glide Path view, for the bond tent with the box ticked: one strip per asset class with a bar per year. The domestic stock bars fall from 77% in 2026 to 40% in 2028 and climb back to 70% by 2043, and each bar reaches the dark target tick across it." data-media-id="glide-paths-alloc-tent" data-where="output__forecaster__forecaster.forecast-detail__si-chart__si-chart.allocations" data-canvas-dossier="glide_bond_tent" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Tienda de bonos, casilla marcada. La barra de acciones de cada año se sienta sobre su barra negra de objetivo, hasta el 40 por ciento en 2028 y de vuelta al 70 por ciento en 2043.</p>
+<p>La diferencia es una operación dentro de la IRA. <span class="lesson-nav-ref lesson-nav-ref--si-table lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/si-table.png" alt="Moves Table" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Moves Table</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>Mov</strong> = Movements. Operaciones por holding del año seleccionado — vendido o invertido, después, %, y <strong>Why</strong>.</span></span> de 2027 la muestra. El plan vende unos $322,000 del fondo S&amp;P 500 dentro de la IRA y compra allí el mismo importe del fondo del Tesoro, y ambas líneas dan <strong>Rebalanceo · Traditional IRA</strong> como motivo:</p>
+<div class="lesson-img-row">
+<div class="lesson-img-cell">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-si-tent-2027.es.png" alt="Movements for 2027 on the bond tent: inside the Traditional IRA about $322,000 of the S&amp;P 500 fund is sold and the same amount buys the Intermediate Treasury fund, both lines marked Rebalance, Traditional IRA. Nothing is sold in the brokerage." data-media-id="glide-paths-si-tent-2027" data-where="output__forecaster__forecaster.forecast-detail__si-table" data-canvas-dossier="glide_bond_tent" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Tienda de bonos, 2027. La IRA cambia acciones por bonos del Tesoro. No sale dinero de la cuenta.</p>
+</div>
+<div class="lesson-img-cell">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-si-steering-2027.es.png" alt="Movements for 2027 on the steering-only plan: no sales at all, only reinvested distributions and a small purchase of the brokerage Treasury fund marked Glide rebalance." data-media-id="glide-paths-si-steering-2027" data-where="output__forecaster__forecaster.forecast-detail__si-table" data-canvas-dossier="glide_tent_steering_only" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Solo orientación, 2027. No se vende nada, y la ruta solo mueve la pequeña cantidad de efectivo sobrante.</p>
+</div>
+</div>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Dónde está en la aplicación</span> <a class="lesson-jump-term" href="/designer-site/glossary/rebalance">reequilibrar</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Dónde aparece en el pronóstico</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__forecaster__forecaster.forecast-detail__si-table__line.reason.sheltered-rebalance" title="Ir allí" aria-label="Ir allí: Previsor → Detalle de previsión → ▦Mov → Rebalancear dentro de las cuentas con ventajas fiscales"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__forecaster__forecaster.forecast-detail__si-table__line.reason.sheltered-rebalance.png" width="379" height="60" alt="Previsor → Detalle de previsión → ▦Mov → Rebalancear dentro de las cuentas con ventajas fiscales" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+<p>Una operación dentro de una IRA no es un retiro. No sale dinero de la cuenta, así que no hay impuesto que pagar ni penalización por retiro anticipado, y el estado de flujo de caja deja fuera el intercambio. Por eso Tutilis solo rebalancea dentro de las cuentas con ventajas fiscales: IRA y 401(k) tradicionales y <span class="lesson-term" data-term="roth" tabindex="0"><span class="lesson-term-pill">Roth</span><span class="lesson-term-tip" role="tooltip">Una <strong>cuenta de jubilación</strong> en la que usted paga el impuesto sobre la renta del dinero <strong>al entrar</strong>, y los retiros cualificados salen después <strong>libres de impuestos</strong> — la imagen inversa de la tradicional. Lleva el nombre del senador que impulsó la ley, así que la palabra por sí sola no dice nada. A los planes les importa porque los dólares Roth no se suman más tarde a la renta imponible, lo que los mantiene alejados de los umbrales ligados a los ingresos.<a class="lesson-term-more" href="/designer-site/glossary/roth">Full entry →</a></span></span>, planes 529 y HSA. Vender en la cuenta de corretaje para rebalancear realizaría ganancias de capital, así que el plan nunca lo hace. Una cuenta solo puede intercambiar entre fondos que ya tiene, así que la ruta se alcanza solo hasta donde los saldos con ventajas fiscales lo permiten. La IRA de Morgan tiene dos tercios del dinero, y eso sobra.</p>
+<p>El interruptor <strong>Asignaciones</strong> también funciona en la tabla de Movimientos de dinero, que entonces enumera el valor, la participación, el objetivo y la brecha de cada clase para el año seleccionado.</p>
+</div>
+<h2 id="the-tent-year-by-year" class="lesson-section-head" style="--i:5"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="the-tent-year-by-year--body"><span class="lesson-section-title">La tienda año por año</span></button></h2><div class="lesson-section-body" id="the-tent-year-by-year--body" role="region" aria-labelledby="the-tent-year-by-year" hidden>
+<p>La tienda de bonos tiene dos lados, y la casilla hace que ocurran los dos. En la bajada, de 2026 a 2028, la IRA vende acciones y compra bonos del Tesoro cada año hasta que la cartera está en un 40 por ciento de acciones en la fecha de jubilación de Morgan. En la subida, de 2028 a 2043, el objetivo añade dos puntos de acciones al año, y las operaciones van en la otra dirección.</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-si-tent-2035.es.png" alt="Movements for 2035 on the bond tent, on the rising side of the path: the year's spending is sold mostly from the Treasury funds, marked Glide rebalance, and inside the IRA a small swap marked Rebalance buys the S&amp;P 500 fund with Treasury fund proceeds." data-media-id="glide-paths-si-tent-2035" data-where="output__forecaster__forecaster.forecast-detail__si-table" data-canvas-dossier="glide_bond_tent" data-pick="2035,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Tienda de bonos, 2035. El gasto del año se vende sobre todo desde los bonos del Tesoro, y un pequeño intercambio dentro de la IRA compra acciones.</p>
+<p>En 2035 el objetivo es de alrededor del 54 por ciento de acciones. La mayor parte del gasto del año sale de los fondos del Tesoro, que son la clase por encima del objetivo, así que el gasto mismo mueve la combinación hacia más acciones. La IRA completa lo que falta con un pequeño intercambio. En el lado ascendente la ruta es fácil de seguir, porque los retiros hacen la mayor parte del trabajo. El lado descendente es donde las operaciones son grandes.</p>
+<p>El plan constante hace lo mismo alrededor de un punto fijo. Rebalancea a 60/40 cada año, vendiendo lo que ha crecido por encima de su participación:</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-alloc-constant.es.png" alt="The Glide Path view for the constant plan: the domestic stock bars sit at 60% every year from 2027 to the end, on the 60% target ticks, and the bond bars sit at 37%." data-media-id="glide-paths-alloc-constant" data-where="output__forecaster__forecaster.forecast-detail__si-chart__si-chart.allocations" data-canvas-dossier="glide_constant_sixty_forty" data-pick="2027,0" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">60/40 constante. Las barras de acciones se sientan sobre el objetivo del 60 por ciento cada año.</p>
+</div>
+<h2 id="when-a-crash-comes" class="lesson-section-head" style="--i:6"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="when-a-crash-comes--body"><span class="lesson-section-title">Cuando llega una caída</span></button></h2><div class="lesson-section-body" id="when-a-crash-comes--body" role="region" aria-labelledby="when-a-crash-comes" hidden>
+<p>Una ruta de glide está hecha para rendir cuando una caída llega cerca de la fecha de jubilación. Las Transformaciones pueden poner una caída histórica sobre el plan. Abra <span class="lesson-nav-ref lesson-nav-ref--transforms lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/transforms.png" alt="Transforms" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Transformaciones</span><span class="lesson-term-tip" role="tooltip">Un <strong>área del riel principal</strong>. El nombre <strong>Transformaciones</strong> significa: usted <strong>transforma una copia</strong> del plan — un qué-pasaría-si — sin reescribir el dossier original. Compare original y modificado lado a lado.</span></span>, seleccione <strong>Riesgo de secuencia de rendimientos</strong>, elija Estallido de las puntocom (2000) y comiéncelo en 2028, el primer año de Morgan sin sueldo:</p>
+<p><img class="lesson-media-ref ui-control lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-sor-editor.es.png" alt="Transforms' Sequence-of-returns risk editor switched on, with the Dot-com bust of 2000 selected and the start year set to 2028, Morgan's first year of retirement." data-media-id="glide-paths-sor-editor" width="387" data-where="modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sor-risk" data-canvas-dossier="glide_bond_tent" data-pick="2027,0" data-what-if="crash:dot-com-2000,2028" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Dónde está en la aplicación</span> <a class="lesson-jump-term" href="/designer-site/glossary/sequence-of-returns">secuencia de rendimientos</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--modifiable">Dónde probarlo como escenario hipotético</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sor-risk" title="Ir allí" aria-label="Ir allí: Transformaciones → Modificaciones → Modificables → Global → Caídas/Riesgo SOR"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sor-risk.png" width="587" height="32" alt="Transformaciones → Modificaciones → Modificables → Global → Caídas/Riesgo SOR" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button><p class="lesson-jump-note">Superpone una caída histórica a los primeros años del plan, a partir del año que elija.</p></li></ul></div></aside>
+<p>El estallido de las puntocom reproduce siete años de rendimientos de las acciones, con el mercado cerca de un 39 por ciento abajo en su punto más bajo. Transformaciones dibuja después cada plan dos veces en una misma escala, tal como está escrito bajo <em>Original</em> y con la caída bajo <em>Modificado</em>:</p>
+<div class="lesson-img-row">
+<div class="lesson-img-cell">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-bs-dotcom-tent.es.png" alt="Transforms' balance-sheet comparison for the bond tent, the plan as authored under Original on the left and with the Dot-com bust from 2028 under Modified on the right, on one shared scale. The Modified side dips to about $1.34 million in 2030, recovers through the 2030s, and ends about a third below the Original side." data-media-id="glide-paths-bs-dotcom-tent" data-where="output__transforms__forecaster.forecast-detail__bs-chart" data-canvas-dossier="glide_bond_tent" data-pick="2031,0" data-what-if="crash:dot-com-2000,2028" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">La tienda de bonos con el estallido de las puntocom desde 2028.</p>
+</div>
+<div class="lesson-img-cell">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-bs-dotcom-steering.es.png" alt="The same comparison for the steering-only plan: under the Dot-com bust from 2028 the Modified side falls to about $1.08 million in 2030, never recovers its footing, and is nearly empty by the last year." data-media-id="glide-paths-bs-dotcom-steering" data-where="output__transforms__forecaster.forecast-detail__bs-chart" data-canvas-dossier="glide_tent_steering_only" data-pick="2031,0" data-what-if="crash:dot-com-2000,2028" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Solo orientación con la misma caída.</p>
+</div>
+</div>
+<p>Los dos planes tienen la misma ruta escrita en la misma cuadrícula. La tienda de bonos entra en la caída con un 40 por ciento de acciones y cae a unos $1.37 million en 2030. El plan de solo orientación entra con un 76 por ciento de acciones y cae a unos $1.10 million. La tienda termina el plan con unos $1.05 million, y solo orientación con unos $210,000, una quinta parte. El plan 60/40 constante queda entre ellos y termina con unos $840,000.</p>
+<p>La tienda también sigue operando durante la caída. Cuando las acciones bajan, la participación de las acciones cae por debajo del objetivo, y el intercambio de la IRA vuelve a comprar acciones hasta ese objetivo, a precios bajos. En 2030, el año más bajo de la caída, el plan no vende ninguna acción. Vende bonos del Tesoro dentro de la IRA, paga el gasto del año con ellos y usa unos $141,000 del producto para comprar el fondo S&amp;P 500:</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-si-dotcom-tent-2030.es.png" alt="Movements for 2030 on the bond tent with the Dot-com bust from 2028, the crash's lowest year: no stock is sold anywhere. Inside the Traditional IRA about $196,000 of the Treasury fund is sold, and about $141,000 of it buys the S&amp;P 500 fund, marked Rebalance, Traditional IRA. The rest pays the year's spending, marked Glide rebalance." data-media-id="glide-paths-si-dotcom-tent-2030" data-where="output__transforms__forecaster.forecast-detail__si-table" data-canvas-dossier="glide_bond_tent" data-pick="2030,0" data-what-if="crash:dot-com-2000,2028" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Tienda de bonos en 2030, con el estallido de las puntocom desde 2028. Los bonos del Tesoro pagan el año y compran acciones en el suelo.</p>
+<p>Una caída en una ruta es una sola historia. Aquí están los mismos planes sobre 1.000 trayectorias de mercado, con cada caída reproducida desde 2028, como la proporción de trayectorias que tienen éxito:</p>
+<table>
+<thead>
+<tr><th>Caída desde 2028</th><th align="right">60/40 constante</th><th align="right">Tienda de bonos</th><th align="right">Solo orientación</th></tr>
+</thead>
+<tbody>
+<tr><td>Ninguno</td><td align="right">88 %</td><td align="right">89 %</td><td align="right">83 %</td></tr>
+<tr><td>Estallido de las puntocom (2000)</td><td align="right">81 %</td><td align="right">85 %</td><td align="right">63 %</td></tr>
+<tr><td>Mercado bajista de la crisis del petróleo (1973)</td><td align="right">83 %</td><td align="right">85 %</td><td align="right">70 %</td></tr>
+<tr><td>Crisis financiera mundial (2007)</td><td align="right">92 %</td><td align="right">94 %</td><td align="right">78 %</td></tr>
+<tr><td>Gran Crac (1929)</td><td align="right">32 %</td><td align="right">65 %</td><td align="right">1 %</td></tr>
+</tbody>
+</table>
+<p>La tienda de bonos vence al plan constante en cada caída, y por el margen mayor en la más profunda. La fila de la crisis financiera mundial está más alta que la fila sin caída, porque esa reproducción termina con una recuperación fuerte, que eleva todos los planes. La columna Solo orientación es la más baja en cada fila.</p>
+<div class="lesson-img-row">
+<div class="lesson-img-cell">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-nw-dotcom-constant.es.png" alt="The distribution of ending net worth for the constant 60/40 plan over 1,000 market paths with the Dot-com bust from 2028, about 78% of them successful." data-media-id="glide-paths-nw-dotcom-constant" data-where="output__transforms__forecaster.simulation-summary" data-canvas-dossier="glide_constant_sixty_forty" data-pick="2027,0" data-what-if="crash:dot-com-2000,2028" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">60/40 constante, 1.000 trayectorias con el estallido de las puntocom desde 2028.</p>
+</div>
+<div class="lesson-img-cell">
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/glide-paths-nw-dotcom-tent.es.png" alt="The same distribution for the bond tent on the same axis: fewer paths end below zero, about 83% are successful, and the middle of the cloud sits further right." data-media-id="glide-paths-nw-dotcom-tent" data-where="output__transforms__forecaster.simulation-summary" data-canvas-dossier="glide_bond_tent" data-pick="2027,0" data-what-if="crash:dot-com-2000,2028" data-jump-tip="Ir allí" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Tienda de bonos, la misma caída, en el mismo eje.</p>
+</div>
+</div>
+</div>
+<h2 id="what-the-tent-costs" class="lesson-section-head" style="--i:7"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-the-tent-costs--body"><span class="lesson-section-title">Lo que cuesta la tienda</span></button></h2><div class="lesson-section-body" id="what-the-tent-costs--body" role="region" aria-labelledby="what-the-tent-costs" hidden>
+<p>Cuando los mercados son favorables, una mayor proporción de acciones deja al final un patrimonio mayor. En la trayectoria esperada sin caída, que Tutilis dibuja como el GMF, el plan de solo orientación termina con unos $1.70 million, el plan 60/40 constante con unos $1.55 million y la tienda de bonos con unos $1.49 million. Tener un 40 por ciento de acciones en los primeros años de jubilación renuncia a algo de crecimiento, y la tienda termina alrededor de un 4 por ciento por debajo del plan constante.</p>
+<p>La contrapartida es la misma que en <a href="/designer-site/learn/de-risk-portfolio-before-retirement">Más seguridad al acercarse la jubilación</a>. La tienda renuncia a un poco en el futuro medio para salir mucho mejor en los malos. En 1.000 trayectorias sin caída todavía tiene éxito un poco más a menudo que el plan constante, alrededor del 89 por ciento frente al 88 por ciento, porque las trayectorias malas cuentan en contra del éxito y las buenas no.</p>
+</div>
+<h2 id="only-if-you-trade" class="lesson-section-head" style="--i:8"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="only-if-you-trade--body"><span class="lesson-section-title">Solo si hace las operaciones</span></button></h2><div class="lesson-section-body" id="only-if-you-trade--body" role="region" aria-labelledby="only-if-you-trade" hidden>
+<p>Cada resultado de esta lección para la tienda de bonos y el plan constante supone que las operaciones de <span class="lesson-nav-ref lesson-nav-ref--si-table lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/si-table.png" alt="Moves Table" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Moves Table</span><span class="lesson-term-tip" role="tooltip">Un chip de <strong>Forecast Detail</strong>. <strong>Mov</strong> = Movements. Operaciones por holding del año seleccionado — vendido o invertido, después, %, y <strong>Why</strong>.</span></span> ocurren de verdad. En 2027 eso significa que Morgan vende unos $322,000 del fondo S&amp;P 500 en la IRA y compra con ellos el fondo del Tesoro. En un año de caída significa comprar acciones mientras las noticias están en lo peor. Tutilis modela esas operaciones. No puede hacerlas, y su plan tampoco.</p>
+<p>Si las operaciones no se hacen, la cartera real es el plan <em>Solo orientación</em>. La ruta sigue en el plan, y la cartera real no la sigue. Como muestra la tabla de caídas, eso es peor que no haber tenido nunca una ruta y mantener 60/40, porque la cartera entra en la jubilación cerca del 76 por ciento de acciones y luego vende acciones en el suelo para pagar cada año.</p>
+<p>Unas pocas cosas hacen más probable que las operaciones ocurran:</p>
+<ul>
+<li><strong>Póngales una fecha.</strong> Rebalancee una vez al año en una fecha fija, y use la tabla de Asignaciones de ese año como lista de operaciones.</li>
+<li><strong>Opere dentro de la IRA.</strong> Las operaciones no cuestan impuestos allí, y por eso el plan las hace allí. Vender en una cuenta de corretaje para rebalancear puede realizar ganancias de capital que la previsión no supone.</li>
+<li><strong>Deje que lo haga un fondo.</strong> Un fondo con fecha objetivo o un fondo equilibrado se rebalancea solo. La ruta de un fondo con fecha objetivo suele seguir bajando después de la fecha objetivo, así que no es una tienda de bonos.</li>
+<li><strong>Compruebe que la casilla coincida con su conducta.</strong> Si sabe que no va a rebalancear, desmarque la casilla, y la previsión le mostrará el resultado de solo orientación en lugar de un resultado que usted no va a obtener.</li>
+</ul>
+</div>
+<h2 id="what-the-research-says" class="lesson-section-head" style="--i:9"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-the-research-says--body"><span class="lesson-section-title">Lo que dice la investigación</span></button></h2><div class="lesson-section-body" id="what-the-research-says--body" role="region" aria-labelledby="what-the-research-says" hidden>
+<p>Wade Pfau y Michael Kitces probaron rutas de glide en «Reducing Retirement Risk with a Rising Equity Glide Path» (2014). Simularon jubilaciones con rutas que empezaban con pocas acciones y añadían más cada año, y las compararon con combinaciones constantes y con rutas que seguían bajando. Las rutas que empezaban en alrededor del 30 por ciento de acciones y subían a alrededor del 60 por ciento salieron mejor que un 60 por ciento constante. Fracasaron con menos frecuencia, y cuando fracasaron, fracasaron por menos. Las rutas descendentes que usaban muchos asesores salieron peor que las dos.</p>
+<p>Su explicación es la que muestra esta lección. Los peores desenlaces vienen de una caída al principio de la jubilación, así que entonces es cuando debe tenerse la menor cantidad de acciones. Más tarde, cuando una caída importa menos, unas acciones en alza añaden crecimiento. Kitces nombró después toda la forma, desde los años anteriores a la jubilación hasta la subida que la sigue, la tienda de bonos.</p>
+<p>La tienda de Morgan es una versión más suave de la de ellos, del 40 por ciento que sube al 70 por ciento, y la tabla de caídas de arriba muestra el mismo patrón en el plan de Morgan. La investigación hace el mismo supuesto que la previsión: la cartera se rebalancea a la ruta cada año.</p>
+<details class="lesson-bibliography" open>
+<summary class="lesson-bibliography-label">Obras citadas — las publicaciones detrás de las cifras</summary>
+<div class="lesson-bibliography-body">
+<ul>
+<li>Wade D. Pfau y Michael E. Kitces, «Reducing Retirement Risk with a Rising Equity Glide Path», <em>Journal of Financial Planning</em> 27, n.º 1 (enero de 2014): 38–45, por el resultado de una participación creciente en acciones y la comparación con las rutas constantes y las descendentes.</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+<details class="lesson-rebuild-by-hand"><summary><span class="lesson-rebuild-by-hand-summary-title">Reconstruir este plan a mano</span></summary><div class="lesson-rebuild-by-hand-body"><p>Las tarjetas del lienzo muestran las cuentas y los flujos. Estos son los ajustes que viven fuera de cualquier tarjeta, leídos de cada plan que abre esta lección, con la etiqueta que lleva cada control en la aplicación. Un valor marcado default se deja como está.</p><table class="content-table">
+<thead>
+<tr>
+<th align="left">Setting</th>
+<th align="left">Bond tent</th>
+<th align="left">Constant 60/40</th>
+<th align="left">Steering only</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="4" align="center"><strong>Household</strong></td></tr>
+<tr>
+<td align="left">Planning region</td>
+<td align="left">United States (default)</td>
+<td align="left">United States (default)</td>
+<td align="left">United States (default)</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Morgan (Primary)</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1963</td>
+<td align="left">1963</td>
+<td align="left">1963</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">65</td>
+<td align="left">65</td>
+<td align="left">65</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">93</td>
+<td align="left">93</td>
+<td align="left">93</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Taxes</strong></td></tr>
+<tr>
+<td align="left">Tax regime</td>
+<td align="left">United States</td>
+<td align="left">United States</td>
+<td align="left">United States</td>
+</tr>
+<tr>
+<td align="left">Filing status</td>
+<td align="left">Single</td>
+<td align="left">Single</td>
+<td align="left">Single</td>
+</tr>
+<tr>
+<td align="left">State of residence</td>
+<td align="left">None</td>
+<td align="left">None</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">First-year federal estimate</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">First-year state estimate</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Strategy</strong></td></tr>
+<tr>
+<td align="left">Residual withdrawal strategy</td>
+<td align="left">Glide rebalance</td>
+<td align="left">Glide rebalance</td>
+<td align="left">Glide rebalance</td>
+</tr>
+<tr>
+<td align="left">Roth conversions</td>
+<td align="left">Off</td>
+<td align="left">Off</td>
+<td align="left">Off</td>
+</tr>
+<tr>
+<td align="left">Definition of success</td>
+<td align="left">Liquidity crises allowed (default)</td>
+<td align="left">Liquidity crises allowed (default)</td>
+<td align="left">Liquidity crises allowed (default)</td>
+</tr>
+<tr>
+<td align="left">Glide path target</td>
+<td align="left">Set (3 target allocations)</td>
+<td align="left">Set (1 target allocation)</td>
+<td align="left">Set (3 target allocations)</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">Target for 2026</td>
+<td align="left">Domestic stocks 77% · Bonds 20% · Cash 3%</td>
+<td align="left">Domestic stocks 60% · Bonds 37% · Cash 3%</td>
+<td align="left">Domestic stocks 77% · Bonds 20% · Cash 3%</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">Target for 2028</td>
+<td align="left">Domestic stocks 40% · Bonds 57% · Cash 3%</td>
+<td align="left">—</td>
+<td align="left">Domestic stocks 40% · Bonds 57% · Cash 3%</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">Target for 2043</td>
+<td align="left">Domestic stocks 70% · Bonds 27% · Cash 3%</td>
+<td align="left">—</td>
+<td align="left">Domestic stocks 70% · Bonds 27% · Cash 3%</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">Rebalance inside tax-sheltered accounts</td>
+<td align="left">On</td>
+<td align="left">On</td>
+<td align="left">Off (default)</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Advanced</strong></td></tr>
+<tr>
+<td align="left">Reporting inflation</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Cost of capital</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Growth assumptions</td>
+<td align="left">Growth overrides (default)</td>
+<td align="left">Growth overrides (default)</td>
+<td align="left">Growth overrides (default)</td>
+</tr>
+<tr>
+<td align="left">Currencies</td>
+<td align="left">Multiple currencies (default)</td>
+<td align="left">Multiple currencies (default)</td>
+<td align="left">Multiple currencies (default)</td>
+</tr>
+<tr>
+<td align="left">Default currency</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+</tr>
+<tr>
+<td align="left">Display currency</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+</tr>
+</tbody>
+</table>
+</div></details><div class="lesson-catalog-footer"><span class="lesson-region-badge" title="All regions"><span class="lesson-region-marker">🌐</span><span class="lesson-region-label muted">All regions</span></span><span class="lesson-tags"><span class="lesson-tags-label">Etiquetas</span><span class="learn-chip">glide-path</span><span class="learn-chip">bond-tent</span><span class="learn-chip">rising-equity</span><span class="learn-chip">rebalancing</span><span class="learn-chip">asset-allocation</span><span class="learn-chip">sequence-of-returns</span><span class="learn-chip">de-risking</span><span class="learn-chip">pfau</span><span class="learn-chip">kitces</span></span></div><div class="community-invite"><a class="community-callout" href="https://community.plusauri.com" target="_blank" rel="noopener noreferrer" data-community-join="community-join" aria-haspopup="dialog"><img src="/designer-site/static/images/community/join-callout.jpg" alt="Join Our Community" width="392" height="229" decoding="async" loading="lazy"></a><dialog id="community-join" class="community-join" aria-labelledby="community-join-title"><article class="community-join-panel"><button type="button" class="community-join-close" data-community-join-close aria-label="Close" title="Close">×</button><h2 id="community-join-title">Join the Plusauri community</h2><form class="community-join-form" action="/designer-site/api/community/join" method="post" novalidate data-msg-invalid="That email address does not look right." data-msg-failed="Something went wrong. You can still join directly at community.plusauri.com." data-msg-sending="Sending…"><p class="community-join-lead">A forum of people planning their own retirement, asking questions and helping each other. Anyone can read it. Members can post, and get a note when someone answers.</p><fieldset class="community-join-modes"><legend>How would you like to take part?</legend><label class="community-join-mode community-join-mode-participant"><input type="radio" name="mode" value="Participant" checked><span class="community-join-mode-art" aria-hidden="true"></span><strong>Participant</strong><small>Ask questions, share what you have learned, join the conversation.</small></label><label class="community-join-mode community-join-mode-lurker"><input type="radio" name="mode" value="Lurker"><span class="community-join-mode-art" aria-hidden="true"></span><strong>Lurker</strong><small>No account needed. Get the highlights by email and read the forum whenever you like.</small></label></fieldset><div class="community-join-who"><label class="community-join-name">First name (optional)<input type="text" name="firstName" autocomplete="given-name" maxlength="80"></label><label class="community-join-email">Your email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com" maxlength="254"></label></div><fieldset class="community-join-stage"><legend>Which describes you best? (optional)</legend><label><input type="radio" name="stage" value="Building"> Building and saving</label><label><input type="radio" name="stage" value="NearingRetirement"> Getting close to retirement</label><label><input type="radio" name="stage" value="Retired"> Retired</label></fieldset><input type="text" name="website" class="community-join-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="community-join-note community-join-for-participant">We will email you an invitation to community.plusauri.com. Accept it to finish joining.</p><p class="community-join-note community-join-for-lurker">We will add you to the Plusauri mailing list. The forum at community.plusauri.com is open to read anytime, no account needed. Unsubscribe whenever you like.</p><label class="community-join-news"><input type="checkbox" name="news"> Also send me occasional Plusauri news by email. Optional, and you can unsubscribe anytime.</label><p class="community-join-error" role="alert" hidden></p><footer class="community-join-actions"><button type="button" class="secondary outline" data-community-join-close>Not now</button><button type="submit"><span class="community-join-for-participant">Send my invitation</span><span class="community-join-for-lurker">Add me to the list</span></button></footer></form><div class="community-join-sent" hidden aria-live="polite"><h3>Check your inbox</h3><p data-status="invited" hidden>Your invitation is on its way. Accept it to choose a username and finish joining.</p><p data-status="queued" hidden>Thanks. We will send your invitation shortly.</p><p data-status="member" hidden>That address already belongs to a member. Sign in at community.plusauri.com.</p><p data-status="listed" hidden>Thanks, you are on the list. The forum is at community.plusauri.com whenever you want a look.</p><footer class="community-join-actions"><button type="button" data-community-join-close>Done</button></footer></div></article></dialog></div><hr class="lesson-disclaimer-rule" /><blockquote class="lesson-shared lesson-disclaimer" cite="learning-center:disclaimer"><p><strong>Contenido educativo — no es asesoramiento.</strong> Estas lecciones enseñan cómo Tutilis modela un plan y cómo leer lo que muestra. Los hogares, saldos y resultados que aparecen se inventaron para enseñar. Nada de esto es asesoramiento financiero, de inversión, fiscal o legal, ni una recomendación de comprar, vender o mantener nada. Un modelo no puede conocer sus circunstancias: contraste lo que tome de una lección con su propia situación y, cuando importe, con un profesional cualificado.</p></blockquote><p class="lesson-privacy-link"><small><a href="/designer-site/privacy">Privacy</a></small></p></div>
+      </section>
+      <div class="lesson-split-gutter" data-plan-slot="0">
+        <div class="lesson-split-handle" role="separator" aria-orientation="vertical" aria-label="Resize lesson and app panes" tabindex="0"></div>
+        <div class="lesson-split-pill"><button class="lesson-split-widen" type="button" data-widen="app" data-label-widen="Show the app full width" data-label-restore="Show the lesson and the app side by side" title="Show the app full width" aria-label="Show the app full width"><span class="lesson-split-caret"></span></button><button class="lesson-split-widen" type="button" data-widen="lesson" data-label-widen="Show the lesson full width" data-label-restore="Show the lesson and the app side by side" title="Show the lesson full width" aria-label="Show the lesson full width"><span class="lesson-split-caret"></span></button></div>
+      </div>
+      <section class="app-pane" data-plan-slot="0" data-canvas-dossier="glide_bond_tent">
+        <p class="canvas-omitted muted">The interactive plan is not in this copy.</p>
+      </section>
+    </div>
+  </body>
+</html>

@@ -91,6 +91,8 @@ Reading the radar takes three moves: turn the **Cliffs** view on, select a year,
 You do not need a new nav destination. The radar lives **in place** on the path you already use to
 read a year.
 
+[[jump:cliff-radar]]
+
 [[img:cliff-radar-lanes-niit-nearby]]
 
 *The whole card. **Upper canvas:** MAGI and lookback MAGI as solid bars — your path — against
@@ -131,6 +133,8 @@ On **Banks MAGI Cliffs**, persons are Medicare age and lookback MAGI can sit abo
    - **Surcharge** amount when the engine assessed one
 4. Confirm the surcharge matches [[nav:cf-table]] / [[nav:cf-chart]] for the same year — still a **healthcare**
    outflow, not a federal tax-statement line.
+
+[[jump:surcharge|output__forecaster__forecaster.forecast-detail__cf-table__line.cf.irmaa-surcharge]]
 
 Dollar amounts depend on seed, [[term:fid]], and year. Match the **labels and the lookback story**, not
 exact figures.

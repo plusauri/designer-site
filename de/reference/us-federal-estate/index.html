@@ -31,15 +31,22 @@
         <ul>
           <li><a href="/designer-site/">Start</a></li>
           <li><a href="/designer-site/learn" class="nav-learn">Learning Center</a></li>
-          <li><a href="/designer-site/reference">Reference</a></li>
-          <li><a href="/designer-site/glossary">Glossary</a></li>
+          <li>
+            <details class="dropdown nav-resources"><summary>Resources</summary>
+              <ul>
+                <li><a href="/designer-site/start-here">Start Here</a></li>
+                <li><a href="/designer-site/reference">Reference</a></li>
+                <li><a href="/designer-site/glossary">Glossary</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="/designer-site/pricing">Preise</a></li>
           <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de" selected="selected">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
           <li><button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Light theme — click for dark" title="Light theme — click for dark">☀</button></li>
         </ul>
       </nav>
     </header>
-    <main class="container"><div class="reference-hub">
+    <main class="container"><div class="reference-hub" data-tint="gold">
   <p class="catalog-crumb"><a href="/designer-site/reference"><span class="catalog-crumb-arrow" aria-hidden="true">←</span>All reference</a></p>
   <h1>Federal estate tax</h1>
   <p class="reference-lede">The IRC §2001(c) unified rate schedule and the per-person basic exclusion amount.</p>
@@ -47,19 +54,25 @@
   <p class="reference-source">Source: IRC §2001(c) — unified transfer-tax rate schedule — U.S. Code</p>
   <p class="reference-source-url"><a href="https://www.law.cornell.edu/uscode/text/26/2001">https://www.law.cornell.edu/uscode/text/26/2001</a></p>
   <div class="reference-honesty reference-usage">
-    <h3>Where we use this · Used in your forecast</h3>
+    <h3><span class="reference-honesty-kicker">Where we use this</span><span class="reference-use-pill reference-use-pill--in-forecast">Used in your forecast</span></h3>
     <ul>
       <li>Applied once at the end of the projection, as a transform over final net worth — not inside the Monte Carlo run.</li>
       <li>Uses the unified-credit method: the tax on the whole estate minus the tax on the exclusion.</li>
       <li>Only runs when the plan opts into estate tax; the estate card shows the full derivation.</li>
     </ul>
   </div>
-  <div class="reference-honesty">
+  <div class="reference-honesty reference-limits">
     <h3>Not modeled</h3>
     <p>Portability of a deceased spouse's unused exclusion; lifetime gift offsets; trust structures; generation-skipping transfer tax.</p>
   </div>
   <form action="/designer-site/reference/us-federal-estate" method="get" class="reference-variant-form"><label>Year<input type="number" name="year" value="2025" min="1990" max="2100"></label><button type="submit">Show</button></form>
-  <div class="reference-table-wrap"><table class="content-table">
+  <section class="reference-sheet reference-sheet--tax">
+    <header class="reference-sheet-head">
+      <div class="reference-sheet-titles">
+        <div class="reference-sheet-kicker"><span>Tax schedule</span><span class="reference-sheet-category">Estate &amp; wealth</span></div>
+      </div>
+<span class="reference-sheet-year"><span class="reference-sheet-year-label">Tax year</span>2025</span><span class="reference-sheet-seal" aria-hidden="true"><span class="reference-sheet-seal-glyph">%</span><span class="reference-sheet-seal-word">Tax</span></span></header>
+    <div class="reference-table-wrap"><table class="content-table">
 <thead>
 <tr>
 <th align="left">Taxable amount over</th>
@@ -124,8 +137,9 @@
 </tbody>
 </table>
 </div>
+  </section>
 </div>
 </main>
-    <footer class="container"><small>© Plusauri, LLC — besitzen Sie Ihren Finanzplan.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Bildungsinhalt — keine Finanz-, Anlage-, Steuer- oder Rechtsberatung.</small></footer>
+    <footer class="container"><small>© Plusauri, LLC — besitzen Sie Ihren Finanzplan.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Bildungsinhalt — keine Finanz-, Anlage-, Steuer- oder Rechtsberatung.</small><small class="footer-trademarks">Tutilis™ and Plusauri™ are trademarks of Plusauri, LLC.</small></footer>
   </body>
 </html>

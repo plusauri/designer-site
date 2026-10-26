@@ -90,6 +90,8 @@ sample, not a claim that every German household retires in lockstep.
 **Where to look:** [[nav:birds-eye]] → People (or the people area on Dossier). [[term:hover|Hover]] a card for birth
 year and the age · calendar-year pairing when the UI shows it.
 
+[[jump:horizon|output__birds-eye__birds-eye.people-events]]
+
 ---
 
 ## Pillars on one balance sheet
@@ -184,6 +186,8 @@ traces the pillars while Lukas and Mia work, and the third reads a year after th
    ideas — Zulagen are state bonus capital, not “just a higher contribution field with no story.”  
 3. Open **bAV** and **Rürup**: same shell, different product names and contribution magnitudes in
    the sample.
+
+[[jump:cash-flow|output__birds-eye__birds-eye.mode.cash-flows__birds-eye.assets-liabilities]]
 
 Prefer “three different German vehicles on one sheet” over memorizing euro amounts.
 

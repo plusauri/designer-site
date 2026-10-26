@@ -2,13 +2,15 @@
  * Lesson split page:
  * - Draggable gutter between lesson prose (left/top) and live app iframe (right/bottom).
  * - Collapsible top header (saves vertical space for the panes).
- * Remembers split fraction + header collapsed state in sessionStorage, and the
+ * - Pane pill on the gutter: widen the lesson or the app to the full page, and back.
+ * Remembers split fraction, full-width pane + header collapsed state in sessionStorage, and the
  * "How this page works" fold in localStorage — see INTRO_CHROME_STORAGE_KEY for why
  * that one outlives the session.
  */
 (function () {
   const STORAGE_KEY = "plusauri.lessonSplit.fraction";
   const HEADER_KEY = "plusauri.lessonSplit.headerCollapsed";
+  const FULL_KEY = "plusauri.lessonSplit.full";
   const MIN = 0.18;
   const MAX = 0.72;
   const STACK_MQ = "(max-width: 900px)";
@@ -26,6 +28,25 @@
   function saveFraction(f) {
     try {
       sessionStorage.setItem(STORAGE_KEY, String(f));
+    } catch (_) {
+      /* private mode / quota — ignore */
+    }
+  }
+
+  /** "lesson" | "app" while one pane fills the page; null while both show. */
+  function loadFull() {
+    try {
+      const v = sessionStorage.getItem(FULL_KEY);
+      return v === "lesson" || v === "app" ? v : null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function saveFull(full) {
+    try {
+      if (full) sessionStorage.setItem(FULL_KEY, full);
+      else sessionStorage.removeItem(FULL_KEY);
     } catch (_) {
       /* private mode / quota — ignore */
     }
@@ -56,9 +77,20 @@
     return "6px";
   }
 
-  function applyFraction(split, lesson, fraction) {
+  function applyFraction(split, lesson, fraction, full) {
     const f = clamp(fraction, MIN, MAX);
     const g = gutterTrackPx(split);
+    if (full) {
+      // The tucked pane keeps a zero-size cell; see `.lesson-split[data-full]` in site.css.
+      split.dataset.full = full;
+      const tracks = full === "lesson" ? "minmax(0, 1fr) " + g + " 0px" : "0px " + g + " minmax(0, 1fr)";
+      split.style.gridTemplateColumns = isStacked() ? "" : tracks;
+      split.style.gridTemplateRows = isStacked() ? tracks : "";
+      lesson.style.width = "";
+      lesson.style.flex = "";
+      return f;
+    }
+    delete split.dataset.full;
     if (isStacked()) {
       split.style.gridTemplateColumns = "";
       split.style.gridTemplateRows =
@@ -109,11 +141,44 @@
     if (!split || !gutter || !lesson) return;
 
     let fraction = loadFraction();
-    applyFraction(split, lesson, fraction);
+    let full = loadFull();
+    const widenButtons = gutter.querySelectorAll(".lesson-split-widen");
+
+    function setFull(next) {
+      full = next;
+      applyFraction(split, lesson, fraction, full);
+      saveFull(full);
+      widenButtons.forEach(function (btn) {
+        const side = btn.getAttribute("data-widen");
+        // Full-width page: only the arrow back toward the split shows, and it restores the split.
+        const restores = full != null && full !== side;
+        btn.hidden = full === side;
+        const label = btn.getAttribute(restores ? "data-label-restore" : "data-label-widen");
+        if (label) {
+          btn.title = label;
+          btn.setAttribute("aria-label", label);
+        }
+      });
+    }
+
+    setFull(full);
+
+    widenButtons.forEach(function (btn) {
+      // A click on the pill is not the start of a drag.
+      btn.addEventListener("pointerdown", function (ev) {
+        ev.stopPropagation();
+      });
+      btn.addEventListener("click", function () {
+        const side = btn.getAttribute("data-widen");
+        setFull(full != null && full !== side ? null : side);
+      });
+    });
 
     let dragging = false;
 
     function onPointerDown(ev) {
+      // Dragging a full-width page's edge brings the split back, from wherever the pointer goes.
+      if (full) setFull(null);
       dragging = true;
       gutter.classList.add("is-dragging");
       document.body.classList.add("lesson-split-dragging");
@@ -130,7 +195,7 @@
       } else {
         fraction = clamp((ev.clientX - rect.left) / rect.width, MIN, MAX);
       }
-      applyFraction(split, lesson, fraction);
+      applyFraction(split, lesson, fraction, null);
     }
 
     function onPointerUp(ev) {
@@ -152,7 +217,7 @@
     window.addEventListener("pointercancel", onPointerUp);
 
     window.matchMedia(STACK_MQ).addEventListener("change", function () {
-      applyFraction(split, lesson, fraction);
+      applyFraction(split, lesson, fraction, full);
     });
   }
 
@@ -165,7 +230,7 @@
   }
 
   /**
-   * Commands for the canvas (`dossier:`, `whatif:`, `pick:`, `riskchips:`, `modrow:`, `birdseye:`, `where:`, `shortcut:`), held until it is
+   * Commands for the canvas (`dossier:`, `whatif:`, `pick:`, `riskchips:`, `modrow:`, `birdseye:`, `returncheck:`, `hovertip:`, `where:`, `shortcut:`), held until it is
    * listening. A message posted before the wasm app has registered its listener is simply lost, so a
    * figure or jump-to click in the first seconds of a lesson used to do nothing. The canvas announces
    * itself with `theme:` once its listener is up (see initThemeSync); the queue flushes then, in order,
@@ -254,11 +319,66 @@
   /**
    * Canvas Reach Out → same-origin `POST /api/reach-out`. The frame cannot record
    * the message itself; the parent page does. Protocol: canvas posts `reachout:<json>`,
-   * parent replies `reachout-result:<json>` (`{ok, message}`).
+   * parent replies `reachout-result:<json>` (`{ok, message, questionId}`).
+   *
+   * The page knows the lesson and the canvas does not, so a send is stamped with
+   * `lessonDocumentId` here. Status lookups ride the same bridge: `reachout-status:<id>` →
+   * `GET /api/reach-out/<id>` → `reachout-status-result:<id>:<json>`.
+   *
+   * Help with translation saves ride it too: `i18nsuggest:<reqId>:<method>:<path>\n<body>` →
+   * that request → `i18nsuggest-result:<reqId>:<status>:<body>`. Only paths under
+   * `/api/translation-suggestions` are forwarded; the same-origin fetch carries the invite cookie,
+   * which is how the site credits a reviewer.
    */
   function initReachOutBridge() {
     const iframe = document.querySelector(".app-pane iframe");
     if (!iframe) return;
+
+    const proseEl = document.getElementById("lesson-prose");
+    const lessonId = proseEl ? proseEl.getAttribute("data-lesson-id") : null;
+
+    function withLesson(json) {
+      if (!lessonId) return json;
+      try {
+        const payload = JSON.parse(json);
+        if (payload && typeof payload === "object" && !payload.lessonDocumentId) {
+          payload.lessonDocumentId = lessonId;
+          return JSON.stringify(payload);
+        }
+      } catch (_) {
+        /* not JSON — let the server refuse it */
+      }
+      return json;
+    }
+
+    function postToCanvas(message) {
+      if (!iframe.contentWindow) return;
+      const origin = canvasOriginFor(iframe);
+      try {
+        iframe.contentWindow.postMessage(message, origin === "*" ? "*" : origin);
+      } catch (err) {
+        if (typeof console !== "undefined" && console.warn) {
+          console.warn("reach-out post to canvas failed", err);
+        }
+      }
+    }
+
+    function lookUpStatus(id) {
+      fetch("/designer-site/api/reach-out/" + encodeURIComponent(id), {
+        credentials: "same-origin",
+        headers: { Accept: "application/json" },
+      })
+        .then(function (res) {
+          return res.ok ? res.text() : "";
+        })
+        .then(function (text) {
+          // Empty on 404 / 503: the canvas reads a non-status reply as "unknown" and keeps its record.
+          postToCanvas("reachout-status-result:" + id + ":" + (text || "{}"));
+        })
+        .catch(function () {
+          postToCanvas("reachout-status-result:" + id + ":{}");
+        });
+    }
 
     function replyToCanvas(payload) {
       if (!iframe.contentWindow) return;
@@ -275,12 +395,53 @@
       }
     }
 
+    function relaySuggestion(msg) {
+      const head = msg.slice("i18nsuggest:".length);
+      const newline = head.indexOf("\n");
+      const line = newline < 0 ? head : head.slice(0, newline);
+      const body = newline < 0 ? "" : head.slice(newline + 1);
+      const m = /^([0-9a-fA-F-]{36}):(GET|PUT|DELETE):(\/api\/translation-suggestions[^\s]*)$/.exec(line);
+      if (!m) return;
+      const reqId = m[1];
+      const init = {
+        method: m[2],
+        credentials: "same-origin",
+        headers: { Accept: "application/json" },
+      };
+      if (m[2] === "PUT") {
+        init.headers["Content-Type"] = "application/json";
+        init.body = body;
+      }
+      fetch(m[3], init)
+        .then(function (res) {
+          return res.text().then(function (text) {
+            postToCanvas("i18nsuggest-result:" + reqId + ":" + res.status + ":" + (text || ""));
+          });
+        })
+        .catch(function () {
+          // Status 0: the canvas reads it as not saved and keeps the suggestion marked for retry.
+          postToCanvas("i18nsuggest-result:" + reqId + ":0:");
+        });
+    }
+
     window.addEventListener("message", function (ev) {
-      const msg = typeof ev.data === "string" ? ev.data.trim() : "";
-      if (!msg.startsWith("reachout:")) return;
-      if (msg.startsWith("reachout-result:")) return;
+      const raw = typeof ev.data === "string" ? ev.data : "";
+      if (raw.startsWith("i18nsuggest:")) {
+        const expectedOrigin = canvasOriginFor(iframe);
+        if (expectedOrigin !== "*" && ev.origin && ev.origin !== expectedOrigin) return;
+        relaySuggestion(raw);
+        return;
+      }
+      const msg = raw.trim();
+      const isStatus = msg.startsWith("reachout-status:");
+      if (!msg.startsWith("reachout:") && !isStatus) return;
       const expected = canvasOriginFor(iframe);
       if (expected !== "*" && ev.origin && ev.origin !== expected) return;
+      if (isStatus) {
+        const id = msg.slice("reachout-status:".length);
+        if (/^[0-9a-fA-F-]{36}$/.test(id)) lookUpStatus(id);
+        return;
+      }
       const json = msg.slice("reachout:".length);
       if (!json) {
         replyToCanvas('{"ok":false,"message":"Empty message."}');
@@ -293,7 +454,7 @@
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: json,
+        body: withLesson(json),
       })
         .then(function (res) {
           return res.text().then(function (text) {
@@ -1360,7 +1521,9 @@
    * year and Forecast ID it is drawn at, just before the jump; a Current Risk figure also sends
    * `riskchips:` (`data-risk-chips`), the chips it is drawn with, and a figure of the Modifiables list `modrow:`
    * (`data-mod-row`), the row it is drawn with selected, and a Bird's Eye figure `birdseye:` (`data-birds-eye`),
-   * its Σ chip and open folds. A figure whose plan this canvas cannot show, or a
+   * its Σ chip and open folds, and a Realized returns figure `returncheck:` (`data-return-check`), its row and
+   * Growth of 1 window, and a canonical-card figure `hovertip:` (`data-hover-tip`), the row to hover for its card.
+   * A figure whose plan this canvas cannot show, or a
    * page with no canvas, is left a plain picture.
    */
   /** The mark [initFigureJumps] puts on a figure a click opens in the canvas. */
@@ -1424,6 +1587,12 @@
       if (modRow) postToCanvas(iframe, "modrow:" + modRow);
       const birdsEye = img.getAttribute("data-birds-eye");
       if (birdsEye) postToCanvas(iframe, "birdseye:" + birdsEye);
+      // A Realized returns figure: the row and Growth of 1 window it is drawn with, for the check the jump opens.
+      const returnCheck = img.getAttribute("data-return-check");
+      if (returnCheck) postToCanvas(iframe, "returncheck:" + returnCheck);
+      // A canonical-card figure: the row whose card it draws, which the canvas tells the reader to hover.
+      const hoverTip = img.getAttribute("data-hover-tip");
+      if (hoverTip) postToCanvas(iframe, "hovertip:" + hoverTip);
       postToCanvas(iframe, "where:" + img.getAttribute("data-where"));
       iframe.focus();
     }
@@ -1533,6 +1702,26 @@
     });
   }
 
+  /**
+   * The 📋 on a transcript's Prompt copies the command (without its `$ `) for a reader playing along
+   * in their own Cogilis folder. One delegated listener, so transcripts in folded sections work too.
+   * The button turns into a check for a moment, which is the only feedback a copy has.
+   */
+  function initTranscriptCopy() {
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest && event.target.closest(".lesson-transcript-copy");
+      if (!button || !navigator.clipboard) return;
+      navigator.clipboard.writeText(button.dataset.copy || "").then(() => {
+        button.textContent = "✅";
+        button.setAttribute("aria-label", "Copied");
+        setTimeout(() => {
+          button.textContent = "📋";
+          button.setAttribute("aria-label", "Copy the command");
+        }, 1500);
+      });
+    });
+  }
+
   function init() {
     initHeaderCollapse();
     initGutter();
@@ -1545,6 +1734,7 @@
     initJumpTo();
     initFigureJumps();
     initSectionKeys();
+    initTranscriptCopy();
     const proseRoot = document.getElementById("lesson-prose") || document;
     wireIntroChrome(proseRoot);
     wireIntroCardZoom(proseRoot);

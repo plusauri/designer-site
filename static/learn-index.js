@@ -468,8 +468,20 @@
     // tool lessons are not case studies and get no kicker unless the caller passes one.
     var kickerText =
       opts.kicker || (row.purpose === "planning_concept" ? "Case study" : "");
-    var kicker = kickerText
-      ? '<span class="learn-card-kicker">' + escapeHtml(kickerText) + "</span>"
+    // The case study household's wealth band (LessonWealthBands), so a reader can tell at a
+    // glance whether the case looks like theirs. Its hover says what the band means.
+    var household = row.household
+      ? '<span class="learn-card-household learn-card-tipped" tabindex="0">' +
+        escapeHtml(row.household) +
+        badgeTipHtml("Household: " + row.household, row.householdNote || "") +
+        "</span>"
+      : "";
+    var kicker = kickerText || household
+      ? '<span class="learn-card-kicker">' +
+        escapeHtml(kickerText) +
+        (kickerText && household ? '<span class="learn-card-kicker-sep" aria-hidden="true">·</span>' : "") +
+        household +
+        "</span>"
       : "";
     // Features: engineering group is already the section header — omit on the card.
     // Lessons: section is purpose; engineering group ("Typical cash flows") is noise here.
@@ -602,6 +614,31 @@
       return;
     }
 
+    /**
+     * The browse tree (LearnBrowseTree in :tutil-search), drawn as the nav beside the cards.
+     * Nodes: { id, title, note?, lessons: [id], children: [node], comingSoon }.
+     */
+    var treeEl = document.getElementById("learn-tree");
+    var crumbEl = document.getElementById("learn-browse-crumb");
+    var browseTree = [];
+    try {
+      var treeData = document.getElementById("learn-browse-tree");
+      browseTree = treeData ? JSON.parse(treeData.textContent || "[]") : [];
+    } catch (e) {
+      browseTree = [];
+    }
+    var rowsById = {};
+    catalog.forEach(function (row) {
+      rowsById[row.id] = row;
+    });
+    /** Selected tree node id; "" = every lesson (the purpose sections). */
+    var activeNode = "";
+    /**
+     * A lesson selected in the tree (single click): its card alone on the right. Paired with
+     * activeNode, its parent group, because one lesson sits under many groups.
+     */
+    var activeLesson = "";
+
     var query = "";
     var activeTag = "";
     /** Empty = any region; otherwise LessonPlanningRegion id (all|us|ca|mx|de|fr|es). */
@@ -662,6 +699,8 @@
         if (typeof parsed.query === "string") query = parsed.query;
         if (typeof parsed.activeTag === "string") activeTag = parsed.activeTag;
         if (typeof parsed.activeRegion === "string") activeRegion = parsed.activeRegion;
+        if (typeof parsed.activeNode === "string") activeNode = parsed.activeNode;
+        if (typeof parsed.activeLesson === "string") activeLesson = parsed.activeLesson;
         if (typeof parsed.hideTutilisFeature === "boolean") {
           hideTutilisFeature = parsed.hideTutilisFeature;
         }
@@ -698,9 +737,12 @@
       try {
         var params = new URLSearchParams(window.location.search);
         var cur = params.get("q") || "";
-        if ((query || "") === cur) return;
+        var curIn = params.get("in") || "";
+        if ((query || "") === cur && (activeNode || "") === curIn) return;
         if (query) params.set("q", query);
         else params.delete("q");
+        if (activeNode) params.set("in", activeNode);
+        else params.delete("in");
         var nextQs = params.toString();
         var next =
           window.location.pathname + (nextQs ? "?" + nextQs : "") + window.location.hash;
@@ -718,6 +760,8 @@
             query: query,
             activeTag: activeTag,
             activeRegion: activeRegion,
+            activeNode: activeNode,
+            activeLesson: activeLesson,
             hideTutilisFeature: hideTutilisFeature,
             showShellOnly: showShellOnly,
           })
@@ -748,6 +792,11 @@
         var params = new URLSearchParams(window.location.search);
         var qParam = params.get("q");
         if (qParam !== null) query = qParam;
+        var inParam = params.get("in");
+        if (inParam !== null && inParam !== activeNode) {
+          activeNode = inParam;
+          activeLesson = "";
+        }
       } catch (e) {
         /* ignore */
       }
@@ -759,6 +808,8 @@
           var params = new URLSearchParams(window.location.search);
           var qParam = params.get("q");
           if (qParam !== null) query = qParam;
+          var inParam = params.get("in");
+          if (inParam !== null) activeNode = inParam;
         } catch (e2) {
           /* ignore */
         }
@@ -778,6 +829,8 @@
       var params = new URLSearchParams(window.location.search);
       var qsQ = params.get("q");
       if (qsQ !== null) query = qsQ;
+      var qsIn = params.get("in");
+      if (qsIn !== null) activeNode = qsIn;
       if (params.has("surface")) {
         params.delete("surface");
         var nextQs = params.toString();
@@ -870,14 +923,16 @@
       var cards = startHereRows
         .map(function (row) {
           return renderCard(row, {
-            kicker: "Start here",
+            // "Tour", not "Start here": the roadmap band above (/start-here) is the page's one
+            // "start here", and it is about starting a plan. These start you in the tool.
+            kicker: "Tour",
             mediaGlyph: startHereMediaGlyph(row),
             extraClass: "learn-card-start-here",
           });
         })
         .join("");
       startHereEl.innerHTML =
-        '<div class="learn-start-here-heading muted">New here? Start with one of these</div>' +
+        '<div class="learn-start-here-heading muted">New to Tutilis? Take the tour</div>' +
         '<div class="learn-card-grid learn-start-here-grid">' +
         cards +
         "</div>";
@@ -927,13 +982,17 @@
       tagChips.innerHTML = html;
     }
 
-    function filterRows() {
+    function filterRows(keepStartHere) {
       // Use in-memory `query` only. Callers that change the box (input, clear, chips) must
       // syncQueryFromSearch first. Do not read the box here — Safari Back often leaves it empty.
       var qTokens = tokens(query);
       return catalog.filter(function (row) {
-        // Pinned Start here pair is always above the list — not in search-driven groups.
-        if (isStartHerePinnedId(row.id, startHereRows) || hasTag(row, START_HERE_TAG)) {
+        // Pinned Start here pair is always above the list — not in search-driven groups. The
+        // tree keeps them: browsing Tutilis should list the tours too.
+        if (
+          !keepStartHere &&
+          (isStartHerePinnedId(row.id, startHereRows) || hasTag(row, START_HERE_TAG))
+        ) {
           return false;
         }
         if (hideTutilisFeature && hasTag(row, TUTILIS_FEATURE_TAG)) return false;
@@ -945,6 +1004,426 @@
         // If user both hides Tutilis features and has that Topics chip on, show empty honestly.
         return matches(row, qTokens) && hasTag(row, activeTag);
       });
+    }
+
+
+    // ── Browse tree ────────────────────────────────────────────────────────────────────────
+    //
+    // Groups fold per viewer (localStorage, like the section folds). A first visit opens Case
+    // studies and its Stage of life group, so the life stages (Early career, Accumulating, …) are
+    // the first thing the tree offers, each still folded. While a search is on, every group with a match is shown
+    // open and every group without one is hidden: the structure stays, filtered down. That forced
+    // shape is not the reader's choice and is not saved; a caret clicked mid-search is remembered
+    // only until the query changes.
+    // v2 (2026-10-26): the default gained Stage of life. A saved fold beats the default, so the old
+    // key would have hidden the new one from anyone who had already folded Case studies.
+    var TREE_OPEN_KEY = "plusauri.learn.treeOpen.v2";
+    var TREE_DEFAULT_OPEN = { "case-studies": true, "case-studies/stage": true };
+    var narrowedToggles = {};
+    var narrowedFor = null;
+
+    function loadTreeOpen() {
+      try {
+        var parsed = JSON.parse(window.localStorage.getItem(TREE_OPEN_KEY) || "{}");
+        return parsed && typeof parsed === "object" ? parsed : {};
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function saveTreeOpen(id, open) {
+      try {
+        var saved = loadTreeOpen();
+        saved[id] = open;
+        window.localStorage.setItem(TREE_OPEN_KEY, JSON.stringify(saved));
+      } catch (e) {
+        // Storage blocked: the fold still works for this page view.
+      }
+    }
+
+    function findNode(id, nodes, trail) {
+      nodes = nodes || browseTree;
+      trail = trail || [];
+      for (var i = 0; i < nodes.length; i++) {
+        var path = trail.concat([nodes[i]]);
+        if (nodes[i].id === id) return path;
+        var deeper = findNode(id, nodes[i].children || [], path);
+        if (deeper) return deeper;
+      }
+      return null;
+    }
+
+    function lessonsUnder(node) {
+      var seen = {};
+      var out = [];
+      (function walk(n) {
+        (n.lessons || []).forEach(function (id) {
+          if (!seen[id]) {
+            seen[id] = true;
+            out.push(id);
+          }
+        });
+        (n.children || []).forEach(walk);
+      })(node);
+      return out;
+    }
+
+    function hasBody(node) {
+      return (node.children && node.children.length) || (node.lessons && node.lessons.length);
+    }
+
+    function nodeIsOpen(node, narrowed, selectedTrail) {
+      if (narrowed) {
+        var t = narrowedToggles[node.id];
+        return typeof t === "boolean" ? t : true;
+      }
+      // Ancestors of the selected group are always open (the selection must be visible). The
+      // selected group itself opens unless the reader has closed it.
+      if (selectedTrail.indexOf(node.id) >= 0 && node.id !== activeNode) return true;
+      var saved = loadTreeOpen()[node.id];
+      if (typeof saved === "boolean") return saved;
+      return node.id === activeNode || !!TREE_DEFAULT_OPEN[node.id];
+    }
+
+    function treeLessonHtml(id, depth, parentId) {
+      var row = rowsById[id];
+      if (!row) return "";
+      var selected = id === activeLesson && parentId === activeNode;
+      return (
+        '<li class="learn-tree-lesson' +
+        (selected ? " is-selected" : "") +
+        '" style="--depth:' +
+        depth +
+        '"><a href="/designer-site/learn/' +
+        encodeURIComponent(row.slug || row.id) +
+        '" data-id="' +
+        escapeHtml(row.id) +
+        '" data-lesson="' +
+        escapeHtml(row.id) +
+        '" data-parent="' +
+        escapeHtml(parentId) +
+        '"' +
+        (selected ? ' aria-current="true"' : "") +
+        ' title="' +
+        escapeHtml(row.title) +
+        '">' +
+        escapeHtml(row.title) +
+        "</a></li>"
+      );
+    }
+
+    function treeNodeHtml(node, depth, visible, narrowed, selectedTrail) {
+      var ids = lessonsUnder(node).filter(function (id) {
+        return visible[id];
+      });
+      // "Soon": a promised node with nothing published under it yet. A soon *branch* (Cogilis on
+      // launch) still opens, so its planned sections are visible; a soon *leaf* has nothing to
+      // open. A search hides both — they cannot match.
+      var soon = node.comingSoon && lessonsUnder(node).length === 0;
+      var soonLeaf = soon && !(node.children && node.children.length);
+      if (!ids.length && !(soon && !narrowed)) return "";
+      var open = !soonLeaf && nodeIsOpen(node, narrowed, selectedTrail);
+      var selected = node.id === activeNode && !activeLesson;
+      var inner = "";
+      if (open) {
+        (node.children || []).forEach(function (child) {
+          inner += treeNodeHtml(child, depth + 1, visible, narrowed, selectedTrail);
+        });
+        (node.lessons || []).forEach(function (id) {
+          if (visible[id]) inner += treeLessonHtml(id, depth + 1, node.id);
+        });
+      }
+      var caret = hasBody(node)
+        ? '<button type="button" class="learn-tree-caret" data-toggle="' +
+          escapeHtml(node.id) +
+          '" aria-expanded="' +
+          (open ? "true" : "false") +
+          '" aria-label="' +
+          (open ? "Collapse " : "Expand ") +
+          escapeHtml(node.title) +
+          '"></button>'
+        : '<span class="learn-tree-caret is-empty" aria-hidden="true"></span>';
+      return (
+        '<li class="learn-tree-node' +
+        (depth === 0 ? " is-top" : "") +
+        (open ? " is-open" : "") +
+        (soon ? " is-soon" : "") +
+        (soonLeaf ? " is-soon-leaf" : "") +
+        '" data-node="' +
+        escapeHtml(node.id) +
+        '">' +
+        '<div class="learn-tree-row' +
+        (selected ? " is-selected" : "") +
+        '" style="--depth:' +
+        depth +
+        '">' +
+        caret +
+        '<button type="button" class="learn-tree-label" data-select="' +
+        escapeHtml(node.id) +
+        '"' +
+        (selected ? ' aria-current="true"' : "") +
+        (node.note ? ' title="' + escapeHtml(node.note) + '"' : "") +
+        (soonLeaf ? " disabled" : "") +
+        ">" +
+        '<span class="learn-tree-title">' +
+        escapeHtml(node.title) +
+        "</span>" +
+        '<span class="learn-tree-count">' +
+        (soon ? "soon" : ids.length) +
+        "</span></button></div>" +
+        (inner ? '<ul class="learn-tree-children">' + inner + "</ul>" : "") +
+        "</li>"
+      );
+    }
+
+    // ── Open / close one level ─────────────────────────────────────────────────────────────
+    //
+    // Two small buttons on the All lessons row stand in for "expand topics / collapse topics /
+    // expand subtopics / collapse subtopics": one opens the shallowest level that still has a
+    // closed group, the other closes the deepest open one. They adapt to however deep the tree is
+    // and cost one row's corner. + and − do the same from the keyboard inside the tree.
+    var CHEVRONS_DOWN =
+      '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false">' +
+      '<path d="M4 3.5l4 4 4-4M4 8.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" ' +
+      'stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    var CHEVRONS_UP =
+      '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false">' +
+      '<path d="M4 7.5l4-4 4 4M4 12.5l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.6" ' +
+      'stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+    /**
+     * Every foldable group the reader can currently see, with its depth and fold state. A group is
+     * foldable when it has something to show (children or lessons) and is not a "soon" leaf.
+     */
+    function visibleGroups(narrowed, trail, visibleIds) {
+      var out = [];
+      (function walk(nodes, depth) {
+        nodes.forEach(function (node) {
+          var ids = lessonsUnder(node).filter(function (id) {
+            return !visibleIds || visibleIds[id];
+          });
+          var soon = node.comingSoon && lessonsUnder(node).length === 0;
+          if (!ids.length && !(soon && !narrowed)) return;
+          var hasKids = node.children && node.children.length;
+          if (!hasKids && !(node.lessons && node.lessons.length)) return;
+          var open = nodeIsOpen(node, narrowed, trail);
+          out.push({ node: node, depth: depth, open: open });
+          if (open && hasKids) walk(node.children, depth + 1);
+        });
+      })(browseTree, 0);
+      return out;
+    }
+
+    var lastVisibleIds = null;
+
+    function levelPlan(narrowed, trail) {
+      var groups = visibleGroups(narrowed, trail, lastVisibleIds);
+      var closed = groups.filter(function (g) {
+        return !g.open;
+      });
+      var open = groups.filter(function (g) {
+        return g.open;
+      });
+      var expandDepth = closed.length
+        ? Math.min.apply(null, closed.map(function (g) { return g.depth; }))
+        : -1;
+      var collapseDepth = open.length
+        ? Math.max.apply(null, open.map(function (g) { return g.depth; }))
+        : -1;
+      return {
+        expand: closed.filter(function (g) { return g.depth === expandDepth; }),
+        collapse: open.filter(function (g) { return g.depth === collapseDepth; }),
+      };
+    }
+
+    function levelStepperHtml(narrowed, trail) {
+      var plan = levelPlan(narrowed, trail);
+      function btn(dir, svg, label) {
+        var off = dir > 0 ? !plan.expand.length : !plan.collapse.length;
+        return (
+          '<button type="button" class="learn-tree-level" data-level="' +
+          dir +
+          '" title="' +
+          label +
+          '" aria-label="' +
+          label +
+          '"' +
+          (off ? " disabled" : "") +
+          ">" +
+          svg +
+          "</button>"
+        );
+      }
+      return (
+        '<span class="learn-tree-levels">' +
+        btn(-1, CHEVRONS_UP, "Close one level (−)") +
+        btn(1, CHEVRONS_DOWN, "Open one more level (+)") +
+        "</span>"
+      );
+    }
+
+    function stepLevel(dir) {
+      var narrowed = tokens(query).length > 0;
+      var trail = (findNode(activeNode) || []).map(function (n) { return n.id; });
+      var plan = levelPlan(narrowed, trail);
+      (dir > 0 ? plan.expand : plan.collapse).forEach(function (g) {
+        setTreeOpen(g.node.id, dir > 0);
+      });
+      persistFilters();
+      refresh();
+    }
+
+    function renderTree(visibleRows, narrowed) {
+      if (!treeEl) return;
+      if (!browseTree.length) {
+        treeEl.hidden = true;
+        return;
+      }
+      if (narrowedFor !== query) {
+        narrowedToggles = {};
+        narrowedFor = query;
+      }
+      var visible = {};
+      visibleRows.forEach(function (row) {
+        visible[row.id] = true;
+      });
+      lastVisibleIds = visible;
+      var trail = (findNode(activeNode) || []).map(function (n) {
+        return n.id;
+      });
+      var html =
+        '<ul class="learn-tree-root">' +
+        '<li class="learn-tree-node is-top is-all"><div class="learn-tree-row' +
+        (activeNode ? "" : " is-selected") +
+        '" style="--depth:0"><span class="learn-tree-caret is-empty" aria-hidden="true"></span>' +
+        '<button type="button" class="learn-tree-label" data-select=""' +
+        (activeNode ? "" : ' aria-current="true"') +
+        '><span class="learn-tree-title">All lessons</span><span class="learn-tree-count">' +
+        visibleRows.length +
+        "</span></button>" +
+        levelStepperHtml(narrowed, trail) +
+        "</div></li>";
+      browseTree.forEach(function (node) {
+        html += treeNodeHtml(node, 0, visible, narrowed, trail);
+      });
+      html += "</ul>";
+      // Re-drawing replaces every row; keep keyboard focus (and the list's scroll) on the same row.
+      var focused = treeEl.contains(document.activeElement) ? itemKey(document.activeElement) : null;
+      var oldList = treeEl.querySelector(".learn-tree-root");
+      var scrollTop = oldList ? oldList.scrollTop : 0;
+      treeEl.innerHTML = html;
+      treeEl.hidden = false;
+      var newList = treeEl.querySelector(".learn-tree-root");
+      if (newList) newList.scrollTop = scrollTop;
+      if (focused) {
+        var again = treeEl.querySelector(focused);
+        if (again) again.focus({ preventScroll: true });
+      }
+    }
+
+    function renderCrumb(trail, lessonRow) {
+      if (!crumbEl) return;
+      if (!trail || !trail.length) {
+        crumbEl.hidden = true;
+        crumbEl.innerHTML = "";
+        return;
+      }
+      var parts = ['<button type="button" class="learn-crumb-link" data-select="">All lessons</button>'];
+      trail.forEach(function (node, i) {
+        var last = i === trail.length - 1 && !lessonRow;
+        parts.push(
+          last
+            ? '<span class="learn-crumb-here" aria-current="page">' + escapeHtml(node.title) + "</span>"
+            : '<button type="button" class="learn-crumb-link" data-select="' +
+                escapeHtml(node.id) +
+                '">' +
+                escapeHtml(node.title) +
+                "</button>",
+        );
+      });
+      if (lessonRow) {
+        parts.push('<span class="learn-crumb-here" aria-current="page">' + escapeHtml(lessonRow.title) + "</span>");
+      }
+      var note = lessonRow ? "" : trail[trail.length - 1].note;
+      crumbEl.innerHTML =
+        '<nav class="learn-crumb-trail" aria-label="Where you are">' +
+        parts.join('<span class="learn-crumb-sep" aria-hidden="true">›</span>') +
+        "</nav>" +
+        (note ? '<p class="learn-crumb-note muted">' + escapeHtml(note) + "</p>" : "");
+      crumbEl.hidden = false;
+    }
+
+    /** A promised area with no lessons yet: its planned sections, so the shape reads as a plan. */
+    function comingSoonHtml(node) {
+      var parts = (node.children && node.children.length ? node.children : [node])
+        .map(function (child) {
+          return (
+            '<li><span class="learn-soon-title">' +
+            escapeHtml(child.title) +
+            "</span>" +
+            (child.note ? ' <span class="muted">— ' + escapeHtml(child.note) + "</span>" : "") +
+            "</li>"
+          );
+        })
+        .join("");
+      return (
+        '<div class="learn-soon"><p class="learn-soon-lede"><strong>Lessons are on the way.</strong> ' +
+        "This is what they will cover:</p><ul>" +
+        parts +
+        "</ul></div>"
+      );
+    }
+
+    /** Cards for one tree node: a section per child for a branch, one grid for a leaf. */
+    function nodeResultsHtml(node, visible) {
+      function grid(ids) {
+        return (
+          '<div class="learn-card-grid">' +
+          ids
+            .map(function (id) {
+              return renderCard(rowsById[id]);
+            })
+            .join("") +
+          "</div>"
+        );
+      }
+      function shown(n) {
+        return lessonsUnder(n).filter(function (id) {
+          return visible[id];
+        });
+      }
+      if (!node.children || !node.children.length) return grid(shown(node));
+      var html = "";
+      node.children.forEach(function (child) {
+        var ids = shown(child);
+        if (!ids.length) return;
+        html +=
+          '<h3 class="learn-group-title"><button type="button" class="learn-group-link" data-select="' +
+          escapeHtml(child.id) +
+          '">' +
+          escapeHtml(child.title) +
+          '</button> <span class="learn-section-count">' +
+          ids.length +
+          "</span></h3>" +
+          grid(ids);
+      });
+      return html;
+    }
+
+    /**
+     * Select a group. [open] (when given) is the fold it should end in — a row click toggles, so
+     * the whole row is the fold control, not only the small caret.
+     */
+    function selectNode(id, open) {
+      activeNode = id || "";
+      activeLesson = "";
+      if (activeNode && typeof open === "boolean") setTreeOpen(activeNode, open);
+      persistFilters();
+      refresh();
+      var top = results.getBoundingClientRect().top;
+      if (top < 0 && typeof results.scrollIntoView === "function") {
+        (crumbEl && !crumbEl.hidden ? crumbEl : results).scrollIntoView({ block: "start" });
+      }
     }
 
     function refresh() {
@@ -959,7 +1438,70 @@
       renderStartHere();
       renderTagChips();
       var qTokens = tokens(query);
+      // A remembered or linked node that no longer exists (renamed, emptied) falls back to all.
+      var trail = activeNode ? findNode(activeNode) : null;
+      if (activeNode && !trail) activeNode = "";
+      var browsable = filterRows(true);
+      // A selected lesson stays selected only while it is still listed under its group.
+      if (
+        activeLesson &&
+        (!trail ||
+          lessonsUnder(trail[trail.length - 1]).indexOf(activeLesson) < 0 ||
+          !browsable.some(function (r) {
+            return r.id === activeLesson;
+          }))
+      ) {
+        activeLesson = "";
+      }
+      renderTree(browsable, qTokens.length > 0);
+      var lessonRow = activeLesson ? rowsById[activeLesson] : null;
+      renderCrumb(trail, lessonRow);
+      if (lessonRow) {
+        lastFiltered = [lessonRow];
+        results.innerHTML =
+          '<div class="learn-card-grid learn-card-single">' +
+          renderCard(lessonRow) +
+          '</div><p class="learn-open-lesson-line"><a class="learn-open-lesson" href="/designer-site/learn/' +
+          encodeURIComponent(lessonRow.slug || lessonRow.id) +
+          '">Open the lesson →</a> <span class="muted">or double-click it in the list</span></p>';
+        meta.textContent = "";
+        return;
+      }
       var filtered = filterRows();
+      if (trail) {
+        var visible = {};
+        browsable.forEach(function (row) {
+          visible[row.id] = true;
+        });
+        var node = trail[trail.length - 1];
+        filtered = lessonsUnder(node)
+          .filter(function (id) {
+            return visible[id];
+          })
+          .map(function (id) {
+            return rowsById[id];
+          });
+        lastFiltered = filtered;
+        if (!filtered.length && node.comingSoon && !qTokens.length) {
+          results.innerHTML = comingSoonHtml(node);
+          meta.textContent = "";
+          return;
+        }
+        if (!filtered.length) {
+          results.innerHTML =
+            '<p class="learn-empty"><em>' +
+            escapeHtml(qTokens.length ? "No lessons here match your search." : "Nothing here yet.") +
+            "</em></p>";
+          meta.textContent = "";
+          return;
+        }
+        results.innerHTML = nodeResultsHtml(node, visible);
+        var count = filtered.length;
+        meta.textContent =
+          count +
+          (qTokens.length ? (count === 1 ? " match" : " matches") : count === 1 ? " lesson" : " lessons");
+        return;
+      }
       lastFiltered = filtered;
 
       if (filtered.length === 0) {
@@ -1155,6 +1697,172 @@
       });
     }
 
+    /** A fold the reader chose: remembered, unless a search is shaping the tree right now. */
+    function setTreeOpen(id, open) {
+      if (tokens(query).length) narrowedToggles[id] = open;
+      else saveTreeOpen(id, open);
+      // Closing a group that holds the selection moves the selection up to it, as a file
+      // explorer does, so the selection is never hidden inside a closed group.
+      if (!open) {
+        var trail = (findNode(activeNode) || []).map(function (n) { return n.id; });
+        var at = trail.indexOf(id);
+        if (at >= 0 && (at < trail.length - 1 || activeLesson)) {
+          activeNode = id;
+          activeLesson = "";
+        }
+      }
+    }
+
+    /** Single click on a lesson in the tree: its card on the right, the row marked. */
+    function selectLesson(id, parentId) {
+      activeNode = parentId || "";
+      activeLesson = id;
+      persistFilters();
+      refresh();
+    }
+
+    /** The tree's visible, focusable rows in reading order: group labels and lesson links. */
+    function treeItems() {
+      if (!treeEl) return [];
+      return Array.prototype.slice.call(
+        treeEl.querySelectorAll(".learn-tree-label:not([disabled]), a[data-lesson]"),
+      );
+    }
+
+    function itemKey(el) {
+      if (el.hasAttribute("data-level")) {
+        return '[data-level="' + el.getAttribute("data-level") + '"]';
+      }
+      if (el.hasAttribute("data-toggle")) {
+        return '[data-toggle="' + el.getAttribute("data-toggle") + '"]';
+      }
+      if (el.hasAttribute("data-lesson")) {
+        return (
+          'a[data-lesson="' +
+          el.getAttribute("data-lesson") +
+          '"][data-parent="' +
+          el.getAttribute("data-parent") +
+          '"]'
+        );
+      }
+      return '.learn-tree-label[data-select="' + el.getAttribute("data-select") + '"]';
+    }
+
+    /** Select what a tree row stands for without folding anything, and keep focus on it. */
+    function activateItem(el) {
+      var key = itemKey(el);
+      if (el.hasAttribute("data-lesson")) {
+        selectLesson(el.getAttribute("data-lesson"), el.getAttribute("data-parent"));
+      } else {
+        selectNode(el.getAttribute("data-select") || "");
+      }
+      var again = treeEl.querySelector(key);
+      if (again) {
+        again.focus();
+        if (typeof again.scrollIntoView === "function") again.scrollIntoView({ block: "nearest" });
+      }
+    }
+
+    /**
+     * Ctrl-N / Ctrl-P (and ↓ / ↑) walk the tree's visible rows and select as they go, like a file
+     * explorer. Ctrl-N in the search box steps into the tree. On Windows and Linux a browser may
+     * keep Ctrl-N for itself (new window); the arrows always work.
+     */
+    function treeStep(ev) {
+      var ctrlOnly = ev.ctrlKey && !ev.metaKey && !ev.altKey && !ev.shiftKey;
+      var plain = !ev.ctrlKey && !ev.metaKey && !ev.altKey && !ev.shiftKey;
+      var k = (ev.key || "").toLowerCase();
+      if ((ctrlOnly && k === "n") || (plain && ev.key === "ArrowDown")) return 1;
+      if ((ctrlOnly && k === "p") || (plain && ev.key === "ArrowUp")) return -1;
+      return 0;
+    }
+
+    if (treeEl) {
+      treeEl.addEventListener("keydown", function (ev) {
+        if (!ev.ctrlKey && !ev.metaKey && !ev.altKey) {
+          if (ev.key === "+" || ev.key === "=") {
+            ev.preventDefault();
+            stepLevel(1);
+            return;
+          }
+          if (ev.key === "-" || ev.key === "_") {
+            ev.preventDefault();
+            stepLevel(-1);
+            return;
+          }
+        }
+        // Enter on a lesson opens it, the keyboard's double click. The link's own Enter would
+        // arrive as a click, which the click handler below keeps for showing the card.
+        var leaf = ev.target.closest && ev.target.closest("a[data-lesson]");
+        if (leaf && ev.key === "Enter" && !ev.ctrlKey && !ev.metaKey && !ev.altKey && !ev.shiftKey) {
+          ev.preventDefault();
+          window.location.href = leaf.href;
+          return;
+        }
+        var step = treeStep(ev);
+        if (!step) return;
+        var items = treeItems();
+        var idx = items.indexOf(document.activeElement);
+        var next = items[idx < 0 ? 0 : Math.min(items.length - 1, Math.max(0, idx + step))];
+        if (!next) return;
+        ev.preventDefault();
+        activateItem(next);
+      });
+    }
+
+    // Tree and breadcrumb. In the tree a click anywhere on a group's row selects it AND toggles
+    // its fold (the caret alone was too small a target to find); a caret folds without selecting.
+    // A crumb or a section heading only selects, and opens what it selects.
+    function onBrowseClick(ev) {
+      var level = ev.target.closest("[data-level]");
+      if (level) {
+        if (!level.disabled) stepLevel(Number(level.getAttribute("data-level")));
+        var same = treeEl && treeEl.querySelector('[data-level="' + level.getAttribute("data-level") + '"]');
+        if (same && !same.disabled) same.focus();
+        return;
+      }
+      // A lesson in the tree: one click shows its card, a double click opens it. The second click
+      // of a double click arrives on a re-drawn row (the first click re-renders the tree), so it is
+      // recognized by its click count rather than a dblclick event. A modified click (new tab) and
+      // the second click both fall through to the link.
+      var leaf = ev.target.closest("a[data-lesson]");
+      if (leaf) {
+        if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey || ev.button !== 0) return;
+        if (ev.detail >= 2) return;
+        ev.preventDefault();
+        selectLesson(leaf.getAttribute("data-lesson"), leaf.getAttribute("data-parent"));
+        var sel = treeEl.querySelector(itemKey(leaf));
+        if (sel) sel.focus();
+        return;
+      }
+      var toggle = ev.target.closest("[data-toggle]");
+      if (toggle) {
+        var id = toggle.getAttribute("data-toggle");
+        var isOpen = toggle.getAttribute("aria-expanded") === "true";
+        setTreeOpen(id, !isOpen);
+        refresh();
+        var again = treeEl && treeEl.querySelector('[data-toggle="' + id + '"]');
+        if (again) again.focus();
+        return;
+      }
+      var pick = ev.target.closest("[data-select]");
+      if (!pick) return;
+      var target = pick.getAttribute("data-select") || "";
+      var caret = treeEl && treeEl.contains(pick)
+        ? pick.parentNode.querySelector("[data-toggle]")
+        : null;
+      if (caret) {
+        selectNode(target, caret.getAttribute("aria-expanded") !== "true");
+      } else {
+        selectNode(target, target ? true : undefined);
+      }
+    }
+    if (treeEl) treeEl.addEventListener("click", onBrowseClick);
+    if (crumbEl) crumbEl.addEventListener("click", onBrowseClick);
+    results.addEventListener("click", function (ev) {
+      if (ev.target.closest(".learn-group-link")) onBrowseClick(ev);
+    });
+
     search.addEventListener("input", function () {
       syncQueryFromSearch();
       persistFilters();
@@ -1259,6 +1967,14 @@
     }
 
     search.addEventListener("keydown", function (ev) {
+      if (ev.ctrlKey && !ev.metaKey && !ev.altKey && !ev.shiftKey && (ev.key || "").toLowerCase() === "n") {
+        var first = treeItems()[0];
+        if (first) {
+          ev.preventDefault();
+          activateItem(first);
+          return;
+        }
+      }
       // Region shortcuts: regionFromShortcutEvent returns "" for Any, so check !== null.
       if (ev.altKey && !ev.metaKey && !ev.ctrlKey && !ev.shiftKey) {
         var regionWant = regionFromShortcutEvent(ev);

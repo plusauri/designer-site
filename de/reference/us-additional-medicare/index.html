@@ -31,15 +31,22 @@
         <ul>
           <li><a href="/designer-site/">Start</a></li>
           <li><a href="/designer-site/learn" class="nav-learn">Learning Center</a></li>
-          <li><a href="/designer-site/reference">Reference</a></li>
-          <li><a href="/designer-site/glossary">Glossary</a></li>
+          <li>
+            <details class="dropdown nav-resources"><summary>Resources</summary>
+              <ul>
+                <li><a href="/designer-site/start-here">Start Here</a></li>
+                <li><a href="/designer-site/reference">Reference</a></li>
+                <li><a href="/designer-site/glossary">Glossary</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="/designer-site/pricing">Preise</a></li>
           <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de" selected="selected">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
           <li><button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Light theme — click for dark" title="Light theme — click for dark">☀</button></li>
         </ul>
       </nav>
     </header>
-    <main class="container"><div class="reference-hub">
+    <main class="container"><div class="reference-hub" data-tint="gold">
   <p class="catalog-crumb"><a href="/designer-site/reference"><span class="catalog-crumb-arrow" aria-hidden="true">←</span>All reference</a></p>
   <h1>Additional Medicare Tax</h1>
   <p class="reference-lede">0.9% on earned income above a filing-status threshold. Statutory dollars, never indexed.</p>
@@ -47,17 +54,23 @@
   <p class="reference-source">Source: Form 8959 — Additional Medicare Tax — Internal Revenue Service</p>
   <p class="reference-source-url"><a href="https://www.irs.gov/forms-pubs/about-form-8959">https://www.irs.gov/forms-pubs/about-form-8959</a></p>
   <div class="reference-honesty reference-usage">
-    <h3>Where we use this · Used in your forecast</h3>
+    <h3><span class="reference-honesty-kicker">Where we use this</span><span class="reference-use-pill reference-use-pill--in-forecast">Used in your forecast</span></h3>
     <ul>
       <li>The 0.9% rate is assessed on earned income above the threshold, as a separate line beside the base 1.45% Medicare tax.</li>
       <li>Because the thresholds are never indexed, a growing wage drifts into them over a long forecast; the Cliff radar shows when.</li>
     </ul>
   </div>
-  <div class="reference-honesty">
+  <div class="reference-honesty reference-limits">
     <h3>Not modeled</h3>
     <p>Employer withholding mechanics; RRTA; self-employment nuances beyond applying the rate to the engine's earned-income bucket.</p>
   </div>
-  <div class="reference-table-wrap"><table class="content-table">
+  <section class="reference-sheet reference-sheet--tax">
+    <header class="reference-sheet-head">
+      <div class="reference-sheet-titles">
+        <div class="reference-sheet-kicker"><span>Tax schedule</span><span class="reference-sheet-category">Payroll &amp; surtaxes</span></div>
+      </div>
+<span class="reference-sheet-seal" aria-hidden="true"><span class="reference-sheet-seal-glyph">%</span><span class="reference-sheet-seal-word">Tax</span></span></header>
+    <div class="reference-table-wrap"><table class="content-table">
 <thead>
 <tr>
 <th align="left">Filing status</th>
@@ -99,8 +112,9 @@
 </tbody>
 </table>
 </div>
+  </section>
 </div>
 </main>
-    <footer class="container"><small>© Plusauri, LLC — besitzen Sie Ihren Finanzplan.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Bildungsinhalt — keine Finanz-, Anlage-, Steuer- oder Rechtsberatung.</small></footer>
+    <footer class="container"><small>© Plusauri, LLC — besitzen Sie Ihren Finanzplan.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Bildungsinhalt — keine Finanz-, Anlage-, Steuer- oder Rechtsberatung.</small><small class="footer-trademarks">Tutilis™ and Plusauri™ are trademarks of Plusauri, LLC.</small></footer>
   </body>
 </html>

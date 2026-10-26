@@ -205,6 +205,8 @@
       var card = document.createElement("a");
       card.className = cfg.classes.card;
       card.href = cfg.basePath + "/" + entry.id;
+      // Same color family the server rendered (catalogCard's `tint`), so nothing shifts at hand-over.
+      if (cfg.fields.tint && entry[cfg.fields.tint]) card.setAttribute("data-tint", entry[cfg.fields.tint]);
       card.appendChild(el("span", cfg.classes.title, entry[cfg.fields.title]));
       card.appendChild(el("span", cfg.classes.summary, entry[cfg.fields.summary]));
       card.appendChild(el("span", cfg.classes.meta, metaText(entry)));

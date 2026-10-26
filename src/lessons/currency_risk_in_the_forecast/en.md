@@ -200,6 +200,8 @@ fixed-rate forecast cannot answer it. To answer it, the forecast runs the same M
 today's, and compares the ending net worth. The **Currency risk** table in the FX quick view does
 this on demand; `forecast.currency-risk` prints the same comparison.
 
+[[jump:fx|output__fx]]
+
 [[img:currency-risk-nw-distribution-fixed]]
 
 [[img:currency-risk-nw-distribution-modeled]]

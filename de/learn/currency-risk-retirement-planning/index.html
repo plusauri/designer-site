@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Currency Risk in Retirement Planning: Model Exchange Rates — Tutilis</title>
+    <meta name="description" content="A dollar-spending retiree whose income is in euros and whose savings are in pounds and yen. What changes when the exchange rates are allowed to move — and how the forecast says how much of her spread is the currencies.">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://www.plusauri.com/learn/currency-risk-retirement-planning" rel="canonical">
+    <meta content="website" property="og:type">
+    <meta content="Plusauri" property="og:site_name">
+    <meta content="Currency Risk in Retirement Planning: Model Exchange Rates — Tutilis" property="og:title">
+    <meta content="A dollar-spending retiree whose income is in euros and whose savings are in pounds and yen. What changes when the exchange rates are allowed to move — and how the forecast says how much of her spread is the currencies." property="og:description">
+    <meta content="https://www.plusauri.com/learn/currency-risk-retirement-planning" property="og:url">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
+<script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
+    <script src="/designer-site/static/lang.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
+    <link href="/designer-site/static/site.css" rel="stylesheet">
+    <script src="/designer-site/static/lesson-split.js" defer="defer"></script>
+    <script src="/designer-site/static/trial-callout.js" defer="defer"></script>
+    <script src="/designer-site/static/community-join.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/katex/katex.min.css" rel="stylesheet">
+    <script src="/designer-site/static/vendor/katex/katex.min.js" defer="defer"></script>
+    <script src="/designer-site/static/vendor/katex/contrib/auto-render.min.js" defer="defer" onload="renderMathInElement(document.body,{delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true},{left:'$$',right:'$$',display:true}],throwOnError:false});"></script>
+  </head>
+  <body class="lesson-split-body" data-prose-lang="de" data-lang="de">
+    <header class="lesson-split-header" id="lesson-split-header">
+      <nav>
+        <ul>
+          <li><strong><a href="/designer-site/">Plusauri</a></strong></li>
+          <li><a href="/designer-site/learn">Learning Center</a></li>
+          <li><a href="/designer-site/reference">Reference</a></li>
+        </ul>
+        <ul>
+          <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de" selected="selected">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
+          <li><button class="lesson-header-collapse" type="button" aria-expanded="true" aria-controls="lesson-split-header" title="Hide header" aria-label="Hide header">▾</button></li>
+        </ul>
+      </nav>
+    </header>
+<button class="lesson-header-expand" type="button" id="lesson-header-expand" hidden="hidden" title="Show header" aria-label="Show header">▴ Plusauri · Learning Center</button><script type="application/json" id="lesson-canvas-dossiers">{"primary":"fx_fixed","alternates":["fx_modeled","fx_modeled_spread"],"order":["fx_fixed","fx_modeled","fx_modeled_spread"]}</script>
+    <div class="lesson-split has-plan-slots" data-plan-slot="0">
+      <section class="lesson-pane">
+        <p class="lesson-plan-switcher-lede">This lesson uses <strong>3 sample plans</strong> — switch anytime; color matches the bar between the columns.</p>
+        <div class="lesson-plan-switcher" role="group" aria-label="Plans this lesson can open">
+          <div class="lesson-plan-switcher-chips"><span class="lesson-plan-switcher-label">Plans</span><button class="learn-chip lesson-plan-chip plan-slot-0 is-active" type="button" data-canvas-dossier="fx_fixed" data-plan-slot="0" aria-pressed="true">Rates fixed</button><button class="learn-chip lesson-plan-chip plan-slot-1" type="button" data-canvas-dossier="fx_modeled" data-plan-slot="1" aria-pressed="false">Rates modeled</button><button class="learn-chip lesson-plan-chip plan-slot-2" type="button" data-canvas-dossier="fx_modeled_spread" data-plan-slot="2" aria-pressed="false">A pound differential</button></div>
+        </div>
+        <p class="lesson-plan-showing muted" id="lesson-plan-showing" aria-live="polite">On the right now: <span id="lesson-plan-showing-label">Rates fixed</span></p>
+<a class="trial-callout trial-callout-tech" href="/designer-site/try" data-trial-callout data-variant="tech"><img src="/designer-site/static/images/trial/trial-tech.png" alt="14-Day Free Trial: Your Dossier on Your Desktop" width="459" height="145" decoding="async"></a>        <div class="lesson-prose" id="lesson-prose" data-next-key="KeyJ" data-previous-key="KeyK" data-lesson-id="currency_risk_in_the_forecast" data-lesson-slug="currency-risk-retirement-planning" data-loaded-lang="de"><h1>Währungsrisiko in der Prognose</h1>
+<p class="lesson-situation"><span class="lesson-situation-label">Die Situation</span> Ines ist in den Vereinigten Staaten im Ruhestand und gibt in Dollar aus. Ihre Rente wird in Euro gezahlt, der größte Teil ihrer Ersparnisse liegt in einer Anleiheleiter in Pfund, und der Rest ist Yen. Sie will wissen, wie viel der Streuung ihres Ruhestands die Währungen selbst sind, und was das Werkzeug darüber sagen kann, was eine Prognose mit festem Kurs nicht kann.</p>
+<div class="lesson-intro-card"><img class="lesson-media-ref ui-std-preview-wide" src="/designer-site/static/images/lessons/intro-cards/currency-risk-in-the-forecast.webp" alt="Manga poster titled Currency risk. A person runs with dollar bills while a folding ruler carries a euro coin labeled Fixed and a jagged stretch labeled Modeled. Notes show a pound sign and a yen sign, with tags for Euros and Pounds. The narrator says fixed is one number and modeled is a path. One panel quotes the Federal Reserve: the value of the dollar is determined in foreign exchange markets, and neither the U.S. Treasury nor the Federal Reserve targets a level for the exchange rate. The banner says a bet on three exchange rates." data-media-id="intro-card-currency-risk" loading="lazy" decoding="async" /></div>
+<details class="lesson-intro-chrome" data-intro-chrome="1" data-lesson-presentation="Reading"><summary><span class="lesson-intro-chrome-summary-title">So funktioniert diese Seite</span></summary><div class="lesson-intro-chrome-body"><blockquote class="lesson-shared lesson-learning-preference" cite="learning-center:learning-preference"><p>New to the Learning Center, or want a map of the panels? Start with a tour: <a href="/designer-site/learn/getting-started-planning-software-tour"><strong>Reading Lesson (Getting Around)</strong></a> or <a href="/designer-site/learn/getting-started-video-tutorial"><strong>Screencast Lesson (Getting Around)</strong></a> — both walk through Tutilis next to a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">Live-Plan</span><span class="lesson-term-tip" role="tooltip">Das laufende Tutilis-Produkt neben dieser Lektion – Navigation, Vogelperspektive, Prognosemodul, Werkzeuge und mehr –, geladen mit einem Lehrbeispiel. Ein Dossier sind die Plandaten; der Live-Plan ist die gesamte Produktoberfläche mit einem bereits geöffneten Beispieldossier, damit Sie sich umsehen können. Im Web lassen sich Lehrbeispiele nicht so bearbeiten wie Ihr eigenes Dossier in der vollständigen App.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> (to the right on a desktop-width screen, or below when stacked on a tablet).</p></blockquote><blockquote class="lesson-shared lesson-orientation" cite="learning-center:orientation"><p>This page — <strong>Currency risk in the forecast</strong> — can open <strong>more than one</strong> <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live sample plan</span><span class="lesson-term-tip" role="tooltip">Das laufende Tutilis-Produkt neben dieser Lektion – Navigation, Vogelperspektive, Prognosemodul, Werkzeuge und mehr –, geladen mit einem Lehrbeispiel. Ein Dossier sind die Plandaten; der Live-Plan ist die gesamte Produktoberfläche mit einem bereits geöffneten Beispieldossier, damit Sie sich umsehen können. Im Web lassen sich Lehrbeispiele nicht so bearbeiten wie Ihr eigenes Dossier in der vollständigen App.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to the text (to the right on a wide screen, or below on a tablet). Use the <strong>Live plans</strong> chips (and matching colored links in the prose) to switch without leaving this page; the colored bar near the plans shows which one is loaded. The walk-through stays in the text.</p></blockquote><blockquote class="lesson-shared lesson-product-relationship" cite="learning-center:product-relationship"><p>The <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">Live-Plan</span><span class="lesson-term-tip" role="tooltip">Das laufende Tutilis-Produkt neben dieser Lektion – Navigation, Vogelperspektive, Prognosemodul, Werkzeuge und mehr –, geladen mit einem Lehrbeispiel. Ein Dossier sind die Plandaten; der Live-Plan ist die gesamte Produktoberfläche mit einem bereits geöffneten Beispieldossier, damit Sie sich umsehen können. Im Web lassen sich Lehrbeispiele nicht so bearbeiten wie Ihr eigenes Dossier in der vollständigen App.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to this page — usually <strong>to the right</strong> on a wide screen, or <strong>below</strong> on a tablet — is <strong>Tutilis</strong> running a teaching sample: the same <strong>financial planning product</strong> available as a desktop application (early preview). A <span class="lesson-term" data-term="dossier" tabindex="0"><span class="lesson-term-pill">Dossier</span><span class="lesson-term-tip" role="tooltip">Ihr vollständiger Plan in Tutilis: die Personen im Haushalt, was sie besitzen und schulden, ein- und ausgehende Cashflows, steuerliche Einstellungen und Planungsannahmen. Ein Dossier ist eine vollständige Situation, wie das Produkt sie modelliert.<a class="lesson-term-more" href="/designer-site/glossary/dossier">Full entry →</a></span></span> is the plan data; the live plan is the full product (navigation, Bird's Eye, Forecaster, tools) with a sample dossier already open so you can try the panels. <a href="/designer-site/pricing">See planned pricing</a>. On the web, Learning Center samples are <strong>not editable</strong> the way your own dossier will be in the full app. Your own household goes in the Tutilis desktop app — <a href="/designer-site/learn#intro-video-heading">the Learning Center front page has a short clip of that</a>.</p></blockquote></div></details>
+<div class="lesson-accordion" data-sections="10" style="--n:10"><h2 id="overview" class="lesson-section-head" style="--i:0"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="overview--body"><span class="lesson-section-title">Überblick</span></button></h2><div class="lesson-section-body" id="overview--body" role="region" aria-labelledby="overview" hidden>
+<p>Ines ist in den Vereinigten Staaten im Ruhestand und gibt in Dollar aus. Ihr Einkommen ist eine Rente aus den Jahren, in denen sie in Lissabon gearbeitet hat, gezahlt in Euro. Der größte Teil ihrer Ersparnisse liegt in einer Leiter britischer Staatsanleihen, in Pfund, und der Rest ist ein Sparkonto in Tokio, in Yen. Ein bescheidenes amerikanisches <span class="lesson-term" data-term="brokerage" tabindex="0"><span class="lesson-term-pill">Depot</span><span class="lesson-term-tip" role="tooltip">Ein gewöhnliches <strong>steuerpflichtiges</strong> Anlagekonto — ohne besonderen Altersvorsorge-Mantel, ohne Einzahlungsgrenze und ohne Altersregeln für Entnahmen. Der Preis dafür: Dividenden und realisierte Gewinne werden laufend versteuert statt aufgeschoben. Oft als <strong>steuerpflichtiger</strong> Topf neben traditionell und Roth bezeichnet.<a class="lesson-term-more" href="/designer-site/glossary/brokerage">Full entry →</a></span></span> ist das Einzige, das sie besitzt und das in der Währung bepreist ist, in der sie lebt.</p>
+<p>Das ist ein Haushalt, dessen Ruhestand eine Wette auf drei Wechselkurse ist, ob es jemand so gedacht hat oder nicht. Diese Lektion handelt davon, was eine Prognose über diese Wette sagen kann, und von dem einen, das diese Prognose sagen kann und eine Prognose mit festem Kurs nicht: wie viel ihrer Streuung die Währungen selbst sind.</p>
+<p>Die <span class="lesson-term" data-term="canvas" tabindex="0"><span class="lesson-term-pill">Zeichenfläche</span><span class="lesson-term-tip" role="tooltip">So nennen wir die rechte Seite dieser Seite (bzw. den unteren Bereich auf einem schmalen Bildschirm), auf der die Tutilis-Anwendung in diesem Web-Lernzentrum dargestellt wird. Es ist dieselbe Produktoberfläche wie der Live-Plan – Navigation, Vogelperspektive, Prognosemodul usw. – und kein eigenes Produkt.<a class="lesson-term-more" href="/designer-site/glossary/canvas">Full entry →</a></span></span> hält drei Pläne, die derselbe Haushalt sind. Der erste rechnet jedes Jahr zu den heutigen Kursen um, was jeder Plan tut, sofern er nicht anders bittet. Der zweite schaltet das Währungsrisikomodell ein. Der dritte schaltet es ein und nennt eine Überzeugung über das Pfund. Wechseln Sie beim Lesen zwischen ihnen.</p>
+<aside class="lesson-power-user">
+<p class="lesson-power-user-label">Power-Nutzer</p>
+<div class="lesson-power-user-body">
+<p>Diese Lektion setzt Wechselkurse und lässt sie sich bewegen, auf dem Reiter Währung unter Annahmen. Dieser Reiter, und Pläne in mehreren Währungen, gehören zu einem <strong>Power-Nutzer</strong>. Schalten Sie ihn ein unter <span class="lesson-nav-ref lesson-nav-ref--advanced lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/rail.advanced.png" alt="Advanced" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Advanced</span><span class="lesson-term-tip" role="tooltip">The <strong>Advanced</strong> button at the foot of the left rail. Its <strong>Application</strong> section holds <strong>Power user</strong>, which adds the full Assumptions panel, your own growth rates, several currencies and drag-to-size.</span></span> → Anwendungseinstellungen → <strong>Power-Nutzer</strong>, um an Ihren eigenen Plänen mitzugehen.</p>
+</div>
+</aside>
+</div>
+<h2 id="what-you-will-learn" class="lesson-section-head" style="--i:1"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-you-will-learn--body"><span class="lesson-section-title">Was Sie lernen</span></button></h2><div class="lesson-section-body" id="what-you-will-learn--body" role="region" aria-labelledby="what-you-will-learn" hidden>
+<aside class="lesson-plan">
+<p class="lesson-plan-label">Heutige Lektion</p>
+<div class="lesson-plan-body">
+<p>Am Ende dieser Lektion sollten Sie diese Fragen beantworten können. Jede verweist auf den Abschnitt, der sie beantwortet.</p>
+<ol>
+<li><strong>Wie schalte ich bewegliche Wechselkurse für einen Plan ein?</strong> Siehe <a href="#nothing-moves-until-you-ask">Nichts bewegt sich, bis Sie darum bitten</a>.</li>
+<li><strong>Wie viel meines Plans ist fremden Währungen ausgesetzt?</strong> Siehe <a href="#what-she-owns-and-in-what">Was sie besitzt, und worin</a>.</li>
+<li><strong>Was treibt im Modell einen Wechselkurs von einem Jahr zum nächsten?</strong> Siehe <a href="#what-a-moving-rate-is-made-of">Woraus ein beweglicher Kurs besteht</a>.</li>
+<li><strong>Warum ist der erwartete Kurs flach, und was geschieht, wenn ich eine Überzeugung zur <span class="lesson-term" data-term="inflation" tabindex="0"><span class="lesson-term-pill">Inflation</span><span class="lesson-term-tip" role="tooltip">Ein Anstieg des Preisniveaus. Derselbe Warenkorb kostet mehr Dollar als zuvor. Ein Haushaltsplan führt für jede Rechnung eine eigene Wachstumsrate, denn eine veröffentlichte Inflationszahl steht für einen einzigen Warenkorb. Der Darstellungssatz, der künftige Dollar in heutige Dollar umrechnet, ist eine separate Annahme.<a class="lesson-term-more" href="/designer-site/glossary/inflation">Full entry →</a></span></span> angebe?</strong> Siehe <a href="#the-expected-path-is-flat-until-you-state-a-belief">Flach, bis Sie eine Überzeugung angeben</a>.</li>
+<li><strong>Wie sieht Währungsrisiko innerhalb eines einzelnen Prognosepfads aus?</strong> Siehe <a href="#one-path">Ein Pfad</a>.</li>
+<li><strong>Wie viel der Streuung meiner Ergebnisse kommt von den Währungen?</strong> Siehe <a href="#how-much-of-the-spread-is-the-currencies">Wie viel ist Währungsrisiko</a>.</li>
+<li><strong>Was lässt das Währungsmodell aus?</strong> Siehe <a href="#what-the-model-does-not-do">Was das Modell nicht tut</a>.</li>
+</ol>
+</div>
+</aside>
+</div>
+<h2 id="nothing-moves-until-you-ask" class="lesson-section-head" style="--i:2"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="nothing-moves-until-you-ask--body"><span class="lesson-section-title">Nichts bewegt sich, bis Sie darum bitten</span></button></h2><div class="lesson-section-body" id="nothing-moves-until-you-ask--body" role="region" aria-labelledby="nothing-moves-until-you-ask" hidden>
+<p>Öffnen Sie <strong>Annahmen → Währung</strong> im ersten Plan. Unter der Kurstabelle gibt es eine Wahl in zwei Richtungen, <strong>Wechselkurse: Fest | Modelliert</strong>, und sie steht auf <em>Fest</em>. Diese Einstellung ist die ganze Einwilligung. Ein Plan, der sie nie berührt hat, rechnet jedes Jahr jedes Pfads zu den Kursen in der Tabelle um, genau wie vor der Existenz des Modells, und seine Prognose ändert sich nicht um einen Cent.</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Wo es in der App ist</span> <a class="lesson-jump-term" href="/designer-site/glossary/fx">FX</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--input">Wo Sie es eingeben</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="input__assumptions__assumptions-currency__control.fx-modeling" title="Hingehen" aria-label="Hingehen: Annahmen → Währung → Wechselkurse: fest oder modelliert"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/input__assumptions__assumptions-currency__control.fx-modeling.png" width="514" height="32" alt="Annahmen → Währung → Wechselkurse: fest oder modelliert" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+<details class="lesson-desktop-only" open>
+<summary class="lesson-desktop-only-label">Nur in der Desktop-App</summary>
+<div class="lesson-desktop-only-body">
+<p><img class="lesson-media-ref ui-control lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/currency-risk-fx-fixed.de.png" alt="Assumptions → Currency on the fixed plan: Exchange rates set to Fixed, so every year converts at the table" data-media-id="currency-risk-fx-fixed" width="477" data-where="input__assumptions__assumptions-currency" data-canvas-dossier="fx_fixed" data-pick="2027,0" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Annahmen → Währung im Plan mit festen Kursen. Wechselkurse steht auf Fest.</p>
+<p><img class="lesson-media-ref ui-control lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/currency-risk-fx-modeled.de.png" alt="Assumptions → Currency on the modeled plan: Exchange rates set to Modeled, so each rate wanders on its own path" data-media-id="currency-risk-fx-modeled" width="477" data-where="input__assumptions__assumptions-currency" data-canvas-dossier="fx_modeled" data-pick="2027,0" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Dasselbe Panel im modellierten Plan. Wechselkurse steht auf Modelliert, und jeder Kurs wird ein eigener Pfad.</p>
+</div>
+</details>
+<p>Das Modell ändert auch nichts daran, wie ein Plan geschrieben wird. Die Rente ist weiter in Euro erfasst, die Anleihenleiter in Pfund, die Ersparnisse in Yen. Was <em>Modelliert</em> ändert, ist der Kurs, den die Prognose benutzt, wenn sie diese Beträge in einem gegebenen Jahr eines gegebenen Pfads in Dollar umrechnet. Bei <em>Fest</em> ist dieser Kurs jedes Mal dieselbe Zahl. Bei <em>Modelliert</em> ist er ein eigener Pfad.</p>
+</div>
+<h2 id="what-she-owns-and-in-what" class="lesson-section-head" style="--i:3"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-she-owns-and-in-what--body"><span class="lesson-section-title">Was sie besitzt, und worin</span></button></h2><div class="lesson-section-body" id="what-she-owns-and-in-what--body" role="region" aria-labelledby="what-she-owns-and-in-what" hidden>
+<p>Bevor Sie fragen, ob die Kurse zählen, sehen Sie, wie viel des Plans sie berühren. Die Prognose weist die <span class="lesson-term" data-term="exposure" tabindex="0"><span class="lesson-term-pill">Exposure</span><span class="lesson-term-tip" role="tooltip">Wie viel des Portfolios sich mit einer bestimmten Art von Risiko bewegt — Aktien-Exposure, Währungs-Exposure. Mehr Exposure bedeutet mehr Aufwärtspotenzial und mehr Schwankungen; ein Gleitpfad ist ein Zeitplan, um es im Lauf der Zeit zu verändern.<a class="lesson-term-more" href="/designer-site/glossary/exposure">Full entry →</a></span></span> aus, ob die Kurse modelliert sind oder nicht, weil sie eine Tatsache des Plans ist und nicht des Modells.</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/currency-risk-exposure.de.png" alt="Assets stacked by currency, one column per year from 2027 to 2052: a gray dollar base, a large blue-purple pound band above it, and a red yen band on top, the whole stack shrinking as the retiree draws it down" data-media-id="currency-risk-exposure" data-where="output__fx" data-canvas-dossier="fx_modeled" data-pick="2027,0" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p>Etwa zwei Drittel ihrer Vermögenswerte sind Pfund, ein Fünftel ist Yen, und ein Sechstel ist Dollar. Die Dollar-Scheibe wächst ein wenig, während die US-Aktien sich aufzinsen und der Rest abgebaut wird, aber die Form hält bis zum Horizont. Ihr Einkommen ist noch schärfer: Jeder Euro davon ist die Lissaboner Rente, und jeder Dollar, den sie ausgibt, muss zuerst mit einer der drei fremden Währungen gekauft werden.</p>
+<p>Das ist die Form ihres Währungsrisikos. Die Vermögenswerte, die ihren Ruhestand finanzieren, sind fremd; der Ruhestand, den sie finanzieren, ist in Dollar. Nichts daran ist ungewöhnlich für jemanden, der in mehr als einem Land gelebt und gearbeitet hat, und nichts daran zeigt sich in einer Prognose, die die Kurse stillhält.</p>
+</div>
+<h2 id="what-a-moving-rate-is-made-of" class="lesson-section-head" style="--i:4"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-a-moving-rate-is-made-of--body"><span class="lesson-section-title">Woraus ein beweglicher Kurs besteht</span></button></h2><div class="lesson-section-body" id="what-a-moving-rate-is-made-of--body" role="region" aria-labelledby="what-a-moving-rate-is-made-of" hidden>
+<p>Das Modell zieht einen Wechselkurs nicht aus der Luft, und es gibt jeder Währung nicht einfach eine Rendite und eine <span class="lesson-term" data-term="volatility" tabindex="0"><span class="lesson-term-pill">Volatilität</span><span class="lesson-term-tip" role="tooltip">Wie stark die Renditen einer Anlage von Jahr zu Jahr <strong>schwanken</strong>, nicht ob sie insgesamt steigt oder fällt. Im Produkt als <strong>σ (Sigma)</strong> geschrieben. Zwei Anlagen können dieselbe durchschnittliche Rendite haben und sich im Erleben völlig unterschiedlich anfühlen — und hohe Volatilität drückt das tatsächlich erzielte Zinseszinswachstum unter diesen Durchschnitt.<a class="lesson-term-more" href="/designer-site/glossary/volatility">Full entry →</a></span></span>, wie ein Fonds eine bekommt. Es baut die Änderung jedes Jahres aus zwei Stücken, über die Ökonomen seit einem Jahrhundert streiten und über lange Horizonte meist einig sind.</p>
+<p>Das erste Stück ist die <strong>Drift aus der Inflation</strong>. Wenn die Preise in einem Land schneller steigen als die Preise in einem anderen, verliert die Währung dieses Landes gegen die andere tendenziell etwa um die Differenz an Wert. Das ist relative Kaufkraftparität, und über Jahrzehnte ist es das Verlässlichste, was jemand darüber sagen kann, wohin eine Währung steuert. Im Modell wird die Inflation jeder Region relativ zur eigenen Berichtsinflation des Plans für die Vereinigten Staaten angegeben. Eine Region mit einem Spread von null wird so verstanden, dass sie im selben Tempo inflationiert wie die USA, und ihre Währung hat keine Drift. Deshalb kann auch eine Hochinflationswährung nicht aus Versehen stark bleiben: Die Drift ist an die Inflation gebunden, die der Rest der Prognose schon benutzt.</p>
+<p>Das zweite Stück ist der <strong>reale Wechselkurs</strong>, also der Kurs, nachdem die Preisniveaus beider Länder herausgenommen sind. Dort lebt das eigentliche Währungsrisiko. Reale Kurse schwanken, manchmal um ein Viertel oder mehr, aber sie schwanken nicht ewig. Sie tendieren dazu, über ein paar Jahre zu einem langfristigen Niveau zurückzukehren. Das Modell sagt das als Halbwertszeit: die Zahl der Jahre, die es dauert, bis sich die Hälfte einer Abweichung schließt, vier Jahre für die großen frei schwankenden Währungen. Jedes Jahr macht der reale Kurs einen zufälligen Schritt und lehnt sich dann zurück zu seinem langfristigen Niveau, sodass ein Pfad von vierzig Jahren nicht zu einer Bewertung abwandern kann, die keine Währung je gehalten hat.</p>
+<p>Der Kurs <span class="lesson-term" data-term="nominal" tabindex="0"><span class="lesson-term-pill">nominal</span><span class="lesson-term-tip" role="tooltip">Ein Wert zum <strong>Nennwert</strong>, ohne Inflationsbereinigung. Ein Saldo, der sich nominal in 25 Jahren verdoppelt, kauft dann womöglich kaum mehr als heute. Das Gegenstück ist <strong>real</strong>, also inflationsbereinigt und näher an dem, was das Geld tatsächlich kaufen wird — prüfen Sie immer, welche Variante ein Diagramm zeigt.<a class="lesson-term-more" href="/designer-site/glossary/nominal">Full entry →</a></span></span>, den Sie sehen, ist das Produkt der beiden. Er bekommt keine eigene Volatilität, und das ist Absicht: Würden Nominalkurs und Realkurs getrennt gezogen, könnten sie widersprüchliche Geschichten erzählen. Jede Zahl, die das Modell benutzt, je Währung, steht unter <strong>Annahmen → Währung</strong> und wird von <code>assumptions.fx-model</code> gedruckt. Die meisten sind Annahmen der gemeinsamen Welt, wie der Satz, mit dem Steuerklassen indexiert werden, und nicht etwas, das jeder Haushalt tippen soll. Die eine Ausnahme ist der Inflationsspread, eine Überzeugung, die ein Haushalt vernünftigerweise für sich selbst halten kann, und der nächste Abschnitt zeigt, wo man sie angibt.</p>
+<details class="lesson-math">
+<summary class="lesson-math-label">Für die Mathematikfreunde — die Drift und die Halbwertszeit</summary>
+<div class="lesson-math-body">
+<p><strong>Drift.</strong> Mit der US-Inflation <span class="math">\(\pi_{US}\)</span> und der Inflation der anderen Region <span class="math">\(\pi_c\)</span> ist die erwartete jährliche Änderung des Kurses, in Logarithmen,</p>
+<p><span class="math">\[
+\ln\frac{1+\pi_{US}}{1+\pi_c}
+\]</span></p>
+<p>sodass über viele Jahre der erwartete Kurs einfach das Verhältnis der beiden Preisniveaus ist.</p>
+<p><strong>Der reale Kurs.</strong> Schreiben Sie den logarithmischen Abstand des realen Kurses von seinem langfristigen Niveau als <span class="math">\(x_t\)</span>. Jedes Jahr behält er einen Anteil <span class="math">\(\rho\)</span> dieses Abstands und macht einen zufälligen Schritt:</p>
+<p><span class="math">\[
+x_{t+1} = \rho\,x_t + \sigma_q\,\varepsilon_{t+1}, \qquad \rho = 0.5^{1/h}
+\]</span></p>
+<p>Eine Abweichung schrumpft auf <span class="math">\(\rho^h = 0.5\)</span> ihrer selbst nach <span class="math">\(h\)</span> Jahren, und das ist, was eine Halbwertszeit bedeutet. Bei einer Halbwertszeit von vier Jahren ist <span class="math">\(\rho = 0.5^{1/4} \approx 0.84\)</span>.</p>
+<p>Der Nominalkurs, den Sie sehen, ist der reale Kurs, getragen vom Verhältnis der Preisniveaus, also bekommt er keine eigene Volatilität.</p>
+</div>
+</details>
+</div>
+<h2 id="the-expected-path-is-flat-until-you-state-a-belief" class="lesson-section-head" style="--i:5"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="the-expected-path-is-flat-until-you-state-a-belief--body"><span class="lesson-section-title">Flach, bis Sie eine Überzeugung angeben</span></button></h2><div class="lesson-section-body" id="the-expected-path-is-flat-until-you-state-a-belief--body" role="region" aria-labelledby="the-expected-path-is-flat-until-you-state-a-belief" hidden>
+<p>Die deterministische Prognose, der <span class="lesson-term" data-term="gmf" tabindex="0"><span class="lesson-term-pill">GMF ✦</span><span class="lesson-term-tip" role="tooltip">GMF ✦ (auch FID 0 / GMF) ist der <strong>Leitstern</strong> des Produkts – der deterministische Prognosepfad auf Basis des geometrischen Mittels, an dem Sie sich orientieren, keine zufällige Monte-Carlo-Ziehung und nicht „am wahrscheinlichsten“. Nutzen Sie ihn für eine stabile Jahr-für-Jahr-Sicht auf den Plan. Wechseln Sie, wenn Sie andere <strong>zufällige</strong> Szenarien oder Pfade in der Mehrpfad-Wolke erkunden möchten. Das Zeichen ✦ entspricht dem Live-FID-Steuerelement (Kompass / Leitstern, kein Bewertungsstern).<a class="lesson-term-more" href="/designer-site/glossary/gmf">Full entry →</a></span></span>, zieht keine zufälligen Schritte. Im zweiten Plan ist ihr Wechselkurspfad flach: Ein Pfund ist 2053 in Dollar so viel wert wie 2027. Das ist nicht das Modell, das sich weigert zu arbeiten. Es ist das Modell, das sagt: Ohne angegebenes Inflationsgefälle und mit dem heutigen Kurs als fairem Wert ist der erwartete Kurs der heutige Kurs. Die Streuung, die Sie gleich sehen, kommt ganz aus den Pfaden um diese Erwartung.</p>
+<p>Der dritte Plan nennt eine Überzeugung: Großbritannien inflationiert 1,5 Punkte im Jahr schneller als die Vereinigten Staaten. Sonst ist nichts anders. Die Überzeugung lebt in der Kurstabelle unter <strong>Annahmen → Währung</strong>, in der Spalte <strong>Inflation vs. USA</strong>, die editierbar ist, sobald Wechselkurse auf <em>Modelliert</em> steht. Die Zeile des Pfunds liest dort 1,5 %, und jede andere Zeile liest null. In der Parametertabelle darunter wechselt die Quelle des Pfunds von der Systemvorgabe zum Plan selbst. Nun neigt sich der GMF-Pfad des Pfunds. Jedes Jahr verliert das Pfund etwa 1,4 % seines Dollarwerts, genau das Verhältnis der beiden Inflationsraten, und 2053 sitzt es fast ein Drittel unter seinem Start. Euro und Yen, ohne angegebenen Spread, bleiben daneben flach.</p>
+<p>Weil zwei Drittel dessen, was Ines besitzt, Pfund sind, nimmt diese eine Überzeugung das erwartete Endnettovermögen von etwas unter einer Million Dollar auf etwas über die Hälfte davon. Nichts im Plan hat sich geändert außer einer einzelnen Annahme über die Inflation zweier Länder, und die Prognose hat sich um mehr bewegt, als die meisten Bearbeitungen am Plan selbst sie bewegen würden. Den Pfad lesen Sie an <code>forecast.fx-path</code> für die erwartete Prognose ab, und das ist der sauberste Weg zu prüfen, was ein angegebener Spread tut, bevor Sie einem darauf gebauten <span class="lesson-term" data-term="monte-carlo" tabindex="0"><span class="lesson-term-pill">Monte Carlo</span><span class="lesson-term-tip" role="tooltip">Die Methode hinter einem Mehrpfad-Lauf: viele zufällige Renditepfade ziehen, den Plan entlang jedes Pfades durchrechnen und die Streuung der Ergebnisse ablesen. Benannt nach dem Casino, weil der Motor auf wiederholter Zufallsstichprobe statt auf einer Formel beruht – deshalb unterscheiden sich zwei Läufe desselben Plans leicht, und deshalb ist eine Erfolgsquote ein Anteil gezogener Zukünfte und kein Versprechen.<a class="lesson-term-more" href="/designer-site/glossary/monte-carlo">Full entry →</a></span></span> vertrauen.</p>
+</div>
+<h2 id="one-path" class="lesson-section-head" style="--i:6"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="one-path--body"><span class="lesson-section-title">Ein Pfad</span></button></h2><div class="lesson-section-body" id="one-path--body" role="region" aria-labelledby="one-path" hidden>
+<p>Jeder stochastische Pfad zieht seine eigenen Kurse. Im zweiten Plan liegt das Pfund in Prognose 7 Mitte der 2030er etwa 8 % unter heute, durch die späten 2040er ein Viertel darüber, und am Horizont wieder bei etwa 15 % darüber. Der Euro verbringt dieselben Jahrzehnte ein Viertel stark und kehrt bis 2053 auf heute zurück. Der Yen endet ein Fünftel stärker, als er begonnen hat. Die drei bewegen sich nicht unabhängig: Das Modell korreliert Überraschungen des realen Kurses über die Währungen, sodass ein Jahr, in dem der Dollar stärker wird, ihn tendenziell gegen alle drei stärkt, und es korreliert die Inflationsüberraschungen jeder Region mit dem realen Kurs ihrer eigenen Währung.</p>
+<p>So sieht Währungsrisiko innerhalb eines Pfads aus: Kurse, die weit wandern, zurückkommen und wieder wandern, lose verbunden durch einen gemeinsamen Dollar-Faktor. Kein Pfad ist eine Vorhersage. Der Punkt ist, dass jeder Pfad ökonomisch möglich ist, was ein Random Walk auf dem Nominalkurs über einen Ruhestand nicht schaffen würde.</p>
+</div>
+<h2 id="how-much-of-the-spread-is-the-currencies" class="lesson-section-head" style="--i:7"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="how-much-of-the-spread-is-the-currencies--body"><span class="lesson-section-title">Wie viel ist Währungsrisiko</span></button></h2><div class="lesson-section-body" id="how-much-of-the-spread-is-the-currencies--body" role="region" aria-labelledby="how-much-of-the-spread-is-the-currencies" hidden>
+<p>Die Frage, die Ines tatsächlich gestellt hat, ist, wie viel ihrer Streuung die Währungen selbst sind, und eine Prognose mit festem Kurs kann sie nicht beantworten. Um sie zu beantworten, lässt die Prognose denselben Monte Carlo zweimal laufen, einmal mit modellierten Kursen und einmal mit den heutigen festgehalten, und vergleicht das Endnettovermögen. Die Tabelle <strong>Währungsrisiko</strong> in der FX-Schnellansicht tut das auf Abruf; <code>forecast.currency-risk</code> druckt denselben Vergleich.</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Wo es in der App ist</span> <a class="lesson-jump-term" href="/designer-site/glossary/fx">FX</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Wo es in der Prognose erscheint</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__fx" title="Hingehen" aria-label="Hingehen: FX"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__fx.png" width="99" height="32" alt="FX" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button><p class="lesson-jump-note">Eine Entwurfsansicht der Raten, über die Werkzeugleiste.</p></li></ul></div></aside>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/currency-risk-nw-distribution-fixed.de.png" alt="The cloud of ending net worths with the rates held at today's: a tight cluster around one million dollars, and nearly every path succeeds" data-media-id="currency-risk-nw-distribution-fixed" data-where="output__forecaster__forecaster.simulation-summary__simulation-summary.distribution" data-canvas-dossier="fx_fixed" data-pick="2027,0" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/currency-risk-nw-distribution-modeled.de.png" alt="The same cloud with the rates modeled: visibly wider on both sides, a lower floor, and a success share about a point lower" data-media-id="currency-risk-nw-distribution-modeled" data-where="output__forecaster__forecaster.simulation-summary__simulation-summary.distribution" data-canvas-dossier="fx_modeled" data-pick="2027,0" data-jump-tip="Hingehen" loading="lazy" decoding="async" /></p>
+<p>Mit stillgehaltenen Kursen ist die Wolke der Ergebnisse das, was ihre Anleihenleiter, ihre Sparquote und ihre Aktien daraus machen. Mit modellierten Kursen ist die Wolke auf beiden Seiten breiter: ein höheres neunzigstes <span class="lesson-term" data-term="percentile" tabindex="0"><span class="lesson-term-pill">Perzentil</span><span class="lesson-term-tip" role="tooltip">Eine Position in den vom schlechtesten zum besten sortierten Ergebnissen. Das <strong>10. Perzentil</strong> (P10) ist das Ergebnis, das nur eines von zehn unterschreitet; das 50. ist der Median; das 90. (P90) ist das, das nur eines von zehn übertrifft. Prognosen nennen P10 und P90, um Abwärts- und Aufwärtsszenario zu zeigen, ohne sich auf den einzelnen besten oder schlechtesten Durchlauf zu stützen.<a class="lesson-term-more" href="/designer-site/glossary/percentile">Full entry →</a></span></span>, weil ein starkes Pfund oder ein starker Euro so möglich ist wie ein schwaches, und ein niedrigeres zehntes Perzentil, weil ein schwaches es auch ist. Die Standardabweichung ihres Endnettovermögens ist ein Fünftel höher, der Boden am zehnten Perzentil ist Zehntausende Dollar niedriger, und die Erfolgsquote ist ein paar Punkte niedriger. Die letzte Zeile der Tabelle setzt eine Zahl darauf: <strong>Etwa drei Zehntel der Varianz ihres Endnettovermögens kommen von den Wechselkursen.</strong> Der Rest sind die Vermögenswerte.</p>
+<details class="lesson-math">
+<summary class="lesson-math-label">Für die Mathematikfreunde — wie ein Fünftel mehr Streuung zu drei Zehnteln der Varianz wird</summary>
+<div class="lesson-math-body">
+<p>Die Varianz ist das Quadrat der Standardabweichung. Machen die modellierten Kurse die Standardabweichung <span class="math">\(1.2\)</span>-mal so groß wie die bei festem Kurs, ist die Varianz <span class="math">\(1.2^2 = 1.44\)</span>-mal so groß, und der Anteil, den die Wechselkurse hinzufügen, ist</p>
+<p><span class="math">\[
+1 - \frac{\sigma_{fixed}^2}{\sigma_{modeled}^2} = 1 - \frac{1}{1.44} \approx 0.31
+\]</span></p>
+</div>
+</details>
+<p>Lesen Sie diese Zahl so, wie sie gemeint ist. Sie ist keine Prognose, wohin die Währungen gehen; der erwartete Pfad ist flach. Sie ist ein Maß dafür, wie viel ihrer Unsicherheit sie in den Währungen trägt statt in den Märkten, und das würde ihr sagen, ob Absichern oder mehr Ersparnisse in Dollar zu halten seinen Preis wert ist. Ein Haushalt mit demselben fremden Anteil in Aktien fände die Währungen einen kleineren Teil einer größeren Streuung; ein Haushalt, der fremde Anleihen und Bargeld hält, wie sie, findet sie einen großen Teil einer bescheidenen.</p>
+<p>Zwei Dinge machen diese Messung hier möglich und nicht in einer Tabelle mit einer Kursspalte. Die Kurse leben in der Simulation, sodass jeder Pfad seine eigene Kurshistorie neben seinen eigenen Renditen trägt, statt dass ein statischer Kurs hinterher durchmultipliziert wird. Und der Plan kann mit eingefrorenen Kursen laufen, sodass die Zuordnung ein Vergleich zweier ehrlicher Prognosen ist und keine Vermutung darüber, was die Währungen beigetragen haben.</p>
+</div>
+<h2 id="what-the-model-does-not-do" class="lesson-section-head" style="--i:8"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-the-model-does-not-do--body"><span class="lesson-section-title">Was das Modell nicht tut</span></button></h2><div class="lesson-section-body" id="what-the-model-does-not-do--body" role="region" aria-labelledby="what-the-model-does-not-do" hidden>
+<p>Das Währungsmodell ändert nicht, wie ein Posten wächst. Die Anleihenleiter verdient weiter, was eine Anleihenleiter verdient, in Pfund; das Modell ändert nur den Kurs, mit dem dieser Pfundwert in Dollar ausgedrückt wird. Es ändert nicht die US-Inflation, die die eigene Berichtsinflation des Plans bleibt und dieselbe Kurve ist, entlang derer jede Heutige-Dollar-Zahl in der App abgezinst wird. Und es korreliert die Bewegungen einer Währung noch nicht mit den Renditen der darin gehaltenen Vermögenswerte. Das sind die nächsten Schritte, und das Modell ist so gebaut, dass sie sich einsetzen, ohne zu ändern, was ein Plan sagt.</p>
+</div>
+<h2 id="what-to-take-away" class="lesson-section-head" style="--i:9"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-to-take-away--body"><span class="lesson-section-title">Was Sie mitnehmen</span></button></h2><div class="lesson-section-body" id="what-to-take-away--body" role="region" aria-labelledby="what-to-take-away" hidden>
+<ul>
+<li>Wechselkurse können Teil der Simulation sein, aber nur für einen Plan, der sich dafür entscheidet. Ein Plan, der den Schalter nie berührt, prognostiziert genau wie zuvor.</li>
+<li>Ein beweglicher Kurs ist zwei Dinge: eine Drift aus dem Inflationsgefälle zwischen Regionen, und ein realer Kurs, der wandert und zurückkommt. Der Nominalkurs folgt aus beiden, sodass keine Währung aus Versehen stark bleiben oder auf ein unmögliches Niveau abwandern kann.</li>
+<li>Der erwartete Pfad ist flach, bis Sie ein Gefälle angeben. Geben Sie eines an, und die Drift ist das Verhältnis der beiden Inflationsraten, Jahr für Jahr, und ein Haushalt, der vor allem in dieser Währung ist, bewegt sich mit ihr.</li>
+<li>Die Prognose kann sagen, wie viel der Streuung eines Haushalts seine Währungen sind, indem sie denselben Monte Carlo mit modellierten Kursen und mit stillgehaltenen Kursen laufen lässt. Für eine Ruheständlerin, die von fremdem Einkommen und fremden Anleihen lebt, ist dieser Anteil groß, und es ist die Zahl, die sagt, ob das Währungsrisiko es wert ist, etwas dagegen zu tun.</li>
+</ul>
+</div>
+</div>
+<details class="lesson-rebuild-by-hand"><summary><span class="lesson-rebuild-by-hand-summary-title">Diesen Plan von Hand nachbauen</span></summary><div class="lesson-rebuild-by-hand-body"><p>Die Karten auf der Leinwand zeigen die Konten und Zahlungsströme. Dies sind die Einstellungen außerhalb jeder Karte, aus jedem Plan dieser Lektion gelesen, mit der Beschriftung des jeweiligen Steuerelements in der App. Ein als default markierter Wert bleibt unverändert.</p><table class="content-table">
+<thead>
+<tr>
+<th align="left">Setting</th>
+<th align="left">Rates fixed</th>
+<th align="left">Rates modeled</th>
+<th align="left">A pound differential</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="4" align="center"><strong>Household</strong></td></tr>
+<tr>
+<td align="left">Planning region</td>
+<td align="left">United States (default)</td>
+<td align="left">United States (default)</td>
+<td align="left">United States (default)</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Ines (Primary)</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1960</td>
+<td align="left">1960</td>
+<td align="left">1960</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">66</td>
+<td align="left">66</td>
+<td align="left">66</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">92</td>
+<td align="left">92</td>
+<td align="left">92</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Taxes</strong></td></tr>
+<tr>
+<td align="left">Tax regime</td>
+<td align="left">United States</td>
+<td align="left">United States</td>
+<td align="left">United States</td>
+</tr>
+<tr>
+<td align="left">Filing status</td>
+<td align="left">Single</td>
+<td align="left">Single</td>
+<td align="left">Single</td>
+</tr>
+<tr>
+<td align="left">State of residence</td>
+<td align="left">None</td>
+<td align="left">None</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">First-year federal estimate</td>
+<td align="left">$2,500</td>
+<td align="left">$2,500</td>
+<td align="left">$2,500</td>
+</tr>
+<tr>
+<td align="left">First-year state estimate</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Strategy</strong></td></tr>
+<tr>
+<td align="left">Residual withdrawal strategy</td>
+<td align="left">Pro-rata (default)</td>
+<td align="left">Pro-rata (default)</td>
+<td align="left">Pro-rata (default)</td>
+</tr>
+<tr>
+<td align="left">Roth conversions</td>
+<td align="left">Off</td>
+<td align="left">Off</td>
+<td align="left">Off</td>
+</tr>
+<tr>
+<td align="left">Definition of success</td>
+<td align="left">Liquidity crises allowed (default)</td>
+<td align="left">Liquidity crises allowed (default)</td>
+<td align="left">Liquidity crises allowed (default)</td>
+</tr>
+<tr>
+<td align="left">Glide path target</td>
+<td align="left">None (default)</td>
+<td align="left">None (default)</td>
+<td align="left">None (default)</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Advanced</strong></td></tr>
+<tr>
+<td align="left">Reporting inflation</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Cost of capital</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Growth assumptions</td>
+<td align="left">Growth overrides (default)</td>
+<td align="left">Growth overrides (default)</td>
+<td align="left">Growth overrides (default)</td>
+</tr>
+<tr>
+<td align="left">Currencies</td>
+<td align="left">Multiple currencies (default)</td>
+<td align="left">Multiple currencies (default)</td>
+<td align="left">Multiple currencies (default)</td>
+</tr>
+<tr>
+<td align="left">Default currency</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+</tr>
+<tr>
+<td align="left">Display currency</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+</tr>
+</tbody>
+</table>
+</div></details><div class="lesson-catalog-footer"><span class="lesson-region-badge" title="All regions"><span class="lesson-region-marker">🌐</span><span class="lesson-region-label muted">All regions</span></span><span class="lesson-tags"><span class="lesson-tags-label">Schlagwörter</span><span class="learn-chip">currency</span><span class="learn-chip">fx</span><span class="learn-chip">multi-currency</span><span class="learn-chip">exchange-rates</span><span class="learn-chip">currency-risk</span><span class="learn-chip">inflation</span><span class="learn-chip">monte-carlo</span><span class="learn-chip">tool-lesson</span><span class="learn-chip">power-user</span></span></div><div class="community-invite"><a class="community-callout" href="https://community.plusauri.com" target="_blank" rel="noopener noreferrer" data-community-join="community-join" aria-haspopup="dialog"><img src="/designer-site/static/images/community/join-callout.jpg" alt="Join Our Community" width="392" height="229" decoding="async" loading="lazy"></a><dialog id="community-join" class="community-join" aria-labelledby="community-join-title"><article class="community-join-panel"><button type="button" class="community-join-close" data-community-join-close aria-label="Close" title="Close">×</button><h2 id="community-join-title">Join the Plusauri community</h2><form class="community-join-form" action="/designer-site/api/community/join" method="post" novalidate data-msg-invalid="That email address does not look right." data-msg-failed="Something went wrong. You can still join directly at community.plusauri.com." data-msg-sending="Sending…"><p class="community-join-lead">A forum of people planning their own retirement, asking questions and helping each other. Anyone can read it. Members can post, and get a note when someone answers.</p><fieldset class="community-join-modes"><legend>How would you like to take part?</legend><label class="community-join-mode community-join-mode-participant"><input type="radio" name="mode" value="Participant" checked><span class="community-join-mode-art" aria-hidden="true"></span><strong>Participant</strong><small>Ask questions, share what you have learned, join the conversation.</small></label><label class="community-join-mode community-join-mode-lurker"><input type="radio" name="mode" value="Lurker"><span class="community-join-mode-art" aria-hidden="true"></span><strong>Lurker</strong><small>No account needed. Get the highlights by email and read the forum whenever you like.</small></label></fieldset><div class="community-join-who"><label class="community-join-name">First name (optional)<input type="text" name="firstName" autocomplete="given-name" maxlength="80"></label><label class="community-join-email">Your email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com" maxlength="254"></label></div><fieldset class="community-join-stage"><legend>Which describes you best? (optional)</legend><label><input type="radio" name="stage" value="Building"> Building and saving</label><label><input type="radio" name="stage" value="NearingRetirement"> Getting close to retirement</label><label><input type="radio" name="stage" value="Retired"> Retired</label></fieldset><input type="text" name="website" class="community-join-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="community-join-note community-join-for-participant">We will email you an invitation to community.plusauri.com. Accept it to finish joining.</p><p class="community-join-note community-join-for-lurker">We will add you to the Plusauri mailing list. The forum at community.plusauri.com is open to read anytime, no account needed. Unsubscribe whenever you like.</p><label class="community-join-news"><input type="checkbox" name="news"> Also send me occasional Plusauri news by email. Optional, and you can unsubscribe anytime.</label><p class="community-join-error" role="alert" hidden></p><footer class="community-join-actions"><button type="button" class="secondary outline" data-community-join-close>Not now</button><button type="submit"><span class="community-join-for-participant">Send my invitation</span><span class="community-join-for-lurker">Add me to the list</span></button></footer></form><div class="community-join-sent" hidden aria-live="polite"><h3>Check your inbox</h3><p data-status="invited" hidden>Your invitation is on its way. Accept it to choose a username and finish joining.</p><p data-status="queued" hidden>Thanks. We will send your invitation shortly.</p><p data-status="member" hidden>That address already belongs to a member. Sign in at community.plusauri.com.</p><p data-status="listed" hidden>Thanks, you are on the list. The forum is at community.plusauri.com whenever you want a look.</p><footer class="community-join-actions"><button type="button" data-community-join-close>Done</button></footer></div></article></dialog></div><hr class="lesson-disclaimer-rule" /><blockquote class="lesson-shared lesson-disclaimer" cite="learning-center:disclaimer"><p><strong>Bildungsinhalt — keine Beratung.</strong> Diese Lektionen vermitteln, wie Tutilis einen Plan modelliert und wie Sie das Ergebnis lesen. Die Haushalte, Salden und Outcomes darin sind für den Unterricht erfunden. Nichts hiervon ist Finanz-, Anlage-, Steuer- oder Rechtsberatung und keine Empfehlung, etwas zu kaufen, zu verkaufen oder zu halten. Ein Modell kann Ihre Umstände nicht kennen — prüfen Sie alles, was Sie aus einer Lektion mitnehmen, an Ihrer eigenen Situation und, wo es darauf ankommt, mit einer qualifizierten Fachperson.</p></blockquote><p class="lesson-privacy-link"><small><a href="/designer-site/privacy">Privacy</a></small></p></div>
+      </section>
+      <div class="lesson-split-gutter" data-plan-slot="0">
+        <div class="lesson-split-handle" role="separator" aria-orientation="vertical" aria-label="Resize lesson and app panes" tabindex="0"></div>
+        <div class="lesson-split-pill"><button class="lesson-split-widen" type="button" data-widen="app" data-label-widen="Show the app full width" data-label-restore="Show the lesson and the app side by side" title="Show the app full width" aria-label="Show the app full width"><span class="lesson-split-caret"></span></button><button class="lesson-split-widen" type="button" data-widen="lesson" data-label-widen="Show the lesson full width" data-label-restore="Show the lesson and the app side by side" title="Show the lesson full width" aria-label="Show the lesson full width"><span class="lesson-split-caret"></span></button></div>
+      </div>
+      <section class="app-pane" data-plan-slot="0" data-canvas-dossier="fx_fixed">
+        <p class="canvas-omitted muted">The interactive plan is not in this copy.</p>
+      </section>
+    </div>
+  </body>
+</html>

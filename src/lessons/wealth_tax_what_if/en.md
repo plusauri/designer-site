@@ -158,6 +158,8 @@ A plan has no wealth tax unless you add one. To price a proposal against Nadia a
 
 [[img:wealth-tax-modifiables|control]]
 
+[[jump:wealth-tax]]
+
 The editor beside the card holds the tax. Switch it on and it opens on the first bracket of Warren's bill: 2% a year on net worth above $50 million, with the $50 million held at that dollar amount every year, as the bill writes it.
 
 [[img:wealth-tax-editor|control]]

@@ -186,6 +186,8 @@ Neither paper says 4% is wrong for every household. Both say that a safe rate de
    horizontal grabber under the top band to reclaim height after you set the knobs; the personal
    charts stay below.
 
+[[jump:guardrails|output__guardrails__guardrails.rule-summary]]
+
 ### Top section — shared studies
 
 Contents in the **top section** (Shared scenario · Rule summary · Spending paths):
@@ -264,6 +266,8 @@ knobs. Drop the portfolio or return to watch the table recompute and the buffer 
 [When Guardrails says you need a bigger nest egg](/learn/springfield_guardrail_gap) for a near-retire
 foil where extra needed is positive and growing the nest egg is the lesson.
 
+[[jump:guardrails|output__guardrails__guardrails.rule-summary__line.guardrails.min-portfolio,output__guardrails__guardrails.rule-summary__line.guardrails.extra-needed]]
+
 ### Bottom band pieces
 
 | Piece | Role |
@@ -328,6 +332,8 @@ Toolbar on the coverage buffer: **Withdraw to need** (default on) banks only the
 after other incomes cover lifestyle — leave it on for a lifestyle-funding story. There is no separate
 “start buffer at retirement” switch: onset already lives in the study path, and the buffer carries
 full-horizon plan nets.
+
+[[jump:guardrails|output__guardrails__guardrails.personalization__line.guardrails.coverage-buffer]]
 
 ---
 

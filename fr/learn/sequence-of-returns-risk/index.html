@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sequence of Returns Risk: Cash Reserve vs Rebalancing — Tutilis</title>
+    <meta name="description" content="Put a historical crash into a plan, slide it back and forth across the retirement date, and watch which year does the most damage. Then compare two common defenses on the same household: a large cash reserve, or a little less stock with a rule that decides what to sell.">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://www.plusauri.com/learn/sequence-of-returns-risk" rel="canonical">
+    <meta content="website" property="og:type">
+    <meta content="Plusauri" property="og:site_name">
+    <meta content="Sequence of Returns Risk: Cash Reserve vs Rebalancing — Tutilis" property="og:title">
+    <meta content="Put a historical crash into a plan, slide it back and forth across the retirement date, and watch which year does the most damage. Then compare two common defenses on the same household: a large cash reserve, or a little less stock with a rule that decides what to sell." property="og:description">
+    <meta content="https://www.plusauri.com/learn/sequence-of-returns-risk" property="og:url">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
+<script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
+    <script src="/designer-site/static/lang.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
+    <link href="/designer-site/static/site.css" rel="stylesheet">
+    <script src="/designer-site/static/lesson-split.js" defer="defer"></script>
+    <script src="/designer-site/static/trial-callout.js" defer="defer"></script>
+    <script src="/designer-site/static/community-join.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/katex/katex.min.css" rel="stylesheet">
+    <script src="/designer-site/static/vendor/katex/katex.min.js" defer="defer"></script>
+    <script src="/designer-site/static/vendor/katex/contrib/auto-render.min.js" defer="defer" onload="renderMathInElement(document.body,{delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true},{left:'$$',right:'$$',display:true}],throwOnError:false});"></script>
+  </head>
+  <body class="lesson-split-body" data-prose-lang="fr" data-lang="fr">
+    <header class="lesson-split-header" id="lesson-split-header">
+      <nav>
+        <ul>
+          <li><strong><a href="/designer-site/">Plusauri</a></strong></li>
+          <li><a href="/designer-site/learn">Learning Center</a></li>
+          <li><a href="/designer-site/reference">Reference</a></li>
+        </ul>
+        <ul>
+          <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr" selected="selected">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
+          <li><button class="lesson-header-collapse" type="button" aria-expanded="true" aria-controls="lesson-split-header" title="Hide header" aria-label="Hide header">▾</button></li>
+        </ul>
+      </nav>
+    </header>
+<button class="lesson-header-expand" type="button" id="lesson-header-expand" hidden="hidden" title="Show header" aria-label="Show header">▴ Plusauri · Learning Center</button><script type="application/json" id="lesson-canvas-dossiers">{"primary":"sor_seventy_thirty","alternates":["sor_cash_reserve","sor_sixty_forty_rebalanced"],"order":["sor_seventy_thirty","sor_cash_reserve","sor_sixty_forty_rebalanced"]}</script>
+    <div class="lesson-split has-plan-slots" data-plan-slot="0">
+      <section class="lesson-pane">
+        <p class="lesson-plan-switcher-lede">This lesson uses <strong>3 sample plans</strong> — switch anytime; color matches the bar between the columns.</p>
+        <div class="lesson-plan-switcher" role="group" aria-label="Plans this lesson can open">
+          <div class="lesson-plan-switcher-chips"><span class="lesson-plan-switcher-label">Plans</span><button class="learn-chip lesson-plan-chip plan-slot-0 is-active" type="button" data-canvas-dossier="sor_seventy_thirty" data-plan-slot="0" aria-pressed="true">70/30</button><button class="learn-chip lesson-plan-chip plan-slot-1" type="button" data-canvas-dossier="sor_cash_reserve" data-plan-slot="1" aria-pressed="false">Cash reserve</button><button class="learn-chip lesson-plan-chip plan-slot-2" type="button" data-canvas-dossier="sor_sixty_forty_rebalanced" data-plan-slot="2" aria-pressed="false">60/40 rebalanced</button></div>
+        </div>
+        <p class="lesson-plan-showing muted" id="lesson-plan-showing" aria-live="polite">On the right now: <span id="lesson-plan-showing-label">70/30</span></p>
+<a class="trial-callout trial-callout-comic" href="/designer-site/try" data-trial-callout data-variant="comic"><img src="/designer-site/static/images/trial/trial-comic.png" alt="14-Day Free Trial: Your Dossier on Your Desktop" width="458" height="187" decoding="async"></a>        <div class="lesson-prose" id="lesson-prose" data-next-key="KeyJ" data-previous-key="KeyK" data-lesson-id="sequence_of_returns_crash_timing" data-lesson-slug="sequence-of-returns-risk" data-loaded-lang="fr"><h1>Quand survient le krach</h1>
+<p class="lesson-situation"><span class="lesson-situation-label">La situation</span> Jordan a 60 ans, prévoit de prendre sa retraite en 2031 avec $1.34 million investis à environ 70/30, et a lu qu'un krach dans les premières années de retraite est celui qu'il faut craindre. Les deux idées sur la table sont de déplacer $200,000 vers une réserve de marché monétaire, ou de tenir une répartition 60/40 et de laisser le rééquilibrage décider de ce qui est vendu.</p>
+<div class="lesson-intro-card"><img class="lesson-media-ref ui-std-preview-wide" src="/designer-site/static/images/lessons/intro-cards/sequence-of-returns-crash-timing.webp" alt="Comic-book poster titled Sequence-of-return risk: a clock-eyed monster labeled Bad years first smashes the ground, an armored piggy bank labeled Cash reserve holds a shield that says it only works if you know when to spend and refill it, and a caped hero points at a balance labeled The Rebalancer that sells high stocks and buys low ones. Panels quote Mark Twain on October being a dangerous month to speculate, along with every other month, and John Templeton on buying at maximum pessimism. The banner reads: Order beats average, don't sell the nest when the monster swings." data-media-id="intro-card-sequence-of-returns" loading="lazy" decoding="async" /></div>
+<details class="lesson-intro-chrome" data-intro-chrome="1" data-lesson-presentation="Reading"><summary><span class="lesson-intro-chrome-summary-title">How to use this case study</span></summary><div class="lesson-intro-chrome-body"><blockquote class="lesson-shared lesson-learning-preference" cite="learning-center:learning-preference"><p>New to the Learning Center, or want a map of the panels? Start with a tour: <a href="/designer-site/learn/getting-started-planning-software-tour"><strong>Reading Lesson (Getting Around)</strong></a> or <a href="/designer-site/learn/getting-started-video-tutorial"><strong>Screencast Lesson (Getting Around)</strong></a> — both walk through Tutilis next to a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">plan actif</span><span class="lesson-term-tip" role="tooltip">Le produit Tutilis en fonctionnement à côté de cette leçon — navigation, Vue d'ensemble, Prévisionniste, outils et plus encore — chargé avec un exemple pédagogique. Un dossier contient les données du plan ; le plan en direct est l'ensemble du produit avec un dossier d'exemple déjà ouvert pour que vous puissiez explorer. Sur le web, les exemples pédagogiques ne sont pas modifiables comme le sera votre propre dossier dans l'application complète.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> (to the right on a desktop-width screen, or below when stacked on a tablet).</p></blockquote><blockquote class="lesson-shared lesson-orientation" cite="learning-center:orientation"><p>This page — <strong>Timing a crash: cash reserve or rebalancing?</strong> — can open <strong>more than one</strong> <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live sample plan</span><span class="lesson-term-tip" role="tooltip">Le produit Tutilis en fonctionnement à côté de cette leçon — navigation, Vue d'ensemble, Prévisionniste, outils et plus encore — chargé avec un exemple pédagogique. Un dossier contient les données du plan ; le plan en direct est l'ensemble du produit avec un dossier d'exemple déjà ouvert pour que vous puissiez explorer. Sur le web, les exemples pédagogiques ne sont pas modifiables comme le sera votre propre dossier dans l'application complète.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to the text (to the right on a wide screen, or below on a tablet). Use the <strong>Live plans</strong> chips (and matching colored links in the prose) to switch without leaving this page; the colored bar near the plans shows which one is loaded. The walk-through stays in the text.</p></blockquote><blockquote class="lesson-shared lesson-product-relationship" cite="learning-center:product-relationship"><p>The <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">plan actif</span><span class="lesson-term-tip" role="tooltip">Le produit Tutilis en fonctionnement à côté de cette leçon — navigation, Vue d'ensemble, Prévisionniste, outils et plus encore — chargé avec un exemple pédagogique. Un dossier contient les données du plan ; le plan en direct est l'ensemble du produit avec un dossier d'exemple déjà ouvert pour que vous puissiez explorer. Sur le web, les exemples pédagogiques ne sont pas modifiables comme le sera votre propre dossier dans l'application complète.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to this page — usually <strong>to the right</strong> on a wide screen, or <strong>below</strong> on a tablet — is <strong>Tutilis</strong> running a teaching sample: the same <strong>financial planning product</strong> available as a desktop application (early preview). A <span class="lesson-term" data-term="dossier" tabindex="0"><span class="lesson-term-pill">dossier</span><span class="lesson-term-tip" role="tooltip">Votre plan complet dans Tutilis : les personnes du ménage, ce qu'elles possèdent et doivent, les flux de trésorerie entrants et sortants, le cadre fiscal et les hypothèses de planification. Un dossier correspond à une situation complète telle que le produit la modélise.<a class="lesson-term-more" href="/designer-site/glossary/dossier">Full entry →</a></span></span> is the plan data; the live plan is the full product (navigation, Bird's Eye, Forecaster, tools) with a sample dossier already open so you can try the panels. <a href="/designer-site/pricing">See planned pricing</a>. On the web, Learning Center samples are <strong>not editable</strong> the way your own dossier will be in the full app. Your own household goes in the Tutilis desktop app — <a href="/designer-site/learn#intro-video-heading">the Learning Center front page has a short clip of that</a>.</p></blockquote></div></details>
+<div class="lesson-accordion" data-sections="12" style="--n:12"><h2 id="overview" class="lesson-section-head" style="--i:0"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="overview--body"><span class="lesson-section-title">Vue d’ensemble</span></button></h2><div class="lesson-section-body" id="overview--body" role="region" aria-labelledby="overview" hidden>
+<p>Jordan a 60 ans et prévoit de prendre sa retraite en 2031, à 65 ans. Il y a $1.34 million d'épargne : $900,000 dans un <span class="lesson-term" data-term="401k" tabindex="0"><span class="lesson-term-pill">401(k)</span><span class="lesson-term-tip" role="tooltip">Un compte de retraite proposé par l'employeur, nommé d'après l'article de la loi fiscale qui l'a créé — le nom ne dit donc rien de ce qu'il fait. Les cotisations sont généralement prélevées sur le salaire, souvent abondées par l'employeur, et existent en version <strong>traditionnelle</strong> (avant impôt) et <strong>Roth</strong>. Un <strong>403(b)</strong> est le même principe pour les écoles et les organismes à but non lucratif, un <strong>457</strong> pour les agents publics.<a class="lesson-term-more" href="/designer-site/glossary/401k">Full entry →</a></span></span>, $400,000 dans un <span class="lesson-term" data-term="brokerage" tabindex="0"><span class="lesson-term-pill">compte-titres</span><span class="lesson-term-tip" role="tooltip">Un compte d'investissement <strong>imposable</strong> ordinaire — sans enveloppe retraite particulière, sans plafond de versement et sans règle d'âge pour les retraits. La contrepartie est que les dividendes et les plus-values réalisées sont imposés au fur et à mesure plutôt que différés. Souvent appelé le compartiment <strong>imposable</strong>, à côté du traditionnel et du Roth.<a class="lesson-term-more" href="/designer-site/glossary/brokerage">Full entry →</a></span></span> et $40,000 sur un compte de marché monétaire. L'argent investi est réparti environ 70/30 entre un fonds indiciel S&amp;P 500 et un fonds d'obligations du Trésor à échéance intermédiaire, dans les deux comptes. Les dépenses sont de $72,000 par an en dollars d'aujourd'hui, et la Social Security commence à 67 ans.</p>
+<p>Jordan a lu que le krach à craindre est celui qui arrive juste au moment où les salaires s'arrêtent. Avant la retraite, une baisse du marché est quelque chose que l'on peut laisser passer. Après, les dépenses de chaque année doivent être vendues à partir de ce que vaut le portefeuille cette année-là, et les parts vendues au plus bas ne participent jamais à la reprise. C'est le <span class="lesson-term" data-term="sequence-of-returns" tabindex="0"><span class="lesson-term-pill">risque de séquence des rendements</span><span class="lesson-term-tip" role="tooltip">L'<strong>ordre</strong> dans lequel arrivent les bonnes et les mauvaises années. Deux plans aux rendements moyens identiques peuvent aboutir à des résultats très différents si l'un subit ses pertes tôt, pendant que l'argent est retiré — vendre dans une baisse supprime des parts qui ne seront plus là pour la reprise. C'est pourquoi le risque de retraite ne se résume pas à une moyenne, et pourquoi les années qui entourent le jour où vous cessez de travailler pèsent plus que leur nombre ne le laisse penser.<a class="lesson-term-more" href="/designer-site/glossary/sequence-of-returns">Full entry →</a></span></span> : les mêmes rendements, dans un ordre différent, laissent à un retraité une somme d'argent différente.</p>
+<p>Deux défenses reviennent dans chaque conversation sur le sujet. La première consiste à détenir une large réserve de liquidités, quelques années de dépenses en marché monétaire, et à en vivre pendant un krach au lieu de vendre des actions. La seconde consiste à détenir un peu moins d'actions et à adopter une règle sur ce qui est vendu chaque année. Cette leçon teste les deux sur le même ménage, avec un vrai krach placé à chaque année de 2027 à 2046.</p>
+<p>Elle ouvre trois plans qui partent du même $1.34 million :</p>
+<ul>
+<li><a href="#canvas-dossier:sor_seventy_thirty">70/30</a> est le plan de Jordan tel qu'il est. Les retraits proviennent de chaque position en proportion de sa taille.</li>
+<li><a href="#canvas-dossier:sor_cash_reserve">Réserve de liquidités</a> déplace $200,000 du compte-titres vers le marché monétaire, de sorte que la réserve détient $240,000, soit environ trois ans de dépenses à la retraite. Tout le reste est inchangé.</li>
+<li><a href="#canvas-dossier:sor_sixty_forty_rebalanced">60/40 rééquilibré</a> répartit l'argent investi 60/40 et règle la stratégie de retrait <strong>Rééquilibrage glissant</strong> sur une cible constante.</li>
+</ul>
+<p>Les deux défenses détiennent presque la même quantité d'actions. Le plan avec réserve détient $770,000 dans le fonds S&amp;P 500 et le plan 60/40 en détient $780,000, de sorte que la comparaison oppose le fait de garer l'argent sûr en liquidités sans règle et celui de le détenir en obligations avec une règle.</p>
+</div>
+<h2 id="what-you-will-learn" class="lesson-section-head" style="--i:1"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-you-will-learn--body"><span class="lesson-section-title">Ce que vous apprendrez</span></button></h2><div class="lesson-section-body" id="what-you-will-learn--body" role="region" aria-labelledby="what-you-will-learn" hidden>
+<aside class="lesson-plan">
+<p class="lesson-plan-label">Leçon du jour</p>
+<div class="lesson-plan-body">
+<p>À la fin de cette leçon, vous devriez pouvoir répondre à ces questions. Chacune renvoie à la section qui y répond.</p>
+<ol>
+<li><strong>Comment placer un krach historique dans mon plan ?</strong> Voir <a href="#put-a-crash-in-the-plan">Placer un krach dans le plan</a>.</li>
+<li><strong>Pourquoi un gros gain après une grosse perte me laisse-t-il en retrait ?</strong> Voir <a href="#check-the-crashs-returns">Vérifier les rendements du krach</a>.</li>
+<li><strong>Quelle année est la pire pour qu'un krach commence ?</strong> Voir <a href="#slide-the-crash">Faire glisser le krach</a>.</li>
+<li><strong>Quelques années de dépenses détenues en liquidités me protègent-elles lors d'un krach ?</strong> Voir <a href="#a-cash-reserve">Une réserve de liquidités</a>.</li>
+<li><strong>Comment une règle de rééquilibrage empêche-t-elle un plan de vendre des actions au plus bas ?</strong> Voir <a href="#less-stock-and-a-rule">Moins d'actions, et une règle</a>.</li>
+<li><strong>Est-ce la part d'actions plus faible ou la règle qui fait le travail ?</strong> Voir <a href="#which-part-does-the-work">Quelle partie fait le travail</a>.</li>
+<li><strong>Comment les trois plans s'en sortent-ils sur mille trajectoires de marché ?</strong> Voir <a href="#a-thousand-paths">Mille trajectoires</a>.</li>
+<li><strong>Que dit la recherche publiée sur les stratégies par seaux et le risque de séquence ?</strong> Voir <a href="#what-the-research-says">Ce que dit la recherche</a>.</li>
+</ol>
+</div>
+</aside>
+</div>
+<h2 id="put-a-crash-in-the-plan" class="lesson-section-head" style="--i:2"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="put-a-crash-in-the-plan--body"><span class="lesson-section-title">Placer un krach dans le plan</span></button></h2><div class="lesson-section-body" id="put-a-crash-in-the-plan--body" role="region" aria-labelledby="put-a-crash-in-the-plan" hidden>
+<p>Le plan lui-même ne contient jamais de krach. Ses rendements viennent des hypothèses de croissance, qui décrivent une année moyenne et jusqu'où une année peut s'en écarter. Pour demander ce que ferait un krach précis, on en superpose un au plan dans <span class="lesson-nav-ref lesson-nav-ref--transforms lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/transforms.png" alt="Transforms" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Transformations</span><span class="lesson-term-tip" role="tooltip">Une <strong>zone du rail principal</strong>. Le nom <strong>Transformations</strong> veut dire : vous <strong>transformez une copie</strong> du plan — un et-si — sans réécrire le dossier d'origine. Comparez original et modifié côte à côte.</span></span>.</p>
+<p>Ouvrez Transformations et dépliez <strong>Modifications</strong>. Sa carte Modifiables s'ouvre sur l'onglet <strong>Global</strong>, qui liste les hypothèses qui s'appliquent à l'ensemble du plan plutôt qu'à un seul élément. <strong>Risque de séquence des rendements</strong> est la dernière ligne. Sélectionnez-la :</p>
+<p><img class="lesson-media-ref ui-control lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-modifiables.fr.png" alt="Transforms' Modifiables card on the Global tab, listing the nine scenario-wide what-ifs from Retirement &amp; forecast end to Sequence-of-returns risk; the last row is selected and reads Global Financial Crisis (2007) from 2031" data-media-id="sor-crash-modifiables" width="419" data-where="modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sor-risk" data-canvas-dossier="sor_seventy_thirty" data-pick="2027,0" data-what-if="crash:global-financial-crisis-2007,2031" data-jump-tip="Y aller" loading="lazy" decoding="async" /></p>
+<p>L'éditeur de modification à côté de la carte contient le krach lui-même. Activez-le, choisissez un épisode par l'année où son marché a culminé, et fixez l'année où le krach commence. Le curseur s'ouvre sur la première année de retraite, et ses repères marquent le début du plan, chaque retraite et la fin de la prévision.</p>
+<p><img class="lesson-media-ref ui-control lesson-media-generated" src="/designer-site/static/images/lessons/generated/sor-crash-editor.fr.png" alt="Transforms' Sequence-of-returns risk editor as it opens once switched on: the 2007 episode selected, the Global Financial Crisis described as a deepest point of -43.7% over six replayed years, and the crash starting in 2031, Jordan's retirement year" data-media-id="sor-crash-editor" width="387" loading="lazy" decoding="async" /></p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Où le trouver dans l'application</span> <a class="lesson-jump-term" href="/designer-site/glossary/sequence-of-returns">séquence des rendements</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--modifiable">Où l'essayer en scénario</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sor-risk" title="Y aller" aria-label="Y aller: Transformations → Modifications → Modifiables → Global → Krachs/Risque SOR"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sor-risk.png" width="587" height="32" alt="Transformations → Modifications → Modifiables → Global → Krachs/Risque SOR" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button><p class="lesson-jump-note">Superpose un krach historique aux premières années du plan, à partir d'une année de votre choix.</p></li></ul></div></aside>
+<p>Chaque épisode rejoue l'histoire mesurée. Le fonds S&amp;P 500 prend le rendement total réel de l'indice, année par année, de la chute jusqu'à la reprise, et le fonds du Trésor prend celui du Trésor à 10 ans. Chaque autre position suit par sa <span class="lesson-term" data-term="correlation" tabindex="0"><span class="lesson-term-pill">corrélation</span><span class="lesson-term-tip" role="tooltip">La tendance de deux placements à évoluer <strong>ensemble</strong>, de −1 (en sens opposé) à +1 (en parfaite synchronie) en passant par 0 (sans lien). Notée <strong>ρ (rho)</strong>. C'est ce qui détermine si détenir plusieurs actifs répartit réellement le risque : des actifs qui chutent tous en même temps sont moins diversifiés que leur nombre ne le laisse penser.<a class="lesson-term-more" href="/designer-site/glossary/correlation">Full entry →</a></span></span> avec ces deux-là. La crise financière mondiale rejoue six années : une petite perte, puis une chute d'environ 41%, puis un rebond d'environ 56%, et trois autres bonnes années.</p>
+<p>Rien dans le plan ne change. Transformations montre le plan tel qu'il a été rédigé d'un côté et le plan avec le krach de l'autre. Sur le graphique du bilan, les années de krach sont ombrées en rouge le long de l'axe des années, de sorte que l'on voit toujours où se situe le krach. Voici la comparaison de bilan de Transformations pour le plan 70/30, avec le krach là où l'éditeur le place d'abord, à partir de 2031. Le plan tel qu'il a été rédigé est à gauche sous <em>Original</em>, le plan avec le krach est à droite sous <em>Modifié</em>, et les deux côtés partagent une même échelle, comme dans l'application :</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-balance-sheet-7030.fr.png" alt="Transforms' balance-sheet comparison for the 70/30 plan, as authored on the left under Original and with the Global Financial Crisis starting in 2031 on the right under Modified, on one shared scale: the Modified side dips sharply in 2032, Jordan's second year of retirement, the crash years 2031 to 2036 are shaded red on its year axis, and it ends visibly lower in 2057" data-media-id="sor-crash-balance-sheet-7030" data-where="output__transforms__forecaster.forecast-detail__bs-chart" data-canvas-dossier="sor_seventy_thirty" data-pick="2032,0" data-what-if="crash:global-financial-crisis-2007,2031" data-jump-tip="Y aller" loading="lazy" decoding="async" /></p>
+<p>Du côté Modifié, le patrimoine net chute de près d'un tiers en 2032, la deuxième année de retraite de Jordan, et ne retrouve son niveau de 2031 qu'en 2036. Les deux côtés ne se rejoignent plus. En 2057, le plan avec le krach se termine environ $670,000 en dessous du plan qui n'en a pas.</p>
+</div>
+<h2 id="check-the-crashs-returns" class="lesson-section-head" style="--i:3"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="check-the-crashs-returns--body"><span class="lesson-section-title">Vérifier les rendements du krach</span></button></h2><div class="lesson-section-body" id="check-the-crashs-returns--body" role="region" aria-labelledby="check-the-crashs-returns" hidden>
+<p>Un krach est plus facile à craindre qu'à mesurer, et les rendements annuels qu'il rejoue peuvent tromper l'œil. Tutilis les montre élément par élément dans le contrôle <strong>Rendements réalisés</strong>, qui s'ouvre depuis ce bouton de la barre d'outils du graphique de bilan :</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-bs-toolbar.fr.png" alt="The header of the balance-sheet chart on Transforms' Modified side, with the Realized returns button ringed in orange among the toolbar buttons at the right, between Close-up and copy" data-media-id="sor-crash-bs-toolbar" data-where="output__transforms__forecaster.forecast-detail__bs-chart" data-canvas-dossier="sor_seventy_thirty" data-pick="2030,0" data-what-if="crash:global-financial-crisis-2007,2030" data-jump-tip="Y aller" loading="lazy" decoding="async" /></p>
+<p>Le bouton est sur le graphique dans le Prévisionniste et des deux côtés de Transformations. Appuyez dessus du côté Modifié pour voir les rendements qui contiennent le krach.</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Où le trouver dans l'application</span> <a class="lesson-jump-term" href="/designer-site/glossary/return">rendement</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Où il apparaît dans la prévision</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__forecaster__forecaster.forecast-detail__bs-chart__bs-chart.return-check" title="Y aller" aria-label="Y aller: Prévisionniste → Détail de prévision → 📈BS → Rendements réalisés"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__forecaster__forecaster.forecast-detail__bs-chart__bs-chart.return-check.png" width="518" height="32" alt="Prévisionniste → Détail de prévision → 📈BS → Rendements réalisés" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button><p class="lesson-jump-note">Le rendement effectif de chaque élément pour chaque année de la prévision.</p></li></ul></div></aside>
+<p>Le contrôle liste chaque position, et chaque flux de trésorerie qui croît, avec ce qu'il a rapporté chaque année de la prévision. Sélectionnez une ligne et ses rendements sont tracés année par année sous la liste, avec les années de krach ombrées sur l'axe. En dessous, la bande <strong>Croissance de 1</strong> part d'une unité d'argent à l'année sélectionnée et la capitalise à travers les rendements qui suivent. Ses boutons fixent combien d'années suivre, et <strong>Krach</strong> suit exactement les années que la superposition rejoue. Les jointures entre les trois parties en replient une d'un clic, ou déplacent la limite quand on la fait glisser, lorsque vous voulez plus de place pour les autres.</p>
+<p>Voici le fonds S&amp;P 500 dans le compte-titres de Jordan, avec la crise financière mondiale commençant en 2030 :</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-returns-gfc.fr.png" alt="The return check for the 70/30 plan with the Global Financial Crisis starting in 2030. The items table on top lists every holding and cash flow with its realized returns. The S&amp;P 500 fund in the brokerage is selected, and in the middle its yearly return chart drops to about -41% in 2031 and jumps to about +56% in 2032, and the Growth of 1 strip at the bottom falls from 1.0 to 0.56 in 2031, is still at 0.88 after the rebound year, and only passes 1.0 in 2033" data-media-id="sor-crash-returns-gfc" data-where="output__transforms__forecaster.forecast-detail__bs-chart__bs-chart.return-check" data-canvas-dossier="sor_seventy_thirty" data-pick="2030,0" data-what-if="crash:global-financial-crisis-2007,2030" data-return-check="crash;Brokerage · S&amp;P 500 Index" data-jump-tip="Y aller" loading="lazy" decoding="async" /></p>
+<p>Le graphique des rendements fait ressembler le krach à un échange équitable. Le fonds perd environ 41% en 2031 et gagne environ 56% en 2032, de sorte que le gain paraît plus grand que la perte. La bande Croissance de 1 dit le contraire. Un dollar au début de 2030 vaut 56 cents après la chute, et le gain de 56% ne le remonte qu'à environ 88 cents. Un gain est un pourcentage de ce qui reste, et après une perte de 41% il reste beaucoup moins sur quoi il puisse agir. Il faut attendre 2033, la quatrième année du krach, pour que le dollar soit de nouveau entier.</p>
+<p>Le Grand Krach de 1929 fait le même constat avec plus de force. Le voici commençant en 2031, l'année de retraite de Jordan :</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-returns-1929.fr.png" alt="The return check for the 70/30 plan with the Great Crash of 1929 starting in 2031. The S&amp;P 500 fund's yearly returns swing from -61% in 2033 to +140% in 2034 and keep swinging, with several gains of 50% or more. The Growth of 1 strip over the sixteen crash years falls to 0.21 in 2033, recovers only to 0.52 after the +140% year, and does not pass 1.0 again until 2045, ending at 1.28" data-media-id="sor-crash-returns-1929" data-where="output__transforms__forecaster.forecast-detail__bs-chart__bs-chart.return-check" data-canvas-dossier="sor_seventy_thirty" data-pick="2031,0" data-what-if="crash:great-crash-1929,2031" data-return-check="crash;Brokerage · S&amp;P 500 Index" data-jump-tip="Y aller" loading="lazy" decoding="async" /></p>
+<p>Les rendements annuels paraissent presque réjouissants après les trois premières années. Il y a un gain de 140% en 2034 et deux autres gains de plus de 50% plus tard. En moyenne, année par année, les seize années rejouées rapportent environ 9% par an, ce qui est mieux que l'attente ordinaire du fonds. La bande Croissance de 1 raconte la vraie histoire. Les trois premières années font descendre un dollar à environ 21 cents, l'année à 140% ne le ramène qu'à environ 52 cents, et le dollar ne repasse 1.0 qu'en 2045, la quinzième année du krach. Seize années qui font en moyenne 9% par an laissent le dollar à environ 1.28, là où les rendements ordinaires du fonds l'auraient fait croître jusqu'à environ 2.6.</p>
+<p>C'est le piège quand on lit un graphique de rendements annuels. De larges oscillations vers le haut et vers le bas semblent s'annuler, et les grandes années de reprise semblent plus que payer les pertes. Ce n'est pas le cas, parce que les pertes et les gains se multiplient au lieu de s'additionner. Un retraité vend aussi pendant ces années, de sorte que l'argent vendu près du plus bas n'est pas là du tout pour la reprise. C'est pourquoi le reste de cette leçon mesure les krachs par ce qu'ils font au patrimoine net, et pourquoi la bande mérite un regard chaque fois que vous en testez un.</p>
+<details class="lesson-math">
+<summary class="lesson-math-label">Pour les amateurs de maths — pourquoi un gain de 56% n'annule pas une perte de 41%</summary>
+<div class="lesson-math-body">
+<p>La croissance multiplie, de sorte qu'une suite de rendements annuels <span class="math">\(r_t\)</span> transforme un dollar en</p>
+<p><span class="math">\[
+G = \prod_t (1 + r_t)
+\]</span></p>
+<p>Dans le rejeu de la crise financière mondiale, le dollar est à environ 0.56 après la chute, et <span class="math">\(0.56 \times 1.56 \approx 0.88\)</span>.</p>
+<p>Après une perte <span class="math">\(L\)</span>, le gain <span class="math">\(g\)</span> qui revient à l'équilibre résout <span class="math">\((1-L)(1+g) = 1\)</span> :</p>
+<p><span class="math">\[
+g = \frac{L}{1-L}
+\]</span></p>
+<p>C'est 69% après une perte de 41%, 100% après une perte de 50% et 400% après une perte de 80%.</p>
+<p>La moyenne qui décrit la croissance est la moyenne géométrique, <span class="math">\(G^{1/n} - 1\)</span>. Les seize années de 1929 font en moyenne environ 9% par an additionnées année par année, mais <span class="math">\(1.28^{1/16} - 1 \approx 1.6\%\)</span> par an en capitalisation. Les rendements ordinaires du fonds se capitalisent à <span class="math">\(2.6^{1/16} - 1 \approx 6.2\%\)</span>. La leçon <a href="/designer-site/learn/risk-vs-return-portfolio-chart">Risque et rendement</a> donne la règle empirique pour cet écart : la <span class="lesson-term" data-term="geometric-mean" tabindex="0"><span class="lesson-term-pill">moyenne géométrique</span><span class="lesson-term-tip" role="tooltip">Le taux de croissance <strong>composé</strong> qui mène réellement d'un solde de départ à un solde final — le rendement vécu plutôt que celui annoncé. Il est toujours inférieur ou égal à la <strong>moyenne arithmétique</strong>, égal seulement si toutes les années sont identiques, et d'autant plus bas que la volatilité augmente. C'est sur cette moyenne qu'est construite la trajectoire de référence du produit.<a class="lesson-term-more" href="/designer-site/glossary/geometric-mean">Full entry →</a></span></span> se situe environ une demi-variance en dessous de la moyenne arithmétique.</p>
+</div>
+</details>
+</div>
+<h2 id="slide-the-crash" class="lesson-section-head" style="--i:4"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="slide-the-crash--body"><span class="lesson-section-title">Faire glisser le krach</span></button></h2><div class="lesson-section-body" id="slide-the-crash--body" role="region" aria-labelledby="slide-the-crash" hidden>
+<p>L'année de début est la commande qui rend cette analyse utile. Ouvrez <span class="lesson-nav-ref lesson-nav-ref--bs-table lesson-nav-ref--tipped" tabindex="0"><img class="lesson-nav-ref-img lesson-nav-ref-img--glyph" src="/designer-site/static/images/lessons/where/icons/bs-table.png" alt="BS Table" loading="lazy" decoding="async" /><span class="lesson-nav-ref-label">Tableau BS</span><span class="lesson-term-tip" role="tooltip">Un chip <strong>Forecast Detail</strong>. <strong>BS</strong> = bilan de l'<strong>année sélectionnée</strong> — actifs réels, comptes, passifs, patrimoine net. Compagnon copiable du graphique BS.</span></span> sur la dernière année de la prévision, 2057, et laissez-la là. Puis déplacez le début du krach d'une année à la fois et regardez la ligne de patrimoine net en haut du tableau.</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Où le trouver dans l'application</span> <a class="lesson-jump-term" href="/designer-site/glossary/net-worth">patrimoine net</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--output">Où il apparaît dans la prévision</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="output__forecaster__forecaster.forecast-detail__bs-table__line.bs.net-worth" title="Y aller" aria-label="Y aller: Prévisionniste → Détail de prévision → ▦BS → Patrimoine net"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/output__forecaster__forecaster.forecast-detail__bs-table__line.bs.net-worth.png" width="453" height="32" alt="Prévisionniste → Détail de prévision → ▦BS → Patrimoine net" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+<p>Voici les patrimoines nets de fin de prévision sur la trajectoire <span class="lesson-term" data-term="gmf" tabindex="0"><span class="lesson-term-pill">GMF</span><span class="lesson-term-tip" role="tooltip">GMF ✦ (aussi FID 0 / GMF) est l'<strong>étoile polaire</strong> du produit — la trajectoire de prévision déterministe à moyenne géométrique qui vous sert de cap, et non un tirage Monte Carlo aléatoire ni le scénario « le plus probable ». Privilégiez-la pour une lecture stable, année par année, du plan. Changez-en lorsque vous voulez explorer d'autres scénarios ou trajectoires <strong>aléatoires</strong> dans le nuage multi-trajectoires. Le symbole ✦ correspond à la commande FID en direct (boussole / étoile polaire, pas une étoile de notation).<a class="lesson-term-more" href="/designer-site/glossary/gmf">Full entry →</a></span></span>, la prévision qui prend le rendement attendu de chaque année, avec la crise financière mondiale commençant chaque année :</p>
+<table>
+<thead>
+<tr><th>Début du krach</th><th align="right">70/30</th><th align="right">Réserve de liquidités</th><th align="right">60/40 rééquilibré</th></tr>
+</thead>
+<tbody>
+<tr><td>Sans krach</td><td align="right">$3.10M</td><td align="right">$2.56M</td><td align="right">$2.65M</td></tr>
+<tr><td>2027</td><td align="right">$2.63M</td><td align="right">$2.17M</td><td align="right">$2.60M</td></tr>
+<tr><td>2029</td><td align="right">$2.54M</td><td align="right">$2.11M</td><td align="right">$2.52M</td></tr>
+<tr><td><strong>2030</strong></td><td align="right"><strong>$2.41M</strong></td><td align="right"><strong>$2.03M</strong></td><td align="right"><strong>$2.48M</strong></td></tr>
+<tr><td>2031</td><td align="right">$2.43M</td><td align="right">$2.04M</td><td align="right">$2.48M</td></tr>
+<tr><td>2033</td><td align="right">$2.52M</td><td align="right">$2.11M</td><td align="right">$2.50M</td></tr>
+<tr><td>2038</td><td align="right">$2.59M</td><td align="right">$2.16M</td><td align="right">$2.54M</td></tr>
+<tr><td>2045</td><td align="right">$2.65M</td><td align="right">$2.21M</td><td align="right">$2.51M</td></tr>
+</tbody>
+</table>
+<p>Dans chaque plan, la pire année pour faire commencer le krach est 2030, et non 2031. L'éditeur s'ouvre sur l'année de retraite, mais la perte profonde de cet épisode est sa <em>deuxième</em> année. Le faire commencer en 2030 place cette perte sur 2031, la première année où Jordan vit du portefeuille. Un krach qui frappe en 2027 coûte encore de l'argent, mais Jordan perçoit un salaire pendant la chute et le rebond, et ne vend rien au plus bas. Un krach en 2045 tombe sur un portefeuille qui a déjà eu des années pour croître et que la Social Security aide à soutenir.</p>
+<p>Il vaut la peine de faire glisser le krach pour chaque épisode que vous testez, plutôt que de faire confiance au réglage par défaut. La pire année de début est celle qui aligne la pire année de l'épisode avec la première année de retraits, et cela dépend de la forme de l'épisode.</p>
+</div>
+<h2 id="a-cash-reserve" class="lesson-section-head" style="--i:5"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="a-cash-reserve--body"><span class="lesson-section-title">Une réserve de liquidités</span></button></h2><div class="lesson-section-body" id="a-cash-reserve--body" role="region" aria-labelledby="a-cash-reserve" hidden>
+<p>Le plan <a href="#canvas-dossier:sor_cash_reserve">Réserve de liquidités</a> est la défense la plus intuitive, et dans cette analyse c'est la plus faible des trois.</p>
+<p>La première raison apparaît sans aucun krach. Le marché monétaire rapporte moins que les actions ou les obligations, et $200,000 de cet argent se capitalisent plus lentement pendant 26 ans. Sans krach, le plan se termine à $2.56 million contre $3.10 million pour le 70/30. La réserve est une assurance, et cet écart en est la prime, payée chaque année, qu'un krach arrive ou non.</p>
+<p>La deuxième raison est que la réserve ne fonctionne pas comme elle est censée le faire. Voici ce que le plan vend avec le krach à son pire placement, commençant en 2030, de sorte que le plus bas tombe en 2031 :</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-sales-2031-cash.fr.png" alt="Sales and investments in 2031 for the cash-reserve plan during the crash: the reserve supplies only about $21,000 of the year's sales, and about $37,000 of S&amp;P 500 fund is still sold" data-media-id="sor-crash-sales-2031-cash" data-where="output__transforms__forecaster.forecast-detail__si-table" data-canvas-dossier="sor_cash_reserve" data-pick="2031,0" data-what-if="crash:global-financial-crisis-2007,2030" data-jump-tip="Y aller" loading="lazy" decoding="async" /></p>
+<p>La réserve fournit environ $21,000 des $91,000 de ventes de l'année, et environ $37,000 de fonds S&amp;P 500 sont encore vendus au plus bas. Les retraits du plan sont au prorata, de sorte qu'il vend une tranche de tout. Rien ne lui dit que les liquidités sont destinées aux mauvaises années. À titre de comparaison, le plan <a href="#canvas-dossier:sor_seventy_thirty">70/30</a> vend environ $46,000 d'actions la même année :</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-sales-2031-7030.fr.png" alt="Sales and investments in 2031 for the 70/30 plan during the crash: every holding is sold pro-rata, including about $46,000 of S&amp;P 500 fund across the two accounts" data-media-id="sor-crash-sales-2031-7030" data-where="output__transforms__forecaster.forecast-detail__si-table" data-canvas-dossier="sor_seventy_thirty" data-pick="2031,0" data-what-if="crash:global-financial-crisis-2007,2030" data-jump-tip="Y aller" loading="lazy" decoding="async" /></p>
+<p>Ce n'est pas une bizarrerie du logiciel. Une réserve n'aide que si quelqu'un décide, au milieu d'un krach, que c'est l'année de s'en servir, et continue de le décider chaque année jusqu'à ce que le marché se rétablisse. Quelqu'un doit aussi décider quand la remplir de nouveau. Tutilis n'a pas de règle de ce genre, et le retraité doit lui aussi en écrire une. Sans elle, une réserve n'est qu'une position à faible rendement.</p>
+</div>
+<h2 id="less-stock-and-a-rule" class="lesson-section-head" style="--i:6"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="less-stock-and-a-rule--body"><span class="lesson-section-title">Moins d'actions, et une règle</span></button></h2><div class="lesson-section-body" id="less-stock-and-a-rule--body" role="region" aria-labelledby="less-stock-and-a-rule" hidden>
+<p>Le plan <a href="#canvas-dossier:sor_sixty_forty_rebalanced">60/40 rééquilibré</a> détient un peu moins d'actions et porte une règle. Sa stratégie de retrait est le <strong>Rééquilibrage glissant</strong>, réglé sur une cible constante 60/40. Chaque année, le plan compare ses parts d'actions, d'obligations et de liquidités à la cible. Quand il a besoin d'argent, il vend ce qui se trouve <em>au-dessus</em> de la cible, et quand il lui reste de l'argent, il achète ce qui se trouve en dessous.</p>
+<p>Lors d'un krach, la part d'actions tombe sous sa cible et la part d'obligations monte au-dessus. La règle paie alors l'année avec les obligations, sans que personne ne décide quoi que ce soit :</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-sales-2031-6040.fr.png" alt="Sales and investments in 2031 for the 60/40 rebalanced plan during the crash: no S&amp;P 500 fund is sold, and the Treasury funds in both accounts are sold with the reason Glide rebalance" data-media-id="sor-crash-sales-2031-6040" data-where="output__transforms__forecaster.forecast-detail__si-table" data-canvas-dossier="sor_sixty_forty_rebalanced" data-pick="2031,0" data-what-if="crash:global-financial-crisis-2007,2030" data-jump-tip="Y aller" loading="lazy" decoding="async" /></p>
+<p>Aucun fonds S&amp;P 500 n'est vendu en 2031. Toute l'année vient des fonds du Trésor, chaque ligne marquée <em>Rééquilibrage glissant</em>. C'est ce que la réserve de liquidités était censée faire, et ici cela se produit automatiquement.</p>
+<p>Le tableau de la section précédente montre ce que cela vaut. Le krach le plus mal placé coûte au plan 70/30 environ $690,000 de son patrimoine net final et au plan avec réserve environ $540,000. Il coûte au plan 60/40 rééquilibré environ $180,000. La colonne du plan rééquilibré bouge à peine, où que soit placé le krach. Lorsque l'année profonde du krach tombe sur la retraite, le krach commençant en 2030 ou en 2031, il termine devant les deux autres plans. Avec le krach commençant en 2029, il termine juste derrière le plan 70/30.</p>
+</div>
+<h2 id="which-part-does-the-work" class="lesson-section-head" style="--i:7"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="which-part-does-the-work--body"><span class="lesson-section-title">Quelle partie fait le travail</span></button></h2><div class="lesson-section-body" id="which-part-does-the-work--body" role="region" aria-labelledby="which-part-does-the-work" hidden>
+<p>Le plan 60/40 a changé deux choses à la fois : moins d'actions, et la règle. Vous pouvez les séparer dans Transformations. Activez le krach pour le plan <a href="#canvas-dossier:sor_sixty_forty_rebalanced">60/40 rééquilibré</a>, puis sélectionnez <strong>Mouvements de fonds</strong> et remettez-le sur <strong>Au prorata</strong>. Relisez 2057.</p>
+<p><img class="lesson-media-ref ui-control lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/sor-crash-modifiables-sell-invest.fr.png" alt="Transforms' Modifiables card on the Global tab with Money movements selected, which is the residual withdrawal strategy" data-media-id="sor-crash-modifiables-sell-invest" width="419" data-where="modifiable__transforms__transforms.modifications__transforms.modifiables" data-canvas-dossier="sor_sixty_forty_rebalanced" data-pick="2027,0" data-mod-row="Money movements" data-jump-tip="Y aller" loading="lazy" decoding="async" /></p>
+<p class="lesson-img-caption">Transformations → Modifiables sur le plan 60/40, avec Mouvements de fonds sélectionné. Cette ligne est la stratégie de retrait. La régler sur Au prorata désactive la règle de rééquilibrage et laisse en place la part d'actions plus faible.</p>
+<aside class="lesson-jump"><p class="lesson-jump-label"><span class="lesson-jump-kicker">Où le trouver dans l'application</span> <a class="lesson-jump-term" href="/designer-site/glossary/withdrawal-order">ordre des retraits</a></p><div class="lesson-jump-body"><p class="lesson-jump-side lesson-jump-side--modifiable">Où l'essayer en scénario</p><ul class="lesson-jump-places"><li class="lesson-jump-place"><button type="button" class="lesson-jump-go" data-where="modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sell-invest" title="Y aller" aria-label="Y aller: Transformations → Modifications → Modifiables → Global → Mouvements de fonds"><img class="lesson-jump-path" src="/designer-site/static/images/lessons/where/modifiable__transforms__transforms.modifications__transforms.modifiables__modifiables.global__modifiables.sell-invest.png" width="591" height="32" alt="Transformations → Modifications → Modifiables → Global → Mouvements de fonds" loading="lazy" decoding="async" /><span class="lesson-jump-arrow" aria-hidden="true">→</span></button></li></ul></div></aside>
+<p>Avec le krach commençant en 2030 et des retraits au prorata, le plan 60/40 se termine à environ $2.33 million. C'est en dessous des $2.41 million du plan 70/30. Sur cette trajectoire, la part d'actions plus faible, à elle seule, n'a rien acheté. La règle a fait le travail, parce qu'elle a empêché le plan de vendre des actions au plus bas.</p>
+<details class="lesson-advanced">
+<summary class="lesson-advanced-label">Sujet avancé — reproduire le tableau depuis la ligne de commande</summary>
+<div class="lesson-advanced-body">
+<p>Chaque nombre de cette leçon vient de <code>engine-cli</code>, qui prend le même krach sous la forme d'une paire d'options. Voici la pire cellule du plan 70/30 dans le tableau :</p>
+<pre><code>kotlin/gradlew -p kotlin :engine-cli:run --args=&quot;artifacts get forecast.balance-sheet --sample sor_seventy_thirty --this-year 2026 --year 2057 --overlay global-financial-crisis-2007 --overlay-start 2030 --format md&quot;
+</code></pre>
+<p>Changez <code>--overlay-start</code> pour faire avancer le krach au fil des années. Ajoutez <code>--residual pro-rata</code> à la commande du plan 60/40 pour désactiver la règle, ce que fait dans l'application la modification de stratégie résiduelle.</p>
+<p>Le contrôle Rendements réalisés a un tableau à lui. Ceci imprime les rendements de chaque élément pour le rejeu de 1929, avec une colonne de croissance sur les seize années de krach qui correspond à la bande Croissance de 1 :</p>
+<pre><code>kotlin/gradlew -p kotlin :engine-cli:run --args=&quot;artifacts get forecast.item-returns --sample sor_seventy_thirty --this-year 2026 --overlay great-crash-1929 --overlay-start 2031 --year 2031 --window 16 --format md&quot;
+</code></pre>
+</div>
+</details>
+</div>
+<h2 id="a-thousand-paths" class="lesson-section-head" style="--i:8"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="a-thousand-paths--body"><span class="lesson-section-title">Mille trajectoires</span></button></h2><div class="lesson-section-body" id="a-thousand-paths--body" role="region" aria-labelledby="a-thousand-paths" hidden>
+<p>Tout ce qui précède utilisait une seule trajectoire : les rendements attendus chaque année, sauf pendant le krach. La <span class="lesson-term" data-term="monte-carlo" tabindex="0"><span class="lesson-term-pill">simulation de Monte-Carlo</span><span class="lesson-term-tip" role="tooltip">La méthode derrière une exécution multi-trajectoires : tirer de nombreuses trajectoires de rendement aléatoires, dérouler le plan sur chacune et lire la dispersion des résultats. Elle doit son nom au casino, car le moteur repose sur un échantillonnage aléatoire répété plutôt que sur une formule — c'est pourquoi deux exécutions d'un même plan diffèrent légèrement, et pourquoi un taux de réussite est une proportion d'avenirs échantillonnés plutôt qu'une promesse.<a class="lesson-term-more" href="/designer-site/glossary/monte-carlo">Full entry →</a></span></span> exécute mille trajectoires dont les rendements sont tirés au hasard, et la superposition du krach s'applique à chacune d'elles. Les années de krach sont les mêmes partout, et chaque autre année varie.</p>
+<p>Sans krach, les trois plans réussissent sur 96%, 98% et 98% des trajectoires. Le patrimoine net final médian du plan 60/40 rééquilibré est à environ $100,000 près de celui du plan 70/30, et son résultat du dixième défavorable est meilleur d'environ $220,000. Sur de nombreuses trajectoires, un 60/40 rééquilibré coûte beaucoup moins que la trajectoire unique ne le suggérait.</p>
+<p>La crise financière mondiale déplace à peine ces taux de réussite, et elle peut même les relever légèrement. La superposition rejoue le rebond aussi bien que la chute, et six années au chemin connu, pleinement rétabli, remplacent six années qui auraient pu aller n'importe où. Un krach qui se rétablit à l'intérieur de la superposition n'apparaît pas comme un échec.</p>
+<p>L'épisode qui sépare les plans est le Grand Krach de 1929. Il rejoue seize années, avec une chute de près de 80% et une reprise longue et irrégulière. Placé à la retraite de Jordan en 2031, la réussite tombe à environ 52% pour le 70/30 et à environ 63% pour la réserve de liquidités. Le plan 60/40 rééquilibré réussit encore sur environ 75% des trajectoires. Le même partage 60/40 avec des retraits au prorata réussit sur environ 63%. Dans un krach aussi profond et aussi long, la part d'actions plus petite et la règle gagnent toutes deux leur place.</p>
+</div>
+<h2 id="what-the-research-says" class="lesson-section-head" style="--i:9"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-the-research-says--body"><span class="lesson-section-title">Ce que dit la recherche</span></button></h2><div class="lesson-section-body" id="what-the-research-says--body" role="region" aria-labelledby="what-the-research-says" hidden>
+<p>Ces résultats concordent avec les travaux publiés sur la question.</p>
+<p>Javier Estrada, dans <em>The Bucket Approach for Retirement: A Suboptimal Behavioral Trick?</em> (2018), a testé des stratégies par seaux sur 115 ans de données provenant de 21 pays. Elles ont fait moins bien que de simples allocations statiques rééquilibrées après chaque retrait, et leurs taux d'échec ressemblaient à ceux d'un portefeuille d'environ 90% d'actions. Une stratégie par seaux déplace l'argent des actions vers les obligations, puis vers les liquidités, mais jamais dans l'autre sens, de sorte qu'elle n'achète jamais d'actions quand les actions sont bon marché. Le rééquilibrage, lui, le fait.</p>
+<p>Wade Pfau et Michael Kitces, dans <em>Reducing Retirement Risk with a Rising Equity Glide Path</em> (Journal of Financial Planning, 2014), ont montré que le risque de séquence se concentre dans les années autour de la date de retraite. Un portefeuille qui détient moins d'actions à la retraite et en ajoute ensuite a survécu plus souvent qu'un portefeuille qui détenait une part constante et plus élevée. C'est le même constat que celui du curseur : les années autour de la date de retraite sont celles qu'il faut protéger.</p>
+<p>Un seau a tout de même un argument en sa faveur. Il donne à un retraité inquiet une histoire qui rend plus facile de ne pas vendre d'actions lors d'un krach, et le comportement compte pour une large part dans la façon dont les retraités s'en sortent réellement. Une règle de rééquilibrage écrite fait la même promesse avec moins d'argent garé en liquidités, et elle retire la décision que le seau laisse ouverte.</p>
+</div>
+<h2 id="what-this-cannot-tell-you" class="lesson-section-head" style="--i:10"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-this-cannot-tell-you--body"><span class="lesson-section-title">Ce que ceci ne peut pas vous dire</span></button></h2><div class="lesson-section-body" id="what-this-cannot-tell-you--body" role="region" aria-labelledby="what-this-cannot-tell-you" hidden>
+<p>Cette analyse a des limites, et elles comptent pour savoir jusqu'où lui faire confiance.</p>
+<ul>
+<li><strong>Le rééquilibrage glissant n'échange que l'argent de l'année.</strong> Il vend les positions en surpoids quand le plan a besoin d'argent et achète celles en sous-poids quand il lui reste de l'argent. Il ne vend pas d'obligations pour acheter des actions une année sans retrait net, et il n'achète que dans les comptes imposables. Un rééquilibrage annuel complet, comme dans l'étude d'Estrada, achèterait aussi des actions à l'intérieur du 401(k) après un krach.</li>
+<li><strong>Il n'existe pas de règle pour « utiliser les liquidités lors d'une année de baisse ».</strong> Tutilis ne peut pas encore modéliser une réserve qui n'est dépensée que lorsque le marché a baissé et qui est rechargée lorsqu'il se rétablit. Un ménage qui suivrait une telle règle avec fidélité peut faire mieux que le plan avec réserve présenté ici.</li>
+<li><strong>Les krachs sont des rejeux.</strong> Chaque épisode répète exactement une trajectoire historique. Le prochain krach ne ressemblera à aucun d'eux, et l'<span class="lesson-term" data-term="inflation" tabindex="0"><span class="lesson-term-pill">inflation</span><span class="lesson-term-tip" role="tooltip">Une hausse du niveau des prix. Le même panier de biens coûte plus de dollars qu'auparavant. Un plan de ménage applique un taux de croissance à chaque dépense, car un chiffre d'inflation publié correspond à un seul panier. Le taux de présentation qui convertit les dollars futurs en dollars d'aujourd'hui est une hypothèse distincte.<a class="lesson-term-more" href="/designer-site/glossary/inflation">Full entry →</a></span></span> n'est pas rejouée, ce qui sous-estime l'épisode de 1973 en particulier.</li>
+<li><strong>Un seul ménage.</strong> Un plan qui s'appuie plus lourdement sur son portefeuille, ou qui dispose d'une pension couvrant la plupart de ses dépenses, ressentira le calendrier plus ou moins que celui de Jordan.</li>
+</ul>
+</div>
+<h2 id="what-to-take-away" class="lesson-section-head" style="--i:11"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-to-take-away--body"><span class="lesson-section-title">À retenir</span></button></h2><div class="lesson-section-body" id="what-to-take-away--body" role="region" aria-labelledby="what-to-take-away" hidden>
+<ul>
+<li>Les rendements annuels cachent ce qu'un krach coûte. Un gros gain après une grosse perte ne l'annule pas, parce qu'un gain ne fait croître que ce qui reste. Lisez la bande Croissance de 1 dans le contrôle Rendements réalisés pour voir ce que le krach a réellement fait à chaque dollar.</li>
+<li>Le risque de séquence porte sur le calendrier. Un krach fait le plus de dégâts lorsque sa pire année tombe sur les premières années de retraits. Faites glisser le krach dans Transformations, gardez le bilan sur la dernière année, et trouvez, pour chaque épisode, l'année de début qui fait le plus mal.</li>
+<li>Une réserve de liquidités sans règle sur le moment de la dépenser est une position à faible rendement. Elle coûte de l'argent chaque année et fait peu lors du krach pour lequel elle a été constituée.</li>
+<li>Une règle permanente, qui consiste à vendre ce qui est en surpoids, fait automatiquement le travail qu'une réserve est censée faire, et elle continue de racheter des actions à mesure que le marché se rétablit.</li>
+<li>Retirer un peu de risque aide surtout lors des krachs profonds et longs. Associé à une règle, cela a donné à Jordan le meilleur résultat dans presque chaque test de krach présenté ici, pour un coût modeste dans un marché ordinaire.</li>
+</ul>
+</div>
+</div>
+<details class="lesson-rebuild-by-hand"><summary><span class="lesson-rebuild-by-hand-summary-title">Reconstruire ce plan à la main</span></summary><div class="lesson-rebuild-by-hand-body"><p>Les cartes du canevas montrent les comptes et les flux. Voici les réglages qui vivent hors de toute carte, lus dans chaque plan que cette leçon ouvre, avec le libellé que porte chaque contrôle dans l'application. Une valeur marquée default est à laisser telle quelle.</p><table class="content-table">
+<thead>
+<tr>
+<th align="left">Setting</th>
+<th align="left">70/30</th>
+<th align="left">Cash reserve</th>
+<th align="left">60/40 rebalanced</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="4" align="center"><strong>Household</strong></td></tr>
+<tr>
+<td align="left">Planning region</td>
+<td align="left">United States (default)</td>
+<td align="left">United States (default)</td>
+<td align="left">United States (default)</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Jordan (Primary)</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1966</td>
+<td align="left">1966</td>
+<td align="left">1966</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">65</td>
+<td align="left">65</td>
+<td align="left">65</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">92</td>
+<td align="left">92</td>
+<td align="left">92</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Taxes</strong></td></tr>
+<tr>
+<td align="left">Tax regime</td>
+<td align="left">United States</td>
+<td align="left">United States</td>
+<td align="left">United States</td>
+</tr>
+<tr>
+<td align="left">Filing status</td>
+<td align="left">Single</td>
+<td align="left">Single</td>
+<td align="left">Single</td>
+</tr>
+<tr>
+<td align="left">State of residence</td>
+<td align="left">None</td>
+<td align="left">None</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">First-year federal estimate</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">First-year state estimate</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Strategy</strong></td></tr>
+<tr>
+<td align="left">Residual withdrawal strategy</td>
+<td align="left">Pro-rata (default)</td>
+<td align="left">Pro-rata (default)</td>
+<td align="left">Glide rebalance</td>
+</tr>
+<tr>
+<td align="left">Roth conversions</td>
+<td align="left">Off</td>
+<td align="left">Off</td>
+<td align="left">Off</td>
+</tr>
+<tr>
+<td align="left">Definition of success</td>
+<td align="left">Liquidity crises allowed (default)</td>
+<td align="left">Liquidity crises allowed (default)</td>
+<td align="left">Liquidity crises allowed (default)</td>
+</tr>
+<tr>
+<td align="left">Glide path target</td>
+<td align="left">None (default)</td>
+<td align="left">None (default)</td>
+<td align="left">Set (1 target allocation)</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">Target for 2026</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">Domestic stocks 58.2% · Bonds 38.8% · Cash 3%</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Advanced</strong></td></tr>
+<tr>
+<td align="left">Reporting inflation</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Cost of capital</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Growth assumptions</td>
+<td align="left">Growth overrides (default)</td>
+<td align="left">Growth overrides (default)</td>
+<td align="left">Growth overrides (default)</td>
+</tr>
+<tr>
+<td align="left">Currencies</td>
+<td align="left">Multiple currencies (default)</td>
+<td align="left">Multiple currencies (default)</td>
+<td align="left">Multiple currencies (default)</td>
+</tr>
+<tr>
+<td align="left">Default currency</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+</tr>
+<tr>
+<td align="left">Display currency</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+</tr>
+</tbody>
+</table>
+</div></details><div class="lesson-catalog-footer"><span class="lesson-region-badge" title="All regions"><span class="lesson-region-marker">🌐</span><span class="lesson-region-label muted">All regions</span></span><span class="lesson-tags"><span class="lesson-tags-label">Étiquettes</span><span class="learn-chip">sequence-of-returns</span><span class="learn-chip">sor-risk</span><span class="learn-chip">crash</span><span class="learn-chip">cash-reserve</span><span class="learn-chip">bucket-strategy</span><span class="learn-chip">rebalancing</span><span class="learn-chip">glide-rebalance</span><span class="learn-chip">transforms</span><span class="learn-chip">tool-lesson</span><span class="learn-chip">return-check</span><span class="learn-chip">growth-of-1</span><span class="learn-chip">pfau</span><span class="learn-chip">kitces</span></span></div><div class="community-invite"><a class="community-callout" href="https://community.plusauri.com" target="_blank" rel="noopener noreferrer" data-community-join="community-join" aria-haspopup="dialog"><img src="/designer-site/static/images/community/join-callout.jpg" alt="Join Our Community" width="392" height="229" decoding="async" loading="lazy"></a><dialog id="community-join" class="community-join" aria-labelledby="community-join-title"><article class="community-join-panel"><button type="button" class="community-join-close" data-community-join-close aria-label="Close" title="Close">×</button><h2 id="community-join-title">Join the Plusauri community</h2><form class="community-join-form" action="/designer-site/api/community/join" method="post" novalidate data-msg-invalid="That email address does not look right." data-msg-failed="Something went wrong. You can still join directly at community.plusauri.com." data-msg-sending="Sending…"><p class="community-join-lead">A forum of people planning their own retirement, asking questions and helping each other. Anyone can read it. Members can post, and get a note when someone answers.</p><fieldset class="community-join-modes"><legend>How would you like to take part?</legend><label class="community-join-mode community-join-mode-participant"><input type="radio" name="mode" value="Participant" checked><span class="community-join-mode-art" aria-hidden="true"></span><strong>Participant</strong><small>Ask questions, share what you have learned, join the conversation.</small></label><label class="community-join-mode community-join-mode-lurker"><input type="radio" name="mode" value="Lurker"><span class="community-join-mode-art" aria-hidden="true"></span><strong>Lurker</strong><small>No account needed. Get the highlights by email and read the forum whenever you like.</small></label></fieldset><div class="community-join-who"><label class="community-join-name">First name (optional)<input type="text" name="firstName" autocomplete="given-name" maxlength="80"></label><label class="community-join-email">Your email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com" maxlength="254"></label></div><fieldset class="community-join-stage"><legend>Which describes you best? (optional)</legend><label><input type="radio" name="stage" value="Building"> Building and saving</label><label><input type="radio" name="stage" value="NearingRetirement"> Getting close to retirement</label><label><input type="radio" name="stage" value="Retired"> Retired</label></fieldset><input type="text" name="website" class="community-join-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="community-join-note community-join-for-participant">We will email you an invitation to community.plusauri.com. Accept it to finish joining.</p><p class="community-join-note community-join-for-lurker">We will add you to the Plusauri mailing list. The forum at community.plusauri.com is open to read anytime, no account needed. Unsubscribe whenever you like.</p><label class="community-join-news"><input type="checkbox" name="news"> Also send me occasional Plusauri news by email. Optional, and you can unsubscribe anytime.</label><p class="community-join-error" role="alert" hidden></p><footer class="community-join-actions"><button type="button" class="secondary outline" data-community-join-close>Not now</button><button type="submit"><span class="community-join-for-participant">Send my invitation</span><span class="community-join-for-lurker">Add me to the list</span></button></footer></form><div class="community-join-sent" hidden aria-live="polite"><h3>Check your inbox</h3><p data-status="invited" hidden>Your invitation is on its way. Accept it to choose a username and finish joining.</p><p data-status="queued" hidden>Thanks. We will send your invitation shortly.</p><p data-status="member" hidden>That address already belongs to a member. Sign in at community.plusauri.com.</p><p data-status="listed" hidden>Thanks, you are on the list. The forum is at community.plusauri.com whenever you want a look.</p><footer class="community-join-actions"><button type="button" data-community-join-close>Done</button></footer></div></article></dialog></div><hr class="lesson-disclaimer-rule" /><blockquote class="lesson-shared lesson-disclaimer" cite="learning-center:disclaimer"><p><strong>Contenu éducatif — pas un conseil.</strong> Ces leçons enseignent comment Tutilis modélise un plan et comment lire ce qu'il montre. Les foyers, soldes et résultats qui y figurent sont inventés pour l'enseignement. Rien ici n'est un conseil financier, d'investissement, fiscal ou juridique, ni une recommandation d'acheter, de vendre ou de détenir quoi que ce soit. Un modèle ne peut pas connaître votre situation — vérifiez tout ce que vous tirez d'une leçon au regard de votre propre cas, et auprès d'un professionnel qualifié le cas échéant.</p></blockquote><p class="lesson-privacy-link"><small><a href="/designer-site/privacy">Privacy</a></small></p></div>
+      </section>
+      <div class="lesson-split-gutter" data-plan-slot="0">
+        <div class="lesson-split-handle" role="separator" aria-orientation="vertical" aria-label="Resize lesson and app panes" tabindex="0"></div>
+        <div class="lesson-split-pill"><button class="lesson-split-widen" type="button" data-widen="app" data-label-widen="Show the app full width" data-label-restore="Show the lesson and the app side by side" title="Show the app full width" aria-label="Show the app full width"><span class="lesson-split-caret"></span></button><button class="lesson-split-widen" type="button" data-widen="lesson" data-label-widen="Show the lesson full width" data-label-restore="Show the lesson and the app side by side" title="Show the lesson full width" aria-label="Show the lesson full width"><span class="lesson-split-caret"></span></button></div>
+      </div>
+      <section class="app-pane" data-plan-slot="0" data-canvas-dossier="sor_seventy_thirty">
+        <p class="canvas-omitted muted">The interactive plan is not in this copy.</p>
+      </section>
+    </div>
+  </body>
+</html>

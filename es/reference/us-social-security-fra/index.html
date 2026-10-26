@@ -31,15 +31,22 @@
         <ul>
           <li><a href="/designer-site/">Inicio</a></li>
           <li><a href="/designer-site/learn" class="nav-learn">Learning Center</a></li>
-          <li><a href="/designer-site/reference">Reference</a></li>
-          <li><a href="/designer-site/glossary">Glossary</a></li>
+          <li>
+            <details class="dropdown nav-resources"><summary>Resources</summary>
+              <ul>
+                <li><a href="/designer-site/start-here">Start Here</a></li>
+                <li><a href="/designer-site/reference">Reference</a></li>
+                <li><a href="/designer-site/glossary">Glossary</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="/designer-site/pricing">Precios</a></li>
           <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es" selected="selected">🇪🇸 Español</option></select></label></li>
           <li><button class="theme-toggle" type="button" data-theme-toggle="" aria-label="Light theme — click for dark" title="Light theme — click for dark">☀</button></li>
         </ul>
       </nav>
     </header>
-    <main class="container"><div class="reference-hub">
+    <main class="container"><div class="reference-hub" data-tint="indigo">
   <p class="catalog-crumb"><a href="/designer-site/reference"><span class="catalog-crumb-arrow" aria-hidden="true">←</span>All reference</a></p>
   <h1>Social Security full retirement age</h1>
   <p class="reference-lede">FRA by birth cohort, the earliest claim age, and the early-reduction and delayed-credit rates that move a benefit off it.</p>
@@ -47,7 +54,7 @@
   <p class="reference-source">Source: Normal Retirement Age by year of birth — Social Security Administration</p>
   <p class="reference-source-url"><a href="https://www.ssa.gov/oact/ProgData/nra.html">https://www.ssa.gov/oact/ProgData/nra.html</a></p>
   <div class="reference-honesty reference-usage">
-    <h3>Where we use this · Used in your forecast</h3>
+    <h3><span class="reference-honesty-kicker">Where we use this</span><span class="reference-use-pill reference-use-pill--in-forecast">Used in your forecast</span></h3>
     <ul>
       <li>Sets when a modeled Social Security benefit starts and what fraction of the PIA it pays.</li>
       <li>Claiming before full retirement age reduces the benefit permanently; claiming after adds delayed credits until they stop at 70.</li>
@@ -55,11 +62,17 @@
       <li>The claim-age timeline in the person editor is drawn from this table.</li>
     </ul>
   </div>
-  <div class="reference-honesty">
+  <div class="reference-honesty reference-limits">
     <h3>Not modeled</h3>
     <p>Spousal, survivor, and dependent benefits; the earnings test; WEP/GPO; the January-1 birthday rule is applied but no other day-level precision exists.</p>
   </div>
-  <div class="reference-table-wrap"><table class="content-table">
+  <section class="reference-sheet">
+    <header class="reference-sheet-head">
+      <div class="reference-sheet-titles">
+        <div class="reference-sheet-kicker"><span>Reference table</span><span class="reference-sheet-category">Social Security</span></div>
+      </div>
+    </header>
+    <div class="reference-table-wrap"><table class="content-table">
 <thead>
 <tr>
 <th align="left">Birth year</th>
@@ -194,8 +207,9 @@
 </tbody>
 </table>
 </div>
+  </section>
 </div>
 </main>
-    <footer class="container"><small>© Plusauri, LLC — sea dueño de su plan financiero.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenido educativo — no es asesoramiento financiero, de inversión, fiscal ni legal.</small></footer>
+    <footer class="container"><small>© Plusauri, LLC — sea dueño de su plan financiero.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Contenido educativo — no es asesoramiento financiero, de inversión, fiscal ni legal.</small><small class="footer-trademarks">Tutilis™ and Plusauri™ are trademarks of Plusauri, LLC.</small></footer>
   </body>
 </html>

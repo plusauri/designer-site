@@ -78,6 +78,8 @@ Look at the reconciliation — the panel that proves the year's money adds up. S
 | use | Taxes | $32,753 |
 | use | **Investments** | **$7,030** |
 
+[[jump:drip]]
+
 The dividend and the shares it bought are the same $7,030, entered on both sides. It is a source
 because something had to pay for those shares. It is not *income* — it never reached the household,
 so the cash flow statement is right not to list it. The reconciliation is where the two facts are
@@ -95,6 +97,8 @@ Open the tax statements on the **Dividend reinvested** plan and stay on 2030:
 | | Basis | Assessed |
 | --- | ---: | ---: |
 | Qualified dividends | $7,030 | $1,054 |
+
+[[jump:qualified-dividend]]
 
 The dividend Alex never saw is taxed exactly like the dividend Alex did see. Reinvestment is a
 decision about *where the money goes*, not about whether it counts. In a [[term:brokerage|taxable account]], the [[term:drip]]

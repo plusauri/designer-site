@@ -93,15 +93,15 @@ That number changes the question about risk. A portfolio that needs only 3% does
 
 Her remedy is not to sell everything and hold cash. That would only work because the couple need so little. A couple who needed 7% or 8% a year would trade one problem for another. For Dan and Sarah she suggests a [[term:glide-path|glide path]], which lowers the stock share a step at a time as the date approaches. The aim is not to remove risk but to make the date depend less on what the market does in the last few years.
 
-You can watch the [Glide path](#canvas-dossier:runway_glide) plan follow its path. Open the Forecaster's **Money Movements** card and choose **Allocations**:
+You can watch the [Glide path](#canvas-dossier:runway_glide) plan follow its path. Open the Forecaster's **Money Movements** card and choose **Glide Path**:
 
 [[img:runway-alloc-glide]]
 
-*Glide path: each asset class's share of the portfolio by year, with the plan's target as a thin black bar beside it.*
+*Glide path: each asset class's share of the portfolio by year, with the plan's target as a dark tick across each bar.*
 
 [[jump:glide-path|output__forecaster__forecaster.forecast-detail__si-chart__si-chart.allocations]]
 
-Each strip is one asset class, and each year has two bars: the colored bar is the share the plan actually holds, and the thin black bar beside it is the share the glide path asks for that year. The stock bars step down from 70% in 2027 to 62% in 2029 and 54% in 2031, and from 2032, the first year of retirement, they sit at 50%. The bond bars rise to match. The plan keeps each colored bar on its target by trading inside the two 401(k)s, where a trade costs no tax. In the last few years of the forecast the stock share drifts a few points above its target. The lesson [Glide paths through retirement](/learn/glide_paths_through_retirement) explains the trading in detail.
+Each strip is one asset class, with one bar per year. The colored bar is the share the plan actually holds, and the dark tick across it is the share the glide path asks for that year. The stock bars step down from 70% in 2027 to 62% in 2029 and 54% in 2031, and from 2032, the first year of retirement, they sit at 50%. The bond bars rise to match. The plan keeps each colored bar on its target by trading inside the two 401(k)s, where a trade costs no tax. In the last few years of the forecast the stock share drifts a few points above its target. The lesson [Glide paths through retirement](/learn/glide_paths_through_retirement) explains the trading in detail.
 
 Her question is about one date, so the two pictures below answer it on that date. Each runs 1,000 simulated markets for one plan but stops the forecast at the end of 2031, the last working year, and shows where the portfolio stands on the day the paychecks stop. They are drawn on the same money axis so the spreads can be compared.
 

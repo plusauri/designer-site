@@ -48,6 +48,8 @@ For Nadia and Owen, 1% of their savings in the first year of the plan is about $
 
 To try a fee on a plan, open [[nav:transforms]] and unfold **Modifications**. The Modifiables card opens on the **Global** tab, which lists the what-ifs that apply to the whole plan. One of them is **Advisor fee**. Select it:
 
+[[jump:aum]]
+
 [[img:advisor-fee-modifiables|control]]
 
 The editor beside the card holds the fee. Switch it on and it opens in **% of AUM** mode at 1%. You can change the rate to any figure you are quoted, such as 0.5% for a discounted fee or 1.25% for a smaller account.
