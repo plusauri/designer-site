@@ -9,10 +9,12 @@ The interactive plan is absent on purpose. Where the product shows the live plan
 Open Claude on your Mac and paste this. Claude runs the steps. You describe the look.
 
 ```
-Clone https://github.com/plusauri/designer-site.git onto this Mac. Put it on the Desktop if I have not named a folder. Check out a branch named design. Start the preview with python3 preview.py and tell me the address it prints. Read CLAUDE.md and follow it. I will describe style changes in plain language. Edit only static/site.css. When I say save, commit that file on the design branch and push it. Run the git commands yourself. Leave main alone.
+Clone https://github.com/plusauri/designer-site.git onto this Mac. Put it on the Desktop if I have not named a folder. Check out a branch named design. Start the preview with python3 preview.py and tell me the address it prints. Read CLAUDE.md and follow it. I will describe style changes in plain language. Edit only static/site.css, and add any pictures under static/images. When I say save, commit those files on the design branch and push it. Run the git commands yourself. Leave main alone.
 ```
 
-Open the address Claude prints, and refresh the browser after each change. When you like a look, tell Claude to save. Claude commits `static/site.css` on the `design` branch and pushes it.
+Open the address Claude prints, and refresh the browser after each change. When you like a look, tell Claude to save. Claude commits `static/site.css`, and any pictures added under `static/images/`, on the `design` branch and pushes it.
+
+To start a new round after a snapshot is published, ask Claude to reset `design` onto the latest `main` and restart the preview. Then your work starts from the pages as they are now.
 
 Use a GitHub account that has been invited to the plusauri organization, so the push can succeed. If the Mac asks you to install the command-line tools, or GitHub asks you to sign in, click through that prompt. Claude continues from there.
 
@@ -36,18 +38,20 @@ Leave that window open. Edit `static/site.css`, save, and refresh the browser. T
 When you want to keep a change, commit it on `design` and push that branch. The product reads `static/site.css` from that branch. A later snapshot replaces `main`, so design work stays on `design`.
 
 ```
-git add static/site.css
+git add static/site.css static/images
 git commit -m "Describe the look you changed."
 git push -u origin design
 ```
 
 ## Change the look
 
-Edit `static/site.css`. That is the file the pages load.
+Edit `static/site.css`. That is the file the pages load. New pictures go under `static/images/`, as WebP when you can, because they load faster than PNG.
+
+The words on the page come from the HTML, and each language has its own. Hiding page text and drawing other words with CSS `content:` shows those words in every language, so ask for a wording change instead.
 
 Font and image paths start with `/designer-site`. Keep that prefix on every `url(...)` that points at a file in this site.
 
-`src/site.css` is a copy kept for the trip back into the product, with a return comment on the first line. The browser does not load it.
+`src/site.css` is a copy kept for the trip back into the product, with a return comment on the first line. `src/return-manifest.txt` records what this snapshot published. The browser loads neither.
 
 Lesson files under `src/lessons/` carry the path they return to. Leave that prose as published. Leave the glossary and the reference wording as published. Those words live in the product.
 

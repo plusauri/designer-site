@@ -8738,14 +8738,8 @@ main:has(.home-brand) > .home-brand {
         color: #14233a;
     }
 
-    /* "Free for 14 days, with no card to enter." reads as one sentence */
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) > strong {
-        display: inline;
-        font-size: inherit;
-    }
-
-    /* "See pricing" on the gold pill. The picture already has the arrow, so the link's
-       own text is hidden and the label is drawn instead. The whole pill is clickable. */
+    /* "See pricing" on the gold pill. The picture already has the arrow, so the link's own
+       arrow is hidden and its translated label shows. The whole pill is clickable. */
     main.container:has(.home-brand) > :nth-child(18) {
         z-index: 2;
         margin: calc(var(--b3) + 52.47vw) 0 0 calc(50% - 50vw + 78.97vw);
@@ -8759,15 +8753,15 @@ main:has(.home-brand) > .home-brand {
         width: 10.03vw;
         height: 3.58vw;
         padding-left: 1vw;
-        font-size: 0;
+        font-size: 0.8vw;
+        font-weight: 700;
+        white-space: nowrap;
         text-decoration: none;
         color: #3b2a08;
     }
 
-    main.container:has(.home-brand) > :nth-child(18) a::before {
-        content: "See pricing";
-        font-size: 0.8vw;
-        font-weight: 700;
+    main.container:has(.home-brand) > :nth-child(18) .link-arrow {
+        display: none;
     }
 
     /* The closing note goes below the banner */
@@ -8779,8 +8773,8 @@ main:has(.home-brand) > .home-brand {
 /* Design pass: light navigation band, dark brown band behind the big logo */
 body > header.container {
     background: #e1e7ef;
-    box-shadow: 0 0 0 100vmax #e1e7ef;
-    clip-path: inset(0 -100vmax);
+    /* Edge to edge without clipping: a clip-path here cut off the Resources menu below the header. */
+    border-image: conic-gradient(#e1e7ef 0 0) fill 0 / / 0 100vmax;
     --plusauri-ink: #14233a;
     --pico-color: #14233a;
     --pico-primary: #14233a;
@@ -8847,7 +8841,8 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
 @media (min-width: 1280px) {
     main.container:has(.home-brand) > :nth-child(17) > li:nth-child(n) > strong {
         display: block;
-        min-height: 2.3em;
+        /* Two title lines, less the 0.57vw the row moved down to clear its circles. */
+        min-height: calc(2.3em - 0.57vw);
         margin-bottom: 0.15vw;
         font-family: Georgia, "Times New Roman", serif;
         font-weight: 700;
@@ -8883,7 +8878,8 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
 
     main.container:has(.home-brand) > :nth-child(17) > li > strong {
         display: block;
-        min-height: 2.3em;
+        /* Two title lines, less the 0.57vw the row moved down to clear its circles. */
+        min-height: calc(2.3em - 0.57vw);
         margin-bottom: 0.2vw;
         font-family: Georgia, "Times New Roman", serif;
         font-weight: 700;
@@ -8914,29 +8910,16 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
     }
 }
 
-/* Design pass: "Own it" text higher, centered under each icon, Free for 14 days reworded */
+/* Design pass: "Own it" text centered under each icon, as far below the circles as "What it models" */
 @media (min-width: 1280px) {
     main.container:has(.home-brand) > :nth-child(17) > li {
-        top: 54.85vw;
+        top: 55.42vw;
     }
 
     main.container:has(.home-brand) > :nth-child(17) > li:nth-child(1) { left: 8.39vw;  width: 12vw; }
     main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) { left: 24.66vw; width: 15vw; }
     main.container:has(.home-brand) > :nth-child(17) > li:nth-child(3) { left: 41.82vw; width: 14.4vw; }
     main.container:has(.home-brand) > :nth-child(17) > li:nth-child(4) { left: 57.73vw; width: 15.4vw; }
-
-    /* Hide the page's own ", with no card to enter." and draw the reworded sentence instead */
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) {
-        font-size: 0;
-    }
-
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2)::after {
-        content: "With no card to enter.";
-        display: block;
-        font-size: 0.76vw;
-        line-height: 1.3;
-        color: #3d4650;
-    }
 }
 
 /* Design pass: "Who it is for" text matches the other sections' description text */
