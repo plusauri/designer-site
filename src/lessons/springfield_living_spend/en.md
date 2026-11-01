@@ -23,7 +23,8 @@ tutilis-locale: en source
 This lesson uses the same household as [Meet the Springfield household](/learn/springfield_baseline),
 Homer and Marge, but pulls a **different lever**. The question here is not *when* they stop working.
 It is **how much they spend** while working and in retirement, and how hard that pulls on the
-portfolio.
+portfolio. A retirement spending plan sets those living expenses in retirement, and this lesson
+shows how far they can rise before the plan stops succeeding.
 
 The [[term:live-plan]] on the right is **Springfield Baseline** again.
 

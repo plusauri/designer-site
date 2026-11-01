@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Timing a crash: cash reserve or rebalancing?
 
-Jordan is 60 and plans to retire in 2031, at 65. There is $1.34 million saved: $900,000 in a [[term:401k|401(k)]], $400,000 in a [[term:brokerage]] account, and $40,000 in a money-market account. The invested money is split about 70/30 between an S&P 500 index fund and an intermediate Treasury fund, in both accounts. Spending is $72,000 a year in today's dollars, and Social Security starts at 67.
+Jordan is 60 and plans to retire in 2031, at 65. There is $1.34 million saved: $900,000 in a [[term:401k|401(k)]], $400,000 in a [[term:brokerage]] account, and $40,000 in a money-market account. The invested money is split about 70/30 between an S&P 500 index fund and an intermediate Treasury fund, in both accounts. Spending is $72,000 a year in today's dollars, and Social Security starts at 67. This lesson uses Jordan's plan to show sequence of returns risk: the same returns in a different order can end in a different place.
 
 Jordan has read that the crash to fear is the one that arrives just as the paychecks stop. Before retirement, a fall in the market is something to wait out. After it, every year's spending has to be sold from whatever the portfolio is worth that year, and shares sold at the bottom never take part in the recovery. This is [[term:sequence-of-returns|sequence-of-returns risk]]: the same returns in a different order leave a retiree with a different amount of money.
 
@@ -214,6 +214,12 @@ Javier Estrada, in *The Bucket Approach for Retirement: A Suboptimal Behavioral 
 Wade Pfau and Michael Kitces, in *Reducing Retirement Risk with a Rising Equity Glide Path* (Journal of Financial Planning, 2014), showed that sequence risk is concentrated in the years around the retirement date. A portfolio that holds less stock at retirement and adds stock afterward survived more often than one that held a constant, higher share. That is the same finding as the slider's: the years around the retirement date are the ones to protect.
 
 A bucket still has a defense in its favor. It gives a nervous retiree a story that makes it easier not to sell stock in a crash, and behavior is a large part of how retirees actually fare. A written rebalancing rule makes the same promise with less money parked in cash, and it removes the decision that the bucket leaves open.
+
+<aside class="lesson-saying" data-saying="stay-the-course">
+
+The 60/40 rebalanced plan makes no decision in the crash year. It keeps its mix through the fall and sells whatever sits above target, which is why its column barely moves wherever the crash lands.
+
+</aside>
 
 ## What this cannot tell you
 

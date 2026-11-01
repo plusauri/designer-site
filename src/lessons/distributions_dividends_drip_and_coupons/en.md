@@ -6,7 +6,8 @@ tutilis-locale: en source
 
 Alex holds $200,000 in a dividend fund. The fund yields 3%, so it distributes about $6,000 in the
 first year and more as the fund grows. Alex has two choices, and most brokerages present them as a
-single checkbox: take the dividend as cash, or reinvest it.
+single checkbox: take the dividend as cash, or reinvest it. Either way, reinvested dividends are taxable in a
+taxable account in the year they are paid.
 
 The checkbox looks like it is about convenience. It is not. It changes what shows up on the cash
 flow statement, what the reconciliation has to account for, and — in the case of a bond — whether

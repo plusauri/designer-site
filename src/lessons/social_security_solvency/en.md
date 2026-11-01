@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Will Social Security be there? Plan for the shortfall, not for zero
 
-Maya is 58 and Theo is 56. Both plan to stop working in 2033, when Maya turns 65 and Theo turns 63, and both plan to claim Social Security at their [[term:claim-age|full retirement age]] of 67, Maya in 2035 and Theo in 2037. Their Social Security statements put Maya's benefit at $2,900 a month and Theo's at $2,100 in today's dollars. Together that is about $60,000 a year, and it is the largest single source of income they will have in retirement. They have $1.2 million saved and plan to spend $102,000 a year.
+Maya is 58 and Theo is 56. Both plan to stop working in 2033, when Maya turns 65 and Theo turns 63, and both plan to claim Social Security at their [[term:claim-age|full retirement age]] of 67, Maya in 2035 and Theo in 2037. Their Social Security statements put Maya's benefit at $2,900 a month and Theo's at $2,100 in today's dollars. Together that is about $60,000 a year, and it is the largest single source of income they will have in retirement. They have $1.2 million saved and plan to spend $102,000 a year. They have heard the question on the news: will Social Security run out? This lesson models a Social Security shortfall on their plan.
 
 A friend has told them to leave Social Security out of the plan entirely, because "it won't be there." The friend is not alone. In a 2023 Nationwide survey, 45% of Gen Z adults and 39% of millennials said they expect to get none of the Social Security benefits they have earned.
 

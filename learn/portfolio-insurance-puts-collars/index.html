@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Insurance: Protective Puts, Collars and Section 1256 Taxes — Tutilis</title>
+    <meta name="description" content="A wealthy household can buy protection against a market crash with index options: puts that pay when the market falls past a floor, or a collar that sells away the best years to pay for them. Follow one couple through a replayed 2008 crisis and a thousand random futures to see what the insurance pays, what it costs year after year, and how it is taxed.">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://www.plusauri.com/learn/portfolio-insurance-puts-collars" rel="canonical">
+    <meta content="website" property="og:type">
+    <meta content="Plusauri" property="og:site_name">
+    <meta content="Portfolio Insurance: Protective Puts, Collars and Section 1256 Taxes — Tutilis" property="og:title">
+    <meta content="A wealthy household can buy protection against a market crash with index options: puts that pay when the market falls past a floor, or a collar that sells away the best years to pay for them. Follow one couple through a replayed 2008 crisis and a thousand random futures to see what the insurance pays, what it costs year after year, and how it is taxed." property="og:description">
+    <meta content="https://www.plusauri.com/learn/portfolio-insurance-puts-collars" property="og:url">
+    <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/designer-site/static/brand/icon-192.png" rel="icon" type="image/png" sizes="192x192">
+<script>(function(){try{var k="plusauri.theme",t=localStorage.getItem(k);if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>    <script src="/designer-site/static/theme.js" defer="defer"></script>
+    <script src="/designer-site/static/lang.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/pico/pico.min.css" rel="stylesheet">
+    <link href="/designer-site/static/site.css" rel="stylesheet">
+    <script src="/designer-site/static/lesson-split.js" defer="defer"></script>
+    <script src="/designer-site/static/trial-callout.js" defer="defer"></script>
+    <script src="/designer-site/static/community-join.js" defer="defer"></script>
+    <link href="/designer-site/static/vendor/katex/katex.min.css" rel="stylesheet">
+    <script src="/designer-site/static/vendor/katex/katex.min.js" defer="defer"></script>
+    <script src="/designer-site/static/vendor/katex/contrib/auto-render.min.js" defer="defer" onload="renderMathInElement(document.body,{delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true},{left:'$$',right:'$$',display:true}],throwOnError:false});"></script>
+  </head>
+  <body class="lesson-split-body" data-prose-lang="en" data-lang="en">
+    <header class="lesson-split-header" id="lesson-split-header">
+      <nav>
+        <ul>
+          <li><strong><a href="/designer-site/">Plusauri</a></strong></li>
+          <li><a href="/designer-site/learn">Learning Center</a></li>
+          <li><a href="/designer-site/reference">Reference</a></li>
+        </ul>
+        <ul>
+          <li><label class="site-lang-control" title="Language — Learning Center prose and app UI"><span class="visually-hidden">Language</span><select class="site-lang-select" data-lang-select="" aria-label="Language"><option value="en" selected="selected">🇺🇸 English</option><option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option><option value="es">🇪🇸 Español</option></select></label></li>
+          <li><button class="lesson-header-collapse" type="button" aria-expanded="true" aria-controls="lesson-split-header" title="Hide header" aria-label="Hide header">▾</button></li>
+        </ul>
+      </nav>
+    </header>
+<button class="lesson-header-expand" type="button" id="lesson-header-expand" hidden="hidden" title="Show header" aria-label="Show header">▴ Plusauri · Learning Center</button><script type="application/json" id="lesson-canvas-dossiers">{"primary":"whitcomb_unhedged","alternates":["whitcomb_puts","whitcomb_collar"],"order":["whitcomb_unhedged","whitcomb_puts","whitcomb_collar"]}</script>
+    <div class="lesson-split has-plan-slots" data-plan-slot="0">
+      <section class="lesson-pane">
+        <p class="lesson-plan-switcher-lede">This lesson uses <strong>3 sample plans</strong> — switch anytime; color matches the bar between the columns.</p>
+        <div class="lesson-plan-switcher" role="group" aria-label="Plans this lesson can open">
+          <div class="lesson-plan-switcher-chips"><span class="lesson-plan-switcher-label">Plans</span><button class="learn-chip lesson-plan-chip plan-slot-0 is-active" type="button" data-canvas-dossier="whitcomb_unhedged" data-plan-slot="0" aria-pressed="true">No hedge</button><button class="learn-chip lesson-plan-chip plan-slot-1" type="button" data-canvas-dossier="whitcomb_puts" data-plan-slot="1" aria-pressed="false">Index puts</button><button class="learn-chip lesson-plan-chip plan-slot-2" type="button" data-canvas-dossier="whitcomb_collar" data-plan-slot="2" aria-pressed="false">Collar</button></div>
+        </div>
+        <p class="lesson-plan-showing muted" id="lesson-plan-showing" aria-live="polite">On the right now: <span id="lesson-plan-showing-label">No hedge</span></p>
+<a class="trial-callout trial-callout-tech" href="/designer-site/try" data-trial-callout data-variant="tech" data-track="trial-callout:tech"><img src="/designer-site/static/images/trial/trial-tech.png" alt="14-Day Free Trial: Your Dossier on Your Desktop" width="459" height="145" decoding="async"></a>        <div class="lesson-prose" id="lesson-prose" data-next-key="KeyJ" data-previous-key="KeyK" data-lesson-id="hnw_portfolio_insurance" data-lesson-slug="portfolio-insurance-puts-collars" data-loaded-lang="en"><h1><img class="lesson-brand-mark" src="/designer-site/static/brand/tutilis_logo.png" alt="" title="Tutilis" width="40" height="40">Portfolio insurance with puts and collars</h1>
+<p class="lesson-situation"><span class="lesson-situation-label">The situation</span> Dana and Lee Whitcomb are 63 and 61 and will retire next year with about $13 million, most of it in an S&amp;P 500 index fund in a taxable account with a large unrealized gain. A crash in their first years of retirement is the outcome they fear most, and selling the stock to hold less of it would trigger a large tax bill. They are weighing index puts, or a collar, for the six years around retirement.</p>
+<div class="lesson-intro-card"><img class="lesson-media-ref ui-std-preview-wide" src="/designer-site/static/images/lessons/intro-cards/portfolio-insurance.webp" alt="Golden Age comic poster titled Portfolio Insurance. A retiring couple on a cliff ledge hug a golden egg labeled S&amp;P 500 while arrows marked CRASH! rain down from a storm. Beside them a smiling attendant in a booth labeled Premium takes a coin from them under a sunny sky. Below the ledge a rope net labeled Floor has caught a second S&amp;P 500 egg. To the right, scissors labeled Cap snip the rope tied to a rocket labeled Rising returns. A speech bubble says a collar makes the put cheap by giving away the best years. A panel labeled The lesson says every hedged plan gives up some of its average outcome to buy a better bad one. The banner says insurance pays in crashes and costs every year." data-media-id="intro-card-portfolio-insurance" loading="lazy" decoding="async" /></div>
+<details class="lesson-intro-chrome" data-intro-chrome="1" data-lesson-presentation="Reading"><summary><span class="lesson-intro-chrome-summary-title">How to use this case study</span></summary><div class="lesson-intro-chrome-body"><blockquote class="lesson-shared lesson-learning-preference" cite="learning-center:learning-preference"><p>New to the Learning Center, or want a map of the panels? Start with a tour: <a href="/designer-site/learn/getting-started-planning-software-tour"><strong>Reading Lesson (Getting Around)</strong></a> or <a href="/designer-site/learn/getting-started-video-tutorial"><strong>Screencast Lesson (Getting Around)</strong></a> — both walk through Tutilis next to a <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live plan</span><span class="lesson-term-tip" role="tooltip">The running Tutilis product next to this lesson — navigation, Bird's Eye, Forecaster, tools, and more — loaded with a teaching sample. A dossier is the plan data; the live plan is the full product surface with a sample dossier already open so you can explore. On the web, teaching samples are not editable the way your own dossier will be in the full app.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> (to the right on a desktop-width screen, or below when stacked on a tablet).</p></blockquote><blockquote class="lesson-shared lesson-orientation" cite="learning-center:orientation"><p>This page — <strong>Portfolio insurance with puts and collars</strong> — can open <strong>more than one</strong> <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live sample plan</span><span class="lesson-term-tip" role="tooltip">The running Tutilis product next to this lesson — navigation, Bird's Eye, Forecaster, tools, and more — loaded with a teaching sample. A dossier is the plan data; the live plan is the full product surface with a sample dossier already open so you can explore. On the web, teaching samples are not editable the way your own dossier will be in the full app.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to the text (to the right on a wide screen, or below on a tablet). Use the <strong>Live plans</strong> chips (and matching colored links in the prose) to switch without leaving this page; the colored bar near the plans shows which one is loaded. The walk-through stays in the text.</p></blockquote><blockquote class="lesson-shared lesson-product-relationship" cite="learning-center:product-relationship"><p>The <span class="lesson-term" data-term="live-plan" tabindex="0"><span class="lesson-term-pill">live plan</span><span class="lesson-term-tip" role="tooltip">The running Tutilis product next to this lesson — navigation, Bird's Eye, Forecaster, tools, and more — loaded with a teaching sample. A dossier is the plan data; the live plan is the full product surface with a sample dossier already open so you can explore. On the web, teaching samples are not editable the way your own dossier will be in the full app.<a class="lesson-term-more" href="/designer-site/glossary/live-plan">Full entry →</a></span></span> next to this page — usually <strong>to the right</strong> on a wide screen, or <strong>below</strong> on a tablet — is <strong>Tutilis</strong> running a teaching sample: the same <strong>financial planning product</strong> available as a desktop application (early preview). A <span class="lesson-term" data-term="dossier" tabindex="0"><span class="lesson-term-pill">dossier</span><span class="lesson-term-tip" role="tooltip">Your full plan in Tutilis: the people in the household, what they own and owe, cash flows in and out, tax setting, and planning assumptions. One dossier is one complete situation as the product models it.<a class="lesson-term-more" href="/designer-site/glossary/dossier">Full entry →</a></span></span> is the plan data; the live plan is the full product (navigation, Bird's Eye, Forecaster, tools) with a sample dossier already open so you can try the panels. <a href="/designer-site/pricing">See planned pricing</a>. On the web, Learning Center samples are <strong>not editable</strong> the way your own dossier will be in the full app. Your own household goes in the Tutilis desktop app — <a href="/designer-site/learn#intro-video-heading">the Learning Center front page has a short clip of that</a>.</p></blockquote></div></details>
+<div class="lesson-accordion" data-sections="12" style="--n:12"><h2 id="overview" class="lesson-section-head" style="--i:0"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="overview--body"><span class="lesson-section-title">Overview</span></button></h2><div class="lesson-section-body" id="overview--body" role="region" aria-labelledby="overview" hidden>
+<p>A household that holds most of its money in stocks can buy protection against a crash, much as it buys insurance on a house. The protection is an index <span class="lesson-term" data-term="protective-put" tabindex="0"><span class="lesson-term-pill">put option</span><span class="lesson-term-tip" role="tooltip">A put option bought on something you own, so that it pays when the price falls past a chosen floor. It works like insurance on the holding: it costs a premium in every year it is held, and it pays only in the bad ones. In Tutilis it is a hedge on an account, with a floor, settled once a year on the year's return.<a class="lesson-term-more" href="/designer-site/glossary/protective-put">Full entry →</a></span></span>: a contract that pays when the market ends the year below a chosen floor. Like any insurance it costs a <span class="lesson-term" data-term="premium" tabindex="0"><span class="lesson-term-pill">premium</span><span class="lesson-term-tip" role="tooltip">What you <strong>pay</strong> for coverage — a monthly insurance or Medicare cost — and not a bonus or a prize. Confusingly, the same word means &quot;above face value&quot; when applied to a bond. In a plan it is nearly always the insurance sense: a recurring outflow that rises with age and, past a threshold, with income.<a class="lesson-term-more" href="/designer-site/glossary/premium">Full entry →</a></span></span> every year, including the years nothing goes wrong, and the premium is priced so that on average the buyer pays more than the protection returns. This lesson follows one <span class="lesson-term" data-term="hnw" tabindex="0"><span class="lesson-term-pill">HNW</span><span class="lesson-term-tip" role="tooltip">High net worth — shorthand for a household wealthy enough that different planning problems dominate. Surcharge tiers, the investment surtax, and estate questions bind earlier, while running out of money is rarely the binding risk. There is no single official dollar line.<a class="lesson-term-more" href="/designer-site/glossary/hnw">Full entry →</a></span></span> couple through three plans to show what the insurance pays in a crash, what it costs over a lifetime of quiet years, how a <span class="lesson-term" data-term="collar" tabindex="0"><span class="lesson-term-pill">Collar</span><span class="lesson-term-tip" role="tooltip">A protective put paid for by selling a call on the same holding. The call gives away any return above its cap, so the holding keeps returns between the floor and the cap. A collar can cost little or nothing in cash; its cost is the best years it gives up.<a class="lesson-term-more" href="/designer-site/glossary/collar">Full entry →</a></span></span> trades away the best years to pay for it, and how the gains and losses are taxed.</p>
+<p>The lesson is advanced because it leans on two ideas from elsewhere: a distribution of outcomes over many random futures, and <span class="lesson-term" data-term="sequence-of-returns" tabindex="0"><span class="lesson-term-pill">sequence-of-returns risk</span><span class="lesson-term-tip" role="tooltip">The <strong>order</strong> the good and bad years arrive in. Two plans with identical average returns can end in very different places if one takes its losses early while money is being withdrawn — selling into a fall removes shares that are then not there for the recovery. It is why retirement risk is not summarized by an average, and why the years either side of the day you stop working carry more weight than their count suggests.<a class="lesson-term-more" href="/designer-site/glossary/sequence-of-returns">Full entry →</a></span></span>. <a href="/designer-site/learn/sequence-of-returns-risk">Timing a crash</a> introduces both.</p>
+</div>
+<h2 id="what-you-will-learn" class="lesson-section-head" style="--i:1"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-you-will-learn--body"><span class="lesson-section-title">What you will learn</span></button></h2><div class="lesson-section-body" id="what-you-will-learn--body" role="region" aria-labelledby="what-you-will-learn" hidden>
+<aside class="lesson-plan">
+<p class="lesson-plan-label">Today's lesson</p>
+<div class="lesson-plan-body">
+<p>By the end of this lesson you should be able to answer these questions. Each one links to the section that answers it.</p>
+<ol>
+<li><strong>Who are Dana and Lee, and what do the three plans change?</strong> See <a href="#meet-dana-and-lee">Meet Dana and Lee</a>.</li>
+<li><strong>What does a put pay, and what does it cost?</strong> See <a href="#what-a-put-pays">What a put pays</a>.</li>
+<li><strong>What does a collar give up in exchange for a cheap put?</strong> See <a href="#what-a-collar-gives-up">What a collar gives up</a>.</li>
+<li><strong>What happens to each plan in a crash?</strong> See <a href="#a-crash-in-year-two">A crash in year two</a>.</li>
+<li><strong>What happens in a crash that lasts three years, like 1929?</strong> See <a href="#a-longer-crash">A longer crash</a>.</li>
+<li><strong>What does the insurance do across a thousand futures?</strong> See <a href="#a-thousand-futures">A thousand futures</a>.</li>
+<li><strong>How is the hedge taxed, and which account should it sit in?</strong> See <a href="#how-the-hedge-is-taxed">How the hedge is taxed</a>.</li>
+<li><strong>Who might consider this, and what comes first?</strong> See <a href="#who-might-consider-it">Who might consider it</a>.</li>
+<li><strong>What does the forecast leave out?</strong> See <a href="#what-the-plan-leaves-out">What the plan leaves out</a>.</li>
+</ol>
+</div>
+</aside>
+</div>
+<h2 id="meet-dana-and-lee" class="lesson-section-head" style="--i:2"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="meet-dana-and-lee--body"><span class="lesson-section-title">Meet Dana and Lee</span></button></h2><div class="lesson-section-body" id="meet-dana-and-lee--body" role="region" aria-labelledby="meet-dana-and-lee" hidden>
+<p>Dana is 63 and Lee is 61, and both retire next year. They have about $13 million and spend about $420,000 a year. Most of it sits in one S&amp;P 500 index fund, and the $8 million of it in their taxable <span class="lesson-term" data-term="brokerage" tabindex="0"><span class="lesson-term-pill">brokerage</span><span class="lesson-term-tip" role="tooltip">An ordinary <strong>taxable</strong> investment account — no special retirement wrapper, no contribution limit, and no withdrawal age rules. The trade-off is that dividends and realized gains are taxed as they happen rather than deferred. Often called the <strong>taxable</strong> bucket next to traditional and Roth.<a class="lesson-term-more" href="/designer-site/glossary/brokerage">Full entry →</a></span></span> account cost them $2.4 million, their <span class="lesson-term" data-term="basis" tabindex="0"><span class="lesson-term-pill">basis</span><span class="lesson-term-tip" role="tooltip">What you <strong>paid</strong> for an investment — the starting point tax measures your gain against. Sell for more than basis and the difference is a taxable gain; the money you originally put in is not taxed again. It is the reason two accounts with identical balances can cost very different amounts to spend from.<a class="lesson-term-more" href="/designer-site/glossary/basis">Full entry →</a></span></span>. Selling stock to hold less of it would <span class="lesson-term" data-term="realized-gain" tabindex="0"><span class="lesson-term-pill">realize</span><span class="lesson-term-tip" role="tooltip">A gain that has been <strong>locked in by selling</strong> — and, in a taxable account, the moment it becomes taxable. Until then it is <strong>unrealized</strong>: the holding is worth more than you paid, but nothing has happened yet and no tax is due. The same word cuts the other way: a loss is only realized once you sell, which is why a downturn you ride through costs nothing you did not sell.<a class="lesson-term-more" href="/designer-site/glossary/realized-gain">Full entry →</a></span></span> most of a $5.6 million gain, so the simplest way to take less risk is an expensive one for them.</p>
+<table>
+<thead>
+<tr><th>Account</th><th align="right">Balance</th><th>What it holds</th></tr>
+</thead>
+<tbody>
+<tr><td>Joint brokerage</td><td align="right">$10 million</td><td>An S&amp;P 500 index fund ($8 million, basis $2.4 million) and an intermediate Treasury fund ($2 million)</td></tr>
+<tr><td>Dana's <span class="lesson-term" data-term="traditional" tabindex="0"><span class="lesson-term-pill">traditional</span><span class="lesson-term-tip" role="tooltip">A <strong>retirement account</strong> where the tax is paid on the way out — not a description of an old-fashioned account. Money went in <strong>before</strong> income tax, grew untaxed, and is taxed as ordinary income when you take it out — traditional 401(k)s and IRAs work this way. The contrast is <strong>Roth</strong> (taxed going in, tax-free coming out) and <strong>taxable</strong> (brokerage, taxed as you go).<a class="lesson-term-more" href="/designer-site/glossary/traditional">Full entry →</a></span></span> <span class="lesson-term" data-term="ira" tabindex="0"><span class="lesson-term-pill">IRA</span><span class="lesson-term-tip" role="tooltip">Individual Retirement Account — a retirement wrapper you open yourself rather than through an employer. It comes in <strong>traditional</strong> (pre-tax going in) and <strong>Roth</strong> (taxed going in) flavors, so naming the flavor matters more than the acronym does.<a class="lesson-term-more" href="/designer-site/glossary/ira">Full entry →</a></span></span></td><td align="right">$3 million</td><td>The same S&amp;P 500 index fund ($1.8 million) and the Treasury fund ($1.2 million)</td></tr>
+<tr><td>Cash</td><td align="right">$400,000</td><td>A money market fund</td></tr>
+</tbody>
+</table>
+<p>The three plans are the same household with one thing changed.</p>
+<ul>
+<li><a href="#canvas-dossier:whitcomb_unhedged">No hedge</a> holds the portfolio as it is.</li>
+<li><a href="#canvas-dossier:whitcomb_puts">Index puts</a> buys one-year puts on the S&amp;P 500 at a floor 10% below the market, on the whole $9.8 million of the index fund, and rolls them every year from 2027 through 2032. The puts sit in the brokerage account.</li>
+<li><a href="#canvas-dossier:whitcomb_collar">Collar</a> holds the same puts and pays for them by selling one-year calls 20% above the market, which gives away any return past 20% in a year.</li>
+</ul>
+<p>The hedge covers the six years around retirement on purpose. Those are the years in which a crash does the most lasting damage to a plan that has started to spend, and after them the couple goes back to holding the portfolio unhedged.</p>
+</div>
+<h2 id="what-a-put-pays" class="lesson-section-head" style="--i:3"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-a-put-pays--body"><span class="lesson-section-title">What a put pays</span></button></h2><div class="lesson-section-body" id="what-a-put-pays--body" role="region" aria-labelledby="what-a-put-pays" hidden>
+<p>A put with a floor of −10% pays whatever the index loses past 10% in the year. In a year the S&amp;P 500 falls 35%, it pays 25% of the value it insures, and in a year the index falls 8% or rises it pays nothing. The plan settles the puts once a year, so the payoff for a year is the return the forecast draws for the index fund that year, and the puts pay exactly when the holding they insure has a bad year.</p>
+<p>The price comes from the same forecast. The plan's assumption for large US stocks is a mean return of about 7.6% with a <span class="lesson-term" data-term="volatility" tabindex="0"><span class="lesson-term-pill">volatility</span><span class="lesson-term-tip" role="tooltip">How much an investment's returns <strong>bounce around</strong> from year to year, not whether it goes up or down overall. Written <strong>σ (sigma)</strong> in the product. Two holdings can have the same average return and feel completely different to live through — and high volatility drags the growth you actually compound below that average.<a class="lesson-term-more" href="/designer-site/glossary/volatility">Full entry →</a></span></span> of about 16.4%, and on that distribution a put 10% below the market pays back about 1.2% of the insured value in an average year. Tutilis charges twice that by default, about 2.4% a year, because index puts have historically cost well more than they went on to pay. From 1990 to 2018 the option market's expected swing in the S&amp;P 500, the VIX, averaged 19.3% a year, while the swing that followed averaged 15.1% (<a href="https://cdn.cboe.com/resources/education/research_publications/PutWriteCBOE19_v14_by_Prof_Oleg_Bondarenko_as_of_June_14.pdf" target="_blank" rel="noopener noreferrer">Bondarenko, for Cboe, 2019</a>). Priced at that ratio, this put costs about twice what it pays back on average. That gap is called the volatility risk premium, and it is why insurance is a cost rather than a free lunch. In 2027 the premium on <strong>Index puts</strong> is about $249,000, and it is charged every year the puts are held, whatever the market does.</p>
+<p>The 100% markup is an assumption, and it sits at the low end of the evidence. Markets also price options on the risk-free rate rather than on the stock's expected return, and they charge more for puts far below the market, and counting both puts this put at up to about 270% over its average payoff. You can change the markup on the hedge in the account editor, or try other values in Transforms.</p>
+<details class="lesson-math">
+<summary class="lesson-math-label">For the math lovers — what a put pays on average</summary>
+<div class="lesson-math-body">
+<p>If the year's return <span class="math">\(r\)</span> is normal with mean <span class="math">\(\mu\)</span> and volatility <span class="math">\(\sigma\)</span>, a put with floor <span class="math">\(F\)</span> pays on average</p>
+<p><span class="math">\[ E[\max(F - r, 0)] = (F - \mu)\,\Phi(d) + \sigma\,\varphi(d), \qquad d = \frac{F - \mu}{\sigma}, \]</span></p>
+<p>where <span class="math">\(\Phi\)</span> and <span class="math">\(\varphi\)</span> are the standard normal distribution and density. With <span class="math">\(\mu = 7.56\%\)</span>, <span class="math">\(\sigma = 16.42\%\)</span> and <span class="math">\(F = -10\%\)</span>, <span class="math">\(d\)</span> is about <span class="math">\(-1.07\)</span> and the expected payoff is about 1.2% of the insured value. A call with cap <span class="math">\(C\)</span> is the mirror image:</p>
+<p><span class="math">\[ E[\max(r - C, 0)] = (\mu - C)\,\Phi(e) + \sigma\,\varphi(e), \qquad e = \frac{\mu - C}{\sigma}. \]</span></p>
+<p>A bought put and a sold call at the same strike together pay <span class="math">\(F - \mu\)</span> on average, which is how the two formulas check each other.</p>
+</div>
+</details>
+</div>
+<h2 id="what-a-collar-gives-up" class="lesson-section-head" style="--i:4"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-a-collar-gives-up--body"><span class="lesson-section-title">What a collar gives up</span></button></h2><div class="lesson-section-body" id="what-a-collar-gives-up--body" role="region" aria-labelledby="what-a-collar-gives-up" hidden>
+<p>A collar pays for the puts by selling calls. The buyer of a call collects whatever the index gains past the cap, so the couple keeps every return up to 20% and gives away the rest. Calls are priced much closer to what they pay back than puts are, so Tutilis sells the call for 20% less than its average payoff. On the plan's own distribution that covers most of the put, and the <a href="#canvas-dossier:whitcomb_collar">Collar</a> plan's net premium is about 0.69% a year, a little over a quarter of what the puts alone cost.</p>
+<p>All of this sits on the brokerage account, in the Hedges section of its editor: what the hedge insures, its floor and cap, the years it is held, how it is taxed, and its price.</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated" src="/designer-site/static/images/lessons/generated/hnw-insurance-hedges-collar.png" alt="The Hedges section of the brokerage account's editor on the Collar plan. One hedge, S&amp;P 500 collar, insures all of the S&amp;P 500 fund with a floor 10% below today's price and a cap 20% above it, held from 2027 through 2032 and taxed as a Section 1256 contract. It is priced by the model, with a 100% markup on the puts and a 20% discount on the calls, at about 0.69% of the insured value a year." data-media-id="hnw-insurance-hedges-collar" loading="lazy" decoding="async" /></p>
+<p>The cost has not gone away. It has moved from the cash flow into the best years. A year the index gains 30% is a 20% year on <strong>Collar</strong>, and those are the years a portfolio recovers in after a crash. The next two sections show where that matters.</p>
+</div>
+<h2 id="a-crash-in-year-two" class="lesson-section-head" style="--i:5"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="a-crash-in-year-two--body"><span class="lesson-section-title">A crash in year two</span></button></h2><div class="lesson-section-body" id="a-crash-in-year-two--body" role="region" aria-labelledby="a-crash-in-year-two" hidden>
+<p>The plainest test of insurance is the accident it is bought for. Turn on the <strong>Sequence-of-returns risk</strong> modifiable in Transforms, choose the Global Financial Crisis of 2007, and start it in 2027. Each plan then lives through the crisis's yearly returns from its first year of retirement, and its deepest year, a fall of about 41%, lands in 2028. The year after it is a gain of about 56%.</p>
+<p>Open the cash flow for 2028 on <a href="#canvas-dossier:whitcomb_puts">Index puts</a>. The puts pay about $2.9 million into the brokerage account, against a premium of about $225,000. The plan has more cash than it can spend, so it invests about $2.2 million, which buys stock at the bottom of the crash.</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/hnw-insurance-cash-flow-puts-2028.png" alt="The 2028 cash flow statement for Index puts with the 2008 financial crisis replayed from 2027. The S&amp;P 500 puts pay about $2.9 million in, against a premium of about $225,000 and living expenses of about $439,000, and the plan invests about $2.2 million that year instead of selling anything." data-media-id="hnw-insurance-cash-flow-puts-2028" data-where="output__transforms__forecaster.forecast-detail__cf-table" data-canvas-dossier="whitcomb_puts" data-pick="2028,0" data-what-if="crash:global-financial-crisis-2007,2027" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p>The same year on <a href="#canvas-dossier:whitcomb_unhedged">No hedge</a> has no income at all. The plan sells about $529,000 to pay for living expenses and taxes, and about $296,000 of that is the S&amp;P 500 fund, sold after it has fallen.</p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/hnw-insurance-cash-flow-unhedged-2028.png" alt="The 2028 cash flow statement for No hedge with the 2008 financial crisis replayed from 2027. There is no income, and the plan sells about $529,000 of holdings to pay for living expenses and taxes, about $296,000 of it from the S&amp;P 500 index fund." data-media-id="hnw-insurance-cash-flow-unhedged-2028" data-where="output__transforms__forecaster.forecast-detail__cf-table" data-canvas-dossier="whitcomb_unhedged" data-pick="2028,0" data-what-if="crash:global-financial-crisis-2007,2027" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p>That one year is most of the difference. Over a thousand random futures with the crisis placed at 2027, the <span class="lesson-term" data-term="median" tabindex="0"><span class="lesson-term-pill">median</span><span class="lesson-term-tip" role="tooltip">The <strong>middle</strong> outcome — half above, half below — as against the average, which a few enormous results can drag upward. Over long horizons the two come apart badly, and the median is the one that answers &quot;what does a typical path look like?&quot;<a class="lesson-term-more" href="/designer-site/glossary/median">Full entry →</a></span></span> <strong>Index puts</strong> plan ends with about $35 million, and the median <strong>No hedge</strong> plan with about $24 million. The puts' cash was invested at the low and rode the recovery that followed. <strong>Collar</strong> ends in between, at about $25 million. Its puts paid in the crash just as <strong>Index puts</strong> did, and then in 2029, when the index gained about 56%, it kept 20%.</p>
+</div>
+<h2 id="a-longer-crash" class="lesson-section-head" style="--i:6"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="a-longer-crash--body"><span class="lesson-section-title">A longer crash</span></button></h2><div class="lesson-section-body" id="a-longer-crash--body" role="region" aria-labelledby="a-longer-crash" hidden>
+<p>The crisis of 2008 fell for about a year and a half. The crash that began in 1929 fell for three years. In Transforms, choose the Great Crash of 1929 and start it in 2027. The S&amp;P 500 then loses about 23% in 2027, 28% in 2028 and 61% in 2029, and gains about 140% in 2030.</p>
+<table>
+<thead>
+<tr><th>Plan</th><th align="right">Success</th><th align="right">10th percentile at the end</th><th align="right">Median at the end</th></tr>
+</thead>
+<tbody>
+<tr><td>No hedge</td><td align="right">19.5%</td><td align="right">−$7.2 million</td><td align="right">−$3.1 million</td></tr>
+<tr><td>Index puts</td><td align="right">100%</td><td align="right">$9.3 million</td><td align="right">$20.3 million</td></tr>
+<tr><td>Collar</td><td align="right">75.9%</td><td align="right">−$1.7 million</td><td align="right">$2.9 million</td></tr>
+</tbody>
+</table>
+<p>Without a hedge, about four futures in five fail. The plan sells stock in each of the three falling years to pay for living expenses, so little of it is left for the recovery. <strong>Index puts</strong> pays in each of the three years, and every future succeeds.</p>
+<p><strong>Collar</strong> owns the same puts, and they pay just as much. In 2030 the index more than doubles, and the calls the plan sold take everything above 20%. The plan pays about $4.2 million on its calls that year, and it sells about $5.5 million of its holdings to do so. A collar pays for its protection with the recovery, and after a crash this deep the recovery is most of what the plan needs.</p>
+<p>This replay is an illustration. The random futures in the next section already contain crashes at about the rate history suggests, so adding one on top counts it twice. A replay shows which way the hedge pushes and how hard, and the thousand futures show what it is worth.</p>
+</div>
+<h2 id="a-thousand-futures" class="lesson-section-head" style="--i:7"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="a-thousand-futures--body"><span class="lesson-section-title">A thousand futures</span></button></h2><div class="lesson-section-body" id="a-thousand-futures--body" role="region" aria-labelledby="a-thousand-futures" hidden>
+<p>A replayed crisis is the case the insurance is bought for, and most futures do not contain one. Without the crisis, the three plans compare like this over a thousand random futures each.</p>
+<table>
+<thead>
+<tr><th>Plan</th><th align="right">Success</th><th align="right">10th percentile at the end</th><th align="right">Median at the end</th><th align="right">Mean at the end</th></tr>
+</thead>
+<tbody>
+<tr><td>No hedge</td><td align="right">96.2%</td><td align="right">$5.1 million</td><td align="right">$31.0 million</td><td align="right">$53.4 million</td></tr>
+<tr><td>Index puts</td><td align="right">96.8%</td><td align="right">$5.1 million</td><td align="right">$28.4 million</td><td align="right">$48.3 million</td></tr>
+<tr><td>Collar</td><td align="right">97.4%</td><td align="right">$5.8 million</td><td align="right">$28.4 million</td><td align="right">$45.9 million</td></tr>
+</tbody>
+</table>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/hnw-insurance-key-forecasts-unhedged.png" alt="Key forecasts for No hedge over a thousand random futures, with the median and the 10th and 90th percentiles of net worth." data-media-id="hnw-insurance-key-forecasts-unhedged" data-where="output__forecaster__forecaster.simulation-summary" data-canvas-dossier="whitcomb_unhedged" data-pick="2027,0" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p><img class="lesson-media-ref ui-std-preview-wide lesson-media-generated lesson-figure-go" src="/designer-site/static/images/lessons/generated/hnw-insurance-key-forecasts-puts.png" alt="Key forecasts for Index puts over the same thousand futures, on the same scale. The 10th percentile sits higher than without the hedge and the 90th percentile lower." data-media-id="hnw-insurance-key-forecasts-puts" data-where="output__forecaster__forecaster.simulation-summary" data-canvas-dossier="whitcomb_puts" data-pick="2027,0" data-jump-tip="Go there" loading="lazy" decoding="async" /></p>
+<p>Both hedged plans lower the average, which is what insurance does when it costs more than it pays back. At this price the puts' trade is close to even at the bottom. <strong>Index puts</strong> pays about 2.4% in every year it is held and collects only in the bad ones, so its 10th percentile barely moves while its median falls by about $2.6 million and its mean by about $5 million. Its success rate still rises a little, because the plans that fail are the ones a crash catches, and those are the ones the puts pay in. <strong>Collar</strong> raises the 10th percentile the most and costs the most on average, because the plan's prices work against it twice: it pays more than fair value for the puts, and it receives less than fair value for the calls. A cheap collar is cheap in cash, and it is paid for in upside.</p>
+<aside class="lesson-saying" data-saying="free-lunch" data-cast="mix">
+<img class="lesson-saying-art" src="/designer-site/static/images/learn/cast/mix/saying-free-lunch.webp" alt="The learner reaches for a heaped platter that looks free, while the mentor lifts one corner to show a receipt that unrolls all the way to the floor." loading="lazy" decoding="async">
+<p class="lesson-saying-label"><span class="lesson-saying-wording">There's no free lunch.</span> <span class="lesson-saying-handle">TNFL</span></p>
+<div class="lesson-saying-body">
+<p>Every hedged plan gives up some of its average outcome to buy a better bad one.</p>
+</div>
+</aside>
+</div>
+<h2 id="how-the-hedge-is-taxed" class="lesson-section-head" style="--i:8"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="how-the-hedge-is-taxed--body"><span class="lesson-section-title">How the hedge is taxed</span></button></h2><div class="lesson-section-body" id="how-the-hedge-is-taxed--body" role="region" aria-labelledby="how-the-hedge-is-taxed" hidden>
+<p>Options on a broad-based index such as the S&amp;P 500 index itself are <span class="lesson-term" data-term="section-1256-contract" tabindex="0"><span class="lesson-term-pill">Section 1256 contracts</span><span class="lesson-term-tip" role="tooltip">A US tax category that includes options on a broad-based stock index and regulated futures. Each one is marked to market at the end of the year, so its gain or loss is taxed that year even if it is still held, and 60% of the gain or loss is treated as long-term and 40% as short-term whatever the holding period. Options on an exchange-traded fund or a single stock are not Section 1256 contracts.<a class="lesson-term-more" href="/designer-site/glossary/section-1256-contract">Full entry →</a></span></span>. They are marked to market every December, so each year's gain or loss is taxed that year whether or not the position was closed, and 60% of it is treated as long-term and 40% as short-term regardless of how long it was held. Options on an exchange-traded fund or a single stock are taxed as ordinary equity options instead, and a one-year option's gain or loss is short-term.</p>
+<p>Tutilis taxes a hedge in a taxable account this way. A year's net gain adds 60% to long-term gains and 40% to <span class="lesson-term" data-term="ordinary-income" tabindex="0"><span class="lesson-term-pill">ordinary income</span><span class="lesson-term-tip" role="tooltip">Income taxed at the <strong>regular</strong> graduated rates — wages, interest, pension payments, and withdrawals from traditional retirement accounts. The point of the label is the contrast: long-term capital gains and qualified dividends get their own, usually lower, rate schedule.<a class="lesson-term-more" href="/designer-site/glossary/ordinary-income">Full entry →</a></span></span>. A year's net loss, which is the usual year because the premium is spent, offsets that year's other capital gains and then up to $3,000 of ordinary income. The plan keeps no capital-loss carryforward, so the rest of a large loss goes unused, which understates the hedge's tax benefit rather than overstating it.</p>
+<p>A hedge held in an IRA settles inside the IRA. Nothing is taxed, the premium comes out of the account's balance, and a payoff stays in the account. That keeps the taxes simple, and it means the payoff cannot be spent outside the account without a taxable distribution. Many custodians allow an IRA to buy puts and sell covered calls, and fewer allow anything more.</p>
+<aside class="lesson-reference" open>
+<p class="lesson-reference-label">Rules that limit hedging a low-basis position</p>
+<div class="lesson-reference-body">
+<ul>
+<li><strong><span class="lesson-term" data-term="constructive-sale" tabindex="0"><span class="lesson-term-pill">Constructive sale</span><span class="lesson-term-tip" role="tooltip">A hedge the tax law treats as a sale of the holding it hedges (IRC §1259), so the holding's gain is taxed in that year even though nothing was sold. It applies to a hedge that removes substantially all of a holding's risk of loss and chance of gain, such as a short sale or a short future on the same or substantially identical property. A collar can qualify when its floor and cap sit close together; there is no bright-line test.<a class="lesson-term-more" href="/designer-site/glossary/constructive-sale">Full entry →</a></span></span> (IRC §1259).</strong> A hedge that removes nearly all of a position's risk and reward can be treated as a sale, which realizes the gain the hedge was meant to defer. There is no bright-line test for a collar; practitioners keep the put and call strikes well apart.</li>
+<li><strong>Straddles (IRC §1092).</strong> An option that offsets a position in substantially similar property can defer the option's loss until the position is sold, and can suspend the holding period. An index option hedging an index fund that tracks it is the kind of pair these rules can reach.</li>
+<li><strong>Covered calls the straddle rules exempt.</strong> Some calls sold against stock fall outside the straddle rules, and whether one does depends on its strike and its term.</li>
+</ul>
+<p>These rules turn on facts the forecast does not model. A tax advisor who works with options is the right person to read them for a particular position.</p>
+</div>
+</aside>
+</div>
+<h2 id="who-might-consider-it" class="lesson-section-head" style="--i:9"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="who-might-consider-it--body"><span class="lesson-section-title">Who might consider it</span></button></h2><div class="lesson-section-body" id="who-might-consider-it--body" role="region" aria-labelledby="who-might-consider-it" hidden>
+<p>Portfolio insurance answers a narrow question: how to keep a large stock position through a dangerous stretch without selling it. It suits a household like the Whitcombs, whose basics are in place, whose stock carries a large gain, and for whom a crash in the first years of retirement would change the plan for good. It also suits an owner of a single concentrated stock who cannot sell yet, where a collar is the usual tool.</p>
+<p>Most households have better places to look first, and each of them costs nothing a year:</p>
+<ul>
+<li><strong>An emergency reserve</strong> in cash covers a bad year's spending without selling anything.</li>
+<li><strong>An allocation and a <span class="lesson-term" data-term="glide-path" tabindex="0"><span class="lesson-term-pill">glide path</span><span class="lesson-term-tip" role="tooltip">A <strong>planned</strong> shift in allocation over time — classically toward bonds as retirement approaches, so risk comes down as the years available to recover from a loss come down with it. The word that matters is *planned*: a portfolio drifting toward whatever has been winning is not on a glide path, it is unrebalanced.<a class="lesson-term-more" href="/designer-site/glossary/glide-path">Full entry →</a></span></span></strong> decide how much stock to hold. Holding less stock is the cheapest insurance there is, and in a <span class="lesson-term" data-term="traditional" tabindex="0"><span class="lesson-term-pill">traditional</span><span class="lesson-term-tip" role="tooltip">A <strong>retirement account</strong> where the tax is paid on the way out — not a description of an old-fashioned account. Money went in <strong>before</strong> income tax, grew untaxed, and is taxed as ordinary income when you take it out — traditional 401(k)s and IRAs work this way. The contrast is <strong>Roth</strong> (taxed going in, tax-free coming out) and <strong>taxable</strong> (brokerage, taxed as you go).<a class="lesson-term-more" href="/designer-site/glossary/traditional">Full entry →</a></span></span> or <span class="lesson-term" data-term="roth" tabindex="0"><span class="lesson-term-pill">Roth</span><span class="lesson-term-tip" role="tooltip">A <strong>retirement account</strong> where you pay income tax on the money <strong>going in</strong>, and qualified withdrawals later come out <strong>tax-free</strong> — the mirror image of traditional. Named after the senator behind the law, so the word tells you nothing on its own. Plans care because Roth dollars do not add to taxable income later, which keeps them clear of income-driven cliffs.<a class="lesson-term-more" href="/designer-site/glossary/roth">Full entry →</a></span></span> account it costs no tax to change.</li>
+<li><strong>Taxes</strong>, and in particular where each holding sits and the order accounts are drawn from.</li>
+<li><strong>Insurance on lives, health and property</strong>, which covers losses a portfolio cannot.</li>
+<li><strong>Estate basics</strong>: wills, beneficiaries and powers of attorney.</li>
+</ul>
+<p>Options strategies are a specialist's work, and a household can approach them either way. Some work with an advisor who runs a hedging program, and others place the trades themselves. Tutilis models both the same way: a hedge on an account, with a floor, a cap and a price.</p>
+<p>A third way to hedge is a short index future, which costs no premium and gives up the gains along with the losses. <a href="/designer-site/learn/hedging-with-index-futures">Hedging a stock position with index futures</a> follows the Whitcombs through it, and through the constructive-sale rule it raises.</p>
+</div>
+<h2 id="what-the-plan-leaves-out" class="lesson-section-head" style="--i:10"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-the-plan-leaves-out--body"><span class="lesson-section-title">What the plan leaves out</span></button></h2><div class="lesson-section-body" id="what-the-plan-leaves-out--body" role="region" aria-labelledby="what-the-plan-leaves-out" hidden>
+<ul>
+<li><strong>The skew in real option prices.</strong> Markets charge more for puts far below the market than the normal distribution the forecast uses suggests. A collar with a −10% floor usually costs nothing at a cap well below 20%, so real collars give up more of the upside than <strong>Collar</strong> does.</li>
+<li><strong>The markup is one assumption.</strong> The 100% markup on puts and the 20% discount on calls stand for the volatility risk premium in every year. The real premium varies, and it is highest right after a crash, when insurance is most wanted. Both can be changed on the hedge, or tried in Transforms.</li>
+<li><strong>The year is the step.</strong> The forecast settles the puts once a year on the year's return. A market that falls 30% in March and recovers by December pays nothing here, though a real put could have been sold at a profit in March.</li>
+<li><strong>Trading costs and timing.</strong> Rolling options every year costs commissions and bid-ask spreads that the plan does not charge.</li>
+<li><strong>The tax rules that limit hedging.</strong> The constructive-sale and straddle rules above, and the option to carry a Section 1256 loss back three years, are not modeled.</li>
+</ul>
+</div>
+<h2 id="what-to-take-away" class="lesson-section-head" style="--i:11"><button type="button" class="lesson-section-toggle" aria-expanded="false" aria-controls="what-to-take-away--body"><span class="lesson-section-title">What to take away</span></button></h2><div class="lesson-section-body" id="what-to-take-away--body" role="region" aria-labelledby="what-to-take-away" hidden>
+<ul>
+<li>A put pays in the years the market falls past its floor and costs a premium in every year. Across many futures it raises the bad outcomes and lowers the average.</li>
+<li>A collar makes the put cheap in cash by giving away the best years, which are the years a portfolio recovers in.</li>
+<li>Index options are Section 1256 contracts, taxed 60% long-term and 40% short-term every year. Where the hedge sits decides whether it is taxed at all.</li>
+<li>Holding less stock is the simplest insurance. Options earn their cost when selling stock would cost more, as it does for a large low-basis position.</li>
+</ul>
+</div>
+</div>
+<details class="lesson-rebuild-by-hand"><summary><span class="lesson-rebuild-by-hand-summary-title">Rebuild this plan by hand</span></summary><div class="lesson-rebuild-by-hand-body"><p>The cards on the canvas show the accounts and cash flows. These are the settings that live outside any card, read from each plan this lesson opens, with the label each control carries in the app. A value marked default is one to leave alone.</p><table class="content-table">
+<thead>
+<tr>
+<th align="left">Setting</th>
+<th align="left">No hedge</th>
+<th align="left">Index puts</th>
+<th align="left">Collar</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="4" align="center"><strong>Household</strong></td></tr>
+<tr>
+<td align="left">Planning region</td>
+<td align="left">United States (default)</td>
+<td align="left">United States (default)</td>
+<td align="left">United States (default)</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Dana (Primary)</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1963</td>
+<td align="left">1963</td>
+<td align="left">1963</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">64</td>
+<td align="left">64</td>
+<td align="left">64</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">92</td>
+<td align="left">92</td>
+<td align="left">92</td>
+</tr>
+<tr class="row-emphasis">
+<td align="left">Lee (Secondary)</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="row-level-1">
+<td align="left">birth year</td>
+<td align="left">1965</td>
+<td align="left">1965</td>
+<td align="left">1965</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">retirement age</td>
+<td align="left">62</td>
+<td align="left">62</td>
+<td align="left">62</td>
+</tr>
+<tr class="row-level-1">
+<td align="left">death age</td>
+<td align="left">94</td>
+<td align="left">94</td>
+<td align="left">94</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Taxes</strong></td></tr>
+<tr>
+<td align="left">Tax regime</td>
+<td align="left">United States</td>
+<td align="left">United States</td>
+<td align="left">United States</td>
+</tr>
+<tr>
+<td align="left">Filing status</td>
+<td align="left">Married, filing jointly</td>
+<td align="left">Married, filing jointly</td>
+<td align="left">Married, filing jointly</td>
+</tr>
+<tr>
+<td align="left">State of residence</td>
+<td align="left">None</td>
+<td align="left">None</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">First-year federal estimate</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">First-year state estimate</td>
+<td align="left">—</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Strategy</strong></td></tr>
+<tr>
+<td align="left">Residual withdrawal strategy</td>
+<td align="left">Pro-rata (default)</td>
+<td align="left">Pro-rata (default)</td>
+<td align="left">Pro-rata (default)</td>
+</tr>
+<tr>
+<td align="left">Roth conversions</td>
+<td align="left">Off</td>
+<td align="left">Off</td>
+<td align="left">Off</td>
+</tr>
+<tr>
+<td align="left">Definition of success</td>
+<td align="left">Liquidity crises allowed (default)</td>
+<td align="left">Liquidity crises allowed (default)</td>
+<td align="left">Liquidity crises allowed (default)</td>
+</tr>
+<tr>
+<td align="left">Glide path target</td>
+<td align="left">None (default)</td>
+<td align="left">None (default)</td>
+<td align="left">None (default)</td>
+</tr>
+<tr><td colspan="4" align="center"><strong>Advanced</strong></td></tr>
+<tr>
+<td align="left">Reporting inflation</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Cost of capital</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+<td align="left">Assumption set&#39;s rate (default)</td>
+</tr>
+<tr>
+<td align="left">Growth assumptions</td>
+<td align="left">Growth overrides (default)</td>
+<td align="left">Growth overrides (default)</td>
+<td align="left">Growth overrides (default)</td>
+</tr>
+<tr>
+<td align="left">Currencies</td>
+<td align="left">Multiple currencies (default)</td>
+<td align="left">Multiple currencies (default)</td>
+<td align="left">Multiple currencies (default)</td>
+</tr>
+<tr>
+<td align="left">Default currency</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+</tr>
+<tr>
+<td align="left">Display currency</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+<td align="left">USD (default)</td>
+</tr>
+</tbody>
+</table>
+</div></details><div class="lesson-catalog-footer"><span class="lesson-region-badge" title="All regions"><span class="lesson-region-marker">🌐</span><span class="lesson-region-label muted">All regions</span></span><span class="lesson-tags"><span class="lesson-tags-label">Tags</span><span class="learn-chip">hnw</span><span class="learn-chip">portfolio-insurance</span><span class="learn-chip">protective-put</span><span class="learn-chip">collar</span><span class="learn-chip">options</span><span class="learn-chip">section-1256</span><span class="learn-chip">sequence-of-returns</span><span class="learn-chip">crash</span><span class="learn-chip">transforms</span><span class="learn-chip">volatility-risk-premium</span></span></div><div class="community-invite"><a class="community-callout" href="https://community.plusauri.com" target="_blank" rel="noopener noreferrer" data-community-join="community-join" aria-haspopup="dialog"><img src="/designer-site/static/images/community/join-callout.jpg" alt="Join Our Community" width="392" height="229" decoding="async" loading="lazy"></a><dialog id="community-join" class="community-join" aria-labelledby="community-join-title"><article class="community-join-panel"><button type="button" class="community-join-close" data-community-join-close aria-label="Close" title="Close">×</button><h2 id="community-join-title">Join the Plusauri community</h2><form class="community-join-form" action="/designer-site/api/community/join" method="post" novalidate data-msg-invalid="That email address does not look right." data-msg-failed="Something went wrong. You can still join directly at community.plusauri.com." data-msg-sending="Sending…"><p class="community-join-lead">A forum of people planning their own retirement, asking questions and helping each other. Anyone can read it. Members can post, and get a note when someone answers.</p><fieldset class="community-join-modes"><legend>How would you like to take part?</legend><label class="community-join-mode community-join-mode-participant"><input type="radio" name="mode" value="Participant" checked><span class="community-join-mode-art" aria-hidden="true"></span><strong>Participant</strong><small>Ask questions, share what you have learned, join the conversation.</small></label><label class="community-join-mode community-join-mode-lurker"><input type="radio" name="mode" value="Lurker"><span class="community-join-mode-art" aria-hidden="true"></span><strong>Lurker</strong><small>No account needed. Get the highlights by email and read the forum whenever you like.</small></label></fieldset><div class="community-join-who"><label class="community-join-name">First name (optional)<input type="text" name="firstName" autocomplete="given-name" maxlength="80"></label><label class="community-join-email">Your email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com" maxlength="254"></label></div><fieldset class="community-join-stage"><legend>Which describes you best? (optional)</legend><label><input type="radio" name="stage" value="Building"> Building and saving</label><label><input type="radio" name="stage" value="NearingRetirement"> Getting close to retirement</label><label><input type="radio" name="stage" value="Retired"> Retired</label></fieldset><input type="text" name="website" class="community-join-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="community-join-note community-join-for-participant">We will email you an invitation to community.plusauri.com. Accept it to finish joining.</p><p class="community-join-note community-join-for-lurker">We will add you to the Plusauri mailing list. The forum at community.plusauri.com is open to read anytime, no account needed. Unsubscribe whenever you like.</p><label class="community-join-news"><input type="checkbox" name="news"> Also send me occasional Plusauri news by email. Optional, and you can unsubscribe anytime.</label><p class="community-join-error" role="alert" hidden></p><footer class="community-join-actions"><button type="button" class="secondary outline" data-community-join-close>Not now</button><button type="submit"><span class="community-join-for-participant">Send my invitation</span><span class="community-join-for-lurker">Add me to the list</span></button></footer></form><div class="community-join-sent" hidden aria-live="polite"><h3>Check your inbox</h3><p data-status="invited" hidden>Your invitation is on its way. Accept it to choose a username and finish joining.</p><p data-status="queued" hidden>Thanks. We will send your invitation shortly.</p><p data-status="member" hidden>That address already belongs to a member. Sign in at community.plusauri.com.</p><p data-status="listed" hidden>Thanks, you are on the list. The forum is at community.plusauri.com whenever you want a look.</p><footer class="community-join-actions"><button type="button" data-community-join-close>Done</button></footer></div></article></dialog></div><hr class="lesson-disclaimer-rule" /><blockquote class="lesson-shared lesson-disclaimer" cite="learning-center:disclaimer"><p><strong>Educational content — not advice.</strong> These lessons teach how Tutilis models a plan and how to read what it shows. The households, balances, and outcomes in them are invented for teaching. Nothing here is financial, investment, tax, or legal advice, or a recommendation to buy, sell, or hold anything. A model cannot know your circumstances — check anything you take from a lesson against your own situation, and against a qualified professional where it matters.</p></blockquote><p class="lesson-privacy-link"><small><a href="/designer-site/privacy">Privacy</a> · <a href="/designer-site/terms">Terms of Use</a></small></p></div>
+      </section>
+      <div class="lesson-split-gutter" data-plan-slot="0">
+        <div class="lesson-split-handle" role="separator" aria-orientation="vertical" aria-label="Resize lesson and app panes" tabindex="0"></div>
+        <div class="lesson-split-pill"><button class="lesson-split-widen" type="button" data-widen="app" data-label-widen="Show the app full width" data-label-restore="Show the lesson and the app side by side" title="Show the app full width" aria-label="Show the app full width"><span class="lesson-split-caret"></span></button><button class="lesson-split-widen" type="button" data-widen="lesson" data-label-widen="Show the lesson full width" data-label-restore="Show the lesson and the app side by side" title="Show the lesson full width" aria-label="Show the lesson full width"><span class="lesson-split-caret"></span></button></div>
+      </div>
+      <section class="app-pane" data-plan-slot="0" data-canvas-dossier="whitcomb_unhedged">
+        <p class="canvas-omitted muted">The interactive plan is not in this copy.</p>
+      </section>
+    </div>
+  </body>
+</html>

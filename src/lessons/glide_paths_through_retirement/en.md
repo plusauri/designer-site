@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Glide paths through retirement
 
-Morgan is 63 and retires in 2028, at 65. There is $1.5 million saved: $1 million in a [[term:traditional]] [[term:ira|IRA]], $450,000 in a [[term:brokerage]] account, and $50,000 in a money-market account. About 77% of it is in an S&P 500 index fund and the rest is in an intermediate Treasury fund and cash. This is the same household as the lesson [Getting safer as retirement approaches](/learn/safer_approaching_retirement), which compares constant mixes. This lesson lets the mix change with the years.
+Morgan is 63 and retires in 2028, at 65. There is $1.5 million saved: $1 million in a [[term:traditional]] [[term:ira|IRA]], $450,000 in a [[term:brokerage]] account, and $50,000 in a money-market account. About 77% of it is in an S&P 500 index fund and the rest is in an intermediate Treasury fund and cash. This is the same household as the lesson [Getting safer as retirement approaches](/learn/safer_approaching_retirement), which compares constant mixes. This lesson lets the mix change with the years, as a retirement glide path does, including the shape called a bond tent.
 
 A [[term:glide-path|glide path]] is a target mix that changes with time. The one this lesson studies is the **bond tent**. It holds the least stock at the retirement date, when a crash does the most damage, and adds stock back as retirement goes on. The lesson opens three plans for Morgan:
 
@@ -12,7 +12,7 @@ A [[term:glide-path|glide path]] is a target mix that changes with time. The one
 - [Constant 60/40](#canvas-dossier:glide_constant_sixty_forty) holds one mix for the whole plan, also rebalanced inside the IRA.
 - [Steering only](#canvas-dossier:glide_tent_steering_only) has the same bond tent with the box unticked. The path is written down, but the IRA never trades to follow it.
 
-**A glide path is a plan for trades you have to make yourself.** When the bond tent shows a better result in this lesson, that result assumes that every year Morgan logs into the IRA and sells or buys funds to match the target. Tutilis cannot make those trades. If the trades are not made, the real portfolio behaves like the *Steering only* plan, and that plan does worse than either of the others in every crash this lesson tests. The section [Only if you trade](#only-if-you-trade) comes back to this.
+**A glide path is a plan for trades you have to make yourself.** When the bond tent shows a better result in this lesson, that result assumes that every year Morgan logs into the IRA and sells or buys funds to match the target. Tutilis cannot make those trades. If the trades are not made, the real portfolio behaves like the **Steering only** plan, and that plan does worse than either of the others in every crash this lesson tests. The section [Only if you trade](#only-if-you-trade) comes back to this.
 
 ## What you will learn
 
@@ -59,14 +59,14 @@ The box under the grid, **Rebalance inside tax-sheltered accounts**, decides whe
 
 [[img:glide-paths-editor-constant|control]]
 
-*Constant 60/40: one column, box ticked.*
+*[Constant 60/40](#canvas-dossier:glide_constant_sixty_forty): one column, box ticked.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-editor-steering|control]]
 
-*Steering only: the same tent as the first plan, box unticked.*
+*[Steering only](#canvas-dossier:glide_tent_steering_only): the same tent as the first plan, box unticked.*
 
 </div>
 </div>
@@ -84,19 +84,19 @@ To set a path on your own plan, open [[nav:assumptions]], set the **Money moveme
 
 Without the box, a glide path steers only money that moves anyway. Each year's leftover cash buys whatever is below its target, and each year's shortfall is sold from whatever is above it. That is enough to follow a path that adds stock. Stocks usually grow faster than bonds, and while stock sits below its target each year's spending is sold from bonds, so both push the mix the way the path is going. It is not enough to follow a path that takes stock away.
 
-Open [[nav:si-chart]] and switch its header from **Moves** to **Glide Path**. Each asset class gets a strip with one bar per year, and a dark tick across each year's bar marks the path's target. The line above the strips says how the plan reads the path. Here is the steering-only plan:
+Open [[nav:si-chart]] and switch its header from **Moves** to **Glide Path**. Each asset class gets a strip with one bar per year, and a dark tick across each year's bar marks the path's target. The line above the strips says how the plan reads the path. Here is the [Steering only](#canvas-dossier:glide_tent_steering_only) plan:
 
 [[jump:glide-path|output__forecaster__forecaster.forecast-detail__si-chart__si-chart.allocations]]
 
 [[img:glide-paths-alloc-steering]]
 
-*Steering only. The stock bars stay near 76% at retirement in 2028, while the target ticks dip to 40%.*
+***Steering only**. The stock bars stay near 76% at retirement in 2028, while the target ticks dip to 40%.*
 
 The target falls 37 points in two years, and the portfolio barely moves. Morgan's salary still covers spending in 2027, so nothing needs to be sold, and the leftover cash is small next to $1.5 million. After retirement the yearly sales come from stock first, because stock is the class furthest above its target, and the stock share falls only about a point a year. It reaches the target in the early 2040s only because the target has risen to meet it. Here is the same path with the box ticked:
 
 [[img:glide-paths-alloc-tent]]
 
-*Bond tent, box ticked. Each year's stock bar reaches its target tick, down to 40% in 2028 and back up to 70% by 2043.*
+*[Bond tent](#canvas-dossier:glide_bond_tent), box ticked. Each year's stock bar reaches its target tick, down to 40% in 2028 and back up to 70% by 2043.*
 
 The difference is a trade inside the IRA. [[nav:si-table]] for 2027 shows it. The plan sells about $322,000 of the S&P 500 fund inside the IRA and buys the same amount of the Treasury fund there, and both lines give **Rebalance · Traditional IRA** as their reason:
 
@@ -105,14 +105,14 @@ The difference is a trade inside the IRA. [[nav:si-table]] for 2027 shows it. Th
 
 [[img:glide-paths-si-tent-2027]]
 
-*Bond tent, 2027. The IRA swaps stock for Treasuries. No money leaves the account.*
+***Bond tent**, 2027. The IRA swaps stock for Treasuries. No money leaves the account.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-si-steering-2027]]
 
-*Steering only, 2027. Nothing is sold, and the path moves only the small amount of leftover cash.*
+***Steering only**, 2027. Nothing is sold, and the path moves only the small amount of leftover cash.*
 
 </div>
 </div>
@@ -129,7 +129,7 @@ The bond tent has two sides, and the box makes both of them happen. On the way d
 
 [[img:glide-paths-si-tent-2035]]
 
-*Bond tent, 2035. The year's spending is sold mostly from Treasuries, and a small swap inside the IRA buys stock.*
+*[Bond tent](#canvas-dossier:glide_bond_tent), 2035. The year's spending is sold mostly from Treasuries, and a small swap inside the IRA buys stock.*
 
 By 2035 the target is about 54% stock. Most of the year's spending comes from the Treasury funds, which are the class above target, so the spending itself moves the mix toward more stock. The IRA makes up what is left with a small swap. On the rising side the path is easy to follow, because withdrawals do most of the work. The falling side is where the trades are large.
 
@@ -137,7 +137,7 @@ The constant plan does the same thing around a fixed point. It rebalances to 60/
 
 [[img:glide-paths-alloc-constant]]
 
-*Constant 60/40. The stock bars sit on the 60% target every year.*
+*[Constant 60/40](#canvas-dossier:glide_constant_sixty_forty). The stock bars sit on the 60% target every year.*
 
 ## When a crash comes
 
@@ -154,73 +154,73 @@ The Dot-com bust replays seven years of stock returns, with the market down abou
 
 [[img:glide-paths-bs-dotcom-tent]]
 
-*Bond tent with the Dot-com bust from 2028.*
+*[Bond tent](#canvas-dossier:glide_bond_tent) with the Dot-com bust from 2028.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-bs-dotcom-steering]]
 
-*Steering only with the same crash.*
+*[Steering only](#canvas-dossier:glide_tent_steering_only) with the same crash.*
 
 </div>
 </div>
 
-The two plans have the same path written in the same grid. The bond tent enters the crash at 40% stock and falls to about $1.37 million in 2030. The steering-only plan enters it at 76% stock and falls to about $1.10 million. The tent ends the plan with about $1.05 million and the steering-only plan with about $210,000, a fifth as much. The constant 60/40 plan sits between them and ends with about $840,000.
+The two plans have the same path written in the same grid. The bond tent enters the crash at 40% stock and falls to about $1.38 million in 2030. The **Steering only** plan enters it at 76% stock and falls to about $1.11 million. The tent ends the plan with about $1.25 million and the **Steering only** plan with about $410,000, about a third as much. The [Constant 60/40](#canvas-dossier:glide_constant_sixty_forty) plan sits between them and ends with about $1.03 million.
 
-The tent also keeps trading through the crash. When stocks fall, the stock share drops below the target, and the IRA swap buys stock back up to it at low prices. In 2030, the crash's lowest year, the plan sells no stock at all. It sells Treasuries inside the IRA, pays the year's spending from them, and uses about $141,000 of the proceeds to buy the S&P 500 fund:
+The tent also keeps trading through the crash. When stocks fall, the stock share drops below the target, and the IRA swap buys stock back up to it at low prices. In 2030, the crash's lowest year, the plan sells no stock at all. It sells Treasuries inside the IRA, pays the year's spending from them, and uses about $148,000 of the proceeds to buy the S&P 500 fund:
 
 [[img:glide-paths-si-dotcom-tent-2030]]
 
-*Bond tent in 2030 with the Dot-com bust from 2028. Treasuries pay for the year and buy stock at the bottom.*
+***Bond tent** in 2030 with the Dot-com bust from 2028. Treasuries pay for the year and buy stock at the bottom.*
 
 One crash on one path is a single story. Here are the same plans over 1,000 market paths, with each crash replayed from 2028, as the share of paths that succeed:
 
 | Crash from 2028 | Constant 60/40 | Bond tent | Steering only |
 |---|---:|---:|---:|
-| None | 88% | 89% | 83% |
-| Dot-com bust (2000) | 81% | 85% | 63% |
-| Oil-shock bear market (1973) | 83% | 85% | 70% |
-| Global Financial Crisis (2007) | 92% | 94% | 78% |
-| Great Crash (1929) | 32% | 65% | 1% |
+| None | 90% | 91% | 86% |
+| Dot-com bust (2000) | 87% | 89% | 70% |
+| Oil-shock bear market (1973) | 86% | 88% | 76% |
+| Global Financial Crisis (2007) | 94% | 95% | 83% |
+| Great Crash (1929) | 43% | 74% | 3% |
 
-The bond tent beats the constant plan in every crash, and by the most in the deepest one. The Global Financial Crisis row is higher than the row with no crash because that replay ends with a strong recovery, which lifts every plan. The steering-only column is the lowest in every row.
+The bond tent beats the constant plan in every crash, and by the most in the deepest one. For the constant plan and the tent, the Global Financial Crisis row is higher than the row with no crash, because that replay ends with a strong recovery. The **Steering only** plan enters that crash near 76% stock and ends a little lower than with no crash. The **Steering only** column is the lowest in every row.
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">
 
 [[img:glide-paths-nw-dotcom-constant]]
 
-*Constant 60/40, 1,000 paths with the Dot-com bust from 2028.*
+***Constant 60/40**, 1,000 paths with the Dot-com bust from 2028.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-nw-dotcom-tent]]
 
-*Bond tent, the same crash, on the same axis.*
+***Bond tent**, the same crash, on the same axis.*
 
 </div>
 </div>
 
 ## What the tent costs
 
-When markets are kind, more stock ends richer. On the expected path with no crash, which Tutilis draws as the GMF, the steering-only plan ends with about $1.70 million, the constant 60/40 plan with about $1.55 million, and the bond tent with about $1.49 million. Holding 40% stock for the first years of retirement gives up some growth, and the tent ends about 4% below the constant plan.
+When markets are kind, more stock ends richer. On the expected path with no crash, which Tutilis draws as the GMF, the [Steering only](#canvas-dossier:glide_tent_steering_only) plan ends with about $1.90 million, the [Constant 60/40](#canvas-dossier:glide_constant_sixty_forty) plan with about $1.75 million, and the bond tent with about $1.68 million. Holding 40% stock for the first years of retirement gives up some growth, and the tent ends about 4% below the constant plan.
 
-The trade is the same one as in [Getting safer as retirement approaches](/learn/safer_approaching_retirement). The tent gives up a little in the average future to do much better in the bad ones. Over 1,000 paths with no crash it still succeeds slightly more often than the constant plan, about 89% against 88%, because the bad paths count against success and the good ones do not.
+The trade is the same one as in [Getting safer as retirement approaches](/learn/safer_approaching_retirement). The tent gives up a little in the average future to do much better in the bad ones. Over 1,000 paths with no crash it still succeeds slightly more often than the constant plan, about 91% against 90%, because the bad paths count against success and the good ones do not.
 
 ## Only if you trade
 
 Every result in this lesson for the bond tent and the constant plan assumes the trades in [[nav:si-table]] really happen. In 2027 that means Morgan sells about $322,000 of the S&P 500 fund in the IRA and buys the Treasury fund with it. In a crash year it means buying stock while the news is at its worst. Tutilis models those trades. It cannot make them, and neither can your plan.
 
-If the trades are not made, the real portfolio is the *Steering only* plan. The path is still in the plan, and the real portfolio does not follow it. As the crash table shows, that is worse than never having a path at all and holding 60/40, because the portfolio enters retirement near 76% stock and then sells stock at the bottom to pay for each year.
+If the trades are not made, the real portfolio is the [Steering only](#canvas-dossier:glide_tent_steering_only) plan. The path is still in the plan, and the real portfolio does not follow it. As the crash table shows, that is worse than never having a path at all and holding 60/40, because the portfolio enters retirement near 76% stock and then sells stock at the bottom to pay for each year.
 
 A few things make the trades more likely to happen:
 
 - **Put a date on them.** Rebalance once a year on a fixed date, and use the Glide Path view of the Movements table for that year as the list of trades.
 - **Trade inside the IRA.** The trades cost no tax there, which is why the plan makes them there. Selling in a brokerage account to rebalance can realize capital gains that the forecast does not assume.
 - **Let a fund do it.** A target-date or balanced fund rebalances on its own. A target-date fund's path usually keeps falling after the target date, so it is not a bond tent.
-- **Check that the box matches your behavior.** If you know you will not rebalance, untick the box, and the forecast will show you the steering-only result instead of a result you will not get.
+- **Check that the box matches your behavior.** If you know you will not rebalance, untick the box, and the forecast will show you the **Steering only** result instead of a result you will not get.
 
 ## What the research says
 

@@ -23,7 +23,8 @@ tutilis-locale: en source
 This lesson introduces a **high-net-worth** dual-earner sample for exploring concentration risk, fat
 right tails, and Banks-family follow-ons (forced [[term:rmd]], Reveal). The same cast, Philip and
 Vivian, appears in each of those lessons. Their story is **not** the Springfield dual-earner story, because the
-wealth scale and the portfolio shape are different.
+wealth scale and the portfolio shape are different. It is a high net worth retirement plan example,
+worked on a live sample.
 
 | Tag | Role |
 |-----|------|

@@ -12,7 +12,7 @@ Une [[term:glide-path|trajectoire d'allocation]] est une répartition cible qui 
 - [60/40 constant](#canvas-dossier:glide_constant_sixty_forty) garde une seule répartition pour tout le plan, rééquilibrée elle aussi dans l'IRA.
 - [Orientation seule](#canvas-dossier:glide_tent_steering_only) a la même tente obligataire, avec la case décochée. La trajectoire est écrite, mais l'IRA ne passe jamais d'ordre pour la suivre.
 
-**Une trajectoire de glide est un plan d'opérations que vous devez faire vous-même.** Quand la tente obligataire montre un meilleur résultat dans cette leçon, ce résultat suppose que, chaque année, Morgan se connecte à l'IRA et vend ou achète des fonds pour s'aligner sur la cible. Tutilis ne peut pas passer ces ordres. S'ils ne sont pas passés, le portefeuille réel se comporte comme le plan *Orientation seule*, et ce plan fait pire que chacun des deux autres dans chaque krach que cette leçon teste. La section [Seulement si vous passez les ordres](#only-if-you-trade) y revient.
+**Une trajectoire de glide est un plan d'opérations que vous devez faire vous-même.** Quand la tente obligataire montre un meilleur résultat dans cette leçon, ce résultat suppose que, chaque année, Morgan se connecte à l'IRA et vend ou achète des fonds pour s'aligner sur la cible. Tutilis ne peut pas passer ces ordres. S'ils ne sont pas passés, le portefeuille réel se comporte comme le plan **Orientation seule**, et ce plan fait pire que chacun des deux autres dans chaque krach que cette leçon teste. La section [Seulement si vous passez les ordres](#only-if-you-trade) y revient.
 
 ## Ce que vous allez apprendre {#what-you-will-learn}
 
@@ -59,14 +59,14 @@ La case sous la grille, **Rééquilibrer dans les comptes à fiscalité avantage
 
 [[img:glide-paths-editor-constant|control]]
 
-*Le 60/40 constant tient en une seule colonne, et la case est cochée.*
+*Le [60/40 constant](#canvas-dossier:glide_constant_sixty_forty) tient en une seule colonne, et la case est cochée.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-editor-steering|control]]
 
-*L'orientation seule a la même tente que le premier plan, et la case est décochée.*
+*L'[orientation seule](#canvas-dossier:glide_tent_steering_only) a la même tente que le premier plan, et la case est décochée.*
 
 </div>
 </div>
@@ -84,19 +84,19 @@ Pour définir une trajectoire sur votre propre plan, ouvrez [[nav:assumptions]],
 
 Sans la case, une trajectoire de glide n'oriente que l'argent qui bouge de toute façon. Les liquidités restantes de chaque année achètent ce qui est sous sa cible, et le manque de chaque année est vendu à partir de ce qui est au-dessus. Cela suffit pour suivre une trajectoire qui ajoute des actions. Les actions croissent d'habitude plus vite que les obligations, et tant que les actions sont sous leur cible, les dépenses de chaque année sont vendues à partir des obligations, donc les deux poussent la répartition dans le sens de la trajectoire. Cela ne suffit pas pour suivre une trajectoire qui retire des actions.
 
-Ouvrez [[nav:si-chart]] et passez son en-tête de **Mouvements** à **Allocations**. Chaque classe d'actifs a une bande avec une barre par année, et une fine barre noire à côté de chaque année marque la cible de la trajectoire. Voici le plan en orientation seule :
+Ouvrez [[nav:si-chart]] et passez son en-tête de **Mouvements** à **Allocations**. Chaque classe d'actifs a une bande avec une barre par année, et une fine barre noire à côté de chaque année marque la cible de la trajectoire. Voici le plan en [orientation seule](#canvas-dossier:glide_tent_steering_only) :
 
 [[jump:glide-path|output__forecaster__forecaster.forecast-detail__si-chart__si-chart.allocations]]
 
 [[img:glide-paths-alloc-steering]]
 
-*En orientation seule, les barres d'actions restent près de 76 pour cent à la retraite en 2028, tandis que les barres noires de cible descendent à 40 pour cent.*
+*En **orientation seule**, les barres d'actions restent près de 76 pour cent à la retraite en 2028, tandis que les barres noires de cible descendent à 40 pour cent.*
 
 La cible baisse de 37 points en deux ans, et le portefeuille bouge à peine. Le salaire de Morgan couvre encore les dépenses en 2027, donc rien n'a besoin d'être vendu, et les liquidités restantes sont petites à côté de $1.5 million. Après la retraite, les ventes annuelles viennent d'abord des actions, parce que les actions sont la classe la plus au-dessus de sa cible, et la part d'actions ne baisse que d'environ un point par an. Elle n'atteint la cible qu'au début des années 2040, parce que la cible est remontée à sa rencontre. Voici la même trajectoire avec la case cochée :
 
 [[img:glide-paths-alloc-tent]]
 
-*Tente obligataire, case cochée. La barre d'actions de chaque année est posée sur sa barre noire de cible, jusqu'à 40 pour cent en 2028, puis de retour à 70 pour cent en 2043.*
+*[Tente obligataire](#canvas-dossier:glide_bond_tent), case cochée. La barre d'actions de chaque année est posée sur sa barre noire de cible, jusqu'à 40 pour cent en 2028, puis de retour à 70 pour cent en 2043.*
 
 La différence est une opération à l'intérieur de l'IRA. [[nav:si-table]] pour 2027 la montre. Le plan vend environ $322,000 du fonds S&P 500 dans l'IRA et achète le même montant du fonds du Trésor, et les deux lignes donnent **Rééquilibrage · Traditional IRA** comme motif :
 
@@ -105,14 +105,14 @@ La différence est une opération à l'intérieur de l'IRA. [[nav:si-table]] pou
 
 [[img:glide-paths-si-tent-2027]]
 
-*Tente obligataire, 2027. L'IRA échange des actions contre des bons du Trésor. Aucun argent ne sort du compte.*
+***Tente obligataire**, 2027. L'IRA échange des actions contre des bons du Trésor. Aucun argent ne sort du compte.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-si-steering-2027]]
 
-*Orientation seule, 2027. Rien n'est vendu, et la trajectoire ne déplace que le petit montant de liquidités restantes.*
+***Orientation seule**, 2027. Rien n'est vendu, et la trajectoire ne déplace que le petit montant de liquidités restantes.*
 
 </div>
 </div>
@@ -129,7 +129,7 @@ La tente obligataire a deux versants, et la case fait advenir les deux. À la de
 
 [[img:glide-paths-si-tent-2035]]
 
-*Tente obligataire, 2035. Les dépenses de l'année sont vendues surtout à partir des bons du Trésor, et un petit échange dans l'IRA achète des actions.*
+*[Tente obligataire](#canvas-dossier:glide_bond_tent), 2035. Les dépenses de l'année sont vendues surtout à partir des bons du Trésor, et un petit échange dans l'IRA achète des actions.*
 
 En 2035, la cible est d'environ 54 pour cent d'actions. La plus grande part des dépenses de l'année vient des fonds du Trésor, qui sont la classe au-dessus de la cible, donc les dépenses elles-mêmes déplacent la répartition vers plus d'actions. L'IRA complète ce qui manque par un petit échange. Sur le versant montant, la trajectoire est facile à suivre, parce que les retraits font l'essentiel du travail. Le versant descendant est celui où les opérations sont importantes.
 
@@ -137,7 +137,7 @@ Le plan constant fait la même chose autour d'un point fixe. Il se rééquilibre
 
 [[img:glide-paths-alloc-constant]]
 
-*60/40 constant. Les barres d'actions sont posées sur la cible de 60 pour cent chaque année.*
+*[60/40 constant](#canvas-dossier:glide_constant_sixty_forty). Les barres d'actions sont posées sur la cible de 60 pour cent chaque année.*
 
 ## Quand un krach arrive {#when-a-crash-comes}
 
@@ -154,73 +154,73 @@ L'éclatement de la bulle Internet rejoue sept ans de rendements d'actions, le m
 
 [[img:glide-paths-bs-dotcom-tent]]
 
-*La tente obligataire avec l'éclatement de la bulle Internet à partir de 2028.*
+*La [tente obligataire](#canvas-dossier:glide_bond_tent) avec l'éclatement de la bulle Internet à partir de 2028.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-bs-dotcom-steering]]
 
-*L'orientation seule avec le même krach.*
+*L'[orientation seule](#canvas-dossier:glide_tent_steering_only) avec le même krach.*
 
 </div>
 </div>
 
-Les deux plans ont la même trajectoire écrite dans la même grille. La tente obligataire entre dans le krach à 40 pour cent d'actions et tombe à environ $1.37 million en 2030. Le plan en orientation seule y entre à 76 pour cent d'actions et tombe à environ $1.10 million. La tente termine le plan avec environ $1.05 million, et l'orientation seule avec environ $210,000, soit un cinquième. Le plan 60/40 constant se situe entre les deux et termine avec environ $840,000.
+Les deux plans ont la même trajectoire écrite dans la même grille. La tente obligataire entre dans le krach à 40 pour cent d'actions et tombe à environ $1.38 million en 2030. Le plan en **orientation seule** y entre à 76 pour cent d'actions et tombe à environ $1.11 million. La tente termine le plan avec environ $1.25 million, et l'**orientation seule** avec environ $410,000, soit environ un tiers. Le plan [60/40 constant](#canvas-dossier:glide_constant_sixty_forty) se situe entre les deux et termine avec environ $1.03 million.
 
-La tente continue aussi de passer des ordres pendant le krach. Quand les actions baissent, la part d'actions passe sous la cible, et l'échange dans l'IRA rachète des actions jusqu'à cette cible, à des prix bas. En 2030, l'année la plus basse du krach, le plan ne vend aucune action. Il vend des bons du Trésor dans l'IRA, paie les dépenses de l'année avec eux, et utilise environ $141,000 du produit pour acheter le fonds S&P 500 :
+La tente continue aussi de passer des ordres pendant le krach. Quand les actions baissent, la part d'actions passe sous la cible, et l'échange dans l'IRA rachète des actions jusqu'à cette cible, à des prix bas. En 2030, l'année la plus basse du krach, le plan ne vend aucune action. Il vend des bons du Trésor dans l'IRA, paie les dépenses de l'année avec eux, et utilise environ $148,000 du produit pour acheter le fonds S&P 500 :
 
 [[img:glide-paths-si-dotcom-tent-2030]]
 
-*Tente obligataire en 2030, avec l'éclatement de la bulle Internet à partir de 2028. Les bons du Trésor paient l'année et achètent des actions au creux.*
+***Tente obligataire** en 2030, avec l'éclatement de la bulle Internet à partir de 2028. Les bons du Trésor paient l'année et achètent des actions au creux.*
 
 Un krach sur une trajectoire n'est qu'une seule histoire. Voici les mêmes plans sur 1 000 trajectoires de marché, chaque krach étant rejoué à partir de 2028, comme la part des trajectoires qui réussissent :
 
 | Krach à partir de 2028 | 60/40 constant | Tente obligataire | Orientation seule |
 |---|---:|---:|---:|
-| Aucun | 88 % | 89 % | 83 % |
-| Éclatement de la bulle Internet (2000) | 81 % | 85 % | 63 % |
-| Marché baissier du choc pétrolier (1973) | 83 % | 85 % | 70 % |
-| Crise financière mondiale (2007) | 92 % | 94 % | 78 % |
-| Grand Krach (1929) | 32 % | 65 % | 1 % |
+| Aucun | 90 % | 91 % | 86 % |
+| Éclatement de la bulle Internet (2000) | 87 % | 89 % | 70 % |
+| Marché baissier du choc pétrolier (1973) | 86 % | 88 % | 76 % |
+| Crise financière mondiale (2007) | 94 % | 95 % | 83 % |
+| Grand Krach (1929) | 43 % | 74 % | 3 % |
 
-La tente obligataire bat le plan constant dans chaque krach, et de l'écart le plus grand dans le plus profond. La ligne de la crise financière mondiale est plus haute que la ligne sans krach, parce que cette reprise se termine par un fort redressement, qui soulève chaque plan. La colonne Orientation seule est la plus basse sur chaque ligne.
+La tente obligataire bat le plan constant dans chaque krach, et de l'écart le plus grand dans le plus profond. Pour le plan constant et la tente, la ligne de la crise financière mondiale est plus haute que la ligne sans krach, parce que cette reprise se termine par un fort redressement. Le plan en **orientation seule** entre dans ce krach à près de 76 pour cent d'actions et termine un peu plus bas que sans krach. La colonne **Orientation seule** est la plus basse sur chaque ligne.
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">
 
 [[img:glide-paths-nw-dotcom-constant]]
 
-*60/40 constant, 1 000 trajectoires avec l'éclatement de la bulle Internet à partir de 2028.*
+***60/40 constant**, 1 000 trajectoires avec l'éclatement de la bulle Internet à partir de 2028.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-nw-dotcom-tent]]
 
-*Tente obligataire, le même krach, sur le même axe.*
+***Tente obligataire**, le même krach, sur le même axe.*
 
 </div>
 </div>
 
 ## Ce que coûte la tente {#what-the-tent-costs}
 
-Quand les marchés sont favorables, davantage d'actions laisse à la fin un patrimoine plus élevé. Sur la trajectoire attendue sans krach, que Tutilis trace comme le GMF, le plan en orientation seule termine avec environ $1.70 million, le plan 60/40 constant avec environ $1.55 million, et la tente obligataire avec environ $1.49 million. Détenir 40 pour cent d'actions pendant les premières années de retraite abandonne une part de croissance, et la tente termine environ 4 pour cent au-dessous du plan constant.
+Quand les marchés sont favorables, davantage d'actions laisse à la fin un patrimoine plus élevé. Sur la trajectoire attendue sans krach, que Tutilis trace comme le GMF, le plan en [orientation seule](#canvas-dossier:glide_tent_steering_only) termine avec environ $1.90 million, le plan [60/40 constant](#canvas-dossier:glide_constant_sixty_forty) avec environ $1.75 million, et la tente obligataire avec environ $1.68 million. Détenir 40 pour cent d'actions pendant les premières années de retraite abandonne une part de croissance, et la tente termine environ 4 pour cent au-dessous du plan constant.
 
-L'arbitrage est le même que dans [Plus de sécurité à l'approche de la retraite](/learn/safer_approaching_retirement). La tente abandonne un peu dans l'avenir moyen pour faire beaucoup mieux dans les mauvais. Sur 1 000 trajectoires sans krach, elle réussit encore un peu plus souvent que le plan constant, environ 89 pour cent contre 88 pour cent, parce que les mauvaises trajectoires comptent contre la réussite et que les bonnes ne comptent pas.
+L'arbitrage est le même que dans [Plus de sécurité à l'approche de la retraite](/learn/safer_approaching_retirement). La tente abandonne un peu dans l'avenir moyen pour faire beaucoup mieux dans les mauvais. Sur 1 000 trajectoires sans krach, elle réussit encore un peu plus souvent que le plan constant, environ 91 pour cent contre 90 pour cent, parce que les mauvaises trajectoires comptent contre la réussite et que les bonnes ne comptent pas.
 
 ## Seulement si vous passez les ordres {#only-if-you-trade}
 
 Chaque résultat de cette leçon pour la tente obligataire et le plan constant suppose que les opérations de [[nav:si-table]] ont vraiment lieu. En 2027, cela veut dire que Morgan vend environ $322,000 du fonds S&P 500 dans l'IRA et achète le fonds du Trésor avec. Dans une année de krach, cela veut dire acheter des actions pendant que les nouvelles sont au plus mal. Tutilis modélise ces opérations. Il ne peut pas les passer, et votre plan non plus.
 
-Si les opérations ne sont pas passées, le portefeuille réel est le plan *Orientation seule*. La trajectoire est toujours dans le plan, et le portefeuille réel ne la suit pas. Comme le montre le tableau des krachs, c'est pire que de n'avoir jamais de trajectoire et de tenir 60/40, parce que le portefeuille entre en retraite près de 76 pour cent d'actions, puis vend des actions au creux pour payer chaque année.
+Si les opérations ne sont pas passées, le portefeuille réel est le plan [Orientation seule](#canvas-dossier:glide_tent_steering_only). La trajectoire est toujours dans le plan, et le portefeuille réel ne la suit pas. Comme le montre le tableau des krachs, c'est pire que de n'avoir jamais de trajectoire et de tenir 60/40, parce que le portefeuille entre en retraite près de 76 pour cent d'actions, puis vend des actions au creux pour payer chaque année.
 
 Quelques choses rendent les opérations plus susceptibles d'avoir lieu :
 
 - **Fixez-leur une date.** Rééquilibrez une fois par an à une date fixe, et servez-vous du tableau Allocations de cette année comme liste des opérations.
 - **Passez les opérations dans l'IRA.** Elles n'y coûtent aucun impôt, et c'est pourquoi le plan les y fait. Vendre dans un compte-titres pour rééquilibrer peut réaliser des plus-values que la prévision ne suppose pas.
 - **Laissez un fonds le faire.** Un fonds à date cible ou un fonds équilibré se rééquilibre tout seul. La trajectoire d'un fonds à date cible continue d'habitude à baisser après la date cible, donc ce n'est pas une tente obligataire.
-- **Vérifiez que la case correspond à votre comportement.** Si vous savez que vous ne rééquilibrerez pas, décochez la case, et la prévision vous montrera le résultat de l'orientation seule au lieu d'un résultat que vous n'obtiendrez pas.
+- **Vérifiez que la case correspond à votre comportement.** Si vous savez que vous ne rééquilibrerez pas, décochez la case, et la prévision vous montrera le résultat de l'**orientation seule** au lieu d'un résultat que vous n'obtiendrez pas.
 
 ## Ce que dit la recherche {#what-the-research-says}
 

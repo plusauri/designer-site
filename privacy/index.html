@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy — Tutilis</title>
-    <meta name="description" content="What the Plusauri website and Learning Center record, field by field. First-party only: no third-party trackers, no ad tech, no IP addresses stored.">
+    <meta name="description" content="What the Plusauri website and Learning Center record, field by field. No IP addresses stored, and no third-party trackers except Google's ad tag for visitors who arrive from our ads.">
     <meta name="robots" content="noindex, nofollow">
     <link href="https://www.plusauri.com/privacy" rel="canonical">
     <meta content="website" property="og:type">
     <meta content="Plusauri" property="og:site_name">
     <meta content="Privacy — Tutilis" property="og:title">
-    <meta content="What the Plusauri website and Learning Center record, field by field. First-party only: no third-party trackers, no ad tech, no IP addresses stored." property="og:description">
+    <meta content="What the Plusauri website and Learning Center record, field by field. No IP addresses stored, and no third-party trackers except Google's ad tag for visitors who arrive from our ads." property="og:description">
     <meta content="https://www.plusauri.com/privacy" property="og:url">
     <link href="/designer-site/static/brand/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
     <link href="/designer-site/static/brand/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
@@ -37,6 +37,7 @@
                 <li><a href="/designer-site/start-here">Start Here</a></li>
                 <li><a href="/designer-site/reference">Reference</a></li>
                 <li><a href="/designer-site/glossary">Glossary</a></li>
+                <li><a href="/designer-site/exchange">Plan Conversion</a></li>
               </ul>
             </details>
           </li>
@@ -47,31 +48,51 @@
       </nav>
     </header>
     <main class="container"><h1>Privacy</h1>
-<p><em>Last updated: October 12, 2026</em></p>
-<p>Plusauri, LLC runs this website, the Learning Center, and the Tutilis desktop app. Tutilis keeps your financial plan on your own computer. We never see it unless you choose to send us something. This page covers what our website records, what the app sends us when you write to us, and what we receive when you buy.</p>
+<p><em>Last updated: October 31, 2026</em></p>
+<p>Plusauri, LLC runs this website, the Learning Center, and the Tutilis desktop app. Tutilis keeps your financial plan on your own computer. We never see it unless you choose to send us something, and if you connect an AI assistant, what you share with it goes to that assistant's provider, not to us. This page covers what the app does with your plans, what our website records, what the app sends us when it checks for updates or when you write to us, and what we receive when you buy.</p>
 <h2>The short version</h2>
 <ul>
-<li>There are no third-party trackers, analytics services, advertising networks, or tracking pixels on this site or in our emails.</li>
+<li>The app contains no advertising or analytics code, and your plans are stored on your computer, not on our servers. If you connect an AI assistant, the information you share with it may be sent to that assistant's provider and is handled under that provider's terms and privacy policy.</li>
+<li>If you arrive on this site by clicking one of our Google ads, the pages load Google's ad tag, so we can tell which ads lead people to join, try, or buy. Otherwise there are no third-party trackers, analytics services, advertising networks, or tracking pixels on this site, and none in our emails.</li>
 <li>Our database does not store your IP address.</li>
-<li>We do not sell, rent, or share what we record for advertising.</li>
+<li>We do not sell or rent what we record. Google's ad tag, described below, is the only advertising code on this site, and it loads only for visitors who arrive from one of our ads.</li>
 <li>What we do record is listed below, field by field, and it is all kept by us.</li>
 </ul>
-<h2>When you read the Learning Center</h2>
-<p>Each time a lesson page opens, we record one row with:</p>
+<h2>The app</h2>
+<p>Tutilis and Cogilis contain no advertising or analytics code, and your plans are stored on your computer, not on our servers. They leave it only in ways you set up:</p>
 <ul>
-<li>which lesson, the page address, and the language it was shown in;</li>
+<li><strong>Backups</strong> are encrypted (AES-256) and saved to a folder you choose, such as one your cloud drive syncs.</li>
+<li><strong>Messages to us</strong> carry only what you choose to attach, as described under &quot;When you write to us&quot; below. If you ask a question, in the app or in our community, you can choose to include an anonymized copy of your plan. If you include it with a question in our community, other members can see the anonymized plan.</li>
+<li><strong>AI assistants.</strong> With Cogilis, the AI assistant you choose reads the parts of your plan it needs. AI assistants are provided by other companies, not by us. If the assistant runs in the cloud, its provider receives what it reads and what you share with it, and handles it under that provider's own terms and privacy policy. A model running on your own computer keeps it there.</li>
+</ul>
+<p>Each time it starts, the app asks our site whether an update is out, as described below.</p>
+<h2>When you convert a plan from another tool</h2>
+<p>The Exchange page (<code>/exchange</code>) turns a ProjectionLab export into a Tutilis dossier file, and a Tutilis dossier file into a ProjectionLab file. That conversion runs in your browser. The file is not sent to us. We do not receive the plan, and we do not keep a copy of it. You then import the dossier file in the desktop app, which keeps it on your computer.</p>
+<h2>When you browse this site</h2>
+<p>A small script of our own, served from this site, records how pages are used. For each page you open, we record:</p>
+<ul>
+<li>the page address and the language it was shown in;</li>
 <li>the time;</li>
-<li>the description your browser sends with every request (its &quot;user agent&quot;, such as &quot;Safari on a Mac&quot;), the languages your browser says you prefer, and the page that linked you here, if your browser shares it;</li>
-<li>the invite code and a random browser number, if you arrived through one of our invite links (see the next section);</li>
+<li>how many seconds the page was in front of you, counted only while its tab was visible, and how far down you scrolled;</li>
+<li>which of our buttons and links you pressed when they lead to trying, buying, or downloading Tutilis, or away from this site, and when you start one of our videos;</li>
+<li>the description your browser sends with every request (its &quot;user agent&quot;, such as &quot;Safari on a Mac&quot;), the languages your browser says you prefer, and the page that linked you here. When that page is on another site, we keep only the site's name, not its full address;</li>
+<li>the campaign codes in the link you arrived by, if it has any (the <code>utm_source</code>, <code>utm_medium</code> and <code>utm_campaign</code> parts of the address);</li>
+<li>the country your visit came from, as reported by Cloudflare, the network that delivers this site. We receive only the country, never your IP address;</li>
+<li>a random visit number that groups the pages of one visit. It is kept in your browser tab's own storage, not in a cookie, and it is gone when you close the tab;</li>
 <li>whether the visit was one of our own test visits.</li>
 </ul>
-<p>We use this to learn which lessons people read and where they stop, so we can make them better.</p>
+<p>When a lesson page opens, we also record the lesson, and the invite code and a random browser number if you arrived through one of our invite links (see the next section).</p>
+<p>We use this to learn which pages and lessons people read, where they stop, and which videos they watch, so we can make them better. If your browser blocks the script, the site works the same.</p>
 <h2>Invite links</h2>
 <p>When we write to someone about a lesson, we often send a personal link of the form <code>/o/some-code</code>. Each code is made for one person or one post, so we know who we sent it to.</p>
 <p>When you open an invite link, we record the code, the lesson it points to, the time, your browser's description, its preferred languages, the page that linked you here, and a random browser number. Then we send you on to the lesson.</p>
 <p>The same visit sets an attribution cookie, <code>plusauri_o_attr</code>. It holds the invite code and the random browser number, and nothing else. For about 30 days, the lesson pages you open on this site are credited to that invite. This is how we can tell that someone read several lessons over two sittings, instead of only knowing that they tapped the link. The cookie grants no access to anything. Clearing this site's cookies ends it.</p>
+<h2>When you arrive from one of our Google ads</h2>
+<p>When you open this site by clicking one of our ads on Google, the pages you see load Google's ad tag, during that visit and later visits from the same browser for up to 90 days. Google sets its own cookies in your browser and learns which of our pages you viewed and whether you joined our community, downloaded the trial, or went to buy. We use this only to measure which ads work and to let Google show our ads to people more likely to find them useful. Google's privacy policy covers what Google does with it.</p>
+<p>We do not send Google your name, your email address, or anything from the app. Visitors who don't arrive from a Google ad never load the tag. Neither do browsers that send a Global Privacy Control signal, or visitors from the European Union, the European Economic Area, the United Kingdom or Switzerland.</p>
+<p>We know you came from an ad because Google adds a click code to the link. On that visit we set our own cookie, <code>plusauri_ad_visit</code>, which holds nothing but the fact that you arrived from an ad, so the tag keeps loading on your later visits while the cookie lasts. Clearing this site's cookies ends it.</p>
 <h2>Cookies and browser storage</h2>
-<p>All of our cookies are set by this site, for this site. None of them come from another company.</p>
+<p>The cookies in this table are set by this site, for this site. If you arrive from one of our Google ads, Google also sets its own cookies, as described in the section above.</p>
 <table>
 <thead>
 <tr><th>Cookie</th><th>What it does</th><th>How long it lasts</th></tr>
@@ -79,21 +100,25 @@
 <tbody>
 <tr><td><code>plusauri_lc_preview</code></td><td>While the Learning Center is in early preview, lets your browser in after you enter the preview passphrase or open an invite link. It goes away when the preview ends.</td><td>30 days, or until you close your browser for a single-lesson invite</td></tr>
 <tr><td><code>plusauri_o_attr</code></td><td>Credits the lessons you read to the invite link that brought you, as described above.</td><td>About 30 days</td></tr>
+<tr><td><code>plusauri_ad_visit</code></td><td>Remembers that you arrived from one of our Google ads, so Google's ad tag keeps loading, as described above. It holds nothing else.</td><td>90 days</td></tr>
 <tr><td><code>plusauri.lang</code></td><td>Remembers the language you picked.</td><td>1 year</td></tr>
 <tr><td><code>plusauri_o_nolog</code></td><td>Marks our own household's browsers so our visits are labeled as tests. Visitors never receive it.</td><td>About 13 months</td></tr>
-<tr><td><code>plusauri_dev_access</code></td><td>Opens our internal team notes. Visitors never receive it.</td><td>30 days</td></tr>
 </tbody>
 </table>
 <p>A few display preferences live only in your browser's own storage and are never sent to us: light or dark theme, your language, where you dragged the divider on a lesson page, and whether &quot;How this page works&quot; is open.</p>
 <p>You can block or clear cookies at any time. The site still works without them. While the Learning Center is in preview, it will ask for the passphrase again.</p>
 <h2>What other companies' servers see</h2>
-<p>We do not send anyone information about you. Some pieces of a page are still fetched by your browser from other companies' servers, and those servers see your request the way any web server does, including your IP address:</p>
+<p>Apart from Google's ad tag for visitors who arrive from one of our ads, we do not send anyone information about you. Some pieces of a page are still fetched by your browser from other companies' servers, and those servers see your request the way any web server does, including your IP address:</p>
 <ul>
 <li><strong>jsDelivr</strong>, a public content network, serves the stylesheet that lays out these pages, and on some lessons the libraries that draw formulas and diagrams.</li>
 <li><strong>YouTube</strong> serves the player on the few lessons that include a video. We use YouTube's privacy-enhanced mode (<code>youtube-nocookie.com</code>), and the player loads only when you scroll to it. Once you play a video, YouTube's own privacy policy applies.</li>
 <li><strong>open.er-api.com</strong> answers if you press the button that fetches current exchange rates inside a lesson's sample plan. Nothing is fetched until you press it.</li>
+<li><strong>Google</strong> serves its ad tag, only to visitors who arrive from one of our Google ads, as described above.</li>
+<li><strong>Cloudflare</strong> carries every request to this site and tells us which country it came from.</li>
 <li><strong>Render</strong> hosts our website and database in Oregon, in the United States. Like any host, it keeps standard request logs, which include IP addresses, under its own terms.</li>
 </ul>
+<h2>When the app checks for updates</h2>
+<p>Each time Tutilis starts, it asks this site whether a newer version is out. With that request we record the time, the app's version number, the name of your computer's operating system, such as &quot;Mac OS X&quot;, and the country the request came from. This tells us how many copies of Tutilis are in use and which versions they run. Nothing in the request identifies you or your computer, and your plans are never part of it.</p>
 <h2>When you write to us</h2>
 <p>The <strong>Reach Out</strong> button in Tutilis and in the Learning Center sends us a message. We keep:</p>
 <ul>
@@ -101,17 +126,19 @@
 <li>any tables you chose to attach, and the names of any charts you attached (we do not keep the chart images);</li>
 <li>the app version, whether you wrote from the desktop app or the Learning Center, your language, planning region, and license status;</li>
 <li>your browser's description;</li>
-<li>whether you offered an anonymized copy of a plan. The plan itself is not stored with your message.</li>
+<li>an anonymized copy of a plan, if you choose to include one, kept with your message.</li>
 </ul>
 <p>If you email us directly, your email stays in our mailbox.</p>
+<h2>When you join our community</h2>
+<p>When you ask to join our community or our mailing list, we keep your email address, whether you asked to take part in the forum or only to receive news, whether you agreed to receive news, your first name and planning stage if you give them, the page you asked from, your language, and your browser's description. We also keep the campaign codes in the link that brought you to the site, if it had any, and the invite code from an invite link you opened, if your browser still carries it (see &quot;Invite links&quot; above). If you ask to take part in the forum, we pass your email address to our forum at community.plusauri.com, which runs on Discourse, so it can email you the invitation. We use the address to send the invitation or the news you asked for, and the codes to learn which posts and campaigns bring people.</p>
 <h2>Surveys</h2>
 <p>When you answer one of our surveys, we keep your answers, the survey link's code, the name you give, your email address if you give one so we can follow up, your browser's description, and the time.</p>
 <h2>When you buy Tutilis</h2>
-<p>Lemon Squeezy runs our checkout and is the merchant of record, so you buy from them and their privacy policy covers the purchase. Your card details never reach us. After an order, Lemon Squeezy sends us a notice. From it we keep your name, your email address, the order and product, the price and currency, the order's status, and whether it was refunded. We also keep each notice as it arrived. We use this to stand behind your license and your updates, and for our own tax and accounting records.</p>
+<p>Lemon Squeezy runs our checkout and is the merchant of record, so you buy from them and their privacy policy covers the purchase. Your card details never reach us. After an order, Lemon Squeezy sends us a notice. From it we keep your name, your email address, the order and product, the price and currency, the order's status, and whether it was refunded. We also keep each notice as it arrived. We use this to stand behind your license and your updates, to count how many people start a trial or buy, and for our own tax and accounting records.</p>
 <h2>Mailing list</h2>
-<p>We do not run a mailing list yet. When we start one, this page will say what it keeps and how to leave it.</p>
+<p>We keep the news sign-ups described under &quot;When you join our community&quot;, but we have not sent any news yet. Before we do, this page will name the service that sends it and say how to leave the list.</p>
 <h2>How long we keep things</h2>
-<p>We do not delete these records on a schedule yet. We keep reading and messaging records while they help us improve the lessons and the product. We keep sales records as long as tax and accounting rules require.</p>
+<p>We do not delete these records on a schedule yet. We keep browsing, update-check, and messaging records while they help us improve the lessons and the product. We keep sales records as long as tax and accounting rules require.</p>
 <p>If you would like a copy of what we hold about you, or would like it deleted, write to us. We will delete anything tied to you except the sales records we are required to keep.</p>
 <h2>Children</h2>
 <p>This site is not directed at children under 13, and we do not knowingly collect information from them.</p>
@@ -120,6 +147,6 @@
 <h2>Contact</h2>
 <p>Plusauri, LLC, Warrenville, Illinois. Write to <a href="mailto:dan@plusauri.com">dan@plusauri.com</a>.</p>
 </main>
-    <footer class="container"><small>© Plusauri, LLC — own your financial plan.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a></small><small class="footer-disclaimer">Educational content — not financial, investment, tax, or legal advice.</small><small class="footer-trademarks">Tutilis™ and Plusauri™ are trademarks of Plusauri, LLC.</small></footer>
+    <footer class="container"><small>© Plusauri, LLC — own your financial plan.</small><small class="footer-contact">Warrenville, Illinois · <a href="mailto:dan@plusauri.com">dan@plusauri.com</a> · <a href="/designer-site/privacy">Privacy</a> · <a href="/designer-site/terms">Terms of Use</a></small><small class="footer-social"><a href="https://www.linkedin.com/company/plusauri" rel="me noopener">LinkedIn</a> · <a href="https://x.com/plusauri" rel="me noopener">X</a> · <a href="https://www.youtube.com/@Plusauri" rel="me noopener">YouTube</a></small><small class="footer-disclaimer">Educational content — not financial, investment, tax, or legal advice.</small><small class="footer-trademarks">Tutilis™ and Plusauri™ are trademarks of Plusauri, LLC.</small></footer>
   </body>
 </html>

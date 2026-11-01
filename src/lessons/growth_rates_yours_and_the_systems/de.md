@@ -14,7 +14,7 @@ Das Produkt ist so gebaut, dass beide Arten von Planenden bekommen, was sie brau
 <p class="lesson-power-user-label">Power-Nutzer</p>
 <div class="lesson-power-user-body">
 
-Eigene Wachstumsraten festzulegen ist eine Funktion für **Power-Nutzer**. Der Plan eines typischen Nutzers übernimmt die Wachstumsraten des Systems, und das ist der Plan General in dieser Lektion. Um eigene Raten festzulegen, wie es der Plan Advanced tut, schalten Sie **Power-Nutzer** unter [[nav:advanced]] → Anwendungseinstellungen ein.
+Eigene Wachstumsraten festzulegen ist eine Funktion für **Power-Nutzer**. Der Plan eines typischen Nutzers übernimmt die Wachstumsraten des Systems, und das ist der Plan **General** in dieser Lektion. Um eigene Raten festzulegen, wie es der Plan **Advanced** tut, schalten Sie **Power-Nutzer** unter [[nav:advanced]] → Anwendungseinstellungen ein.
 
 </div>
 </aside>
@@ -88,7 +88,7 @@ Die Karte des Gehalts führt die Rate, die Priya als Überschreibung angegeben h
 
 *Die Karte von Priyas Gehalt in [General](#canvas-dossier:growth_rates_general): $140,000 im Jahr in Geld von 2026, wachsend mit den 5 %, die sie angegeben hat.*
 
-In der Cashflow-Rechnung liegt das Gehalt 2027 bei etwa $154,000 und 2031 bei etwa $187,000, das sind ihre 5 % im Jahr. Die Miete, abzüglich der laufenden Kosten der Immobilie, wächst mit den 3 %, die ihr Mietvertrag festlegt.
+In der Cashflow-Rechnung liegt das Gehalt 2027 bei etwa $147,000 und 2031 bei etwa $179,000, das sind ihre 5 % im Jahr. Die Miete, abzüglich der laufenden Kosten der Immobilie, wächst mit den 3 %, die ihr Mietvertrag festlegt.
 
 <details class="lesson-desktop-only" open>
 <summary class="lesson-desktop-only-label">Nur in der Desktop-App</summary>
@@ -109,7 +109,7 @@ Wenn Sie eine dieser Raten angeben, geben Sie ihren Durchschnitt an. Wie stark s
 
 Das kann bei einem Gehalt seltsam wirken, aber genau das hält die Prognose ehrlich. Über tausend Zukünfte bringen manche von Priyas Jahren eine größere Erhöhung als 5 % und manche eine kleinere, und die Prognosen, in denen ihr Entgelt ungewöhnlich gut oder schlecht lief, liegen in ihrer Spanne der Ergebnisse neben den guten und schlechten Läufen des Marktes. Eine Volatilität von null würde bedeuten, dass ihr Entgelt in jedem Jahr jeder Zukunft um genau 5 % steigt, was niemand versprechen kann.
 
-Der Kindesunterhalt zeigt die Grenze davon. Priyas 0 % sind nur der Durchschnitt, sodass die Zahlung im Plan General von einer Zukunft zur nächsten immer noch ein wenig schwankt. Ein Gerichtsbeschluss schwankt überhaupt nicht. Das zu beheben braucht die andere Einstellung.
+Der Kindesunterhalt zeigt die Grenze davon. Priyas 0 % sind nur der Durchschnitt, sodass die Zahlung im Plan [General](#canvas-dossier:growth_rates_general) von einer Zukunft zur nächsten immer noch ein wenig schwankt. Ein Gerichtsbeschluss schwankt überhaupt nicht. Das zu beheben braucht die andere Einstellung.
 
 ## Jede Annahme übernehmen {#taking-over-every-assumption}
 
@@ -136,9 +136,9 @@ Bei Wachstum überschreiben bekommt das Wachstumsfeld bei Entgelt, Ausgaben, Mie
 
 ## Was die Änderungen kosten {#what-the-changes-cost}
 
-Priyas drei Änderungen im Plan Advanced waren eine breitere Schwankung bei ihrem bonuslastigen Gehalt, eine Unterhaltszahlung, die auf genau $14,400 festliegt, und eine langsamere Sicht von 2 % auf die Wertsteigerung ihrer Wohnung. Die ersten beiden formen vor allem die Spanne der Ergebnisse um: Das Gehalt weitet sie, und der feste Unterhalt verengt sie ein wenig. Die dritte verschiebt den Plan selbst. In der Bilanz für 2046 ist die Wohnung im Plan General etwa $648,000 wert und im Plan Advanced etwa $438,000.
+Priyas drei Änderungen im Plan [Advanced](#canvas-dossier:growth_rates_advanced) waren eine breitere Schwankung bei ihrem bonuslastigen Gehalt, eine Unterhaltszahlung, die auf genau $14,400 festliegt, und eine langsamere Sicht von 2 % auf die Wertsteigerung ihrer Wohnung. Die ersten beiden formen vor allem die Spanne der Ergebnisse um: Das Gehalt weitet sie, und der feste Unterhalt verengt sie ein wenig. Die dritte verschiebt den Plan selbst. In der Bilanz für 2046 ist die Wohnung im Plan [General](#canvas-dossier:growth_rates_general) etwa $648,000 wert und im Plan **Advanced** etwa $438,000.
 
-Die **Schlüsselprognosen** zeigen, was das mit Priyas Endnettovermögen macht. Der Plan Advanced liegt an jedem Punkt, den die Tabelle nennt, niedriger, von der schlechtesten Zukunft bis zur besten.
+Die **Schlüsselprognosen** zeigen, was das mit Priyas Endnettovermögen macht. Der Plan **Advanced** liegt an jedem Punkt, den die Tabelle nennt, niedriger, von der schlechtesten Zukunft bis zur besten.
 
 [[jump:key-forecasts]]
 
@@ -154,12 +154,12 @@ Die **Schlüsselprognosen** zeigen, was das mit Priyas Endnettovermögen macht. 
 
 [[img:growth-rates-key-forecasts-advanced]]
 
-*Schlüsselprognosen für [Advanced](#canvas-dossier:growth_rates_advanced): Jeder Punkt liegt unter dem des Plans General.*
+*Schlüsselprognosen für [Advanced](#canvas-dossier:growth_rates_advanced): Jeder Punkt liegt unter dem des Plans **General**.*
 
 </div>
 </div>
 
-Die **Nettovermögensverteilung** zeigt dasselbe über alle tausend Zukünfte zugleich. Die beiden sind auf derselben Achse gezeichnet, damit man sie mit dem Auge vergleichen kann. Die Wolke von Advanced sitzt weiter links, und der Anteil der Zukünfte, die gelingen, fällt von 98 % auf 95 %.
+Die **Nettovermögensverteilung** zeigt dasselbe über alle tausend Zukünfte zugleich. Die beiden sind auf derselben Achse gezeichnet, damit man sie mit dem Auge vergleichen kann. Die Wolke von **Advanced** sitzt weiter links, und der Anteil der Zukünfte, die gelingen, fällt von 98 % auf 95 %.
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">
@@ -182,7 +182,7 @@ Das ist der Grund, warum die volle Kontrolle eine bewusste Wahl ist. Eine einzig
 
 ## Zwischen den beiden wechseln {#moving-between-the-two}
 
-Ein Plan kann seine Meinung ändern. Der Wechsel von **Wachstum überschreiben** zurück zu **Systemwachstum** entfernt jede Marktüberschreibung, denn das bedeutet die Wahl der Raten des Systems. Raten, die für Entgelt, Ausgaben, Miete und Unterhalt angegeben sind, bleiben erhalten, und jede darauf gesetzte Volatilität kehrt zur Zahl des Systems zurück. Wenn Priya ihren Plan Advanced zurücksetzte, kehrte ihre Wohnung auf 4 % zurück, Gehalt und Unterhalt behielten ihre Durchschnitte von 5 % und 0 %, und der Unterhalt nähme die oben beschriebene kleine Schwankung wieder auf.
+Ein Plan kann seine Meinung ändern. Der Wechsel von **Wachstum überschreiben** zurück zu **Systemwachstum** entfernt jede Marktüberschreibung, denn das bedeutet die Wahl der Raten des Systems. Raten, die für Entgelt, Ausgaben, Miete und Unterhalt angegeben sind, bleiben erhalten, und jede darauf gesetzte Volatilität kehrt zur Zahl des Systems zurück. Wenn Priya ihren Plan [Advanced](#canvas-dossier:growth_rates_advanced) zurücksetzte, kehrte ihre Wohnung auf 4 % zurück, Gehalt und Unterhalt behielten ihre Durchschnitte von 5 % und 0 %, und der Unterhalt nähme die oben beschriebene kleine Schwankung wieder auf.
 
 Der Wechsel in die andere Richtung entfernt nichts. Jede Rate bleibt, wo sie war, und wird editierbar.
 

@@ -9,7 +9,8 @@ also the largest thing Alex owns. A plan that only carried the earnings would sa
 retirement and nothing else happens. A plan that only carried the practice as an asset would let it
 sit on the balance sheet forever, growing quietly, never sold. This lesson carries both, and ties
 them together: the practice is a real asset with a **planned sale** in the retirement year, and the
-earnings are linked to it, so the sale ends them.
+earnings are linked to it, so the sale ends them. Selling a business at retirement brings a tax
+bill in that year too, and the lesson shows where it lands.
 
 Open the [[nav:dossier]] and look at the balance sheet first, then the cash flows. The rest of the
 lesson walks the forecast through the year of the sale and the year after it.

@@ -8,7 +8,8 @@ Alex has two life policies. One is a twenty-year term policy bought at 57, the o
 whole-life policy that has been building cash value for years. Neither belongs in an account, and
 neither is a real asset in the way a house is, but both cost money every year, one of them is worth
 something today, and each promises a payment at a death the plan already has a year for. This
-lesson shows where each of those three things lands.
+lesson shows where each of those three things lands. It is a practical look at term vs whole life
+insurance, and at how life insurance in a financial plan is counted.
 
 Open the [[nav:dossier]]. On the Bird's Eye, each policy has a row under **Assets**, and hovering
 the row raises the policy's card. The whole-life policy's row is its cash value, which is net worth;
@@ -110,7 +111,7 @@ Open the term policy and push its coverage end past 2059. Its **Pays** row chang
 
 *The term policy, Alex 20-year term. Coverage years are what you push past 2059.*
 
-Then open the whole-life policy and set **Owned by** to *Irrevocable trust*. Nothing on the cash-flow statement changes; the benefit still arrives. What changes is the estate: on the Net Worth Distribution card, with estate tax on, the trust-owned proceeds are left out of the taxable estate and pass to heirs untaxed.
+Then open the whole-life policy and set **Owned by** to *Irrevocable trust*. Nothing on the cash-flow statement changes; the benefit still arrives. What changes is the estate: on the Net Worth Distribution card, with [[term:estate-tax|estate tax]] on, the trust-owned proceeds are left out of the taxable estate and pass to heirs untaxed.
 
 [[img:life-insurance-policy-whole|control]]
 

@@ -22,7 +22,8 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 A **[[term:roth-conversion]]** moves money from a **[[term:traditional]]** ([[term:pre-tax]]) retirement account into a
 **[[term:roth]]** ([[term:after-tax]]) account. You pay [[term:ordinary-income]] tax on the amount converted **now**, so
-future growth and [[term:qualified]] withdrawals can come out federally [[term:tax-free]].
+future growth and [[term:qualified]] withdrawals can come out federally [[term:tax-free]]. A Roth
+conversion strategy chooses how much to convert and in which years.
 
 That trade is most attractive in **low-income years** — after paychecks stop and before required
 minimum distributions (RMDs) force large traditional withdrawals. Planners call that span the
@@ -79,6 +80,8 @@ section that answers it.
    [Policy first](#policy-first-then-the-year-loop).
 8. **When one traditional sale has several reasons, how do I tell them apart?** See
    [Three layers of why we sold](#three-layers-of-why-we-sold).
+9. **Which account pays the tax a conversion adds, and what happens when the brokerage runs out?** See
+   [Policy first](#policy-first-then-the-year-loop).
 
 </div>
 </aside>
@@ -131,7 +134,7 @@ large: 12% now against 22% to 24% later.
 
 | Not this | Why the product separates it |
 |----------|------------------------------|
-| Free cash to spend | Conversion does **not** fund living expenses; tax is still funded with the year’s tax bill (usually next year) |
+| Free cash to spend | Conversion does **not** fund living expenses. Its tax is paid the next year, from taxable holdings first |
 | A residual “sell strategy” choice | Residual pro-rata / tax-account order still run for deficits; conversion is a **policy** after those trades |
 | An optimal solver | You state a policy (fixed dollars or fill a bracket); the engine shows **consequences**, not a solved “best path” |
 | Early-withdrawal penalty on the conversion itself | Penalty applies to early **spending** distributions from traditional; conversion is treated differently |
@@ -257,6 +260,35 @@ converts nothing in those years because there is no room left to fill. This is t
 for one bracket that [Filling the cheap buckets](/learn/filling_the_cheap_buckets) draws: income the
 plan cannot avoid claims the cheap room first.
 
+#### Who pays the conversion's tax
+
+A conversion adds to the year's tax bill, and Alex pays that bill the next year. Tutilis measures how
+much of it the conversion caused. It assesses the year twice, once as it happened and once without
+the converted dollars, and the difference is the conversion's tax. The next year, that amount is sold
+from taxable holdings first, whatever the withdrawal strategy. The full converted amount stays in the
+Roth.
+
+This matters because the other ways to pay undo part of the conversion. Selling traditional shares
+for the tax adds ordinary income that never reaches the Roth. Selling Roth shares spends the dollars
+the conversion just moved. Under 59½, a traditional sale also owes the 10% early-withdrawal penalty
+that the conversion itself avoids.
+
+Open [[nav:si-table]] at **2028**. The brokerage row's **Why** shows about $10,600 as **Roth
+conversion tax · from taxable**. That is the tax the 2027 conversion added to the 2027 bill. In this
+plan it is the whole bill. Without the conversion, Alex's dividends and gains would sit inside the
+standard deduction and the 0% gains rate. Part of the conversion's tax is the 15% those gains pay
+once the conversion fills the bracket beneath them. The rest of the brokerage's sales pay living costs
+in tax-account order. This plan draws taxable first anyway,
+so the dollars sold are the same either way, and the **Why** tells you which part paid for the
+conversion. On a plan that withdraws pro-rata, this rule is what keeps the traditional IRA from paying
+a share of the conversion's tax.
+
+Now move to **2034**. The brokerage is empty, so the tax on the 2033 conversion, about $8,500, cannot
+come from it. The withdrawal strategy raises it from the traditional IRA instead, and the **Why** names
+those dollars **Roth conversion tax · taxable ran short**. Alex is past 59½, so the sale owes no
+penalty. Before 59½, a sale like this would also carry an **Early withdrawal** reason, and the federal
+statement would add the 10% penalty.
+
 ### 3. Read the tax statement
 
 On a conversion year (policy on):
@@ -352,6 +384,7 @@ sale as “living expenses” or “the residual strategy alone.”
 | MAGI | Conversion year MAGI higher than the no-conversion what-if |
 | Does it pay | Simulator taxes paid lower with the policy on than with it off; success and median net worth about the same |
 | Cliff radar | [[nav:forecaster]] cliff radar notes conversion this year; no invented IRMAA surcharge |
+| Conversion tax | At 2028 the brokerage **Why** shows **Roth conversion tax · from taxable**; at 2034 the traditional row shows **Roth conversion tax · taxable ran short** |
 | IRMAA (later) | A surcharge in 2032–2034 from conversion-year MAGI; less IRMAA over the whole plan than with the policy off |
 
 ---
@@ -360,8 +393,9 @@ sale as “living expenses” or “the residual strategy alone.”
 
 - A multi-year **optimal** conversion schedule (dynamic program / “max wealth” solver)
 - Full **Roth 5-year** seasoning / ordering rules for every distribution type
-- Paying conversion tax **from** the converted dollars vs from taxable cash as separate strategies
-  (tax still lands on the ordinary bill; funding is via the usual tax/cash path)
+- Withholding a conversion's tax from the converted dollars. The engine always moves the full amount
+  into the Roth and pays the tax the next year, from taxable holdings first. The tax on the sales
+  that pay it is not counted as the conversion's.
 - The **[[term:aca]]** subsidy response when MAGI moves in a marketplace year. Tutilis prices the [[term:premium-tax-credit]] for a phase marked as a marketplace plan, but this plan's phase is deliberately left unmarked, so its conversion years show the warning only.
 - That fill-to-bracket is a closed-form fixed point with every cliff re-solved
 

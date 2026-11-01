@@ -42,7 +42,7 @@ La plupart des conseillers qui gèrent des placements prélèvent une part de l'
 
 Les frais sont en général facturés chaque trimestre et prélevés directement sur le compte. Ils portent sur le solde, donc ils sont dus une année où le marché baisse aussi bien qu'une année où il monte. À mesure que le portefeuille grandit, les frais grandissent avec lui en dollars.
 
-Pour Nadia et Owen, 1 % de leur épargne la première année du plan représente environ $18,500. En 2035, quand tous deux sont à la retraite et demandent la Social Security, c'est environ $22,600 par an. Aucun de ces chiffres n'a l'air alarmant à côté de $110,000 de dépenses. La suite de cette leçon montre pourquoi le total sur une retraite est bien plus grand que ces chiffres annuels ne le suggèrent.
+Pour Nadia et Owen, 1 % de leur épargne la première année du plan représente environ $18,500. En 2035, quand tous deux sont à la retraite et demandent la Social Security, c'est environ $22,700 par an. Aucun de ces chiffres n'a l'air alarmant à côté de $110,000 de dépenses. La suite de cette leçon montre pourquoi le total sur une retraite est bien plus grand que ces chiffres annuels ne le suggèrent.
 
 ## Trouver le scénario {#find-the-what-if}
 
@@ -66,7 +66,7 @@ Les frais sont payés comme n'importe quelle autre facture. Chaque année ils s'
 
 [[img:advisor-fee-cash-flow]]
 
-Le côté Modifié a une bande grise **Frais de conseiller** sous les dépenses, chaque année du plan. En 2035, le tableau de flux de trésorerie les inscrit sur leur propre ligne, $22,594, à côté de $144,827 de dépenses de la vie courante en dollars de cette année-là. Tant que Nadia et Owen travaillent, leurs salaires les couvrent. Une fois à la retraite, chaque dollar en est vendu sur leur épargne.
+Le côté Modifié a une bande grise **Frais de conseiller** sous les dépenses, chaque année du plan. En 2035, le tableau de flux de trésorerie les inscrit sur leur propre ligne, $22,661, à côté de $140,897 de dépenses de la vie courante en dollars de cette année-là. Tant que Nadia et Owen travaillent, leurs salaires les couvrent. Une fois à la retraite, chaque dollar en est vendu sur leur épargne.
 
 Un barème de frais montre le taux. Cette ligne montre les dollars, année après année, dans le plan que vous avez vraiment.
 
@@ -76,11 +76,11 @@ La ligne annuelle n'est que la moitié du coût. Un dollar qui paie les frais en
 
 [[img:advisor-fee-balance-sheet]]
 
-Les deux côtés partent proches l'un de l'autre, et l'écart entre eux s'élargit chaque année. Sur la trajectoire [[term:gmf|GMF]], la prévision qui retient le rendement attendu de chaque année, le patrimoine net à la fin du plan en 2059 est d'environ $3.51 million sans frais et d'environ $1.27 million avec des frais de 1 %. Les frais eux-mêmes s'additionnent à environ $715,000 sur ces 33 années. L'écart à la fin est d'environ $2.24 million, à peu près trois fois ce qui a été payé, parce que chaque dollar de frais emporte aussi sa croissance future.
+Les deux côtés partent proches l'un de l'autre, et l'écart entre eux s'élargit chaque année. Sur la trajectoire [[term:gmf|GMF]], la prévision qui retient le rendement attendu de chaque année, le patrimoine net à la fin du plan en 2059 est d'environ $3.71 million sans frais et d'environ $1.53 million avec des frais de 1 %. Les frais eux-mêmes s'additionnent à environ $736,000 sur ces 33 années. L'écart à la fin est d'environ $2.19 million, à peu près trois fois ce qui a été payé, parce que chaque dollar de frais emporte aussi sa croissance future.
 
 <aside class="lesson-saying" data-saying="small-leak">
 
-Des frais de 1 % représentent environ $18,500 la première année, peu de chose à côté de $110,000 de dépenses. Prélevés chaque année pendant 33 ans, ils montent à environ $715,000 payés et à environ $2.24 million de moins à la fin.
+Des frais de 1 % représentent environ $18,500 la première année, peu de chose à côté de $110,000 de dépenses. Prélevés chaque année pendant 33 ans, ils montent à environ $736,000 payés et à environ $2.19 million de moins à la fin.
 
 </aside>
 
@@ -103,7 +103,7 @@ La trajectoire attendue n'est qu'une parmi beaucoup d'autres. La [[term:monte-ca
 
 [[img:advisor-fee-odds-one]]
 
-La chance de réussite tombe d'environ 92 % à environ 73 %. C'est un grand changement, et il est honnête de le dire. Ce plan dépense $110,000 par an, un montant assez plein, si bien que tout nouveau coût régulier le déplace. Un ménage qui dépenserait moins à partir de la même épargne sentirait moins les mêmes frais, et un ménage qui dépenserait plus les sentirait davantage.
+La chance de réussite tombe d'environ 93 % à environ 78 %. C'est un grand changement, et il est honnête de le dire. Ce plan dépense $110,000 par an, un montant assez plein, si bien que tout nouveau coût régulier le déplace. Un ménage qui dépenserait moins à partir de la même épargne sentirait moins les mêmes frais, et un ménage qui dépenserait plus les sentirait davantage.
 
 ## Des frais plus faibles {#a-smaller-fee}
 
@@ -111,17 +111,17 @@ Réglez maintenant le taux à 0,5 %, le genre de frais qu'un conseiller pourrait
 
 [[img:advisor-fee-odds-half]]
 
-La chance de réussite tombe d'environ 92 % à environ 83 %, soit moins de la moitié de la baisse que provoque 1 %. Sur la trajectoire attendue, le plan se termine avec environ $2.39 million au lieu de $3.51 million, et les frais payés s'additionnent à environ $425,000.
+La chance de réussite tombe d'environ 93 % à environ 86 %, soit moins de la moitié de la baisse que provoque 1 %. Sur la trajectoire attendue, le plan se termine avec environ $2.64 million au lieu de $3.71 million, et les frais payés s'additionnent à environ $435,000.
 
 Chaque scénario que cette leçon essaie sur le plan investi tient dans un seul tableau, avec 1 000 trajectoires pour chaque ligne :
 
 | Frais de conseiller | Chance de réussite | Patrimoine net en 2059, trajectoire attendue | Frais payés sur le plan, trajectoire attendue |
 |---|---:|---:|---:|
-| Aucun | 92 % | $3.51 million | $0 |
-| 0,5 % des actifs | 83 % | $2.39 million | environ $425,000 |
-| 1 % des actifs | 73 % | $1.27 million | environ $715,000 |
-| 1,5 % des actifs | 61 % | $0.42 million | environ $895,000 |
-| $6,000 par an, croissant de 3 % | 83 % | $2.76 million | environ $330,000 |
+| Aucun | 93 % | $3.71 million | $0 |
+| 0,5 % des actifs | 86 % | $2.64 million | environ $435,000 |
+| 1 % des actifs | 78 % | $1.53 million | environ $736,000 |
+| 1,5 % des actifs | 65 % | $0.64 million | environ $926,000 |
+| $6,000 par an, croissant de 3 % | 85 % | $2.99 million | environ $330,000 |
 
 Chaque demi-point de frais coûte à ce plan environ dix points de réussite. Quand un conseiller propose un taux plus bas, c'est l'échelle de ce que la remise vaut sur une retraite comme celle-ci.
 
@@ -133,7 +133,7 @@ Tous les conseillers ne prélèvent pas un pourcentage. Un planificateur au forf
 
 [[img:advisor-fee-odds-fixed]]
 
-Pour Nadia et Owen, cela atterrit près des frais de 0,5 % : environ 83 % de réussite, et environ $2.76 million à la fin de la trajectoire attendue. Des frais forfaitaires ne grandissent pas quand le portefeuille grandit, donc ils tendent à avantager les portefeuilles plus grands. Ils ne rétrécissent pas non plus quand le marché baisse, donc dans une mauvaise décennie ils prennent une plus grande part de ce qui reste. Quelle structure est la moins chère pour vous dépend de la taille de votre épargne, et l'éditeur y répond pour votre propre plan en quelques secondes.
+Pour Nadia et Owen, cela atterrit près des frais de 0,5 % : environ 85 % de réussite, et environ $2.99 million à la fin de la trajectoire attendue. Des frais forfaitaires ne grandissent pas quand le portefeuille grandit, donc ils tendent à avantager les portefeuilles plus grands. Ils ne rétrécissent pas non plus quand le marché baisse, donc dans une mauvaise décennie ils prennent une plus grande part de ce qui reste. Quelle structure est la moins chère pour vous dépend de la taille de votre épargne, et l'éditeur y répond pour votre propre plan en quelques secondes.
 
 ## Ce que coûtent les erreurs {#what-mistakes-cost}
 
@@ -146,19 +146,19 @@ Passez à [En liquidités](#canvas-dossier:advisor_fee_cash). C'est le même cou
 
 [[img:advisor-fee-cash-odds]]
 
-*[En liquidités](#canvas-dossier:advisor_fee_cash), sans frais : environ 69 % des futurs réussissent.*
+*[En liquidités](#canvas-dossier:advisor_fee_cash), sans frais : environ 78 % des futurs réussissent.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:advisor-fee-invested-odds]]
 
-*[Investi](#canvas-dossier:advisor_fee_invested) avec des frais de 1 % : environ 73 % des futurs réussissent.*
+*[Investi](#canvas-dossier:advisor_fee_invested) avec des frais de 1 % : environ 78 % des futurs réussissent.*
 
 </div>
 </div>
 
-Les deux plans sont proches sur une mesure et très éloignés sur l'autre, et la différence entre les mesures compte. La chance de réussite demande seulement si l'argent dure jusqu'à la fin du plan. Selon cette mesure, le plan investi avec des frais de 1 % est devant, 73 % contre 69 %. Le plan en liquidités s'effondre rarement, parce que le cash ne s'effondre pas, mais il grandit rarement non plus, donc il échoue lentement dans une grande part des futurs. L'autre mesure est ce qu'il reste. Sur la trajectoire attendue, le plan en liquidités se termine avec environ $382,000 et le plan investi avec des frais se termine avec environ $1.27 million, plus de trois fois plus :
+Les deux plans sont proches sur une mesure et très éloignés sur l'autre, et la différence entre les mesures compte. La chance de réussite demande seulement si l'argent dure jusqu'à la fin du plan. Selon cette mesure, les deux plans sont à égalité, à environ 78 % chacun. Le plan en liquidités s'effondre rarement, parce que le cash ne s'effondre pas, mais il grandit rarement non plus, donc il échoue lentement dans une grande part des futurs. L'autre mesure est ce qu'il reste. Sur la trajectoire attendue, le plan en liquidités se termine avec environ $596,000 et le plan investi avec des frais se termine avec environ $1.53 million, plus de deux fois et demie plus :
 
 [[img:advisor-fee-cash-balance-sheet]]
 
@@ -166,13 +166,13 @@ Mettre les trois versions du couple côte à côte montre où chaque choix atter
 
 | Nadia et Owen | Chance de réussite | Patrimoine net en 2059, trajectoire attendue |
 |---|---:|---:|
-| Investi, sans conseiller, sans erreur | 92 % | $3.51 million |
-| Investi, en payant des frais de conseiller de 1 % | 73 % | $1.27 million |
-| En liquidités, sans conseiller, sans frais | 69 % | $0.38 million |
+| Investi, sans conseiller, sans erreur | 93 % | $3.71 million |
+| Investi, en payant des frais de conseiller de 1 % | 78 % | $1.53 million |
+| En liquidités, sans conseiller, sans frais | 78 % | $0.60 million |
 
-Le meilleur résultat du tableau est la première ligne. Un ménage qui reste investi à travers chaque krach et ne paie pas de frais fait mieux que l'un ou l'autre des autres, et beaucoup d'investisseurs qui se gèrent eux-mêmes font exactement cela. Les frais sont le prix de la deuxième ligne, et l'erreur est le prix de la troisième. Lu ainsi, la comparaison est une sorte de question d'assurance. Payer 1 % coûte à ce couple environ $2.21 million par rapport à leur meilleur cas. Faire cette seule erreur et s'y tenir coûte environ $3.1 million. Un conseiller vaut les frais pour un ménage qui atterrirait sinon sur la troisième ligne, et pas pour un ménage qui resterait sur la première.
+Le meilleur résultat du tableau est la première ligne. Un ménage qui reste investi à travers chaque krach et ne paie pas de frais fait mieux que l'un ou l'autre des autres, et beaucoup d'investisseurs qui se gèrent eux-mêmes font exactement cela. Les frais sont le prix de la deuxième ligne, et l'erreur est le prix de la troisième. Lu ainsi, la comparaison est une sorte de question d'assurance. Payer 1 % coûte à ce couple environ $2.19 million par rapport à leur meilleur cas. Faire cette seule erreur et s'y tenir coûte environ $3.1 million. Pour un ménage qui atterrirait sinon sur la troisième ligne, les frais sont le plus petit des deux prix. Un ménage qui resterait seul sur la première ligne peut tout de même engager un conseiller pour une aide que ce tableau ne mesure pas, et la section suivante la décrit.
 
-Chaque ligne du tableau paie quelque chose [[saying:free-lunch]]. Les frais coûtent environ $2.21 million par rapport au meilleur cas, et la sécurité du cash coûte environ $3.1 million. La première ligne évite les deux, et son prix est le sang-froid de rester investi à travers chaque krach.
+Chaque ligne du tableau paie quelque chose [[saying:free-lunch]]. Les frais coûtent environ $2.19 million par rapport au meilleur cas, et la sécurité du cash coûte environ $3.1 million. La première ligne évite les deux, et son prix est le sang-froid de rester investi à travers chaque krach.
 
 Cette comparaison ne prétend pas qu'un conseiller aurait à coup sûr maintenu Nadia et Owen investis, ni que toute personne sans conseiller cède à la panique. C'est une façon de mettre les deux prix côte à côte sur le même plan, pour que vous puissiez juger honnêtement sur quelle ligne vous avez des chances de finir.
 
@@ -191,9 +191,11 @@ Plusieurs chercheurs ont essayé de mettre un chiffre sur ce qu'un conseiller aj
 - **La recherche « gamma » de Morningstar**, par David Blanchett et Paul Kaplan, a estimé que de meilleures décisions de revenu de retraite, comme la stratégie de retrait, la localisation des actifs et l'usage d'une rente, pourraient produire environ 22,6 % de revenu de retraite en plus, ce qu'ils ont équivalu à environ 1,59 point de rendement supplémentaire par an.
 - **L'étude « Mind the Gap » de Morningstar** mesure combien les investisseurs perdent à cause de leur propre timing. Son édition 2025 a trouvé que l'investisseur moyen en fonds a gagné environ 1,1 point par an de moins que les fonds qu'il détenait sur les dix années jusqu'à 2024, parce que l'argent tendait à arriver après les gains et à partir après les pertes.
 
+Une partie de ce qu'apporte le conseil n'apparaît jamais comme un rendement. Un conseiller peut faire gagner de nombreuses heures à un ménage, coordonner les impôts, les assurances et la succession, donner un second avis avant une grande décision, et laisser un plan qu'un conjoint survivant peut suivre. Beaucoup de ménages apprécient cette aide pour elle-même.
+
 Il y a un désaccord honnête sur ces chiffres. Un article de 2026 dans le *Financial Analysts Journal* a réexaminé la méthode de Mind the Gap et a situé le coût d'un mauvais timing plus près de 0,1 point par an. Les 3 % de Vanguard supposent un client qui ferait sinon chacune des erreurs que le document décrit, et beaucoup de gens ne les feraient pas.
 
-La conclusion juste est plus étroite qu'une estimation isolée. Le conseil vaut le plus pour le ménage qui ferait sinon une erreur coûteuse, et le moins pour celui qui n'en ferait pas. Les scénarios de cette leçon vous permettent de chiffrer les deux côtés sur votre propre plan, avec vos propres chiffres.
+La conclusion juste est plus étroite qu'une estimation isolée. En dollars, le conseil vaut le plus pour le ménage qui ferait sinon une erreur coûteuse. L'aide au-delà des dollars vaut ce qu'elle vaut pour vous, et vous seul pouvez lui donner un prix. Les scénarios de cette leçon vous permettent de chiffrer les deux côtés sur votre propre plan, avec vos propres chiffres.
 
 <aside class="lesson-did-you-know">
 <p class="lesson-did-you-know-label">Le saviez-vous ?</p>

@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Monte Carlo, from the North Star to the spread
 
-Jordan is sixty, plans to retire in 2031, and has $1.34 million invested about 70/30 across a [[term:401k|401(k)]], a [[term:brokerage]] account and a little cash. The forecast for that plan shows two things at once. The charts draw a single smooth line through the years, and the Simulation Summary beside them reports a thousand different endings, from a deep hole to tens of millions of dollars.
+Jordan is sixty, plans to retire in 2031, and has $1.34 million invested about 70/30 across a [[term:401k|401(k)]], a [[term:brokerage]] account and a little cash. The forecast for that plan shows two things at once. The charts draw a single smooth line through the years, and the Simulation Summary beside them reports a thousand different endings, from a deep hole to tens of millions of dollars. The thousand endings come from a Monte Carlo retirement simulation, and this lesson shows how to read it.
 
 Both are the forecast, and they answer different questions. This lesson takes the forecast apart from nuts to bolts: where the single line comes from, where the thousand come from, the arithmetic underneath each, why the thousand endings lean so far to the right, and what the whole method cannot see.
 

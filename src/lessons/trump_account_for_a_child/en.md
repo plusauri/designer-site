@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # A Trump Account for a newborn
 
-Maya and Theo had a daughter, Ada, in 2026. They earn a comfortable living, they have a modest brokerage account and a checking account, and they would like to put $5,000 a year aside for her. The question they are asking is a fair one: a Trump Account and an ordinary brokerage account can hold the same index fund and earn the same return, so what does the special account actually buy?
+Maya and Theo had a daughter, Ada, in 2026. They earn a comfortable living, they have a modest brokerage account and a checking account, and they would like to put $5,000 a year aside for her. The question they are asking is a fair one: a Trump Account and an ordinary brokerage account can hold the same index fund and earn the same return, so what does the special account actually buy? This lesson weighs a Trump Account vs brokerage account for a newborn to find out.
 
 This lesson opens two plans that are identical except for where Ada's $5,000 a year goes. Switch between them on the [[term:canvas]] as you read. The answer is not mainly about the return, and it is not mainly about tax. It is about a year in 2036 when the household needed money and one of the two accounts could not be touched.
 

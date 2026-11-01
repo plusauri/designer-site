@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Working fast: the shortcuts and why they exist
 
-A financial plan is dense. One screen can hold a cash flow chart, a balance sheet and a forecast of a thousand possible futures, and every number on it rests on a rule, a rate or an item somewhere else in the plan. Tutilis is built so that the answer to "what is this, and where did it come from?" is never more than one key or one hover away.
+A financial plan is dense. One screen can hold a cash flow chart, a balance sheet and a forecast of a thousand possible futures, and every number on it rests on a rule, a rate or an item somewhere else in the plan. Tutilis is built so that the answer to "what is this, and where did it come from?" is never more than one key or one hover away. This lesson covers those financial planning software shortcuts.
 
 The sections below cover the habits that make that true, one at a time, and each one comes with the reason it works the way it does. The Springfield household on the [[term:canvas]] is a plan you already know, so the attention can stay on the tools.
 
@@ -34,7 +34,7 @@ Planning has its own vocabulary, and a forecast runs on hundreds of published fi
 
 **[[key:Glossary]]** opens the Glossary and **[[key:Reference]]** opens the Reference. These two keys work even while you are typing in a field. That is deliberate. The moment you most want a definition is when the caret sits in the field that used the word, and it would be a poor design that made you click away and lose your place to look it up.
 
-When the question is where something lives rather than what it means, press **[[key:Search]]**. The caret goes to the **Quick Jump** box at the top of the window. Type a word such as roth, irmaa or 529, and the box lists the places in the app where that word is entered, tried as a what-if, or shown in the forecast. Use the arrow keys to pick a place and Enter to go there. This key also works while you are typing.
+When the question is where something lives rather than what it means, press **[[key:Search]]**. The caret goes to the **Quick Jump** box at the top of the window. Type a word such as roth, irmaa or 529, and the box lists the places in the app where that word is entered, tried as a what-if, or shown in the forecast. Use the arrow keys to pick a place and Enter to go there. This key also works while you are typing. [Quick Jump: find anything by its name](/learn/quick_jump_glossary_and_reference) walks through it on a plan, along with the Glossary and the Reference.
 
 The shortcuts use **Ctrl on a Mac** too. The Cmd-letter keys belong to macOS and to habits you already have, such as Cmd-P to print and Cmd-G to find the next match. Ctrl-letter keys are free on a Mac outside of text fields, and the letters were chosen to avoid the Windows keys everyone relies on, which is why exchange rates are [[key:Fx]] rather than Ctrl-X.
 

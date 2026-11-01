@@ -20,7 +20,7 @@ tutilis-locale: en source
 -->
 
 <!--- α <lesson_body> -->
-A **success rate** is only as meaningful as the **rule that labels a path a success**. Change the
+What is a successful retirement plan? A **success rate** is only as meaningful as the **rule that labels a path a success**. Change the
 rule, and the same [[term:monte-carlo|Monte Carlo]] cloud can look safer or scarier — without changing a single dollar of
 spend or a single return draw.
 

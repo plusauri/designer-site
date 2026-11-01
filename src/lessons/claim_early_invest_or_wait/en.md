@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Claim early and invest, or wait?
 
-Homer was born in 1965. He turns 62 next year, which is the first age Social Security retirement benefits can start, and his [[term:fra|full retirement age]] is 67. His statement puts his benefit at about $2,500 a month at 67, in today's dollars. He lives alone on $50,000 a year, and a $1.1 million portfolio covers that spending whether or not Social Security has started.
+Homer was born in 1965. He turns 62 next year, which is the first age Social Security retirement benefits can start, and his [[term:fra|full retirement age]] is 67. His statement puts his benefit at about $2,500 a month at 67, in today's dollars. He lives alone on $50,000 a year, and a $1.1 million portfolio covers that spending whether or not Social Security has started. He is weighing whether to claim Social Security early and invest the checks, and where the Social Security break-even age falls.
 
 A reader of the Learning Center asked the question Homer is asking himself: *is it better to take Social Security when I become eligible, or wait, given that the money I could get sooner could be invested?* The usual answer is a break-even age that counts checks. That answer leaves out what the reader asked about. An early check is a check Homer does not have to sell investments for, so more of his portfolio stays invested and keeps earning.
 

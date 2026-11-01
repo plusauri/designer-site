@@ -77,6 +77,13 @@
     return "6px";
   }
 
+  /**
+   * A widened lesson tucks the canvas at zero width. The iframe stays loaded, so a Jump to
+   * click still moves the plan, and the reader sees nothing change. initGutter installs the
+   * restore that brings the split back; until the gutter exists this is a no-op.
+   */
+  var restoreSplit = function () {};
+
   function applyFraction(split, lesson, fraction, full) {
     const f = clamp(fraction, MIN, MAX);
     const g = gutterTrackPx(split);
@@ -161,6 +168,11 @@
       });
     }
 
+    restoreSplit = function () {
+      // A widened plan is already on screen. Only a tucked canvas has to come back.
+      if (full === "lesson") setFull(null);
+    };
+
     setFull(full);
 
     widenButtons.forEach(function (btn) {
@@ -230,7 +242,7 @@
   }
 
   /**
-   * Commands for the canvas (`dossier:`, `whatif:`, `pick:`, `riskchips:`, `modrow:`, `birdseye:`, `returncheck:`, `hovertip:`, `where:`, `shortcut:`), held until it is
+   * Commands for the canvas (`dossier:`, `whatif:`, `pick:`, `riskchips:`, `modrow:`, `birdseye:`, `returncheck:`, `hovertip:`, `region:`, `where:`, `shortcut:`), held until it is
    * listening. A message posted before the wasm app has registered its listener is simply lost, so a
    * figure or jump-to click in the first seconds of a lesson used to do nothing. The canvas announces
    * itself with `theme:` once its listener is up (see initThemeSync); the queue flushes then, in order,
@@ -1506,6 +1518,7 @@
       const id = go.getAttribute("data-where");
       if (!id) return;
       ev.preventDefault();
+      restoreSplit();
       postToCanvas(iframe, "where:" + id);
       iframe.focus();
     });
@@ -1522,7 +1535,8 @@
    * `riskchips:` (`data-risk-chips`), the chips it is drawn with, and a figure of the Modifiables list `modrow:`
    * (`data-mod-row`), the row it is drawn with selected, and a Bird's Eye figure `birdseye:` (`data-birds-eye`),
    * its Σ chip and open folds, and a Realized returns figure `returncheck:` (`data-return-check`), its row and
-   * Growth of 1 window, and a canonical-card figure `hovertip:` (`data-hover-tip`), the row to hover for its card.
+   * Growth of 1 window, and a canonical-card figure `hovertip:` (`data-hover-tip`), the row to hover for its card,
+   * and a Region figure `region:` (`data-region`), the states, toggles and map lenses it is drawn with.
    * A figure whose plan this canvas cannot show, or a
    * page with no canvas, is left a plain picture.
    */
@@ -1572,6 +1586,7 @@
       else window.addEventListener("resize", place);
     }
     function go(img) {
+      restoreSplit();
       plans.switchDossier(img.getAttribute("data-canvas-dossier"));
       // A figure of a what-if: switch it on first, so the place opens showing it.
       const whatIf = img.getAttribute("data-what-if");
@@ -1593,6 +1608,9 @@
       // A canonical-card figure: the row whose card it draws, which the canvas tells the reader to hover.
       const hoverTip = img.getAttribute("data-hover-tip");
       if (hoverTip) postToCanvas(iframe, "hovertip:" + hoverTip);
+      // A Region figure: the states, toggles and lenses it is drawn with, so the comparison opens as drawn.
+      const region = img.getAttribute("data-region");
+      if (region) postToCanvas(iframe, "region:" + region);
       postToCanvas(iframe, "where:" + img.getAttribute("data-where"));
       iframe.focus();
     }

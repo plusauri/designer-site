@@ -483,12 +483,22 @@
         household +
         "</span>"
       : "";
+    // Which product the lesson teaches, as its logo in the card's corner (LessonBrandMark; the
+    // same logo leads the lesson's title). Decorative: the hover names the product.
+    var brandMark = row.brandLogo
+      ? '<img class="learn-card-brand" src="' +
+        escapeHtml(row.brandLogo) +
+        '" alt="" title="' +
+        escapeHtml(row.brand || "") +
+        '" width="28" height="28">'
+      : "";
     // Features: engineering group is already the section header — omit on the card.
     // Lessons: section is purpose; engineering group ("Typical cash flows") is noise here.
     var anchor =
       '<a class="learn-card' +
       levelClass +
       extraClass +
+      (brandMark ? " learn-card-branded" : "") +
       '" href="/designer-site/learn/' +
       encodeURIComponent(row.slug || row.id) +
       '" data-id="' +
@@ -537,6 +547,7 @@
       escapeHtml(truncate(row.situation || row.description, 160)) +
       "</span>" +
       (tags ? '<span class="learn-card-tags">' + tags + "</span>" : "") +
+      brandMark +
       "</a>";
 
     // Paired lesson: one card, two formats. The card itself goes to the reading version (the

@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # The years that change the rules
 
-Most of a financial plan changes smoothly. Wages rise a little each year, spending drifts, and markets go up and down. A handful of birthdays work differently. On them, a rule switches on or off: an account unlocks, a penalty stops, an insurance program begins, or the government starts requiring withdrawals. Several of those rules also look back at earlier years, so the decision that matters is often made two or more years before the birthday itself.
+Most of a financial plan changes smoothly. Wages rise a little each year, spending drifts, and markets go up and down. A handful of birthdays work differently. On them, a rule switches on or off: an account unlocks, a penalty stops, an insurance program begins, or the government starts requiring withdrawals. Several of those rules also look back at earlier years, so the decision that matters is often made two or more years before the birthday itself. Those birthdays are the key retirement ages, and this lesson lists each one.
 
 This lesson follows one family across every one of those dates. Homer is 50 in 2026 and Marge is 48. Their children, Bart and Lisa, are 12 and 10. It is the same household as [Saving for college with a 529](/learn/springfield_college_529), with two changes: Marge now has a [[term:ss|Social Security]] benefit of her own, and Homer plans to claim his at 70. Between 2026 and the end of the plan the family crosses nearly every age the tax code and the benefit programs care about.
 
@@ -55,7 +55,7 @@ Those dates are the person editor. Homer's birth year and retirement age are wha
 </div>
 </details>
 
-Every table in this lesson is the Year events card for one year of the On schedule plan, drawn by the app itself.
+Every table in this lesson is the Year events card for one year of the **On schedule** plan, drawn by the app itself.
 
 ## 18: money of their own
 
@@ -89,7 +89,7 @@ The words "mid-year" matter. Someone born in March reaches 59½ in September of 
 
 A few exceptions exist, and one of them is a milestone of its own. Under the "rule of 55," someone who leaves an employer in or after the year they turn 55 can take withdrawals from that employer's 401(k) without the penalty. Tutilis does not model the rule of 55 or the other exceptions yet. It charges the plain 10% and says so on the tax statement.
 
-For the On schedule family, 59½ passes quietly. Both are still working, the brokerage account covers the gaps, and the plan never pays the penalty. The section *Leaving before the gates* shows the same birthday in a plan where it is not quiet at all.
+For the [On schedule](#canvas-dossier:milestone_years_on_schedule) family, 59½ passes quietly. Both are still working, the brokerage account covers the gaps, and the plan never pays the penalty. The section *Leaving before the gates* shows the same birthday in a plan where it is not quiet at all.
 
 ## 62 to 70: the claim window
 
@@ -116,7 +116,7 @@ so the benefit is 124%.
 </div>
 </details>
 
-In the On schedule plan, the two spouses use different ends of the window. Marge claims at her full retirement age in 2045, the same year she retires. Homer retires at 65 in 2041 and does not claim until 70, in 2046. The Year events card shows **FRA** and **SS claim** as separate rows, and in 2046 it shows Homer's claim at age 70 alone. The cash-flow chart shows the shape: two paychecks, then one, then Social Security arriving in two steps.
+In the [On schedule](#canvas-dossier:milestone_years_on_schedule) plan, the two spouses use different ends of the window. Marge claims at her full retirement age in 2045, the same year she retires. Homer retires at 65 in 2041 and does not claim until 70, in 2046. The Year events card shows **FRA** and **SS claim** as separate rows, and in 2046 it shows Homer's claim at age 70 alone. The cash-flow chart shows the shape: two paychecks, then one, then Social Security arriving in two steps.
 
 [[img:milestone-years-cf-on-schedule]]
 
@@ -141,7 +141,7 @@ The less obvious date is 63. Medicare's Part B and Part D [[term:premium|premium
 
 [[img:milestone-years-events-2041]]
 
-In the On schedule plan, Homer's last two full working years, 2039 and 2040, are high-income years with both paychecks running. They set his premiums for 2041 and 2042, and the forecast charges an IRMAA surcharge of about $2,900 in each of those years. In 2043 the lookback reaches 2041, after he retired, and the surcharge disappears.
+In the [On schedule](#canvas-dossier:milestone_years_on_schedule) plan, Homer's last two full working years, 2039 and 2040, are high-income years with both paychecks running. They set his premiums for 2041 and 2042, and the forecast charges an IRMAA surcharge of about $2,900 in each of those years. In 2043 the lookback reaches 2041, after he retired, and the surcharge disappears.
 
 A real household could appeal. Social Security accepts form SSA-44 after a "life-changing event," and stopping work is one of them. Tutilis charges IRMAA as the rule is written and does not model the appeal, but seeing the surcharge in 2041 and 2042 is exactly what should prompt one. The planning window for IRMAA opens at 63, two years before Medicare. A large capital gain, a [[term:roth-conversion|Roth conversion]] or a bonus taken at 63 or 64 shows up on a Medicare bill two years later.
 
@@ -149,15 +149,15 @@ A real household could appeal. Social Security accepts form SSA-44 after a "life
 
 The government lets money grow [[term:tax-deferred]] in a traditional account, but not forever. From a certain age you must take a [[term:rmd|required minimum distribution]] each year, a fraction of the balance set by an IRS table, and pay ordinary income tax on it. That age is 73 for people born from 1951 through 1959 and 75 for people born in 1960 or later. Homer and Marge were both born after 1960, so the Year events card marks ⏳ **RMDs begin** in 2051 for Homer and 2053 for Marge.
 
-Homer's 401(k) is large, and his first required distribution in 2051 is about $138,000. It shows up at once in the Brackets lens, where the RMD band appears in 2051 and fills a larger share of the brackets every year after:
+Homer's 401(k) is large, and his first required distribution in 2051 is about $142,000. It shows up at once in the Brackets lens, where the RMD band appears in 2051 and fills a larger share of the brackets every year after:
 
 [[jump:taxable-income|output__forecaster__forecaster.forecast-detail__brackets]]
 
 [[img:milestone-years-brackets-2051]]
 
-RMDs push up [[term:taxable-income|taxable income]], and higher taxable income can bring back IRMAA. In this plan the surcharge returns in 2049, two years after the 401(k) withdrawals begin, and it steps up again in the late 2050s as the distributions grow.
+RMDs push up [[term:taxable-income|taxable income]], and higher taxable income can bring back IRMAA. In this plan the surcharge returns in 2050, three years after the 401(k) withdrawals begin, and it steps up again in the late 2050s as the distributions grow.
 
-The lead time for RMDs is the longest of any milestone, because the only way to shrink them is to move money out of the traditional account before they start. The years between retirement and the first RMD are often the lowest-income years of a person's life, which makes them a good time for Roth conversions. In the On schedule plan, 2045 has almost no ordinary income: Marge's paycheck has ended and Homer has not yet claimed. The lesson [Roth conversion in the window](/learn/roth_conversion_window) explains how to use years like that. A couple planning to convert should start thinking about it in their early 60s, about a decade before the first required distribution.
+The lead time for RMDs is the longest of any milestone, because the only way to shrink them is to move money out of the traditional account before they start. The years between retirement and the first RMD are often the lowest-income years of a person's life, which makes them a good time for Roth conversions. In the [On schedule](#canvas-dossier:milestone_years_on_schedule) plan, 2045 has almost no ordinary income: Marge's paycheck has ended and Homer has not yet claimed. The lesson [Roth conversion in the window](/learn/roth_conversion_window) explains how to use years like that. A couple planning to convert should start thinking about it in their early 60s, about a decade before the first required distribution.
 
 <details class="lesson-reference" open>
 <summary class="lesson-reference-label">Reference — the first RMD and the missed-RMD penalty</summary>
@@ -172,9 +172,9 @@ You may delay the first RMD until April 1 of the following year, but then two di
 
 Switch to [Both stop in 2030](#canvas-dossier:milestone_years_early_exit). Everything about the family is the same, except that Homer stops work at 54 and Marge at 52, both in 2030. The Year events card for 2030 shows both retirements, the retirement budget starting, and the family's health coverage moving to a private plan.
 
-Leaving work early changes the order of the milestones. In the On schedule plan, a paycheck covered every year until the next source of money arrived. Here, the paychecks end first and every milestone comes afterward:
+Leaving work early changes the order of the milestones. In the [On schedule](#canvas-dossier:milestone_years_on_schedule) plan, a paycheck covered every year until the next source of money arrived. Here, the paychecks end first and every milestone comes afterward:
 
-- **Health insurance** has to be bought privately until Medicare at 65. For Homer that is eleven years and for Marge thirteen. In this plan the private premiums add up to about $450,000 between 2030 and 2042.
+- **Health insurance** has to be bought privately until Medicare at 65. For Homer that is eleven years and for Marge thirteen. In this plan the private premiums add up to about $425,000 between 2030 and 2042.
 - **The 401(k)** is locked behind the 10% penalty until Homer turns 59 in 2035.
 - **Social Security** cannot start before 62, and the plan keeps the same claim ages, so no benefit arrives until 2045.
 
@@ -193,17 +193,17 @@ With no paychecks, the forecast pays for everything from savings, starting with 
 </div>
 </div>
 
-In 2035 the last of the brokerage account is spent and nearly all of the rest of the year's spending comes out of the 401(k), and the tax statement carries the penalty line:
+In 2035 the last of the brokerage account is spent, about $11,600 of the year's spending comes out of the 401(k), and the tax statement carries the penalty line:
 
 [[jump:early-withdrawal-penalty]]
 
 [[img:milestone-years-tax-2035-early-exit]]
 
-The penalty that year is about $4,500. This is also where the birth month matters. Homer turns 59 in 2035, and the Year events card says penalty-free withdrawals begin mid-year. The plan does not know his birth month, so it charges the penalty on all of 2035. If Homer was born in the first half of the year, entering his birth month removes the 2035 penalty entirely. The plan cannot know that unless you tell it.
+The penalty that year is about $1,200, because the brokerage account still paid for most of the year. This is also where the birth month matters. Homer turns 59 in 2035, and the Year events card says penalty-free withdrawals begin mid-year. The plan does not know his birth month, so it charges the penalty on all of 2035. If Homer was born in the first half of the year, entering his birth month removes the 2035 penalty entirely. The plan cannot know that unless you tell it.
 
-Health insurance follows the same turn. While the brokerage account pays the bills, the family shows little income, about 180% to 250% of the poverty line, and the marketplace premium credit pays most of the premium, about $21,000 to $27,000 a year from 2030 to 2034. In 2035 the 401(k) withdrawals push their income to about 4.6 times the poverty line. Above 400% there is no credit at all, so the family repays the whole of 2035's advance credit, about $28,000, with the next year's tax, and pays the full premium every year after that until Medicare. The bridge account was doing two jobs: paying the bills, and keeping income low enough to earn the credit.
+Health insurance follows the same turn, one year later. While the brokerage account pays the bills, the family shows little income, about 180% to 250% of the poverty line, and the marketplace premium credit pays most of the premium, about $20,000 to $26,000 a year from 2030 to 2034. In 2035 the first 401(k) withdrawals lift their income to about 3.8 times the poverty line, which is close to the 400% line but still under it, and the credit that year is about $24,000. In 2036 the 401(k) pays for the whole year, and their income jumps to about 6.9 times the poverty line. Above 400% there is no credit at all, so the family repays the whole of 2036's advance credit, about $25,800, with the next year's tax, and pays the full premium every year after that until Medicare. The bridge account was doing two jobs: paying the bills, and keeping income low enough to earn the credit.
 
-The penalty is not the main problem, though. The larger costs are thirteen years of private insurance, eight of them at the full premium, and fifteen years with no income except what the portfolio provides, and in this plan the family's savings run out in the mid-2050s. The same plan also keeps both Social Security amounts as stated, even though twelve fewer working years would lower them in real life. The timing lesson is still clear: retiring early means building a bridge to each milestone, and each piece has to be sized and funded before the paycheck stops. That work starts five to ten years ahead.
+The penalty is not the main problem, though. The larger costs are thirteen years of private insurance, seven of them at the full premium, and fifteen years with no income except what the portfolio provides, and in this plan the family's savings run out in the late 2050s. The same plan also keeps both Social Security amounts as stated, even though twelve fewer working years would lower them in real life. The timing lesson is still clear: retiring early means building a bridge to each milestone, and each piece has to be sized and funded before the paycheck stops. That work starts five to ten years ahead.
 
 ## How long to plan for
 
@@ -211,7 +211,7 @@ The last date on the plan is death, and it is the one nobody knows. The averages
 
 An average is the middle of a range, and about half of people outlive it. A plan that runs out of money at the average age fails for roughly half the people who use it. For a married couple the relevant question is how long the longer-lived spouse survives, and that is usually several years past either average. This is why planners typically run plans to 90 or 95. The Springfield plans use 90 for Homer and 92 for Marge, and the forecast runs until Marge reaches hers.
 
-In Tutilis, death age is a setting on each person, and the milestones depend on it: the long-term-care years, the last year of Social Security, and the plan horizon all move when you change it. Try the On schedule plan with Marge living to 97. The last five years are where a plan's margin, or lack of it, becomes visible.
+In Tutilis, death age is a setting on each person, and the milestones depend on it: the long-term-care years, the last year of Social Security, and the plan horizon all move when you change it. Try the [On schedule](#canvas-dossier:milestone_years_on_schedule) plan with Marge living to 97. The last five years are where a plan's margin, or lack of it, becomes visible.
 
 ## A lead-time calendar
 

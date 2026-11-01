@@ -20,7 +20,8 @@ tutilis-locale: en source
 -->
 
 <!--- α <lesson_body> -->
-**Healthcare** in a US plan is usually **not one number for life**. Costs change when employer
+**Healthcare** in a US plan is usually **not one number for life**. Retirement healthcare costs move
+in steps, from employer coverage to Medicare. Costs change when employer
 coverage ends, when marketplace or private coverage fills a pre-Medicare gap, and when **Medicare**
 starts around age **65**. This lesson shows that handoff as **phases** on a medical cash-flow
 template so the forecast does not pretend medical spend is free until someone notices.

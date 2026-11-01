@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # A budget checklist for a first paycheck
 
-Riley is 23, a year out of college, and earning $65,000 at a first real job. Rent gets paid, the car gets paid, the [[term:401k|401(k)]] takes 3% because that was the box on the onboarding form, and whatever is left at the end of the month is gone by the next one. Riley has never written the expenses down, and so has no answer to the only budgeting question that matters: **how much is being saved each month, and is it enough?**
+Riley is 23, a year out of college, and earning $65,000 at a first real job. Rent gets paid, the car gets paid, the [[term:401k|401(k)]] takes 3% because that was the box on the onboarding form, and whatever is left at the end of the month is gone by the next one. Riley has never written the expenses down, and so has no answer to the only budgeting question that matters: **how much is being saved each month, and is it enough?** A first paycheck budget, written down once, answers it.
 
 This lesson is a checklist for answering that. It walks through every category a first paycheck goes to, asks the questions that find the amounts, and puts the totals on a plan so the tool can do the arithmetic. It then measures each section against a few rules of thumb, and shows what happens, this year and forty years from now, when the sections that are over their range are trimmed and the difference is given somewhere to go.
 

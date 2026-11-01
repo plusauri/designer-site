@@ -20,7 +20,8 @@ tutilis-locale: en source
 -->
 
 <!--- α <lesson_body> -->
-This lesson is a **contrast** rather than a new household. It compares two calibrated samples:
+This lesson is a **contrast** rather than a new household. It asks whether to pay off the mortgage
+before retirement, and it compares two calibrated samples:
 
 | Sample | Housing | Role |
 |--------|---------|------|

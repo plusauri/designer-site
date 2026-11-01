@@ -21,7 +21,7 @@ tutilis-locale: en source
 
 <!--- α <lesson_body> -->
 This sample is the **paid-off housing** counterpart to Springfield. Use it with the contrast lesson
-**[Mortgage on vs paid off](/learn/mortgage_on_vs_paid_off)**, which puts the Springfield [[term:canvas]] beside this plan.
+**[Mortgage on vs paid off](/learn/mortgage_on_vs_paid_off)**, which puts the Springfield [[term:canvas]] beside this plan. It is a paid-off home retirement plan example, worked on a live sample.
 
 ---
 

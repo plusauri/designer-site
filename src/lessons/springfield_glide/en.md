@@ -20,7 +20,7 @@ tutilis-locale: en source
 -->
 
 <!--- α <lesson_body> -->
-A [[term:glide-path]] is a target mix of stocks, bonds and cash that changes over the years. You write it down once, and when the withdrawal strategy is **Glide [[term:rebalance]]**, every year's leftover cash and every year's shortfall are steered toward it. Under the default strategy, **Pro-rata**, the plan sells and invests in proportion to what it already holds, so whatever mix it starts with tends to stay.
+A [[term:glide-path]] is a target mix of stocks, bonds and cash that changes over the years. You write it down once, and when the withdrawal strategy is **Glide [[term:rebalance]]**, every year's leftover cash and every year's shortfall are steered toward it. Under the default strategy, **Pro-rata**, the plan sells and invests in proportion to what it already holds, so whatever mix it starts with tends to stay. This lesson compares Glide rebalance vs pro-rata withdrawals on one plan.
 
 This lesson's plan starts with far more in bonds than in stocks and carries a target that leans the other way. That gap is what the lesson is about. You will find where the target is set, read it, and then switch the strategy to see what following it does to the forecast.
 

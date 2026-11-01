@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Who inflation helps
 
-[[term:inflation|Inflation]] is often called pernicious, and people write about the ravages of inflation. A rise in prices does make a paycheck and a pile of saved cash buy less, and that harm is real. A debtor can benefit from the same rise. A debtor owes a fixed amount of cash in the future, and those dollars are worth less when they are paid back.
+[[term:inflation|Inflation]] is often called pernicious, and people write about the ravages of inflation. A rise in prices does make a paycheck and a pile of saved cash buy less, and that harm is real. A debtor can benefit from the same rise. A debtor owes a fixed amount of cash in the future, and those dollars are worth less when they are paid back. This lesson asks who benefits from inflation, and by how much.
 
 A rise in prices helps someone who is repaying a fixed loan with a paycheck that rises too, and it squeezes someone whose check rises more slowly than the grocery bill. A fall in prices turns the loan the other way when pay falls with prices. It leaves an indexed check alone when that check has a floor at zero.
 

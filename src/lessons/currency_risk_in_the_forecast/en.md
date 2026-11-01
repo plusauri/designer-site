@@ -7,7 +7,8 @@ tutilis-locale: en source
 Ines is retired in the United States and spends in dollars. Her income is a pension from the years
 she worked in Lisbon, paid in euros. Most of her savings sit in a ladder of British government
 bonds, in pounds, and the rest is a savings account in Tokyo, in yen. A modest US [[term:brokerage]]
-account is the only thing she owns that is priced in the currency she lives in.
+account is the only thing she owns that is priced in the currency she lives in. Her plan is a
+clear case of currency risk in retirement planning.
 
 This is a household whose retirement is a bet on three exchange rates, whether or not anyone
 thought of it that way. This lesson is about what a forecast can say about that bet, and about the
@@ -172,7 +173,7 @@ almost a third below where it started. The euro and the yen, with no stated spre
 it.
 
 Because two thirds of what Ines owns is pounds, that one belief takes the expected terminal net
-worth from a little under a million dollars to a little over half of one. Nothing in the plan
+worth from about a million dollars to a little over $600,000. Nothing in the plan
 changed but a single assumption about two countries' inflation, and the forecast moved by more than
 most edits to the plan itself would move it. You can read the path off `forecast.fx-path` for the
 expected forecast, and it is the cleanest way to check what a stated spread does before trusting a

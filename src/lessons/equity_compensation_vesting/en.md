@@ -9,7 +9,7 @@ both in the company's stock, both vesting a quarter at a time over four years af
 cliff. None of it is Alex's yet. A plan that counted it as wealth today would be counting shares
 that vanish if Alex leaves; a plan that ignored it would miss four years of income. This lesson
 shows the middle: unvested shares are a memo, and each vest is booked in its year as the wages it
-is.
+is. That is how equity compensation vesting reaches a plan, and RSU vesting is the simplest case.
 
 Open the [[nav:dossier]]. On the Bird's Eye, each grant has a row under **Assets** with no value
 beside it, and hovering the row raises the grant's card. In the desktop app the same cards sit under

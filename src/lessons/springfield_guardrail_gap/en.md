@@ -22,7 +22,8 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 On a well-funded plan, **[[term:guardrails|Guardrails]]** can look almost too kind: every study stays [[term:solvent]], **extra
 needed** is \$0, and the coverage strip stays green. That is honest math for a comfortable nest egg —
-and a weak place to *feel* what the tool is for.
+and a weak place to *feel* what the tool is for. The question underneath is the one behind most
+planning: how much do you need to retire?
 
 This lesson uses a **near-retire Springfield** household where the story is the opposite: the
 **coverage buffer fails** under the shared sandbox, the **min portfolio for coverage** table asks

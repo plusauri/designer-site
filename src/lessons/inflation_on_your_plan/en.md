@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Prices on your plan
 
-[[term:inflation|Inflation]] is a rise in the prices of the things a household buys. Prices rise when people try to buy more than is being produced, when making things costs more, or when people raise prices because they expect prices to rise. [The Reyes household](#canvas-dossier:reyes_prices) starts from a historic default for every growth rate on the plan. Those defaults are reasonable readings of the past. The future can differ from that history, and each rate on this plan is one you can read and one you can change.
+[[term:inflation|Inflation]] is a rise in the prices of the things a household buys. Prices rise when people try to buy more than is being produced, when making things costs more, or when people raise prices because they expect prices to rise. [The Reyes household](#canvas-dossier:reyes_prices) starts from a historic default for every growth rate on the plan. Those defaults are reasonable readings of the past. The future can differ from that history, and each rate on this plan is one you can read and one you can change. This lesson shows how to read and change inflation in a financial plan.
 
 Open the plan and [[term:hover|hover]] **Sam's college** on [[nav:cf-table]]. The card names that bill's **Cost growth**. Living expenses, Maya's wages, and the mortgage each carry a rate of their own, and the next section lists them beside the college card. A news story that quotes one inflation number is quoting one basket. This plan is Maya's own list.
 

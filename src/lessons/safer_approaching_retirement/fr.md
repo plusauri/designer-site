@@ -54,7 +54,7 @@ Transformations dessine maintenant le plan deux fois. Regardez la comparaison de
 
 [[img:safer-bs-gfc-8020]]
 
-*Reste à 80/20 avec la crise financière mondiale à partir de 2027. Les années de krach sont marquées sur l'axe des années du côté Modifié.*
+*[Reste à 80/20](#canvas-dossier:safer_stays_eighty_twenty) avec la crise financière mondiale à partir de 2027. Les années de krach sont marquées sur l'axe des années du côté Modifié.*
 
 En 2027, Morgan touche encore un salaire, et la petite perte de la première année de la crise se voit à peine. Sa profonde deuxième année tombe en 2028, la première année où Morgan vit du portefeuille, et le patrimoine net passe d'environ 1,58 million de dollars à environ 1,04 million de dollars. Il ne retrouve son niveau de 2027 qu'en 2032, et il ne rattrape jamais le plan qui n'a pas eu de krach.
 
@@ -62,20 +62,20 @@ Pour prendre du recul, passez l'épisode à 1929 et laissez le début en 2027 :
 
 [[img:safer-bs-1929-2027-8020]]
 
-*Reste à 80/20 avec le Grand Krach de 1929 à partir de 2027.*
+***Reste à 80/20** avec le Grand Krach de 1929 à partir de 2027.*
 
-La crise financière mondiale se rétablit dans les six années qu'elle rejoue. Le Grand Krach en rejoue seize, et il fait passer le plan à 80/20 de 1,5 million de dollars au départ à environ 460 000 $ à la fin de 2029. Le portefeuille ne se rétablit jamais, et le plan se retrouve à court d'argent en 2046. La section [Quelque chose de sûr à vendre](#something-safe-to-sell) revient sur cet épisode et y met à l'épreuve les plans plus prudents. Revenez à 2007 avant de continuer.
+La crise financière mondiale se rétablit dans les six années qu'elle rejoue. Le Grand Krach en rejoue seize, et il fait passer le plan à 80/20 de 1,5 million de dollars au départ à environ 470 000 $ à la fin de 2029. Le portefeuille ne se rétablit jamais, et le plan se retrouve à court d'argent en 2046. La section [Quelque chose de sûr à vendre](#something-safe-to-sell) revient sur cet épisode et y met à l'épreuve les plans plus prudents. Revenez à 2007 avant de continuer.
 
 Gardez maintenant le krach activé et déplacez son année de début. Ouvrez [[nav:bs-table]] sur 2055, la dernière année de la prévision, et suivez la ligne de patrimoine net du côté Modifié pendant que le curseur bouge. Le krach reste en vigueur lorsque vous changez de plan avec les puces au-dessus du canevas, vous pouvez donc lire la colonne de chaque plan sans le remettre en place. Voici le patrimoine net final pour les années de début qui méritent un regard :
 
 | Début du krach | Reste à 80/20 | Descend | Plancher de rente |
 |---|---:|---:|---:|
-| Pas de krach | 1,88 M$ | 1,47 M$ | 1,81 M$ |
-| **2027** | **1,25 M$** | **1,13 M$** | **1,32 M$** |
-| 2028 | 1,26 M$ | 1,13 M$ | 1,34 M$ |
-| 2029 | 1,29 M$ | 1,16 M$ | 1,37 M$ |
-| 2030 | 1,32 M$ | 1,18 M$ | 1,39 M$ |
-| 2033 | 1,38 M$ | 1,20 M$ | 1,42 M$ |
+| Pas de krach | 2,07 M$ | 1,66 M$ | 2,00 M$ |
+| **2027** | **1,44 M$** | **1,31 M$** | **1,51 M$** |
+| 2028 | 1,47 M$ | 1,33 M$ | 1,53 M$ |
+| 2029 | 1,49 M$ | 1,35 M$ | 1,55 M$ |
+| 2030 | 1,52 M$ | 1,36 M$ | 1,57 M$ |
+| 2033 | 1,58 M$ | 1,39 M$ | 1,61 M$ |
 
 Le pire début, dans chaque plan, est 2027, l'année avant la retraite, parce qu'il place l'année la plus profonde de la crise sur la première année sans salaire. Les débuts plus tardifs font encore mal, et un peu moins chaque année, parce que le portefeuille a eu plus de temps pour croître et que la Social Security, qui commence en 2030, porte une plus grande part des dépenses. À son pire placement, le krach coûte au plan à 80/20 environ un tiers de son patrimoine net final.
 
@@ -107,15 +107,15 @@ Si vous suivez, cliquez ensuite sur [Plancher de rente](#canvas-dossier:safer_in
 
 La rente se trouve à l'origine. Elle n'a pas de volatilité, et un versement constant n'a pas de croissance. La Social Security se trouve à côté, sur l'axe vertical, sans volatilité et avec une croissance égale à son ajustement au coût de la vie. Le salaire et les dépenses de vie apparaissent eux aussi comme des flux de trésorerie.
 
-Le plan de rente réduit donc le risque d'une autre façon que le plan Descend. Il sort 300 000 $ du portefeuille vers un produit proche du cash, avec presque pas de risque et presque pas de croissance, et il laisse le reste du portefeuille exactement aussi risqué qu'il l'était. Le graphique avec Flux de trésorerie activé montre les deux moitiés à la fois.
+Le plan de rente réduit donc le risque d'une autre façon que le plan **Descend**. Il sort 300 000 $ du portefeuille vers un produit proche du cash, avec presque pas de risque et presque pas de croissance, et il laisse le reste du portefeuille exactement aussi risqué qu'il l'était. Le graphique avec Flux de trésorerie activé montre les deux moitiés à la fois.
 
 ## Descendre sur le graphique {#moving-down-the-chart}
 
-Descendre sur le graphique a un coût, et ce coût est le patrimoine attendu. Sans krach sur la trajectoire [[term:gmf|GMF]], le plan Descend finit à 1,47 million de dollars, contre 1,88 million pour le 80/20. L'argent placé en bons du Trésor se capitalise plus lentement que l'argent placé en actions, et l'écart s'accumule sur trois décennies.
+Descendre sur le graphique a un coût, et ce coût est le patrimoine attendu. Sans krach sur la trajectoire [[term:gmf|GMF]], le plan [Descend](#canvas-dossier:safer_moves_down) finit à 1,66 million de dollars, contre 2,07 millions pour le 80/20. L'argent placé en bons du Trésor se capitalise plus lentement que l'argent placé en actions, et l'écart s'accumule sur trois décennies.
 
 <aside class="lesson-saying" data-saying="free-lunch">
 
-Sur la trajectoire GMF, le plan Descend paie environ 410 000 $ de patrimoine final pour ses issues défavorables plus sûres. Le reste de cette section montre ce que cet argent achète.
+Sur la trajectoire GMF, le plan **Descend** paie environ 410 000 $ de patrimoine final pour ses issues défavorables plus sûres. Le reste de cette section montre ce que cet argent achète.
 
 </aside>
 
@@ -126,19 +126,19 @@ Ce que le mouvement achète apparaît à travers de nombreux avenirs possibles. 
 
 [[img:safer-nw-8020]]
 
-*Reste à 80/20. La dispersion est large, avec une longue queue de très bons résultats vers la droite.*
+*[Reste à 80/20](#canvas-dossier:safer_stays_eighty_twenty). La dispersion est large, avec une longue queue de très bons résultats vers la droite.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:safer-nw-down]]
 
-*Descend. La dispersion est plus étroite, et moins de trajectoires finissent sous zéro.*
+***Descend**. La dispersion est plus étroite, et moins de trajectoires finissent sous zéro.*
 
 </div>
 </div>
 
-Le plan à 80/20 réussit sur environ 83 % des trajectoires. Sa [[term:median]] de patrimoine net final est d'environ 2,12 millions de dollars, et son résultat du mauvais dixième est d'environ 500 000 $ de dette, ce qui veut dire que l'argent s'est épuisé des années avant la fin du plan. Le plan Descend réussit sur environ 90 % des trajectoires. Sa médiane est plus basse, à environ 1,78 million de dollars, mais son résultat du mauvais dixième n'est que d'environ 60 000 $ de dette.
+Le plan à 80/20 réussit sur environ 85 % des trajectoires. Sa [[term:median]] de patrimoine net final est d'environ 2,30 millions de dollars, et son résultat du mauvais dixième est d'environ 350 000 $ de dette, ce qui veut dire que l'argent s'est épuisé des années avant la fin du plan. Le plan **Descend** réussit sur environ 92 % des trajectoires. Sa médiane est plus basse, à environ 1,95 million de dollars, mais dans son mauvais dixième l'argent tient, et il reste environ 80 000 $ à la fin.
 
 C'est l'échange sous sa forme la plus simple. Descendre sur le graphique abandonne une part des bons résultats pour rétrécir les mauvais. Un retraité qui a déjà assez épargné se soucie bien davantage des mauvais résultats. Il n'y a pas de seconde carrière pour s'en remettre, tandis que les bons résultats changent surtout la taille de ce qui sera transmis.
 
@@ -154,13 +154,13 @@ Regardez d'abord la comparaison de bilan. C'est le moyen le plus rapide de se re
 
 [[img:safer-bs-1929-8020]]
 
-*Reste à 80/20, tel qu'il est rédigé à gauche et avec le krach de 1929 à partir de 2028 à droite.*
+*[Reste à 80/20](#canvas-dossier:safer_stays_eighty_twenty), tel qu'il est rédigé à gauche et avec le krach de 1929 à partir de 2028 à droite.*
 
 [[img:safer-bs-1929-down]]
 
-*Descend, la même comparaison.*
+*[Descend](#canvas-dossier:safer_moves_down), la même comparaison.*
 
-Sur la trajectoire GMF, le patrimoine net du plan à 80/20 passe d'environ 1,69 million de dollars à la fin de 2027 à environ 450 000 $ à la fin de 2030, une chute de près des trois quarts. Le plan Descend passe d'environ 1,68 million de dollars à environ 780 000 $, un peu plus de la moitié. Aucun des deux plans ne remonte jusqu'à sa ligne Original. Le plan à 80/20 se retrouve à court d'argent en 2046, quand Morgan a 83 ans, et le plan Descend en 2051, cinq ans plus tard.
+Sur la trajectoire GMF, le patrimoine net du plan à 80/20 passe d'environ 1,69 million de dollars à la fin de 2027 à environ 460 000 $ à la fin de 2030, une chute de près des trois quarts. Le plan **Descend** passe d'environ 1,68 million de dollars à environ 790 000 $, un peu plus de la moitié. Aucun des deux plans ne remonte jusqu'à sa ligne Original. Le plan à 80/20 se retrouve à court d'argent en 2047, quand Morgan a 84 ans, et le plan **Descend** en 2052, cinq ans plus tard.
 
 Pour voir d'où vient la différence, ouvrez [[nav:si-table]] sur 2031. À cette date, un dollar d'actions du début de 2028 vaut environ 52 cents, même après une année de rebond de 140 %.
 
@@ -169,14 +169,14 @@ Pour voir d'où vient la différence, ouvrez [[nav:si-table]] sur 2031. À cette
 
 [[img:safer-sales-1929-8020]]
 
-*Reste à 80/20 en 2031. Après l'année de rebond, le fonds d'actions est revenu au-dessus de sa cible de 80 %, donc le plan le vend depuis les deux comptes.*
+***Reste à 80/20** en 2031. Après l'année de rebond, le fonds d'actions est revenu au-dessus de sa cible de 80 %, donc le plan le vend depuis les deux comptes.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:safer-sales-1929-down]]
 
-*Descend en 2031. Le fonds d'actions est encore sous sa cible, donc aucune action n'est vendue et l'année est payée avec les bons du Trésor, les TIPS et les bons du Trésor à court terme.*
+***Descend** en 2031. Le fonds d'actions est encore sous sa cible, donc aucune action n'est vendue et l'année est payée avec les bons du Trésor, les TIPS et les bons du Trésor à court terme.*
 
 </div>
 </div>
@@ -185,15 +185,15 @@ Année après année, la différence est grande :
 
 | Plan | Premières années où il vend des actions | Actions vendues, 2028–2038 |
 |---|---|---:|
-| Reste à 80/20 | Un peu en 2028 et 2029, puis chaque année à partir de 2031 | environ 515 000 $ |
-| Descend | Un peu en 2028, puis à partir de 2033 | environ 250 000 $ |
-| Plancher de rente | Un peu en 2028 et 2029, puis chaque année à partir de 2031 | environ 340 000 $ |
+| Reste à 80/20 | Un peu en 2028 et 2029, puis chaque année à partir de 2031 | environ 470 000 $ |
+| Descend | Aucune avant 2033 | environ 210 000 $ |
+| Plancher de rente | Un peu en 2028 et 2029, puis chaque année à partir de 2031 | environ 295 000 $ |
 
-Les plans à 80/20 et Descend suivent la même règle, qui vend ce qui se trouve au-dessus de sa cible. La cible du plan à 80/20 est surtout des actions, donc la première bonne année ramène les actions au-dessus d'elle, et la règle commence à vendre des actions alors qu'elles valent encore environ la moitié de ce qu'elles valaient en 2028. La cible du plan Descend détient beaucoup moins d'actions, il paie donc les cinq premières années du krach presque entièrement avec ses positions sûres, les années où les actions valaient le moins. Il vend environ 11 000 $ d'actions en 2028, lorsque la facture de l'année est plus grande que le montant dont ses positions sûres dépassent leur cible, puis plus rien du tout jusqu'en 2033. Ses fonds du Trésor n'ont pas chuté avec le marché, et ses TIPS et ses bons du Trésor à court terme ont gardé leur valeur. Lorsqu'il vend enfin des actions, il en vend moins de la moitié de ce que vend le plan à 80/20.
+Les plans à 80/20 et **Descend** suivent la même règle, qui vend ce qui se trouve au-dessus de sa cible. La cible du plan à 80/20 est surtout des actions, donc la première bonne année ramène les actions au-dessus d'elle, et la règle commence à vendre des actions alors qu'elles valent encore environ la moitié de ce qu'elles valaient en 2028. La cible du plan **Descend** détient beaucoup moins d'actions, il paie donc les cinq premières années du krach entièrement avec ses positions sûres, les années où les actions valaient le moins. Il ne vend aucune action jusqu'en 2033. Ses fonds du Trésor n'ont pas chuté avec le marché, et ses TIPS et ses bons du Trésor à court terme ont gardé leur valeur. Lorsqu'il vend enfin des actions, il en vend moins de la moitié de ce que vend le plan à 80/20.
 
 Le plan de rente vend des actions les mêmes années que le plan à 80/20, parce que le reste de son portefeuille est encore à 80/20. Il en vend environ un tiers de moins au total, parce que la rente paie une partie de la facture de chaque année.
 
-Aucun des trois plans n'est sûr dans un krach aussi profond et aussi long que celui de 1929, au niveau de dépenses de Morgan. Le plan à 80/20 réussit sur environ 2 % des trajectoires avec ce krach à la retraite, et les deux autres sur environ 12 à 14 %. Les plans plus prudents échouent moins souvent, et un krach de cette sorte est une raison de prévoir des dépenses que l'on peut réduire. La leçon [Le moment d'un krach](/learn/sequence_of_returns_crash_timing) en dit plus sur la façon dont Transformations place un krach.
+Aucun des trois plans n'est sûr dans un krach aussi profond et aussi long que celui de 1929, au niveau de dépenses de Morgan. Le plan à 80/20 réussit sur environ 5 % des trajectoires avec ce krach à la retraite, **Plancher de rente** sur environ 19 % et **Descend** sur environ 23 %. Les plans plus prudents échouent moins souvent, et un krach de cette sorte est une raison de prévoir des dépenses que l'on peut réduire. La leçon [Le moment d'un krach](/learn/sequence_of_returns_crash_timing) en dit plus sur la façon dont Transformations place un krach.
 
 ## Un plancher de revenu {#an-income-floor}
 
@@ -216,7 +216,7 @@ L'outil **Rente** de la barre du bas est un brouillon pour la même décision. I
 
 Comme l'a montré [Lire le graphique de risque](#read-the-risk-chart), la rente ne déplace pas l'étoile du portefeuille. Elle se trouve à l'origine du graphique, en tant que flux de trésorerie. Le risque n'a pas disparu. Il est sorti du portefeuille pour entrer dans une promesse d'assureur.
 
-L'effet sur le plan est différent de celui du plan Descend. Le plan de rente réussit sur environ 88 % des trajectoires, ce qui est proche de Descend. Son patrimoine net final médian est d'environ 2,01 millions de dollars, bien plus proche de celui du plan à 80/20. La rente couvre une partie des dépenses de chaque année, le plan vend donc moins, et le portefeuille restant peut garder davantage de ses actions.
+L'effet sur le plan est différent de celui du plan [Descend](#canvas-dossier:safer_moves_down). Le plan de rente réussit sur environ 90 % des trajectoires, ce qui est proche de **Descend**. Son patrimoine net final médian est d'environ 2,21 millions de dollars, bien plus proche de celui du plan à 80/20. La rente couvre une partie des dépenses de chaque année, le plan vend donc moins, et le portefeuille restant peut garder davantage de ses actions.
 
 Ce résultat a des conditions. La prévision suppose que Morgan vit jusqu'à 93 ans, et la rente verse davantage plus son titulaire vit longtemps. Les acheteurs qui meurent tôt laissent de l'argent dans le pool de l'assureur, et ceux qui vivent longtemps le collectent : c'est de là que vient le versement élevé. Si Morgan mourait à 70 ans, le plan aurait payé 300 000 $ pour environ 120 000 $ de revenu. Les 300 000 $ ont aussi disparu du bilan le jour de l'achat. On ne peut pas les vendre en cas d'urgence, et ils ne passent pas aux héritiers.
 
@@ -238,7 +238,7 @@ L'intérêt de descendre sur le graphique est de détenir des actifs dont les ri
 
 Plusieurs autres mouvements courants sont plus faciles à juger une fois qu'on les voit sur le même graphique.
 
-**Une échelle d'obligations** est un ensemble d'obligations qui arrivent à échéance l'une après l'autre, une pour chaque année de dépenses. Une échelle de TIPS verse chaque année un montant connu d'argent ajusté de l'inflation, tant que chaque obligation est détenue jusqu'à son échéance. Le plan Descend approche une échelle avec ses fonds de TIPS et de bons du Trésor à court terme, qui se trouvent dans le même coin du graphique. Tutilis peut détenir une obligation directement et verse son coupon chaque année, mais la prévision ne ramène pas encore le prix d'une obligation à sa valeur faciale lorsqu'elle arrive à échéance, donc une vraie échelle est montrée ici avec des fonds.
+**Une échelle d'obligations** est un ensemble d'obligations qui arrivent à échéance l'une après l'autre, une pour chaque année de dépenses. Une échelle de TIPS verse chaque année un montant connu d'argent ajusté de l'inflation, tant que chaque obligation est détenue jusqu'à son échéance. Le plan [Descend](#canvas-dossier:safer_moves_down) approche une échelle avec ses fonds de TIPS et de bons du Trésor à court terme, qui se trouvent dans le même coin du graphique. Tutilis peut détenir une obligation directement et verse son coupon chaque année, mais la prévision ne ramène pas encore le prix d'une obligation à sa valeur faciale lorsqu'elle arrive à échéance, donc une vraie échelle est montrée ici avec des fonds.
 
 **Les actions à dividendes** sont encore des actions. Un fonds de sociétés à fort dividende se trouve près du fonds S&P 500 sur le graphique, et dans un krach les dividendes sont coupés en même temps que les prix. Les sociétés du S&P 500 ont réduit leurs dividendes d'environ un cinquième de 2008 à 2009. Un dividende ne déplace pas le portefeuille vers le cash. La leçon [Trop d'actions ? Cessez de réinvestir](/learn/too_much_equity_stop_reinvesting) montre un autre usage des dividendes : les prendre en cash au lieu de les réinvestir, ce qui abaisse lentement la part d'actions.
 
@@ -252,7 +252,7 @@ Plusieurs autres mouvements courants sont plus faciles à juger une fois qu'on l
 
 Wade Pfau a beaucoup écrit sur cette question. Dans *Safety-First Retirement Planning* (2019) et le *Retirement Planning Guidebook* (2021, deuxième édition 2023), il décrit deux façons de penser le revenu de retraite. Une approche fondée sur les probabilités garde un portefeuille diversifié et fixe un taux de dépenses qu'il peut probablement soutenir. Une approche de sécurité d'abord construit d'abord un plancher de revenu fiable, à partir de la Social Security, des pensions, des rentes et des échelles d'obligations, assez grand pour couvrir les dépenses essentielles, puis investit le reste pour la croissance.
 
-Pfau soutient qu'une rente de revenu peut prendre la place d'une partie d'une allocation en obligations. Les obligations et les rentes fournissent toutes deux un revenu régulier, mais la rente ajoute une mutualisation du risque, qui paie davantage à ceux qui vivent longtemps. C'est le schéma du plan Plancher de rente de Morgan, où la rente couvre une partie des dépenses et le reste du portefeuille garde ses actions.
+Pfau soutient qu'une rente de revenu peut prendre la place d'une partie d'une allocation en obligations. Les obligations et les rentes fournissent toutes deux un revenu régulier, mais la rente ajoute une mutualisation du risque, qui paie davantage à ceux qui vivent longtemps. C'est le schéma du plan [Plancher de rente](#canvas-dossier:safer_income_floor) de Morgan, où la rente couvre une partie des dépenses et le reste du portefeuille garde ses actions.
 
 Pfau et Michael Kitces, dans *Reducing Retirement Risk with a Rising Equity Glide Path* (Journal of Financial Planning, 2014), ont trouvé que le risque de séquence se concentre dans les années autour de la date de retraite. Un portefeuille qui détient le moins d'actions à la retraite et en ajoute ensuite a survécu plus souvent qu'un portefeuille qui gardait une part constante. C'est pourquoi le conseil de devenir plus prudent vise les années juste avant la date de retraite.
 

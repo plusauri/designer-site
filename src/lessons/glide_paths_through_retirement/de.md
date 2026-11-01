@@ -12,7 +12,7 @@ Ein [[term:glide-path|Gleitpfad]] ist eine Zielmischung, die sich mit der Zeit �
 - [Konstantes 60/40](#canvas-dossier:glide_constant_sixty_forty) hält eine Mischung für den ganzen Plan, ebenfalls im IRA rebalanciert.
 - [Nur Steuerung](#canvas-dossier:glide_tent_steering_only) hat dasselbe Anleihenzelt, das Kästchen ist nicht angekreuzt. Der Pfad ist aufgeschrieben, aber das IRA handelt nie, um ihm zu folgen.
 
-**Ein Glide-Pfad ist ein Plan für Geschäfte, die Sie selbst ausführen müssen.** Wenn das Anleihenzelt in dieser Lektion ein besseres Ergebnis zeigt, setzt dieses Ergebnis voraus, dass Morgan sich jedes Jahr im IRA anmeldet und Fonds verkauft oder kauft, um die Zielmischung zu treffen. Tutilis kann diese Geschäfte nicht ausführen. Werden sie nicht ausgeführt, verhält sich das wirkliche Portfolio wie der Plan *Nur Steuerung*, und dieser Plan schneidet in jedem Crash, den diese Lektion prüft, schlechter ab als jeder der beiden anderen. Der Abschnitt [Nur wenn Sie die Geschäfte ausführen](#only-if-you-trade) kommt darauf zurück.
+**Ein Glide-Pfad ist ein Plan für Geschäfte, die Sie selbst ausführen müssen.** Wenn das Anleihenzelt in dieser Lektion ein besseres Ergebnis zeigt, setzt dieses Ergebnis voraus, dass Morgan sich jedes Jahr im IRA anmeldet und Fonds verkauft oder kauft, um die Zielmischung zu treffen. Tutilis kann diese Geschäfte nicht ausführen. Werden sie nicht ausgeführt, verhält sich das wirkliche Portfolio wie der Plan **Nur Steuerung**, und dieser Plan schneidet in jedem Crash, den diese Lektion prüft, schlechter ab als jeder der beiden anderen. Der Abschnitt [Nur wenn Sie die Geschäfte ausführen](#only-if-you-trade) kommt darauf zurück.
 
 ## Was Sie lernen {#what-you-will-learn}
 
@@ -59,14 +59,14 @@ Das Kästchen unter dem Raster, **In steuerbegünstigten Konten rebalancieren**,
 
 [[img:glide-paths-editor-constant|control]]
 
-*Das konstante 60/40 hat eine Spalte, und das Kästchen ist angekreuzt.*
+*Das [konstante 60/40](#canvas-dossier:glide_constant_sixty_forty) hat eine Spalte, und das Kästchen ist angekreuzt.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-editor-steering|control]]
 
-*Nur Steuerung hat dasselbe Zelt wie der erste Plan, und das Kästchen ist nicht angekreuzt.*
+*[Nur Steuerung](#canvas-dossier:glide_tent_steering_only) hat dasselbe Zelt wie der erste Plan, und das Kästchen ist nicht angekreuzt.*
 
 </div>
 </div>
@@ -84,19 +84,19 @@ Um einen Pfad in Ihrem eigenen Plan festzulegen, öffnen Sie [[nav:assumptions]]
 
 Ohne das Kästchen steuert ein Glide-Pfad nur Geld, das sich ohnehin bewegt. Das übrige Bargeld jedes Jahres kauft, was unter seinem Ziel liegt, und die Lücke jedes Jahres wird aus dem verkauft, was darüber liegt. Das reicht, um einem Pfad zu folgen, der Aktien hinzunimmt. Aktien wachsen gewöhnlich schneller als Anleihen, und solange Aktien unter ihrem Ziel liegen, werden die Ausgaben jedes Jahres aus Anleihen verkauft, also schieben beide die Mischung in die Richtung, in die der Pfad geht. Es reicht nicht, um einem Pfad zu folgen, der Aktien wegnimmt.
 
-Öffnen Sie [[nav:si-chart]] und schalten Sie die Kopfzeile von **Bewegungen** auf **Allokationen**. Jede Anlageklasse bekommt einen Streifen mit einem Balken pro Jahr, und ein dünner schwarzer Balken neben jedem Jahr markiert das Ziel des Pfads. Hier ist der Plan Nur Steuerung:
+Öffnen Sie [[nav:si-chart]] und schalten Sie die Kopfzeile von **Bewegungen** auf **Allokationen**. Jede Anlageklasse bekommt einen Streifen mit einem Balken pro Jahr, und ein dünner schwarzer Balken neben jedem Jahr markiert das Ziel des Pfads. Hier ist der Plan [Nur Steuerung](#canvas-dossier:glide_tent_steering_only):
 
 [[jump:glide-path|output__forecaster__forecaster.forecast-detail__si-chart__si-chart.allocations]]
 
 [[img:glide-paths-alloc-steering]]
 
-*Bei Nur Steuerung bleiben die Aktienbalken 2028 im Ruhestand nahe 76 Prozent, während die schwarzen Zielbalken auf 40 Prozent sinken.*
+*Bei **Nur Steuerung** bleiben die Aktienbalken 2028 im Ruhestand nahe 76 Prozent, während die schwarzen Zielbalken auf 40 Prozent sinken.*
 
 Das Ziel fällt in zwei Jahren um 37 Punkte, und das Portfolio bewegt sich kaum. Morgans Gehalt deckt die Ausgaben 2027 noch, also muss nichts verkauft werden, und das übrige Bargeld ist klein neben $1.5 million. Nach dem Ruhestand kommen die jährlichen Verkäufe zuerst aus Aktien, weil Aktien die Klasse sind, die am weitesten über ihrem Ziel liegt, und der Aktienanteil fällt nur um etwa einen Punkt im Jahr. Er erreicht das Ziel erst Anfang der 2040er-Jahre, weil das Ziel ihm entgegen gestiegen ist. Hier ist derselbe Pfad mit angekreuztem Kästchen:
 
 [[img:glide-paths-alloc-tent]]
 
-*Anleihenzelt, Kästchen angekreuzt. Der Aktienbalken jedes Jahres sitzt auf seinem schwarzen Zielbalken, hinunter auf 40 Prozent 2028 und zurück auf 70 Prozent bis 2043.*
+*[Anleihenzelt](#canvas-dossier:glide_bond_tent), Kästchen angekreuzt. Der Aktienbalken jedes Jahres sitzt auf seinem schwarzen Zielbalken, hinunter auf 40 Prozent 2028 und zurück auf 70 Prozent bis 2043.*
 
 Der Unterschied ist ein Geschäft im IRA. [[nav:si-table]] für 2027 zeigt es. Der Plan verkauft etwa $322,000 des S&P-500-Fonds im IRA und kauft dort denselben Betrag des Treasury-Fonds, und beide Zeilen nennen **Rebalancing · Traditional IRA** als Grund:
 
@@ -105,14 +105,14 @@ Der Unterschied ist ein Geschäft im IRA. [[nav:si-table]] für 2027 zeigt es. D
 
 [[img:glide-paths-si-tent-2027]]
 
-*Anleihenzelt, 2027. Das IRA tauscht Aktien gegen Treasuries. Es verlässt kein Geld das Konto.*
+***Anleihenzelt**, 2027. Das IRA tauscht Aktien gegen Treasuries. Es verlässt kein Geld das Konto.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-si-steering-2027]]
 
-*Nur Steuerung, 2027. Nichts wird verkauft, und der Pfad bewegt nur den kleinen Betrag an übrigem Bargeld.*
+***Nur Steuerung**, 2027. Nichts wird verkauft, und der Pfad bewegt nur den kleinen Betrag an übrigem Bargeld.*
 
 </div>
 </div>
@@ -129,7 +129,7 @@ Das Anleihenzelt hat zwei Seiten, und das Kästchen lässt beide geschehen. Auf 
 
 [[img:glide-paths-si-tent-2035]]
 
-*Anleihenzelt, 2035. Die Ausgaben des Jahres werden vor allem aus Treasuries verkauft, und ein kleiner Tausch im IRA kauft Aktien.*
+*[Anleihenzelt](#canvas-dossier:glide_bond_tent), 2035. Die Ausgaben des Jahres werden vor allem aus Treasuries verkauft, und ein kleiner Tausch im IRA kauft Aktien.*
 
 2035 liegt das Ziel bei etwa 54 Prozent Aktien. Der größte Teil der Ausgaben des Jahres kommt aus den Treasury-Fonds, die die Klasse über dem Ziel sind, also schiebt der Verbrauch selbst die Mischung hin zu mehr Aktien. Das IRA gleicht den Rest mit einem kleinen Tausch aus. Auf der steigenden Seite ist der Pfad leicht zu halten, weil die Entnahmen den größten Teil der Arbeit tun. Die fallende Seite ist die, auf der die Geschäfte groß sind.
 
@@ -137,7 +137,7 @@ Der konstante Plan tut dasselbe um einen festen Punkt. Er rebalanciert jedes Jah
 
 [[img:glide-paths-alloc-constant]]
 
-*Konstantes 60/40. Die Aktienbalken sitzen jedes Jahr auf dem Ziel von 60 Prozent.*
+*[Konstantes 60/40](#canvas-dossier:glide_constant_sixty_forty). Die Aktienbalken sitzen jedes Jahr auf dem Ziel von 60 Prozent.*
 
 ## Wenn ein Crash kommt {#when-a-crash-comes}
 
@@ -154,73 +154,73 @@ Das Platzen der Dotcom-Blase spielt sieben Jahre Aktienrenditen nach, wobei der 
 
 [[img:glide-paths-bs-dotcom-tent]]
 
-*Das Anleihenzelt mit dem Platzen der Dotcom-Blase ab 2028.*
+*Das [Anleihenzelt](#canvas-dossier:glide_bond_tent) mit dem Platzen der Dotcom-Blase ab 2028.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-bs-dotcom-steering]]
 
-*Nur Steuerung mit demselben Crash.*
+*[Nur Steuerung](#canvas-dossier:glide_tent_steering_only) mit demselben Crash.*
 
 </div>
 </div>
 
-Die beiden Pläne haben denselben Pfad im selben Raster stehen. Das Anleihenzelt geht mit 40 Prozent Aktien in den Crash und fällt 2030 auf etwa $1.37 million. Der Plan Nur Steuerung geht mit 76 Prozent Aktien hinein und fällt auf etwa $1.10 million. Das Zelt beendet den Plan mit etwa $1.05 million, der Plan Nur Steuerung mit etwa $210,000, ein Fünftel so viel. Der konstante 60/40-Plan liegt zwischen ihnen und endet mit etwa $840,000.
+Die beiden Pläne haben denselben Pfad im selben Raster stehen. Das Anleihenzelt geht mit 40 Prozent Aktien in den Crash und fällt 2030 auf etwa $1.38 million. Der Plan **Nur Steuerung** geht mit 76 Prozent Aktien hinein und fällt auf etwa $1.11 million. Das Zelt beendet den Plan mit etwa $1.25 million, der Plan **Nur Steuerung** mit etwa $410,000, etwa ein Drittel so viel. Der [konstante 60/40](#canvas-dossier:glide_constant_sixty_forty)-Plan liegt zwischen ihnen und endet mit etwa $1.03 million.
 
-Das Zelt handelt auch durch den Crash hindurch weiter. Wenn Aktien fallen, sinkt der Aktienanteil unter das Ziel, und der Tausch im IRA kauft Aktien zu niedrigen Preisen wieder bis zum Ziel. 2030, im tiefsten Jahr des Crashs, verkauft der Plan überhaupt keine Aktien. Er verkauft Treasuries im IRA, zahlt die Ausgaben des Jahres daraus und nutzt etwa $141,000 des Erlöses, um den S&P-500-Fonds zu kaufen:
+Das Zelt handelt auch durch den Crash hindurch weiter. Wenn Aktien fallen, sinkt der Aktienanteil unter das Ziel, und der Tausch im IRA kauft Aktien zu niedrigen Preisen wieder bis zum Ziel. 2030, im tiefsten Jahr des Crashs, verkauft der Plan überhaupt keine Aktien. Er verkauft Treasuries im IRA, zahlt die Ausgaben des Jahres daraus und nutzt etwa $148,000 des Erlöses, um den S&P-500-Fonds zu kaufen:
 
 [[img:glide-paths-si-dotcom-tent-2030]]
 
-*Anleihenzelt 2030 mit dem Platzen der Dotcom-Blase ab 2028. Treasuries zahlen das Jahr und kaufen Aktien am Tief.*
+***Anleihenzelt** 2030 mit dem Platzen der Dotcom-Blase ab 2028. Treasuries zahlen das Jahr und kaufen Aktien am Tief.*
 
 Ein Crash auf einem Pfad ist eine einzelne Geschichte. Hier sind dieselben Pläne über 1.000 Marktpfade, jeder Crash ab 2028 nachgespielt, als Anteil der Pfade, die gelingen:
 
 | Crash ab 2028 | Konstantes 60/40 | Anleihenzelt | Nur Steuerung |
 |---|---:|---:|---:|
-| Keiner | 88 % | 89 % | 83 % |
-| Platzen der Dotcom-Blase (2000) | 81 % | 85 % | 63 % |
-| Bärenmarkt der Ölkrise (1973) | 83 % | 85 % | 70 % |
-| Globale Finanzkrise (2007) | 92 % | 94 % | 78 % |
-| Großer Börsenkrach (1929) | 32 % | 65 % | 1 % |
+| Keiner | 90 % | 91 % | 86 % |
+| Platzen der Dotcom-Blase (2000) | 87 % | 89 % | 70 % |
+| Bärenmarkt der Ölkrise (1973) | 86 % | 88 % | 76 % |
+| Globale Finanzkrise (2007) | 94 % | 95 % | 83 % |
+| Großer Börsenkrach (1929) | 43 % | 74 % | 3 % |
 
-Das Anleihenzelt schlägt den konstanten Plan in jedem Crash, und am deutlichsten im tiefsten. Die Zeile der globalen Finanzkrise liegt höher als die Zeile ohne Crash, weil diese Wiederholung mit einer starken Erholung endet, die jeden Plan hebt. Die Spalte Nur Steuerung ist in jeder Zeile die niedrigste.
+Das Anleihenzelt schlägt den konstanten Plan in jedem Crash, und am deutlichsten im tiefsten. Für den konstanten Plan und das Zelt liegt die Zeile der globalen Finanzkrise höher als die Zeile ohne Crash, weil diese Wiederholung mit einer starken Erholung endet. Der Plan **Nur Steuerung** geht mit fast 76 Prozent Aktien in diesen Crash und endet etwas niedriger als ohne Crash. Die Spalte **Nur Steuerung** ist in jeder Zeile die niedrigste.
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">
 
 [[img:glide-paths-nw-dotcom-constant]]
 
-*Konstantes 60/40, 1.000 Pfade mit dem Platzen der Dotcom-Blase ab 2028.*
+***Konstantes 60/40**, 1.000 Pfade mit dem Platzen der Dotcom-Blase ab 2028.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-nw-dotcom-tent]]
 
-*Anleihenzelt, derselbe Crash, auf derselben Achse.*
+***Anleihenzelt**, derselbe Crash, auf derselben Achse.*
 
 </div>
 </div>
 
 ## Was das Zelt kostet {#what-the-tent-costs}
 
-Wenn die Märkte freundlich sind, schließt ein höherer Aktienanteil reicher ab. Auf dem erwarteten Pfad ohne Crash, den Tutilis als GMF zeichnet, endet der Plan Nur Steuerung mit etwa $1.70 million, der konstante 60/40-Plan mit etwa $1.55 million und das Anleihenzelt mit etwa $1.49 million. 40 Prozent Aktien in den ersten Ruhestandsjahren zu halten gibt etwas Wachstum auf, und das Zelt endet etwa 4 Prozent unter dem konstanten Plan.
+Wenn die Märkte freundlich sind, schließt ein höherer Aktienanteil reicher ab. Auf dem erwarteten Pfad ohne Crash, den Tutilis als GMF zeichnet, endet der Plan [Nur Steuerung](#canvas-dossier:glide_tent_steering_only) mit etwa $1.90 million, der [konstante 60/40](#canvas-dossier:glide_constant_sixty_forty)-Plan mit etwa $1.75 million und das Anleihenzelt mit etwa $1.68 million. 40 Prozent Aktien in den ersten Ruhestandsjahren zu halten gibt etwas Wachstum auf, und das Zelt endet etwa 4 Prozent unter dem konstanten Plan.
 
-Die Abwägung ist dieselbe wie in [Mehr Sicherheit, wenn der Ruhestand näher rückt](/learn/safer_approaching_retirement). Das Zelt gibt im durchschnittlichen Zukunftsbild ein wenig auf, um in den schlechten viel besser dazustehen. Über 1.000 Pfade ohne Crash gelingt es noch etwas öfter als der konstante Plan, etwa 89 Prozent gegen 88 Prozent, weil die schlechten Pfade gegen den Erfolg zählen und die guten nicht.
+Die Abwägung ist dieselbe wie in [Mehr Sicherheit, wenn der Ruhestand näher rückt](/learn/safer_approaching_retirement). Das Zelt gibt im durchschnittlichen Zukunftsbild ein wenig auf, um in den schlechten viel besser dazustehen. Über 1.000 Pfade ohne Crash gelingt es noch etwas öfter als der konstante Plan, etwa 91 Prozent gegen 90 Prozent, weil die schlechten Pfade gegen den Erfolg zählen und die guten nicht.
 
 ## Nur wenn Sie die Geschäfte ausführen {#only-if-you-trade}
 
 Jedes Ergebnis dieser Lektion für das Anleihenzelt und den konstanten Plan setzt voraus, dass die Geschäfte in [[nav:si-table]] wirklich stattfinden. 2027 heißt das, dass Morgan etwa $322,000 des S&P-500-Fonds im IRA verkauft und damit den Treasury-Fonds kauft. In einem Crashjahr heißt das, Aktien zu kaufen, während die Nachrichten am schlimmsten sind. Tutilis bildet diese Geschäfte ab. Es kann sie nicht ausführen, und Ihr Plan auch nicht.
 
-Wenn die Geschäfte nicht ausgeführt werden, ist das wirkliche Portfolio der Plan *Nur Steuerung*. Der Pfad steht noch im Plan, und das wirkliche Portfolio folgt ihm nicht. Wie die Crashtabelle zeigt, ist das schlechter, als nie einen Pfad gehabt zu haben und 60/40 zu halten, weil das Portfolio nahe 76 Prozent Aktien in den Ruhestand geht und dann Aktien am Tief verkauft, um jedes Jahr zu bezahlen.
+Wenn die Geschäfte nicht ausgeführt werden, ist das wirkliche Portfolio der Plan [Nur Steuerung](#canvas-dossier:glide_tent_steering_only). Der Pfad steht noch im Plan, und das wirkliche Portfolio folgt ihm nicht. Wie die Crashtabelle zeigt, ist das schlechter, als nie einen Pfad gehabt zu haben und 60/40 zu halten, weil das Portfolio nahe 76 Prozent Aktien in den Ruhestand geht und dann Aktien am Tief verkauft, um jedes Jahr zu bezahlen.
 
 Ein paar Dinge machen es wahrscheinlicher, dass die Geschäfte stattfinden:
 
 - **Setzen Sie ein Datum dafür.** Rebalancieren Sie einmal im Jahr an einem festen Datum, und nutzen Sie die Tabelle Allokationen dieses Jahres als Liste der Geschäfte.
 - **Handeln Sie im IRA.** Die Geschäfte kosten dort keine Steuer, und deshalb macht der Plan sie dort. Ein Verkauf in einem Depot zum Rebalancing kann Kapitalgewinne realisieren, die die Prognose nicht annimmt.
 - **Lassen Sie einen Fonds es tun.** Ein Zielfonds oder ein ausgewogener Fonds rebalanciert von selbst. Der Pfad eines Zielfonds fällt nach dem Zieldatum gewöhnlich weiter, also ist er kein Anleihenzelt.
-- **Prüfen Sie, dass das Kästchen zu Ihrem Verhalten passt.** Wenn Sie wissen, dass Sie nicht rebalancieren werden, entfernen Sie das Häkchen, und die Prognose zeigt Ihnen das Ergebnis Nur Steuerung statt eines Ergebnisses, das Sie nicht bekommen werden.
+- **Prüfen Sie, dass das Kästchen zu Ihrem Verhalten passt.** Wenn Sie wissen, dass Sie nicht rebalancieren werden, entfernen Sie das Häkchen, und die Prognose zeigt Ihnen das Ergebnis **Nur Steuerung** statt eines Ergebnisses, das Sie nicht bekommen werden.
 
 ## Was die Forschung sagt {#what-the-research-says}
 

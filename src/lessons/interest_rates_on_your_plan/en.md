@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Interest rates: the price of money in your plan
 
-An [[term:interest-rate|interest rate]] is the price of money. A borrower pays it to a lender each year for the use of the money, as a share of the amount borrowed. When you put savings in a money-market fund, you are the lender, and the rate is what you are paid. When you take out a mortgage, you are the borrower, and the rate is what you pay.
+An [[term:interest-rate|interest rate]] is the price of money. A borrower pays it to a lender each year for the use of the money, as a share of the amount borrowed. When you put savings in a money-market fund, you are the lender, and the rate is what you are paid. When you take out a mortgage, you are the borrower, and the rate is what you pay. This lesson shows how interest rates affect your financial plan from both sides.
 
 It helps to think of money as something you can buy. If you walk into a bank and say "I'd like to buy some money," the bank will sell it to you, and the interest rate is the price tag. Some years money is cheap, and some years it is expensive. That is a different question from the one in [Currency risk in the forecast](/learn/currency_risk_in_the_forecast), where you say "I'd like to exchange some money" and the exchange rate decides how many euros a dollar buys.
 
@@ -135,7 +135,7 @@ Tutilis models the two differently for exactly this reason. Morgan's 10-year Tre
 
 [[img:rates-table-2027]]
 
-The long-term Treasury fund ends 2027 at $148,000 with the shock, against $199,100 without it. The intermediate Treasury fund ends at $180,500 against $196,300. The Treasury note ends at $105,600 against $105,300. It is the same note in both plans. The few hundred dollars between them is cash the plan reinvested differently, and what the note itself is worth did not change.
+The long-term Treasury fund ends 2027 at $148,000 with the shock, against $199,100 without it. The intermediate Treasury fund ends at $180,500 against $196,300. The Treasury note ends at $105,300 against $105,100. It is the same note in both plans. The few hundred dollars between them is cash the plan reinvested differently, and what the note itself is worth did not change.
 
 <aside class="lesson-saying" data-saying="free-lunch">
 
@@ -159,7 +159,7 @@ The **Stocks** choice in the editor is that question. With *Fall too*, US stock 
 
 [[img:rates-bs-growth]]
 
-Without the stock loss, net worth in 2027 drops only to $1,213,000. The bond funds still fall, and the cash still earns more. By the end of the plan this version is about $97,000 ahead of the plan with no shock, because the bonds and cash spent five years earning more while the stocks never lost anything.
+Without the stock loss, net worth in 2027 drops only to $1,212,000. The bond funds still fall, and the cash still earns more. By the end of the plan this version is about $96,000 ahead of the plan with no shock, because the bonds and cash spent five years earning more while the stocks never lost anything.
 
 <aside class="lesson-did-you-know">
 <p class="lesson-did-you-know-label">Did you know?</p>
@@ -178,9 +178,9 @@ A rate cut is the mirror image of a rise. Bond funds gain in the first year, cas
 
 [[img:rates-bs-cut]]
 
-Net worth is about $49,000 higher in 2027, at $1,327,000. By 2032 it is $46,000 lower than the plan without the cut, and by 2058 it is about $143,000 lower, at $366,000 against $510,000. A retiree living on savings is a lender, and a cut lowers the price that lender is paid. The gain in the first year is real, but it is a gain in price, and the lower income lasts for years.
+Net worth is about $49,000 higher in 2027, at $1,326,000. By 2032 it is $46,000 lower than the plan without the cut, and by 2058 it is about $143,000 lower, at $558,000 against $701,000. A retiree living on savings is a lender, and a cut lowers the price that lender is paid. The gain in the first year is real, but it is a gain in price, and the lower income lasts for years.
 
-How long the move lasts matters as much as its direction. Set **Move duration** to its maximum and the two-point rise never reverses inside the plan. Then the stock loss is never made back and the bond funds never get their price back, and the extra income does not make up for it. On Morgan's plan, a permanent rise leaves net worth at $461,000 in 2058, against $533,000 when rates return after five years and $510,000 with no shock at all.
+How long the move lasts matters as much as its direction. Set **Move duration** to its maximum and the two-point rise never reverses inside the plan. Then the stock loss is never made back and the bond funds never get their price back, and the extra income does not make up for it. On Morgan's plan, a permanent rise leaves net worth at $672,000 in 2058, against $724,000 when rates return after five years and $701,000 with no shock at all.
 
 ## Shorter bonds
 
@@ -188,9 +188,9 @@ The usual defense against rising rates is shorter bonds, because a short duratio
 
 [[img:rates-bs-short-hike]]
 
-Net worth drops by about $93,000 in 2027, against $139,000 for Morgan's plan with the long fund. The short fund also reinvests at the new rate within a couple of years, so it collects the higher income almost at once. By 2058 the shorter-bond plan with the shock ends at $478,000, well above its own $385,000 without the shock.
+Net worth drops by about $93,000 in 2027, against $139,000 for Morgan's plan with the long fund. The short fund also reinvests at the new rate within a couple of years, so it collects the higher income almost at once. By 2058 the **Shorter bonds** plan ends at **$663,000** with the shock, against **$570,000** without it.
 
-The protection has a price, and it shows up in the other two cases. Short bonds are expected to earn less, so with no shock at all the shorter-bond plan ends at $385,000 against $510,000 for the long-bond plan. And when rates fall, short bonds gain almost nothing in price and soon reinvest at the lower rate. Under the one-and-a-half-point cut, the shorter-bond plan gains only about $14,000 in 2027 and ends at $261,000, against $366,000 for the long-bond plan.
+The protection has a price, and it shows up in the other two cases. Short bonds are expected to earn less, so with no shock at all the **Shorter bonds** plan ends at $570,000 against $701,000 for the [Long bonds](#canvas-dossier:rates_bond_heavy) plan. And when rates fall, short bonds gain almost nothing in price and soon reinvest at the lower rate. Under the one-and-a-half-point cut, the **Shorter bonds** plan gains only about $14,000 in 2027 and ends at $451,000, against $558,000 for the **Long bonds** plan.
 
 So there is no holding that wins in every case, and the choice is about which risk you would rather carry:
 

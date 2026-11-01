@@ -135,7 +135,7 @@ Tutilis modela las dos cosas de forma distinta exactamente por esta razón. La n
 
 [[img:rates-table-2027]]
 
-El fondo del Tesoro a largo plazo acaba 2027 en $148,000 con el choque, frente a $199,100 sin él. El fondo del Tesoro a plazo intermedio acaba en $180,500 frente a $196,300. La nota del Tesoro acaba en $105,600 frente a $105,300. Es la misma nota en los dos planes. Los pocos cientos de dólares de diferencia son efectivo que el plan reinvirtió de otra manera, y lo que vale la propia nota no cambió.
+El fondo del Tesoro a largo plazo acaba 2027 en $148,000 con el choque, frente a $199,100 sin él. El fondo del Tesoro a plazo intermedio acaba en $180,500 frente a $196,300. La nota del Tesoro acaba en $105,300 frente a $105,100. Es la misma nota en los dos planes. Los pocos cientos de dólares de diferencia son efectivo que el plan reinvirtió de otra manera, y lo que vale la propia nota no cambió.
 
 <aside class="lesson-saying" data-saying="free-lunch">
 
@@ -159,7 +159,7 @@ La elección **Acciones** del editor es esa pregunta. Con *También caen*, los f
 
 [[img:rates-bs-growth]]
 
-Sin la pérdida de las acciones, el patrimonio neto en 2027 solo baja a $1,213,000. Los fondos de bonos siguen cayendo, y el efectivo sigue rindiendo más. Al final del plan, esta versión va unos $97,000 por delante del plan sin choque, porque los bonos y el efectivo pasaron cinco años ganando más mientras las acciones no perdieron nada.
+Sin la pérdida de las acciones, el patrimonio neto en 2027 solo baja a $1,212,000. Los fondos de bonos siguen cayendo, y el efectivo sigue rindiendo más. Al final del plan, esta versión va unos $96,000 por delante del plan sin choque, porque los bonos y el efectivo pasaron cinco años ganando más mientras las acciones no perdieron nada.
 
 <aside class="lesson-did-you-know">
 <p class="lesson-did-you-know-label">¿Lo sabía?</p>
@@ -178,9 +178,9 @@ Un recorte de tipos es la imagen invertida de una subida. Los fondos de bonos ga
 
 [[img:rates-bs-cut]]
 
-El patrimonio neto es unos $49,000 más alto en 2027, en $1,327,000. En 2032 es $46,000 más bajo que el plan sin el recorte, y en 2058 es unos $143,000 más bajo, en $366,000 frente a $510,000. Quien está jubilado y vive de los ahorros es quien presta, y un recorte baja el precio que se le paga. La ganancia del primer año es real, pero es una ganancia de precio, y el ingreso más bajo dura años.
+El patrimonio neto es unos $49,000 más alto en 2027, en $1,326,000. En 2032 es $46,000 más bajo que el plan sin el recorte, y en 2058 es unos $143,000 más bajo, en $558,000 frente a $701,000. Quien está jubilado y vive de los ahorros es quien presta, y un recorte baja el precio que se le paga. La ganancia del primer año es real, pero es una ganancia de precio, y el ingreso más bajo dura años.
 
-Cuánto dura el movimiento importa tanto como su dirección. Ponga **Duración del movimiento** en su máximo y la subida de dos puntos no se revierte nunca dentro del plan. Entonces la pérdida de las acciones no se recupera jamás y los fondos de bonos no recuperan su precio, y el ingreso extra no lo compensa. En el plan de Morgan, una subida permanente deja el patrimonio neto en $461,000 en 2058, frente a $533,000 cuando los tipos vuelven al cabo de cinco años y $510,000 sin choque alguno.
+Cuánto dura el movimiento importa tanto como su dirección. Ponga **Duración del movimiento** en su máximo y la subida de dos puntos no se revierte nunca dentro del plan. Entonces la pérdida de las acciones no se recupera jamás y los fondos de bonos no recuperan su precio, y el ingreso extra no lo compensa. En el plan de Morgan, una subida permanente deja el patrimonio neto en $672,000 en 2058, frente a $724,000 cuando los tipos vuelven al cabo de cinco años y $701,000 sin choque alguno.
 
 ## Bonos más cortos {#shorter-bonds}
 
@@ -188,9 +188,9 @@ La defensa habitual contra los tipos al alza son los bonos más cortos, porque u
 
 [[img:rates-bs-short-hike]]
 
-El patrimonio neto baja unos $93,000 en 2027, frente a $139,000 del plan de Morgan con el fondo largo. El fondo corto también reinvierte al tipo nuevo en un par de años, así que cobra el ingreso más alto casi enseguida. En 2058 el plan de bonos más cortos con el choque acaba en $478,000, bastante por encima de sus propios $385,000 sin el choque.
+El patrimonio neto baja unos $93,000 en 2027, frente a $139,000 del plan de Morgan con el fondo largo. El fondo corto también reinvierte al tipo nuevo en un par de años, así que cobra el ingreso más alto casi enseguida. En 2058 el plan de **bonos más cortos** acaba en **$663,000** con el choque, frente a **$570,000** sin él.
 
-La protección tiene un precio, y se ve en los otros dos casos. Se espera que los bonos cortos rindan menos, así que sin choque alguno el plan de bonos más cortos acaba en $385,000 frente a $510,000 del plan de bonos largos. Y cuando los tipos bajan, los bonos cortos casi no ganan en precio y pronto reinvierten al tipo más bajo. Bajo el recorte de un punto y medio, el plan de bonos más cortos solo gana unos $14,000 en 2027 y acaba en $261,000, frente a $366,000 del plan de bonos largos.
+La protección tiene un precio, y se ve en los otros dos casos. Se espera que los bonos cortos rindan menos, así que sin choque alguno el plan de **bonos más cortos** acaba en $570,000 frente a $701,000 del plan de [bonos largos](#canvas-dossier:rates_bond_heavy). Y cuando los tipos bajan, los bonos cortos casi no ganan en precio y pronto reinvierten al tipo más bajo. Bajo el recorte de un punto y medio, el plan de **bonos más cortos** solo gana unos $14,000 en 2027 y acaba en $451,000, frente a $558,000 del plan de **bonos largos**.
 
 Así que no hay una posición que gane en todos los casos, y la elección es qué riesgo prefiere cargar:
 

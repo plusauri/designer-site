@@ -20,7 +20,7 @@ tutilis-locale: en source
 -->
 
 <!--- α <lesson_body> -->
-**Social Security claim timing** is not a free lunch. Claiming **one year before**
+Deciding when to claim Social Security is a bet on how long you live. **Social Security claim timing** is not a free lunch. Claiming **one year before**
 [[term:fra|full retirement age (FRA)]] raises the check a little sooner but **permanently reduces**
 the monthly benefit. When you **delay** Social Security, you are making a bet — and **how long you
 live** often decides how good that choice was (along with everything else that funds the years

@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Growth rates: the system's, and yours
 
-Priya is forty-four. She earns a salary, lets a condo to a tenant, pays child support under a court order, and keeps the rest of her savings in a broad US stock fund. Every one of those numbers grows over the years of her plan, and every one of them needs a growth rate before the plan can say anything about her future.
+Priya is forty-four. She earns a salary, lets a condo to a tenant, pays child support under a court order, and keeps the rest of her savings in a broad US stock fund. Every one of those numbers grows over the years of her plan, and every one of them needs a growth rate before the plan can say anything about her future. This lesson is about the retirement plan growth rate assumptions behind each one.
 
 Two plans are open on the [[term:canvas]]: [General](#canvas-dossier:growth_rates_general) and [Advanced](#canvas-dossier:growth_rates_advanced). They describe the same household with the same amounts. The difference is one setting, and how much of the growth Priya decided for herself because of it.
 
@@ -14,7 +14,7 @@ The product is built so that both kinds of planner get what they need. Someone w
 <p class="lesson-power-user-label">Power user</p>
 <div class="lesson-power-user-body">
 
-Setting your own growth rates is a **Power user** feature. A typical user's plan takes the system's growth rates, which is the General plan in this lesson. To set rates of your own, as the Advanced plan does, turn on **Power user** under [[nav:advanced]] → Application.
+Setting your own growth rates is a **Power user** feature. A typical user's plan takes the system's growth rates, which is the **General** plan in this lesson. To set rates of your own, as the **Advanced** plan does, turn on **Power user** under [[nav:advanced]] → Application.
 
 </div>
 </aside>
@@ -88,7 +88,7 @@ The salary's card lists the rate Priya stated as an override. It shows her 5% av
 
 *The card for Priya's salary in [General](#canvas-dossier:growth_rates_general): $140,000 a year in 2026 money, growing at the 5% she stated.*
 
-On the cash-flow statement the salary is about $154,000 in 2027 and about $187,000 in 2031, which is her 5% a year. The rent, net of the property's running costs, grows at the 3% her lease sets.
+On the cash-flow statement the salary is about $147,000 in 2027 and about $179,000 in 2031, which is her 5% a year. The rent, net of the property's running costs, grows at the 3% her lease sets.
 
 <details class="lesson-desktop-only" open>
 <summary class="lesson-desktop-only-label">Desktop app only</summary>
@@ -109,7 +109,7 @@ When you state one of these rates, you state its average. How much it varies fro
 
 That can seem odd for a salary, but it is what keeps the forecast honest. Across a thousand futures, some of Priya's years bring a bigger raise than 5% and some bring a smaller one, and the forecasts where her pay did unusually well or badly sit in her range of outcomes alongside the market's good and bad runs. A volatility of zero would mean that her pay rises by exactly 5% every year in every future, which nobody can promise.
 
-The child support shows the limit of this. Priya's 0% is only the average, so on the General plan the payment still varies a little from one future to the next. A court order does not vary at all. Fixing that takes the other setting.
+The child support shows the limit of this. Priya's 0% is only the average, so on the [General](#canvas-dossier:growth_rates_general) plan the payment still varies a little from one future to the next. A court order does not vary at all. Fixing that takes the other setting.
 
 ## Taking over every assumption
 
@@ -136,9 +136,9 @@ With Growth overrides, the growth field on pay, spending, rent and support gains
 
 ## What the changes cost
 
-Priya's three changes on the Advanced plan were a wider swing on her bonus-heavy salary, a support payment fixed at exactly $14,400, and a slower 2% view of her condo's appreciation. The first two mostly reshape the range of outcomes: the salary widens it, and the fixed support narrows it a little. The third moves the plan itself. On the balance sheet for 2046 the condo is worth about $648,000 on the General plan and about $438,000 on the Advanced plan.
+Priya's three changes on the [Advanced](#canvas-dossier:growth_rates_advanced) plan were a wider swing on her bonus-heavy salary, a support payment fixed at exactly $14,400, and a slower 2% view of her condo's appreciation. The first two mostly reshape the range of outcomes: the salary widens it, and the fixed support narrows it a little. The third moves the plan itself. On the balance sheet for 2046 the condo is worth about $648,000 on the [General](#canvas-dossier:growth_rates_general) plan and about $438,000 on the **Advanced** plan.
 
-**Key forecasts** show what that does to Priya's final net worth. The Advanced plan is lower at every point the table reports, from the worst future to the best.
+**Key forecasts** show what that does to Priya's final net worth. The **Advanced** plan is lower at every point the table reports, from the worst future to the best.
 
 [[jump:key-forecasts]]
 
@@ -154,12 +154,12 @@ Priya's three changes on the Advanced plan were a wider swing on her bonus-heavy
 
 [[img:growth-rates-key-forecasts-advanced]]
 
-*Key forecasts for [Advanced](#canvas-dossier:growth_rates_advanced): every point sits below the General plan's.*
+*Key forecasts for [Advanced](#canvas-dossier:growth_rates_advanced): every point sits below the **General** plan's.*
 
 </div>
 </div>
 
-The **net worth distribution** shows the same thing across all thousand futures at once. The two are drawn on the same axis so they can be compared by eye. The Advanced cloud sits further to the left, and the share of futures that succeed falls from 98% to 95%.
+The **net worth distribution** shows the same thing across all thousand futures at once. The two are drawn on the same axis so they can be compared by eye. The **Advanced** cloud sits further to the left, and the share of futures that succeed falls from 98% to 95%.
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">
@@ -182,7 +182,7 @@ That is the reason full control is a deliberate choice. A single typed market ra
 
 ## Moving between the two
 
-A plan can change its mind. Moving from **Growth overrides** back to **System growths** removes every market override, because that is what choosing the system's rates means. Rates stated for pay, spending, rent and support are kept, and any volatility set on them returns to the system's figure. If Priya moved her Advanced plan back, her condo would return to 4%, her salary and support would keep their 5% and 0% averages, and her support would pick up the small variation described above.
+A plan can change its mind. Moving from **Growth overrides** back to **System growths** removes every market override, because that is what choosing the system's rates means. Rates stated for pay, spending, rent and support are kept, and any volatility set on them returns to the system's figure. If Priya moved her [Advanced](#canvas-dossier:growth_rates_advanced) plan back, her condo would return to 4%, her salary and support would keep their 5% and 0% averages, and her support would pick up the small variation described above.
 
 Moving the other way removes nothing. Every rate stays where it was and becomes editable.
 

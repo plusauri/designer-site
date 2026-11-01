@@ -22,7 +22,8 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 Brokers, fund names, and 1099s call [[term:municipal-bond|municipal-bond]] interest
 **tax-exempt**. That label is a **federal [[term:agi|AGI]]** fact: the interest does not go on Form 1040 as [[term:ordinary-income]]. It is
-**not** a complete tax picture.
+**not** a complete tax picture. So are municipal bonds [[term:tax-free]]? Mostly, for federal income tax, but
+muni interest is MAGI income, and MAGI drives several costs.
 
 The same dollars still count in **[[term:magi|modified AGI]]** — the figure that drives
 [[term:irmaa|IRMAA]] Medicare premiums, the 3.8% [[term:niit|net investment income tax]], and how
@@ -113,13 +114,15 @@ Three other questions still have answers, and they are not “no”:
 | In **MAGI** (IRMAA, NIIT, taxable Social Security)? | **Yes** — added to AGI | Yes (already in AGI) | Yes |
 | On a typical **state** return? | **Usually yes if the issuer is another state**; usually no if it is yours | **No** (federal law) | Yes |
 
-A **California-only** muni fund would keep the in-state slice off the California return. A
-**national** fund is mostly other states. These live plans do not split issuers [[term:cusip|CUSIP]] by CUSIP, so
-they treat municipal interest the way a national fund works: added back in California. That is
-the conservative reading for a mixed or unknown issuer mix — it will **overstate** California tax
-on a pure in-state fund.
+A **national** fund holds bonds from many states, so most of its interest is out-of-state wherever
+you live, and Tutilis adds all of it back. A single-state fund is entered with its **issuing
+state** set on the fund's yields, beside the tax-exempt yield. A California fund held by a
+California resident stays off the California return. The same fund held by a New York resident is
+added back there, because Tutilis compares the issuing state with the state the plan lives in.
+Tutilis does not split a fund [[term:cusip|CUSIP]] by CUSIP, so a fund that is mostly but not
+entirely in-state is best entered as national.
 
-Illinois, Iowa, and Wisconsin tax their **own** munis as well. North Dakota does not add other
+Illinois, Iowa, Oklahoma and Wisconsin tax most of their **own** munis as well, and Tutilis adds those back even in-state. North Dakota does not add other
 states’ munis back. States with no income tax (Texas, Florida, …) only care about the MAGI half.
 
 ---
@@ -308,8 +311,6 @@ AGI.
 
 ## What these plans are not showing
 
-- **Issuer-by-issuer** in-state vs out-of-state munis. A California-only fund would keep more off
-  the California return than a national fund.
 - **Private-activity** municipal bonds that can appear on the federal AMT.
 - **Automatic** federal-obligation percentages for a total-bond index — that percentage is an
   input (the 1099 / annual report figure), not a look-up.

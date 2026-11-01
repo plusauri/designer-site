@@ -54,7 +54,7 @@ Transformationen zeichnet den Plan jetzt zweimal. Sehen Sie sich den Bilanzvergl
 
 [[img:safer-bs-gfc-8020]]
 
-*Bleibt bei 80/20 mit der globalen Finanzkrise ab 2027. Die Crash-Jahre sind auf der Jahresachse der Seite Geändert markiert.*
+*[Bleibt bei 80/20](#canvas-dossier:safer_stays_eighty_twenty) mit der globalen Finanzkrise ab 2027. Die Crash-Jahre sind auf der Jahresachse der Seite Geändert markiert.*
 
 2027 verdient Morgan noch ein Gehalt, und der kleine Verlust des ersten Krisenjahres ist kaum zu sehen. Das tiefe zweite Jahr fällt auf 2028, das erste Jahr, in dem Morgan vom Portfolio lebt, und das Nettovermögen fällt von etwa 1,58 Millionen Dollar auf etwa 1,04 Millionen Dollar. Es steigt erst 2032 wieder auf sein Niveau von 2027 und holt den Plan ohne Crash nie ein.
 
@@ -62,20 +62,20 @@ Zum Vergleich schalten Sie die Episode auf 1929 und lassen den Start bei 2027:
 
 [[img:safer-bs-1929-2027-8020]]
 
-*Bleibt bei 80/20 mit dem großen Börsenkrach von 1929 ab 2027.*
+***Bleibt bei 80/20** mit dem großen Börsenkrach von 1929 ab 2027.*
 
-Die globale Finanzkrise erholt sich innerhalb der sechs Jahre, die sie nachspielt. Der große Börsenkrach spielt sechzehn nach, und er führt den 80/20-Plan von 1,5 Millionen Dollar am Anfang auf etwa 460.000 Dollar Ende 2029. Das Portfolio erholt sich nie, und dem Plan geht 2046 das Geld aus. Der Abschnitt [Etwas Sicheres zum Verkaufen](#something-safe-to-sell) kommt auf diese Episode zurück und prüft die sichereren Pläne daran. Schalten Sie vor dem Weiterlesen auf 2007 zurück.
+Die globale Finanzkrise erholt sich innerhalb der sechs Jahre, die sie nachspielt. Der große Börsenkrach spielt sechzehn nach, und er führt den 80/20-Plan von 1,5 Millionen Dollar am Anfang auf etwa 470.000 Dollar Ende 2029. Das Portfolio erholt sich nie, und dem Plan geht 2046 das Geld aus. Der Abschnitt [Etwas Sicheres zum Verkaufen](#something-safe-to-sell) kommt auf diese Episode zurück und prüft die sichereren Pläne daran. Schalten Sie vor dem Weiterlesen auf 2007 zurück.
 
 Lassen Sie den Crash jetzt eingeschaltet und verschieben Sie sein Startjahr. Öffnen Sie [[nav:bs-table]] auf 2055, dem letzten Jahr der Prognose, und beobachten Sie die Nettovermögenslinie auf der Seite Geändert, während der Schieberegler sich bewegt. Der Crash bleibt in Kraft, wenn Sie die Pläne mit den Chips über der Zeichenfläche wechseln, sodass Sie die Spalte jedes Plans lesen können, ohne ihn neu einzurichten. Hier ist das End-Nettovermögen für die Startjahre, die einen Blick lohnen:
 
 | Crash beginnt | Bleibt bei 80/20 | Geht nach unten | Rentenuntergrenze |
 |---|---:|---:|---:|
-| Kein Crash | 1,88 Mio. $ | 1,47 Mio. $ | 1,81 Mio. $ |
-| **2027** | **1,25 Mio. $** | **1,13 Mio. $** | **1,32 Mio. $** |
-| 2028 | 1,26 Mio. $ | 1,13 Mio. $ | 1,34 Mio. $ |
-| 2029 | 1,29 Mio. $ | 1,16 Mio. $ | 1,37 Mio. $ |
-| 2030 | 1,32 Mio. $ | 1,18 Mio. $ | 1,39 Mio. $ |
-| 2033 | 1,38 Mio. $ | 1,20 Mio. $ | 1,42 Mio. $ |
+| Kein Crash | 2,07 Mio. $ | 1,66 Mio. $ | 2,00 Mio. $ |
+| **2027** | **1,44 Mio. $** | **1,31 Mio. $** | **1,51 Mio. $** |
+| 2028 | 1,47 Mio. $ | 1,33 Mio. $ | 1,53 Mio. $ |
+| 2029 | 1,49 Mio. $ | 1,35 Mio. $ | 1,55 Mio. $ |
+| 2030 | 1,52 Mio. $ | 1,36 Mio. $ | 1,57 Mio. $ |
+| 2033 | 1,58 Mio. $ | 1,39 Mio. $ | 1,61 Mio. $ |
 
 Der schlechteste Start in jedem Plan ist 2027, das Jahr vor dem Ruhestand, weil er das tiefste Jahr der Krise auf das erste Jahr ohne Gehalt legt. Spätere Starts schaden noch, und jedes Jahr ein wenig weniger, weil das Portfolio länger wachsen konnte und Social Security, die 2030 beginnt, einen größeren Teil der Ausgaben trägt. An seiner schlechtesten Stelle kostet der Crash den 80/20-Plan etwa ein Drittel seines End-Nettovermögens.
 
@@ -107,15 +107,15 @@ Wenn Sie mitgehen, klicken Sie als Nächstes auf [Rentenuntergrenze](#canvas-dos
 
 Die Rente sitzt im Ursprung. Sie hat keine Volatilität, und eine gleichbleibende Zahlung hat kein Wachstum. Social Security sitzt daneben auf der senkrechten Achse, ohne Volatilität und mit einem Wachstum in Höhe ihrer Anpassung an die Lebenshaltungskosten. Gehalt und Lebenshaltungskosten erscheinen ebenfalls als Zahlungsströme.
 
-Der Rentenplan senkt das Risiko also auf eine andere Weise als der Plan „Geht nach unten“. Er verschiebt 300.000 Dollar aus dem Portfolio in ein bargeldnahes Produkt mit fast keinem Risiko und fast keinem Wachstum und lässt den Rest des Portfolios genau so riskant, wie er war. Das Diagramm mit eingeschalteten Cashflows zeigt beide Hälften auf einmal.
+Der Rentenplan senkt das Risiko also auf eine andere Weise als der Plan **Geht nach unten**. Er verschiebt 300.000 Dollar aus dem Portfolio in ein bargeldnahes Produkt mit fast keinem Risiko und fast keinem Wachstum und lässt den Rest des Portfolios genau so riskant, wie er war. Das Diagramm mit eingeschalteten Cashflows zeigt beide Hälften auf einmal.
 
 ## Auf dem Diagramm nach unten {#moving-down-the-chart}
 
-Nach unten auf dem Diagramm hat einen Preis, und der Preis ist das erwartete Vermögen. Ohne Crash auf dem [[term:gmf|GMF]]-Pfad endet der Plan „Geht nach unten“ bei 1,47 Millionen Dollar, gegen 1,88 Millionen für 80/20. Geld in US-Staatsanleihen verzinst sich langsamer als Geld in Aktien, und die Lücke summiert sich über drei Jahrzehnte.
+Nach unten auf dem Diagramm hat einen Preis, und der Preis ist das erwartete Vermögen. Ohne Crash auf dem [[term:gmf|GMF]]-Pfad endet der Plan [Geht nach unten](#canvas-dossier:safer_moves_down) bei 1,66 Millionen Dollar, gegen 2,07 Millionen für 80/20. Geld in US-Staatsanleihen verzinst sich langsamer als Geld in Aktien, und die Lücke summiert sich über drei Jahrzehnte.
 
 <aside class="lesson-saying" data-saying="free-lunch">
 
-Auf dem GMF-Pfad zahlt der Plan „Geht nach unten“ etwa 410.000 Dollar Endvermögen für seine sichereren schlechten Ausgänge. Der Rest dieses Abschnitts zeigt, was dieses Geld kauft.
+Auf dem GMF-Pfad zahlt der Plan **Geht nach unten** etwa 410.000 Dollar Endvermögen für seine sichereren schlechten Ausgänge. Der Rest dieses Abschnitts zeigt, was dieses Geld kauft.
 
 </aside>
 
@@ -126,19 +126,19 @@ Was der Schritt kauft, zeigt sich über viele mögliche Zukünfte. Die [[term:mo
 
 [[img:safer-nw-8020]]
 
-*Bleibt bei 80/20. Die Streuung ist breit, mit einem langen Schwanz sehr guter Ergebnisse nach rechts.*
+*[Bleibt bei 80/20](#canvas-dossier:safer_stays_eighty_twenty). Die Streuung ist breit, mit einem langen Schwanz sehr guter Ergebnisse nach rechts.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:safer-nw-down]]
 
-*Geht nach unten. Die Streuung ist schmaler, und weniger Pfade enden unter null.*
+***Geht nach unten**. Die Streuung ist schmaler, und weniger Pfade enden unter null.*
 
 </div>
 </div>
 
-Der 80/20-Plan gelingt auf etwa 83 % der Pfade. Der [[term:median]] seines End-Nettovermögens liegt bei etwa 2,12 Millionen Dollar, und sein Ergebnis im schlechten Zehntel ist etwa 500.000 Dollar Schulden, was heißt, dass das Geld Jahre vor dem Ende des Plans aufgebraucht war. Der Plan „Geht nach unten“ gelingt auf etwa 90 % der Pfade. Sein Median liegt tiefer, bei etwa 1,78 Millionen Dollar, aber sein Ergebnis im schlechten Zehntel ist nur etwa 60.000 Dollar Schulden.
+Der 80/20-Plan gelingt auf etwa 85 % der Pfade. Der [[term:median]] seines End-Nettovermögens liegt bei etwa 2,30 Millionen Dollar, und sein Ergebnis im schlechten Zehntel ist etwa 350.000 Dollar Schulden, was heißt, dass das Geld Jahre vor dem Ende des Plans aufgebraucht war. Der Plan **Geht nach unten** gelingt auf etwa 92 % der Pfade. Sein Median liegt tiefer, bei etwa 1,95 Millionen Dollar, aber in seinem schlechten Zehntel reicht das Geld, und am Ende bleiben etwa 80.000 Dollar übrig.
 
 Das ist der Tausch in seiner schlichtesten Form. Nach unten auf dem Diagramm gibt einen Teil der guten Ergebnisse auf, um die schlechten zu verkleinern. Ein Ruheständler, der schon genug gespart hat, kümmert sich viel mehr um die schlechten Ergebnisse. Es gibt keine zweite Berufslaufbahn, um sich davon zu erholen, während die guten Ergebnisse vor allem die Größe eines Nachlasses ändern.
 
@@ -154,13 +154,13 @@ Sehen Sie zuerst den Bilanzvergleich an. Er ist der schnellste Weg, sich in jede
 
 [[img:safer-bs-1929-8020]]
 
-*Bleibt bei 80/20, wie verfasst links und mit dem Crash von 1929 ab 2028 rechts.*
+*[Bleibt bei 80/20](#canvas-dossier:safer_stays_eighty_twenty), wie verfasst links und mit dem Crash von 1929 ab 2028 rechts.*
 
 [[img:safer-bs-1929-down]]
 
-*Geht nach unten, derselbe Vergleich.*
+*[Geht nach unten](#canvas-dossier:safer_moves_down), derselbe Vergleich.*
 
-Auf dem GMF-Pfad fällt das Nettovermögen des 80/20-Plans von etwa 1,69 Millionen Dollar Ende 2027 auf etwa 450.000 Dollar Ende 2030, ein Rückgang von fast drei Vierteln. Der Plan „Geht nach unten“ fällt von etwa 1,68 Millionen Dollar auf etwa 780.000 Dollar, etwas mehr als die Hälfte. Keiner der beiden Pläne steigt wieder auf seine Linie Original. Dem 80/20-Plan geht 2046 das Geld aus, wenn Morgan 83 ist, und dem Plan „Geht nach unten“ 2051, fünf Jahre später.
+Auf dem GMF-Pfad fällt das Nettovermögen des 80/20-Plans von etwa 1,69 Millionen Dollar Ende 2027 auf etwa 460.000 Dollar Ende 2030, ein Rückgang von fast drei Vierteln. Der Plan **Geht nach unten** fällt von etwa 1,68 Millionen Dollar auf etwa 790.000 Dollar, etwas mehr als die Hälfte. Keiner der beiden Pläne steigt wieder auf seine Linie Original. Dem 80/20-Plan geht 2047 das Geld aus, wenn Morgan 84 ist, und dem Plan **Geht nach unten** 2052, fünf Jahre später.
 
 Um zu sehen, woher der Unterschied kommt, öffnen Sie [[nav:si-table]] auf 2031. Bis dahin ist ein Dollar Aktien vom Anfang 2028 etwa 52 Cent wert, selbst nach einem Erholungsjahr von 140 %.
 
@@ -169,14 +169,14 @@ Um zu sehen, woher der Unterschied kommt, öffnen Sie [[nav:si-table]] auf 2031.
 
 [[img:safer-sales-1929-8020]]
 
-*Bleibt bei 80/20 im Jahr 2031. Nach dem Erholungsjahr liegt der Aktienfonds wieder über seinem Ziel von 80 %, also verkauft der Plan ihn aus beiden Konten.*
+***Bleibt bei 80/20** im Jahr 2031. Nach dem Erholungsjahr liegt der Aktienfonds wieder über seinem Ziel von 80 %, also verkauft der Plan ihn aus beiden Konten.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:safer-sales-1929-down]]
 
-*Geht nach unten im Jahr 2031. Der Aktienfonds liegt noch unter seinem Ziel, also wird keine Aktie verkauft, und das Jahr wird aus Staatsanleihen, TIPS und kurzfristigen Staatsanleihen bezahlt.*
+***Geht nach unten** im Jahr 2031. Der Aktienfonds liegt noch unter seinem Ziel, also wird keine Aktie verkauft, und das Jahr wird aus Staatsanleihen, TIPS und kurzfristigen Staatsanleihen bezahlt.*
 
 </div>
 </div>
@@ -185,15 +185,15 @@ Jahr für Jahr ist der Unterschied groß:
 
 | Plan | Erste Jahre, in denen er Aktien verkauft | Verkaufte Aktien, 2028–2038 |
 |---|---|---:|
-| Bleibt bei 80/20 | Ein wenig 2028 und 2029, dann jedes Jahr ab 2031 | etwa 515.000 $ |
-| Geht nach unten | Ein wenig 2028, dann ab 2033 | etwa 250.000 $ |
-| Rentenuntergrenze | Ein wenig 2028 und 2029, dann jedes Jahr ab 2031 | etwa 340.000 $ |
+| Bleibt bei 80/20 | Ein wenig 2028 und 2029, dann jedes Jahr ab 2031 | etwa 470.000 $ |
+| Geht nach unten | Keine vor 2033 | etwa 210.000 $ |
+| Rentenuntergrenze | Ein wenig 2028 und 2029, dann jedes Jahr ab 2031 | etwa 295.000 $ |
 
-Der 80/20-Plan und der Plan „Geht nach unten“ folgen derselben Regel, die verkauft, was über seinem Ziel liegt. Das Ziel des 80/20-Plans ist vor allem Aktien, also hebt das erste gute Jahr die Aktien wieder darüber, und die Regel beginnt Aktien zu verkaufen, während sie noch etwa die Hälfte dessen wert sind, was sie 2028 wert waren. Das Ziel des Plans „Geht nach unten“ hält viel weniger Aktien, also bezahlt er die ersten fünf Jahre des Crashs fast ganz aus seinen sicheren Positionen, den Jahren, in denen Aktien am wenigsten wert waren. Er verkauft 2028 etwa 11.000 Dollar Aktien, als die Rechnung des Jahres größer ist als der Betrag, um den seine sicheren Positionen über ihrem Ziel liegen, und dann bis 2033 gar keine. Seine Staatsanleihenfonds sind nicht mit dem Markt gefallen, und seine TIPS und kurzfristigen Staatsanleihen haben ihren Wert gehalten. Wenn er endlich Aktien verkauft, verkauft er weniger als halb so viel wie der 80/20-Plan.
+Der 80/20-Plan und der Plan **Geht nach unten** folgen derselben Regel, die verkauft, was über seinem Ziel liegt. Das Ziel des 80/20-Plans ist vor allem Aktien, also hebt das erste gute Jahr die Aktien wieder darüber, und die Regel beginnt Aktien zu verkaufen, während sie noch etwa die Hälfte dessen wert sind, was sie 2028 wert waren. Das Ziel des Plans **Geht nach unten** hält viel weniger Aktien, also bezahlt er die ersten fünf Jahre des Crashs ganz aus seinen sicheren Positionen, den Jahren, in denen Aktien am wenigsten wert waren. Er verkauft bis 2033 gar keine Aktien. Seine Staatsanleihenfonds sind nicht mit dem Markt gefallen, und seine TIPS und kurzfristigen Staatsanleihen haben ihren Wert gehalten. Wenn er endlich Aktien verkauft, verkauft er weniger als halb so viel wie der 80/20-Plan.
 
 Der Rentenplan verkauft Aktien in denselben Jahren wie der 80/20-Plan, weil der Rest seines Portfolios immer noch 80/20 ist. Er verkauft insgesamt etwa ein Drittel weniger, weil die Rente einen Teil der Rechnung jedes Jahres zahlt.
 
-Keiner der drei Pläne ist sicher in einem Crash, der so tief und so lang ist wie 1929, bei Morgans Ausgabenniveau. Der 80/20-Plan gelingt auf etwa 2 % der Pfade mit diesem Crash zum Ruhestand, die beiden anderen auf etwa 12 bis 14 %. Die sichereren Pläne scheitern seltener, und ein solcher Crash ist ein Grund, Ausgaben einzuplanen, die sich kürzen lassen. Die Lektion [Der Zeitpunkt eines Crashs](/learn/sequence_of_returns_crash_timing) sagt mehr darüber, wie Transformationen einen Crash setzt.
+Keiner der drei Pläne ist sicher in einem Crash, der so tief und so lang ist wie 1929, bei Morgans Ausgabenniveau. Der 80/20-Plan gelingt auf etwa 5 % der Pfade mit diesem Crash zum Ruhestand, **Rentenuntergrenze** auf etwa 19 % und **Geht nach unten** auf etwa 23 %. Die sichereren Pläne scheitern seltener, und ein solcher Crash ist ein Grund, Ausgaben einzuplanen, die sich kürzen lassen. Die Lektion [Der Zeitpunkt eines Crashs](/learn/sequence_of_returns_crash_timing) sagt mehr darüber, wie Transformationen einen Crash setzt.
 
 ## Eine Einkommensuntergrenze {#an-income-floor}
 
@@ -216,7 +216,7 @@ Das Werkzeug **Rente** in der unteren Leiste ist ein Notizblatt für dieselbe En
 
 Wie [Das Risikodiagramm lesen](#read-the-risk-chart) gezeigt hat, verschiebt die Rente den Stern des Portfolios nicht. Sie sitzt als Zahlungsstrom im Ursprung des Diagramms. Das Risiko ist nicht verschwunden. Es ist vom Portfolio weg und in ein Versprechen eines Versicherers gewandert.
 
-Die Wirkung auf den Plan unterscheidet sich vom Plan „Geht nach unten“. Der Rentenplan gelingt auf etwa 88 % der Pfade, nahe an „Geht nach unten“. Der Median seines End-Nettovermögens liegt bei etwa 2,01 Millionen Dollar, viel näher am 80/20-Plan. Die Rente deckt einen Teil der Ausgaben jedes Jahres, also verkauft der Plan weniger, und das verbleibende Portfolio kann mehr von seinen Aktien behalten.
+Die Wirkung auf den Plan unterscheidet sich vom Plan [Geht nach unten](#canvas-dossier:safer_moves_down). Der Rentenplan gelingt auf etwa 90 % der Pfade, nahe an **Geht nach unten**. Der Median seines End-Nettovermögens liegt bei etwa 2,21 Millionen Dollar, viel näher am 80/20-Plan. Die Rente deckt einen Teil der Ausgaben jedes Jahres, also verkauft der Plan weniger, und das verbleibende Portfolio kann mehr von seinen Aktien behalten.
 
 Dieses Ergebnis hat Bedingungen. Die Prognose nimmt an, dass Morgan 93 wird, und die Rente zahlt umso mehr, je länger ihr Inhaber lebt. Käufer, die früh sterben, lassen Geld im Pool des Versicherers zurück, und wer lange lebt, sammelt es ein; daher kommt die hohe Auszahlung. Stürbe Morgan mit 70, hätte der Plan 300.000 Dollar für etwa 120.000 Dollar Einkommen gezahlt. Die 300.000 Dollar sind am Kauftag auch aus der Bilanz verschwunden. Sie lassen sich im Notfall nicht verkaufen und gehen nicht an Erben.
 
@@ -238,7 +238,7 @@ Der Sinn, auf dem Diagramm nach unten zu gehen, ist, Vermögenswerte zu halten, 
 
 Mehrere andere übliche Schritte lassen sich leichter beurteilen, sobald man sie auf demselben Diagramm sieht.
 
-**Eine Anleiheleiter** ist eine Reihe von Anleihen, die nacheinander fällig werden, eine für jedes Ausgabenjahr. Eine Leiter aus TIPS zahlt jedes Jahr einen bekannten Betrag inflationsangepassten Geldes, solange jede Anleihe bis zur Fälligkeit gehalten wird. Der Plan „Geht nach unten“ nähert eine Leiter mit seinen TIPS- und kurzfristigen Staatsanleihenfonds an, die in derselben Ecke des Diagramms sitzen. Tutilis kann eine Anleihe direkt halten und zahlt ihren Kupon jedes Jahr, aber die Prognose führt den Preis einer Anleihe bei Fälligkeit noch nicht auf den Nennwert zurück, also wird eine echte Leiter hier mit Fonds gezeigt.
+**Eine Anleiheleiter** ist eine Reihe von Anleihen, die nacheinander fällig werden, eine für jedes Ausgabenjahr. Eine Leiter aus TIPS zahlt jedes Jahr einen bekannten Betrag inflationsangepassten Geldes, solange jede Anleihe bis zur Fälligkeit gehalten wird. Der Plan [Geht nach unten](#canvas-dossier:safer_moves_down) nähert eine Leiter mit seinen TIPS- und kurzfristigen Staatsanleihenfonds an, die in derselben Ecke des Diagramms sitzen. Tutilis kann eine Anleihe direkt halten und zahlt ihren Kupon jedes Jahr, aber die Prognose führt den Preis einer Anleihe bei Fälligkeit noch nicht auf den Nennwert zurück, also wird eine echte Leiter hier mit Fonds gezeigt.
 
 **Dividendenaktien** sind immer noch Aktien. Ein Fonds von Unternehmen mit hoher Dividende sitzt auf dem Diagramm nahe am S&P-500-Fonds, und in einem Crash werden Dividenden zusammen mit den Kursen gekürzt. Die Unternehmen des S&P 500 kürzten ihre Dividenden von 2008 bis 2009 um etwa ein Fünftel. Eine Dividende verschiebt das Portfolio nicht in Richtung Bargeld. Die Lektion [Zu viele Aktien? Nicht mehr reinvestieren](/learn/too_much_equity_stop_reinvesting) zeigt einen anderen Gebrauch von Dividenden: sie als Bargeld nehmen statt sie wieder anzulegen, was den Aktienanteil langsam senkt.
 
@@ -252,7 +252,7 @@ Mehrere andere übliche Schritte lassen sich leichter beurteilen, sobald man sie
 
 Wade Pfau hat ausführlich über diese Frage geschrieben. In *Safety-First Retirement Planning* (2019) und dem *Retirement Planning Guidebook* (2021, zweite Auflage 2023) beschreibt er zwei Arten, über Ruhestandseinkommen nachzudenken. Ein wahrscheinlichkeitsgestützter Ansatz behält ein diversifiziertes Portfolio und setzt eine Ausgabequote, die es wahrscheinlich tragen kann. Ein Sicherheits-zuerst-Ansatz baut zuerst eine Untergrenze aus verlässlichem Einkommen aus Social Security, Betriebsrenten, Leibrenten und Anleiheleitern, groß genug, um die notwendigen Ausgaben zu decken, und legt den Rest auf Wachstum an.
 
-Pfau argumentiert, dass eine Einkommensrente den Platz eines Teils einer Anleiheallokation einnehmen kann. Anleihen und Renten liefern beide stetiges Einkommen, aber die Rente fügt einen Risikoausgleich hinzu, der denen mehr zahlt, die lange leben. Das ist das Muster in Morgans Plan Rentenuntergrenze, wo die Rente einen Teil der Ausgaben deckt und der Rest des Portfolios seine Aktien behält.
+Pfau argumentiert, dass eine Einkommensrente den Platz eines Teils einer Anleiheallokation einnehmen kann. Anleihen und Renten liefern beide stetiges Einkommen, aber die Rente fügt einen Risikoausgleich hinzu, der denen mehr zahlt, die lange leben. Das ist das Muster in Morgans Plan [Rentenuntergrenze](#canvas-dossier:safer_income_floor), wo die Rente einen Teil der Ausgaben deckt und der Rest des Portfolios seine Aktien behält.
 
 Pfau und Michael Kitces fanden in *Reducing Retirement Risk with a Rising Equity Glide Path* (Journal of Financial Planning, 2014), dass das Sequenzrisiko in den Jahren um das Ruhestandsdatum konzentriert ist. Ein Portfolio, das zum Ruhestand am wenigsten Aktien hält und danach Aktien hinzunimmt, überlebte häufiger als eines, das einen konstanten Anteil hielt. Deshalb zielt der Rat, sicherer zu werden, auf die Jahre unmittelbar vor dem Ruhestandsdatum.
 

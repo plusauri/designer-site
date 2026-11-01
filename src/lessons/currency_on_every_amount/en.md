@@ -7,7 +7,8 @@ tutilis-locale: en source
 Noor lives and works in the United States. The salary is in dollars, the living expenses are in
 dollars, the brokerage account is in dollars. But Noor also owns a condo in Tokyo that is let to a
 tenant, a savings account left behind after a few years in Frankfurt, and a small villa in Costa
-Rica bought for retirement. Four currencies, one household, one plan.
+Rica bought for retirement. Four currencies, one household, one plan. That is multi-currency
+financial planning, and this lesson shows how the plan carries each amount in its own currency.
 
 If you have only ever planned in one currency, the currency dropdown beside every amount in the
 plan editor can look like overkill. You type `500,000`, and there is a `$ USD` sitting next to it

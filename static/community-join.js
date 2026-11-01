@@ -33,16 +33,20 @@
     if (done) done.focus();
   }
 
+  function open(dialog) {
+    reset(dialog);
+    dialog.showModal();
+    const email = dialog.querySelector('input[name="email"]');
+    if (email) email.focus();
+  }
+
   document.addEventListener("click", function (e) {
     const opener = e.target.closest("[data-community-join]");
     if (opener) {
       const dialog = document.getElementById(opener.getAttribute("data-community-join"));
       if (!dialog || typeof dialog.showModal !== "function") return; // fall back to the link
       e.preventDefault();
-      reset(dialog);
-      dialog.showModal();
-      const email = dialog.querySelector('input[name="email"]');
-      if (email) email.focus();
+      open(dialog);
       return;
     }
     const closer = e.target.closest("[data-community-join-close]");
@@ -54,6 +58,11 @@
     // A click on the backdrop lands on the <dialog> itself.
     if (e.target.matches && e.target.matches("dialog.community-join")) e.target.close();
   });
+
+  // The /join page (CommunityInvite.PATH) arrives with its dialog already asked for. Deferred, so
+  // the dialog is parsed by now.
+  const onLoad = document.querySelector("dialog.community-join[data-community-join-open]");
+  if (onLoad && typeof onLoad.showModal === "function") open(onLoad);
 
   document.addEventListener("submit", function (e) {
     const form = e.target.closest(".community-join-form");
@@ -84,6 +93,13 @@
       page: location.pathname,
       website: String(data.get("website") || ""),
     };
+    // The visit's campaign codes, remembered by activity.js on the landing page.
+    try {
+      const utm = JSON.parse(sessionStorage.getItem("plusauri.utm") || "{}");
+      ["utmSource", "utmMedium", "utmCampaign"].forEach(function (k) {
+        if (typeof utm[k] === "string") body[k] = utm[k];
+      });
+    } catch (e) { /* none */ }
     fetch(form.getAttribute("action"), {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
@@ -93,6 +109,8 @@
       .then(function (result) {
         if (result && result.ok) {
           showSent(dialog, result.status);
+          // ad-tag.js, when loaded, reports this as a conversion.
+          document.dispatchEvent(new CustomEvent("plusauri:community-joined"));
         } else if (result && result.message === "invalid-email") {
           showError(form, form.dataset.msgInvalid);
         } else {

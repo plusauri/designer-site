@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Checking the answer: every number has a command
 
-A Cogilis assistant is held to one rule above the others: it never states a number it did not get from the engine. Every number in its answer comes with the command that produced it, written so you can paste it. That rule is only worth something if you can use it, and this lesson shows how.
+A Cogilis assistant is held to one rule above the others: it never states a number it did not get from the engine. Every number in its answer comes with the command that produced it, written so you can paste it. That rule is only worth something if you can use it, and this lesson shows how to check an AI's answer.
 
 The Springfields, the household on the [[term:canvas]], asked their assistant two things. How much tax will we pay in our first year of retirement, and does the plan have room to spare? This is the answer it gave:
 

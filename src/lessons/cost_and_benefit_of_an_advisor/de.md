@@ -42,7 +42,7 @@ Die meisten Berater, die Anlagen verwalten, berechnen einen Anteil des Geldes, d
 
 Die Gebühr wird meist vierteljährlich abgerechnet und direkt dem Konto entnommen. Sie wird auf den Bestand berechnet, sie ist also in einem Jahr fällig, in dem der Markt fällt, ebenso wie in einem Jahr, in dem er steigt. Wächst das Portfolio, wächst die Gebühr in Dollar mit.
 
-Für Nadia und Owen sind 1 % ihrer Ersparnisse im ersten Jahr des Plans etwa $18,500. Im Jahr 2035, wenn beide im Ruhestand sind und Social Security beantragen, sind es etwa $22,600 im Jahr. Keine der beiden Zahlen wirkt neben $110,000 Ausgaben beunruhigend. Der Rest dieser Lektion zeigt, warum die Summe über einen Ruhestand viel größer ist, als diese Jahreszahlen vermuten lassen.
+Für Nadia und Owen sind 1 % ihrer Ersparnisse im ersten Jahr des Plans etwa $18,500. Im Jahr 2035, wenn beide im Ruhestand sind und Social Security beantragen, sind es etwa $22,700 im Jahr. Keine der beiden Zahlen wirkt neben $110,000 Ausgaben beunruhigend. Der Rest dieser Lektion zeigt, warum die Summe über einen Ruhestand viel größer ist, als diese Jahreszahlen vermuten lassen.
 
 ## Das Was-wäre-wenn finden {#find-the-what-if}
 
@@ -66,7 +66,7 @@ Die Gebühr wird wie jede andere Rechnung bezahlt. Jedes Jahr wird sie zu den Ab
 
 [[img:advisor-fee-cash-flow]]
 
-Die Seite Geändert hat in jedem Jahr des Plans ein graues Band **Beratergebühr** unter den Ausgaben. Im Jahr 2035 weist die Cashflow-Rechnung sie als eigene Zeile aus, $22,594, neben $144,827 Lebenshaltungskosten in Dollar dieses Jahres. Solange Nadia und Owen arbeiten, decken ihre Gehälter sie. Sind sie im Ruhestand, wird jeder Dollar davon aus ihren Ersparnissen verkauft.
+Die Seite Geändert hat in jedem Jahr des Plans ein graues Band **Beratergebühr** unter den Ausgaben. Im Jahr 2035 weist die Cashflow-Rechnung sie als eigene Zeile aus, $22,661, neben $140,897 Lebenshaltungskosten in Dollar dieses Jahres. Solange Nadia und Owen arbeiten, decken ihre Gehälter sie. Sind sie im Ruhestand, wird jeder Dollar davon aus ihren Ersparnissen verkauft.
 
 Ein Gebührenverzeichnis zeigt den Satz. Diese Zeile zeigt die Dollar, Jahr für Jahr, in dem Plan, den Sie tatsächlich haben.
 
@@ -76,11 +76,11 @@ Die Jahreszeile ist nur die Hälfte der Kosten. Ein Dollar, der 2030 die Gebühr
 
 [[img:advisor-fee-balance-sheet]]
 
-Die beiden Seiten beginnen nah beieinander, und die Lücke zwischen ihnen wird jedes Jahr breiter. Auf dem [[term:gmf|GMF]]-Pfad, der Prognose, die jedes Jahr die erwartete Rendite ansetzt, beträgt das Nettovermögen am Ende des Plans im Jahr 2059 etwa $3.51 million ohne Gebühr und etwa $1.27 million mit einer Gebühr von 1 %. Die Gebühren selbst summieren sich über diese 33 Jahre auf etwa $715,000. Die Lücke am Ende beträgt etwa $2.24 million, ungefähr das Dreifache dessen, was gezahlt wurde, weil jeder Dollar Gebühr auch sein künftiges Wachstum mitnimmt.
+Die beiden Seiten beginnen nah beieinander, und die Lücke zwischen ihnen wird jedes Jahr breiter. Auf dem [[term:gmf|GMF]]-Pfad, der Prognose, die jedes Jahr die erwartete Rendite ansetzt, beträgt das Nettovermögen am Ende des Plans im Jahr 2059 etwa $3.71 million ohne Gebühr und etwa $1.53 million mit einer Gebühr von 1 %. Die Gebühren selbst summieren sich über diese 33 Jahre auf etwa $736,000. Die Lücke am Ende beträgt etwa $2.19 million, ungefähr das Dreifache dessen, was gezahlt wurde, weil jeder Dollar Gebühr auch sein künftiges Wachstum mitnimmt.
 
 <aside class="lesson-saying" data-saying="small-leak">
 
-Eine Gebühr von 1 % ist im ersten Jahr etwa $18,500, klein neben $110,000 Ausgaben. Jedes Jahr über 33 Jahre berechnet, summiert sie sich auf etwa $715,000 gezahlt und etwa $2.24 million weniger am Ende.
+Eine Gebühr von 1 % ist im ersten Jahr etwa $18,500, klein neben $110,000 Ausgaben. Jedes Jahr über 33 Jahre berechnet, summiert sie sich auf etwa $736,000 gezahlt und etwa $2.19 million weniger am Ende.
 
 </aside>
 
@@ -103,7 +103,7 @@ Der erwartete Pfad ist nur einer von vielen. Die [[term:monte-carlo]] lässt den
 
 [[img:advisor-fee-odds-one]]
 
-Die Erfolgschance fällt von etwa 92 % auf etwa 73 %. Das ist eine große Veränderung, und es ist redlich, das zu sagen. Dieser Plan gibt recht volle $110,000 im Jahr aus, also verschiebt ihn jede stetige neue Ausgabe. Ein Haushalt, der aus denselben Ersparnissen weniger ausgibt, würde dieselbe Gebühr weniger spüren, und einer, der mehr ausgibt, würde sie stärker spüren.
+Die Erfolgschance fällt von etwa 93 % auf etwa 78 %. Das ist eine große Veränderung, und es ist redlich, das zu sagen. Dieser Plan gibt recht volle $110,000 im Jahr aus, also verschiebt ihn jede stetige neue Ausgabe. Ein Haushalt, der aus denselben Ersparnissen weniger ausgibt, würde dieselbe Gebühr weniger spüren, und einer, der mehr ausgibt, würde sie stärker spüren.
 
 ## Eine kleinere Gebühr {#a-smaller-fee}
 
@@ -111,17 +111,17 @@ Setzen Sie den Satz nun auf 0,5 %, die Art von Gebühr, die ein Berater einem gr
 
 [[img:advisor-fee-odds-half]]
 
-Die Erfolgschance fällt von etwa 92 % auf etwa 83 %, weniger als die Hälfte des Rückgangs, den 1 % verursacht. Auf dem erwarteten Pfad endet der Plan mit etwa $2.39 million statt $3.51 million, und die gezahlten Gebühren summieren sich auf etwa $425,000.
+Die Erfolgschance fällt von etwa 93 % auf etwa 86 %, weniger als die Hälfte des Rückgangs, den 1 % verursacht. Auf dem erwarteten Pfad endet der Plan mit etwa $2.64 million statt $3.71 million, und die gezahlten Gebühren summieren sich auf etwa $435,000.
 
 Jedes Was-wäre-wenn, das diese Lektion am angelegten Plan ausprobiert, steht in einer Tabelle, mit 1.000 Pfaden für jede Zeile:
 
 | Beratergebühr | Erfolgschance | Nettovermögen 2059, erwarteter Pfad | Über den Plan gezahlte Gebühren, erwarteter Pfad |
 |---|---:|---:|---:|
-| Keine | 92 % | $3.51 million | $0 |
-| 0,5 % der Vermögenswerte | 83 % | $2.39 million | etwa $425,000 |
-| 1 % der Vermögenswerte | 73 % | $1.27 million | etwa $715,000 |
-| 1,5 % der Vermögenswerte | 61 % | $0.42 million | etwa $895,000 |
-| $6,000 im Jahr, wachsend mit 3 % | 83 % | $2.76 million | etwa $330,000 |
+| Keine | 93 % | $3.71 million | $0 |
+| 0,5 % der Vermögenswerte | 86 % | $2.64 million | etwa $435,000 |
+| 1 % der Vermögenswerte | 78 % | $1.53 million | etwa $736,000 |
+| 1,5 % der Vermögenswerte | 65 % | $0.64 million | etwa $926,000 |
+| $6,000 im Jahr, wachsend mit 3 % | 85 % | $2.99 million | etwa $330,000 |
 
 Jeder halbe Prozentpunkt Gebühr kostet diesen Plan ungefähr zehn Punkte Erfolg. Wenn ein Berater einen niedrigeren Satz anbietet, ist das die Größenordnung dessen, was der Nachlass über einen Ruhestand wie diesen wert ist.
 
@@ -133,7 +133,7 @@ Nicht jeder Berater berechnet einen Prozentsatz. Ein Planer mit Pauschale oder R
 
 [[img:advisor-fee-odds-fixed]]
 
-Für Nadia und Owen landet das nahe bei der Gebühr von 0,5 %: etwa 83 % Erfolg und etwa $2.76 million am Ende des erwarteten Pfads. Eine Pauschale wächst nicht, wenn das Portfolio wächst, also begünstigt sie tendenziell größere Portfolios. Sie schrumpft auch nicht, wenn der Markt fällt, also nimmt sie in einem schlechten Jahrzehnt einen größeren Anteil dessen, was übrig ist. Welche Struktur für Sie günstiger ist, hängt von der Größe Ihrer Ersparnisse ab, und der Editor beantwortet das für Ihren eigenen Plan in wenigen Sekunden.
+Für Nadia und Owen landet das nahe bei der Gebühr von 0,5 %: etwa 85 % Erfolg und etwa $2.99 million am Ende des erwarteten Pfads. Eine Pauschale wächst nicht, wenn das Portfolio wächst, also begünstigt sie tendenziell größere Portfolios. Sie schrumpft auch nicht, wenn der Markt fällt, also nimmt sie in einem schlechten Jahrzehnt einen größeren Anteil dessen, was übrig ist. Welche Struktur für Sie günstiger ist, hängt von der Größe Ihrer Ersparnisse ab, und der Editor beantwortet das für Ihren eigenen Plan in wenigen Sekunden.
 
 ## Was Fehler kosten {#what-mistakes-cost}
 
@@ -146,19 +146,19 @@ Wechseln Sie zu [In Cash](#canvas-dossier:advisor_fee_cash). Das ist dasselbe Pa
 
 [[img:advisor-fee-cash-odds]]
 
-*[In Cash](#canvas-dossier:advisor_fee_cash), keine Gebühr: Etwa 69 % der Zukünfte gelingen.*
+*[In Cash](#canvas-dossier:advisor_fee_cash), keine Gebühr: Etwa 78 % der Zukünfte gelingen.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:advisor-fee-invested-odds]]
 
-*[Angelegt](#canvas-dossier:advisor_fee_invested) mit einer Gebühr von 1 %: Etwa 73 % der Zukünfte gelingen.*
+*[Angelegt](#canvas-dossier:advisor_fee_invested) mit einer Gebühr von 1 %: Etwa 78 % der Zukünfte gelingen.*
 
 </div>
 </div>
 
-Die beiden Pläne liegen bei einem Maß nah beieinander und beim anderen weit auseinander, und der Unterschied zwischen den Maßen zählt. Die Erfolgschance fragt nur, ob das Geld bis zum Ende des Plans reicht. Nach diesem Maß liegt der angelegte Plan mit einer Gebühr von 1 % vorn, 73 % gegen 69 %. Der Cash-Plan bricht selten zusammen, weil Cash nicht einbricht, aber er wächst auch selten, also scheitert er in einem großen Anteil der Zukünfte langsam. Das andere Maß ist, wie viel übrig bleibt. Auf dem erwarteten Pfad endet der Cash-Plan mit etwa $382,000 und der angelegte Plan mit Gebühr mit etwa $1.27 million, mehr als dreimal so viel:
+Die beiden Pläne liegen bei einem Maß nah beieinander und beim anderen weit auseinander, und der Unterschied zwischen den Maßen zählt. Die Erfolgschance fragt nur, ob das Geld bis zum Ende des Plans reicht. Nach diesem Maß liegen die beiden Pläne gleichauf, bei jeweils etwa 78 %. Der Cash-Plan bricht selten zusammen, weil Cash nicht einbricht, aber er wächst auch selten, also scheitert er in einem großen Anteil der Zukünfte langsam. Das andere Maß ist, wie viel übrig bleibt. Auf dem erwarteten Pfad endet der Cash-Plan mit etwa $596,000 und der angelegte Plan mit Gebühr mit etwa $1.53 million, mehr als zweieinhalbmal so viel:
 
 [[img:advisor-fee-cash-balance-sheet]]
 
@@ -166,13 +166,13 @@ Alle drei Versionen des Paares nebeneinander zeigen, wo jede Wahl landet:
 
 | Nadia und Owen | Erfolgschance | Nettovermögen 2059, erwarteter Pfad |
 |---|---:|---:|
-| Angelegt, kein Berater, kein Fehler | 92 % | $3.51 million |
-| Angelegt, mit einer Beratergebühr von 1 % | 73 % | $1.27 million |
-| In Cash, kein Berater, keine Gebühr | 69 % | $0.38 million |
+| Angelegt, kein Berater, kein Fehler | 93 % | $3.71 million |
+| Angelegt, mit einer Beratergebühr von 1 % | 78 % | $1.53 million |
+| In Cash, kein Berater, keine Gebühr | 78 % | $0.60 million |
 
-Das beste Ergebnis in der Tabelle ist die erste Zeile. Ein Haushalt, der durch jeden Crash angelegt bleibt und keine Gebühr zahlt, schneidet besser ab als die beiden anderen, und viele Selbstentscheider tun genau das. Die Gebühr ist der Preis der zweiten Zeile, und der Fehler ist der Preis der dritten. So gelesen ist der Vergleich eine Art Versicherungsfrage. 1 % zu zahlen kostet dieses Paar etwa $2.21 million gegenüber ihrem besten Fall. Diesen einen Fehler zu machen und dabei zu bleiben kostet etwa $3.1 million. Ein Berater ist die Gebühr für einen Haushalt wert, der sonst in der dritten Zeile landen würde, und nicht für einen, der in der ersten bleiben würde.
+Das beste Ergebnis in der Tabelle ist die erste Zeile. Ein Haushalt, der durch jeden Crash angelegt bleibt und keine Gebühr zahlt, schneidet besser ab als die beiden anderen, und viele Selbstentscheider tun genau das. Die Gebühr ist der Preis der zweiten Zeile, und der Fehler ist der Preis der dritten. So gelesen ist der Vergleich eine Art Versicherungsfrage. 1 % zu zahlen kostet dieses Paar etwa $2.19 million gegenüber ihrem besten Fall. Diesen einen Fehler zu machen und dabei zu bleiben kostet etwa $3.1 million. Für einen Haushalt, der sonst in der dritten Zeile landen würde, ist die Gebühr der kleinere der beiden Preise. Ein Haushalt, der auch allein in der ersten Zeile bliebe, kann dennoch einen Berater beauftragen, für Hilfe, die diese Tabelle nicht misst, und der nächste Abschnitt beschreibt sie.
 
-Jede Zeile der Tabelle bezahlt etwas [[saying:free-lunch]]. Die Gebühr kostet etwa $2.21 million gegenüber dem besten Fall, und die Sicherheit von Cash kostet etwa $3.1 million. Die erste Zeile vermeidet beides, und ihr Preis ist die Nervenstärke, durch jeden Crash angelegt zu bleiben.
+Jede Zeile der Tabelle bezahlt etwas [[saying:free-lunch]]. Die Gebühr kostet etwa $2.19 million gegenüber dem besten Fall, und die Sicherheit von Cash kostet etwa $3.1 million. Die erste Zeile vermeidet beides, und ihr Preis ist die Nervenstärke, durch jeden Crash angelegt zu bleiben.
 
 Dieser Vergleich behauptet nicht, dass ein Berater Nadia und Owen mit Sicherheit angelegt gehalten hätte, oder dass jeder ohne Berater in Panik gerät. Er ist eine Weise, die beiden Preise auf demselben Plan nebeneinanderzustellen, damit Sie redlich beurteilen können, in welcher Zeile Sie wahrscheinlich enden.
 
@@ -191,9 +191,11 @@ Mehrere Forscher haben versucht, eine Zahl darauf zu setzen, was ein Berater hin
 - **Morningstars „Gamma“-Forschung** von David Blanchett und Paul Kaplan schätzte, dass bessere Entscheidungen zum Ruhestandseinkommen, etwa Entnahmestrategie, Asset Location und der Einsatz einer Leibrente, etwa 22,6 % mehr Ruhestandseinkommen erzeugen könnten, was sie mit etwa 1,59 Punkten zusätzlicher Rendite im Jahr gleichsetzten.
 - **Morningstars Studie „Mind the Gap“** misst, wie viel Anleger durch ihr eigenes Timing verlieren. Die Ausgabe 2025 stellte fest, dass der durchschnittliche Fondsanleger über die zehn Jahre bis 2024 etwa 1,1 Punkte im Jahr weniger verdiente als die Fonds, die er hielt, weil Geld tendenziell nach Gewinnen ankam und nach Verlusten ging.
 
+Manches, was Beratung bringt, zeigt sich nie als Rendite. Ein Berater kann einem Haushalt viele Stunden ersparen, Steuern, Versicherungen und Nachlassplanung aufeinander abstimmen, vor einer großen Entscheidung eine zweite Meinung geben und einen Plan hinterlassen, dem ein hinterbliebener Partner folgen kann. Viele Haushalte schätzen diese Hilfe um ihrer selbst willen.
+
 Über diese Zahlen gibt es redliche Uneinigkeit. Ein Aufsatz von 2026 im *Financial Analysts Journal* hat die Methode von Mind the Gap neu geprüft und die Kosten schlechten Timings näher an 0,1 Punkt im Jahr gesetzt. Vanguards 3 % setzen einen Kunden voraus, der sonst jeden der Fehler machen würde, die das Papier beschreibt, und viele Menschen würden das nicht.
 
-Der faire Schluss ist enger als jede einzelne Schätzung. Beratung ist am meisten für den Haushalt wert, der sonst einen teuren Fehler machen würde, und am wenigsten für einen, der das nicht würde. Die Was-wäre-wenn in dieser Lektion lassen Sie beide Seiten an Ihrem eigenen Plan bepreisen, mit Ihren eigenen Zahlen.
+Der faire Schluss ist enger als jede einzelne Schätzung. In Dollar gemessen ist Beratung am meisten für den Haushalt wert, der sonst einen teuren Fehler machen würde. Die Hilfe jenseits der Dollar ist so viel wert, wie sie Ihnen wert ist, und nur Sie können sie bepreisen. Die Was-wäre-wenn in dieser Lektion lassen Sie beide Seiten an Ihrem eigenen Plan bepreisen, mit Ihren eigenen Zahlen.
 
 <aside class="lesson-did-you-know">
 <p class="lesson-did-you-know-label">Wussten Sie schon?</p>

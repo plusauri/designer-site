@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Inheriting an IRA: the 10-year rule
 
-An [[term:ira|IRA]] you inherit is not the same account it was for the person who left it to you. It keeps its tax character, so a [[term:traditional|traditional]] IRA still pays out [[term:ordinary-income|ordinary income]] and a [[term:roth|Roth]] still pays out [[term:tax-free|tax-free]] money. But the rules for when the money has to come out change completely at the owner's death. Most heirs must empty the account within ten years, some must also take a distribution every year along the way, and a few can stretch it over their whole life. This lesson follows one working heir through three versions of the same inheritance to show which rule applies, what waiting until the last year costs, and how an inherited Roth differs.
+An [[term:ira|IRA]] you inherit is not the same account it was for the person who left it to you. It keeps its tax character, so a [[term:traditional|traditional]] IRA still pays out [[term:ordinary-income|ordinary income]] and a [[term:roth|Roth]] still pays out [[term:tax-free|tax-free]] money. But the rules for when the money has to come out change completely at the owner's death. Most heirs must empty the account within ten years under the inherited IRA 10-year rule, some must also take a distribution every year along the way, and a few can stretch it over their whole life. This lesson follows one working heir through three versions of the same inheritance to show which rule applies, what waiting until the last year costs, and how an inherited Roth differs.
 
 ## What you will learn
 

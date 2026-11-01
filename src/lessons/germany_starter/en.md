@@ -22,7 +22,8 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 This is the **first European plan** in the Learning Center: a German household with **EUR**
 balances, **German account types**, a **Gesetzliche Rente** cash-flow generator, and a
-**TaxesDe** income-tax sketch — not a US dossier with different labels.
+**TaxesDe** income-tax sketch — not a US dossier with different labels. It is a starting point for
+Germany retirement planning, with Rürup and Riester savings beside the state pension.
 
 The live plan on the right is **Germany Starter** (`germany_starter`): Lukas and Mia, mid-career
 in Germany. Use it to see how **planning region** shapes the product personality before you dig

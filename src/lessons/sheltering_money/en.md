@@ -23,7 +23,7 @@ tutilis-locale: en source
 Where you **hold** investments can matter as much as **what** you hold. The same stock market
 return behaves differently in a taxable [[term:brokerage]], a traditional [[term:401k]], a [[term:roth]] 401(k)<!-- term-skip: traditional — five pills in one sentence is the cap -->, and a Roth
 [[term:ira]] — for taxes today, taxes in retirement, required distributions, and how freely you can reach
-the money.
+the money. This lesson compares taxable vs traditional vs Roth accounts side by side.
 
 This lesson names those four **account types**, compares the rules that actually differ, and points
 at the live **Banks** household so you can see each type on a real balance sheet. It is

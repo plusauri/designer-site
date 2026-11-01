@@ -21,7 +21,8 @@ tutilis-locale: en source
 
 <!--- α <lesson_body> -->
 Return without risk is incomplete. Risk without return is noise. This product puts **both** on the
-**same picture** so you can see the trade-off you are assuming before you plan around it.
+**same picture** so you can see the trade-off you are assuming before you plan around it. The picture is a risk vs
+return chart for the portfolio.
 
 The live plan on the right is a **holdings-focused teaching sample** (`holdings_portfolio`): three
 distinct positions with different expected return ([[term:mu|μ]]) and [[term:volatility]] ([[term:sigma|σ]]) so the scatter is

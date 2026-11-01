@@ -22,7 +22,9 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 Retirees and researchers have spent decades asking a deceptively simple question: *how much can I
 spend from a portfolio without running out?* No single answer fits every household, but a handful of
-well-known approaches have shaped how people talk about “safe” spending. This lesson invites you to
+well-known approaches have shaped how people talk about “safe” spending. Those retirement withdrawal
+strategies range from a fixed percentage to the [[term:guardrails]] withdrawal strategy, which adjusts
+spending when the portfolio moves. This lesson invites you to
 meet those approaches **on your own plan** — not as abstract percentages, but as side-by-side paths
 you can compare to the lifestyle you modeled.
 

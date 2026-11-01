@@ -12,7 +12,7 @@ Una [[term:glide-path|senda de inversión]] es una combinación objetivo que cam
 - [60/40 constante](#canvas-dossier:glide_constant_sixty_forty) mantiene una sola combinación durante todo el plan, también rebalanceada dentro de la IRA.
 - [Solo orientación](#canvas-dossier:glide_tent_steering_only) tiene la misma tienda de bonos con la casilla sin marcar. La ruta está escrita, pero la IRA nunca opera para seguirla.
 
-**Una ruta de glide es un plan de operaciones que usted tiene que hacer.** Cuando la tienda de bonos muestra un resultado mejor en esta lección, ese resultado supone que cada año Morgan entra en la IRA y vende o compra fondos para igualar el objetivo. Tutilis no puede hacer esas operaciones. Si no se hacen, la cartera real se comporta como el plan *Solo orientación*, y ese plan sale peor que cada uno de los otros dos en cada caída que esta lección prueba. La sección [Solo si hace las operaciones](#only-if-you-trade) vuelve sobre esto.
+**Una ruta de glide es un plan de operaciones que usted tiene que hacer.** Cuando la tienda de bonos muestra un resultado mejor en esta lección, ese resultado supone que cada año Morgan entra en la IRA y vende o compra fondos para igualar el objetivo. Tutilis no puede hacer esas operaciones. Si no se hacen, la cartera real se comporta como el plan **Solo orientación**, y ese plan sale peor que cada uno de los otros dos en cada caída que esta lección prueba. La sección [Solo si hace las operaciones](#only-if-you-trade) vuelve sobre esto.
 
 ## Qué aprenderá {#what-you-will-learn}
 
@@ -59,14 +59,14 @@ La casilla bajo la cuadrícula, **Rebalancear dentro de las cuentas con ventajas
 
 [[img:glide-paths-editor-constant|control]]
 
-*El 60/40 constante tiene una columna, y la casilla está marcada.*
+*El [60/40 constante](#canvas-dossier:glide_constant_sixty_forty) tiene una columna, y la casilla está marcada.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-editor-steering|control]]
 
-*Solo orientación tiene la misma tienda que el primer plan, y la casilla está sin marcar.*
+*[Solo orientación](#canvas-dossier:glide_tent_steering_only) tiene la misma tienda que el primer plan, y la casilla está sin marcar.*
 
 </div>
 </div>
@@ -84,19 +84,19 @@ Para definir una ruta en su propio plan, abra [[nav:assumptions]], ponga la **Es
 
 Sin la casilla, una ruta de glide solo orienta el dinero que se mueve de todos modos. El efectivo sobrante de cada año compra lo que está por debajo de su objetivo, y el faltante de cada año se vende de lo que está por encima. Eso basta para seguir una ruta que añade acciones. Las acciones suelen crecer más rápido que los bonos, y mientras las acciones están por debajo de su objetivo el gasto de cada año se vende desde los bonos, así que ambos empujan la combinación en la dirección de la ruta. No basta para seguir una ruta que quita acciones.
 
-Abra [[nav:si-chart]] y cambie su encabezado de **Movimientos** a **Asignaciones**. Cada clase de activo tiene una franja con una barra por año, y una barra negra fina junto a cada año marca el objetivo de la ruta. Este es el plan de solo orientación:
+Abra [[nav:si-chart]] y cambie su encabezado de **Movimientos** a **Asignaciones**. Cada clase de activo tiene una franja con una barra por año, y una barra negra fina junto a cada año marca el objetivo de la ruta. Este es el plan de [solo orientación](#canvas-dossier:glide_tent_steering_only):
 
 [[jump:glide-path|output__forecaster__forecaster.forecast-detail__si-chart__si-chart.allocations]]
 
 [[img:glide-paths-alloc-steering]]
 
-*En solo orientación, las barras de acciones se quedan cerca del 76 por ciento en la jubilación de 2028, mientras las barras negras de objetivo bajan al 40 por ciento.*
+*En **solo orientación**, las barras de acciones se quedan cerca del 76 por ciento en la jubilación de 2028, mientras las barras negras de objetivo bajan al 40 por ciento.*
 
 El objetivo cae 37 puntos en dos años, y la cartera apenas se mueve. El sueldo de Morgan todavía cubre el gasto en 2027, así que no hay que vender nada, y el efectivo sobrante es pequeño al lado de $1.5 million. Después de la jubilación las ventas anuales salen primero de las acciones, porque las acciones son la clase más por encima de su objetivo, y la participación de las acciones baja solo alrededor de un punto al año. Alcanza el objetivo a principios de la década de 2040 solo porque el objetivo ha subido a su encuentro. Esta es la misma ruta con la casilla marcada:
 
 [[img:glide-paths-alloc-tent]]
 
-*Tienda de bonos, casilla marcada. La barra de acciones de cada año se sienta sobre su barra negra de objetivo, hasta el 40 por ciento en 2028 y de vuelta al 70 por ciento en 2043.*
+*[Tienda de bonos](#canvas-dossier:glide_bond_tent), casilla marcada. La barra de acciones de cada año se sienta sobre su barra negra de objetivo, hasta el 40 por ciento en 2028 y de vuelta al 70 por ciento en 2043.*
 
 La diferencia es una operación dentro de la IRA. [[nav:si-table]] de 2027 la muestra. El plan vende unos $322,000 del fondo S&P 500 dentro de la IRA y compra allí el mismo importe del fondo del Tesoro, y ambas líneas dan **Rebalanceo · Traditional IRA** como motivo:
 
@@ -105,14 +105,14 @@ La diferencia es una operación dentro de la IRA. [[nav:si-table]] de 2027 la mu
 
 [[img:glide-paths-si-tent-2027]]
 
-*Tienda de bonos, 2027. La IRA cambia acciones por bonos del Tesoro. No sale dinero de la cuenta.*
+***Tienda de bonos**, 2027. La IRA cambia acciones por bonos del Tesoro. No sale dinero de la cuenta.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-si-steering-2027]]
 
-*Solo orientación, 2027. No se vende nada, y la ruta solo mueve la pequeña cantidad de efectivo sobrante.*
+***Solo orientación**, 2027. No se vende nada, y la ruta solo mueve la pequeña cantidad de efectivo sobrante.*
 
 </div>
 </div>
@@ -129,7 +129,7 @@ La tienda de bonos tiene dos lados, y la casilla hace que ocurran los dos. En la
 
 [[img:glide-paths-si-tent-2035]]
 
-*Tienda de bonos, 2035. El gasto del año se vende sobre todo desde los bonos del Tesoro, y un pequeño intercambio dentro de la IRA compra acciones.*
+*[Tienda de bonos](#canvas-dossier:glide_bond_tent), 2035. El gasto del año se vende sobre todo desde los bonos del Tesoro, y un pequeño intercambio dentro de la IRA compra acciones.*
 
 En 2035 el objetivo es de alrededor del 54 por ciento de acciones. La mayor parte del gasto del año sale de los fondos del Tesoro, que son la clase por encima del objetivo, así que el gasto mismo mueve la combinación hacia más acciones. La IRA completa lo que falta con un pequeño intercambio. En el lado ascendente la ruta es fácil de seguir, porque los retiros hacen la mayor parte del trabajo. El lado descendente es donde las operaciones son grandes.
 
@@ -137,7 +137,7 @@ El plan constante hace lo mismo alrededor de un punto fijo. Rebalancea a 60/40 c
 
 [[img:glide-paths-alloc-constant]]
 
-*60/40 constante. Las barras de acciones se sientan sobre el objetivo del 60 por ciento cada año.*
+*[60/40 constante](#canvas-dossier:glide_constant_sixty_forty). Las barras de acciones se sientan sobre el objetivo del 60 por ciento cada año.*
 
 ## Cuando llega una caída {#when-a-crash-comes}
 
@@ -154,73 +154,73 @@ El estallido de las puntocom reproduce siete años de rendimientos de las accion
 
 [[img:glide-paths-bs-dotcom-tent]]
 
-*La tienda de bonos con el estallido de las puntocom desde 2028.*
+*La [tienda de bonos](#canvas-dossier:glide_bond_tent) con el estallido de las puntocom desde 2028.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-bs-dotcom-steering]]
 
-*Solo orientación con la misma caída.*
+*[Solo orientación](#canvas-dossier:glide_tent_steering_only) con la misma caída.*
 
 </div>
 </div>
 
-Los dos planes tienen la misma ruta escrita en la misma cuadrícula. La tienda de bonos entra en la caída con un 40 por ciento de acciones y cae a unos $1.37 million en 2030. El plan de solo orientación entra con un 76 por ciento de acciones y cae a unos $1.10 million. La tienda termina el plan con unos $1.05 million, y solo orientación con unos $210,000, una quinta parte. El plan 60/40 constante queda entre ellos y termina con unos $840,000.
+Los dos planes tienen la misma ruta escrita en la misma cuadrícula. La tienda de bonos entra en la caída con un 40 por ciento de acciones y cae a unos $1.38 million en 2030. El plan de **solo orientación** entra con un 76 por ciento de acciones y cae a unos $1.11 million. La tienda termina el plan con unos $1.25 million, y **solo orientación** con unos $410,000, alrededor de una tercera parte. El plan [60/40 constante](#canvas-dossier:glide_constant_sixty_forty) queda entre ellos y termina con unos $1.03 million.
 
-La tienda también sigue operando durante la caída. Cuando las acciones bajan, la participación de las acciones cae por debajo del objetivo, y el intercambio de la IRA vuelve a comprar acciones hasta ese objetivo, a precios bajos. En 2030, el año más bajo de la caída, el plan no vende ninguna acción. Vende bonos del Tesoro dentro de la IRA, paga el gasto del año con ellos y usa unos $141,000 del producto para comprar el fondo S&P 500:
+La tienda también sigue operando durante la caída. Cuando las acciones bajan, la participación de las acciones cae por debajo del objetivo, y el intercambio de la IRA vuelve a comprar acciones hasta ese objetivo, a precios bajos. En 2030, el año más bajo de la caída, el plan no vende ninguna acción. Vende bonos del Tesoro dentro de la IRA, paga el gasto del año con ellos y usa unos $148,000 del producto para comprar el fondo S&P 500:
 
 [[img:glide-paths-si-dotcom-tent-2030]]
 
-*Tienda de bonos en 2030, con el estallido de las puntocom desde 2028. Los bonos del Tesoro pagan el año y compran acciones en el suelo.*
+***Tienda de bonos** en 2030, con el estallido de las puntocom desde 2028. Los bonos del Tesoro pagan el año y compran acciones en el suelo.*
 
 Una caída en una ruta es una sola historia. Aquí están los mismos planes sobre 1.000 trayectorias de mercado, con cada caída reproducida desde 2028, como la proporción de trayectorias que tienen éxito:
 
 | Caída desde 2028 | 60/40 constante | Tienda de bonos | Solo orientación |
 |---|---:|---:|---:|
-| Ninguno | 88 % | 89 % | 83 % |
-| Estallido de las puntocom (2000) | 81 % | 85 % | 63 % |
-| Mercado bajista de la crisis del petróleo (1973) | 83 % | 85 % | 70 % |
-| Crisis financiera mundial (2007) | 92 % | 94 % | 78 % |
-| Gran Crac (1929) | 32 % | 65 % | 1 % |
+| Ninguno | 90 % | 91 % | 86 % |
+| Estallido de las puntocom (2000) | 87 % | 89 % | 70 % |
+| Mercado bajista de la crisis del petróleo (1973) | 86 % | 88 % | 76 % |
+| Crisis financiera mundial (2007) | 94 % | 95 % | 83 % |
+| Gran Crac (1929) | 43 % | 74 % | 3 % |
 
-La tienda de bonos vence al plan constante en cada caída, y por el margen mayor en la más profunda. La fila de la crisis financiera mundial está más alta que la fila sin caída, porque esa reproducción termina con una recuperación fuerte, que eleva todos los planes. La columna Solo orientación es la más baja en cada fila.
+La tienda de bonos vence al plan constante en cada caída, y por el margen mayor en la más profunda. Para el plan constante y la tienda, la fila de la crisis financiera mundial está más alta que la fila sin caída, porque esa reproducción termina con una recuperación fuerte. El plan de **solo orientación** entra en esa caída con casi un 76 por ciento de acciones y termina un poco más bajo que sin caída. La columna **Solo orientación** es la más baja en cada fila.
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">
 
 [[img:glide-paths-nw-dotcom-constant]]
 
-*60/40 constante, 1.000 trayectorias con el estallido de las puntocom desde 2028.*
+***60/40 constante**, 1.000 trayectorias con el estallido de las puntocom desde 2028.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:glide-paths-nw-dotcom-tent]]
 
-*Tienda de bonos, la misma caída, en el mismo eje.*
+***Tienda de bonos**, la misma caída, en el mismo eje.*
 
 </div>
 </div>
 
 ## Lo que cuesta la tienda {#what-the-tent-costs}
 
-Cuando los mercados son favorables, una mayor proporción de acciones deja al final un patrimonio mayor. En la trayectoria esperada sin caída, que Tutilis dibuja como el GMF, el plan de solo orientación termina con unos $1.70 million, el plan 60/40 constante con unos $1.55 million y la tienda de bonos con unos $1.49 million. Tener un 40 por ciento de acciones en los primeros años de jubilación renuncia a algo de crecimiento, y la tienda termina alrededor de un 4 por ciento por debajo del plan constante.
+Cuando los mercados son favorables, una mayor proporción de acciones deja al final un patrimonio mayor. En la trayectoria esperada sin caída, que Tutilis dibuja como el GMF, el plan de [solo orientación](#canvas-dossier:glide_tent_steering_only) termina con unos $1.90 million, el plan [60/40 constante](#canvas-dossier:glide_constant_sixty_forty) con unos $1.75 million y la tienda de bonos con unos $1.68 million. Tener un 40 por ciento de acciones en los primeros años de jubilación renuncia a algo de crecimiento, y la tienda termina alrededor de un 4 por ciento por debajo del plan constante.
 
-La contrapartida es la misma que en [Más seguridad al acercarse la jubilación](/learn/safer_approaching_retirement). La tienda renuncia a un poco en el futuro medio para salir mucho mejor en los malos. En 1.000 trayectorias sin caída todavía tiene éxito un poco más a menudo que el plan constante, alrededor del 89 por ciento frente al 88 por ciento, porque las trayectorias malas cuentan en contra del éxito y las buenas no.
+La contrapartida es la misma que en [Más seguridad al acercarse la jubilación](/learn/safer_approaching_retirement). La tienda renuncia a un poco en el futuro medio para salir mucho mejor en los malos. En 1.000 trayectorias sin caída todavía tiene éxito un poco más a menudo que el plan constante, alrededor del 91 por ciento frente al 90 por ciento, porque las trayectorias malas cuentan en contra del éxito y las buenas no.
 
 ## Solo si hace las operaciones {#only-if-you-trade}
 
 Cada resultado de esta lección para la tienda de bonos y el plan constante supone que las operaciones de [[nav:si-table]] ocurren de verdad. En 2027 eso significa que Morgan vende unos $322,000 del fondo S&P 500 en la IRA y compra con ellos el fondo del Tesoro. En un año de caída significa comprar acciones mientras las noticias están en lo peor. Tutilis modela esas operaciones. No puede hacerlas, y su plan tampoco.
 
-Si las operaciones no se hacen, la cartera real es el plan *Solo orientación*. La ruta sigue en el plan, y la cartera real no la sigue. Como muestra la tabla de caídas, eso es peor que no haber tenido nunca una ruta y mantener 60/40, porque la cartera entra en la jubilación cerca del 76 por ciento de acciones y luego vende acciones en el suelo para pagar cada año.
+Si las operaciones no se hacen, la cartera real es el plan [Solo orientación](#canvas-dossier:glide_tent_steering_only). La ruta sigue en el plan, y la cartera real no la sigue. Como muestra la tabla de caídas, eso es peor que no haber tenido nunca una ruta y mantener 60/40, porque la cartera entra en la jubilación cerca del 76 por ciento de acciones y luego vende acciones en el suelo para pagar cada año.
 
 Unas pocas cosas hacen más probable que las operaciones ocurran:
 
 - **Póngales una fecha.** Rebalancee una vez al año en una fecha fija, y use la tabla de Asignaciones de ese año como lista de operaciones.
 - **Opere dentro de la IRA.** Las operaciones no cuestan impuestos allí, y por eso el plan las hace allí. Vender en una cuenta de corretaje para rebalancear puede realizar ganancias de capital que la previsión no supone.
 - **Deje que lo haga un fondo.** Un fondo con fecha objetivo o un fondo equilibrado se rebalancea solo. La ruta de un fondo con fecha objetivo suele seguir bajando después de la fecha objetivo, así que no es una tienda de bonos.
-- **Compruebe que la casilla coincida con su conducta.** Si sabe que no va a rebalancear, desmarque la casilla, y la previsión le mostrará el resultado de solo orientación en lugar de un resultado que usted no va a obtener.
+- **Compruebe que la casilla coincida con su conducta.** Si sabe que no va a rebalancear, desmarque la casilla, y la previsión le mostrará el resultado de **solo orientación** en lugar de un resultado que usted no va a obtener.
 
 ## Lo que dice la investigación {#what-the-research-says}
 

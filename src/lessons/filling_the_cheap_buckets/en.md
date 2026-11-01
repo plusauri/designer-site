@@ -22,7 +22,8 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 Federal [[term:ordinary-income]] is taxed in **brackets** — the first slice of [[term:taxable-income]] at 10%, the
 next at 12%, then 22%, and up. The low brackets are the **cheap buckets**, and every year you get a
-fresh set. Room you do not use does not roll over.
+fresh set. Room you do not use does not roll over. Planners fill low tax brackets on purpose, and
+this lesson weighs Roth conversions vs RMDs as two ways to do it.
 
 That creates a question no single number answers: **how full are my cheap buckets each year, and who
 is filling them — me, or the rules?** Two very different kinds of income compete for the same space.

@@ -135,7 +135,7 @@ Tutilis modélise les deux différemment, précisément pour cette raison. Le bo
 
 [[img:rates-table-2027]]
 
-Le fonds de Trésor à long terme finit 2027 à $148,000 avec le choc, contre $199,100 sans lui. Le fonds de Trésor à moyen terme finit à $180,500, contre $196,300. Le bon du Trésor finit à $105,600, contre $105,300. C'est le même bon dans les deux plans. Les quelques centaines de dollars d'écart sont des liquidités que le plan a réinvesties différemment, et ce que vaut le bon lui-même n'a pas changé.
+Le fonds de Trésor à long terme finit 2027 à $148,000 avec le choc, contre $199,100 sans lui. Le fonds de Trésor à moyen terme finit à $180,500, contre $196,300. Le bon du Trésor finit à $105,300, contre $105,100. C'est le même bon dans les deux plans. Les quelques centaines de dollars d'écart sont des liquidités que le plan a réinvesties différemment, et ce que vaut le bon lui-même n'a pas changé.
 
 <aside class="lesson-saying" data-saying="free-lunch">
 
@@ -159,7 +159,7 @@ Le choix **Actions** dans l'éditeur est cette question. Avec *Baissent aussi*, 
 
 [[img:rates-bs-growth]]
 
-Sans la perte sur les actions, le patrimoine net en 2027 ne descend qu'à $1,213,000. Les fonds obligataires baissent encore, et les liquidités rapportent encore davantage. À la fin du plan, cette version est environ $97,000 devant le plan sans choc, parce que les obligations et les liquidités ont passé cinq ans à gagner davantage pendant que les actions ne perdaient rien.
+Sans la perte sur les actions, le patrimoine net en 2027 ne descend qu'à $1,212,000. Les fonds obligataires baissent encore, et les liquidités rapportent encore davantage. À la fin du plan, cette version est environ $96,000 devant le plan sans choc, parce que les obligations et les liquidités ont passé cinq ans à gagner davantage pendant que les actions ne perdaient rien.
 
 <aside class="lesson-did-you-know">
 <p class="lesson-did-you-know-label">Le saviez-vous ?</p>
@@ -178,9 +178,9 @@ Une baisse des taux est l'image inversée d'une hausse. Les fonds obligataires g
 
 [[img:rates-bs-cut]]
 
-Le patrimoine net est environ $49,000 plus haut en 2027, à $1,327,000. En 2032, il est de $46,000 plus bas que le plan sans la baisse, et en 2058 il est environ $143,000 plus bas, à $366,000 contre $510,000. Une personne à la retraite qui vit de son épargne est un prêteur, et une baisse abaisse le prix que ce prêteur reçoit. Le gain de la première année est réel, mais c'est un gain de prix, et le revenu plus bas dure des années.
+Le patrimoine net est environ $49,000 plus haut en 2027, à $1,326,000. En 2032, il est de $46,000 plus bas que le plan sans la baisse, et en 2058 il est environ $143,000 plus bas, à $558,000 contre $701,000. Une personne à la retraite qui vit de son épargne est un prêteur, et une baisse abaisse le prix que ce prêteur reçoit. Le gain de la première année est réel, mais c'est un gain de prix, et le revenu plus bas dure des années.
 
-La durée du mouvement compte autant que son sens. Réglez **Durée de la variation** sur son maximum, et la hausse de deux points ne s'inverse jamais à l'intérieur du plan. Alors la perte sur les actions n'est jamais rattrapée, les fonds obligataires ne récupèrent jamais leur prix, et le revenu supplémentaire ne compense pas. Sur le plan de Morgan, une hausse permanente laisse le patrimoine net à $461,000 en 2058, contre $533,000 quand les taux reviennent après cinq ans, et $510,000 sans aucun choc.
+La durée du mouvement compte autant que son sens. Réglez **Durée de la variation** sur son maximum, et la hausse de deux points ne s'inverse jamais à l'intérieur du plan. Alors la perte sur les actions n'est jamais rattrapée, les fonds obligataires ne récupèrent jamais leur prix, et le revenu supplémentaire ne compense pas. Sur le plan de Morgan, une hausse permanente laisse le patrimoine net à $672,000 en 2058, contre $724,000 quand les taux reviennent après cinq ans, et $701,000 sans aucun choc.
 
 ## Des obligations plus courtes {#shorter-bonds}
 
@@ -188,9 +188,9 @@ La défense habituelle contre la hausse des taux, ce sont des obligations plus c
 
 [[img:rates-bs-short-hike]]
 
-Le patrimoine net baisse d'environ $93,000 en 2027, contre $139,000 pour le plan de Morgan avec le fonds long. Le fonds court se réinvestit aussi au nouveau taux en un an ou deux, donc il encaisse le revenu plus élevé presque tout de suite. En 2058, le plan aux obligations plus courtes, avec le choc, finit à $478,000, bien au-dessus de ses propres $385,000 sans le choc.
+Le patrimoine net baisse d'environ $93,000 en 2027, contre $139,000 pour le plan de Morgan avec le fonds long. Le fonds court se réinvestit aussi au nouveau taux en un an ou deux, donc il encaisse le revenu plus élevé presque tout de suite. En 2058, le plan aux **obligations plus courtes** finit à **$663,000** avec le choc, contre **$570,000** sans lui.
 
-La protection a un prix, et il apparaît dans les deux autres cas. On attend des obligations courtes qu'elles rapportent moins, donc sans aucun choc le plan aux obligations plus courtes finit à $385,000, contre $510,000 pour le plan aux obligations longues. Et quand les taux baissent, les obligations courtes ne gagnent presque rien en prix et se réinvestissent bientôt au taux plus bas. Sous la baisse d'un point et demi, le plan aux obligations plus courtes ne gagne qu'environ $14,000 en 2027 et finit à $261,000, contre $366,000 pour le plan aux obligations longues.
+La protection a un prix, et il apparaît dans les deux autres cas. On attend des obligations courtes qu'elles rapportent moins, donc sans aucun choc le plan aux **obligations plus courtes** finit à $570,000, contre $701,000 pour le plan aux [obligations longues](#canvas-dossier:rates_bond_heavy). Et quand les taux baissent, les obligations courtes ne gagnent presque rien en prix et se réinvestissent bientôt au taux plus bas. Sous la baisse d'un point et demi, le plan aux **obligations plus courtes** ne gagne qu'environ $14,000 en 2027 et finit à $451,000, contre $558,000 pour le plan aux **obligations longues**.
 
 Aucun placement ne gagne donc dans tous les cas, et le choix porte sur le risque que vous préférez porter :
 

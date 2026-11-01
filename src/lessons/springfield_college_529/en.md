@@ -21,7 +21,7 @@ tutilis-locale: en source
 
 <!--- α <lesson_body> -->
 College is often a household’s **largest multi-year outflow** after housing. This lesson starts with
-**what a 529 plan is**, then looks at **what college roughly costs**, how **saving into a 529** shows
+**what a 529 college savings plan is**, then looks at **what college roughly costs**, how **saving into a 529** shows
 up in a plan, and a few **ownership and leftover-money** points that change planning more than
 people expect.
 

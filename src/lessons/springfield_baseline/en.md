@@ -20,7 +20,7 @@ tutilis-locale: en source
 -->
 
 <!--- α <lesson_body> -->
-This lesson uses one sample plan — Homer and Marge in Springfield — for two related goals:
+This lesson uses one sample family financial plan — Homer and Marge in Springfield — for two related goals:
 
 1. **Orient you** to a realistic household we reuse (sometimes with small changes) across many
    lessons, so you learn the cast once and keep returning to familiar people and charts.

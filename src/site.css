@@ -489,6 +489,50 @@ p.lesson-situation .lesson-situation-label {
     padding: 0.6rem 0.9rem 0.1rem;
 }
 
+/*
+ * Quick Jump: a pointer to the Quick Jump lesson above a lesson's first Jump to card, inserted by
+ * LessonJumpRefs.withQuickJumpCallout rather than authored. The brand gold of the app's own Quick
+ * Jump label. The whole callout is the link: the anchor's ::after covers it, so a click anywhere
+ * opens the lesson in a new tab.
+ */
+.lesson-quick-jump {
+    --lesson-callout-accent: var(--plusauri-gold, #c89b2c);
+    --lesson-callout-on-accent: #2a2108;
+    position: relative;
+    border: 2px solid var(--lesson-callout-accent);
+    border-radius: 8px;
+    margin: 1.25rem 0 0.75rem;
+    padding: 0;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--lesson-callout-accent) 8%, transparent);
+    cursor: pointer;
+}
+
+.lesson-quick-jump:hover {
+    background: color-mix(in srgb, var(--lesson-callout-accent) 16%, transparent);
+}
+
+.lesson-quick-jump > .lesson-quick-jump-label {
+    background: var(--lesson-callout-accent);
+    color: var(--lesson-callout-on-accent);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    margin: 0;
+}
+
+.lesson-quick-jump > .lesson-quick-jump-body {
+    padding: 0.6rem 0.9rem 0.1rem;
+}
+
+.lesson-quick-jump .lesson-quick-jump-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
 /* Advanced: a deep teal — clearly not the desktop lavender, and quieter on the page. */
 .lesson-advanced {
     --lesson-callout-accent: #00796b;
@@ -731,7 +775,7 @@ html[data-theme="dark"] .lesson-advanced {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background: #0b1d45 url("/static/images/learn/cogilis-robot.webp") center / cover no-repeat;
+    background: #0b1d45 url("/static/brand/cogilis_mascot.webp") center / cover no-repeat;
     box-shadow: 0 0 0 2px var(--ai-reply-glow), 0 0 8px var(--ai-reply-glow);
 }
 
@@ -945,6 +989,11 @@ html[data-theme="dark"] .lesson-your-turn {
     background: var(--cast-art, url("/static/images/learn/cast/futuristic/did-you-know.webp")) center / contain no-repeat;
 }
 
+/* The mix portrait is a tall scene, not the landscape cutout the 400/304 box was drawn for. */
+.lesson-did-you-know[data-cast="mix"]::before {
+    aspect-ratio: 214 / 241;
+}
+
 /* The scroll: a rolled edge top and bottom, and paper that darkens toward its edges. */
 .lesson-did-you-know::after {
     content: "";
@@ -1038,8 +1087,11 @@ html[data-theme="dark"] .lesson-did-you-know {
 .lesson-saying > .lesson-saying-art {
     grid-area: art;
     justify-self: center;
-    width: 100%;
-    max-width: 34rem;
+    /* Intrinsic size, capped near the file (about 380px). A width of 100% scaled the drawing
+       up to the pane, and a full-screen lesson made it soft. The pane's screenshot rule
+       excludes this image, so this max-width is the one that applies. */
+    width: auto;
+    max-width: min(100%, 24rem);
     height: auto;
     margin: 0 0 0.6rem;
     border: 2px solid var(--saying-ink);
@@ -1837,6 +1889,106 @@ main {
     white-space: nowrap;
 }
 
+/* The lesson's product logo (LessonBrandMark), in the card's top-right corner. The card makes room
+   on its right so a long title or a badge never runs under it. */
+a.learn-card.learn-card-branded {
+    position: relative;
+    padding-inline-end: 2.75rem;
+}
+
+.learn-card-brand {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.8rem;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+/* /brand (BrandRoutes): one card per brand, its pictures stacked. */
+.brand-sheet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0 2rem;
+}
+
+.brand-card {
+    border: 1px solid rgba(52, 39, 30, 0.14);
+    border-radius: 0.75rem;
+    padding: 1rem 1.1rem;
+    background: #fff;
+}
+
+.brand-card h2 {
+    margin: 0 0 0.75rem;
+}
+
+.brand-figure {
+    margin: 0 0 1rem;
+    text-align: center;
+}
+
+.brand-figure figcaption {
+    font-size: 0.85rem;
+    color: #6b6259;
+    margin-top: 0.35rem;
+}
+
+/* The brand sheet's picture, not the nav wordmark. The header link uses the same
+   class, and a 6rem box here was the empty band above and below the menu. */
+.brand-figure .brand-logo {
+    width: 6rem;
+    height: 6rem;
+}
+
+.brand-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #261910;
+}
+
+.brand-label img {
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.brand-mascot {
+    width: 100%;
+    max-width: 16rem;
+    border-radius: 0.5rem;
+}
+
+.brand-placeholder {
+    display: inline-block;
+    margin-inline-start: 0.35rem;
+    padding: 0.05rem 0.45rem;
+    border-radius: 999px;
+    background: #fdf0d8;
+    color: #8a5a12;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+html[data-theme="dark"] .brand-card {
+    background: #24201c;
+    border-color: rgba(246, 241, 232, 0.14);
+}
+
+html[data-theme="dark"] .brand-label {
+    color: #f6f1e8;
+}
+
+/* The same logo leading the lesson's title. */
+.lesson-brand-mark {
+    width: 2.25rem;
+    height: 2.25rem;
+    vertical-align: -0.35rem;
+    margin-inline-end: 0.6rem;
+}
+
 .learn-card-title-row {
     display: flex;
     align-items: baseline;
@@ -1922,8 +2074,9 @@ footer {
     opacity: 0.75;
 }
 
-/* Location + contact email — own line under the copyright. */
-footer .footer-contact {
+/* Location + contact email, then the channel links (SocialProfiles) — each its own line. */
+footer .footer-contact,
+footer .footer-social {
     display: block;
     margin-top: 0.35rem;
 }
@@ -2119,6 +2272,14 @@ details.lesson-intro-chrome blockquote.lesson-shared a {
     opacity: 0.85;
 }
 
+/* A community's mark beside the label (CommunityCredit.iconResource; local runs only for now). */
+.lesson-vlogger-credit-label .lesson-community-mark {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.45rem;
+    vertical-align: middle;
+}
+
 .lesson-vlogger-credit p {
     margin: 0 0 0.45rem;
 }
@@ -2243,30 +2404,6 @@ blockquote.lesson-disclaimer + .lesson-privacy-link {
     border: 1px solid #f5c2c2;
     border-radius: 0.35rem;
     padding: 0.6rem 0.75rem;
-}
-
-/* Team recipe contact sheets. The capture is a tall offscreen scene cropped
-   to the editor; cap the width so a step stays readable beside the prose. */
-.dev-frame {
-    margin: 1.25rem 0 1.75rem;
-}
-
-.dev-frame figcaption {
-    margin-bottom: 0.35rem;
-}
-
-.dev-frame img {
-    display: block;
-    max-width: min(100%, 52rem);
-    height: auto;
-    background: #111;
-    border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
-}
-
-/* Partner design notes. A generated table can run to six columns;
-   scroll it sideways rather than squeezing the prose. */
-.dev-note-body {
-    overflow-x: auto;
 }
 
 /*
@@ -4171,6 +4308,39 @@ button.lesson-header-expand[hidden] {
     width: 100%;
 }
 
+/*
+ * Phone: the inline gate after the canvas iframe (LearnRoutes, PHONE_MEDIA_QUERY) removed the canvas
+ * and added `phone-prose` to a lesson that has one. Keyed off that class rather than a media query
+ * of its own, so the CSS cannot disagree with the script about what a phone is. Whatever only
+ * steers the canvas goes: the plan switcher, and plan links read as plain text. The gate also
+ * puts the note below at the top of the prose; it exists only then.
+ */
+.lesson-split.phone-prose .lesson-phone-note {
+    margin: 1rem 0 0;
+    padding: 0.5rem 0.75rem;
+    border-left: 3px solid var(--plusauri-gold, #c89b2c);
+    /* Translucent so it reads on light and dark paper alike. */
+    background: color-mix(in srgb, var(--plusauri-gold, #c89b2c) 16%, transparent);
+    border-radius: 0.25rem;
+}
+
+.lesson-split.phone-prose .lesson-plan-switcher-lede,
+.lesson-split.phone-prose .lesson-plan-switcher,
+.lesson-split.phone-prose .lesson-plan-showing {
+    display: none;
+}
+
+/* Its "click a place and the canvas goes there" has no canvas to keep the promise. */
+.lesson-split.phone-prose .lesson-quick-jump {
+    display: none;
+}
+
+.lesson-split.phone-prose a[href^="#canvas-dossier:"] {
+    pointer-events: none;
+    color: inherit;
+    text-decoration: none;
+}
+
 .lesson-pane {
     overflow: auto;
     /* Keep a fast flick's momentum inside the pane instead of chaining it to the document. */
@@ -4868,7 +5038,10 @@ img.app-emoji {
  *   - .nav-icon — Getting around rail glyphs
  *   - .lesson-nav-ref-img — LessonNavRefs product chips (must not get the shot matte/ring)
  */
-.lesson-pane img:not(.nav-icon):not(.lesson-nav-ref-img) {
+/* The brand mark leading a lesson title (LessonBrandMark) is a logo, not a screenshot: no frame.
+   A saying's scene is part of its panel, and that panel caps the picture: the screenshot frame
+   would stretch it to the pane. */
+.lesson-pane img:not(.nav-icon):not(.lesson-nav-ref-img):not(.lesson-brand-mark):not(.lesson-saying-art) {
     max-width: 100%;
     height: auto;
     display: block;
@@ -4909,7 +5082,7 @@ html[data-theme="dark"] .lesson-pane {
     --plusauri-generated-mat: color-mix(in srgb, var(--plusauri-sky, #78A5EB) 14%, #14120f);
 }
 
-.lesson-pane img.lesson-media-generated:not(.nav-icon):not(.lesson-nav-ref-img) {
+.lesson-pane img.lesson-media-generated:not(.nav-icon):not(.lesson-nav-ref-img):not(.lesson-brand-mark):not(.lesson-saying-art) {
     --plusauri-shot-border: var(--plusauri-generated-edge);
     border-width: 2px;
     /* The mat itself: padding shows the background between border and picture. */
@@ -4930,20 +5103,28 @@ html[data-theme="dark"] .lesson-pane {
  * callout's. The class is removed by the script when no canvas can show the figure's plan.
  */
 /* Lesson images are `pointer-events: none` (the inline-screenshot rule above); a figure that opens
- * the canvas has to take its own pointer, so the selector repeats that rule's :not()s to outrank it. */
-.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img) {
+ * the canvas has to take its own pointer, so the selector repeats that rule's :not()s to outrank it.
+ * A Jump to path is the same kind of picture inside a transparent button. Chrome still hits the
+ * button; Safari lets the click pass through it. The image takes the pointer, and the click
+ * handler walks up to `.lesson-jump-go`. */
+.lesson-pane img.lesson-jump-path:not(.nav-icon):not(.lesson-nav-ref-img):not(.lesson-brand-mark):not(.lesson-saying-art) {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img):not(.lesson-brand-mark):not(.lesson-saying-art) {
     pointer-events: auto;
     cursor: pointer;
     transition: border-color 120ms ease, box-shadow 120ms ease;
 }
 
-.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img):hover,
-.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img):focus-visible {
+.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img):not(.lesson-brand-mark):not(.lesson-saying-art):hover,
+.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img):not(.lesson-brand-mark):not(.lesson-saying-art):focus-visible {
     --plusauri-shot-border: var(--card-link);
     box-shadow: 0 0 0 3px rgba(70, 110, 185, 0.18);
 }
 
-.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img):focus-visible {
+.lesson-pane img.lesson-figure-go:not(.nav-icon):not(.lesson-nav-ref-img):not(.lesson-brand-mark):not(.lesson-saying-art):focus-visible {
     outline: 2px solid var(--card-link);
     outline-offset: 2px;
 }
@@ -5958,6 +6139,12 @@ html[data-theme="dark"] a.catalog-entry-card:focus-visible {
         cursor: row-resize;
     }
 
+    /* With no canvas (a prose-only lesson, or a phone) the stacked rows above would hold the prose
+       in the top 42% and leave the rest of the screen empty. One row, the full height. */
+    .lesson-split.prose-only {
+        grid-template-rows: minmax(0, 1fr);
+    }
+
     .lesson-pane {
         max-height: none;
     }
@@ -5978,6 +6165,8 @@ html[data-theme="dark"] a.catalog-entry-card:focus-visible {
 .glossary-definition {
     font-size: 1.05rem;
     line-height: 1.6;
+    /* A long definition's blank lines are its paragraph breaks. */
+    white-space: pre-line;
     max-width: 40rem;
 }
 
@@ -6738,9 +6927,9 @@ dialog.intro-video > article.intro-video-panel > header {
 /* Drawn smaller than the 560px file and centered, so the lesson's outline shows on the first
  * screen: 72% of the pane, at most 403px (2026-09-29: 40% under the file, then +20%). The fine
  * lettering is lost at this size; a click enlarges the card (wireIntroCardZoom in
- * lesson-split.js). The :not() chain matches `.lesson-pane img:not(.nav-icon):not(.lesson-nav-ref-img)`
- * so these rules win. Without the script the bare img carries the size; with it, the frame does. */
-.lesson-pane .lesson-intro-card img:not(.nav-icon):not(.lesson-nav-ref-img),
+ * lesson-split.js). The :not() chain repeats the lesson screenshot rule so these rules win.
+ * Without the script the bare img carries the size; with it, the frame does. */
+.lesson-pane .lesson-intro-card img:not(.nav-icon):not(.lesson-nav-ref-img):not(.lesson-brand-mark):not(.lesson-saying-art),
 .lesson-pane .lesson-intro-card .lesson-card-zoom-frame {
     width: min(72%, 403px);
     margin-left: auto;
@@ -6750,7 +6939,7 @@ dialog.intro-video > article.intro-video-panel > header {
     display: block;
     position: relative;
 }
-.lesson-pane .lesson-intro-card .lesson-card-zoom-frame img:not(.nav-icon):not(.lesson-nav-ref-img) {
+.lesson-pane .lesson-intro-card .lesson-card-zoom-frame img:not(.nav-icon):not(.lesson-nav-ref-img):not(.lesson-brand-mark):not(.lesson-saying-art) {
     width: 100%;
     margin: 0;
     /* Lesson images are `pointer-events: none`; the zoomable card has to take its own click. */
@@ -6811,7 +7000,8 @@ dialog.lesson-card-zoom img {
  * Free-trial banner (TrialCallout.kt): artwork, not type, so the CSS only sizes it, lets it pop in
  * once per visit (trial-callout.js adds .is-settled on later pages) and lifts it on hover. On a
  * lesson it floats at the top right of the prose pane beside the title and scrolls away with the
- * text; on /learn it ends the title row.
+ * text; on /learn it ends the title row; on the homepage it sits under the tool tour's captions
+ * (placed with the tour, under .tool-tour-side).
  */
 a.trial-callout {
     display: block;
@@ -8164,11 +8354,322 @@ details.learn-index-level-note > p {
 }
 
 
+/* Pricing is one designed sheet (1024×1536). The picture behind the type has no
+   lettering, so the homepage veil can stay light: strong enough to read on, clear
+   before the scene on the right. A solid panel read as no picture at all. A section
+   may grow past its slice when the real copy is longer than the painting. The
+   picture then scales up to cover that extra, anchored on the right, so the bands
+   still meet and the scene stays in frame. It is not stretched out of shape.
+   The sheet breaks out of the page column and meets the window edges. Type sizes
+   are capped in rem so a wide window does not turn the words into a poster. */
+body:has(.pricing-sheet) {
+    overflow-x: clip;
+}
+
+@media (min-width: 1101px) {
+    body:has(.pricing-sheet) > main.container {
+        padding-top: 0;
+    }
+}
+
+.pricing-sheet {
+    --pricing-ink: #1c2433;
+    --pricing-fill: #f6f1e8;
+    --pricing-wash: linear-gradient(90deg, rgba(255, 252, 246, 0.85), rgba(255, 252, 246, 0.7) 30%, rgba(255, 252, 246, 0) 58%);
+    --pricing-wash-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: calc(50% - 50vw);
+    container-type: inline-size;
+    color: var(--pricing-ink);
+    --plusauri-ink: var(--pricing-ink);
+    --pico-color: var(--pricing-ink);
+    --pico-h1-color: #1a2744;
+    --pico-h2-color: #1a2744;
+    --pico-h3-color: #1a2744;
+}
+
+.pricing-sheet-section {
+    position: relative;
+    /* Pico's section margin would open a gap of page color between the bands.
+       min-width: 0 lets the band shrink with the page instead of growing to the
+       longest unwrapped line and getting clipped at the window. */
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: calc(var(--slice-h) * 100cqw / 1024);
+    --copy-pad: 2.15rem;
+    padding: 1.25rem clamp(1.25rem, 2.5vw, 2.5rem) 0.9rem;
+    background: var(--pricing-fill);
+}
+
+/* The illustration. It covers the whole section. The sprite is scaled so this
+   slice's height is the section's height, and the right edge stays put, so a
+   taller block keeps the laptop and crops the left wash. When the copy fits the
+   slice, the scale is 1 and the band matches the painting.
+   background-position percentages are (area − image), not a plain offset. The
+   fraction below cancels that and puts the slice's top on the section's top. */
+.pricing-sheet-section::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("/static/images/backgrounds/pricing-page.webp?v=2");
+    background-repeat: no-repeat;
+    background-size: auto calc(100% * 1536 / var(--slice-h));
+    background-position: 100% calc(var(--slice-y) / (1536 - var(--slice-h)) * 100%);
+    pointer-events: none;
+}
+
+/* Veil across the slice. It fades out so the scene is the background of the type. */
+.pricing-sheet-section::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0 auto 0 0;
+    width: var(--pricing-wash-width);
+    background: var(--pricing-wash);
+    pointer-events: none;
+}
+
+/* The questions slice is the painted FAQ. Do not draw it under the live copy. */
+.pricing-sheet-questions::after {
+    content: none;
+    background: none;
+}
+
+.pricing-sheet-hero    { --slice-y: 0;    --slice-h: 312; }
+.pricing-sheet-tutilis { --slice-y: 312;  --slice-h: 348; --copy-pad: 2.5rem; padding-top: 1.6rem; }
+.pricing-sheet-cogilis {
+    --slice-y: 660;
+    --slice-h: 386;
+    --pricing-fill: #071428;
+    --pricing-ink: #f3f6fb;
+    --pricing-wash: linear-gradient(90deg, rgba(7, 16, 36, 0.84), rgba(7, 16, 36, 0.62) 30%, rgba(7, 16, 36, 0) 58%);
+    --pricing-wash-width: 100%;
+    /* Set on this element. The sheet's --pico-color is already resolved and will not follow --pricing-ink. */
+    --pico-color: #f3f6fb;
+    --plusauri-ink: #f3f6fb;
+    --pico-h2-color: #f7f4ea;
+    color: #f3f6fb;
+    --copy-pad: 2.6rem;
+    padding-top: 1.7rem;
+}
+.pricing-sheet-trial   { --slice-y: 1046; --slice-h: 210; --copy-pad: 2.2rem; padding-top: 1.3rem; }
+.pricing-sheet-ideas   { --slice-y: 1256; --slice-h: 150; --copy-pad: 2rem; padding-top: 1.1rem; }
+.pricing-sheet-questions {
+    --slice-y: 1406;
+    --slice-h: 130;
+    --pricing-fill: #e7eef6;
+    /* Solid. The slice underneath is the painted FAQ, and anything short of
+       opaque leaves those letters under the live questions. */
+    --pricing-wash: #e7eef6;
+    --pricing-wash-width: 100%;
+    --copy-pad: 1.7rem;
+    padding-top: 0.8rem;
+}
+
+.pricing-sheet-copy {
+    position: relative;
+    z-index: 2;
+    /* A length, not a percentage of the container. A percentage here can fail to
+       resolve, and the line then runs off the band. */
+    /* Lengths only. A percentage in this container can fail to resolve, and the
+       line then runs past the window and gets clipped. 48cqw keeps the trial
+       and the ideas on the wash when the window is only a little over 800px. */
+    width: min(32rem, 48cqw, calc(100cqw - 3rem));
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+/* A narrow column, stacked from the top. 26.4rem is a fifth wider than the
+   22rem column, so the words reach further into the painting. 40cqw is the
+   same width on a large window and holds the column on the wash on a smaller one. */
+.pricing-sheet-hero .pricing-sheet-copy,
+.pricing-sheet-tutilis .pricing-sheet-copy {
+    width: min(26.4rem, 40cqw, calc(100cqw - 3rem));
+}
+
+.pricing-sheet-cogilis .pricing-sheet-copy { width: min(26rem, 42cqw, calc(100cqw - 3rem)); }
+
+.pricing-sheet-cogilis :is(p, li, strong) {
+    color: #f3f6fb;
+}
+
+.pricing-sheet h1,
+.pricing-sheet h2,
+.pricing-sheet h3 {
+    margin: 0 0 0.2em;
+    line-height: 1.05;
+}
+
+/* Capped in rem. The sheet is now as wide as the window, and a cqw size would
+   turn the title into a poster on a large monitor. */
+.pricing-sheet h1 { font-size: clamp(1.85rem, 2.5cqw, 2.35rem); }
+.pricing-sheet h2 { font-size: clamp(1.35rem, 1.7cqw, 1.6rem); }
+.pricing-sheet h3 { font-size: clamp(1.05rem, 1.25cqw, 1.2rem); }
+
+.pricing-sheet p,
+.pricing-sheet ul {
+    margin: 0 0 0.55em;
+    /* 18px. A front page's supporting text usually sits there; 16px is document
+       body and read small against the painting. The cap stops a wide window
+       from pushing it into a display size. */
+    font-size: clamp(1.0625rem, 1.25cqw, 1.125rem);
+    line-height: 1.45;
+}
+
+.pricing-sheet li { margin: 0.1em 0; }
+
+.pricing-sheet .home-cta-row {
+    margin: 0.35em 0 0;
+    gap: 0.6em 1em;
+}
+
+.pricing-sheet .home-cta-row a {
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.pricing-sheet-questions .pricing-sheet-copy {
+    width: 100%;
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.3rem 0.9rem;
+}
+
+.pricing-sheet-questions h2 { grid-column: 1 / -1; }
+
+.pricing-sheet-plain {
+    display: block;
+    background: none;
+}
+
+.pricing-sheet-plain::before,
+.pricing-sheet-plain::after {
+    content: none;
+}
+
+/* Below 1100px the painted band is shorter than the copy, so the words ran
+   off the picture onto a blank field. Stack each picture at its own proportion,
+   full width, with the words under it. The bands still meet, and the page column
+   does not open a frame around them. */
+@media (max-width: 1100px) {
+    body:has(.pricing-sheet) > main.container {
+        max-width: none;
+        padding-top: 0;
+        padding-inline: 0;
+    }
+
+    .pricing-sheet {
+        width: auto;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        color: inherit;
+        --plusauri-ink: unset;
+        --pico-color: unset;
+        --pico-h1-color: unset;
+        --pico-h2-color: unset;
+        --pico-h3-color: unset;
+    }
+
+    .pricing-sheet-section {
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        /* Not --pricing-fill. Cogilis sets that to navy, and this card is paper. */
+        background: #f6f1e8;
+    }
+
+    .pricing-sheet-questions {
+        background: #e7eef6;
+    }
+
+    /* Art crop above the copy. ::before was the wash on desktop. */
+    .pricing-sheet-section::before {
+        position: static;
+        display: block;
+        width: 100%;
+        height: calc(var(--slice-h) * 100cqw / 1024);
+        margin-bottom: 0;
+        border-radius: 0;
+        inset: auto;
+        background: url("/static/images/backgrounds/pricing-page.webp?v=2") 0 calc(var(--slice-y) * -100cqw / 1024) / 100% auto no-repeat;
+    }
+
+    .pricing-sheet-questions::before { display: none; }
+
+    .pricing-sheet-section::after { content: none; }
+
+    .pricing-sheet-hero { --pricing-art: 8%; }
+    .pricing-sheet-tutilis { --pricing-art: 30%; }
+    .pricing-sheet-cogilis { --pricing-art: 55%; }
+    .pricing-sheet-trial { --pricing-art: 74%; }
+    .pricing-sheet-ideas { --pricing-art: 86%; }
+    .pricing-sheet-questions { --pricing-art: 96%; }
+
+    .pricing-sheet-copy,
+    .pricing-sheet-hero .pricing-sheet-copy,
+    .pricing-sheet-tutilis .pricing-sheet-copy,
+    .pricing-sheet-cogilis .pricing-sheet-copy,
+    .pricing-sheet-questions .pricing-sheet-copy {
+        width: auto;
+        max-width: none;
+        min-height: 0;
+        display: block;
+        color: inherit;
+        padding: 0.85rem 1.25rem 1.15rem;
+    }
+
+    /* Desktop Cogilis is light type on navy. On a phone the band is paper,
+       and those colors stay unless they are reset here. */
+    .pricing-sheet-cogilis {
+        color: inherit;
+        --pricing-ink: unset;
+        --pico-color: unset;
+        --plusauri-ink: unset;
+        --pico-h2-color: unset;
+        --pico-h3-color: unset;
+    }
+
+    .pricing-sheet-cogilis :is(h2, h3, p, li, strong) {
+        color: inherit;
+    }
+
+    .pricing-sheet h1 { font-size: 2rem; }
+    .pricing-sheet h2 { font-size: 1.45rem; }
+    .pricing-sheet h3 { font-size: 1.2rem; }
+
+    .pricing-sheet p,
+    .pricing-sheet ul {
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    .pricing-sheet .home-cta-row a { font-size: 1rem; }
+
+    .pricing-sheet-questions .pricing-sheet-copy { display: block; }
+}
+
 /* Design pass: homepage hero banner (matches the mockup layout) */
 main:has(.home-brand)::before {
     content: "";
     display: block;
-    aspect-ratio: 2048 / 768;
+    aspect-ratio: 1380 / 516;
     margin-bottom: 1.5rem;
     border-radius: 0.75rem;
     background:
@@ -8194,12 +8695,12 @@ main:has(.home-brand)::before {
         margin: 0;
     }
 
-    main:has(.home-brand) > :nth-child(1) {
+    main:has(.home-brand) > :nth-child(1 of :not(.tool-tour)) {
         grid-column: 1 / -1;
         grid-row: 1;
     }
 
-    main:has(.home-brand) > :nth-child(n + 2):nth-child(-n + 5) {
+    main:has(.home-brand) > :nth-child(n + 2 of :not(.tool-tour)):nth-child(-n + 5 of :not(.tool-tour)) {
         grid-column: 1;
         position: relative;
         z-index: 1;
@@ -8211,7 +8712,7 @@ main:has(.home-brand)::before {
         --pico-h1-color: #1c1b19;
     }
 
-    main:has(.home-brand) > :nth-child(2) {
+    main:has(.home-brand) > :nth-child(2 of :not(.tool-tour)) {
         grid-row: 3;
         font-family: Georgia, "Times New Roman", serif;
         font-weight: 600;
@@ -8220,7 +8721,7 @@ main:has(.home-brand)::before {
         letter-spacing: -0.01em;
     }
 
-    main:has(.home-brand) > :nth-child(2)::after {
+    main:has(.home-brand) > :nth-child(2 of :not(.tool-tour))::after {
         content: "";
         display: block;
         width: 5rem;
@@ -8230,27 +8731,27 @@ main:has(.home-brand)::before {
         background: #d9a826;
     }
 
-    main:has(.home-brand) > :nth-child(3) {
+    main:has(.home-brand) > :nth-child(3 of :not(.tool-tour)) {
         grid-row: 4;
         margin-top: clamp(0.6rem, 1.2cqw, 1.1rem);
         font-size: clamp(0.9rem, 1.35cqw, 1.1rem);
         line-height: 1.4;
     }
 
-    main:has(.home-brand) > :nth-child(4) {
+    main:has(.home-brand) > :nth-child(4 of :not(.tool-tour)) {
         grid-row: 5;
         margin-top: 0.5rem;
         font-size: clamp(0.85rem, 1.2cqw, 1rem);
         line-height: 1.45;
     }
 
-    main:has(.home-brand) > :nth-child(5) {
+    main:has(.home-brand) > :nth-child(5 of :not(.tool-tour)) {
         grid-row: 6;
         margin-top: clamp(0.8rem, 1.6cqw, 1.5rem);
         gap: 0.75rem 1rem;
     }
 
-    main:has(.home-brand) > :nth-child(5) a {
+    main:has(.home-brand) > :nth-child(5 of :not(.tool-tour)) a {
         margin: 0;
         padding: 0.65em 1.4em;
         font-size: clamp(0.9rem, 1.2cqw, 1.05rem);
@@ -8259,55 +8760,55 @@ main:has(.home-brand)::before {
         text-decoration: none;
     }
 
-    main:has(.home-brand) > :nth-child(5) a[role="button"] {
+    main:has(.home-brand) > :nth-child(5 of :not(.tool-tour)) a[role="button"] {
         background: #e0b94d;
         border-color: #e0b94d;
         color: #1c1b19;
     }
 
-    main:has(.home-brand) > :nth-child(5) a[role="button"]:hover {
+    main:has(.home-brand) > :nth-child(5 of :not(.tool-tour)) a[role="button"]:hover {
         background: #ecc866;
         border-color: #ecc866;
         color: #1c1b19;
     }
 
-    main:has(.home-brand) > :nth-child(5) a.secondary {
+    main:has(.home-brand) > :nth-child(5 of :not(.tool-tour)) a.secondary {
         background: rgba(255, 255, 255, 0.55);
         border: 1.5px solid #1c1b19;
         color: #1c1b19;
     }
 
-    main:has(.home-brand) > :nth-child(n + 6) {
+    main:has(.home-brand) > :nth-child(n + 6 of :not(.tool-tour)) {
         grid-column: 1 / -1;
     }
 
-    main:has(.home-brand) > :nth-child(6) {
+    main:has(.home-brand) > :nth-child(6 of :not(.tool-tour)) {
         margin-top: 2.5rem;
     }
 }
 
 /* Design pass: tighter hero text, more room between the two paragraphs */
 @media (min-width: 900px) {
-    main:has(.home-brand) > :nth-child(2) {
+    main:has(.home-brand) > :nth-child(2 of :not(.tool-tour)) {
         font-size: clamp(1.5rem, 3.1cqw, 2.8rem);
     }
 
-    main:has(.home-brand) > :nth-child(3) {
+    main:has(.home-brand) > :nth-child(3 of :not(.tool-tour)) {
         font-size: clamp(0.8rem, 1.15cqw, 0.95rem);
         line-height: 1.35;
     }
 
-    main:has(.home-brand) > :nth-child(4) {
+    main:has(.home-brand) > :nth-child(4 of :not(.tool-tour)) {
         margin-top: clamp(0.9rem, 1.6cqw, 1.4rem);
         font-size: clamp(0.75rem, 1.05cqw, 0.88rem);
         line-height: 1.4;
     }
 
-    main:has(.home-brand) > :nth-child(5) {
+    main:has(.home-brand) > :nth-child(5 of :not(.tool-tour)) {
         margin-top: clamp(0.7rem, 1.3cqw, 1.2rem);
     }
 
-    main:has(.home-brand) > :nth-child(5) a {
+    main:has(.home-brand) > :nth-child(5 of :not(.tool-tour)) a {
         font-size: clamp(0.8rem, 1.05cqw, 0.92rem);
         padding: 0.55em 1.2em;
     }
@@ -8328,15 +8829,15 @@ main:has(.home-brand)::before {
         min-height: max(20rem, min(37.5vw, calc(100svh - 15rem)));
     }
 
-    main.container:has(.home-brand) > :nth-child(3) {
+    main.container:has(.home-brand) > :nth-child(3 of :not(.tool-tour)) {
         margin-top: clamp(0.7rem, 1.3cqw, 1.2rem);
     }
 
-    main.container:has(.home-brand) > :nth-child(4) {
+    main.container:has(.home-brand) > :nth-child(4 of :not(.tool-tour)) {
         margin-top: clamp(1.4rem, 2.6cqw, 2.3rem);
     }
 
-    main.container:has(.home-brand) > :nth-child(5) {
+    main.container:has(.home-brand) > :nth-child(5 of :not(.tool-tour)) {
         margin-top: clamp(1rem, 1.8cqw, 1.6rem);
     }
 }
@@ -8351,7 +8852,7 @@ main:has(.home-brand) > .home-brand {
 }
 
 @media (min-width: 900px) {
-    main.container:has(.home-brand) > :nth-child(n + 2):nth-child(-n + 5) {
+    main.container:has(.home-brand) > :nth-child(n + 2 of :not(.tool-tour)):nth-child(-n + 5 of :not(.tool-tour)) {
         justify-self: start;
         width: 40vw;
         margin-left: calc(50cqw - 50vw);
@@ -8369,7 +8870,7 @@ main:has(.home-brand) > .home-brand {
 }
 
 @media (min-width: 900px) {
-    main.container:has(.home-brand) > :nth-child(n + 2):nth-child(-n + 5) {
+    main.container:has(.home-brand) > :nth-child(n + 2 of :not(.tool-tour)):nth-child(-n + 5 of :not(.tool-tour)) {
         justify-self: start;
         width: 40vw;
         margin-left: calc(50cqw - 50vw);
@@ -8387,7 +8888,7 @@ main:has(.home-brand) > .home-brand {
 }
 
 @media (min-width: 900px) {
-    main.container:has(.home-brand) > :nth-child(n + 2):nth-child(-n + 5) {
+    main.container:has(.home-brand) > :nth-child(n + 2 of :not(.tool-tour)):nth-child(-n + 5 of :not(.tool-tour)) {
         justify-self: start;
         width: 40vw;
         margin-left: calc(50cqw - 50vw);
@@ -8410,25 +8911,25 @@ main:has(.home-brand) > .home-brand {
 }
 
 @media (min-width: 900px) {
-    main.container:has(.home-brand) > :nth-child(n + 2):nth-child(-n + 5) {
+    main.container:has(.home-brand) > :nth-child(n + 2 of :not(.tool-tour)):nth-child(-n + 5 of :not(.tool-tour)) {
         width: 34vw;
         padding-inline: clamp(1rem, 3vw, 3.5rem) 0.5rem;
     }
 
-    main.container:has(.home-brand) > :nth-child(2) {
+    main.container:has(.home-brand) > :nth-child(2 of :not(.tool-tour)) {
         font-size: clamp(1.35rem, 2.7cqw, 2.4rem);
     }
 
-    main.container:has(.home-brand) > :nth-child(3) {
-        font-size: clamp(0.78rem, 1.05cqw, 0.9rem);
+    main.container:has(.home-brand) > :nth-child(3 of :not(.tool-tour)) {
+        font-size: clamp(1.0625rem, 1.25cqw, 1.125rem);
     }
 
-    main.container:has(.home-brand) > :nth-child(4) {
-        font-size: clamp(0.72rem, 0.98cqw, 0.84rem);
+    main.container:has(.home-brand) > :nth-child(4 of :not(.tool-tour)) {
+        font-size: clamp(1rem, 1.15cqw, 1.0625rem);
     }
 
-    main.container:has(.home-brand) > :nth-child(5) a {
-        font-size: clamp(0.78rem, 1cqw, 0.88rem);
+    main.container:has(.home-brand) > :nth-child(5 of :not(.tool-tour)) a {
+        font-size: clamp(0.95rem, 1.05cqw, 1rem);
         padding: 0.5em 1.1em;
     }
 }
@@ -8441,14 +8942,14 @@ main:has(.home-brand) > .home-brand {
     main:has(.home-brand)::after {
         content: "";
         grid-column: 1 / -1;
-        grid-row: 8 / 10;
+        grid-row: 9 / 11;
         margin-inline: calc(50% - 50vw);
         background: #261910;
     }
 
-    main.container:has(.home-brand) > :nth-child(6) {
+    main.container:has(.home-brand) > :nth-child(6 of :not(.tool-tour)) {
         grid-column: 1 / -1;
-        grid-row: 8;
+        grid-row: 9;
         justify-self: center;
         position: relative;
         z-index: 1;
@@ -8464,7 +8965,7 @@ main:has(.home-brand) > .home-brand {
     }
 
     /* Short gold bar under the heading */
-    main.container:has(.home-brand) > :nth-child(6)::after {
+    main.container:has(.home-brand) > :nth-child(6 of :not(.tool-tour))::after {
         content: "";
         display: block;
         width: 3.5rem;
@@ -8475,9 +8976,9 @@ main:has(.home-brand) > .home-brand {
     }
 
     /* Wide enough to hold the paragraph on two lines */
-    main.container:has(.home-brand) > :nth-child(7) {
+    main.container:has(.home-brand) > :nth-child(7 of :not(.tool-tour)) {
         grid-column: 1 / -1;
-        grid-row: 9;
+        grid-row: 10;
         justify-self: center;
         position: relative;
         z-index: 1;
@@ -8492,14 +8993,14 @@ main:has(.home-brand) > .home-brand {
         --pico-color: #e9ded2;
     }
 
-    main.container:has(.home-brand) > :nth-child(7) strong {
+    main.container:has(.home-brand) > :nth-child(7 of :not(.tool-tour)) strong {
         color: #f6f1e8;
     }
 
     /* "Three good places to start:" on the cards banner, above the first card */
-    main.container:has(.home-brand) > :nth-child(8) {
+    main.container:has(.home-brand) > :nth-child(8 of :not(.tool-tour)) {
         grid-column: 1 / -1;
-        grid-row: 10;
+        grid-row: 11;
         align-self: start;
         justify-self: center;
         position: relative;
@@ -8514,9 +9015,9 @@ main:has(.home-brand) > .home-brand {
     }
 
     /* The three links: this list is the cards banner itself, shown whole at full width */
-    main.container:has(.home-brand) > :nth-child(9) {
+    main.container:has(.home-brand) > :nth-child(9 of :not(.tool-tour)) {
         grid-column: 1 / -1;
-        grid-row: 10;
+        grid-row: 11;
         align-self: start;
         position: relative;
         height: 37.5vw;
@@ -8527,7 +9028,7 @@ main:has(.home-brand) > .home-brand {
     }
 
     /* One link per card; positions are in vw so they stay lined up at any window width */
-    main.container:has(.home-brand) > :nth-child(9) > li {
+    main.container:has(.home-brand) > :nth-child(9 of :not(.tool-tour)) > li {
         position: absolute;
         left: 15.04vw;
         right: 15.04vw;
@@ -8543,31 +9044,31 @@ main:has(.home-brand) > .home-brand {
         --pico-color: #4a4338;
     }
 
-    main.container:has(.home-brand) > :nth-child(9) > li:nth-child(1) { top: 9.28vw; }
-    main.container:has(.home-brand) > :nth-child(9) > li:nth-child(2) { top: 16.35vw; }
-    main.container:has(.home-brand) > :nth-child(9) > li:nth-child(3) { top: 23.3vw; }
+    main.container:has(.home-brand) > :nth-child(9 of :not(.tool-tour)) > li:nth-child(1) { top: 9.28vw; }
+    main.container:has(.home-brand) > :nth-child(9 of :not(.tool-tour)) > li:nth-child(2) { top: 16.35vw; }
+    main.container:has(.home-brand) > :nth-child(9 of :not(.tool-tour)) > li:nth-child(3) { top: 23.3vw; }
 
-    main.container:has(.home-brand) > :nth-child(9) a {
+    main.container:has(.home-brand) > :nth-child(9 of :not(.tool-tour)) a {
         color: #1c1b19;
         font-weight: 700;
         text-decoration: none;
     }
 
-    main.container:has(.home-brand) > :nth-child(9) a:hover {
+    main.container:has(.home-brand) > :nth-child(9 of :not(.tool-tour)) a:hover {
         text-decoration: underline;
     }
 
     /* The whole card is clickable */
-    main.container:has(.home-brand) > :nth-child(9) a::after {
+    main.container:has(.home-brand) > :nth-child(9 of :not(.tool-tour)) a::after {
         content: "";
         position: absolute;
         inset: 0;
     }
 
     /* "New to the tool?" centered at the bottom, below the third card */
-    main.container:has(.home-brand) > :nth-child(10) {
+    main.container:has(.home-brand) > :nth-child(10 of :not(.tool-tour)) {
         grid-column: 1 / -1;
-        grid-row: 10;
+        grid-row: 11;
         align-self: end;
         justify-self: center;
         position: relative;
@@ -8579,20 +9080,20 @@ main:has(.home-brand) > .home-brand {
         --pico-color: #1c1b19;
     }
 
-    main.container:has(.home-brand) > :nth-child(10) a {
+    main.container:has(.home-brand) > :nth-child(10 of :not(.tool-tour)) a {
         color: #7a5a12;
         font-weight: 600;
     }
 
     /* Space before the rest of the page continues */
-    main.container:has(.home-brand) > :nth-child(11) {
+    main.container:has(.home-brand) > :nth-child(11 of :not(.tool-tour)) {
         margin-top: 3rem;
     }
 }
 
 /* Design pass: "Three good places to start" matches the Find your situation heading */
 @media (min-width: 900px) {
-    main.container:has(.home-brand) > :nth-child(8) {
+    main.container:has(.home-brand) > :nth-child(8 of :not(.tool-tour)) {
         font-family: Georgia, "Times New Roman", serif;
         font-weight: 500;
         font-size: clamp(1.35rem, 2cqw, 1.9rem);
@@ -8611,7 +9112,7 @@ main:has(.home-brand) > .home-brand {
     /* The picture: the rule near the end of the page becomes the banner background */
     main.container:has(.home-brand) > hr {
         grid-column: 1 / -1;
-        grid-row: 11;
+        grid-row: 12;
         align-self: start;
         justify-self: start;
         width: 100vw;
@@ -8622,9 +9123,9 @@ main:has(.home-brand) > .home-brand {
     }
 
     /* Everything that sits on the banner shares its grid cell */
-    main.container:has(.home-brand) > :nth-child(n + 11):nth-child(-n + 18) {
+    main.container:has(.home-brand) > :nth-child(n + 11 of :not(.tool-tour)):nth-child(-n + 18 of :not(.tool-tour)) {
         grid-column: 1 / -1;
-        grid-row: 11;
+        grid-row: 12;
         align-self: start;
         justify-self: start;
         position: relative;
@@ -8632,9 +9133,9 @@ main:has(.home-brand) > .home-brand {
     }
 
     /* Headings */
-    main.container:has(.home-brand) > :nth-child(11),
-    main.container:has(.home-brand) > :nth-child(13),
-    main.container:has(.home-brand) > :nth-child(16) {
+    main.container:has(.home-brand) > :nth-child(11 of :not(.tool-tour)),
+    main.container:has(.home-brand) > :nth-child(13 of :not(.tool-tour)),
+    main.container:has(.home-brand) > :nth-child(16 of :not(.tool-tour)) {
         padding: 0;
         font-family: Georgia, "Times New Roman", serif;
         font-weight: 700;
@@ -8644,13 +9145,13 @@ main:has(.home-brand) > .home-brand {
         --pico-h2-color: #14233a;
     }
 
-    main.container:has(.home-brand) > :nth-child(11) { margin: calc(var(--b3) + 4.95vw) 0 0 calc(50% - 50vw + 10.4vw); }
-    main.container:has(.home-brand) > :nth-child(13) { margin: calc(var(--b3) + 26.3vw) 0 0 calc(50% - 50vw + 10.4vw); }
-    main.container:has(.home-brand) > :nth-child(16) { margin: calc(var(--b3) + 46.1vw) 0 0 calc(50% - 50vw + 10.4vw); }
+    main.container:has(.home-brand) > :nth-child(11 of :not(.tool-tour)) { margin: calc(var(--b3) + 4.95vw) 0 0 calc(50% - 50vw + 10.4vw); }
+    main.container:has(.home-brand) > :nth-child(13 of :not(.tool-tour)) { margin: calc(var(--b3) + 26.3vw) 0 0 calc(50% - 50vw + 10.4vw); }
+    main.container:has(.home-brand) > :nth-child(16 of :not(.tool-tour)) { margin: calc(var(--b3) + 46.1vw) 0 0 calc(50% - 50vw + 10.4vw); }
 
     /* The two lists sit on the banner's left edge, so their items can be placed in vw */
-    main.container:has(.home-brand) > :nth-child(12),
-    main.container:has(.home-brand) > :nth-child(17) {
+    main.container:has(.home-brand) > :nth-child(12 of :not(.tool-tour)),
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) {
         width: 100vw;
         height: 0;
         margin: var(--b3) 0 0 calc(50% - 50vw);
@@ -8659,7 +9160,7 @@ main:has(.home-brand) > .home-brand {
     }
 
     /* What it models: five columns under the icons */
-    main.container:has(.home-brand) > :nth-child(12) > li {
+    main.container:has(.home-brand) > :nth-child(12 of :not(.tool-tour)) > li {
         position: absolute;
         top: 14.5vw;
         margin: 0;
@@ -8672,13 +9173,13 @@ main:has(.home-brand) > .home-brand {
         --pico-color: #3d4650;
     }
 
-    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(1) { left: 8.92vw;  width: 16.34vw; }
-    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(2) { left: 27.08vw; width: 14.26vw; }
-    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(3) { left: 43.16vw; width: 13.8vw; }
-    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(4) { left: 58.79vw; width: 14.26vw; }
-    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(5) { left: 74.87vw; width: 16.15vw; }
+    main.container:has(.home-brand) > :nth-child(12 of :not(.tool-tour)) > li:nth-child(1) { left: 8.92vw;  width: 16.34vw; }
+    main.container:has(.home-brand) > :nth-child(12 of :not(.tool-tour)) > li:nth-child(2) { left: 27.08vw; width: 14.26vw; }
+    main.container:has(.home-brand) > :nth-child(12 of :not(.tool-tour)) > li:nth-child(3) { left: 43.16vw; width: 13.8vw; }
+    main.container:has(.home-brand) > :nth-child(12 of :not(.tool-tour)) > li:nth-child(4) { left: 58.79vw; width: 14.26vw; }
+    main.container:has(.home-brand) > :nth-child(12 of :not(.tool-tour)) > li:nth-child(5) { left: 74.87vw; width: 16.15vw; }
 
-    main.container:has(.home-brand) > :nth-child(12) > li > strong {
+    main.container:has(.home-brand) > :nth-child(12 of :not(.tool-tour)) > li > strong {
         display: block;
         min-height: 2.3em;
         margin-bottom: 0.15vw;
@@ -8690,7 +9191,7 @@ main:has(.home-brand) > .home-brand {
     }
 
     /* "Withdrawal strategies, including..." reads as one sentence */
-    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(5) > strong {
+    main.container:has(.home-brand) > :nth-child(12 of :not(.tool-tour)) > li:nth-child(5) > strong {
         display: inline;
         min-height: 0;
         font: inherit;
@@ -8698,8 +9199,8 @@ main:has(.home-brand) > .home-brand {
     }
 
     /* Who it is for: two paragraphs, kept left of the owl */
-    main.container:has(.home-brand) > :nth-child(14),
-    main.container:has(.home-brand) > :nth-child(15) {
+    main.container:has(.home-brand) > :nth-child(14 of :not(.tool-tour)),
+    main.container:has(.home-brand) > :nth-child(15 of :not(.tool-tour)) {
         width: 54.7vw;
         padding: 0;
         font-size: 1.08vw;
@@ -8708,11 +9209,11 @@ main:has(.home-brand) > .home-brand {
         --pico-color: #1f2a37;
     }
 
-    main.container:has(.home-brand) > :nth-child(14) { margin: calc(var(--b3) + 30vw) 0 0 calc(50% - 50vw + 10.4vw); }
-    main.container:has(.home-brand) > :nth-child(15) { margin: calc(var(--b3) + 38.8vw) 0 0 calc(50% - 50vw + 10.4vw); }
+    main.container:has(.home-brand) > :nth-child(14 of :not(.tool-tour)) { margin: calc(var(--b3) + 30vw) 0 0 calc(50% - 50vw + 10.4vw); }
+    main.container:has(.home-brand) > :nth-child(15 of :not(.tool-tour)) { margin: calc(var(--b3) + 38.8vw) 0 0 calc(50% - 50vw + 10.4vw); }
 
     /* Own it: four items, text centered under each icon */
-    main.container:has(.home-brand) > :nth-child(17) > li {
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li {
         position: absolute;
         top: 55.4vw;
         margin: 0;
@@ -8725,12 +9226,12 @@ main:has(.home-brand) > .home-brand {
         --pico-color: #3d4650;
     }
 
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(1) { left: 8.92vw;  width: 11.07vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) { left: 25.07vw; width: 14.97vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(3) { left: 41.93vw; width: 14.97vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(4) { left: 58.4vw;  width: 15.3vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(1) { left: 8.92vw;  width: 11.07vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(2) { left: 25.07vw; width: 14.97vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(3) { left: 41.93vw; width: 14.97vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(4) { left: 58.4vw;  width: 15.3vw; }
 
-    main.container:has(.home-brand) > :nth-child(17) > li > strong {
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li > strong {
         display: block;
         margin-bottom: 0.15vw;
         font-weight: 700;
@@ -8741,13 +9242,13 @@ main:has(.home-brand) > .home-brand {
 
     /* "See pricing" on the gold pill. The picture already has the arrow, so the link's own
        arrow is hidden and its translated label shows. The whole pill is clickable. */
-    main.container:has(.home-brand) > :nth-child(18) {
+    main.container:has(.home-brand) > :nth-child(18 of :not(.tool-tour)) {
         z-index: 2;
         margin: calc(var(--b3) + 52.47vw) 0 0 calc(50% - 50vw + 78.97vw);
         padding: 0;
     }
 
-    main.container:has(.home-brand) > :nth-child(18) a {
+    main.container:has(.home-brand) > :nth-child(18 of :not(.tool-tour)) a {
         display: flex;
         align-items: center;
         box-sizing: border-box;
@@ -8761,12 +9262,12 @@ main:has(.home-brand) > .home-brand {
         color: #3b2a08;
     }
 
-    main.container:has(.home-brand) > :nth-child(18) .link-arrow {
+    main.container:has(.home-brand) > :nth-child(18 of :not(.tool-tour)) .link-arrow {
         display: none;
     }
 
     /* The closing note goes below the banner */
-    main.container:has(.home-brand) > :nth-child(20) {
+    main.container:has(.home-brand) > :nth-child(20 of :not(.tool-tour)) {
         margin-top: 2rem;
     }
 }
@@ -8776,6 +9277,9 @@ body > header.container {
     background: #e1e7ef;
     /* Edge to edge without clipping: a clip-path here cut off the Resources menu below the header. */
     border-image: conic-gradient(#e1e7ef 0 0) fill 0 / / 0 100vmax;
+    /* Pico's container puts 1rem above and below the row. On pricing that was
+       40px of empty band around a 60px menu. */
+    padding-block: 0.2rem;
     --plusauri-ink: #14233a;
     --pico-color: #14233a;
     --pico-primary: #14233a;
@@ -8787,7 +9291,7 @@ body > header.container {
 }
 
 body:has(.home-brand) > header.container {
-    padding-block: 0.4rem;
+    padding-block: 0.2rem;
 }
 
 body > header.container .brand-logo {
@@ -8804,8 +9308,17 @@ main.container:has(.home-brand) > .home-brand {
 }
 
 /* Design pass: bigger corner logo; brown band logo matches the Tutilis size */
+body > header.container nav {
+    /* The lesson player has its own bar. Here the row should be about as tall
+       as the links. The old 1.9rem wordmark was forcing a 60px row. */
+    --pico-nav-element-spacing-vertical: 0.1rem;
+    --pico-nav-link-spacing-vertical: 0.15rem;
+}
+
 body > header.container .brand-logo {
-    font-size: 1.9rem;
+    font-size: 1.45rem;
+    width: auto;
+    height: auto;
 }
 
 main.container:has(.home-brand) > .home-brand {
@@ -8825,8 +9338,8 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
 
 /* Design pass: all five "What it models" titles the same size, text always on a new line */
 @media (min-width: 1280px) {
-    main.container:has(.home-brand) > :nth-child(12) > li > strong,
-    main.container:has(.home-brand) > :nth-child(12) > li:nth-child(5) > strong {
+    main.container:has(.home-brand) > :nth-child(12 of :not(.tool-tour)) > li > strong,
+    main.container:has(.home-brand) > :nth-child(12 of :not(.tool-tour)) > li:nth-child(5) > strong {
         display: block;
         min-height: 2.3em;
         margin-bottom: 0.15vw;
@@ -8840,7 +9353,7 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
 
 /* Design pass: "Own it" titles match "What it models", text always on a new line */
 @media (min-width: 1280px) {
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(n) > strong {
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(n) > strong {
         display: block;
         /* Two title lines, less the 0.57vw the row moved down to clear its circles. */
         min-height: calc(2.3em - 0.57vw);
@@ -8852,15 +9365,15 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
         color: #14233a;
     }
 
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(1) { left: 7.65vw;  width: 13.2vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) { left: 25vw;    width: 15vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(3) { left: 42.3vw;  width: 15.2vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(4) { left: 58.95vw; width: 15.8vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(1) { left: 7.65vw;  width: 13.2vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(2) { left: 25vw;    width: 15vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(3) { left: 42.3vw;  width: 15.2vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(4) { left: 58.95vw; width: 15.8vw; }
 }
 
 /* Design pass: "Own it" columns centered under their icons, equal widths, tidy wrapping */
 @media (min-width: 1280px) {
-    main.container:has(.home-brand) > :nth-child(17) > li {
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li {
         top: 55.1vw;
         box-sizing: border-box;
         padding: 0;
@@ -8872,12 +9385,12 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
         --pico-color: #3d4650;
     }
 
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(1) { left: 8.49vw;  width: 11.8vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) { left: 26.26vw; width: 11.8vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(3) { left: 43.06vw; width: 11.8vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(4) { left: 59.59vw; width: 11.8vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(1) { left: 8.49vw;  width: 11.8vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(2) { left: 26.26vw; width: 11.8vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(3) { left: 43.06vw; width: 11.8vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(4) { left: 59.59vw; width: 11.8vw; }
 
-    main.container:has(.home-brand) > :nth-child(17) > li > strong {
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li > strong {
         display: block;
         /* Two title lines, less the 0.57vw the row moved down to clear its circles. */
         min-height: calc(2.3em - 0.57vw);
@@ -8893,19 +9406,19 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
 
 /* Design pass: "Own it" title spacing matches "What it models"; wider text columns */
 @media (min-width: 1280px) {
-    main.container:has(.home-brand) > :nth-child(17) > li {
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li {
         top: 55.38vw;
         text-wrap: pretty;
         font-size: 0.76vw;
         line-height: 1.3;
     }
 
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(1) { left: 8.7vw;  width: 13vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) { left: 24.9vw; width: 15vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(3) { left: 42vw;   width: 14.4vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(4) { left: 58.1vw; width: 15.4vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(1) { left: 8.7vw;  width: 13vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(2) { left: 24.9vw; width: 15vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(3) { left: 42vw;   width: 14.4vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(4) { left: 58.1vw; width: 15.4vw; }
 
-    main.container:has(.home-brand) > :nth-child(17) > li > strong {
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li > strong {
         margin-bottom: 0.15vw;
         text-wrap: balance;
     }
@@ -8913,20 +9426,20 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
 
 /* Design pass: "Own it" text centered under each icon, as far below the circles as "What it models" */
 @media (min-width: 1280px) {
-    main.container:has(.home-brand) > :nth-child(17) > li {
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li {
         top: 55.42vw;
     }
 
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(1) { left: 8.39vw;  width: 12vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(2) { left: 24.66vw; width: 15vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(3) { left: 41.82vw; width: 14.4vw; }
-    main.container:has(.home-brand) > :nth-child(17) > li:nth-child(4) { left: 57.73vw; width: 15.4vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(1) { left: 8.39vw;  width: 12vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(2) { left: 24.66vw; width: 15vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(3) { left: 41.82vw; width: 14.4vw; }
+    main.container:has(.home-brand) > :nth-child(17 of :not(.tool-tour)) > li:nth-child(4) { left: 57.73vw; width: 15.4vw; }
 }
 
 /* Design pass: "Who it is for" text matches the other sections' description text */
 @media (min-width: 1280px) {
-    main.container:has(.home-brand) > :nth-child(14),
-    main.container:has(.home-brand) > :nth-child(15) {
+    main.container:has(.home-brand) > :nth-child(14 of :not(.tool-tour)),
+    main.container:has(.home-brand) > :nth-child(15 of :not(.tool-tour)) {
         width: 42vw;
         font-size: 0.78vw;
         line-height: 1.3;
@@ -8934,8 +9447,8 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
         --pico-color: #3d4650;
     }
 
-    main.container:has(.home-brand) > :nth-child(14) { margin-top: calc(var(--b3) + 30.2vw); }
-    main.container:has(.home-brand) > :nth-child(15) { margin-top: calc(var(--b3) + 35.4vw); }
+    main.container:has(.home-brand) > :nth-child(14 of :not(.tool-tour)) { margin-top: calc(var(--b3) + 30.2vw); }
+    main.container:has(.home-brand) > :nth-child(15 of :not(.tool-tour)) { margin-top: calc(var(--b3) + 35.4vw); }
 }
 
 /* Design pass: brown closing area (early-preview note + footer) */
@@ -8963,8 +9476,8 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
 
 /* Design pass: "Who it is for" back to its original text size */
 @media (min-width: 1280px) {
-    main.container:has(.home-brand) > :nth-child(14),
-    main.container:has(.home-brand) > :nth-child(15) {
+    main.container:has(.home-brand) > :nth-child(14 of :not(.tool-tour)),
+    main.container:has(.home-brand) > :nth-child(15 of :not(.tool-tour)) {
         width: 54.7vw;
         font-size: 1.08vw;
         line-height: 1.45;
@@ -8972,6 +9485,493 @@ main.container:has(.home-brand) > .home-brand .home-brand-product {
         --pico-color: #1f2a37;
     }
 
-    main.container:has(.home-brand) > :nth-child(14) { margin-top: calc(var(--b3) + 30vw); }
-    main.container:has(.home-brand) > :nth-child(15) { margin-top: calc(var(--b3) + 38.8vw); }
+    main.container:has(.home-brand) > :nth-child(14 of :not(.tool-tour)) { margin-top: calc(var(--b3) + 30vw); }
+    main.container:has(.home-brand) > :nth-child(15 of :not(.tool-tour)) { margin-top: calc(var(--b3) + 38.8vw); }
+}
+
+/* Exchange page: the privacy line sits above the tool, in the same gold as other emphasis. */
+.exchange-local {
+    font-weight: 600;
+}
+
+/* Homepage tool tour: app screenshots in a window frame, captions beside them as the controls.
+   Markup in content/home*.md, behavior in tool-tour.js, images from scripts/carousel-webp.sh.
+   The homepage's :nth-child rules skip .tool-tour ("of :not(.tool-tour)"), so it can sit anywhere
+   without renumbering the banners; on wide screens it takes grid row 8, right under the hero. */
+.tool-tour {
+    --tool-tour-slide: 5s;
+    margin: 2.5rem 0;
+    --tool-tour-ink: var(--pico-color);
+    --tool-tour-muted: var(--pico-muted-color);
+    --tool-tour-rule: var(--pico-muted-border-color, rgba(0, 0, 0, 0.12));
+    color: var(--tool-tour-ink);
+}
+
+/* From 1280px the homepage body is brown (the "brown closing area" pass), in either theme, so the
+   tour takes the same cream-on-brown as the "Find your situation" band. */
+@media (min-width: 1280px) {
+    main.container:has(.home-brand) > .tool-tour {
+        --tool-tour-ink: #f6f1e8;
+        --tool-tour-muted: #d6c8b6;
+        --tool-tour-rule: rgba(233, 222, 210, 0.22);
+    }
+}
+
+@media (min-width: 900px) {
+    main.container:has(.home-brand) > .tool-tour {
+        grid-column: 1 / -1;
+        grid-row: 8;
+        margin: clamp(2rem, 4vw, 3.5rem) 0;
+    }
+}
+
+.tool-tour > h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    font-size: clamp(1.35rem, 2vw, 1.9rem);
+    color: var(--tool-tour-ink);
+    --pico-h2-color: var(--tool-tour-ink);
+}
+
+.tool-tour > h2::after {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 3px;
+    margin: 0.5em auto 0;
+    border-radius: 3px;
+    background: #e0b94d;
+}
+
+.tool-tour-body {
+    display: grid;
+    gap: 1.25rem;
+}
+
+@media (min-width: 900px) {
+    .tool-tour-body {
+        grid-template-columns: minmax(14rem, 1fr) minmax(0, 2.2fr);
+        align-items: center;
+        gap: clamp(1.5rem, 3vw, 3rem);
+    }
+}
+
+/* The side column: the captions, then the free-trial banner (TrialCallout.kt) under them, so
+   "that looks good" meets "and I can try it" in the same glance. Below the window on narrow
+   screens, beside it on wide ones. */
+.tool-tour-side {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+@media (min-width: 900px) {
+    .tool-tour-side {
+        order: 0;
+    }
+}
+
+.tool-tour-side > a.trial-callout {
+    align-self: center;
+    width: min(19rem, 100%);
+}
+
+/* Captions: one button per slide. */
+.tool-tour-captions {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tool-tour-captions li {
+    margin: 0;
+    list-style: none;
+}
+
+.tool-tour-captions button {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0.7rem 0.9rem 0.7rem 1.1rem;
+    border: 0;
+    border-left: 3px solid var(--tool-tour-rule);
+    border-radius: 0 0.4rem 0.4rem 0;
+    background: transparent;
+    box-shadow: none;
+    color: var(--tool-tour-ink);
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.tool-tour-captions button:hover {
+    background: color-mix(in srgb, #e0b94d 10%, transparent);
+}
+
+.tool-tour-captions button:focus-visible {
+    outline: 2px solid #e0b94d;
+    outline-offset: 2px;
+}
+
+.tool-tour-captions strong {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+}
+
+.tool-tour-captions span:not(.tool-tour-progress) {
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--tool-tour-muted);
+}
+
+/* With the script running, only the current caption shows its sentence. */
+.tool-tour-captions button:not(.is-active):has(.tool-tour-progress) span:not(.tool-tour-progress) {
+    display: none;
+}
+
+.tool-tour-captions button.is-active {
+    border-left-color: color-mix(in srgb, #e0b94d 45%, transparent);
+    background: color-mix(in srgb, #e0b94d 12%, transparent);
+}
+
+/* The timer: fills down the current caption's left edge; its animationend advances the slide. */
+.tool-tour-progress {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -3px;
+    width: 3px;
+    background: #c89b2c;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.tool-tour-captions button.is-active .tool-tour-progress {
+    animation: tool-tour-fill var(--tool-tour-slide) linear forwards;
+}
+
+.tool-tour.is-stopped .tool-tour-captions button.is-active .tool-tour-progress {
+    animation: none;
+    transform: scaleY(1);
+}
+
+/* Hover holds a slide only over the captions, where someone is reading: the window is most of
+   the screen, so a resting pointer would otherwise freeze the tour. */
+.tool-tour-captions:hover .tool-tour-progress,
+.tool-tour:has(:focus-visible) .tool-tour-progress,
+.tool-tour.is-idle .tool-tour-progress {
+    animation-play-state: paused !important;
+}
+
+@keyframes tool-tour-fill {
+    to { transform: scaleY(1); }
+}
+
+/* The window frame: drawn here, so captures need no title bar (which would carry a run label). */
+.tool-tour-window {
+    overflow: hidden;
+    border: 1px solid rgba(38, 25, 16, 0.14);
+    border-radius: 0.75rem;
+    background: #fcfbfa;
+    box-shadow: 0 1px 2px rgba(38, 25, 16, 0.08), 0 22px 48px -18px rgba(38, 25, 16, 0.45);
+}
+
+.tool-tour-chrome {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0.45rem 0.7rem;
+    border-bottom: 1px solid rgba(38, 25, 16, 0.1);
+    background: #ece6dc;
+}
+
+.tool-tour-lights {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.tool-tour-lights i {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: #ff5f57;
+}
+
+.tool-tour-lights i:nth-child(2) { background: #febc2e; }
+.tool-tour-lights i:nth-child(3) { background: #28c840; }
+
+.tool-tour-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #5b4f44;
+}
+
+.tool-tour-toggle {
+    justify-self: end;
+    display: grid;
+    place-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #5b4f44;
+    cursor: pointer;
+}
+
+.tool-tour-toggle:hover {
+    background: rgba(38, 25, 16, 0.08);
+}
+
+/* Pause bars while playing, a play triangle while stopped. */
+.tool-tour-toggle::before {
+    content: "";
+    width: 0.55rem;
+    height: 0.65rem;
+    border-inline: 0.18rem solid currentColor;
+}
+
+.tool-tour.is-stopped .tool-tour-toggle::before {
+    width: 0;
+    height: 0;
+    border-block: 0.36rem solid transparent;
+    border-inline: 0.6rem solid currentColor;
+    border-right: 0;
+    margin-left: 0.15rem;
+}
+
+.tool-tour-slides {
+    display: grid;
+}
+
+.tool-tour-slides figure {
+    grid-area: 1 / 1;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.9s ease, visibility 0s linear 0.9s;
+}
+
+.tool-tour-slides figure.is-active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.9s ease, visibility 0s;
+}
+
+.tool-tour-slides img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tool-tour-slides figure,
+    .tool-tour-slides figure.is-active {
+        transition: none;
+    }
+}
+
+/* "See every feature" (FeatureList.kt): a link under the tool-tour captions, a second one beside the
+   "What it models" heading, and the dialog both open. /features is the same list as a page. */
+/* Always underlined, thinly, so it reads as a link at a glance without competing with the trial
+   button above it (design-partner feedback, 2026-10-29); hover thickens the line. */
+.feature-list-link {
+    display: inline-block;
+    color: var(--pico-primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+}
+
+.feature-list-link:hover {
+    text-decoration-thickness: 2px;
+}
+
+/* Under the trial banner, centered like it; the side column's gap spaces it. */
+.tool-tour-side > .feature-list-link {
+    align-self: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+}
+
+/* The brown band from 1280px: the tour's own gold, in either theme. */
+@media (min-width: 1280px) {
+    main.container:has(.home-brand) > .tool-tour .feature-list-link {
+        color: #e0b94d;
+    }
+
+    /* On the cream third banner: the brown of "Getting around" above it. */
+    main.container:has(.home-brand) h2 .feature-list-link-inline {
+        color: #7a5a12;
+    }
+}
+
+/* Beside a heading it reads as a link, not as part of the title. */
+h2 .feature-list-link-inline {
+    margin: 0 0 0 0.9em;
+    vertical-align: middle;
+    font-family: var(--pico-font-family, system-ui, sans-serif);
+    font-size: clamp(0.8rem, 0.95vw, 1.05rem);
+    font-weight: 600;
+    line-height: 1;
+}
+
+dialog.feature-list > article.feature-list-panel {
+    display: flex;
+    flex-direction: column;
+    width: min(60rem, calc(100vw - 2rem));
+    max-width: none;
+    max-height: calc(100vh - 3rem);
+    padding: 0;
+    overflow: hidden;
+    background: var(--plusauri-paper, #fcfbfa);
+    color: var(--plusauri-ink, #1a1a1a);
+}
+
+.feature-list-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 1rem 1.25rem 0.75rem;
+    border-bottom: 1px solid var(--pico-muted-border-color, #e5e0d8);
+    background: inherit;
+}
+
+.feature-list-head h2 {
+    margin: 0;
+    font-size: 1.35rem;
+}
+
+.feature-list-page {
+    margin-left: auto;
+    color: var(--pico-primary, #7a5a12);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.feature-list-page:hover {
+    text-decoration: underline;
+}
+
+.feature-list-close {
+    width: auto;
+    margin: 0;
+    padding: 0.1rem 0.55rem;
+    border: 0;
+    background: transparent;
+    color: var(--pico-muted-color, #6b6259);
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.feature-list-body {
+    overflow-y: auto;
+    padding: 1rem 1.25rem 1.5rem;
+}
+
+.feature-list-body h2 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.15rem;
+}
+
+.feature-list-body > p:first-child {
+    color: var(--pico-muted-color, #6b6259);
+}
+
+.feature-list-body li {
+    margin-bottom: 0.5rem;
+}
+
+/* ── Phone ───────────────────────────────────────────────────────────────────
+   The site is designed for a desktop, and everything above is left as it is. These rules only make
+   the public pages (home, Learning Center, pricing) readable on a phone. 640px matches the width
+   half of PHONE_MEDIA_QUERY in LearnRoutes.kt, where a lesson drops its canvas. */
+/* From 768px to 1279px Pico's column is narrower than the window, so the menu
+   is squeezed into it and the wordmark collides with Home. Use the window. */
+@media (max-width: 1279px) {
+    body > header.container {
+        max-width: none;
+        padding-inline: 1.25rem;
+    }
+
+    body > header.container nav {
+        margin-inline: 0;
+    }
+
+    body > header.container nav > ul:last-child > li > a,
+    body > header.container nav > ul:last-child > li > details > summary {
+        white-space: nowrap;
+    }
+}
+
+/* From 641px to 767px the page column is 510px and the nav is still one row, so
+   the language control and the theme button run off the right edge and the page
+   scrolls sideways. Wrap the bar before that. */
+@media (max-width: 800px) {
+    body > header.container nav,
+    body > header.container nav > ul:last-child {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 640px) {
+    /* The nav: logo on its own row, the links wrapping beneath it rather than running off the edge. */
+    body > header.container nav {
+        flex-wrap: wrap;
+        --pico-nav-element-spacing-vertical: 0.3rem;
+        --pico-nav-link-spacing-vertical: 0.2rem;
+    }
+
+    body > header.container nav > ul {
+        margin-block: 0;
+    }
+
+    body > header.container nav > ul:last-child {
+        flex-wrap: wrap;
+        margin-inline: 0;
+        --pico-nav-element-spacing-horizontal: 0.45rem;
+    }
+
+    body > header.container nav > ul:last-child > li {
+        white-space: nowrap;
+    }
+
+    /* The lesson page's compact bar wraps the same way. */
+    .lesson-split-header nav,
+    .lesson-split-header nav ul {
+        flex-wrap: wrap;
+    }
+
+    /* The 6rem box at `.brand-logo` (the lesson card mark) also lands on the nav wordmark; on a
+       desktop it is part of the header's height, on a phone it doubles it. */
+    body > header.container .brand-logo {
+        font-size: 1.5rem;
+        width: auto;
+        height: auto;
+    }
+
+    /* Hover cards (glossary terms, the level badges on /learn) hang off their word and run up to
+       78vw wide; even hidden, that widened the page past the screen. Here they open as a card along
+       the bottom of the screen instead. The lesson page is left out: lesson-split.js places its
+       tips itself. */
+    body:not(.lesson-split-body) .lesson-term-tip {
+        position: fixed;
+        left: 1rem;
+        right: 1rem;
+        top: auto;
+        bottom: 1rem;
+        width: auto;
+        max-width: none;
+    }
 }

@@ -32,6 +32,17 @@
     // is the user gesture browsers require for sound, so play() is allowed to start audibly.
     video.preload = "auto";
     video.setAttribute("playsinline", "");
+    // activity.js counts plays and finishes (first-party; privacy page "When you browse this site").
+    function track(what) {
+      if (typeof window.plusauriTrack === "function") window.plusauriTrack("video", "intro:" + what);
+    }
+    // Once per page: reopening the dialog resumes the same player, and a resume is not a new play.
+    var played = false;
+    video.addEventListener("play", function () {
+      if (!played) track("play");
+      played = true;
+    });
+    video.addEventListener("ended", function () { track("ended"); });
     frame.textContent = "";
     frame.appendChild(video);
     return video;

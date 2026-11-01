@@ -23,7 +23,8 @@ tutilis-locale: en source
 **Required minimum distributions (RMDs)** are not a residual preference — they are a **statutory
 force**. Once the owner is past [[term:rmd]] age and holds a **[[term:traditional]]** ([[term:pre-tax]]) retirement account,
 the plan must sell enough from that account each year (or pay a penalty model) **whether or not**
-your residual strategy would rather spend taxable cash first.
+your residual strategy would rather spend taxable cash first. Required minimum distributions on a
+large IRA can push income into higher brackets for years.
 
 This lesson uses a **Banks-family lean sample** ([[term:hnw]] cast continuity — **Philip**, not Springfield):
 

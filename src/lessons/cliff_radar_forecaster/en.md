@@ -23,7 +23,8 @@ tutilis-locale: en source
 [[term:magi]] cliffs are easy to **understand in principle** and easy to **lose on a busy year**: [[term:irmaa]] lives
 on cash flow as a healthcare [[term:surcharge]], [[term:niit]] and Additional Medicare sit on the federal tax
 statement, the [[term:aca]] subsidy is priced only for a plan marked as bought on the marketplace, and a [[term:roth-conversion]] can move MAGI **now** while
-IRMAA may bite **two years later**.
+IRMAA may bite **two years later**. Tutilis is a retirement tax forecasting tool, and its Forecaster
+raises IRMAA and NIIT cliff alerts on the year they apply.
 
 The **[[term:cliff]] radar** is the Forecaster strip that keeps those facts **scannable for the year you
 selected** — without a scavenger hunt through Taxes, cash-flow segments, and Money Movements

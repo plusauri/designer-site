@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Getting safer as retirement approaches
 
-Morgan is 63 and plans to retire in 2028, at 65. There is $1.5 million saved: $1 million in a [[term:traditional]] [[term:ira|IRA]], $450,000 in a [[term:brokerage]] account, and $50,000 in a money-market account. The invested money is split about 80/20 between an S&P 500 index fund and an intermediate Treasury fund. Morgan earns $120,000 a year until retirement, spends $84,000 a year in today's dollars, and claims Social Security at 67.
+Morgan is 63 and plans to retire in 2028, at 65. There is $1.5 million saved: $1 million in a [[term:traditional]] [[term:ira|IRA]], $450,000 in a [[term:brokerage]] account, and $50,000 in a money-market account. The invested money is split about 80/20 between an S&P 500 index fund and an intermediate Treasury fund. Morgan earns $120,000 a year until retirement, spends $84,000 a year in today's dollars, and claims Social Security at 67. Morgan is thinking about de-risking the portfolio before retirement.
 
 The usual advice to someone in Morgan's position is to get safer as the retirement date approaches. Advisors mean several different things by that: holding less stock, building a ladder of bonds or TIPS, buying an [[term:annuity]], keeping a larger emergency fund, and leaning on a pension if there is one. This lesson shows that all of those moves do the same thing. Each one moves money toward cash on the **Risk vs. Return** chart, down and to the left, and gives up some expected return to get there.
 
@@ -54,7 +54,7 @@ Transforms now draws the plan twice. Look at the balance-sheet comparison, with 
 
 [[img:safer-bs-gfc-8020]]
 
-*Stays 80/20 with the Global Financial Crisis from 2027. The crash years are marked on the Modified side's year axis.*
+*[Stays 80/20](#canvas-dossier:safer_stays_eighty_twenty) with the Global Financial Crisis from 2027. The crash years are marked on the Modified side's year axis.*
 
 In 2027 Morgan is still earning a salary, and the crisis's small first-year loss barely shows. Its deep second year lands on 2028, the first year Morgan lives on the portfolio, and net worth falls from about $1.58 million to about $1.04 million. It does not climb back to its 2027 level until 2032, and it never catches up with the plan that had no crash.
 
@@ -62,20 +62,20 @@ For perspective, switch the episode to 1929 and leave the start in 2027:
 
 [[img:safer-bs-1929-2027-8020]]
 
-*Stays 80/20 with the Great Crash of 1929 from 2027.*
+***Stays 80/20** with the Great Crash of 1929 from 2027.*
 
-The Global Financial Crisis recovers within the six years it replays. The Great Crash replays sixteen, and it takes the 80/20 plan from $1.5 million at the start to about $460,000 at the end of 2029. The portfolio never recovers, and the plan runs out of money in 2046. The section [Something safe to sell](#something-safe-to-sell) comes back to this episode and tests the safer plans against it. Switch back to 2007 before reading on.
+The Global Financial Crisis recovers within the six years it replays. The Great Crash replays sixteen, and it takes the 80/20 plan from $1.5 million at the start to about $470,000 at the end of 2029. The portfolio never recovers, and the plan runs out of money in 2046. The section [Something safe to sell](#something-safe-to-sell) comes back to this episode and tests the safer plans against it. Switch back to 2007 before reading on.
 
 Now keep the crash on and move its start year. Open [[nav:bs-table]] on 2055, the last year of the forecast, and watch the net-worth line on the Modified side as the slider moves. The crash stays in force when you switch plans with the chips above the canvas, so you can read each plan's column without setting it up again. Here is the ending net worth for the start years worth a look:
 
 | Crash starts | Stays 80/20 | Moves down | Annuity floor |
 |---|---:|---:|---:|
-| No crash | $1.88M | $1.47M | $1.81M |
-| **2027** | **$1.25M** | **$1.13M** | **$1.32M** |
-| 2028 | $1.26M | $1.13M | $1.34M |
-| 2029 | $1.29M | $1.16M | $1.37M |
-| 2030 | $1.32M | $1.18M | $1.39M |
-| 2033 | $1.38M | $1.20M | $1.42M |
+| No crash | $2.07M | $1.66M | $2.00M |
+| **2027** | **$1.44M** | **$1.31M** | **$1.51M** |
+| 2028 | $1.47M | $1.33M | $1.53M |
+| 2029 | $1.49M | $1.35M | $1.55M |
+| 2030 | $1.52M | $1.36M | $1.57M |
+| 2033 | $1.58M | $1.39M | $1.61M |
 
 The worst start in every plan is 2027, the year before retirement, because it puts the crisis's deepest year on the first year without a salary. Later starts still hurt, and they hurt a little less each year, because the portfolio has had longer to grow and Social Security, which starts in 2030, carries more of the spending. At its worst placement the crash costs the 80/20 plan about a third of its ending net worth.
 
@@ -107,15 +107,15 @@ If you are following along, click [Annuity floor](#canvas-dossier:safer_income_f
 
 The annuity sits at the origin. It has no volatility, and a level payment has no growth. Social Security sits beside it on the vertical axis, with no volatility and growth equal to its cost-of-living adjustment. Salary and living expenses appear as cash flows too.
 
-So the annuity plan lowers risk in a different way from the Moves down plan. It moves $300,000 out of the portfolio into a cash-like product with almost no risk and almost no growth, and it leaves the rest of the portfolio exactly as risky as it was. The chart with Cash Flows on shows both halves at once.
+So the annuity plan lowers risk in a different way from the **Moves down** plan. It moves $300,000 out of the portfolio into a cash-like product with almost no risk and almost no growth, and it leaves the rest of the portfolio exactly as risky as it was. The chart with Cash Flows on shows both halves at once.
 
 ## Moving down the chart
 
-Moving down the chart has a cost, and the cost is expected wealth. With no crash on the [[term:gmf|GMF]] path, the Moves down plan ends at $1.47 million against $1.88 million for 80/20. Money in Treasuries compounds more slowly than money in stocks, and the gap adds up over three decades.
+Moving down the chart has a cost, and the cost is expected wealth. With no crash on the [[term:gmf|GMF]] path, the [Moves down](#canvas-dossier:safer_moves_down) plan ends at $1.66 million against $2.07 million for 80/20. Money in Treasuries compounds more slowly than money in stocks, and the gap adds up over three decades.
 
 <aside class="lesson-saying" data-saying="free-lunch">
 
-On the GMF path, the Moves down plan pays about $410,000 of ending wealth for its safer bad outcomes. The rest of this section shows what that money buys.
+On the GMF path, the **Moves down** plan pays about $410,000 of ending wealth for its safer bad outcomes. The rest of this section shows what that money buys.
 
 </aside>
 
@@ -126,19 +126,19 @@ What the move buys shows up across many possible futures. The [[term:monte-carlo
 
 [[img:safer-nw-8020]]
 
-*Stays 80/20. The spread is wide, with a long tail of very good outcomes to the right.*
+*[Stays 80/20](#canvas-dossier:safer_stays_eighty_twenty). The spread is wide, with a long tail of very good outcomes to the right.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:safer-nw-down]]
 
-*Moves down. The spread is narrower, and fewer paths end below zero.*
+***Moves down**. The spread is narrower, and fewer paths end below zero.*
 
 </div>
 </div>
 
-The 80/20 plan succeeds on about 83% of paths. Its [[term:median]] ending net worth is about $2.12 million, and its bad-tenth outcome is about $500,000 of debt, which means the money ran out years before the end of the plan. The Moves down plan succeeds on about 90% of paths. Its median is lower, at about $1.78 million, but its bad-tenth outcome is only about $60,000 of debt.
+The 80/20 plan succeeds on about 85% of paths. Its [[term:median]] ending net worth is about $2.30 million, and its bad-tenth outcome is about $350,000 of debt, which means the money ran out years before the end of the plan. The **Moves down** plan succeeds on about 92% of paths. Its median is lower, at about $1.95 million, but in its bad tenth the money lasts, with about $80,000 left at the end.
 
 This is the trade in its plainest form. Moving down the chart gives up some of the good outcomes to shrink the bad ones. A retiree who has already saved enough cares much more about the bad outcomes. There is no second career to recover from them, while the good outcomes mostly change the size of an estate.
 
@@ -154,13 +154,13 @@ Look at the balance-sheet comparison first. It is the quickest way to get your b
 
 [[img:safer-bs-1929-8020]]
 
-*Stays 80/20, as authored on the left and with the 1929 crash from 2028 on the right.*
+*[Stays 80/20](#canvas-dossier:safer_stays_eighty_twenty), as authored on the left and with the 1929 crash from 2028 on the right.*
 
 [[img:safer-bs-1929-down]]
 
-*Moves down, the same comparison.*
+*[Moves down](#canvas-dossier:safer_moves_down), the same comparison.*
 
-On the GMF path, the 80/20 plan's net worth falls from about $1.69 million at the end of 2027 to about $450,000 at the end of 2030, a drop of nearly three quarters. The Moves down plan falls from about $1.68 million to about $780,000, a little more than half. Neither plan climbs back to its Original line. The 80/20 plan runs out of money in 2046, when Morgan is 83, and the Moves down plan runs out in 2051, five years later.
+On the GMF path, the 80/20 plan's net worth falls from about $1.69 million at the end of 2027 to about $460,000 at the end of 2030, a drop of nearly three quarters. The **Moves down** plan falls from about $1.68 million to about $790,000, a little more than half. Neither plan climbs back to its Original line. The 80/20 plan runs out of money in 2047, when Morgan is 84, and the **Moves down** plan runs out in 2052, five years later.
 
 To see where the difference comes from, open [[nav:si-table]] on 2031. By then a dollar of stock from the start of 2028 is worth about 52 cents, even after a 140% rebound year.
 
@@ -169,14 +169,14 @@ To see where the difference comes from, open [[nav:si-table]] on 2031. By then a
 
 [[img:safer-sales-1929-8020]]
 
-*Stays 80/20 in 2031. After the rebound year the stock fund is back above its 80% target, so the plan sells it from both accounts.*
+***Stays 80/20** in 2031. After the rebound year the stock fund is back above its 80% target, so the plan sells it from both accounts.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:safer-sales-1929-down]]
 
-*Moves down in 2031. The stock fund is still below its target, so no stock is sold and the year is paid from Treasuries, TIPS and short-term Treasuries.*
+***Moves down** in 2031. The stock fund is still below its target, so no stock is sold and the year is paid from Treasuries, TIPS and short-term Treasuries.*
 
 </div>
 </div>
@@ -185,15 +185,15 @@ Year by year, the difference is large:
 
 | Plan | First years it sells stock | Stock sold, 2028–2038 |
 |---|---|---:|
-| Stays 80/20 | A little in 2028 and 2029, then every year from 2031 | about $515,000 |
-| Moves down | A little in 2028, then from 2033 | about $250,000 |
-| Annuity floor | A little in 2028 and 2029, then every year from 2031 | about $340,000 |
+| Stays 80/20 | A little in 2028 and 2029, then every year from 2031 | about $470,000 |
+| Moves down | None until 2033 | about $210,000 |
+| Annuity floor | A little in 2028 and 2029, then every year from 2031 | about $295,000 |
 
-The 80/20 and Moves down plans follow the same rule, which sells whatever sits above its target. The 80/20 plan's target is mostly stock, so the first good year lifts stock back above it, and the rule starts selling stock while it is still worth about half of what it was in 2028. The Moves down plan's target holds much less stock, so it pays for the first five years of the crash almost entirely from its safe holdings, the years when stock was worth least. It sells about $11,000 of stock in 2028, when the year's bill is larger than the amount its safe holdings sit above their target, and then none at all until 2033. Its Treasury funds did not fall with the market, and its TIPS and short-term Treasuries held their value. When it finally sells stock, it sells less than half as much as the 80/20 plan does.
+The 80/20 and **Moves down** plans follow the same rule, which sells whatever sits above its target. The 80/20 plan's target is mostly stock, so the first good year lifts stock back above it, and the rule starts selling stock while it is still worth about half of what it was in 2028. The **Moves down** plan's target holds much less stock, so it pays for the first five years of the crash entirely from its safe holdings, the years when stock was worth least. It sells no stock at all until 2033. Its Treasury funds did not fall with the market, and its TIPS and short-term Treasuries held their value. When it finally sells stock, it sells less than half as much as the 80/20 plan does.
 
 The annuity plan sells stock in the same years as the 80/20 plan, because the rest of its portfolio is still 80/20. It sells about a third less in all, because the annuity pays part of each year's bill.
 
-None of the three plans is safe in a crash as deep and long as 1929 at Morgan's level of spending. The 80/20 plan succeeds on about 2% of paths with that crash at retirement, and the other two on about 12 to 14%. The safer plans fail less often, and a crash like that is a reason to plan for spending that can be cut. The lesson [Timing a crash](/learn/sequence_of_returns_crash_timing) has more on how Transforms places a crash.
+None of the three plans is safe in a crash as deep and long as 1929 at Morgan's level of spending. The 80/20 plan succeeds on about 5% of paths with that crash at retirement, **Annuity floor** on about 19% and **Moves down** on about 23%. The safer plans fail less often, and a crash like that is a reason to plan for spending that can be cut. The lesson [Timing a crash](/learn/sequence_of_returns_crash_timing) has more on how Transforms places a crash.
 
 ## An income floor
 
@@ -216,7 +216,7 @@ The **Annuity** tool in the bottom bar is a scratch pad for the same decision. I
 
 As [Read the risk chart](#read-the-risk-chart) showed, the annuity does not move the portfolio's star. It sits at the origin of the chart as a cash flow. The risk has not disappeared. It has moved off the portfolio and into a promise from an insurer.
 
-The effect on the plan is different from the Moves down plan. The annuity plan succeeds on about 88% of paths, which is close to Moves down. Its median ending net worth is about $2.01 million, which is much closer to the 80/20 plan's. The annuity covers part of every year's spending, so the plan sells less, and the remaining portfolio can keep more of its stock.
+The effect on the plan is different from the [Moves down](#canvas-dossier:safer_moves_down) plan. The annuity plan succeeds on about 90% of paths, which is close to **Moves down**. Its median ending net worth is about $2.21 million, which is much closer to the 80/20 plan's. The annuity covers part of every year's spending, so the plan sells less, and the remaining portfolio can keep more of its stock.
 
 That result has conditions. The forecast assumes Morgan lives to 93, and the annuity pays more the longer its owner lives. Buyers who die early leave money behind in the insurer's pool, and those who live long collect it, which is where the high payout comes from. If Morgan died at 70, the plan would have paid $300,000 for about $120,000 of income. The $300,000 is also gone from the balance sheet on the day of purchase. It cannot be sold in an emergency and it does not pass to heirs.
 
@@ -238,7 +238,7 @@ The point of moving down the chart is to hold assets whose risks are not the sto
 
 Several other common moves are easier to judge once you see them on the same chart.
 
-**A bond ladder** is a set of bonds that mature one after another, one for each year of spending. A ladder of TIPS pays a known amount of inflation-adjusted money each year, as long as each bond is held until it matures. The Moves down plan approximates a ladder with its TIPS and short-term Treasury funds, which sit in the same corner of the chart. Tutilis can hold a bond directly and pays its coupon each year, but the forecast does not yet return a bond's price to its face value when it matures, so a true ladder is shown here with funds.
+**A bond ladder** is a set of bonds that mature one after another, one for each year of spending. A ladder of TIPS pays a known amount of inflation-adjusted money each year, as long as each bond is held until it matures. The [Moves down](#canvas-dossier:safer_moves_down) plan approximates a ladder with its TIPS and short-term Treasury funds, which sit in the same corner of the chart. Tutilis can hold a bond directly and pays its coupon each year, but the forecast does not yet return a bond's price to its face value when it matures, so a true ladder is shown here with funds.
 
 **Dividend stocks** are still stocks. A fund of high-dividend companies sits near the S&P 500 fund on the chart, and in a crash dividends are cut along with prices. S&P 500 companies cut their dividends by about a fifth from 2008 to 2009. A dividend does not move the portfolio toward cash. The lesson [Too much equity? Stop reinvesting](/learn/too_much_equity_stop_reinvesting) shows a different use for dividends, taking them as cash instead of reinvesting them, which slowly lowers the stock share.
 
@@ -252,7 +252,7 @@ Several other common moves are easier to judge once you see them on the same cha
 
 Wade Pfau has written extensively about this question. In *Safety-First Retirement Planning* (2019) and the *Retirement Planning Guidebook* (2021, second edition 2023), he describes two ways of thinking about retirement income. A probability-based approach keeps a diversified portfolio and sets a spending rate it can probably sustain. A safety-first approach first builds a floor of reliable income from Social Security, pensions, annuities and bond ladders, large enough to cover essential spending, and then invests the rest for growth.
 
-Pfau argues that an income annuity can take the place of part of a bond allocation. Bonds and annuities both provide steady income, but the annuity adds risk pooling, which pays more to those who live long. That is the pattern in Morgan's Annuity floor plan, where the annuity covers part of the spending and the rest of the portfolio keeps its stock.
+Pfau argues that an income annuity can take the place of part of a bond allocation. Bonds and annuities both provide steady income, but the annuity adds risk pooling, which pays more to those who live long. That is the pattern in Morgan's [Annuity floor](#canvas-dossier:safer_income_floor) plan, where the annuity covers part of the spending and the rest of the portfolio keeps its stock.
 
 Pfau and Michael Kitces, in *Reducing Retirement Risk with a Rising Equity Glide Path* (Journal of Financial Planning, 2014), found that sequence risk is concentrated in the years around the retirement date. A portfolio that holds its least stock at retirement and adds stock afterward survived more often than one that held a constant share. That is why the advice to get safer is aimed at the years just before the retirement date.
 

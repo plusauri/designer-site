@@ -14,7 +14,7 @@ Le produit est conçu pour que les deux types de planificateurs obtiennent ce do
 <p class="lesson-power-user-label">Utilisateur avancé</p>
 <div class="lesson-power-user-body">
 
-Fixer ses propres taux de croissance est une fonction **Utilisateur avancé**. Le plan d'un utilisateur typique reprend les taux de croissance du système, ce qui correspond au plan General de cette leçon. Pour fixer vos propres taux, comme le fait le plan Advanced, activez **Utilisateur avancé** sous [[nav:advanced]] → Paramètres de l'application.
+Fixer ses propres taux de croissance est une fonction **Utilisateur avancé**. Le plan d'un utilisateur typique reprend les taux de croissance du système, ce qui correspond au plan **General** de cette leçon. Pour fixer vos propres taux, comme le fait le plan **Advanced**, activez **Utilisateur avancé** sous [[nav:advanced]] → Paramètres de l'application.
 
 </div>
 </aside>
@@ -88,7 +88,7 @@ La fiche du salaire indique le taux que Priya a saisi comme personnalisation. El
 
 *La fiche du salaire de Priya dans [General](#canvas-dossier:growth_rates_general) : $140,000 par an en monnaie de 2026, croissant au taux de 5 % qu'elle a indiqué.*
 
-Sur l'état des flux de trésorerie, le salaire est d'environ $154,000 en 2027 et d'environ $187,000 en 2031, soit ses 5 % par an. Le loyer, net des charges courantes du bien, croît au taux de 3 % que fixe son bail.
+Sur l'état des flux de trésorerie, le salaire est d'environ $147,000 en 2027 et d'environ $179,000 en 2031, soit ses 5 % par an. Le loyer, net des charges courantes du bien, croît au taux de 3 % que fixe son bail.
 
 <details class="lesson-desktop-only" open>
 <summary class="lesson-desktop-only-label">Application de bureau uniquement</summary>
@@ -109,7 +109,7 @@ Lorsque vous indiquez l'un de ces taux, vous indiquez sa moyenne. L'ampleur de s
 
 Cela peut sembler étrange pour un salaire, mais c'est ce qui garde la prévision honnête. Sur mille avenirs, certaines années de Priya apportent une hausse plus grande que 5 % et d'autres une plus petite, et les prévisions où son salaire s'est exceptionnellement bien ou mal comporté se trouvent dans sa fourchette de résultats, à côté des bonnes et des mauvaises périodes du marché. Une volatilité de zéro signifierait que son salaire augmente d'exactement 5 % chaque année dans chaque avenir, ce que personne ne peut promettre.
 
-La pension alimentaire montre la limite de cela. Les 0 % de Priya ne sont que la moyenne, de sorte que, sur le plan General, le versement varie encore un peu d'un avenir à l'autre. Une décision de justice ne varie pas du tout. Corriger cela demande l'autre réglage.
+La pension alimentaire montre la limite de cela. Les 0 % de Priya ne sont que la moyenne, de sorte que, sur le plan [General](#canvas-dossier:growth_rates_general), le versement varie encore un peu d'un avenir à l'autre. Une décision de justice ne varie pas du tout. Corriger cela demande l'autre réglage.
 
 ## Reprendre chaque hypothèse {#taking-over-every-assumption}
 
@@ -136,9 +136,9 @@ Avec Croissances personnalisées, le champ de croissance du salaire, des dépens
 
 ## Ce que coûtent les changements {#what-the-changes-cost}
 
-Les trois changements de Priya sur le plan Advanced étaient une oscillation plus large sur son salaire chargé de primes, un versement de pension fixé à exactement $14,400, et une vision plus lente, à 2 %, de l'appréciation de son appartement. Les deux premiers remodèlent surtout la fourchette des résultats : le salaire l'élargit, et la pension fixe la resserre un peu. Le troisième déplace le plan lui-même. Sur le bilan de 2046, l'appartement vaut environ $648,000 sur le plan General et environ $438,000 sur le plan Advanced.
+Les trois changements de Priya sur le plan [Advanced](#canvas-dossier:growth_rates_advanced) étaient une oscillation plus large sur son salaire chargé de primes, un versement de pension fixé à exactement $14,400, et une vision plus lente, à 2 %, de l'appréciation de son appartement. Les deux premiers remodèlent surtout la fourchette des résultats : le salaire l'élargit, et la pension fixe la resserre un peu. Le troisième déplace le plan lui-même. Sur le bilan de 2046, l'appartement vaut environ $648,000 sur le plan [General](#canvas-dossier:growth_rates_general) et environ $438,000 sur le plan **Advanced**.
 
-Les **Prévisions clés** montrent ce que cela fait au patrimoine net final de Priya. Le plan Advanced est plus bas à chaque point que le tableau indique, du pire avenir au meilleur.
+Les **Prévisions clés** montrent ce que cela fait au patrimoine net final de Priya. Le plan **Advanced** est plus bas à chaque point que le tableau indique, du pire avenir au meilleur.
 
 [[jump:key-forecasts]]
 
@@ -154,12 +154,12 @@ Les **Prévisions clés** montrent ce que cela fait au patrimoine net final de P
 
 [[img:growth-rates-key-forecasts-advanced]]
 
-*Prévisions clés pour [Advanced](#canvas-dossier:growth_rates_advanced) : chaque point se situe sous celui du plan General.*
+*Prévisions clés pour [Advanced](#canvas-dossier:growth_rates_advanced) : chaque point se situe sous celui du plan **General**.*
 
 </div>
 </div>
 
-La **distribution du patrimoine net** montre la même chose sur les mille avenirs à la fois. Les deux sont tracées sur le même axe afin de pouvoir être comparées à l'œil. Le nuage Advanced se situe plus à gauche, et la part des avenirs qui réussissent tombe de 98 % à 95 %.
+La **distribution du patrimoine net** montre la même chose sur les mille avenirs à la fois. Les deux sont tracées sur le même axe afin de pouvoir être comparées à l'œil. Le nuage **Advanced** se situe plus à gauche, et la part des avenirs qui réussissent tombe de 98 % à 95 %.
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">
@@ -182,7 +182,7 @@ C'est la raison pour laquelle le contrôle total est un choix délibéré. Un se
 
 ## Passer de l'un à l'autre {#moving-between-the-two}
 
-Un plan peut changer d'avis. Revenir de **Croissances personnalisées** à **Croissances du système** retire chaque personnalisation de marché, parce que c'est ce que signifie choisir les taux du système. Les taux indiqués pour le salaire, les dépenses, le loyer et la pension sont conservés, et toute volatilité fixée sur eux revient au chiffre du système. Si Priya ramenait son plan Advanced en arrière, son appartement reviendrait à 4 %, son salaire et sa pension conserveraient leurs moyennes de 5 % et de 0 %, et sa pension reprendrait la petite variation décrite plus haut.
+Un plan peut changer d'avis. Revenir de **Croissances personnalisées** à **Croissances du système** retire chaque personnalisation de marché, parce que c'est ce que signifie choisir les taux du système. Les taux indiqués pour le salaire, les dépenses, le loyer et la pension sont conservés, et toute volatilité fixée sur eux revient au chiffre du système. Si Priya ramenait son plan [Advanced](#canvas-dossier:growth_rates_advanced) en arrière, son appartement reviendrait à 4 %, son salaire et sa pension conserveraient leurs moyennes de 5 % et de 0 %, et sa pension reprendrait la petite variation décrite plus haut.
 
 Aller dans l'autre sens ne retire rien. Chaque taux reste où il était et devient modifiable.
 

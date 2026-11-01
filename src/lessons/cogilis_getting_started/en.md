@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Your first session: starting Cogilis on your own plan
 
-Cogilis is the AI workspace in Tutilis Pro. It is a folder on your computer that holds the same forecast engine the Tutilis application runs, the commands to drive it, and the instructions an AI assistant needs to answer questions about your plan. You bring the assistant. Cogilis gives it a real engine to answer with, so that its numbers come from a forecast of your plan instead of from memory.
+Cogilis is the AI workspace in Tutilis Pro. It is a folder on your computer that holds the same forecast engine the Tutilis application runs, the commands to drive it, and the instructions an AI assistant needs to answer questions about your plan. You bring the assistant. Cogilis gives it a real engine to answer with, so that its numbers come from a forecast of your plan instead of from memory. This lesson sets it up, so you can ask AI about your retirement plan and get answers from the engine.
 
 This lesson covers your first session: what is in the folder, how to start, and the three things the assistant does before it answers anything. Philip and Vivian Banks, the household on the [[term:canvas]], stand in for you. Their plan plays the part of the plan in your own library.
 

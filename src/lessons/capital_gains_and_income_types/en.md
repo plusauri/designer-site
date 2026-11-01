@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Capital gains, dividends and interest in retirement
 
-A retired household lives on cash, and the portfolio produces cash in several different ways. A bond fund pays interest. A stock fund pays dividends. Selling shares turns part of the account into money in the bank. An [[term:ira|IRA]] withdrawal does the same thing from a different kind of account. Every one of these is cash you can spend, and the tax code treats nearly every one of them differently. This lesson follows one retired couple through three versions of the same plan to show what each kind of income costs, which ones you get to time, why a sale of long-held shares is often the cheapest cash a retiree has, and which account each kind of income belongs in.
+A retired household lives on cash, and the portfolio produces cash in several different ways. A bond fund pays interest. A stock fund pays dividends. Selling shares turns part of the account into money in the bank. An [[term:ira|IRA]] withdrawal does the same thing from a different kind of account. Every one of these is cash you can spend, and the tax code treats nearly every one of them differently, so retirement income taxes depend on the mix. The capital gains tax in retirement is often the smallest part of the bill. This lesson follows one retired couple through three versions of the same plan to show what each kind of income costs, which ones you get to time, why a sale of long-held shares is often the cheapest cash a retiree has, and which account each kind of income belongs in.
 
 ## What you will learn
 
@@ -82,7 +82,7 @@ Open the tax statement on [Taxable account first](#canvas-dossier:income_types_t
 
 [[jump:gross-income]]
 
-A sale is different. The couple decides whether to sell, when, and how much. In the same year they sold $79,438 from the brokerage, and the statement shows exactly how much of that became taxable gain. They could have sold more in a year with room to spare and less in a year that was already full.
+A sale is different. The couple decides whether to sell, when, and how much. In the same year they sold $76,925 from the brokerage, and the statement shows exactly how much of that became taxable gain. They could have sold more in a year with room to spare and less in a year that was already full.
 
 [[jump:ltcg|output__forecaster__forecaster.forecast-detail__taxes__taxes.federal-statement__line.tax.ltcg]]
 
@@ -94,26 +94,26 @@ The uncontrolled income is not bad income. It still pays bills, and the usual ad
 
 When you sell shares in a taxable account, most of what comes back is often your own money returning to you. Only the part above the cost basis is a [[term:realized-gain|realized gain]], and only the gain is taxed. When the shares were held more than a year, that gain is a long-term capital gain, taxed at the lowest rates in the code.
 
-Stay on [Taxable account first](#canvas-dossier:income_types_tax_order) in 2027. Ruth and Victor need about $87,000 of cash beyond the interest and dividends, and the plan raises nearly all of it by selling from the brokerage.
+Stay on [Taxable account first](#canvas-dossier:income_types_tax_order) in 2027. Ruth and Victor need about $84,000 of cash beyond the interest and dividends, and the plan raises nearly all of it by selling from the brokerage.
 
 | What came in | Amount |
 |---|---:|
-| Sold from the brokerage | $79,438 |
-| Of which basis, returned untaxed | about $47,100 |
-| Of which [[term:ltcg\|long-term capital gain]] | $32,338 |
+| Sold from the brokerage | $76,925 |
+| Of which basis, returned untaxed | about $45,600 |
+| Of which [[term:ltcg\|long-term capital gain]] | $31,316 |
 | Federal tax on the gain | $0 |
 
 [[img:cg-income-statement-tax-order]]
 
-*The 2027 federal statement on Taxable account first. The gain, the interest and the dividends together come to $46,770 of income, the [[term:standard-deduction|standard deduction]] covers all of the interest, and the gains and dividends fall inside the 0% band.*
+*The 2027 federal statement on Taxable account first. The gain, the interest and the dividends together come to $45,747 of income, the [[term:standard-deduction|standard deduction]] covers all of the interest, and the gains and dividends fall inside the 0% band.*
 
 Now switch to [Every account at once](#canvas-dossier:income_types_pro_rata). The household spends the same amount, but about half of the cash now comes out of the IRA.
 
 [[img:cg-income-statement-pro-rata]]
 
-*The 2027 federal statement on Every account at once. The $43,958 IRA withdrawal arrives as traditional retirement income, every dollar of it ordinary, and pushes $21,389 of ordinary income past the standard deduction.*
+*The 2027 federal statement on Every account at once. The $43,578 IRA withdrawal arrives as traditional retirement income, every dollar of it ordinary, and pushes $21,009 of ordinary income past the standard deduction.*
 
-The IRA withdrawal of $43,958 puts all $43,958 on the return. The brokerage sale of $79,438 put only $32,338 there, and none of that was taxed. This is the sense in which a sale of long-held shares is the cheapest cash a retiree has. Part of each dollar is basis, which is never taxed again, and the rest is taxed at rates that start at zero.
+The IRA withdrawal of $43,578 puts all $43,578 on the return. The brokerage sale of $76,925 put only $31,316 there, and none of that was taxed. This is the sense in which a sale of long-held shares is the cheapest cash a retiree has. Part of each dollar is basis, which is never taxed again, and the rest is taxed at rates that start at zero.
 
 <details class="lesson-math">
 <summary class="lesson-math-label">For the math lovers — what a sale puts on the return</summary>
@@ -163,7 +163,7 @@ The order is the **Money movement strategy** under [[nav:assumptions]]. Change i
 
 The conventional order does exactly what it promises in the early years. On Taxable account first, Ruth and Victor owe no federal tax at all from 2027 through 2035. Every one of those years, they live on interest, dividends, Social Security and brokerage sales, and the sales land in the 0% band. In 2036 Ruth's first RMD arrives and the bill is $6,303.
 
-The cost shows up later. Because the IRA is never touched, it keeps growing, and when RMDs begin they are larger. By 2045 the RMD on Taxable account first is $77,891, against $51,947 on Every account at once, and by 2053 it is $107,501 against $63,143. The Brackets view shows the shape.
+The cost shows up later. Because the IRA is never touched, it keeps growing, and when RMDs begin they are larger. By 2045 the RMD on Taxable account first is $77,891, against $52,238 on Every account at once, and by 2053 it is $107,501 against $63,848. The Brackets view shows the shape.
 
 [[jump:bracket|output__forecaster__forecaster.forecast-detail__brackets]]
 
@@ -171,11 +171,11 @@ The cost shows up later. Because the IRA is never touched, it keeps growing, and
 
 *The Brackets view for Taxable account first. From 2027 through 2035 each column is a thin layer of capital gains with no ordinary income under it, so the 10% and 12% brackets go unused. From 2036 the RMD fills the column, and it grows every year.*
 
-Over the whole plan, the two orders pay similar amounts. Taxable account first pays about $181,000 of federal tax and Every account at once pays about $189,000, a difference of roughly 4% that can turn the other way with a different horizon or market. What differs reliably is *when* the tax is paid. The conventional order pays nothing for a decade and then pays all of it, mostly at a time when the household can no longer choose.
+Over the whole plan, the two orders pay similar amounts. Taxable account first pays about $189,000 of federal tax and Every account at once pays about $194,000, a difference of roughly 3% that can turn the other way with a different horizon or market. What differs reliably is *when* the tax is paid. The conventional order pays nothing for a decade and then pays all of it, mostly at a time when the household can no longer choose.
 
 This is the main criticism researchers make of the rule of thumb. Cook, Meyer and Reichenstein showed in 2015 that a retiree can usually do better than either plan here. The improved approach still lives mostly on the taxable account in the early years, but it also takes just enough from the IRA, or converts just enough to a Roth, to fill the empty 10% and 12% [[term:bracket|brackets]] each year. [Filling the cheap buckets](/learn/filling_the_cheap_buckets) shows that technique on its own plan, and [Roth conversion in the window](/learn/roth_conversion_window) shows how to set it up.
 
-The ending balances also need care. In 2053 Taxable account first shows a net worth of about $1.92 million and Every account at once about $1.87 million, but $1.12 million of the first figure sits in the traditional IRA, and every dollar of that is still owed tax. Comparing the totals without noticing which accounts they are in flatters the plan that deferred the most.
+The ending balances also need care. In 2053 Taxable account first shows a net worth of about $1.97 million and Every account at once about $1.91 million, but $1.12 million of the first figure sits in the traditional IRA, and every dollar of that is still owed tax. Comparing the totals without noticing which accounts they are in flatters the plan that deferred the most.
 
 ## Where each kind belongs
 
@@ -191,17 +191,17 @@ The order you draw accounts in is a yearly decision. Which account holds which i
 
 Switch from [Every account at once](#canvas-dossier:income_types_pro_rata) to [Bonds in the IRA](#canvas-dossier:income_types_located). The household, the spending, the dollars in each account and the overall mix are all the same. Only the location changed.
 
-In 2027 the **Portfolio ordinary** line falls from $10,447 to $2,010, because the bond fund's interest now lands inside the IRA where it is not taxed in the year. What remains is the interest from the savings account. Qualified dividends rise from $3,985 to $6,188, because there is more stock in the brokerage, but those are taxed at 0% here. The 2027 tax falls from $2,139 to $1,539.
+In 2027 the **Portfolio ordinary** line falls from $10,447 to $2,010, because the bond fund's interest now lands inside the IRA where it is not taxed in the year. What remains is the interest from the savings account. Qualified dividends rise from $3,985 to $6,188, because there is more stock in the brokerage, but those are taxed at 0% here. The 2027 tax falls from $2,101 to $1,472.
 
-The yearly saving is small, and it compounds. Over the whole plan, Bonds in the IRA pays about $155,000 of federal tax against about $189,000 for Every account at once. There is a second effect as well. Bonds grow more slowly than stocks, so an IRA full of bonds grows more slowly too, and that makes every later RMD smaller. In 2053 the RMD is $48,922 on Bonds in the IRA and $63,143 on Every account at once.
+The yearly saving is small, and it compounds. Over the whole plan, Bonds in the IRA pays about $158,000 of federal tax against about $194,000 for Every account at once. There is a second effect as well. Bonds grow more slowly than stocks, so an IRA full of bonds grows more slowly too, and that makes every later RMD smaller. In 2053 the RMD is $49,503 on Bonds in the IRA and $63,848 on Every account at once.
 
-The ending balances show where the money ends up. Bonds in the IRA and Taxable account first finish 2053 with almost the same net worth, about $1.92 million each, but in very different accounts.
+The ending balances show where the money ends up. Bonds in the IRA and Taxable account first finish 2053 with almost the same net worth, about $1.97 million each, but in very different accounts.
 
 | 2053 balance | Taxable account first | Bonds in the IRA |
 |---|---:|---:|
-| Traditional IRA (tax still owed) | $1,120,320 | $478,322 |
-| Roth IRA (tax-free) | $703,660 | $406,922 |
-| Brokerage (taxed only on gains) | $91,335 | $1,007,053 |
+| Traditional IRA (tax still owed) | $1,120,320 | $490,303 |
+| Roth IRA (tax-free) | $703,660 | $417,114 |
+| Brokerage (taxed only on gains) | $141,043 | $1,032,277 |
 
 The same total in Bonds in the IRA carries far less tax still owed. Vanguard's research puts the value of good asset location at up to about 0.3% a year of after-tax return, for a household like this one with a balanced mix and meaningful money in both taxable and sheltered accounts.
 

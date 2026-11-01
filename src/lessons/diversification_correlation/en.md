@@ -23,7 +23,8 @@ tutilis-locale: en source
 **Most of the time, major asset classes move together — not against each other.** [[term:correlation|Correlation]] ([[term:rho|ρ]])
 is that together-ness. [[term:diversification|Diversification]] is not “own more tickers”; it is **own risks that do not
 always move as one**. When ρ is positive (the usual case), a mix still has **shared** risk in the
-math. Pretending holdings are independent **hides** that risk.
+math. Correlated assets rise and fall together, and pretending holdings are independent **hides**
+that risk.
 
 The product has a switch for exactly this. **ρ included** (the default) counts the co-movement;
 **ρ not included** drops it and treats the holdings as independent. This lesson is about what that

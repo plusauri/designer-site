@@ -20,7 +20,7 @@ tutilis-locale: en source
 -->
 
 <!--- α <lesson_body> -->
-A common proposal for funding Social Security is to **remove the payroll wage base**, so that high earners pay [[term:oasdi]] on every dollar they earn. This lesson builds the same **$300,000 single filer** twice, once as a **W-2 employee** and once as **self-employed**. For each one, you read the tax under today's law and then use [[nav:transforms]] to see what changes if the cap is gone.
+A common proposal for funding Social Security is to **remove the payroll wage base**, so that high earners pay [[term:oasdi]] on every dollar they earn. That payroll wage base is the Social Security wage cap. This lesson builds the same **$300,000 single filer** twice, once as a **W-2 employee** and once as **self-employed**. For each one, you read the tax under today's law and then use [[nav:transforms]] to see what changes if the cap is gone.
 
 You can stay on this page the whole time. Switch the live plan with the chips above or with the links below.
 

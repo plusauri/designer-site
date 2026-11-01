@@ -54,7 +54,7 @@ Transformaciones dibuja ahora el plan dos veces. Mire la comparación del balanc
 
 [[img:safer-bs-gfc-8020]]
 
-*Sigue en 80/20 con la crisis financiera mundial desde 2027. Los años de la caída están marcados en el eje de años del lado Modificado.*
+*[Sigue en 80/20](#canvas-dossier:safer_stays_eighty_twenty) con la crisis financiera mundial desde 2027. Los años de la caída están marcados en el eje de años del lado Modificado.*
 
 En 2027 Morgan todavía cobra un sueldo, y la pequeña pérdida del primer año de la crisis apenas se nota. Su segundo año, el profundo, cae en 2028, el primer año en que Morgan vive de la cartera, y el patrimonio neto baja de unos 1,58 millones de dólares a unos 1,04 millones. No vuelve a su nivel de 2027 hasta 2032, y nunca alcanza al plan que no tuvo caída.
 
@@ -62,20 +62,20 @@ Para tener perspectiva, cambie el episodio a 1929 y deje el inicio en 2027:
 
 [[img:safer-bs-1929-2027-8020]]
 
-*Sigue en 80/20 con el Gran Crac de 1929 desde 2027.*
+***Sigue en 80/20** con el Gran Crac de 1929 desde 2027.*
 
-La crisis financiera mundial se recupera dentro de los seis años que reproduce. El Gran Crac reproduce dieciséis, y lleva el plan 80/20 de 1,5 millones de dólares al principio a unos 460.000 $ al final de 2029. La cartera nunca se recupera, y al plan se le acaba el dinero en 2046. La sección [Algo seguro que vender](#something-safe-to-sell) vuelve a este episodio y pone a prueba los planes más seguros. Vuelva a 2007 antes de seguir leyendo.
+La crisis financiera mundial se recupera dentro de los seis años que reproduce. El Gran Crac reproduce dieciséis, y lleva el plan 80/20 de 1,5 millones de dólares al principio a unos 470.000 $ al final de 2029. La cartera nunca se recupera, y al plan se le acaba el dinero en 2046. La sección [Algo seguro que vender](#something-safe-to-sell) vuelve a este episodio y pone a prueba los planes más seguros. Vuelva a 2007 antes de seguir leyendo.
 
 Ahora deje la caída encendida y mueva su año de inicio. Abra [[nav:bs-table]] en 2055, el último año de la previsión, y observe la línea de patrimonio neto del lado Modificado mientras se mueve el control. La caída sigue en vigor cuando cambia de plan con los chips de encima del lienzo, así que puede leer la columna de cada plan sin volver a prepararlo. Este es el patrimonio neto final para los años de inicio que merecen una mirada:
 
 | La caída empieza | Sigue en 80/20 | Baja | Suelo de renta |
 |---|---:|---:|---:|
-| Sin caída | 1,88 M$ | 1,47 M$ | 1,81 M$ |
-| **2027** | **1,25 M$** | **1,13 M$** | **1,32 M$** |
-| 2028 | 1,26 M$ | 1,13 M$ | 1,34 M$ |
-| 2029 | 1,29 M$ | 1,16 M$ | 1,37 M$ |
-| 2030 | 1,32 M$ | 1,18 M$ | 1,39 M$ |
-| 2033 | 1,38 M$ | 1,20 M$ | 1,42 M$ |
+| Sin caída | 2,07 M$ | 1,66 M$ | 2,00 M$ |
+| **2027** | **1,44 M$** | **1,31 M$** | **1,51 M$** |
+| 2028 | 1,47 M$ | 1,33 M$ | 1,53 M$ |
+| 2029 | 1,49 M$ | 1,35 M$ | 1,55 M$ |
+| 2030 | 1,52 M$ | 1,36 M$ | 1,57 M$ |
+| 2033 | 1,58 M$ | 1,39 M$ | 1,61 M$ |
 
 El peor inicio en cada plan es 2027, el año anterior a la jubilación, porque pone el año más profundo de la crisis en el primer año sin sueldo. Los inicios posteriores siguen doliendo, y duelen un poco menos cada año, porque la cartera ha tenido más tiempo para crecer y el Seguro Social, que empieza en 2030, carga con más del gasto. En su peor colocación, la caída le cuesta al plan 80/20 cerca de un tercio de su patrimonio neto final.
 
@@ -107,15 +107,15 @@ Si va siguiendo, pulse a continuación [Suelo de renta](#canvas-dossier:safer_in
 
 La renta está en el origen. No tiene volatilidad, y un pago nivelado no tiene crecimiento. El Seguro Social está a su lado en el eje vertical, sin volatilidad y con un crecimiento igual a su ajuste por costo de vida. El sueldo y los gastos de vida aparecen también como flujos de caja.
 
-Así, el plan de renta baja el riesgo de una manera distinta al plan Baja. Saca 300.000 $ de la cartera hacia un producto parecido al efectivo, con casi ningún riesgo y casi ningún crecimiento, y deja el resto de la cartera exactamente tan arriesgado como estaba. El gráfico con Flujos de caja encendido muestra las dos mitades a la vez.
+Así, el plan de renta baja el riesgo de una manera distinta al plan **Baja**. Saca 300.000 $ de la cartera hacia un producto parecido al efectivo, con casi ningún riesgo y casi ningún crecimiento, y deja el resto de la cartera exactamente tan arriesgado como estaba. El gráfico con Flujos de caja encendido muestra las dos mitades a la vez.
 
 ## Bajar en el gráfico {#moving-down-the-chart}
 
-Bajar en el gráfico tiene un costo, y el costo es la riqueza esperada. Sin caída en la trayectoria [[term:gmf|GMF]], el plan Baja termina en 1,47 millones de dólares, frente a 1,88 millones del 80/20. El dinero en bonos del Tesoro se capitaliza más despacio que el dinero en acciones, y la brecha se acumula a lo largo de tres décadas.
+Bajar en el gráfico tiene un costo, y el costo es la riqueza esperada. Sin caída en la trayectoria [[term:gmf|GMF]], el plan [Baja](#canvas-dossier:safer_moves_down) termina en 1,66 millones de dólares, frente a 2,07 millones del 80/20. El dinero en bonos del Tesoro se capitaliza más despacio que el dinero en acciones, y la brecha se acumula a lo largo de tres décadas.
 
 <aside class="lesson-saying" data-saying="free-lunch">
 
-En la trayectoria GMF, el plan Baja paga unos 410.000 $ de patrimonio final por sus malos resultados más seguros. El resto de esta sección muestra qué compra ese dinero.
+En la trayectoria GMF, el plan **Baja** paga unos 410.000 $ de patrimonio final por sus malos resultados más seguros. El resto de esta sección muestra qué compra ese dinero.
 
 </aside>
 
@@ -126,19 +126,19 @@ Lo que el movimiento compra aparece a través de muchos futuros posibles. La [[t
 
 [[img:safer-nw-8020]]
 
-*Sigue en 80/20. La dispersión es amplia, con una cola larga de resultados muy buenos hacia la derecha.*
+*[Sigue en 80/20](#canvas-dossier:safer_stays_eighty_twenty). La dispersión es amplia, con una cola larga de resultados muy buenos hacia la derecha.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:safer-nw-down]]
 
-*Baja. La dispersión es más estrecha, y menos trayectorias terminan por debajo de cero.*
+***Baja**. La dispersión es más estrecha, y menos trayectorias terminan por debajo de cero.*
 
 </div>
 </div>
 
-El plan 80/20 tiene éxito en cerca del 83 % de las trayectorias. La [[term:median]] de su patrimonio neto final es de unos 2,12 millones de dólares, y su resultado del décimo peor es de unos 500.000 $ de deuda, lo que significa que el dinero se acabó años antes del final del plan. El plan Baja tiene éxito en cerca del 90 % de las trayectorias. Su mediana es más baja, de unos 1,78 millones de dólares, pero su resultado del décimo peor es solo de unos 60.000 $ de deuda.
+El plan 80/20 tiene éxito en cerca del 85 % de las trayectorias. La [[term:median]] de su patrimonio neto final es de unos 2,30 millones de dólares, y su resultado del décimo peor es de unos 350.000 $ de deuda, lo que significa que el dinero se acabó años antes del final del plan. El plan **Baja** tiene éxito en cerca del 92 % de las trayectorias. Su mediana es más baja, de unos 1,95 millones de dólares, pero en su décimo peor el dinero alcanza, y quedan unos 80.000 $ al final.
 
 Este es el intercambio en su forma más simple. Bajar en el gráfico renuncia a parte de los buenos resultados para encoger los malos. Un jubilado que ya ha ahorrado bastante se preocupa mucho más por los malos resultados. No hay una segunda carrera con la que recuperarse de ellos, mientras que los buenos resultados sobre todo cambian el tamaño de lo que se deja.
 
@@ -154,13 +154,13 @@ Mire primero la comparación del balance. Es la forma más rápida de orientarse
 
 [[img:safer-bs-1929-8020]]
 
-*Sigue en 80/20, tal como está escrito a la izquierda y con la caída de 1929 desde 2028 a la derecha.*
+*[Sigue en 80/20](#canvas-dossier:safer_stays_eighty_twenty), tal como está escrito a la izquierda y con la caída de 1929 desde 2028 a la derecha.*
 
 [[img:safer-bs-1929-down]]
 
-*Baja, la misma comparación.*
+*[Baja](#canvas-dossier:safer_moves_down), la misma comparación.*
 
-En la trayectoria GMF, el patrimonio neto del plan 80/20 baja de unos 1,69 millones de dólares al final de 2027 a unos 450.000 $ al final de 2030, una caída de casi tres cuartas partes. El plan Baja baja de unos 1,68 millones de dólares a unos 780.000 $, algo más de la mitad. Ninguno de los dos planes vuelve a su línea Original. Al plan 80/20 se le acaba el dinero en 2046, cuando Morgan tiene 83 años, y al plan Baja en 2051, cinco años después.
+En la trayectoria GMF, el patrimonio neto del plan 80/20 baja de unos 1,69 millones de dólares al final de 2027 a unos 460.000 $ al final de 2030, una caída de casi tres cuartas partes. El plan **Baja** baja de unos 1,68 millones de dólares a unos 790.000 $, algo más de la mitad. Ninguno de los dos planes vuelve a su línea Original. Al plan 80/20 se le acaba el dinero en 2047, cuando Morgan tiene 84 años, y al plan **Baja** en 2052, cinco años después.
 
 Para ver de dónde sale la diferencia, abra [[nav:si-table]] en 2031. Para entonces, un dólar de acciones del comienzo de 2028 vale unos 52 centavos, incluso después de un año de rebote del 140 %.
 
@@ -169,14 +169,14 @@ Para ver de dónde sale la diferencia, abra [[nav:si-table]] en 2031. Para enton
 
 [[img:safer-sales-1929-8020]]
 
-*Sigue en 80/20 en 2031. Después del año de rebote, el fondo de acciones ha vuelto por encima de su objetivo del 80 %, así que el plan lo vende desde las dos cuentas.*
+***Sigue en 80/20** en 2031. Después del año de rebote, el fondo de acciones ha vuelto por encima de su objetivo del 80 %, así que el plan lo vende desde las dos cuentas.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:safer-sales-1929-down]]
 
-*Baja en 2031. El fondo de acciones sigue por debajo de su objetivo, así que no se vende ninguna acción y el año se paga con bonos del Tesoro, TIPS y bonos del Tesoro a corto plazo.*
+***Baja** en 2031. El fondo de acciones sigue por debajo de su objetivo, así que no se vende ninguna acción y el año se paga con bonos del Tesoro, TIPS y bonos del Tesoro a corto plazo.*
 
 </div>
 </div>
@@ -185,15 +185,15 @@ Año tras año, la diferencia es grande:
 
 | Plan | Primeros años en que vende acciones | Acciones vendidas, 2028–2038 |
 |---|---|---:|
-| Sigue en 80/20 | Un poco en 2028 y 2029, y luego cada año desde 2031 | unos 515.000 $ |
-| Baja | Un poco en 2028, y luego desde 2033 | unos 250.000 $ |
-| Suelo de renta | Un poco en 2028 y 2029, y luego cada año desde 2031 | unos 340.000 $ |
+| Sigue en 80/20 | Un poco en 2028 y 2029, y luego cada año desde 2031 | unos 470.000 $ |
+| Baja | Ninguna hasta 2033 | unos 210.000 $ |
+| Suelo de renta | Un poco en 2028 y 2029, y luego cada año desde 2031 | unos 295.000 $ |
 
-El plan 80/20 y el plan Baja siguen la misma regla, que vende lo que está por encima de su objetivo. El objetivo del plan 80/20 es sobre todo acciones, así que el primer año bueno vuelve a subir las acciones por encima de él, y la regla empieza a vender acciones cuando todavía valen cerca de la mitad de lo que valían en 2028. El objetivo del plan Baja tiene muchas menos acciones, así que paga los primeros cinco años de la caída casi por completo con sus posiciones seguras, los años en que las acciones valían menos. Vende unos 11.000 $ de acciones en 2028, cuando la cuenta del año es mayor que el importe en que sus posiciones seguras están por encima de su objetivo, y luego ninguna en absoluto hasta 2033. Sus fondos del Tesoro no cayeron con el mercado, y sus TIPS y sus bonos del Tesoro a corto plazo mantuvieron su valor. Cuando por fin vende acciones, vende menos de la mitad de lo que vende el plan 80/20.
+El plan 80/20 y el plan **Baja** siguen la misma regla, que vende lo que está por encima de su objetivo. El objetivo del plan 80/20 es sobre todo acciones, así que el primer año bueno vuelve a subir las acciones por encima de él, y la regla empieza a vender acciones cuando todavía valen cerca de la mitad de lo que valían en 2028. El objetivo del plan **Baja** tiene muchas menos acciones, así que paga los primeros cinco años de la caída por completo con sus posiciones seguras, los años en que las acciones valían menos. No vende ninguna acción hasta 2033. Sus fondos del Tesoro no cayeron con el mercado, y sus TIPS y sus bonos del Tesoro a corto plazo mantuvieron su valor. Cuando por fin vende acciones, vende menos de la mitad de lo que vende el plan 80/20.
 
 El plan de renta vende acciones en los mismos años que el plan 80/20, porque el resto de su cartera sigue en 80/20. Vende cerca de un tercio menos en total, porque la renta paga parte de la cuenta de cada año.
 
-Ninguno de los tres planes es seguro en una caída tan profunda y tan larga como la de 1929, al nivel de gasto de Morgan. El plan 80/20 tiene éxito en cerca del 2 % de las trayectorias con esa caída en la jubilación, y los otros dos en cerca del 12 al 14 %. Los planes más seguros fallan con menos frecuencia, y una caída así es una razón para prever un gasto que se pueda recortar. La lección [El momento de una caída](/learn/sequence_of_returns_crash_timing) dice más sobre cómo Transformaciones coloca una caída.
+Ninguno de los tres planes es seguro en una caída tan profunda y tan larga como la de 1929, al nivel de gasto de Morgan. El plan 80/20 tiene éxito en cerca del 5 % de las trayectorias con esa caída en la jubilación, **Suelo de renta** en cerca del 19 % y **Baja** en cerca del 23 %. Los planes más seguros fallan con menos frecuencia, y una caída así es una razón para prever un gasto que se pueda recortar. La lección [El momento de una caída](/learn/sequence_of_returns_crash_timing) dice más sobre cómo Transformaciones coloca una caída.
 
 ## Un suelo de ingresos {#an-income-floor}
 
@@ -216,7 +216,7 @@ La herramienta **Anualidad** de la barra inferior es un bloc de notas para la mi
 
 Como mostró [Leer el gráfico de riesgo](#read-the-risk-chart), la renta no mueve la estrella de la cartera. Se sitúa en el origen del gráfico como un flujo de caja. El riesgo no ha desaparecido. Se ha salido de la cartera y ha pasado a una promesa de una aseguradora.
 
-El efecto sobre el plan es distinto del plan Baja. El plan de renta tiene éxito en cerca del 88 % de las trayectorias, cerca de Baja. La mediana de su patrimonio neto final es de unos 2,01 millones de dólares, mucho más cerca de la del plan 80/20. La renta cubre parte del gasto de cada año, así que el plan vende menos, y la cartera que queda puede conservar más de sus acciones.
+El efecto sobre el plan es distinto del plan [Baja](#canvas-dossier:safer_moves_down). El plan de renta tiene éxito en cerca del 90 % de las trayectorias, cerca de **Baja**. La mediana de su patrimonio neto final es de unos 2,21 millones de dólares, mucho más cerca de la del plan 80/20. La renta cubre parte del gasto de cada año, así que el plan vende menos, y la cartera que queda puede conservar más de sus acciones.
 
 Ese resultado tiene condiciones. La previsión supone que Morgan vive hasta los 93, y la renta paga más cuanto más vive su titular. Quienes mueren pronto dejan dinero en el fondo común de la aseguradora, y quienes viven mucho lo cobran, y de ahí sale el pago alto. Si Morgan muriera a los 70, el plan habría pagado 300.000 $ por unos 120.000 $ de ingreso. Los 300.000 $ también desaparecen del balance el día de la compra. No se pueden vender en una emergencia y no pasan a los herederos.
 
@@ -238,7 +238,7 @@ El sentido de bajar en el gráfico es tener activos cuyos riesgos no son los del
 
 Varios otros movimientos habituales son más fáciles de juzgar una vez que se ven en el mismo gráfico.
 
-**Una escalera de bonos** es un conjunto de bonos que vencen uno tras otro, uno por cada año de gasto. Una escalera de TIPS paga cada año una cantidad conocida de dinero ajustado por la inflación, siempre que cada bono se tenga hasta su vencimiento. El plan Baja se aproxima a una escalera con sus fondos de TIPS y de bonos del Tesoro a corto plazo, que están en el mismo rincón del gráfico. Tutilis puede tener un bono directamente y paga su cupón cada año, pero la previsión todavía no devuelve el precio de un bono a su valor nominal cuando vence, así que una escalera de verdad se muestra aquí con fondos.
+**Una escalera de bonos** es un conjunto de bonos que vencen uno tras otro, uno por cada año de gasto. Una escalera de TIPS paga cada año una cantidad conocida de dinero ajustado por la inflación, siempre que cada bono se tenga hasta su vencimiento. El plan [Baja](#canvas-dossier:safer_moves_down) se aproxima a una escalera con sus fondos de TIPS y de bonos del Tesoro a corto plazo, que están en el mismo rincón del gráfico. Tutilis puede tener un bono directamente y paga su cupón cada año, pero la previsión todavía no devuelve el precio de un bono a su valor nominal cuando vence, así que una escalera de verdad se muestra aquí con fondos.
 
 **Las acciones de dividendo** siguen siendo acciones. Un fondo de empresas con dividendo alto se sitúa cerca del fondo del S&P 500 en el gráfico, y en una caída los dividendos se recortan junto con los precios. Las empresas del S&P 500 recortaron sus dividendos cerca de un quinto de 2008 a 2009. Un dividendo no mueve la cartera hacia el efectivo. La lección [¿Demasiadas acciones? Deje de reinvertir](/learn/too_much_equity_stop_reinvesting) muestra otro uso de los dividendos: tomarlos como efectivo en lugar de reinvertirlos, lo que baja despacio la parte en acciones.
 
@@ -252,7 +252,7 @@ Varios otros movimientos habituales son más fáciles de juzgar una vez que se v
 
 Wade Pfau ha escrito mucho sobre esta pregunta. En *Safety-First Retirement Planning* (2019) y la *Retirement Planning Guidebook* (2021, segunda edición 2023), describe dos maneras de pensar el ingreso de la jubilación. Un enfoque basado en la probabilidad mantiene una cartera diversificada y fija una tasa de gasto que probablemente pueda sostener. Un enfoque de seguridad primero construye primero un suelo de ingreso fiable a partir del Seguro Social, las pensiones, las rentas y las escaleras de bonos, lo bastante grande para cubrir el gasto esencial, y luego invierte el resto para crecer.
 
-Pfau sostiene que una renta de ingresos puede ocupar el lugar de parte de una asignación a bonos. Los bonos y las rentas dan los dos un ingreso estable, pero la renta añade un reparto del riesgo, que paga más a quienes viven mucho. Ese es el patrón del plan Suelo de renta de Morgan, donde la renta cubre parte del gasto y el resto de la cartera conserva sus acciones.
+Pfau sostiene que una renta de ingresos puede ocupar el lugar de parte de una asignación a bonos. Los bonos y las rentas dan los dos un ingreso estable, pero la renta añade un reparto del riesgo, que paga más a quienes viven mucho. Ese es el patrón del plan [Suelo de renta](#canvas-dossier:safer_income_floor) de Morgan, donde la renta cubre parte del gasto y el resto de la cartera conserva sus acciones.
 
 Pfau y Michael Kitces, en *Reducing Retirement Risk with a Rising Equity Glide Path* (Journal of Financial Planning, 2014), encontraron que el riesgo de secuencia se concentra en los años alrededor de la fecha de jubilación. Una cartera que tiene sus mínimas acciones en la jubilación y añade acciones después sobrevivió con más frecuencia que una que mantenía una parte constante. Por eso el consejo de volverse más seguro apunta a los años justo antes de la fecha de jubilación.
 

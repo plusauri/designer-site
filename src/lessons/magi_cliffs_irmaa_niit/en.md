@@ -22,7 +22,9 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 **Adjusted gross income ([[term:agi]])** is not just a report line. **Modified AGI ([[term:magi]])** drives later
 costs that are **not** “just the tax brackets.” This lesson names those mechanisms, shows where
-each appears, and walks a live sample where income is high enough for the cliffs to matter.
+each appears, and walks a live sample where income is high enough for the cliffs to matter. Among
+the MAGI cliffs in retirement, the IRMAA two-year lookback surprises people most: this year's
+income sets the Medicare premium two years later.
 
 | Mechanism | What it is | Where you see it |
 |-----------|------------|------------------|
@@ -221,7 +223,7 @@ income tax. On many realistic samples it is **$0**. It is **not** the star of th
 ### ACA
 
 When a healthcare phase is marked as a marketplace plan, the engine prices the premium tax credit
-from the household's income, the poverty line and the benchmark premium, and the year's Cash Flow
+from the household's income, the [[term:fpl|poverty line]] and the benchmark premium, and the year's Cash Flow
 shows it as its own income line. The [five-year runway](/learn/camp_five_year_retirement_runway)
 lesson walks through one. When a marketplace-looking phase is not marked, the engine records an
 honesty note instead: MAGI can change premium tax credits, and this phase gets none. This sample is

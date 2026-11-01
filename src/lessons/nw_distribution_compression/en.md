@@ -22,7 +22,8 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 **Reveal** under **Net Worth Distribution** does **not** change the plan or the [[term:monte-carlo|Monte Carlo]] draws.
 It only changes the **horizontal scale** so a few extreme endings do not squash the mass of paths
-into an unreadable spike near zero (or near the left of the axis).
+into an unreadable spike near zero (or near the left of the axis). It is a display setting on the
+net worth distribution chart.
 
 This lesson uses the **Banks Baseline** sample — an **[[term:hnw]]** household with large balances and a
 **high-volatility** concentrated equity position. That mix is where **Key Forecasts → Max** (and the

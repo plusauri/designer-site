@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # A wealth tax on your plan: what 2% a year above $50 million would cost
 
-Nadia is 59 and Graham is 61. In 2025 they sold the software company they had built over twenty years, and both of them retired. They now have about $110 million. Most of it sits in a taxable [[term:brokerage]] account, and about $12 million is in two houses in Florida. They plan to spend $1.4 million a year, and their federal income tax comes to a little under $1 million a year.
+Nadia is 59 and Graham is 61. In 2025 they sold the software company they had built over twenty years, and both of them retired. They now have about $110 million. Most of it sits in a taxable [[term:brokerage]] account, and about $12 million is in two houses in Florida. They plan to spend $1.4 million a year, and their federal income tax comes to a little under $1 million a year. This lesson measures the wealth tax impact on a plan like theirs.
 
 Every few months a headline tells them a wealth tax is coming. In March 2026, Senator Elizabeth Warren reintroduced a bill that would tax every household's net worth above $50 million at 2% a year. In November 2026, Californians vote on a one-time 5% tax on billionaires. Nadia and Graham want to know whether a tax like that would be a rounding error for them or would change their plans.
 
@@ -141,7 +141,7 @@ How much a federal wealth tax would raise depends on two hard questions. The fir
 | Penn Wharton Budget Model, 2021 | S.510 (2021 bill) | $2.0 to $2.3 trillion |
 | Saez and Zucman, 2026 | S.4246 (2026 bill) | $6.17 trillion, assuming 15% avoidance and evasion, from about 260,000 families |
 
-Lawrence Summers and Natasha Sarin argued in 2019 that the Saez and Zucman estimate was far too high. They pointed to the estate tax, where appraisals, discounts and trusts shrink what is reported, and suggested a wealth tax might raise as little as 40% of the projection. Saez and Zucman answered that a well-designed tax could close those loopholes. The Congressional Budget Office has not scored any of the net worth tax bills.
+Lawrence Summers and Natasha Sarin argued in 2019 that the Saez and Zucman estimate was far too high. They pointed to the [[term:estate-tax|estate tax]], where appraisals, discounts and trusts shrink what is reported, and suggested a wealth tax might raise as little as 40% of the projection. Saez and Zucman answered that a well-designed tax could close those loopholes. The Congressional Budget Office has not scored any of the net worth tax bills.
 
 Research on Europe's taxes measures how strongly the wealthy respond:
 

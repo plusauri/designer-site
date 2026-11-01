@@ -4,9 +4,9 @@ tutilis-locale: en source
 -->
 # What kind of plan is this? Where the classifiers say to look
 
-A forecast prints hundreds of numbers, and most of them are fine. When you ask a Cogilis assistant to look over your plan, it does not start by reading all of them. It first asks the engine what kind of plan it is looking at, and lets the answer choose the few tables worth reading.
+A forecast prints hundreds of numbers, and most of them are fine. When you ask a Cogilis assistant to look over your plan, it does not start by reading all of them. It first asks the engine what kind of retirement plan it is looking at, and lets the answer choose the few tables worth reading.
 
-This lesson shows that first step on two households with very different shapes. The Springfields are a married couple with three kinds of account and Social Security ahead. Maya Reyes is a single parent whose home is half of what she owns, and her son Sam starts college next year. Both are on the [[term:canvas]], and both ask their assistant the same thing: look over the plan and tell me what matters.
+This lesson shows that first step on two households with very different shapes. [The Springfields](#canvas-dossier:cogilis_kind_springfield) are a married couple with three kinds of account and Social Security ahead. [Maya Reyes](#canvas-dossier:cogilis_kind_reyes) is a single parent whose home is half of what she owns, and her son Sam starts college next year. Both are on the [[term:canvas]], and both ask their assistant the same thing: look over the plan and tell me what matters.
 
 As in the other Cogilis lessons, the commands name built-in plans with `--sample`, so you can paste any of them into a Cogilis folder and get exactly the output shown. In your own session the assistant names your plan with `--dossier`.
 
@@ -35,7 +35,7 @@ Start with the rows about strain on the portfolio. **WithdrawalStrain** and **Se
 
 Two rows are High. **PortfolioDependence** is High because once they retire, Social Security covers only about a quarter of their spending, and the portfolio pays the rest. Its own Why column says that reliance on its own is not a concern. It only matters if the portfolio cannot carry the spending, and the two strain rows say that it can.
 
-That leaves **CliffProximity**, also High. Its measure lists the years the Springfields' income sits just under a line where a tax or a premium steps up: an [[term:irmaa|IRMAA]] tier on Medicare [[term:premium|premiums]] in six years from 2047, and the [[term:niit|NIIT]] floor and the Additional Medicare floor in a few more. The workspace's instructions pair this band with the [[term:cliff]] radar for one of the years it names, so the assistant looks at 2047.
+That leaves **CliffProximity**, also High. Its measure lists the years the Springfields' income sits just under a line where a tax or a premium steps up: an [[term:irmaa|IRMAA]] tier on Medicare [[term:premium|premiums]] in each of the six years from 2047 to 2052, and the [[term:niit|NIIT]] floor and the Additional Medicare floor in a few more. The workspace's instructions pair this band with the [[term:cliff]] radar for one of the years it names, so the assistant looks at 2047.
 
 <aside class="lesson-ai-reply">
 <p class="lesson-ai-reply-label">The assistant checks the tax lines in 2047</p>
@@ -80,7 +80,7 @@ Your plan leans on its investments, so I looked at how hard it draws on them in 
 </div>
 </aside>
 
-The table tells a different story from the band. The sketch behind the band is a quick estimate that runs no forecast, and the forecast's own rate for 2048 is about half of it. The heavy years are elsewhere. From 2027 to 2030 the rate runs between 7% and 9.5%, and from the early 2050s it climbs every year as the balance shrinks, passing 7% in 2062. The negative rates in between are the years when she puts more into her investments than she takes out.
+The table tells a different story from the band. The sketch behind the band is a quick estimate that runs no forecast, and the forecast's own rate for 2048 is about half of it. The heavy years are elsewhere. From 2027 to 2030 the rate runs between about 7% and 9%, and from the early 2050s it climbs every year as the balance shrinks, passing 7% in 2063. The negative rates in between are the years when she puts more into her investments than she takes out.
 
 The heavy years start next year, so the assistant shows one of them.
 
@@ -95,7 +95,7 @@ Here is 2028, the second of Sam's four college years:
 </div>
 </aside>
 
-Maya's wages fall short of her spending and taxes by about the cost of **Sam's college**. The gap is paid by selling holdings, and the **Sales** rows list which ones. You can see the same four years on the canvas. Switch to the **Maya Reyes** chip and look at the [[nav:cf-chart]].
+Maya's wages fall short of her spending and taxes by about the cost of **Sam's college**. The gap is paid by selling holdings, and the **Sales** rows list which ones. You can see the same four years on the canvas. Switch to the [Maya Reyes](#canvas-dossier:cogilis_kind_reyes) chip and look at the [[nav:cf-chart]].
 
 The band was right that the plan leans on its investments. The forecast showed where. The first strain comes two decades sooner than the band's measure suggested. For Maya, what matters is paying for college without drawing down the savings that her retirement depends on.
 
@@ -105,7 +105,7 @@ The two households asked the same question and got two different first answers, 
 
 The workspace's instructions hold the assistant to three rules when it uses them:
 
-- **It quotes a band with its measure** and says which cut point the plan fell under. "CliffProximity is High" says much less than "income sits just under an IRMAA tier in six years from 2047".
+- **It quotes a band with its measure** and says which cut point the plan fell under. "CliffProximity is High" says much less than "income sits just under an IRMAA tier in each year from 2047 to 2052".
 - **It never offers a band as an answer.** A band says where to look, and the answer comes from the table it points to. Maya's plan shows why: the band's year was the wrong year.
 - **It explains `Undetermined`.** A classifier that could not decide says why in its Why column, often because the plan leaves something out. The assistant passes that on rather than skipping the row.
 

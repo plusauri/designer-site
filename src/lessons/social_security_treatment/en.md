@@ -22,7 +22,8 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 **Social Security** shows up in two completely different places in a US plan. This lesson names
 both, shows where each appears on the **federal tax statement**, and walks you through reading
-them on a live sample.
+them on a live sample. Those are the Social Security taxes you pay while working and the tax on
+the benefits you receive.
 
 | Concept | What it is | Where you see it |
 |---------|------------|------------------|

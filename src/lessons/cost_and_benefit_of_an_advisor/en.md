@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Cost and benefit of an advisor
 
-Nadia is 61 and Owen is 59. They have saved $1.66 million across two 401(k)s, a [[term:roth|Roth]] [[term:ira|IRA]], a joint [[term:brokerage]] account and a savings account, with about two thirds of it in stocks. Both plan to stop working in 2030, and they spend about $110,000 a year. A friend has introduced them to an advisor she trusts, who charges 1% of [[term:aum|assets under management]] each year.
+Nadia is 61 and Owen is 59. They have saved $1.66 million across two 401(k)s, a [[term:roth|Roth]] [[term:ira|IRA]], a joint [[term:brokerage]] account and a savings account, with about two thirds of it in stocks. Both plan to stop working in 2030, and they spend about $110,000 a year. A friend has introduced them to an advisor she trusts, whose financial advisor fee is 1% of [[term:aum|assets under management]] each year. They are asking a question many people ask: is a financial advisor worth it?
 
 They have two questions. What does a fee like that add up to over a whole retirement? And what would they get for it? This lesson answers the first with a what-if in [[nav:transforms]], which shows the fee as its own line in the plan's cash flow and shows what it does to the money left at the end. It answers the second with the same plan, by pricing one of the common, expensive mistakes that good advice exists to prevent. It closes with the practical side of hiring someone: the kinds of advisors, how each is paid, how to tell when a recommendation earns a commission, and what the letters after a name mean.
 
@@ -42,7 +42,7 @@ Most advisors who manage investments charge a share of the money they manage. Th
 
 The fee is usually billed every quarter and taken straight from the account. It is charged on the balance, so it is owed in a year when the market falls as well as in a year when it rises. As the portfolio grows, the fee grows with it in dollars.
 
-For Nadia and Owen, 1% of their savings in the first year of the plan is about $18,500. By 2035, when both are retired and claiming Social Security, it is about $22,600 a year. Neither figure looks alarming beside $110,000 of spending. The rest of this lesson shows why the total over a retirement is much larger than those yearly figures suggest.
+For Nadia and Owen, 1% of their savings in the first year of the plan is about $18,500. By 2035, when both are retired and claiming Social Security, it is about $22,500 a year. Neither figure looks alarming beside $110,000 of spending. The rest of this lesson shows why the total over a retirement is much larger than those yearly figures suggest.
 
 ## Find the what-if
 
@@ -66,7 +66,7 @@ The fee is paid like any other bill. Each year it is added to the plan's outflow
 
 [[img:advisor-fee-cash-flow]]
 
-The Modified side has a gray **Advisor fee** band under the spending in every year of the plan. In 2035 the cash-flow statement lists it as its own line, $22,594, beside $144,827 of living expenses in that year's dollars. While Nadia and Owen are working, their salaries cover it. Once they retire, every dollar of it is sold from their savings.
+The Modified side has a gray **Advisor fee** band under the spending in every year of the plan. In 2035 the cash-flow statement lists it as its own line, $22,503, beside $140,897 of living expenses in that year's dollars. While Nadia and Owen are working, their salaries cover it. Once they retire, every dollar of it is sold from their savings.
 
 A fee schedule shows the rate. This line shows the dollars, year by year, in the plan you actually have.
 
@@ -76,11 +76,11 @@ The yearly line is only half of the cost. A dollar that pays the fee in 2030 is 
 
 [[img:advisor-fee-balance-sheet]]
 
-The two sides start close together, and the gap between them widens every year. On the [[term:gmf|GMF]] path, the forecast that takes each year's expected return, net worth at the end of the plan in 2059 is about $3.51 million with no fee and about $1.27 million with a 1% fee. The fees themselves add up to about $715,000 over those 33 years. The gap at the end is about $2.24 million, roughly three times what was paid, because each dollar of fee also takes its future growth with it.
+The two sides start close together, and the gap between them widens every year. On the [[term:gmf|GMF]] path, the forecast that takes each year's expected return, net worth at the end of the plan in 2059 is about $3.54 million with no fee and about $1.33 million with a 1% fee. The fees themselves add up to about $713,000 over those 33 years. The gap at the end is about $2.21 million, roughly three times what was paid, because each dollar of fee also takes its future growth with it.
 
 <aside class="lesson-saying" data-saying="small-leak">
 
-A 1% fee is about $18,500 in the first year, small beside $110,000 of spending. Charged every year for 33 years, it adds up to about $715,000 paid and about $2.24 million less at the end.
+A 1% fee is about $18,500 in the first year, small beside $110,000 of spending. Charged every year for 33 years, it adds up to about $713,000 paid and about $2.21 million less at the end.
 
 </aside>
 
@@ -103,7 +103,7 @@ The expected path is only one of many. The [[term:monte-carlo]] simulation runs 
 
 [[img:advisor-fee-odds-one]]
 
-The chance of success falls from about 92% to about 73%. That is a large change, and it is honest to say so. This plan spends a fairly full $110,000 a year, so any steady new cost moves it. A household spending less from the same savings would feel the same fee less, and one spending more would feel it more.
+The chance of success falls from about 92% to about 75%. That is a large change, and it is honest to say so. This plan spends a fairly full $110,000 a year, so any steady new cost moves it. A household spending less from the same savings would feel the same fee less, and one spending more would feel it more.
 
 ## A smaller fee
 
@@ -111,17 +111,17 @@ Now set the rate to 0.5%, the kind of fee an advisor might charge a larger clien
 
 [[img:advisor-fee-odds-half]]
 
-The chance of success falls from about 92% to about 83%, less than half the drop that 1% causes. On the expected path the plan ends with about $2.39 million instead of $3.51 million, and the fees paid add up to about $425,000.
+The chance of success falls from about 92% to about 85%, less than half the drop that 1% causes. On the expected path the plan ends with about $2.42 million instead of $3.54 million, and the fees paid add up to about $423,000.
 
 Every what-if this lesson tries on the invested plan is in one table, with 1,000 paths for each row:
 
 | Advisor fee | Chance of success | Net worth in 2059, expected path | Fees paid over the plan, expected path |
 |---|---:|---:|---:|
-| None | 92% | $3.51 million | $0 |
-| 0.5% of assets | 83% | $2.39 million | about $425,000 |
-| 1% of assets | 73% | $1.27 million | about $715,000 |
-| 1.5% of assets | 61% | $0.42 million | about $895,000 |
-| $6,000 a year, growing 3% | 83% | $2.76 million | about $330,000 |
+| None | 92% | $3.54 million | $0 |
+| 0.5% of assets | 85% | $2.42 million | about $423,000 |
+| 1% of assets | 75% | $1.33 million | about $713,000 |
+| 1.5% of assets | 62% | $0.49 million | about $895,000 |
+| $6,000 a year, growing 3% | 84% | $2.80 million | about $330,000 |
 
 Each half point of fee costs this plan roughly ten points of success. When an advisor offers a lower rate, that is the scale of what the discount is worth over a retirement like this one.
 
@@ -133,7 +133,7 @@ Not every advisor charges a percentage. A flat-fee or retainer planner charges a
 
 [[img:advisor-fee-odds-fixed]]
 
-For Nadia and Owen this lands close to the 0.5% fee: about 83% success, and about $2.76 million at the end of the expected path. A flat fee does not grow when the portfolio grows, so it tends to favor larger portfolios. It also does not shrink when the market falls, so in a bad decade it takes a larger share of what is left. Which structure is cheaper for you depends on the size of your savings, and the editor answers that for your own plan in a few seconds.
+For Nadia and Owen this lands close to the 0.5% fee: about 84% success, and about $2.80 million at the end of the expected path. A flat fee does not grow when the portfolio grows, so it tends to favor larger portfolios. It also does not shrink when the market falls, so in a bad decade it takes a larger share of what is left. Which structure is cheaper for you depends on the size of your savings, and the editor answers that for your own plan in a few seconds.
 
 ## What mistakes cost
 
@@ -146,19 +146,19 @@ Switch to [Sat in cash](#canvas-dossier:advisor_fee_cash). This is the same coup
 
 [[img:advisor-fee-cash-odds]]
 
-*[Sat in cash](#canvas-dossier:advisor_fee_cash), no fee: about 69% of futures succeed.*
+*[Sat in cash](#canvas-dossier:advisor_fee_cash), no fee: about 72% of futures succeed.*
 
 </div>
 <div class="lesson-img-cell">
 
 [[img:advisor-fee-invested-odds]]
 
-*[Invested](#canvas-dossier:advisor_fee_invested) with a 1% fee: about 73% of futures succeed.*
+*[Invested](#canvas-dossier:advisor_fee_invested) with a 1% fee: about 75% of futures succeed.*
 
 </div>
 </div>
 
-The two plans are close on one measure and far apart on the other, and the difference between the measures matters. The chance of success only asks whether the money lasts to the end of the plan. By that measure the invested plan with a 1% fee is ahead, 73% against 69%. The cash plan rarely collapses, because cash does not crash, but it rarely grows either, so it fails slowly in a large share of futures. The other measure is how much is left. On the expected path the cash plan ends with about $382,000 and the invested plan with a fee ends with about $1.27 million, more than three times as much:
+The two plans are close on one measure and far apart on the other, and the difference between the measures matters. The chance of success only asks whether the money lasts to the end of the plan. By that measure the two plans are nearly level, at about 75% and 72%. The cash plan rarely collapses, because cash does not crash, but it rarely grows either, so it fails slowly in a large share of futures. The other measure is how much is left. On the expected path the cash plan ends with about $438,000 and the invested plan with a fee ends with about $1.33 million, about three times as much:
 
 [[img:advisor-fee-cash-balance-sheet]]
 
@@ -166,11 +166,11 @@ Putting all three versions of the couple side by side shows where each choice la
 
 | Nadia and Owen | Chance of success | Net worth in 2059, expected path |
 |---|---:|---:|
-| Invested, no advisor, no mistake | 92% | $3.51 million |
-| Invested, paying a 1% advisor fee | 73% | $1.27 million |
-| Sat in cash, no advisor, no fee | 69% | $0.38 million |
+| Invested, no advisor, no mistake | 92% | $3.54 million |
+| Invested, paying a 1% advisor fee | 75% | $1.33 million |
+| Sat in cash, no advisor, no fee | 72% | $0.44 million |
 
-The best outcome in the table is the first row. A household that stays invested through every crash and pays no fee does better than either of the others, and many self-directed investors do exactly that. The fee is the price of the second row, and the mistake is the price of the third. Read this way, the comparison is a kind of insurance question. Paying 1% costs this couple about $2.21 million against their best case. Making this one mistake and keeping it costs about $3.1 million. An advisor is worth the fee to a household that would otherwise land in the third row, and not to one that would stay in the first.
+The best outcome in the table is the first row. A household that stays invested through every crash and pays no fee does better than either of the others, and many self-directed investors do exactly that. The fee is the price of the second row, and the mistake is the price of the third. Read this way, the comparison is a kind of insurance question. Paying 1% costs this couple about $2.21 million against their best case. Making this one mistake and keeping it costs about $3.1 million. For a household that would otherwise land in the third row, the fee is the smaller of the two prices. A household that would stay in the first row on its own may still hire an advisor for help that this table does not measure, and the next section describes it.
 
 Every row in the table pays for something [[saying:free-lunch]]. The fee costs about $2.21 million against the best case, and the safety of cash costs about $3.1 million. The first row avoids both, and its price is the nerve to stay invested through every crash.
 
@@ -191,9 +191,11 @@ Several researchers have tried to put a number on what an advisor adds. Their an
 - **Morningstar's "gamma"** research by David Blanchett and Paul Kaplan estimated that better retirement-income decisions, such as withdrawal strategy, asset location and annuity use, could produce about 22.6% more retirement income, which they equated to about 1.59 points of extra return a year.
 - **Morningstar's "Mind the Gap"** study measures how much investors lose to their own timing. Its 2025 edition found that the average fund investor earned about 1.1 points a year less than the funds they owned over the ten years through 2024, because money tended to arrive after gains and leave after losses.
 
+Some of what advice brings never shows up as a return. An advisor can save a household many hours, coordinate taxes, insurance and an estate plan, give a second opinion before a large decision, and leave a plan that a surviving spouse can follow. Many households value that help for its own sake.
+
 There is honest disagreement about these numbers. A 2026 paper in the *Financial Analysts Journal* re-examined the Mind the Gap method and put the cost of bad timing closer to 0.1 point a year. Vanguard's 3% assumes a client who would otherwise make each of the mistakes the paper describes, and many people would not.
 
-The fair conclusion is narrower than any single estimate. Advice is worth the most to the household that would otherwise make an expensive mistake, and the least to one that would not. The what-ifs in this lesson let you price both sides on your own plan, with your own numbers.
+The fair conclusion is narrower than any single estimate. In dollars, advice is worth the most to the household that would otherwise make an expensive mistake. The help beyond the dollars is worth whatever it is worth to you, and only you can price it. The what-ifs in this lesson let you price both sides on your own plan, with your own numbers.
 
 <aside class="lesson-did-you-know">
 <p class="lesson-did-you-know-label">Did you know?</p>

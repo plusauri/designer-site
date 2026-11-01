@@ -55,6 +55,10 @@ Font and image paths start with `/designer-site`. Keep that prefix on every `url
 
 Lesson files under `src/lessons/` carry the path they return to. Leave that prose as published. Leave the glossary and the reference wording as published. Those words live in the product.
 
+## The callouts
+
+`docs/lesson-callout-catalog.md` describes every lesson callout: what it is for, how it looks, the pictures it draws, and each lesson section that carries it. Its links open the live lessons on plusauri.com, which ask for the Learning Center passphrase on the first click.
+
 ## Where it is on the web
 
 GitHub Pages serves the last snapshot on `main` at https://plusauri.github.io/designer-site/.

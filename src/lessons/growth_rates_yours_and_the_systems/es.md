@@ -14,7 +14,7 @@ El producto está hecho para que los dos tipos de planificador obtengan lo que n
 <p class="lesson-power-user-label">Usuario avanzado</p>
 <div class="lesson-power-user-body">
 
-Fijar sus propias tasas de crecimiento es una función de **Usuario avanzado**. El plan de un usuario típico toma las tasas de crecimiento del sistema, que es el plan General de esta lección. Para fijar tasas propias, como hace el plan Advanced, active **Usuario avanzado** en [[nav:advanced]] → Ajustes de la aplicación.
+Fijar sus propias tasas de crecimiento es una función de **Usuario avanzado**. El plan de un usuario típico toma las tasas de crecimiento del sistema, que es el plan **General** de esta lección. Para fijar tasas propias, como hace el plan **Advanced**, active **Usuario avanzado** en [[nav:advanced]] → Ajustes de la aplicación.
 
 </div>
 </aside>
@@ -88,7 +88,7 @@ La ficha del salario muestra la tasa que Priya indicó como personalización. Mu
 
 *La ficha del salario de Priya en [General](#canvas-dossier:growth_rates_general): $140,000 al año en dinero de 2026, creciendo al 5 % que ella indicó.*
 
-En el estado de flujos de caja el salario es de unos $154,000 en 2027 y de unos $187,000 en 2031, que es su 5 % al año. El alquiler, neto de los costos corrientes del inmueble, crece al 3 % que fija su contrato.
+En el estado de flujos de caja el salario es de unos $147,000 en 2027 y de unos $179,000 en 2031, que es su 5 % al año. El alquiler, neto de los costos corrientes del inmueble, crece al 3 % que fija su contrato.
 
 <details class="lesson-desktop-only" open>
 <summary class="lesson-desktop-only-label">Solo en la aplicación de escritorio</summary>
@@ -109,7 +109,7 @@ Cuando indica una de estas tasas, indica su media. Cuánto varía de un año a o
 
 Puede parecer extraño en un salario, pero es lo que mantiene honesta la previsión. A lo largo de mil futuros, algunos años de Priya traen una subida mayor que el 5 % y otros una menor, y las previsiones en las que su sueldo fue inusualmente bien o mal quedan en su rango de resultados, junto a las rachas buenas y malas del mercado. Una volatilidad de cero significaría que su sueldo sube exactamente un 5 % cada año en cada futuro, lo que nadie puede prometer.
 
-La pensión alimenticia muestra el límite de esto. El 0 % de Priya es solo la media, así que en el plan General el pago sigue variando un poco de un futuro a otro. Una resolución judicial no varía en absoluto. Arreglar eso exige el otro ajuste.
+La pensión alimenticia muestra el límite de esto. El 0 % de Priya es solo la media, así que en el plan [General](#canvas-dossier:growth_rates_general) el pago sigue variando un poco de un futuro a otro. Una resolución judicial no varía en absoluto. Arreglar eso exige el otro ajuste.
 
 ## Hacerse cargo de cada supuesto {#taking-over-every-assumption}
 
@@ -136,9 +136,9 @@ Con Crecimientos personalizados, el campo de crecimiento del sueldo, el gasto, e
 
 ## Lo que cuestan los cambios {#what-the-changes-cost}
 
-Los tres cambios de Priya en el plan Advanced fueron una oscilación más amplia en su salario cargado de primas, un pago de pensión fijado en exactamente $14,400 y una visión más lenta, del 2 %, de la revalorización de su condominio. Los dos primeros sobre todo remodelan el rango de resultados: el salario lo ensancha, y la pensión fija lo estrecha un poco. El tercero mueve el plan mismo. En el balance de 2046 el condominio vale unos $648,000 en el plan General y unos $438,000 en el plan Advanced.
+Los tres cambios de Priya en el plan [Advanced](#canvas-dossier:growth_rates_advanced) fueron una oscilación más amplia en su salario cargado de primas, un pago de pensión fijado en exactamente $14,400 y una visión más lenta, del 2 %, de la revalorización de su condominio. Los dos primeros sobre todo remodelan el rango de resultados: el salario lo ensancha, y la pensión fija lo estrecha un poco. El tercero mueve el plan mismo. En el balance de 2046 el condominio vale unos $648,000 en el plan [General](#canvas-dossier:growth_rates_general) y unos $438,000 en el plan **Advanced**.
 
-Las **Previsiones clave** muestran lo que eso hace al patrimonio neto final de Priya. El plan Advanced es más bajo en cada punto que informa la tabla, del peor futuro al mejor.
+Las **Previsiones clave** muestran lo que eso hace al patrimonio neto final de Priya. El plan **Advanced** es más bajo en cada punto que informa la tabla, del peor futuro al mejor.
 
 [[jump:key-forecasts]]
 
@@ -154,12 +154,12 @@ Las **Previsiones clave** muestran lo que eso hace al patrimonio neto final de P
 
 [[img:growth-rates-key-forecasts-advanced]]
 
-*Previsiones clave de [Advanced](#canvas-dossier:growth_rates_advanced): cada punto queda por debajo del plan General.*
+*Previsiones clave de [Advanced](#canvas-dossier:growth_rates_advanced): cada punto queda por debajo del plan **General**.*
 
 </div>
 </div>
 
-La **distribución del patrimonio neto** muestra lo mismo en los mil futuros a la vez. Las dos están trazadas en el mismo eje para poder compararlas a simple vista. La nube de Advanced se sitúa más a la izquierda, y la parte de futuros que tienen éxito baja del 98 % al 95 %.
+La **distribución del patrimonio neto** muestra lo mismo en los mil futuros a la vez. Las dos están trazadas en el mismo eje para poder compararlas a simple vista. La nube de **Advanced** se sitúa más a la izquierda, y la parte de futuros que tienen éxito baja del 98 % al 95 %.
 
 <div class="lesson-img-row">
 <div class="lesson-img-cell">
@@ -182,7 +182,7 @@ Esa es la razón de que el control total sea una elección deliberada. Una sola 
 
 ## Pasar de uno a otro {#moving-between-the-two}
 
-Un plan puede cambiar de idea. Volver de **Crecimientos personalizados** a **Crecimientos del sistema** quita cada personalización de mercado, porque eso es lo que significa elegir las tasas del sistema. Las tasas indicadas para el sueldo, el gasto, el alquiler y la pensión se conservan, y cualquier volatilidad fijada en ellas vuelve a la cifra del sistema. Si Priya devolviera su plan Advanced, su condominio volvería al 4 %, su salario y su pensión conservarían sus medias del 5 % y del 0 %, y su pensión recuperaría la pequeña variación descrita arriba.
+Un plan puede cambiar de idea. Volver de **Crecimientos personalizados** a **Crecimientos del sistema** quita cada personalización de mercado, porque eso es lo que significa elegir las tasas del sistema. Las tasas indicadas para el sueldo, el gasto, el alquiler y la pensión se conservan, y cualquier volatilidad fijada en ellas vuelve a la cifra del sistema. Si Priya devolviera su plan [Advanced](#canvas-dossier:growth_rates_advanced), su condominio volvería al 4 %, su salario y su pensión conservarían sus medias del 5 % y del 0 %, y su pensión recuperaría la pequeña variación descrita arriba.
 
 Ir en el otro sentido no quita nada. Cada tasa se queda donde estaba y pasa a ser editable.
 

@@ -135,7 +135,7 @@ Tutilis modelliert die beiden genau aus diesem Grund verschieden. Morgans 10-jä
 
 [[img:rates-table-2027]]
 
-Der langfristige Treasury-Fonds beendet 2027 mit dem Schock bei $148,000, gegen $199,100 ohne ihn. Der mittelfristige Treasury-Fonds endet bei $180,500 gegen $196,300. Die Treasury Note endet bei $105,600 gegen $105,300. Es ist in beiden Plänen dieselbe Note. Die wenigen Hundert Dollar dazwischen sind Bargeld, das der Plan anders wieder angelegt hat, und was die Note selbst wert ist, hat sich nicht geändert.
+Der langfristige Treasury-Fonds beendet 2027 mit dem Schock bei $148,000, gegen $199,100 ohne ihn. Der mittelfristige Treasury-Fonds endet bei $180,500 gegen $196,300. Die Treasury Note endet bei $105,300 gegen $105,100. Es ist in beiden Plänen dieselbe Note. Die wenigen Hundert Dollar dazwischen sind Bargeld, das der Plan anders wieder angelegt hat, und was die Note selbst wert ist, hat sich nicht geändert.
 
 <aside class="lesson-saying" data-saying="free-lunch">
 
@@ -159,7 +159,7 @@ Die Wahl **Aktien** im Editor ist diese Frage. Mit *Fallen ebenfalls* verlieren 
 
 [[img:rates-bs-growth]]
 
-Ohne den Aktienverlust fällt das Nettovermögen 2027 nur auf $1,213,000. Die Rentenfonds fallen weiterhin, und das Bargeld verdient weiterhin mehr. Am Ende des Plans liegt diese Fassung etwa $97,000 vor dem Plan ohne Schock, weil Anleihen und Bargeld fünf Jahre lang mehr verdient haben, während die Aktien nie etwas verloren.
+Ohne den Aktienverlust fällt das Nettovermögen 2027 nur auf $1,212,000. Die Rentenfonds fallen weiterhin, und das Bargeld verdient weiterhin mehr. Am Ende des Plans liegt diese Fassung etwa $96,000 vor dem Plan ohne Schock, weil Anleihen und Bargeld fünf Jahre lang mehr verdient haben, während die Aktien nie etwas verloren.
 
 <aside class="lesson-did-you-know">
 <p class="lesson-did-you-know-label">Wussten Sie schon?</p>
@@ -178,9 +178,9 @@ Eine Zinssenkung ist das Spiegelbild einer Erhöhung. Rentenfonds gewinnen im er
 
 [[img:rates-bs-cut]]
 
-Das Nettovermögen ist 2027 etwa $49,000 höher, bei $1,327,000. 2032 ist es $46,000 niedriger als der Plan ohne die Senkung, und 2058 ist es etwa $143,000 niedriger, bei $366,000 gegen $510,000. Wer im Ruhestand von Ersparnissen lebt, ist ein Kreditgeber, und eine Senkung senkt den Preis, den dieser Kreditgeber bekommt. Der Gewinn im ersten Jahr ist echt, aber es ist ein Gewinn im Kurs, und das niedrigere Einkommen hält jahrelang an.
+Das Nettovermögen ist 2027 etwa $49,000 höher, bei $1,326,000. 2032 ist es $46,000 niedriger als der Plan ohne die Senkung, und 2058 ist es etwa $143,000 niedriger, bei $558,000 gegen $701,000. Wer im Ruhestand von Ersparnissen lebt, ist ein Kreditgeber, und eine Senkung senkt den Preis, den dieser Kreditgeber bekommt. Der Gewinn im ersten Jahr ist echt, aber es ist ein Gewinn im Kurs, und das niedrigere Einkommen hält jahrelang an.
 
-Wie lange die Bewegung anhält, zählt so viel wie ihre Richtung. Stellen Sie **Dauer der Bewegung** auf das Maximum, und die Erhöhung um zwei Punkte kehrt sich innerhalb des Plans nie um. Dann wird der Aktienverlust nie aufgeholt, und die Rentenfonds bekommen ihren Kurs nie zurück, und das zusätzliche Einkommen macht das nicht wett. Auf Morgans Plan lässt eine dauerhafte Erhöhung das Nettovermögen 2058 bei $461,000, gegen $533,000, wenn die Zinsen nach fünf Jahren zurückkehren, und $510,000 ganz ohne Schock.
+Wie lange die Bewegung anhält, zählt so viel wie ihre Richtung. Stellen Sie **Dauer der Bewegung** auf das Maximum, und die Erhöhung um zwei Punkte kehrt sich innerhalb des Plans nie um. Dann wird der Aktienverlust nie aufgeholt, und die Rentenfonds bekommen ihren Kurs nie zurück, und das zusätzliche Einkommen macht das nicht wett. Auf Morgans Plan lässt eine dauerhafte Erhöhung das Nettovermögen 2058 bei $672,000, gegen $724,000, wenn die Zinsen nach fünf Jahren zurückkehren, und $701,000 ganz ohne Schock.
 
 ## Kürzere Anleihen {#shorter-bonds}
 
@@ -188,9 +188,9 @@ Die übliche Verteidigung gegen steigende Zinsen sind kürzere Anleihen, weil ei
 
 [[img:rates-bs-short-hike]]
 
-Das Nettovermögen fällt 2027 um etwa $93,000, gegen $139,000 für Morgans Plan mit dem langen Fonds. Der kurze Fonds legt auch innerhalb von ein, zwei Jahren zum neuen Zinssatz wieder an, also kassiert er das höhere Einkommen fast sofort. 2058 endet der Plan mit den kürzeren Anleihen und dem Schock bei $478,000, deutlich über seinen eigenen $385,000 ohne den Schock.
+Das Nettovermögen fällt 2027 um etwa $93,000, gegen $139,000 für Morgans Plan mit dem langen Fonds. Der kurze Fonds legt auch innerhalb von ein, zwei Jahren zum neuen Zinssatz wieder an, also kassiert er das höhere Einkommen fast sofort. 2058 endet der Plan mit den **kürzeren Anleihen** bei **$663,000** mit dem Schock, gegen **$570,000** ohne ihn.
 
-Der Schutz hat einen Preis, und er zeigt sich in den beiden anderen Fällen. Kurze Anleihen sollen weniger verdienen, also endet der Plan mit den kürzeren Anleihen ganz ohne Schock bei $385,000, gegen $510,000 für den Plan mit den langen Anleihen. Und wenn die Zinsen fallen, gewinnen kurze Anleihen im Kurs fast nichts und legen bald zum niedrigeren Zinssatz wieder an. Unter der Senkung um anderthalb Punkte gewinnt der Plan mit den kürzeren Anleihen 2027 nur etwa $14,000 und endet bei $261,000, gegen $366,000 für den Plan mit den langen Anleihen.
+Der Schutz hat einen Preis, und er zeigt sich in den beiden anderen Fällen. Kurze Anleihen sollen weniger verdienen, also endet der Plan mit den **kürzeren Anleihen** ganz ohne Schock bei $570,000, gegen $701,000 für den Plan mit den [langen Anleihen](#canvas-dossier:rates_bond_heavy). Und wenn die Zinsen fallen, gewinnen kurze Anleihen im Kurs fast nichts und legen bald zum niedrigeren Zinssatz wieder an. Unter der Senkung um anderthalb Punkte gewinnt der Plan mit den **kürzeren Anleihen** 2027 nur etwa $14,000 und endet bei $451,000, gegen $558,000 für den Plan mit den **langen Anleihen**.
 
 Es gibt also keine Anlage, die in jedem Fall gewinnt, und die Wahl gilt der Frage, welches Risiko Sie lieber tragen:
 

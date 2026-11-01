@@ -22,7 +22,8 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 **Start here.** This page is a **map of the app** — which button leads where, and what each area is
 for. It is not a finance lesson, and it is not meant to be read end to end. Every heading below is a
-row you can open; open the one you need and shut it again.
+row you can open; open the one you need and shut it again. It is the tour for getting started with
+financial planning software.
 
 Prefer to watch? The [Screencast Lesson (Getting Around)](/learn/getting_around_screencast) covers
 the same map in a few minutes.

@@ -21,7 +21,7 @@ tutilis-locale: en source
 <!--- α <lesson_body> -->
 This is the **video** twin of [Reading Lesson (Getting Around)](/learn/getting_around).
 Watch here; practice the same moves on the [[term:live-plan]] next to this lesson (Springfield —
-the same teaching household as the reading tour).
+the same teaching household as the reading tour). It is a getting started video tutorial for Tutilis.
 
 The tour runs in **three parts**. They are meant to be watched in order, but each one stands on its
 own, so you can stop after any of them and come back.

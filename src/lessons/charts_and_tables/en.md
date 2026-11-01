@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Reading the charts and tables
 
-A forecast is a story about a household, told one year at a time. The [[nav:forecaster]] tells it through a handful of views, and each view answers a different question. The balance sheet says what the household is worth. The cash flow says what came in and what went out. Money Movements says which accounts paid for the difference, and the tax cards say where each tax came from.
+A forecast is a story about a household, told one year at a time. The [[nav:forecaster]] tells it through a handful of views, and each view answers a different question. The balance sheet says what the household is worth. The cash flow says what came in and what went out. Money Movements says which accounts paid for the difference, and the tax cards say where each tax came from. This lesson shows how to read retirement planning charts and tables one view at a time.
 
 This lesson is a tour of those views. It is mostly about the tool, and it touches the finance only where the finance tells you which card to open. The Springfield household on the [[term:canvas]] is a married couple in Ohio who both work, own a house with a mortgage, and draw Social Security in retirement, so every view has something on both of its sides.
 

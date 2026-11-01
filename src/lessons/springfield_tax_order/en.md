@@ -23,7 +23,7 @@ tutilis-locale: en source
 In pure **[[term:drawdown]]**, something has to fund living spend when cash flow is short. After any
 **linked** funding rules fire, the plan’s **residual capital strategy** decides *which accounts*
 supply the rest — and that choice can change **[[term:terminal-wealth]]** a lot even when returns and spend
-are fixed.
+are fixed. That choice is the retirement withdrawal order.
 
 This lesson uses a **lean solo retired Homer** sample sized so two strategies diverge:
 

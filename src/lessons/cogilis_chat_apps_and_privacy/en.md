@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Chat apps and privacy: Cogilis in Claude Desktop, and what leaves your computer
 
-The other Cogilis lessons run the engine from a terminal, with an assistant such as Claude Code or Codex typing the commands. Many people would rather ask their questions in a chat app such as Claude Desktop, and Cogilis works there too. The folder's `bin/engine-mcp` offers the same engine to a chat app as a set of tools, and the app's assistant calls them the way a terminal assistant runs commands.
+The other Cogilis lessons run the engine from a terminal, with an assistant such as Claude Code or Codex typing the commands. Many people would rather ask their questions in a chat app such as Claude Desktop, and Cogilis works there too. The folder's `bin/engine-mcp` offers the same engine to a chat app as a set of tools, and the app's assistant calls them the way a terminal assistant runs commands. This lesson is about AI retirement planning privacy: what leaves your computer when you ask about your retirement plan in Claude Desktop.
 
 This lesson connects a chat app, asks it one question, and then looks closely at what leaves your computer when it answers. Philip and Vivian Banks, the household on the [[term:canvas]], stand in for you. They want to know what a chat app would send before they let it near their plan.
 

@@ -4,7 +4,7 @@ tutilis-locale: en source
 -->
 # Property tax, the silent killer
 
-Most people who compare states compare income tax rates, because that is the number printed on every "best states to retire" list. Property tax gets less attention, and it is often the bigger bill. It is a percentage of what your house is worth, charged every year, and it grows as the house grows. Your income tax goes down when your paycheck stops. Your property tax does not. This lesson follows one Illinois household with an expensive house and uses the **Region** comparison to show what that bill costs over a lifetime.
+Most people who compare states compare income tax rates, because that is the number printed on every "best states to retire" list. Property tax gets less attention, and it is often the bigger bill. It is a percentage of what your house is worth, charged every year, and it grows as the house grows. Your income tax goes down when your paycheck stops. Your property tax does not. This lesson follows one Illinois household with an expensive house and uses the **Region** comparison to show what that bill costs over a lifetime. It compares Illinois vs Colorado property tax, and the property tax cost over a lifetime in each.
 
 ## What you will learn
 
